@@ -5,6 +5,7 @@ import {
   Create,
   SimpleForm,
   EditProps,
+  NumberInput,
   TextInput
 } from 'react-admin';
 

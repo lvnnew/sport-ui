@@ -6,6 +6,7 @@ import {
   ShowProps,
   TabbedShowLayout,
   Tab,
+  NumberField,
   TextField
 } from 'react-admin';
 
@@ -14,7 +15,7 @@ const AgrTagShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
       <Tab label="Summary">
-        <TextField source="id" />
+        <NumberField source="id" />
         <TextField source="comment" />
       </Tab>
       

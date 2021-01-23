@@ -5,6 +5,7 @@ import {
   List,
   Datagrid,
   ListProps,
+  NumberField,
   TextField
 } from 'react-admin';
 
@@ -12,7 +13,7 @@ import {
 const AgrTagList: FC<ListProps> = (props: ListProps) => (
   <List {...props}>
     <Datagrid rowClick="show">
-      <TextField source="id" />
+      <NumberField source="id" />
       <TextField source="comment" />
     </Datagrid>
   </List>
