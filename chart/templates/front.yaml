@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: agr-ui
+  labels:
+    app: agr-ui
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: agr-ui
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agr-ui
+spec:
+  replicas: {{ .Values.app.replicas }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+  selector:
+    matchLabels:
+      app: agr-ui
+  template:
+    metadata:
+      labels:
+        app: agr-ui
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+      - name: agr-ui
+        image: {{ .Values.dockerRegistry }}/agr-ui{{ .Values.app.tag }}
+        ports:
+        - name: main-port
+          containerPort: 80
+        imagePullPolicy: Always
+        env:
+        - name: RANDOM
+          value: {{ .Values.random | quote }}
+        - name: ENV
+          value: '{{ .Values.global.env }}'
+        - name: ENDPOINT
+          value: 'https://{{ .Values.ingress.domains.endpoint }}.{{ .Values.ingress.host }}'
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: main-port
+          initialDelaySeconds: 60
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /
+            port: main-port
+          initialDelaySeconds: 60
+          periodSeconds: 5
+        startupProbe:
+          httpGet:
+            path: /
+            port: main-port
+          initialDelaySeconds: 60
+          failureThreshold: 10
+          periodSeconds: 10
+
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "0.15"
+          limits:
+            memory: "512Mi"
+            cpu: "1"
+---

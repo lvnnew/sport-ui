@@ -1,0 +1,18 @@
+.git
+.gitignore
+.dockerignore
+**/node_modules
+**/charts
+**/.next
+**/.api
+**/lib
+**/build
+**/dist
+*Dockerfile*
+yarn-error.log
+**/*.md
+
+# **/*.sh
+
+.env
+*.db
