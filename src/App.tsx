@@ -25,19 +25,15 @@ import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
 import log from 'loglevel';
 import LoadingPage from './shared/LoadingPage';
-
-// browser history
 import {
   createBrowserHistory as createHistory,
 } from 'history';
-
 import {
   dmResources,
 } from './demo/resources';
 import {
   agrResources,
 } from './agr/resources';
-
 import {
   AgrDashboard,
 } from './agr/dashboard';

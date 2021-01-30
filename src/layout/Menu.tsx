@@ -12,7 +12,6 @@ import {
 import {
   useTranslate, DashboardMenuItem, MenuItemLink,
 } from 'react-admin';
-
 import {
   AppState,
 } from '../types';
