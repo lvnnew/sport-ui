@@ -90,7 +90,7 @@ export default (client: any) => {
     ) => {
       const [type, resource, params] = rest;
 
-      const numberIdResources = [
+      const numberIdResources: string[] = [
         'agrTags'
       ];
 
