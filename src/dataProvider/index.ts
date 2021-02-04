@@ -90,21 +90,8 @@ export default (client: any) => {
     ) => {
       const [type, resource, params] = rest;
 
-      const numberIdResources = [        
-        'dcTasks',
-        'dcJournalEntries',
-        'dcSettings',
-        'dcAccounts',
-        'dcUsers',
-        'dcTranslations',
-        'dcQuizes',
-        'dcQuestions',
-        'dcOptions',
-        'dcQuizSiteSettings',
-        'dcQuizSettings',
-        'dcQuizResults',
-        'dcQuizAnswers',
-        'dcPurchases',
+      const numberIdResources = [
+        'agrTags'
       ];
 
       if (numberIdResources.some(rs => rs === resource) && type === 'GET_ONE' && 'id' in params) {
