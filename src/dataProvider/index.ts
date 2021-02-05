@@ -20,6 +20,7 @@ import {
 import {
   demoMapping,
 } from '../demo/entityMapping';
+import {toPairs} from 'lodash';
 
 const mapping = {
   ...demoMapping,
@@ -45,6 +46,10 @@ interface IntrospectionResults {
     schema: IntrospectionSchema;
 }
 
+const numberIdResources: string[] = [
+  'agrTags'
+];
+
 const customBuildQuery = (
   introspectionResults: IntrospectionResults,
 ): LegacyDataProvider => {
@@ -52,6 +57,9 @@ const customBuildQuery = (
 
   return (type, resource, params) => {
     if (type === DELETE) {
+      const mappedResourcePair = toPairs(mapping)
+        .find(([, value]: [string, string]) => value === resource);
+      const mappedResource = mappedResourcePair ? mappedResourcePair[0] : '';
       return {
         parseResponse: ({data}: ApolloQueryResult<any>) => {
           if (data[`remove${resource}`]) {
@@ -60,9 +68,13 @@ const customBuildQuery = (
 
           throw new Error(`Could not delete ${resource}`);
         },
-        query: gql`mutation remove${resource}($id: ID!) {
+        query: gql`mutation remove${resource}($id: ${
+          numberIdResources.includes(mappedResource) 
+          ? 'Int!' 
+          : 'ID!'
+          }) {
                     remove${resource}(id: $id)
-                }`,
+              }`,
         variables: {id: params.id},
       };
     }
@@ -89,10 +101,6 @@ export default (client: any) => {
       ...rest: Parameters<LegacyDataProvider>
     ) => {
       const [type, resource, params] = rest;
-
-      const numberIdResources: string[] = [
-        'agrTags'
-      ];
 
       if (numberIdResources.some(rs => rs === resource) && type === 'GET_ONE' && 'id' in params) {
         params.id = Number.parseInt(params.id, 10);
