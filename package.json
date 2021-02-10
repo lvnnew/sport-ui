@@ -24,6 +24,7 @@
     "dayjs": "^1.9.6",
     "graphql": "^14.7.0",
     "inflection": "^1.12.0",
+    "lodash": "^4.17.20",
     "md5": "^2.3.0",
     "proxy-polyfill": "^0.3.2",
     "query-string": "^6.13.6",
