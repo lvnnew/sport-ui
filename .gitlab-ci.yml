@@ -5,6 +5,7 @@ stages:
   - build
   - latest-image
   - deploy-stage
+  - deploy-demo
 
 cache:
   paths:
@@ -70,6 +71,11 @@ deploy-to-stage:
   extends: .deploy-dev
   variables:
     ENV: "stage"
+
+deploy-to-demo:
+  extends: .deploy-prod
+  variables:
+    ENV: "prod"
 
 .deploy-dev:
   stage: deploy-stage
