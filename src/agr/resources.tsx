@@ -4,11 +4,11 @@ import {
   Resource,
 } from 'react-admin';
 
-import AgrTagShow from './pages/agrTags/AgrTagShow';
-import AgrTagEdit from './pages/agrTags/AgrTagEdit';
-import AgrTagCreate from './pages/agrTags/AgrTagCreate';
-import AgrTagList from './pages/agrTags/AgrTagList';
+import TagShow from './pages/tags/TagShow';
+import TagEdit from './pages/tags/TagEdit';
+import TagCreate from './pages/tags/TagCreate';
+import TagList from './pages/tags/TagList';
 
 export const agrResources = [
-  <Resource show={AgrTagShow} edit={AgrTagEdit} create={AgrTagCreate} key='agrTags' list={AgrTagList} name='agrTags' />,
+  <Resource show={TagShow} edit={TagEdit} create={TagCreate} key='tags' list={TagList} name='tags' />,
 ];

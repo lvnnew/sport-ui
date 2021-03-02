@@ -13,15 +13,15 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  AgrTag,
+  Tag,
 } from '../../../generated/graphql';
-import {QueryAllAgrTagsArgs} from '../../../generated/graphql';
+import {QueryAllTagsArgs} from '../../../generated/graphql';
 
-interface ListAgrTagsWidgetProps extends
-Omit<ListWigetProps<AgrTag>, 'request' | 'resultToValue'| 'children'>,
-QueryAllAgrTagsArgs {}
+interface ListTagsWidgetProps extends
+Omit<ListWigetProps<Tag>, 'request' | 'resultToValue'| 'children'>,
+QueryAllTagsArgs {}
 
-const ListAgrTagsWidget: FC<ListAgrTagsWidgetProps> = ({
+const ListTagsWidget: FC<ListTagsWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
@@ -31,7 +31,7 @@ const ListAgrTagsWidget: FC<ListAgrTagsWidgetProps> = ({
 }) => {
 
   return (
-    <ListWiget<AgrTag>
+    <ListWiget<Tag>
       {...rest}
       options={{
         variables: {
@@ -47,10 +47,10 @@ const ListAgrTagsWidget: FC<ListAgrTagsWidgetProps> = ({
           $page: Int,
           $perPage: Int,
           $sortField: String,
-          $sortOrder: String, 
-          $filter: AgrTagFilter,
+          $sortOrder: String,
+          $filter: TagFilter,
         ) {
-          allAgrTags(
+          allTags(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -62,13 +62,13 @@ const ListAgrTagsWidget: FC<ListAgrTagsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?.allAgrTags}
+      resultToValue={result => result?.allTags}
     >
       {(record) => <ListItem
         button
         component={Link}
         key={record.id}
-        to={`/agrTags/${record.id}/show`}
+        to={`/tags/${record.id}/show`}
       >
         <ListItemText
           primary={
@@ -87,4 +87,4 @@ const ListAgrTagsWidget: FC<ListAgrTagsWidgetProps> = ({
   );
 };
 
-export default ListAgrTagsWidget;
+export default ListTagsWidget;

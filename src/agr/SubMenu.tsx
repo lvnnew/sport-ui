@@ -40,7 +40,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
         onClick={onMenuClick}
         primaryText={'Tags'}
         sidebarIsOpen={open}
-        to={'/agrTags'}
+        to={'/tags'}
       />
     </>
   );

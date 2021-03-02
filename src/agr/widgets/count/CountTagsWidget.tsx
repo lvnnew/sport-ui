@@ -7,14 +7,14 @@ import NumberWiget, {
 import {
   gql,
 } from '@apollo/client';
-import {AgrTagFilter} from '../../../generated/graphql';
+import {TagFilter} from '../../../generated/graphql';
 
-interface CountAgrTagsWidgetProps extends
+interface CountTagsWidgetProps extends
 Omit<NumberWigetProps, 'request' | 'resultToValue'> {
-  filter?: AgrTagFilter;
+  filter?: TagFilter;
 }
 
-const CountAgrTagsWidget: FC<CountAgrTagsWidgetProps> = ({
+const CountTagsWidget: FC<CountTagsWidgetProps> = ({
   filter,
   ...rest
 }) => {
@@ -28,14 +28,14 @@ const CountAgrTagsWidget: FC<CountAgrTagsWidgetProps> = ({
         },
       }}
       request={gql`
-        query ($filter: AgrTagFilter) {
-          _allAgrTagsMeta(filter: $filter) {
+        query ($filter: TagFilter) {
+          _allTagsMeta(filter: $filter) {
             count
           }
         }`}
-      resultToValue={result => result?._allAgrTagsMeta?.count}
+      resultToValue={result => result?._allTagsMeta?.count}
     />
   );
 };
 
-export default CountAgrTagsWidget;
+export default CountTagsWidget;

@@ -1,6 +1,4 @@
-import React, {
-  FC,
-} from 'react';
+import React, {FC} from 'react';
 import {
   List,
   Datagrid,
@@ -10,7 +8,7 @@ import {
 } from 'react-admin';
 
 
-const AgrTagList: FC<ListProps> = (props: ListProps) => (
+const TagList: FC<ListProps> = (props: ListProps) => (
   <List {...props}>
     <Datagrid rowClick="show">
       <NumberField source="id" />
@@ -19,4 +17,4 @@ const AgrTagList: FC<ListProps> = (props: ListProps) => (
   </List>
 );
 
-export default AgrTagList;
+export default TagList;

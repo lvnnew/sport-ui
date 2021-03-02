@@ -26,14 +26,14 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
-                _allAgrTagsMeta {
+                _allTagsMeta {
                   count
                 }
               }
             `}
-          resultToValue={result => result?._allAgrTagsMeta?.count}
+          resultToValue={result => result?._allTagsMeta?.count}
           title={'Tags'}
-          to='/agrTags' />
+          to='/tags' />
       </div>
     </>
   );

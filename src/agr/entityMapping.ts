@@ -1,3 +1,3 @@
 export const agrMapping = {
-  agrTags: 'AgrTag',
+  tags: 'Tag',
 };

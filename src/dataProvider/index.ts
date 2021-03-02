@@ -47,7 +47,7 @@ interface IntrospectionResults {
 }
 
 const numberIdResources: string[] = [
-  'agrTags'
+  'tags'
 ];
 
 const customBuildQuery = (
@@ -69,8 +69,8 @@ const customBuildQuery = (
           throw new Error(`Could not delete ${resource}`);
         },
         query: gql`mutation remove${resource}($id: ${
-          numberIdResources.includes(mappedResource) 
-          ? 'Int!' 
+          numberIdResources.includes(mappedResource)
+          ? 'Int!'
           : 'ID!'
           }) {
                     remove${resource}(id: $id)

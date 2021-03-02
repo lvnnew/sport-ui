@@ -1,6 +1,4 @@
-import React, {
-  FC,
-} from 'react';
+import React, {FC} from 'react';
 import {
   Edit,
   SimpleForm,
@@ -9,7 +7,7 @@ import {
 } from 'react-admin';
 
 
-const AgrTagEdit: FC<EditProps> = (props: EditProps) => (
+const TagEdit: FC<EditProps> = (props: EditProps) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput source="comment" />
@@ -17,4 +15,4 @@ const AgrTagEdit: FC<EditProps> = (props: EditProps) => (
   </Edit>
 );
 
-export default AgrTagEdit;
+export default TagEdit;
