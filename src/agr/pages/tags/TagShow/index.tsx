@@ -9,12 +9,13 @@ import {
 } from 'react-admin';
 
 import MainTab from './MainTab';
-
+import {additionalTabs} from './additionalTabs';
 
 const TagShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
       <MainTab label="Summary" />
+      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
       
     </TabbedShowLayout>
   </Show>

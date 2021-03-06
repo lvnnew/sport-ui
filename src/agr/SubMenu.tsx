@@ -7,6 +7,7 @@ import {
   MenuItemLink,
 } from 'react-admin';
 import orders from '../demo/orders';
+import {AdditionalMenu} from './AdditionalMenu';
 
 
 interface Props {
@@ -18,6 +19,11 @@ interface Props {
 export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
   return (
     <>
+      <AdditionalMenu
+        dense={dense}
+        onMenuClick={onMenuClick}
+        open={open}
+      />
       <MenuItemLink
         dense={dense}
         leftIcon={<orders.icon />}
