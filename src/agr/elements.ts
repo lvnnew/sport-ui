@@ -6,6 +6,8 @@ import {AgrMenu} from './menu';
 import {agrMapping} from './entityMapping';
 import {agrRoutes} from './routes';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 export const agrElements = {
   id: 'agr',
   resources: agrResources,

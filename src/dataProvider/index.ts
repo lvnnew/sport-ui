@@ -21,6 +21,8 @@ import {
   demoMapping,
 } from '../demo/entityMapping';
 import {toPairs} from 'lodash';
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 const mapping = {
   ...demoMapping,

@@ -10,6 +10,8 @@ import ResourcesPage from './ResourcesPage';
 import MetaPage from './MetaPage';
 import {additionalRoutes} from './additionalRoutes';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 export const agrRoutes = [
   <Route component={AgrDashboard} exact key='agr' path='/agr/dashboard' />,
   <Route component={Functions} exact key='agrFunctions' path='/agr/functions' />,

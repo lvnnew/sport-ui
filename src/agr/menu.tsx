@@ -11,6 +11,8 @@ import {
 } from 'react-admin';
 import orders from '../demo/orders';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 import SubMenu from '../layout/SubMenu';
 import {
   AppState,

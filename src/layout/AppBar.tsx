@@ -10,6 +10,8 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import {
   makeStyles,
 } from '@material-ui/core/styles';
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 const useStyles = makeStyles({
   spacer: {

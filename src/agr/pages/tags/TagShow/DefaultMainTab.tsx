@@ -7,6 +7,8 @@ import {
   TextField
 } from 'react-admin';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 const MainTab: FC<Omit<TabProps, 'children'>> = (props) => (
   <Tab {...props}>

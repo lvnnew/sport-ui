@@ -10,6 +10,8 @@ import {
 
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 const TagShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>

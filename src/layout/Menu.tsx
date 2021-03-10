@@ -18,6 +18,8 @@ import {
 import {
   AgrSubMenu,
 } from '../agr/SubMenu';
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 interface Props {
     dense: boolean;

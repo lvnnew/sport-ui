@@ -1,4 +1,6 @@
 image: node
+# DO NOT EDIT! THIS IS GENERATED FILE
+
 
 stages:
   - check

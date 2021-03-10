@@ -17,6 +17,8 @@ import {
 } from '../../../generated/graphql';
 import {QueryAllTagsArgs} from '../../../generated/graphql';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 interface ListTagsWidgetProps extends
 Omit<ListWigetProps<Tag>, 'request' | 'resultToValue'| 'children'>,
 QueryAllTagsArgs {}

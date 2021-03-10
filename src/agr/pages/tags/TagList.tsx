@@ -7,6 +7,8 @@ import {
   TextField
 } from 'react-admin';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 const TagList: FC<ListProps> = (props: ListProps) => (
   <List {...props}>

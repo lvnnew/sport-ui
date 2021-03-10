@@ -40,6 +40,8 @@ import {
 import {
   envConfig,
 } from './config/envConfig';
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 const history = createHistory();
 

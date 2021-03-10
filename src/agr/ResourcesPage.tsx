@@ -17,6 +17,8 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 const ResourcesPage: FC = () => {
   const classes = useStyles();
 

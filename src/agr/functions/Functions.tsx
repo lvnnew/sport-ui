@@ -14,6 +14,8 @@ import {
   gql, useMutation,
 } from '@apollo/client';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 const HELLO = gql`
   mutation agrExtractDomain($name: String!) {
     agrUtilsHello(name: $name)

@@ -9,6 +9,8 @@ import {
 import orders from '../demo/orders';
 import {AdditionalMenu} from './AdditionalMenu';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 
 interface Props {
   dense: boolean;

@@ -9,6 +9,8 @@ import {
 } from '@apollo/client';
 import {TagFilter} from '../../../generated/graphql';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
+
 interface CountTagsWidgetProps extends
 Omit<NumberWigetProps, 'request' | 'resultToValue'> {
   filter?: TagFilter;
