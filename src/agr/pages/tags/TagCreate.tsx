@@ -3,12 +3,10 @@ import {
   Create,
   SimpleForm,
   EditProps,
-  NumberInput,
   TextInput
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
-
 
 const TagEdit: FC<EditProps> = (props: EditProps) => (
   <Create {...props}>
