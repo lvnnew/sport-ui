@@ -1,4 +1,4 @@
-FROM node:14-buster AS builder
+FROM node:15 AS builder
 
 RUN mkdir /app
 WORKDIR /app
@@ -6,11 +6,10 @@ WORKDIR /app
 RUN npm i -g serve
 
 COPY package.json yarn.lock ./
-RUN npm i
-# RUN npm i && npm cache clean
+RUN yarn
 COPY . .
 
-RUN npm run build
+RUN yarn build
 
 # Actual image
 FROM nginx:alpine

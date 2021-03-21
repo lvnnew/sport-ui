@@ -117,7 +117,7 @@ const ChartWiget: FC<{ orders?: Order[]; title?: string }> = ({orders, title}) =
               <CartesianGrid strokeDasharray='3 3' />
               <Tooltip
                 cursor={{strokeDasharray: '3 3'}}
-                formatter={value =>
+                formatter={(value: any) =>
                   new Intl.NumberFormat(undefined, {
                     currency: 'USD',
                     style: 'currency',
