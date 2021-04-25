@@ -80,7 +80,7 @@ const ProductList: FC<ListProps> = props => {
 
   return (
     <ListBase
-      filters={isSmall ? <ProductFilter /> : null}
+      filters={isSmall ? <ProductFilter /> as any : null}
       perPage={20}
       sort={{field: 'reference', order: 'ASC'}}
       {...props}
