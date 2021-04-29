@@ -16,10 +16,10 @@ import cartouche from './cartouche.png';
 import cartoucheDark from './cartoucheDark.png';
 
 export interface CardWithIconProps {
-    icon: FC<any>;
-    to: string;
-    title?: string;
-    subtitle?: string | number;
+  icon: FC<any>;
+  to?: string;
+  title?: string;
+  subtitle?: string | number;
 }
 
 const useStyles = makeStyles(theme => ({
@@ -37,12 +37,12 @@ const useStyles = makeStyles(theme => ({
   },
   main: () => ({
     '& .icon': {
-      color: theme.palette.type === 'dark' ? 'inherit' : '#dc2440',
+      color: theme.palette.type === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
     },
     alignItems: 'center',
-    background: `url(${
-      theme.palette.type === 'dark' ? cartoucheDark : cartouche
-    }) no-repeat`,
+    // background: `url(${
+    //   theme.palette.type === 'dark' ? cartoucheDark : cartouche
+    // }) no-repeat`,
     display: 'flex',
     justifyContent: 'space-between',
     overflow: 'inherit',
@@ -57,27 +57,38 @@ const CardWithIcon: FC<CardWithIconProps> = props => {
 
   return (
     <Card className={classes.card}>
-      <Link to={to}>
-        <div className={classes.main}>
-          <Box className='icon' width='3em'>
-            {createElement(icon, {fontSize: 'large'})}
-          </Box>
-          <Box textAlign='right'>
-            <Typography
-              className={classes.title}
-              color='textSecondary'
-            >
-              {title}
-            </Typography>
-            <Typography component='h2' variant='h5'>
-              {subtitle || ' '}
-            </Typography>
-          </Box>
-        </div>
-      </Link>
+      {to ? <Link to={to}>
+        <HeaderView {...props} />
+      </Link> : 
+      <HeaderView {...props} />}
       {children && <Divider />}
       {children}
     </Card>
+  );
+};
+
+
+const HeaderView: FC<CardWithIconProps> = props => {
+  const {icon, title, subtitle} = props;
+  const classes = useStyles(props);
+
+  return (
+    <div className={classes.main}>
+      <Box className='icon' width='3em'>
+        {createElement(icon, {fontSize: 'large'})}
+      </Box>
+      <Box textAlign='right'>
+        <Typography
+          className={classes.title}
+          color='textSecondary'
+        >
+          {title}
+        </Typography>
+        <Typography component='h2' variant='h5'>
+          {subtitle || ' '}
+        </Typography>
+      </Box>
+    </div>
   );
 };
 
