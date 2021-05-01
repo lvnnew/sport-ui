@@ -22,6 +22,7 @@ export interface ListWigetProps<T> {
   request: DocumentNode;
   options?: QueryHookOptions;
   resultToValue: (result: any) => T[];
+  action?: React.ReactNode;
 }
 
 const useStyles = makeStyles(theme => ({
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
-  {title, children, request, options, resultToValue}: ListWigetProps<T>,
+  {title, children, request, options, resultToValue, action}: ListWigetProps<T>,
 ) => {
   const {data: result, refetch} = useQuery(request, options);
   const version = useVersion();
@@ -52,7 +53,10 @@ const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
 
   return (
     <Card className={classes.root}>
-      <CardHeader title={title} />
+      <CardHeader
+        title={title}
+        action={action}
+      />
       {
         records && <List dense={true}>
           {records.map((record) => (children(record)))}
