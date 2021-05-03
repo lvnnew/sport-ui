@@ -12,7 +12,7 @@ COPY . .
 RUN yarn build
 
 # Actual image
-FROM nginx:14-alpine
+FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
