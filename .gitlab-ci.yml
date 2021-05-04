@@ -8,6 +8,7 @@ stages:
   - latest-image
   - deploy-stage
   - deploy-demo
+  - deploy-test
 
 cache:
   paths:
@@ -22,44 +23,45 @@ variables:
   KUBECONFIG: /etc/deploy/config
   APPNAME: ui
 
-check:
-  stage: check
-  before_script:
-    - yarn
-  script:
-    - ls
-    - ./check
+# check:
+#   stage: check
+#   before_script:
+#     - yarn
+#   script:
+#     - ls
+#     - ./check
 
-build:
-  stage: build
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: ['']
-  before_script:
-    - mkdir -p /kaniko/.docker
-    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
-    # - /kaniko/warmer --cache-dir=$CI_PROJECT_DIR/.cache_images --image=browserless/chrome
-  script:
-    - /kaniko/executor
-      --cache-dir=$CI_PROJECT_DIR/.cache_images
-      --context ${CI_PROJECT_DIR}
-      --dockerfile ${CI_PROJECT_DIR}/Dockerfile
-      --destination ${CI_REGISTRY_IMAGE}:$CI_COMMIT_REF_SLUG
-      --single-snapshot
-  only:
-    - master
-    - release
-    - /^release-.*$/
-    - demo
+# build:
+#   stage: build
+#   image:
+#     name: gcr.io/kaniko-project/executor:debug
+#     entrypoint: ['']
+#   before_script:
+#     - mkdir -p /kaniko/.docker
+#     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+#     # - /kaniko/warmer --cache-dir=$CI_PROJECT_DIR/.cache_images --image=browserless/chrome
+#   script:
+#     - /kaniko/executor
+#       --cache-dir=$CI_PROJECT_DIR/.cache_images
+#       --context ${CI_PROJECT_DIR}
+#       --dockerfile ${CI_PROJECT_DIR}/Dockerfile
+#       --destination ${CI_REGISTRY_IMAGE}:$CI_COMMIT_REF_SLUG
+#       --single-snapshot
+#   only:
+#     - master
+#     - release
+#     - /^release-.*$/
+#     - demo
+#     - test
 
-master-to-latest:
-  extends: .tag-image
-  stage: latest-image
-  only:
-    - master
-  variables:
-    TAG_ORIGIN: master
-    TAG_DESTINATION: latest
+# master-to-latest:
+#   extends: .tag-image
+#   stage: latest-image
+#   only:
+#     - master
+#   variables:
+#     TAG_ORIGIN: master
+#     TAG_DESTINATION: latest
 
 .tag-image:
   image:
@@ -76,32 +78,28 @@ deploy-to-stage:
   stage: deploy-stage
   variables:
     ENV: "stage"
-
-deploy-to-demo:
-  extends: .deploy-prod
-  stage: deploy-demo
-  variables:
-    ENV: "demo"
-    TAG: ":demo"
-  only:
-    - demo
+    ENV_NAME: "stage01"
 
 .deploy-dev:
   extends: .deploy
   variables:
     DEV: "true"
-    HOST: "${ENV}.apps.making.ventures"
+    HOST: "making.ventures"
     TAG: ":latest"
+    KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
+    ROOT_ENABLED: "true"
   only:
     - master
 
 .deploy-prod:
   extends: .deploy
-  when: manual
+  # when: manual
   variables:
     DEV: "true"
-    HOST: "${ENV}.apps.making.ventures"
-    TAG: ":release"
+    HOST: "making.ventures"
+    TAG: ":latest"
+    KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
+    ROOT_ENABLED: "true"
   only:
     - release
     - /^release-.*$/
@@ -121,8 +119,11 @@ deploy-to-demo:
       --install
       --wait ${NAMESPACE}-${APPNAME} chart
       --timeout 3600s
+      --set "global.envName=${ENV_NAME}"
+      --set "global.env=${ENV}"
       --set "random=:$(date)"
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"
       --set "style=${STYLE}"
+      --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --namespace ${NAMESPACE}
