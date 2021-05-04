@@ -9,11 +9,12 @@ import Typography from '@material-ui/core/Typography';
 import SettingsIcon from '@material-ui/icons/Settings';
 import {
   makeStyles,
+  Theme,
 } from '@material-ui/core/styles';
+
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme: Theme) => ({
   spacer: {
     flex: 1,
   },
@@ -23,7 +24,10 @@ const useStyles = makeStyles({
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
   },
-});
+  centerTitle: {
+    color: theme.palette.primary.main,
+  },
+}));
 
 const ConfigurationMenu = forwardRef<any, any>((props, ref) => {
   const translate = useTranslate();
@@ -57,7 +61,14 @@ const CustomAppBar = (props: any) => {
         id='react-admin-title'
         variant='h6'
       />
-      <div>Agro Platform</div>
+      <Typography
+        className={classes.centerTitle}
+        color='inherit'
+        id='react-admin-title'
+        variant='h6'
+      >
+        Agro Platform
+      </Typography>
       <span className={classes.spacer} />
     </AppBar>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, {
   FC,
 } from 'react';
@@ -21,7 +22,33 @@ import {QueryAllTagsArgs} from '../../../generated/graphql';
 
 interface ListTagsWidgetProps extends
 Omit<ListWigetProps<Tag>, 'request' | 'resultToValue'| 'children'>,
-QueryAllTagsArgs {}
+QueryAllTagsArgs {
+  children?: FC<Tag>,
+}
+
+export const ListTagsItem: FC<Tag> = (props) => {
+  return (
+    <ListItem
+      button
+      component={Link}
+      key={props.id}
+      to={`/tags/${props.id}/show`}
+    >
+      <ListItemText
+        primary={
+          <>
+            <div>
+              {`Id: ${props.id}`}
+            </div>
+            <div>
+              {`Comment: ${props.comment}`}
+            </div>
+          </>
+        }
+      />
+    </ListItem>
+  );
+};
 
 const ListTagsWidget: FC<ListTagsWidgetProps> = ({
   page = 0,
@@ -29,9 +56,9 @@ const ListTagsWidget: FC<ListTagsWidgetProps> = ({
   sortField,
   sortOrder,
   filter,
+  children = ListTagsItem,
   ...rest
 }) => {
-
   return (
     <ListWiget<Tag>
       {...rest}
@@ -66,25 +93,7 @@ const ListTagsWidget: FC<ListTagsWidgetProps> = ({
       `}
       resultToValue={result => result?.allTags}
     >
-      {(record) => <ListItem
-        button
-        component={Link}
-        key={record.id}
-        to={`/tags/${record.id}/show`}
-      >
-        <ListItemText
-          primary={
-            <>
-              <div>
-                {`Id: ${record.id}`}
-              </div>
-              <div>
-                {`Comment: ${record.comment}`}
-              </div>
-            </>
-          }
-        />
-      </ListItem>}
+      {(record) => children(record)}
     </ListWiget>
   );
 };

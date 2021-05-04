@@ -10,14 +10,13 @@ import {
   MenuItemLink,
 } from 'react-admin';
 import orders from '../demo/orders';
-
-// DO NOT EDIT! THIS IS GENERATED FILE
-
 import SubMenu from '../layout/SubMenu';
 import {
   AppState,
 } from '../types';
 import {AgrSubMenu} from './SubMenu';
+
+// DO NOT EDIT! THIS IS GENERATED FILE
 
 const defaultState = {
   menuAgr: false,

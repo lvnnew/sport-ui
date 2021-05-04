@@ -21,8 +21,9 @@ import {
   demoMapping,
 } from '../demo/entityMapping';
 import {toPairs} from 'lodash';
-// DO NOT EDIT! THIS IS GENERATED FILE
+import {__schema as schema} from '../generated/graphql.schema.json';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
 
 const mapping = {
   ...demoMapping,
@@ -93,6 +94,7 @@ export default (client: any) => {
     cache,
     client,
     introspection: {
+      schema,
       operationNames: {
         [DELETE]: (resource: IntrospectionType) =>
           `remove${resource.name}`,

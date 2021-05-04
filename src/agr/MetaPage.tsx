@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
   section: {
     margin: '10px auto'
   },
-  dictionary: {
+  catalog: {
     margin: '20px 10px'
   },
   field: {
@@ -61,11 +61,11 @@ const MetaPage: FC = () => {
           configVars: {result.Meta.configVars.join(',')}
         </div>
         <div className={classes.section}>
-          Dictionaries:
+          Catalogs:
         </div>
         <div className={classes.section}>
-          {result.Meta.dictionaries.map(
-            (dictionary: any, index: number) => <Dictionary dictionary={dictionary} key={index} />
+          {result.Meta.catalogs.map(
+            (catalog: any, index: number) => <Catalog catalog={catalog} key={index} />
           )}
         </div>
       </div>}
@@ -73,23 +73,23 @@ const MetaPage: FC = () => {
   );
 };
 
-const Dictionary: FC<{dictionary: any}> = ({dictionary}) => {
+const Catalog: FC<{catalog: any}> = ({catalog}) => {
   const classes = useStyles();
 
   return (
     <>
-      {<div className={classes.dictionary}>
+      {<div className={classes.catalog}>
         <div className={classes.section}>
-          name: {dictionary.name}
+          name: {catalog.name}
         </div>
         <div className={classes.section}>
-          description: {dictionary.description}
+          description: {catalog.description}
         </div>
         <div className={classes.section}>
           Fields:
         </div>
         <div className={classes.section}>
-          {dictionary.fields.map(
+          {catalog.fields.map(
             (field: any, index: number) => <Field field={field} key={index} />
           )}
         </div>

@@ -11,8 +11,8 @@ import React, {
 import {
   envConfig,
 } from '../config/envConfig';
-// DO NOT EDIT! THIS IS GENERATED FILE
 
+// DO NOT EDIT! THIS IS GENERATED FILE
 
 export enum Space {
   Agr = 'Agr',

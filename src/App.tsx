@@ -40,8 +40,9 @@ import {
 import {
   envConfig,
 } from './config/envConfig';
-// DO NOT EDIT! THIS IS GENERATED FILE
+import {DebugProvider} from './contexts/DebugContext';
 
+// DO NOT EDIT! THIS IS GENERATED FILE
 
 const history = createHistory();
 
@@ -77,7 +78,7 @@ const App = () => {
       const client = new ApolloClient({
         cache: new InMemoryCache(),
         defaultOptions: {
-          query: {fetchPolicy: 'cache-only'},
+          query: {fetchPolicy: 'network-only'},
         },
         link,
       });
@@ -111,26 +112,26 @@ const App = () => {
   }
 
   return (
-
     <ApolloProvider client={client}>
-      <Admin
-        customReducers={{theme: themeReducer}}
-        customRoutes={customRoutes}
-        dashboard={AgrDashboard}
-        dataProvider={dataProvider}
-        history={history}
-        i18nProvider={i18nProvider}
-        layout={Layout}
-        loading={LoadingPage}
-        loginPage={LoginAuth0}
-        title=''
-      >
-        {[
-          ...dmResources,
-          ...agrResources,
-        ]}
-      </Admin>
-
+      <DebugProvider>
+        <Admin
+          customReducers={{theme: themeReducer}}
+          customRoutes={customRoutes}
+          dashboard={AgrDashboard}
+          dataProvider={dataProvider}
+          history={history}
+          i18nProvider={i18nProvider}
+          layout={Layout}
+          loading={LoadingPage}
+          loginPage={LoginAuth0}
+          title=''
+        >
+          {[
+            ...dmResources,
+            ...agrResources,
+          ]}
+        </Admin>
+      </DebugProvider>
     </ApolloProvider>
   );
 };
