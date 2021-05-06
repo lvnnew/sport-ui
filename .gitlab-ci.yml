@@ -8,7 +8,6 @@ stages:
   - latest-image
   - deploy-stage
   - deploy-demo
-  - deploy-test
 
 cache:
   paths:
@@ -52,7 +51,6 @@ build:
     - release
     - /^release-.*$/
     - demo
-    - test
 
 master-to-latest:
   extends: .tag-image
@@ -78,28 +76,32 @@ deploy-to-stage:
   stage: deploy-stage
   variables:
     ENV: "stage"
-    ENV_NAME: "stage01"
+
+deploy-to-demo:
+  extends: .deploy-prod
+  stage: deploy-demo
+  variables:
+    ENV: "demo"
+    TAG: ":demo"
+  only:
+    - demo
 
 .deploy-dev:
   extends: .deploy
   variables:
     DEV: "true"
-    HOST: "making.ventures"
+    HOST: "${ENV}.apps.making.ventures"
     TAG: ":latest"
-    KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
-    ROOT_ENABLED: "true"
   only:
     - master
 
 .deploy-prod:
   extends: .deploy
-  # when: manual
+  when: manual
   variables:
     DEV: "true"
-    HOST: "making.ventures"
-    TAG: ":latest"
-    KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
-    ROOT_ENABLED: "true"
+    HOST: "${ENV}.apps.making.ventures"
+    TAG: ":release"
   only:
     - release
     - /^release-.*$/
@@ -119,11 +121,8 @@ deploy-to-stage:
       --install
       --wait ${NAMESPACE}-${APPNAME} chart
       --timeout 3600s
-      --set "global.envName=${ENV_NAME}"
-      --set "global.env=${ENV}"
       --set "random=:$(date)"
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"
       --set "style=${STYLE}"
-      --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --namespace ${NAMESPACE}

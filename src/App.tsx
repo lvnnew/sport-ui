@@ -95,15 +95,7 @@ const App = () => {
   log.info('dataProvider');
   log.info(dataProvider);
 
-  if (!dataProvider) {
-    return (
-      <div className='loader-container'>
-        <div className='loader'>Loading...</div>
-      </div>
-    );
-  }
-
-  if (!client) {
+  if (!dataProvider || !client) {
     return (
       <div className='loader-container'>
         <div className='loader'>Loading...</div>
