@@ -1,14 +1,13 @@
 /* eslint-_disable_ @typescript-eslint/camelcase */
-import * as React from 'react';
-import {
-  FC,
-} from 'react';
+import React, {useState, FC} from 'react';
 import {
   MenuItemLink,
 } from 'react-admin';
 import {useDebug} from '../contexts/DebugContext';
 import orders from '../demo/orders';
 import {AdditionalMenu} from './AdditionalMenu';
+import SubMenu from '../layout/SubMenu';
+import DocumentsIcon from '@material-ui/icons/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -18,8 +17,23 @@ interface Props {
   onMenuClick: () => void;
 }
 
+const defaultState = {
+  infoRegistries: false,
+  sumRegistries: false,
+  documents: false,
+  catalogs: false,
+};
+
+type MenuName = keyof typeof defaultState;
+
 export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
   const {debug} = useDebug();
+  const [state, setState] = useState(defaultState);
+
+  const handleToggle = (menu: MenuName) => {
+    setState(state => ({...state, [menu]: !state[menu]}));
+  };
+
   return (
     <>
       <AdditionalMenu
@@ -51,14 +65,6 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           primaryText={'Docs'}
           sidebarIsOpen={open}
           to={'/meta'}
-        />
-        <MenuItemLink
-          dense={dense}
-          leftIcon={<orders.icon />}
-          onClick={onMenuClick}
-          primaryText={'Tags'}
-          sidebarIsOpen={open}
-          to={'/tags'}
         />
       </>}
     </>
