@@ -3,7 +3,7 @@ import {
   useState, useEffect,
 } from 'react';
 import {
-  Admin,
+  Admin, AuthProvider,
 } from 'react-admin';
 import {
   ApolloClient,
@@ -41,6 +41,7 @@ import {
   envConfig,
 } from './config/envConfig';
 import {DebugProvider} from './contexts/DebugContext';
+import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -59,11 +60,13 @@ const i18nProvider = polyglotI18nProvider(locale => {
 
 const App = () => {
   const [dataProvider, setDataProvider] = useState<any | null>(null);
+  const [authProvider, setAuthProvider] = useState<AuthProvider | null>(null);
   const [client, setClient] = useState<any | null>(null);
 
   useEffect(() => {
     const fetchDataProvider = async () => {
       const config = await getConfig();
+      setAuthProvider(getAuthProvider(config.endpoint));
 
       log.info(config);
       log.info(envConfig);
@@ -95,7 +98,7 @@ const App = () => {
   log.info('dataProvider');
   log.info(dataProvider);
 
-  if (!dataProvider || !client) {
+  if (!dataProvider || !client || !authProvider) {
     return (
       <div className='loader-container'>
         <div className='loader'>Loading...</div>
@@ -116,6 +119,7 @@ const App = () => {
           layout={Layout}
           loading={LoadingPage}
           loginPage={LoginAuth0}
+          authProvider={authProvider}
           title=''
         >
           {[
