@@ -92,6 +92,7 @@ deploy-to-demo:
     DEV: "true"
     HOST: "${ENV}.apps.making.ventures"
     TAG: ":latest"
+    KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
   only:
     - master
 
@@ -102,6 +103,7 @@ deploy-to-demo:
     DEV: "true"
     HOST: "${ENV}.apps.making.ventures"
     TAG: ":release"
+    KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
   only:
     - release
     - /^release-.*$/
