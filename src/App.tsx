@@ -17,7 +17,7 @@ import './App.css';
 import themeReducer from './themeReducer';
 import {
   Layout,
-  LoginAuth0,
+  Login,
 } from './layout';
 import customRoutes from './routes';
 import englishMessages from './i18n/en';
@@ -73,8 +73,10 @@ const App = () => {
 
       const link = from([
         new HttpLink({
-          headers: {Token: envConfig.token},
-          uri: config.endpoint,
+          headers: {
+            authorization: `Bearer ${getJwtToken()}`,
+          },
+          uri: `${config.endpoint}/graph`,
         }),
       ]);
 
@@ -87,9 +89,7 @@ const App = () => {
       });
       setClient(client);
       const dataProviderInstance = await dataProviderFactory(client);
-      setDataProvider(
-        () => dataProviderInstance,
-      );
+      setDataProvider(() => dataProviderInstance);
     };
 
     fetchDataProvider();
@@ -118,7 +118,7 @@ const App = () => {
           i18nProvider={i18nProvider}
           layout={Layout}
           loading={LoadingPage}
-          loginPage={LoginAuth0}
+          loginPage={Login}
           authProvider={authProvider}
           title=''
         >
