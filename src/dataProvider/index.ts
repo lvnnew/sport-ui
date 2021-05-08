@@ -50,6 +50,10 @@ interface IntrospectionResults {
 }
 
 const numberIdResources: string[] = [
+  'users',
+  'admins',
+  'appLogins',
+  'adminLogins',
   'tags'
 ];
 

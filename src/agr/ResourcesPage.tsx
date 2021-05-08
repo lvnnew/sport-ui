@@ -28,6 +28,50 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allUsersMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allUsersMeta?.count}
+          title={'Users'}
+          to='/users' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allAdminsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allAdminsMeta?.count}
+          title={'Admins'}
+          to='/admins' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allAppLoginsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allAppLoginsMeta?.count}
+          title={'Logins of usual (not admins) users'}
+          to='/appLogins' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allAdminLoginsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allAdminLoginsMeta?.count}
+          title={'Admin logins'}
+          to='/adminLogins' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allTagsMeta {
                   count
                 }
