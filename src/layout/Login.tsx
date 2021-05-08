@@ -87,7 +87,7 @@ const renderInput = ({
 );
 
 interface FormValues {
-    username?: string;
+    email?: string;
     password?: string;
 }
 
@@ -120,8 +120,8 @@ const Login = () => {
 
   const validate = (values: FormValues) => {
     const errors: FormValues = {};
-    if (!values.username) {
-      errors.username = translate('ra.validation.required');
+    if (!values.email) {
+      errors.email = translate('ra.validation.required');
     }
     if (!values.password) {
       errors.password = translate('ra.validation.required');
@@ -154,7 +154,7 @@ const Login = () => {
                     // @ts-ignore
                     disabled={loading}
                     label={translate('ra.auth.username')}
-                    name='username'
+                    name='email'
                   />
                 </div>
                 <div className={classes.input}>
