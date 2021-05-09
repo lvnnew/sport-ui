@@ -24,6 +24,11 @@ import AdminLoginEdit from './pages/adminLogins/AdminLoginEdit';
 import AdminLoginCreate from './pages/adminLogins/AdminLoginCreate';
 import AdminLoginList from './pages/adminLogins/AdminLoginList';
 
+import StatShow from './pages/stats/StatShow';
+import StatEdit from './pages/stats/StatEdit';
+import StatCreate from './pages/stats/StatCreate';
+import StatList from './pages/stats/StatList';
+
 import TagShow from './pages/tags/TagShow';
 import TagEdit from './pages/tags/TagEdit';
 import TagCreate from './pages/tags/TagCreate';
@@ -36,5 +41,6 @@ export const agrResources = [
   <Resource show={AdminShow} edit={AdminEdit} create={AdminCreate} key='admins' list={AdminList} name='admins' />,
   <Resource show={AppLoginShow} edit={AppLoginEdit} create={AppLoginCreate} key='appLogins' list={AppLoginList} name='appLogins' />,
   <Resource show={AdminLoginShow} edit={AdminLoginEdit} create={AdminLoginCreate} key='adminLogins' list={AdminLoginList} name='adminLogins' />,
+  <Resource show={StatShow} edit={StatEdit} create={StatCreate} key='stats' list={StatList} name='stats' />,
   <Resource show={TagShow} edit={TagEdit} create={TagCreate} key='tags' list={TagList} name='tags' />,
 ];
