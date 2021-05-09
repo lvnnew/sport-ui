@@ -71,17 +71,19 @@ master-to-latest:
   variables:
     GIT_STRATEGY: none
 
-deploy-to-stage:
+deploy-stage:
   extends: .deploy-dev
   stage: deploy-stage
   variables:
     ENV: "stage"
+    ENV_NAME: "stage01"
 
-deploy-to-demo:
+deploy-demo:
   extends: .deploy-prod
   stage: deploy-demo
   variables:
     ENV: "demo"
+    ENV_NAME: "demo01"
     TAG: ":demo"
   only:
     - demo
@@ -90,9 +92,10 @@ deploy-to-demo:
   extends: .deploy
   variables:
     DEV: "true"
-    HOST: "${ENV}.apps.making.ventures"
+    HOST: "making.ventures"
     TAG: ":latest"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
+    ROOT_ENABLED: "false"
   only:
     - master
 
@@ -101,9 +104,10 @@ deploy-to-demo:
   when: manual
   variables:
     DEV: "true"
-    HOST: "${ENV}.apps.making.ventures"
-    TAG: ":release"
+    HOST: "making.ventures"
+    TAG: ":latest"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
+    ROOT_ENABLED: "false"
   only:
     - release
     - /^release-.*$/
@@ -123,6 +127,8 @@ deploy-to-demo:
       --install
       --wait ${NAMESPACE}-${APPNAME} chart
       --timeout 3600s
+      --set "global.envName=${ENV_NAME}"
+      --set "global.env=${ENV}"
       --set "random=:$(date)"
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"

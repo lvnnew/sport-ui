@@ -18,7 +18,15 @@ metadata:
  {{ end }}
 spec:
   rules:
-    - host: {{ .Values.ingress.domains.app }}.{{ .Values.ingress.host }}
+    {{ if .Values.ingress.rootEnabled }}
+    - host: {{ .Values.ingress.domains.app }}.apps.{{ .Values.ingress.host }}
+      http:
+        paths:
+          - backend:
+              serviceName: agr-ui
+              servicePort: 80
+    {{ end }}
+    - host: {{ .Values.ingress.domains.app }}.{{ .Values.global.env }}.apps.{{ .Values.global.envName }}.{{ .Values.ingress.host }}
       http:
         paths:
           - backend:
@@ -26,5 +34,5 @@ spec:
               servicePort: 80
   tls:
   - hosts:
-    - {{ .Values.ingress.domains.app }}.{{ .Values.ingress.host }}
-    secretName: {{ .Values.ingress.domains.app }}.{{ .Values.ingress.host }}-tls
+    - {{ .Values.ingress.domains.app }}.{{ .Values.global.env }}.apps.{{ .Values.global.envName }}.{{ .Values.ingress.host }}
+    secretName: {{ .Values.ingress.domains.app }}.{{ .Values.global.env }}.apps.{{ .Values.global.envName }}.{{ .Values.ingress.host }}-tls

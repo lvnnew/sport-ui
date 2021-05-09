@@ -49,7 +49,7 @@ spec:
         - name: ENV
           value: '{{ .Values.global.env }}'
         - name: ENDPOINT
-          value: 'https://{{ .Values.ingress.domains.endpoint }}.{{ .Values.ingress.host }}'
+          value: 'https://{{ .Values.ingress.domains.endpoint }}.{{ .Values.global.env }}.apps.{{ .Values.global.envName }}.{{ .Values.ingress.host }}/adm'
 
         livenessProbe:
           httpGet:
