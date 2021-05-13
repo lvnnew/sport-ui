@@ -42,6 +42,7 @@ import {
 } from './config/envConfig';
 import {DebugProvider} from './contexts/DebugContext';
 import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
+import {RetryLink} from "@apollo/client/link/retry";
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -72,6 +73,7 @@ const App = () => {
       log.info(envConfig);
 
       const link = from([
+        new RetryLink(),
         new HttpLink({
           headers: {
             authorization: `Bearer ${getJwtToken()}`,
