@@ -62,7 +62,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           dense={dense}
           leftIcon={<orders.icon />}
           onClick={onMenuClick}
-          primaryText={'Docs'}
+          primaryText={'Meta'}
           sidebarIsOpen={open}
           to={'/meta'}
         />
