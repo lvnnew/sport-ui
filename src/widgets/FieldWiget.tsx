@@ -17,6 +17,7 @@ export interface FieldWigetProps extends Omit<CardWithIconProps, 'icon'> {
   measuring?: string;
   source: string;
   defaultValue?: string;
+  prepare?: (val: any) => string;
 }
 
 const FieldWiget: FC<FieldWigetProps> = (
@@ -25,16 +26,19 @@ const FieldWiget: FC<FieldWigetProps> = (
     measuring = '',
     defaultValue = '',
     icon,
+    prepare,
     ...rest
   }
   ) => {
   const record = useRecordContext();
+  const val = record[source] || defaultValue;
+  const prepared = prepare ? prepare(val) : val;
 
   return (
     <CardWithIcon
       {...rest}
       icon={icon || ArrowForwardIosIcon}
-      subtitle={String(record[source] || defaultValue) + ' ' + measuring}
+      subtitle={String(prepared) + ' ' + measuring}
     />
   );
 };
