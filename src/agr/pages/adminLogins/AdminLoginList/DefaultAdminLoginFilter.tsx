@@ -10,12 +10,12 @@ import {
 const DefaultAdminLoginFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
-      <TextInput fullWidth source="login" />
-      <TextInput fullWidth source="passwordHash" />
-      <TextInput fullWidth source="role" />
-      <BooleanInput fullWidth source="emailVerified" />
-      <BooleanInput fullWidth source="initialPasswordChanged" />
-      <BooleanInput fullWidth source="locked" />
+      <TextInput  fullWidth source="login" />
+      <TextInput  fullWidth source="passwordHash" />
+      <TextInput  fullWidth source="role" />
+      <BooleanInput defaultValue={false} fullWidth source="emailVerified" />
+      <BooleanInput defaultValue={false} fullWidth source="initialPasswordChanged" />
+      <BooleanInput defaultValue={false} fullWidth source="locked" />
   </Filter>
 );
 

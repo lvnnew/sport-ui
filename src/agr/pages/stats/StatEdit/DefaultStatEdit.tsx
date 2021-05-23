@@ -17,8 +17,8 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
     <Edit {...props}>
       <SimpleForm>
         <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><DateTimeInput fullWidth source="updated" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><NumberInput fullWidth source="helloCount" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><DateTimeInput  fullWidth source="updated" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><NumberInput  fullWidth source="helloCount" /></FormGrid>
         </FormGrid>
       </SimpleForm>
     </Edit>

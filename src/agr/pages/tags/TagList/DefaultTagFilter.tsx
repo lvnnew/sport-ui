@@ -9,7 +9,7 @@ import {
 const DefaultTagFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
-      <TextInput fullWidth source="comment" />
+      <TextInput  fullWidth source="comment" />
   </Filter>
 );
 

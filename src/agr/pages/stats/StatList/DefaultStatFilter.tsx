@@ -11,8 +11,8 @@ import {
 const DefaultStatFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
-      <DateTimeInput fullWidth source="updated" />
-      <NumberInput fullWidth source="helloCount" />
+      <DateTimeInput  fullWidth source="updated" />
+      <NumberInput  fullWidth source="helloCount" />
   </Filter>
 );
 

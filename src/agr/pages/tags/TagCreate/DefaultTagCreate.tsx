@@ -16,7 +16,7 @@ const DefaultTagCreate: FC<CreateProps> = (props: CreateProps) => {
     <Create {...props}>
       <SimpleForm>
         <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="comment" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput  fullWidth source="comment" /></FormGrid>
         </FormGrid>
       </SimpleForm>
     </Create>

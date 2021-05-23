@@ -9,9 +9,9 @@ import {
 const DefaultUserFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
-      <TextInput fullWidth source="lastname" />
-      <TextInput fullWidth source="firstname" />
-      <TextInput fullWidth source="email" />
+      <TextInput  fullWidth source="lastname" />
+      <TextInput  fullWidth source="firstname" />
+      <TextInput  fullWidth source="email" />
   </Filter>
 );
 
