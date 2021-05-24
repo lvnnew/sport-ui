@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    es2020: true,
     jest: true,
     mocha: true,
     node: true,
