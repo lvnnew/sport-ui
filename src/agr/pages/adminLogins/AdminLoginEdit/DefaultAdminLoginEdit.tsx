@@ -17,9 +17,9 @@ const DefaultAdminLoginEdit: FC<EditProps> = (props: EditProps) => {
     <Edit {...props}>
       <SimpleForm>
         <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput  fullWidth source="login" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput  fullWidth source="passwordHash" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput  fullWidth source="role" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="login" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="passwordHash" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="role" /></FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanInput defaultValue={false} fullWidth source="emailVerified" /></FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanInput defaultValue={false} fullWidth source="initialPasswordChanged" /></FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanInput defaultValue={false} fullWidth source="locked" /></FormGrid>
