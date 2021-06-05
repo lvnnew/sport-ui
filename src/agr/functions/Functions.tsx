@@ -11,14 +11,14 @@ import IconButton from '@material-ui/core/IconButton';
 import SendIcon from '@material-ui/icons/SendOutlined';
 
 import {
-  gql, useMutation,
+  gql, useLazyQuery,
 } from '@apollo/client';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const HELLO = gql`
-  mutation agrExtractDomain($name: String!) {
-    agrUtilsHello(name: $name)
+  query testHello($name: String!) {
+    testHello(name: $name)
   }
 `;
 
@@ -32,7 +32,7 @@ export default () => {
     [setName],
   );
 
-  const [hello, {data}] = useMutation(HELLO);
+  const [hello, {data}] = useLazyQuery(HELLO);
 
   const onClick = useCallback(() => hello({variables: {name}}), [hello, name]);
 
