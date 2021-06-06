@@ -5,7 +5,7 @@ const IDENTITY_STORAGE_KEY = 'identity';
 
 export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 
-const getAuthProvider: (endpoint: string) => AuthProvider = (endpoint) => ({
+const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider = (endpoint, onLogin) => ({
   login: async ({email, password}) => {
     // const endpoint = '213';
     // const {post, response, loading, error, data} = useFetch(
@@ -35,6 +35,7 @@ const getAuthProvider: (endpoint: string) => AuthProvider = (endpoint) => ({
           fullName: 'user',
           avatar: 'some avatar',
         }));
+        onLogin();
       });
   },
   checkError: async (error) => {

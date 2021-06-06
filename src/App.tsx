@@ -63,11 +63,12 @@ const App = () => {
   const [dataProvider, setDataProvider] = useState<any | null>(null);
   const [authProvider, setAuthProvider] = useState<AuthProvider | null>(null);
   const [client, setClient] = useState<any | null>(null);
+  const [authVersion, setAuthVersion] = useState(0);
 
   useEffect(() => {
     const fetchDataProvider = async () => {
       const config = await getConfig();
-      setAuthProvider(getAuthProvider(config.endpoint));
+      setAuthProvider(getAuthProvider(config.endpoint, () => setAuthVersion(prev => prev + 1)));
 
       log.info(config);
       log.info(envConfig);
@@ -95,7 +96,7 @@ const App = () => {
     };
 
     fetchDataProvider();
-  }, []);
+  }, [authVersion]);
 
   log.info('dataProvider');
   log.info(dataProvider);
