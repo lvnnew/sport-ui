@@ -9,7 +9,7 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  HttpLink,
+  ApolloLink,
   from,
 } from '@apollo/client';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
@@ -43,6 +43,7 @@ import {
 import {DebugProvider} from './contexts/DebugContext';
 import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
 import {RetryLink} from "@apollo/client/link/retry";
+import {createUploadLink} from 'apollo-upload-client';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -75,12 +76,12 @@ const App = () => {
 
       const link = from([
         new RetryLink(),
-        new HttpLink({
+        createUploadLink({
           headers: {
             authorization: `Bearer ${getJwtToken()}`,
           },
           uri: `${config.endpoint}/graph`,
-        }),
+        }) as unknown as ApolloLink,
       ]);
 
       const client = new ApolloClient({
