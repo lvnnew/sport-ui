@@ -4,6 +4,11 @@ import {
   Resource,
 } from 'react-admin';
 
+import FileShow from './pages/files/FileShow';
+import FileEdit from './pages/files/FileEdit';
+import FileCreate from './pages/files/FileCreate';
+import FileList from './pages/files/FileList';
+
 import UserShow from './pages/users/UserShow';
 import UserEdit from './pages/users/UserEdit';
 import UserCreate from './pages/users/UserCreate';
@@ -37,6 +42,7 @@ import TagList from './pages/tags/TagList';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export const agrResources = [
+  <Resource show={FileShow} edit={FileEdit} create={FileCreate} key='files' list={FileList} name='files' options={{label: 'Files'}} />,
   <Resource show={UserShow} edit={UserEdit} create={UserCreate} key='users' list={UserList} name='users' options={{label: 'Users'}} />,
   <Resource show={AdminShow} edit={AdminEdit} create={AdminCreate} key='admins' list={AdminList} name='admins' options={{label: 'Admins'}} />,
   <Resource show={AppLoginShow} edit={AppLoginEdit} create={AppLoginCreate} key='appLogins' list={AppLoginList} name='appLogins' options={{label: 'Logins of usual (not admins) users'}} />,

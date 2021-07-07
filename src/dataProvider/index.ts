@@ -50,6 +50,7 @@ interface IntrospectionResults {
 }
 
 const numberIdResources: string[] = [
+  'files',
   'users',
   'admins',
   'appLogins',
