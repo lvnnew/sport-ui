@@ -8,16 +8,16 @@ import NumberWiget, {
 import {
   gql,
 } from '@apollo/client';
-import {AdminLoginFilter} from '../../../generated/graphql';
+import {ManagerLoginFilter} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface CountAdminLoginsWidgetProps extends
+interface CountManagerLoginsWidgetProps extends
 Omit<NumberWigetProps, 'request' | 'resultToValue'> {
-  filter?: AdminLoginFilter;
+  filter?: ManagerLoginFilter;
 }
 
-const CountAdminLoginsWidget: FC<CountAdminLoginsWidgetProps> = ({
+const CountManagerLoginsWidget: FC<CountManagerLoginsWidgetProps> = ({
   filter,
   ...rest
 }) => {
@@ -31,14 +31,14 @@ const CountAdminLoginsWidget: FC<CountAdminLoginsWidgetProps> = ({
         },
       }}
       request={gql`
-        query ($filter: AdminLoginFilter) {
-          _allAdminLoginsMeta(filter: $filter) {
+        query ($filter: ManagerLoginFilter) {
+          _allManagerLoginsMeta(filter: $filter) {
             count
           }
         }`}
-      resultToValue={result => result?._allAdminLoginsMeta?.count}
+      resultToValue={result => result?._allManagerLoginsMeta?.count}
     />
   );
 };
 
-export default CountAdminLoginsWidget;
+export default CountManagerLoginsWidget;

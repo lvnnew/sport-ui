@@ -79,7 +79,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             onClick={onMenuClick}
             primaryText={'Admin logins'}
             sidebarIsOpen={open}
-            to={'/adminLogins'}
+            to={'/managerLogins'}
           />
           <MenuItemLink
             dense={dense}

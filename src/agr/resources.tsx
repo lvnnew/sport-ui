@@ -24,10 +24,10 @@ import AppLoginEdit from './pages/appLogins/AppLoginEdit';
 import AppLoginCreate from './pages/appLogins/AppLoginCreate';
 import AppLoginList from './pages/appLogins/AppLoginList';
 
-import AdminLoginShow from './pages/adminLogins/AdminLoginShow';
-import AdminLoginEdit from './pages/adminLogins/AdminLoginEdit';
-import AdminLoginCreate from './pages/adminLogins/AdminLoginCreate';
-import AdminLoginList from './pages/adminLogins/AdminLoginList';
+import ManagerLoginShow from './pages/managerLogins/ManagerLoginShow';
+import ManagerLoginEdit from './pages/managerLogins/ManagerLoginEdit';
+import ManagerLoginCreate from './pages/managerLogins/ManagerLoginCreate';
+import ManagerLoginList from './pages/managerLogins/ManagerLoginList';
 
 import StatShow from './pages/stats/StatShow';
 import StatEdit from './pages/stats/StatEdit';
@@ -46,7 +46,7 @@ export const agrResources = [
   <Resource show={UserShow} edit={UserEdit} create={UserCreate} key='users' list={UserList} name='users' options={{label: 'Users'}} />,
   <Resource show={AdminShow} edit={AdminEdit} create={AdminCreate} key='admins' list={AdminList} name='admins' options={{label: 'Admins'}} />,
   <Resource show={AppLoginShow} edit={AppLoginEdit} create={AppLoginCreate} key='appLogins' list={AppLoginList} name='appLogins' options={{label: 'Logins of usual (not admins) users'}} />,
-  <Resource show={AdminLoginShow} edit={AdminLoginEdit} create={AdminLoginCreate} key='adminLogins' list={AdminLoginList} name='adminLogins' options={{label: 'Admin logins'}} />,
+  <Resource show={ManagerLoginShow} edit={ManagerLoginEdit} create={ManagerLoginCreate} key='managerLogins' list={ManagerLoginList} name='managerLogins' options={{label: 'Admin logins'}} />,
   <Resource show={StatShow} edit={StatEdit} create={StatCreate} key='stats' list={StatList} name='stats' options={{label: 'Stats'}} />,
   <Resource show={TagShow} edit={TagEdit} create={TagCreate} key='tags' list={TagList} name='tags' options={{label: 'Tags'}} />,
 ];

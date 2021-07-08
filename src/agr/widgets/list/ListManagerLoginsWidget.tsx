@@ -14,25 +14,25 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  AdminLogin,
+  ManagerLogin,
 } from '../../../generated/graphql';
-import {QueryAllAdminLoginsArgs} from '../../../generated/graphql';
+import {QueryAllManagerLoginsArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListAdminLoginsWidgetProps extends
-Omit<ListWigetProps<AdminLogin>, 'request' | 'resultToValue'| 'children'>,
-QueryAllAdminLoginsArgs {
-  children?: FC<AdminLogin>,
+interface ListManagerLoginsWidgetProps extends
+Omit<ListWigetProps<ManagerLogin>, 'request' | 'resultToValue'| 'children'>,
+QueryAllManagerLoginsArgs {
+  children?: FC<ManagerLogin>,
 }
 
-export const ListAdminLoginsItem: FC<AdminLogin> = (props) => {
+export const ListManagerLoginsItem: FC<ManagerLogin> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/adminLogins/${props.id}/show`}
+      to={`/managerLogins/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -65,17 +65,17 @@ export const ListAdminLoginsItem: FC<AdminLogin> = (props) => {
   );
 };
 
-const ListAdminLoginsWidget: FC<ListAdminLoginsWidgetProps> = ({
+const ListManagerLoginsWidget: FC<ListManagerLoginsWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListAdminLoginsItem,
+  children = ListManagerLoginsItem,
   ...rest
 }) => {
   return (
-    <ListWiget<AdminLogin>
+    <ListWiget<ManagerLogin>
       {...rest}
       options={{
         variables: {
@@ -92,9 +92,9 @@ const ListAdminLoginsWidget: FC<ListAdminLoginsWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: AdminLoginFilter,
+          $filter: ManagerLoginFilter,
         ) {
-          allAdminLogins(
+          allManagerLogins(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -111,11 +111,11 @@ const ListAdminLoginsWidget: FC<ListAdminLoginsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?.allAdminLogins}
+      resultToValue={result => result?.allManagerLogins}
     >
       {(record) => children(record)}
     </ListWiget>
   );
 };
 
-export default ListAdminLoginsWidget;
+export default ListManagerLoginsWidget;

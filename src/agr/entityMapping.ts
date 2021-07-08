@@ -5,7 +5,7 @@ export const agrMapping = {
   users: 'User',
   admins: 'Admin',
   appLogins: 'AppLogin',
-  adminLogins: 'AdminLogin',
+  managerLogins: 'ManagerLogin',
   stats: 'Stat',
   tags: 'Tag',
 };
