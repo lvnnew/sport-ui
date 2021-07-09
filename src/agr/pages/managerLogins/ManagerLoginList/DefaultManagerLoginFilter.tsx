@@ -2,7 +2,9 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
-  BooleanInput
+  BooleanInput,
+  ReferenceInput,
+  AutocompleteInput
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -16,6 +18,9 @@ const DefaultManagerLoginFilter: FC<any> = (props) => (
       <BooleanInput fullWidth source="emailVerified" />
       <BooleanInput fullWidth source="initialPasswordChanged" />
       <BooleanInput fullWidth source="locked" />
+      <ReferenceInput source="managerId" reference="managers">
+      <AutocompleteInput fullWidth optionText="title" />
+    </ReferenceInput>
   </Filter>
 );
 

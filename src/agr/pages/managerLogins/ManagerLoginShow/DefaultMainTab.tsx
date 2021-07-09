@@ -5,7 +5,8 @@ import {
   TabProps,
   NumberField,
   TextField,
-  BooleanField
+  BooleanField,
+  ReferenceField
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 
@@ -21,6 +22,9 @@ const MainTab: FC<Omit<TabProps, 'children'>> = (props) => (
       <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source="emailVerified" /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source="initialPasswordChanged" /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source="locked" /></FormGrid>
+      <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceField source="managerId" reference="managers" link="show">
+      <TextField source="title" />
+    </ReferenceField></FormGrid>
     </FormGrid>
   </Tab>
 );

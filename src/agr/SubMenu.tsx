@@ -77,14 +77,6 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<orders.icon />}
             onClick={onMenuClick}
-            primaryText={'Admin logins'}
-            sidebarIsOpen={open}
-            to={'/managerLogins'}
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<orders.icon />}
-            onClick={onMenuClick}
             primaryText={'Admins'}
             sidebarIsOpen={open}
             to={'/admins'}
@@ -104,6 +96,22 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             primaryText={'Logins of usual not admins users'}
             sidebarIsOpen={open}
             to={'/appLogins'}
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<orders.icon />}
+            onClick={onMenuClick}
+            primaryText={'Manager'}
+            sidebarIsOpen={open}
+            to={'/managers'}
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<orders.icon />}
+            onClick={onMenuClick}
+            primaryText={'Manager logins'}
+            sidebarIsOpen={open}
+            to={'/managerLogins'}
           />
           <MenuItemLink
             dense={dense}

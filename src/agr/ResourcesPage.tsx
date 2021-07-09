@@ -72,13 +72,24 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allManagersMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allManagersMeta?.count}
+          title={'Manager'}
+          to='/managers' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allManagerLoginsMeta {
                   count
                 }
               }
             `}
           resultToValue={result => result?._allManagerLoginsMeta?.count}
-          title={'Admin logins'}
+          title={'Manager logins'}
           to='/managerLogins' />
         <NumberWiget
           request={gql`
