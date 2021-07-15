@@ -16,7 +16,7 @@ import {
 } from '@apollo/client';
 import {
   agrMapping,
-} from '../agr/entityMapping';
+} from '../adm/entityMapping';
 import {
   demoMapping,
 } from '../demo/entityMapping';

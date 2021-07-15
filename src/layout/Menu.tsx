@@ -17,7 +17,7 @@ import {
 } from '../types';
 import {
   AgrSubMenu,
-} from '../agr/SubMenu';
+} from '../adm/SubMenu';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

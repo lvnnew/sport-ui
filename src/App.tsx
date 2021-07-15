@@ -33,10 +33,10 @@ import {
 } from './demo/resources';
 import {
   agrResources,
-} from './agr/resources';
+} from './adm/resources';
 import {
   AgrDashboard,
-} from './agr/dashboard';
+} from './adm/dashboard';
 import {
   envConfig,
 } from './config/envConfig';

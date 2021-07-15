@@ -5,7 +5,7 @@ import {
 import Configuration from './configuration/Configuration';
 import {
   agrRoutes,
-} from './agr/routes';
+} from './adm/routes';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
