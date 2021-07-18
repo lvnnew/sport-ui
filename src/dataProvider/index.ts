@@ -20,7 +20,7 @@ import {
 import {
   demoMapping,
 } from '../demo/entityMapping';
-import {toPairs} from 'lodash';
+import R from 'ramda';
 import {__schema as schema} from '../generated/graphql.schema.json';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -66,7 +66,7 @@ const customBuildQuery = (
 
   return (type, resource, params) => {
     if (type === DELETE) {
-      const mappedResourcePair = toPairs(mapping)
+      const mappedResourcePair = R.toPairs(mapping)
         .find(([, value]: [string, string]) => value === resource);
       const mappedResource = mappedResourcePair ? mappedResourcePair[0] : '';
       return {
