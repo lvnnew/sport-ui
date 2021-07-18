@@ -20,7 +20,7 @@ import {
 import {
   demoMapping,
 } from '../demo/entityMapping';
-import R from 'ramda';
+import * as R from 'ramda';
 import {__schema as schema} from '../generated/graphql.schema.json';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
