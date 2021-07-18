@@ -2,8 +2,8 @@ import React, {useState, FC} from 'react';
 import {useSelector} from 'react-redux';
 import {useTranslate, MenuItemLink} from 'react-admin';
 import {AppState} from '../types';
-import orders from '../demo/orders';
 import {useDebug} from '../contexts/DebugContext';
+import DefaultIcon from '@material-ui/icons/DetailsOutlined';
 
 const defaultState = {
 };
@@ -32,7 +32,7 @@ export const AdditionalMenu: FC<AdditionalMenuProps> = ({onMenuClick, dense, ope
         <>
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Stats'}
             sidebarIsOpen={open}

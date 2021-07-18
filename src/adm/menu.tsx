@@ -9,11 +9,11 @@ import {
 import {
   MenuItemLink,
 } from 'react-admin';
-import orders from '../demo/orders';
 import SubMenu from '../layout/SubMenu';
 import {
   AppState,
 } from '../types';
+import DefaultIcon from '@material-ui/icons/DetailsOutlined';
 import {AgrSubMenu} from './SubMenu';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -43,14 +43,14 @@ export const AgrMenu: FC<Props> = ({onMenuClick, dense, open}) => {
       <SubMenu
         dense={dense}
         handleToggle={() => handleToggle('menuAgr')}
-        icon={<orders.icon />}
+        icon={<DefaultIcon />}
         isOpen={state.menuAgr}
         name='Agr'
         sidebarIsOpen={open}
       >
         <MenuItemLink
           dense={dense}
-          leftIcon={<orders.icon />}
+          leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
           primaryText={'Dashboard'}
           sidebarIsOpen={open}

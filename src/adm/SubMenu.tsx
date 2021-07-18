@@ -4,10 +4,10 @@ import {
   MenuItemLink,
 } from 'react-admin';
 import {useDebug} from '../contexts/DebugContext';
-import orders from '../demo/orders';
 import {AdditionalMenu} from './AdditionalMenu';
 import SubMenu from '../layout/SubMenu';
 import DocumentsIcon from '@material-ui/icons/DescriptionOutlined';
+import DefaultIcon from '@material-ui/icons/DetailsOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -44,7 +44,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
       {debug && <>
         <MenuItemLink
           dense={dense}
-          leftIcon={<orders.icon />}
+          leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
           primaryText={'Functions'}
           sidebarIsOpen={open}
@@ -52,7 +52,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
         />
         <MenuItemLink
           dense={dense}
-          leftIcon={<orders.icon />}
+          leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
           primaryText={'Resources'}
           sidebarIsOpen={open}
@@ -60,7 +60,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
         />
         <MenuItemLink
           dense={dense}
-          leftIcon={<orders.icon />}
+          leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
           primaryText={'Meta'}
           sidebarIsOpen={open}
@@ -75,7 +75,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           sidebarIsOpen={open}>
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Admins'}
             sidebarIsOpen={open}
@@ -83,7 +83,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Files'}
             sidebarIsOpen={open}
@@ -91,7 +91,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Logins of usual not admins users'}
             sidebarIsOpen={open}
@@ -99,7 +99,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Manager'}
             sidebarIsOpen={open}
@@ -107,7 +107,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Manager logins'}
             sidebarIsOpen={open}
@@ -115,7 +115,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Stats'}
             sidebarIsOpen={open}
@@ -123,7 +123,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Tags'}
             sidebarIsOpen={open}
@@ -131,7 +131,7 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           />
           <MenuItemLink
             dense={dense}
-            leftIcon={<orders.icon />}
+            leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
             primaryText={'Users'}
             sidebarIsOpen={open}

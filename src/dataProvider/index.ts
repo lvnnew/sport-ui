@@ -17,16 +17,12 @@ import {
 import {
   agrMapping,
 } from '../adm/entityMapping';
-import {
-  demoMapping,
-} from '../demo/entityMapping';
 import * as R from 'ramda';
 import {__schema as schema} from '../generated/graphql.schema.json';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const mapping = {
-  ...demoMapping,
   ...agrMapping,
 };
 

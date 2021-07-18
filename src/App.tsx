@@ -29,9 +29,6 @@ import {
   createBrowserHistory as createHistory,
 } from 'history';
 import {
-  dmResources,
-} from './demo/resources';
-import {
   agrResources,
 } from './adm/resources';
 import {
@@ -126,10 +123,7 @@ const App = () => {
           authProvider={authProvider}
           title=''
         >
-          {[
-            ...dmResources,
-            ...agrResources,
-          ]}
+          {agrResources}
         </Admin>
       </DebugProvider>
     </ApolloProvider>
