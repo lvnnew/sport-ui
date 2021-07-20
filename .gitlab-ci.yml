@@ -6,7 +6,7 @@ stages:
   - check
   - build
   - latest-image
-  - deploy-stage
+  - deploy-dev
   - deploy-demo
 
 cache:
@@ -71,9 +71,9 @@ master-to-latest:
   variables:
     GIT_STRATEGY: none
 
-deploy-stage:
+deploy-dev:
   extends: .deploy-dev
-  stage: deploy-stage
+  stage: deploy-dev
   variables:
     ENV: "stage"
     ENV_NAME: "stage01"
@@ -90,27 +90,26 @@ deploy-demo:
 
 .deploy-dev:
   extends: .deploy
+  stage: deploy-dev
   variables:
     DEV: "true"
     HOST: "making.ventures"
     TAG: ":latest"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
-    ROOT_ENABLED: "false"
   only:
     - master
 
 .deploy-prod:
   extends: .deploy
+  stage: deploy-prod
   when: manual
   variables:
-    DEV: "true"
+    DEV: "false"
     HOST: "making.ventures"
     TAG: ":latest"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
-    ROOT_ENABLED: "false"
   only:
-    - release
-    - /^release-.*$/
+    - master
 
 .deploy:
   image:
