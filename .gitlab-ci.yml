@@ -75,8 +75,8 @@ deploy-dev:
   extends: .deploy-dev
   stage: deploy-dev
   variables:
-    ENV: "stage"
-    ENV_NAME: "stage01"
+    ENV: "dev"
+    ENV_NAME: "dev01"
 
 deploy-demo:
   extends: .deploy-prod
