@@ -75,7 +75,6 @@ deploy-dev:
   extends: .deploy-dev
   stage: deploy-dev
   variables:
-    ENV: "dev"
     ENV_NAME: "dev01"
 
 deploy-demo:
@@ -92,6 +91,7 @@ deploy-demo:
   extends: .deploy
   stage: deploy-dev
   variables:
+    ENV: "dev"
     DEV: "true"
     HOST: "making.ventures"
     TAG: ":latest"
