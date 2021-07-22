@@ -1,12 +1,12 @@
 image: node
-# DO NOT EDIT! THIS IS GENERATED FILE
 
+# DO NOT EDIT! THIS IS GENERATED FILE
 
 stages:
   - check
   - build
   - latest-image
-  - deploy-stage
+  - deploy-dev
   - deploy-demo
 
 cache:
@@ -71,11 +71,12 @@ master-to-latest:
   variables:
     GIT_STRATEGY: none
 
-deploy-stage:
+deploy-dev:
   extends: .deploy-dev
-  stage: deploy-stage
+  stage: deploy-dev
   variables:
-    ENV_NAME: "stage01"
+    ENV: "dev"
+    ENV_NAME: "dev01"
 
 deploy-demo:
   extends: .deploy-prod
@@ -86,7 +87,6 @@ deploy-demo:
     TAG: ":demo"
   only:
     - demo
-
 .deploy-dev:
   extends: .deploy
   stage: deploy-stage
