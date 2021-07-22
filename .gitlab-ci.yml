@@ -6,7 +6,7 @@ stages:
   - check
   - build
   - latest-image
-  - deploy-dev
+  - deploy-stage
   - deploy-demo
 
 cache:
@@ -71,9 +71,9 @@ master-to-latest:
   variables:
     GIT_STRATEGY: none
 
-deploy-dev:
+deploy-stage:
   extends: .deploy-dev
-  stage: deploy-dev
+  stage: deploy-stage
   variables:
     ENV_NAME: "dev01"
 
@@ -89,7 +89,7 @@ deploy-demo:
 
 .deploy-dev:
   extends: .deploy
-  stage: deploy-dev
+  stage: deploy-stage
   variables:
     ENV: "dev"
     DEV: "true"
