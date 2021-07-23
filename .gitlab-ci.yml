@@ -6,8 +6,7 @@ stages:
   - check
   - build
   - latest-image
-  - deploy-dev
-  - deploy-demo
+  - deploy-stage
 
 cache:
   paths:
@@ -50,7 +49,6 @@ build:
     - master
     - release
     - /^release-.*$/
-    - demo
 
 master-to-latest:
   extends: .tag-image
@@ -73,25 +71,16 @@ master-to-latest:
 
 deploy-dev:
   extends: .deploy-dev
-  stage: deploy-dev
+  stage: deploy-stage
   variables:
-    ENV: "dev"
-    ENV_NAME: "dev01"
+    ENV: "stage"
+    ENV_NAME: "stage01"
 
-deploy-demo:
-  extends: .deploy-prod
-  stage: deploy-demo
-  variables:
-    ENV: "demo"
-    ENV_NAME: "demo01"
-    TAG: ":demo"
-  only:
-    - demo
+
 .deploy-dev:
   extends: .deploy
   stage: deploy-stage
   variables:
-    ENV: "dev"
     DEV: "true"
     HOST: "making.ventures"
     TAG: ":latest"
