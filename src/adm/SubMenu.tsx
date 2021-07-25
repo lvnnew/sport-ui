@@ -77,14 +77,6 @@ export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Admins'}
-            sidebarIsOpen={open}
-            to={'/admins'}
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
             primaryText={'Files'}
             sidebarIsOpen={open}
             to={'/files'}

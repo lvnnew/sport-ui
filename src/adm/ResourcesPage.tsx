@@ -50,17 +50,6 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
-                _allAdminsMeta {
-                  count
-                }
-              }
-            `}
-          resultToValue={result => result?._allAdminsMeta?.count}
-          title={'Admins'}
-          to='/admins' />
-        <NumberWiget
-          request={gql`
-              query {
                 _allAppLoginsMeta {
                   count
                 }
@@ -80,6 +69,17 @@ const ResourcesPage: FC = () => {
           resultToValue={result => result?._allManagersMeta?.count}
           title={'Manager'}
           to='/managers' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allManagerLoginsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allManagerLoginsMeta?.count}
+          title={'Manager logins'}
+          to='/managerLogins' />
         <NumberWiget
           request={gql`
               query {
@@ -124,17 +124,6 @@ const ResourcesPage: FC = () => {
           resultToValue={result => result?._allManagersToRolesMeta?.count}
           title={'Managers To Roles'}
           to='/managersToRoles' />
-        <NumberWiget
-          request={gql`
-              query {
-                _allManagerLoginsMeta {
-                  count
-                }
-              }
-            `}
-          resultToValue={result => result?._allManagerLoginsMeta?.count}
-          title={'Manager logins'}
-          to='/managerLogins' />
         <NumberWiget
           request={gql`
               query {
