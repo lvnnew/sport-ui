@@ -83,6 +83,50 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allRolesMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allRolesMeta?.count}
+          title={'Roles'}
+          to='/roles' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allPermissionsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allPermissionsMeta?.count}
+          title={'Permissions'}
+          to='/permissions' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allRolesToPermissionsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allRolesToPermissionsMeta?.count}
+          title={'Roles To Permissions'}
+          to='/rolesToPermissions' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allManagersToRolesMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allManagersToRolesMeta?.count}
+          title={'Managers To Roles'}
+          to='/managersToRoles' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allManagerLoginsMeta {
                   count
                 }

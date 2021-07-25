@@ -7,22 +7,22 @@ import {
 } from 'react-admin';
 import {
 } from 'react-admin';
-import ManagersToRolesManageIdTab from './tabs/ManagersToRolesManageIdTab';
-import ManagerLoginsManagerIdTab from './tabs/ManagerLoginsManagerIdTab';
+import RolesToPermissionsRoleIdTab from './tabs/RolesToPermissionsRoleIdTab';
+import ManagersToRolesRoleIdTab from './tabs/ManagersToRolesRoleIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => (
+const DefaultRoleShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
       <MainTab label="Summary" />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersToRolesManageIdTab label="Managers To Roles" path="managersToRoles-manageId" />
-      <ManagerLoginsManagerIdTab label="Manager logins" path="managerLogins-managerId" />
+      <RolesToPermissionsRoleIdTab label="Roles To Permissions" path="rolesToPermissions-roleId" />
+      <ManagersToRolesRoleIdTab label="Managers To Roles" path="managersToRoles-roleId" />
     </TabbedShowLayout>
   </Show>
 );
 
-export default DefaultManagerShow;
+export default DefaultRoleShow;

@@ -29,6 +29,26 @@ import ManagerEdit from './pages/managers/ManagerEdit';
 import ManagerCreate from './pages/managers/ManagerCreate';
 import ManagerList from './pages/managers/ManagerList';
 
+import RoleShow from './pages/roles/RoleShow';
+import RoleEdit from './pages/roles/RoleEdit';
+import RoleCreate from './pages/roles/RoleCreate';
+import RoleList from './pages/roles/RoleList';
+
+import PermissionShow from './pages/permissions/PermissionShow';
+import PermissionEdit from './pages/permissions/PermissionEdit';
+import PermissionCreate from './pages/permissions/PermissionCreate';
+import PermissionList from './pages/permissions/PermissionList';
+
+import RolesToPermissionShow from './pages/rolesToPermissions/RolesToPermissionShow';
+import RolesToPermissionEdit from './pages/rolesToPermissions/RolesToPermissionEdit';
+import RolesToPermissionCreate from './pages/rolesToPermissions/RolesToPermissionCreate';
+import RolesToPermissionList from './pages/rolesToPermissions/RolesToPermissionList';
+
+import ManagersToRoleShow from './pages/managersToRoles/ManagersToRoleShow';
+import ManagersToRoleEdit from './pages/managersToRoles/ManagersToRoleEdit';
+import ManagersToRoleCreate from './pages/managersToRoles/ManagersToRoleCreate';
+import ManagersToRoleList from './pages/managersToRoles/ManagersToRoleList';
+
 import ManagerLoginShow from './pages/managerLogins/ManagerLoginShow';
 import ManagerLoginEdit from './pages/managerLogins/ManagerLoginEdit';
 import ManagerLoginCreate from './pages/managerLogins/ManagerLoginCreate';
@@ -52,6 +72,10 @@ export const agrResources = [
   <Resource show={AdminShow} edit={AdminEdit} create={AdminCreate} key='admins' list={AdminList} name='admins' options={{label: 'Admins'}} />,
   <Resource show={AppLoginShow} edit={AppLoginEdit} create={AppLoginCreate} key='appLogins' list={AppLoginList} name='appLogins' options={{label: 'Logins of usual (not admins) users'}} />,
   <Resource show={ManagerShow} edit={ManagerEdit} create={ManagerCreate} key='managers' list={ManagerList} name='managers' options={{label: 'Manager'}} />,
+  <Resource show={RoleShow} edit={RoleEdit} create={RoleCreate} key='roles' list={RoleList} name='roles' options={{label: 'Roles'}} />,
+  <Resource show={PermissionShow} edit={PermissionEdit} create={PermissionCreate} key='permissions' list={PermissionList} name='permissions' options={{label: 'Permissions'}} />,
+  <Resource show={RolesToPermissionShow} edit={RolesToPermissionEdit} create={RolesToPermissionCreate} key='rolesToPermissions' list={RolesToPermissionList} name='rolesToPermissions' options={{label: 'Roles To Permissions'}} />,
+  <Resource show={ManagersToRoleShow} edit={ManagersToRoleEdit} create={ManagersToRoleCreate} key='managersToRoles' list={ManagersToRoleList} name='managersToRoles' options={{label: 'Managers To Roles'}} />,
   <Resource show={ManagerLoginShow} edit={ManagerLoginEdit} create={ManagerLoginCreate} key='managerLogins' list={ManagerLoginList} name='managerLogins' options={{label: 'Manager logins'}} />,
   <Resource show={StatShow} edit={StatEdit} create={StatCreate} key='stats' list={StatList} name='stats' options={{label: 'Stats'}} />,
   <Resource show={TagShow} edit={TagEdit} create={TagCreate} key='tags' list={TagList} name='tags' options={{label: 'Tags'}} />,

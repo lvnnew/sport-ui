@@ -51,6 +51,8 @@ const numberIdResources: string[] = [
   'admins',
   'appLogins',
   'managers',
+  'rolesToPermissions',
+  'managersToRoles',
   'managerLogins',
   'tags'
 ];
