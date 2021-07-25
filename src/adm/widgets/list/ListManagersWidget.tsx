@@ -41,13 +41,16 @@ export const ListManagersItem: FC<Manager> = (props) => {
               {`Id: ${props.id}`}
             </div>
             <div>
+              {`Title: ${props.title}`}
+            </div>
+            <div>
               {`Last name: ${props.lastName}`}
             </div>
             <div>
               {`First name: ${props.firstName}`}
             </div>
             <div>
-              {`Title: ${props.title}`}
+              {`Email: ${props.email}`}
             </div>
           </>
         }
@@ -93,9 +96,10 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
             filter: $filter
           ) {
             id
+            title
             lastName
             firstName
-            title
+            email
           }
         }
       `}

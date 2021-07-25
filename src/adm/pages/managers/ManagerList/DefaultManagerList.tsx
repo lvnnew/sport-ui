@@ -15,9 +15,10 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => (
   <List title={'Managers'} exporter={false} filters={<ManagerFilter />} {...props}>
     <Datagrid rowClick="show">
       <NumberField source="id" />
+      <TextField source="title" />
       <TextField source="lastName" />
       <TextField source="firstName" />
-      <TextField source="title" />
+      <TextField source="email" />
     </Datagrid>
   </List>
 );
