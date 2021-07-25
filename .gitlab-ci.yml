@@ -50,6 +50,7 @@ build:
     - release
     - /^release-.*$/
 
+
 master-to-latest:
   extends: .tag-image
   stage: latest-image
@@ -69,7 +70,7 @@ master-to-latest:
   variables:
     GIT_STRATEGY: none
 
-deploy-dev:
+deploy-stage:
   extends: .deploy-dev
   stage: deploy-stage
   variables:
