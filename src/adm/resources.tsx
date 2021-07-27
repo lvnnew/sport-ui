@@ -9,6 +9,11 @@ import FileEdit from './pages/files/FileEdit';
 import FileCreate from './pages/files/FileCreate';
 import FileList from './pages/files/FileList';
 
+import LanguageShow from './pages/languages/LanguageShow';
+import LanguageEdit from './pages/languages/LanguageEdit';
+import LanguageCreate from './pages/languages/LanguageCreate';
+import LanguageList from './pages/languages/LanguageList';
+
 import UserShow from './pages/users/UserShow';
 import UserEdit from './pages/users/UserEdit';
 import UserCreate from './pages/users/UserCreate';
@@ -63,6 +68,7 @@ import TagList from './pages/tags/TagList';
 
 export const agrResources = [
   <Resource show={FileShow} edit={FileEdit} create={FileCreate} key='files' list={FileList} name='files' options={{label: 'Files'}} />,
+  <Resource show={LanguageShow} edit={LanguageEdit} create={LanguageCreate} key='languages' list={LanguageList} name='languages' options={{label: 'Languages'}} />,
   <Resource show={UserShow} edit={UserEdit} create={UserCreate} key='users' list={UserList} name='users' options={{label: 'Users'}} />,
   <Resource show={AppLoginShow} edit={AppLoginEdit} create={AppLoginCreate} key='appLogins' list={AppLoginList} name='appLogins' options={{label: 'Logins of usual (not admins) users'}} />,
   <Resource show={ManagerShow} edit={ManagerEdit} create={ManagerCreate} key='managers' list={ManagerList} name='managers' options={{label: 'Manager'}} />,

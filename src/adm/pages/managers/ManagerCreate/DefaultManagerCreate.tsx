@@ -4,7 +4,9 @@ import {
   Create,
   SimpleForm,
   CreateProps,
-  TextInput
+  TextInput,
+  ReferenceInput,
+  AutocompleteInput
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 
@@ -23,6 +25,9 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
           <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="title" /></FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="lastName" /></FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="firstName" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceInput source="languageId" reference="languages">
+      <AutocompleteInput fullWidth optionText="title" />
+    </ReferenceInput></FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="email" /></FormGrid>
         </FormGrid>
       </SimpleForm>

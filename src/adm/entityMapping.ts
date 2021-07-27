@@ -2,6 +2,7 @@
 // DO NOT EDIT! THIS IS GENERATED FILE
 export const agrMapping = {
   files: 'File',
+  languages: 'Language',
   users: 'User',
   appLogins: 'AppLogin',
   managers: 'Manager',

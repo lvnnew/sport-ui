@@ -14,25 +14,25 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  Manager,
+  Language,
 } from '../../../generated/graphql';
-import {QueryAllManagersArgs} from '../../../generated/graphql';
+import {QueryAllLanguagesArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListManagersWidgetProps extends
-Omit<ListWigetProps<Manager>, 'request' | 'resultToValue'| 'children'>,
-QueryAllManagersArgs {
-  children?: FC<Manager>,
+interface ListLanguagesWidgetProps extends
+Omit<ListWigetProps<Language>, 'request' | 'resultToValue'| 'children'>,
+QueryAllLanguagesArgs {
+  children?: FC<Language>,
 }
 
-export const ListManagersItem: FC<Manager> = (props) => {
+export const ListLanguagesItem: FC<Language> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/managers/${props.id}/show`}
+      to={`/languages/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -43,18 +43,6 @@ export const ListManagersItem: FC<Manager> = (props) => {
             <div>
               {`Title: ${props.title}`}
             </div>
-            <div>
-              {`Last name: ${props.lastName}`}
-            </div>
-            <div>
-              {`First name: ${props.firstName}`}
-            </div>
-            <div>
-              {`Language id: ${props.languageId}`}
-            </div>
-            <div>
-              {`Email: ${props.email}`}
-            </div>
           </>
         }
       />
@@ -62,17 +50,17 @@ export const ListManagersItem: FC<Manager> = (props) => {
   );
 };
 
-const ListManagersWidget: FC<ListManagersWidgetProps> = ({
+const ListLanguagesWidget: FC<ListLanguagesWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListManagersItem,
+  children = ListLanguagesItem,
   ...rest
 }) => {
   return (
-    <ListWiget<Manager>
+    <ListWiget<Language>
       {...rest}
       options={{
         variables: {
@@ -89,9 +77,9 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: ManagerFilter,
+          $filter: LanguageFilter,
         ) {
-          allManagers(
+          allLanguages(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -100,18 +88,14 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
           ) {
             id
             title
-            lastName
-            firstName
-            languageId
-            email
           }
         }
       `}
-      resultToValue={result => result?.allManagers}
+      resultToValue={result => result?.allLanguages}
     >
       {(record) => children(record)}
     </ListWiget>
   );
 };
 
-export default ListManagersWidget;
+export default ListLanguagesWidget;

@@ -5,7 +5,8 @@ import {
   Datagrid,
   ListProps,
   NumberField,
-  TextField
+  TextField,
+  ReferenceField
 } from 'react-admin';
 import ManagerFilter from './ManagerFilter';
 
@@ -18,6 +19,9 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => (
       <TextField source="title" />
       <TextField source="lastName" />
       <TextField source="firstName" />
+      <ReferenceField source="languageId" reference="languages" link="show">
+      <TextField source="title" />
+    </ReferenceField>
       <TextField source="email" />
     </Datagrid>
   </List>
