@@ -26,7 +26,7 @@ const defaultState = {
 
 type MenuName = keyof typeof defaultState;
 
-export const AgrSubMenu: FC<Props> = ({onMenuClick, dense, open}) => {
+export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
   const {debug} = useDebug();
   const [state, setState] = useState(defaultState);
 

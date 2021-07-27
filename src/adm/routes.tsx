@@ -3,7 +3,7 @@ import {
   Route,
 } from 'react-router-dom';
 import {
-  AgrDashboard,
+  Dashboard,
 } from './dashboard';
 import Functions from './functions/Functions';
 import ResourcesPage from './ResourcesPage';
@@ -12,10 +12,10 @@ import {additionalRoutes} from './additionalRoutes';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-export const agrRoutes = [
-  <Route component={AgrDashboard} exact key='agr' path='/agr/dashboard' />,
-  <Route component={Functions} exact key='agrFunctions' path='/agr/functions' />,
-  <Route component={ResourcesPage} exact key='agrResources' path='/agrResources' />,
+export const routes = [
+  <Route component={Dashboard} exact key='dashboard' path='/agr/dashboard' />,
+  <Route component={Functions} exact key='functions' path='/agr/functions' />,
+  <Route component={ResourcesPage} exact key='resources' path='/agrResources' />,
   <Route component={MetaPage} exact key='meta' path='/meta' />,
   ...additionalRoutes,
 ];

@@ -15,16 +15,12 @@ import {
   ApolloQueryResult,
 } from '@apollo/client';
 import {
-  agrMapping,
+  mapping,
 } from '../adm/entityMapping';
 import * as R from 'ramda';
 import {__schema as schema} from '../generated/graphql.schema.json';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
-
-const mapping = {
-  ...agrMapping,
-};
 
 const getGqlResource = async (resource: string) => {
   if (resource in mapping) {

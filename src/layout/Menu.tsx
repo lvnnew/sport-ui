@@ -16,8 +16,8 @@ import {
   AppState,
 } from '../types';
 import {
-  AgrSubMenu,
-} from '../adm/SubMenu';
+  ProjectMenu,
+} from '../adm/ProjectMenu';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -39,7 +39,7 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
     <Box mt={1}>
       {' '}
       <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />
-      <AgrSubMenu dense={dense} onMenuClick={onMenuClick} open={open} />
+      <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
       {isXSmall && (
         <MenuItemLink
           dense={dense}

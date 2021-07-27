@@ -29,10 +29,10 @@ import {
   createBrowserHistory as createHistory,
 } from 'history';
 import {
-  agrResources,
+  resources,
 } from './adm/resources';
 import {
-  AgrDashboard,
+  Dashboard,
 } from './adm/dashboard';
 import {
   envConfig,
@@ -113,7 +113,7 @@ const App = () => {
         <Admin
           customReducers={{theme: themeReducer}}
           customRoutes={customRoutes}
-          dashboard={AgrDashboard}
+          dashboard={Dashboard}
           dataProvider={dataProvider}
           history={history}
           i18nProvider={i18nProvider}
@@ -123,7 +123,7 @@ const App = () => {
           authProvider={authProvider}
           title=''
         >
-          {agrResources}
+          {resources}
         </Admin>
       </DebugProvider>
     </ApolloProvider>

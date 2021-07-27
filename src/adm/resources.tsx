@@ -66,7 +66,7 @@ import TagList from './pages/tags/TagList';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-export const agrResources = [
+export const resources = [
   <Resource show={FileShow} edit={FileEdit} create={FileCreate} key='files' list={FileList} name='files' options={{label: 'Files'}} />,
   <Resource show={LanguageShow} edit={LanguageEdit} create={LanguageCreate} key='languages' list={LanguageList} name='languages' options={{label: 'Languages'}} />,
   <Resource show={UserShow} edit={UserEdit} create={UserCreate} key='users' list={UserList} name='users' options={{label: 'Users'}} />,

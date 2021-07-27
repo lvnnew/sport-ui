@@ -1,6 +1,6 @@
 
 // DO NOT EDIT! THIS IS GENERATED FILE
-export const agrMapping = {
+export const mapping = {
   files: 'File',
   languages: 'Language',
   users: 'User',
