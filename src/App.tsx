@@ -20,7 +20,7 @@ import {
   Login,
 } from './layout';
 import customRoutes from './routes';
-import englishMessages from './i18n/en';
+import enMessages from './i18n/en';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
 import log from 'loglevel';
@@ -54,7 +54,7 @@ const i18nProvider = polyglotI18nProvider(locale => {
   }
 
   // Always fallback on english
-  return englishMessages;
+  return enMessages;
 }, 'en');
 
 const App = () => {

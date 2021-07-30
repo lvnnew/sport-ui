@@ -2,10 +2,10 @@
 import {
   TranslationMessages,
 } from 'react-admin';
-import englishMessages from 'ra-language-english';
+import enMessages from 'ra-language-english';
 
 const customEnglishMessages: TranslationMessages = {
-  ...englishMessages,
+  ...enMessages,
   pos: {
     configuration: 'Configuration',
     dashboard: {
@@ -43,9 +43,9 @@ const customEnglishMessages: TranslationMessages = {
     },
   },
   ra: {
-    ...englishMessages.ra,
+    ...enMessages.ra,
     boolean: {
-      ...englishMessages.ra.boolean,
+      ...enMessages.ra.boolean,
       null: 'No value',
     },
   },
