@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import ResourcesPage from './ResourcesPage';
 
-export const AgrDashboard: FC = () => {
+export const Dashboard: FC = () => {
   return (
     <ResourcesPage />
   );
