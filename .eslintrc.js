@@ -84,6 +84,8 @@ complexity: [0],
 // 'sort-keys-fix/sort-keys-fix': [0],
     'object-curly-newline': [0],
     'unicorn/numeric-separators-style': [0],
+    '@typescript-eslint/explicit-module-boundary-types': [0],
+    'jest/prefer-expect-assertions': [0],
 // Enable this rules later
 'unicorn/no-reduce': [0],
     'filenames/match-regex': [0],
