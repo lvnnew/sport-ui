@@ -105,7 +105,7 @@ const ChartWiget: FC<{ orders?: Order[]; title?: string }> = ({orders, title}) =
                 dataKey='date'
                 domain={[
                   aMonthAgo.getTime(),
-                  new Date().getTime(),
+                  Date.now(),
                 ]}
                 name='Date'
                 reversed
