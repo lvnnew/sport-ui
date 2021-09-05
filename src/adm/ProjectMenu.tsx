@@ -48,7 +48,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           onClick={onMenuClick}
           primaryText={'Functions'}
           sidebarIsOpen={open}
-          to={'/agr/functions'}
+          to={'/functions'}
         />
         <MenuItemLink
           dense={dense}
@@ -56,7 +56,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           onClick={onMenuClick}
           primaryText={'Resources'}
           sidebarIsOpen={open}
-          to={'/agrResources'}
+          to={'/resources'}
         />
         <MenuItemLink
           dense={dense}
