@@ -41,6 +41,7 @@ import {DebugProvider} from './contexts/DebugContext';
 import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
 import {RetryLink} from "@apollo/client/link/retry";
 import {createUploadLink} from 'apollo-upload-client';
+import './utils/polyfills/BigInt';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
