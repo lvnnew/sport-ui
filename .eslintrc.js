@@ -38,25 +38,15 @@ module.exports = {
   ],
   rules: {
     'import/no-extraneous-dependencies': [0],
-
     // '@typescript-eslint/no-unused-vars': [1],
-// 'no-unused-vars': [1],
-'@typescript-eslint/no-use-before-define': [0],
-
-    
-
-'linebreak-style': 0,
-    
+    // 'no-unused-vars': [1],
+    '@typescript-eslint/no-use-before-define': [0],
+    'linebreak-style': 0,
     'class-methods-use-this': [0],
-
-    
     'no-unused-vars': 'off',
-
-    
-complexity: [0],
-
+    complexity: [0],
     // "@typescript-eslint/no-unused-vars": "error",
-'max-len': [
+    'max-len': [
       'error',
       110,
       {
@@ -65,29 +55,20 @@ complexity: [0],
     ],
 
     'consistent-return': [0],
-
-    
-
-
-
-
-
-
-
-'filenames/match-exported': [0],
+    'filenames/match-exported': [0],
     // 'import/imports-first': [
-//   'warn',
-//   {
-//     'absolute-first': 'true',
-//   },
-// ],
-// 'sort-keys-fix/sort-keys-fix': [0],
+    //   'warn',
+    //   {
+    //     'absolute-first': 'true',
+    //   },
+    // ],
+    // 'sort-keys-fix/sort-keys-fix': [0],
     'object-curly-newline': [0],
     'unicorn/numeric-separators-style': [0],
     '@typescript-eslint/explicit-module-boundary-types': [0],
     'jest/prefer-expect-assertions': [0],
-// Enable this rules later
-'unicorn/no-reduce': [0],
+    // Enable this rules later
+    'unicorn/no-reduce': [0],
     'filenames/match-regex': [0],
     'fp/no-delete': [0],
     'func-call-spacing': [0],
@@ -125,18 +106,11 @@ complexity: [0],
     'react-hooks/rules-of-hooks': [0],
     'mocha/no-hooks-for-single-case': [0],
     'react/no-multi-comp': [0],
-
-    //
     '@typescript-eslint/ban-ts-ignore': [0],
-        
     'require-await': [0],
-
     'unicorn/consistent-function-scoping': [0],
-
     '@typescript-eslint/explicit-function-return-type': [0],
-
     '@typescript-eslint/interface-name-prefix': [0],
-
     'unicorn/prevent-abbreviations': [0],
     '@typescript-eslint/no-empty-interface': [0],
     'mocha/no-setup-in-describe': [0],
