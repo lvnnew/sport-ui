@@ -6,7 +6,7 @@ global:
 
 dev: false
 
-dockerRegistry: registry.gitlab.com/agro-sys
+dockerRegistry: registry.gitlab.com/medical-systems
 
 app:
   tag: :master
@@ -44,8 +44,8 @@ ingress:
   host: "apps.making.ventures"
   letsencryptCert: true
   domains:
-    app: "agr"
-    endpoint: "agr-ep"
+    app: "med"
+    endpoint: "med-ep"
 
 resources:
   {}

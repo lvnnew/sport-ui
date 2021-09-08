@@ -1,10 +1,10 @@
 {
-  "name": "agr-ui",
+  "name": "med-ui",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "cross-env PORT=8080 react-scripts start",
-    "dev:stage": "cross-env PORT=8080 REACT_APP_ENDPOINT=https://agr-ep.stage.apps.stage01.making.ventures/adm react-scripts start",
+    "dev:stage": "cross-env PORT=8080 REACT_APP_ENDPOINT=https://med-ep.stage.apps.stage01.making.ventures/adm react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "test": "react-scripts test",
