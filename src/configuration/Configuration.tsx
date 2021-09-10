@@ -33,10 +33,10 @@ const Configuration = () => {
 
   return (
     <Card>
-      <Title title={translate('pos.configuration')} />
+      <Title title={translate('app.configuration')} />
       <CardContent>
         <div className={classes.label}>
-          {translate('pos.theme.name')}
+          {translate('app.theme.name')}
         </div>
         <Button
           className={classes.button}
@@ -44,7 +44,7 @@ const Configuration = () => {
           onClick={() => dispatch(changeTheme('light'))}
           variant='contained'
         >
-          {translate('pos.theme.light')}
+          {translate('app.theme.light')}
         </Button>
         <Button
           className={classes.button}
@@ -52,11 +52,11 @@ const Configuration = () => {
           onClick={() => dispatch(changeTheme('dark'))}
           variant='contained'
         >
-          {translate('pos.theme.dark')}
+          {translate('app.theme.dark')}
         </Button>
       </CardContent>
       <CardContent>
-        <div className={classes.label}>{translate('pos.language')}</div>
+        <div className={classes.label}>{translate('app.language')}</div>
         <Button
           className={classes.button}
           color={locale === 'en' ? 'primary' : 'default'}

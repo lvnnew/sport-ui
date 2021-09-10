@@ -45,7 +45,7 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
           dense={dense}
           leftIcon={<SettingsIcon />}
           onClick={onMenuClick}
-          primaryText={translate('pos.configuration')}
+          primaryText={translate('app.configuration')}
           sidebarIsOpen={open}
           to='/configuration'
         />

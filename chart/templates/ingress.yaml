@@ -3,9 +3,9 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
- name: med-ui
+ name: agr-ui
  labels:
-    app: med-back
+    app: agr-back
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
@@ -23,14 +23,14 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: med-ui
+              serviceName: agr-ui
               servicePort: 80
     {{ end }}
     - host: {{ .Values.ingress.domains.app }}.{{ .Values.global.env }}.apps.{{ .Values.global.envName }}.{{ .Values.ingress.host }}
       http:
         paths:
           - backend:
-              serviceName: med-ui
+              serviceName: agr-ui
               servicePort: 80
   tls:
   - hosts:

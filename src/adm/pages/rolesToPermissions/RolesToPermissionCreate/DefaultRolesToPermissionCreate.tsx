@@ -23,12 +23,12 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
             <TextInput fullWidth source='title' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='{field.name}' reference='roles'>
+            <ReferenceInput source='roleId' reference='roles'>
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='{field.name}' reference='permissions'>
+            <ReferenceInput source='permissionId' reference='permissions'>
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>

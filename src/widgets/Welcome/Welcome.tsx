@@ -55,11 +55,11 @@ const Welcome: FC = () => {
       <Box display='flex'>
         <Box flex='1'>
           <Typography component='h2' gutterBottom variant='h5'>
-            {translate('pos.dashboard.welcome.title')}
+            {translate('app.dashboard.welcome.title')}
           </Typography>
           <Box maxWidth='40em'>
             <Typography component='p' gutterBottom variant='body1'>
-              {translate('pos.dashboard.welcome.subtitle')}
+              {translate('app.dashboard.welcome.subtitle')}
             </Typography>
           </Box>
           <CardActions className={classes.actions}>
@@ -68,14 +68,14 @@ const Welcome: FC = () => {
               startIcon={<HomeIcon />}
               variant='contained'
             >
-              {translate('pos.dashboard.welcome.ra_button')}
+              {translate('app.dashboard.welcome.ra_button')}
             </Button>
             <Button
               href='https://github.com/marmelab/react-admin/tree/master/examples/demo'
               startIcon={<CodeIcon />}
               variant='contained'
             >
-              {translate('pos.dashboard.welcome.demo_button')}
+              {translate('app.dashboard.welcome.demo_button')}
             </Button>
           </CardActions>
         </Box>

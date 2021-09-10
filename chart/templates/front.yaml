@@ -3,19 +3,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: med-ui
+  name: agr-ui
   labels:
-    app: med-ui
+    app: agr-ui
 spec:
   ports:
   - port: 80
   selector:
-    app: med-ui
+    app: agr-ui
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: med-ui
+  name: agr-ui
 spec:
   replicas: {{ .Values.app.replicas }}
   strategy:
@@ -24,19 +24,19 @@ spec:
       maxSurge: 3
   selector:
     matchLabels:
-      app: med-ui
+      app: agr-ui
   template:
     metadata:
       labels:
-        app: med-ui
+        app: agr-ui
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       containers:
-      - name: med-ui
-        image: {{ .Values.dockerRegistry }}/med-ui{{ .Values.app.tag }}
+      - name: agr-ui
+        image: {{ .Values.dockerRegistry }}/agr-ui{{ .Values.app.tag }}
         ports:
         - name: main-port
           containerPort: 80
@@ -45,7 +45,7 @@ spec:
         - name: RANDOM
           value: {{ .Values.random | quote }}
         - name: APP_NAME
-          value: med-ui
+          value: agr-ui
         - name: ENV
           value: '{{ .Values.global.env }}'
         - name: ENDPOINT

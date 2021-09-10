@@ -12,10 +12,10 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
       <TextInput fullWidth source='title' />
-      <ReferenceInput source='{field.name}' reference='roles'>
+      <ReferenceInput source='roleId' reference='roles'>
   <AutocompleteInput fullWidth optionText='title' />
 </ReferenceInput>
-      <ReferenceInput source='{field.name}' reference='permissions'>
+      <ReferenceInput source='permissionId' reference='permissions'>
   <AutocompleteInput fullWidth optionText='title' />
 </ReferenceInput>
   </Filter>

@@ -93,7 +93,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Logins of usual not admins users'}
+            primaryText={'Logins of usual (not admins) users'}
             sidebarIsOpen={open}
             to={'/appLogins'}
           />
@@ -117,7 +117,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Managers to roles'}
+            primaryText={'Managers To Roles'}
             sidebarIsOpen={open}
             to={'/managersToRoles'}
           />
@@ -141,7 +141,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Roles to permissions'}
+            primaryText={'Roles To Permissions'}
             sidebarIsOpen={open}
             to={'/rolesToPermissions'}
           />

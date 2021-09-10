@@ -26,7 +26,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput fullWidth source='passwordHash' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='{field.name}' reference='users'>
+            <ReferenceInput source='userId' reference='users'>
               <SelectInput fullWidth optionText='id' />
             </ReferenceInput>
           </FormGrid>

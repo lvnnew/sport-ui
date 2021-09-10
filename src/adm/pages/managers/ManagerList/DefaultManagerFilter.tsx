@@ -14,7 +14,7 @@ const DefaultManagerFilter: FC<any> = (props) => (
       <TextInput fullWidth source='title' />
       <TextInput fullWidth source='lastName' />
       <TextInput fullWidth source='firstName' />
-      <ReferenceInput source='{field.name}' reference='languages'>
+      <ReferenceInput source='languageId' reference='languages'>
   <AutocompleteInput fullWidth optionText='title' />
 </ReferenceInput>
       <TextInput fullWidth source='email' />
