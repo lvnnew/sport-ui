@@ -15,8 +15,8 @@ import ListWiget, {
 } from '../../../widgets/ListWiget';
 import {
   Permission,
+  QueryAllPermissionsArgs,
 } from '../../../generated/graphql';
-import {QueryAllPermissionsArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

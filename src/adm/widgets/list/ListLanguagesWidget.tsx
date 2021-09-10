@@ -15,8 +15,8 @@ import ListWiget, {
 } from '../../../widgets/ListWiget';
 import {
   Language,
+  QueryAllLanguagesArgs,
 } from '../../../generated/graphql';
-import {QueryAllLanguagesArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

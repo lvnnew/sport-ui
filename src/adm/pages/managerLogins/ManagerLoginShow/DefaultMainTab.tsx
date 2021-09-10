@@ -6,7 +6,7 @@ import {
   NumberField,
   TextField,
   BooleanField,
-  ReferenceField
+  ReferenceField,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 

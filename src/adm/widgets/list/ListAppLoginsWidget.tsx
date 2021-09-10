@@ -15,8 +15,8 @@ import ListWiget, {
 } from '../../../widgets/ListWiget';
 import {
   AppLogin,
+  QueryAllAppLoginsArgs,
 } from '../../../generated/graphql';
-import {QueryAllAppLoginsArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

@@ -5,8 +5,6 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-import {
-} from 'react-admin';
 import AppLoginsUserIdTab from './tabs/AppLoginsUserIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
@@ -16,9 +14,9 @@ import {additionalTabs} from './additionalTabs';
 const DefaultUserShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
-      <MainTab label="Summary" />
+      <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <AppLoginsUserIdTab label="Logins of usual (not admins) users" path="appLogins-userId" />
+<AppLoginsUserIdTab label="Logins of usual (not admins) users" path="appLogins-userId" />
     </TabbedShowLayout>
   </Show>
 );

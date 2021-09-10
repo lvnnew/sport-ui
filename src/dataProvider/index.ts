@@ -49,7 +49,7 @@ const numberIdResources: string[] = [
   'managerLogins',
   'rolesToPermissions',
   'managersToRoles',
-  'tags'
+  'tags',
 ];
 
 const customBuildQuery = (
@@ -62,6 +62,7 @@ const customBuildQuery = (
       const mappedResourcePair = R.toPairs(mapping)
         .find(([, value]: [string, string]) => value === resource);
       const mappedResource = mappedResourcePair ? mappedResourcePair[0] : '';
+
       return {
         parseResponse: ({data}: ApolloQueryResult<any>) => {
           if (data[`remove${resource}`]) {
@@ -71,10 +72,10 @@ const customBuildQuery = (
           throw new Error(`Could not delete ${resource}`);
         },
         query: gql`mutation remove${resource}($id: ${
-          numberIdResources.includes(mappedResource)
-          ? 'Int!'
-          : 'ID!'
-          }) {
+          numberIdResources.includes(mappedResource) ?
+            'Int!' :
+            'ID!'
+        }) {
                     remove${resource}(id: $id)
               }`,
         variables: {id: params.id},
@@ -105,7 +106,7 @@ export default (client: any) => {
     ) => {
       const [type, resource, params] = rest;
 
-      if (numberIdResources.some(rs => rs === resource) && type === 'GET_ONE' && 'id' in params) {
+      if (numberIdResources.includes(resource) && type === 'GET_ONE' && 'id' in params) {
         params.id = Number.parseInt(params.id, 10);
       }
 

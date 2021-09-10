@@ -1,3 +1,4 @@
+/* eslint-disable promise/prefer-await-to-callbacks */
 import * as React from 'react';
 import {
   useState,
@@ -31,6 +32,7 @@ import {
 import {
   lightTheme,
 } from './themes';
+import AuthBg from './AuthBg';
 
 const useStyles = makeStyles(theme => ({
   actions: {
@@ -44,6 +46,7 @@ const useStyles = makeStyles(theme => ({
   card: {
     marginTop: '6em',
     minWidth: 300,
+    zIndex: theme.zIndex.modal,
   },
   form: {
     padding: '0 1em 1em 1em',
@@ -62,9 +65,10 @@ const useStyles = makeStyles(theme => ({
   },
   main: {
     alignItems: 'center',
-    background: 'url(https://source.unsplash.com/random/1600x900)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+
+    // background: 'url(https://source.unsplash.com/random/1600x900)',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundSize: 'cover',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -87,8 +91,8 @@ const renderInput = ({
 );
 
 interface FormValues {
-    email?: string;
-    password?: string;
+  email?: string;
+  password?: string;
 }
 
 const {Form} = withTypes<FormValues>();
@@ -109,9 +113,9 @@ const Login = () => {
         notify(
           typeof error === 'string' ?
             error :
-            typeof error === 'undefined' || !error.message ?
+            (typeof error === 'undefined' || !error.message ?
               'ra.auth.sign_in_error' :
-              error.message,
+              error.message),
           'warning',
         );
       },
@@ -131,68 +135,70 @@ const Login = () => {
   };
 
   return (
-    <Form
-      onSubmit={handleSubmit}
-      render={({handleSubmit}) => (
-        <form noValidate onSubmit={handleSubmit}>
-          <div className={classes.main}>
-            <Card className={classes.card}>
-              <div className={classes.avatar}>
-                <Avatar className={classes.icon}>
-                  <LockIcon />
-                </Avatar>
-              </div>
-              <div className={classes.hint}>
-                Hint: demo / demo
-              </div>
-              <div className={classes.form}>
-                <div className={classes.input}>
-                  <Field
-                    autoFocus
-                    component={renderInput}
-
-                    // @ts-ignore
-                    disabled={loading}
-                    label={translate('ra.auth.username')}
-                    name='email'
-                  />
+    <>
+      <AuthBg />
+      <Form
+        onSubmit={handleSubmit}
+        render={({handleSubmit, hasValidationErrors}) => (
+          <form noValidate onSubmit={handleSubmit}>
+            <div className={classes.main}>
+              <Card className={classes.card}>
+                <div className={classes.avatar}>
+                  <Avatar className={classes.icon}>
+                    <LockIcon />
+                  </Avatar>
                 </div>
-                <div className={classes.input}>
-                  <Field
-                    component={renderInput}
-
-                    // @ts-ignore
-                    disabled={loading}
-                    label={translate('ra.auth.password')}
-                    name='password'
-                    type='password'
-                  />
+                <div className={classes.hint}>
+                  Login: admin@uzairways.com
                 </div>
-              </div>
-              <CardActions className={classes.actions}>
-                <Button
-                  color='primary'
-                  disabled={loading}
-                  fullWidth
-                  type='submit'
-                  variant='contained'
-                >
-                  {loading && (
-                    <CircularProgress
-                      size={25}
-                      thickness={2}
+                <div className={classes.hint}>
+                  Pass: admin1234
+                </div>
+                <div className={classes.form}>
+                  <div className={classes.input}>
+                    <Field
+                      autoFocus
+                      component={renderInput}
+                      disabled={loading}
+                      label={translate('ra.auth.username')}
+                      name='email'
                     />
-                  )}
-                  {translate('ra.auth.sign_in')}
-                </Button>
-              </CardActions>
-            </Card>
-            <Notification />
-          </div>
-        </form>
-      )}
-      validate={validate}
-    />
+                  </div>
+                  <div className={classes.input}>
+                    <Field
+                      component={renderInput}
+                      disabled={loading}
+                      label={translate('ra.auth.password')}
+                      name='password'
+                      type='password'
+                    />
+                  </div>
+                </div>
+                <CardActions className={classes.actions}>
+                  <Button
+                    color='primary'
+                    disabled={hasValidationErrors || loading}
+                    fullWidth
+                    type='submit'
+                    variant='contained'
+                  >
+                    {loading && (
+                      <CircularProgress
+                        size={25}
+                        thickness={2}
+                      />
+                    )}
+                    {translate('ra.auth.sign_in')}
+                  </Button>
+                </CardActions>
+              </Card>
+              <Notification />
+            </div>
+          </form>
+        )}
+        validate={validate}
+      />
+    </>
   );
 };
 

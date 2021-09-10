@@ -15,8 +15,8 @@ import ListWiget, {
 } from '../../../widgets/ListWiget';
 import {
   Manager,
+  QueryAllManagersArgs,
 } from '../../../generated/graphql';
-import {QueryAllManagersArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

@@ -1,4 +1,4 @@
-import {AuthProvider} from "react-admin";
+import {AuthProvider} from 'react-admin';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
@@ -26,9 +26,10 @@ const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider =
         if (response.status < 200 || response.status >= 300) {
           throw new Error(response.statusText);
         }
+
         return response.json();
       })
-      .then(({id, message, token}) => {
+      .then(({id, token}) => {
         localStorage.setItem(JWT_STORAGE_KEY, token);
         localStorage.setItem(IDENTITY_STORAGE_KEY, JSON.stringify({
           id,
@@ -41,18 +42,17 @@ const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider =
   checkError: async (error) => {
     const status = error.status;
     if (status === 401 || status === 403) {
-        localStorage.removeItem(JWT_STORAGE_KEY);
+      localStorage.removeItem(JWT_STORAGE_KEY);
 
-        return Promise.reject();
+      return Promise.reject(new Error('Unauthorised'));
     }
 
     return Promise.resolve();
   },
-  checkAuth: async (_params) => {
-
-    return localStorage.getItem(JWT_STORAGE_KEY)
-      ? Promise.resolve()
-      : Promise.reject();
+  checkAuth: async () => {
+    return localStorage.getItem(JWT_STORAGE_KEY) ?
+      Promise.resolve() :
+      Promise.reject(new Error('Unauthorised'));
   },
   logout: async () => {
     localStorage.removeItem(JWT_STORAGE_KEY);
@@ -62,16 +62,17 @@ const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider =
   getIdentity: async () => {
     const stringified = localStorage.getItem(IDENTITY_STORAGE_KEY);
     if (!stringified) {
-      return Promise.reject();
+      return Promise.reject(new Error('No identty'));
     }
     try {
-        const identity = JSON.parse(stringified);
-        return Promise.resolve(identity);
+      const identity = JSON.parse(stringified);
+
+      return Promise.resolve(identity);
     } catch (error) {
-        return Promise.reject(error);
+      return Promise.reject(error);
     }
   },
-  getPermissions: async (params) => {
+  getPermissions: async () => {
     return Promise.resolve();
   },
 });

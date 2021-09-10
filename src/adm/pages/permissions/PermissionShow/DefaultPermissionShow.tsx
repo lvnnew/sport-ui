@@ -5,8 +5,6 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-import {
-} from 'react-admin';
 import RolesToPermissionsPermissionIdTab from './tabs/RolesToPermissionsPermissionIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
@@ -16,9 +14,9 @@ import {additionalTabs} from './additionalTabs';
 const DefaultPermissionShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
-      <MainTab label="Summary" />
+      <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <RolesToPermissionsPermissionIdTab label="Roles To Permissions" path="rolesToPermissions-permissionId" />
+<RolesToPermissionsPermissionIdTab label="Roles To Permissions" path="rolesToPermissions-permissionId" />
     </TabbedShowLayout>
   </Show>
 );

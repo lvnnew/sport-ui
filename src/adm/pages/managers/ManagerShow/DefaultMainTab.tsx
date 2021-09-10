@@ -5,7 +5,7 @@ import {
   TabProps,
   NumberField,
   TextField,
-  ReferenceField
+  ReferenceField,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 

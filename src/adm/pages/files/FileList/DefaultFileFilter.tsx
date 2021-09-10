@@ -9,11 +9,11 @@ import {
 const DefaultFileFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
-      <TextInput fullWidth source="originalName" />
-      <TextInput fullWidth source="url" />
-      <TextInput fullWidth source="mimetype" />
-      <TextInput fullWidth source="s3Key" />
-      <TextInput fullWidth source="eTag" />
+      <TextInput fullWidth source='originalName' />
+      <TextInput fullWidth source='url' />
+      <TextInput fullWidth source='mimetype' />
+      <TextInput fullWidth source='s3Key' />
+      <TextInput fullWidth source='eTag' />
   </Filter>
 );
 

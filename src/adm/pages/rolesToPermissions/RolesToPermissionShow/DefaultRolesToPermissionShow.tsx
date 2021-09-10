@@ -5,8 +5,6 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-import {
-} from 'react-admin';
 
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
@@ -16,9 +14,9 @@ import {additionalTabs} from './additionalTabs';
 const DefaultRolesToPermissionShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
-      <MainTab label="Summary" />
+      <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      
+
     </TabbedShowLayout>
   </Show>
 );

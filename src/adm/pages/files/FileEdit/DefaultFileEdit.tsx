@@ -4,31 +4,38 @@ import {
   Edit,
   SimpleForm,
   EditProps,
-  TextInput
+  TextInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
-  
   return (
     <Edit {...props}>
       <SimpleForm
-        initialValues={{
-          
-        }}
+        initialValues={{}}
       >
         <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="originalName" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="url" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="mimetype" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="s3Key" /></FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}><TextInput fullWidth source="eTag" /></FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='originalName' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='url' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='mimetype' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='s3Key' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='eTag' />
+          </FormGrid>
         </FormGrid>
       </SimpleForm>
     </Edit>
-  )
+  );
 };
 
 export default DefaultFileEdit;

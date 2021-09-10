@@ -15,8 +15,8 @@ import ListWiget, {
 } from '../../../widgets/ListWiget';
 import {
   User,
+  QueryAllUsersArgs,
 } from '../../../generated/graphql';
-import {QueryAllUsersArgs} from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

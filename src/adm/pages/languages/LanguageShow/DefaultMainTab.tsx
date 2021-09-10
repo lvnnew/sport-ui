@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import {
   Tab,
   TabProps,
-  TextField
+  TextField,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 

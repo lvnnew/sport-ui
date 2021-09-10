@@ -9,7 +9,7 @@ import {
 const DefaultLanguageFilter: FC<any> = (props) => (
   <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
-      <TextInput fullWidth source="title" />
+      <TextInput fullWidth source='title' />
   </Filter>
 );
 

@@ -4,7 +4,7 @@ import {
   Tab,
   TabProps,
   TextField,
-  BooleanField
+  BooleanField,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 

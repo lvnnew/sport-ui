@@ -5,8 +5,6 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-import {
-} from 'react-admin';
 import ManagersLanguageIdTab from './tabs/ManagersLanguageIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
@@ -16,9 +14,9 @@ import {additionalTabs} from './additionalTabs';
 const DefaultLanguageShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
-      <MainTab label="Summary" />
+      <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersLanguageIdTab label="Manager" path="managers-languageId" />
+<ManagersLanguageIdTab label="Manager" path="managers-languageId" />
     </TabbedShowLayout>
   </Show>
 );
