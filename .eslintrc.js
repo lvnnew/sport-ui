@@ -55,7 +55,7 @@ module.exports = {
     // "@typescript-eslint/no-unused-vars": "error",
     'max-len': [
       'error',
-      110,
+      140,
       {
         ignorePattern: '^import|^export',
       },
