@@ -7,7 +7,7 @@ import {
   NumberField,
   TextField,
   BooleanField,
-  ReferenceField
+  ReferenceField,
 } from 'react-admin';
 import ManagerLoginFilter from './ManagerLoginFilter';
 
@@ -15,17 +15,17 @@ import ManagerLoginFilter from './ManagerLoginFilter';
 
 const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => (
   <List title={'Manager logins'} exporter={false} filters={<ManagerLoginFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="login" />
-      <TextField source="passwordHash" />
-      <TextField source="role" />
-      <BooleanField source="emailVerified" />
-      <BooleanField source="initialPasswordChanged" />
-      <BooleanField source="locked" />
-      <ReferenceField source="managerId" reference="managers" link="show">
-      <TextField source="title" />
-    </ReferenceField>
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='login' />
+      <TextField source='passwordHash' />
+      <TextField source='role' />
+      <BooleanField source='emailVerified' />
+      <BooleanField source='initialPasswordChanged' />
+      <BooleanField source='locked' />
+      <ReferenceField source='managerId' reference='managers' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

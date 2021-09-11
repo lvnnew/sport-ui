@@ -5,7 +5,7 @@ import {
   Datagrid,
   ListProps,
   TextField,
-  BooleanField
+  BooleanField,
 } from 'react-admin';
 import RoleFilter from './RoleFilter';
 
@@ -13,10 +13,10 @@ import RoleFilter from './RoleFilter';
 
 const DefaultRoleList: FC<ListProps> = (props: ListProps) => (
   <List title={'Roles'} exporter={false} filters={<RoleFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="title" />
-      <BooleanField source="hasFullAccess" />
+    <Datagrid rowClick='show'>
+      <TextField source='id' />
+      <TextField source='title' />
+      <BooleanField source='hasFullAccess' />
     </Datagrid>
   </List>
 );

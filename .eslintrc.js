@@ -7,8 +7,10 @@ module.exports = {
     node: true,
   },
   extends: [
-    // 'canonical',
+    'canonical',
+
     // 'canonical/react',
+
     // 'canonical/mocha',
     // 'canonical/jest',
     // 'plugin:@typescript-eslint/recommended',
@@ -38,6 +40,10 @@ module.exports = {
   ],
   rules: {
     'import/no-extraneous-dependencies': [0],
+    'sort-keys-fix/sort-keys-fix': [0],
+    'no-use-before-define': 'off',
+    'eslint-comments/no-unused-disable': 'off',
+
     // '@typescript-eslint/no-unused-vars': [1],
     // 'no-unused-vars': [1],
     '@typescript-eslint/no-use-before-define': [0],
@@ -45,6 +51,7 @@ module.exports = {
     'class-methods-use-this': [0],
     'no-unused-vars': 'off',
     complexity: [0],
+
     // "@typescript-eslint/no-unused-vars": "error",
     'max-len': [
       'error',
@@ -56,6 +63,7 @@ module.exports = {
 
     'consistent-return': [0],
     'filenames/match-exported': [0],
+
     // 'import/imports-first': [
     //   'warn',
     //   {
@@ -67,6 +75,7 @@ module.exports = {
     'unicorn/numeric-separators-style': [0],
     '@typescript-eslint/explicit-module-boundary-types': [0],
     'jest/prefer-expect-assertions': [0],
+
     // Enable this rules later
     'unicorn/no-reduce': [0],
     'filenames/match-regex': [0],

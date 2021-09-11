@@ -6,7 +6,7 @@ import {
   ListProps,
   NumberField,
   TextField,
-  ReferenceField
+  ReferenceField,
 } from 'react-admin';
 import ManagersToRoleFilter from './ManagersToRoleFilter';
 
@@ -14,15 +14,15 @@ import ManagersToRoleFilter from './ManagersToRoleFilter';
 
 const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => (
   <List title={'Managers to roles'} exporter={false} filters={<ManagersToRoleFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="title" />
-      <ReferenceField source="manageId" reference="managers" link="show">
-      <TextField source="title" />
-    </ReferenceField>
-      <ReferenceField source="roleId" reference="roles" link="show">
-      <TextField source="title" />
-    </ReferenceField>
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='title' />
+      <ReferenceField source='manageId' reference='managers' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
+      <ReferenceField source='roleId' reference='roles' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

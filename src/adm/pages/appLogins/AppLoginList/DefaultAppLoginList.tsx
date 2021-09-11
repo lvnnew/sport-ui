@@ -6,7 +6,7 @@ import {
   ListProps,
   NumberField,
   TextField,
-  ReferenceField
+  ReferenceField,
 } from 'react-admin';
 import AppLoginFilter from './AppLoginFilter';
 
@@ -14,13 +14,13 @@ import AppLoginFilter from './AppLoginFilter';
 
 const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => (
   <List title={'App logins'} exporter={false} filters={<AppLoginFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="login" />
-      <TextField source="passwordHash" />
-      <ReferenceField source="userId" reference="users" link="show">
-      <NumberField source="id" />
-    </ReferenceField>
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='login' />
+      <TextField source='passwordHash' />
+      <ReferenceField source='userId' reference='users' link='show'>
+        <NumberField source='id' />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

@@ -3,16 +3,16 @@ import {
   Filter,
   TextInput,
   DateTimeInput,
-  NumberInput
+  NumberInput,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultStatFilter: FC<any> = (props) => (
   <Filter {...props}>
-      <TextInput label="Search" source="q" alwaysOn />
-      <DateTimeInput fullWidth source='updated' />
-      <NumberInput fullWidth source='helloCount' />
+    <TextInput label='Search' source='q' alwaysOn />
+    <DateTimeInput fullWidth source='updated' />
+    <NumberInput fullWidth source='helloCount' />
   </Filter>
 );
 

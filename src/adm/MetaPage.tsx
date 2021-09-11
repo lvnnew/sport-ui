@@ -7,23 +7,21 @@ import {
 } from 'react-admin';
 import {
   gql,
+  useQuery,
 } from '@apollo/client';
 import {
   makeStyles,
 } from '@material-ui/core/styles';
-import {
-  useQuery,
-} from '@apollo/client';
 
 const useStyles = makeStyles(() => ({
   section: {
-    margin: '10px auto'
+    margin: '10px auto',
   },
   catalog: {
-    margin: '20px 10px'
+    margin: '20px 10px',
   },
   field: {
-    margin: '20px 10px'
+    margin: '20px 10px',
   },
 }));
 
@@ -31,7 +29,7 @@ const META_REQUEST = gql`
   query {
     Meta
   }
-`
+`;
 
 const MetaPage: FC = () => {
   const classes = useStyles();
@@ -65,7 +63,7 @@ const MetaPage: FC = () => {
         </div>
         <div className={classes.section}>
           {result.Meta.catalogs.map(
-            (catalog: any, index: number) => <Catalog catalog={catalog} key={index} />
+            (catalog: any, index: number) => <Catalog catalog={catalog} key={index} />,
           )}
         </div>
       </div>}
@@ -90,7 +88,7 @@ const Catalog: FC<{catalog: any}> = ({catalog}) => {
         </div>
         <div className={classes.section}>
           {catalog.fields.map(
-            (field: any, index: number) => <Field field={field} key={index} />
+            (field: any, index: number) => <Field field={field} key={index} />,
           )}
         </div>
       </div>}

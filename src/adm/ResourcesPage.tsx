@@ -1,7 +1,6 @@
 import React, {
   FC,
 } from 'react';
-
 import NumberWiget from '../widgets/NumberWiget';
 import {
   gql,

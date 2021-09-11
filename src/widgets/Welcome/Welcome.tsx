@@ -13,7 +13,6 @@ import {
 import {
   useTranslate,
 } from 'react-admin';
-
 import publishArticleImage from './welcome_illustration.svg';
 
 const useStyles = makeStyles(theme => ({

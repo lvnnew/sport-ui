@@ -1,5 +1,5 @@
-
 // DO NOT EDIT! THIS IS GENERATED FILE
+
 export const mapping = {
   files: 'File',
   languages: 'Language',

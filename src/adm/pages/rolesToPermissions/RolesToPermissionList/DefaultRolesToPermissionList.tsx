@@ -6,7 +6,7 @@ import {
   ListProps,
   NumberField,
   TextField,
-  ReferenceField
+  ReferenceField,
 } from 'react-admin';
 import RolesToPermissionFilter from './RolesToPermissionFilter';
 
@@ -14,15 +14,15 @@ import RolesToPermissionFilter from './RolesToPermissionFilter';
 
 const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => (
   <List title={'Roles to permissions'} exporter={false} filters={<RolesToPermissionFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="title" />
-      <ReferenceField source="roleId" reference="roles" link="show">
-      <TextField source="title" />
-    </ReferenceField>
-      <ReferenceField source="permissionId" reference="permissions" link="show">
-      <TextField source="title" />
-    </ReferenceField>
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='title' />
+      <ReferenceField source='roleId' reference='roles' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
+      <ReferenceField source='permissionId' reference='permissions' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

@@ -4,7 +4,7 @@ import {
   List,
   Datagrid,
   ListProps,
-  TextField
+  TextField,
 } from 'react-admin';
 import LanguageFilter from './LanguageFilter';
 
@@ -12,9 +12,9 @@ import LanguageFilter from './LanguageFilter';
 
 const DefaultLanguageList: FC<ListProps> = (props: ListProps) => (
   <List title={'Languages'} exporter={false} filters={<LanguageFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="title" />
+    <Datagrid rowClick='show'>
+      <TextField source='id' />
+      <TextField source='title' />
     </Datagrid>
   </List>
 );

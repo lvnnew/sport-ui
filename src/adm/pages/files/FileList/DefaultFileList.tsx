@@ -5,7 +5,7 @@ import {
   Datagrid,
   ListProps,
   NumberField,
-  TextField
+  TextField,
 } from 'react-admin';
 import FileFilter from './FileFilter';
 
@@ -13,13 +13,13 @@ import FileFilter from './FileFilter';
 
 const DefaultFileList: FC<ListProps> = (props: ListProps) => (
   <List title={'Files'} exporter={false} filters={<FileFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="originalName" />
-      <TextField source="url" />
-      <TextField source="mimetype" />
-      <TextField source="s3Key" />
-      <TextField source="eTag" />
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='originalName' />
+      <TextField source='url' />
+      <TextField source='mimetype' />
+      <TextField source='s3Key' />
+      <TextField source='eTag' />
     </Datagrid>
   </List>
 );

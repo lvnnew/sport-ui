@@ -17,8 +17,8 @@ const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-<ManagerLoginsManagerIdTab label="Manager logins" path="managerLogins-managerId" />
-<ManagersToRolesManageIdTab label="Managers To Roles" path="managersToRoles-manageId" />
+      <ManagerLoginsManagerIdTab label='Manager logins' path='managerLogins-managerId' />
+      <ManagersToRolesManageIdTab label='Managers To Roles' path='managersToRoles-manageId' />
     </TabbedShowLayout>
   </Show>
 );

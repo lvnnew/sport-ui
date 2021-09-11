@@ -5,8 +5,7 @@ import {AppState} from '../types';
 import {useDebug} from '../contexts/DebugContext';
 import DefaultIcon from '@material-ui/icons/DetailsOutlined';
 
-const defaultState = {
-};
+const defaultState = {};
 
 type MenuName = keyof typeof defaultState;
 

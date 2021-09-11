@@ -6,7 +6,6 @@ import {
   useRecordContext,
 } from 'react-admin';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
 import CardWithIcon, {
   CardWithIconProps,
 } from './CardWithIcon/CardWithIcon';
@@ -22,14 +21,14 @@ export interface FieldWigetProps extends Omit<CardWithIconProps, 'icon'> {
 
 const FieldWiget: FC<FieldWigetProps> = (
   {
-    source, 
+    source,
     measuring = '',
     defaultValue = '',
     icon,
     prepare,
     ...rest
-  }
-  ) => {
+  },
+) => {
   const record = useRecordContext();
   const val = record[source] || defaultValue;
   const prepared = prepare ? prepare(val) : val;

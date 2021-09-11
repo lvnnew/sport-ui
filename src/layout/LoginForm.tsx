@@ -8,7 +8,6 @@ import {
 import {
   userLogin as userLoginAction,
 } from 'react-admin';
-
 import {
   withStyles, createStyles,
 } from '@material-ui/core/styles';

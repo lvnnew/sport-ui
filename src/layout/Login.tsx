@@ -1,4 +1,3 @@
-/* eslint-disable promise/prefer-await-to-callbacks */
 import * as React from 'react';
 import {
   useState,
@@ -9,7 +8,6 @@ import {
 import {
   useLocation,
 } from 'react-router-dom';
-
 import {
   Avatar,
   Button,
@@ -28,7 +26,6 @@ import LockIcon from '@material-ui/icons/Lock';
 import {
   Notification, useTranslate, useLogin, useNotify,
 } from 'react-admin';
-
 import {
   lightTheme,
 } from './themes';
@@ -107,19 +104,19 @@ const Login = () => {
 
   const handleSubmit = (auth: FormValues) => {
     setLoading(true);
-    login(auth, location.state ? location.state.nextPathname : '/').catch(
-      (error: Error) => {
-        setLoading(false);
-        notify(
-          typeof error === 'string' ?
-            error :
-            (typeof error === 'undefined' || !error.message ?
-              'ra.auth.sign_in_error' :
-              error.message),
-          'warning',
-        );
-      },
-    );
+    try {
+      login(auth, location.state ? location.state.nextPathname : '/');
+    } catch (error: any) {
+      setLoading(false);
+      notify(
+        typeof error === 'string' ?
+          error :
+          (typeof error === 'undefined' || !error.message ?
+            'ra.auth.sign_in_error' :
+            error.message),
+        'warning',
+      );
+    }
   };
 
   const validate = (values: FormValues) => {

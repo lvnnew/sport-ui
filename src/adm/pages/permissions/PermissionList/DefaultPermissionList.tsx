@@ -4,7 +4,7 @@ import {
   List,
   Datagrid,
   ListProps,
-  TextField
+  TextField,
 } from 'react-admin';
 import PermissionFilter from './PermissionFilter';
 
@@ -12,9 +12,9 @@ import PermissionFilter from './PermissionFilter';
 
 const DefaultPermissionList: FC<ListProps> = (props: ListProps) => (
   <List title={'Permissions'} exporter={false} filters={<PermissionFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <TextField source="id" />
-      <TextField source="title" />
+    <Datagrid rowClick='show'>
+      <TextField source='id' />
+      <TextField source='title' />
     </Datagrid>
   </List>
 );

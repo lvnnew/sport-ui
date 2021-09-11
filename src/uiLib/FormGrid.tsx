@@ -1,9 +1,9 @@
+/* eslint-disable unicorn/no-nested-ternary */
 import * as React from 'react';
 import {Children, isValidElement, cloneElement, ReactNode} from 'react';
 import {Record} from 'ra-core';
 import {Grid, GridProps} from '@material-ui/core';
-import { Labeled } from 'react-admin';
-import classnames from 'classnames';
+import {Labeled} from 'react-admin';
 
 const sanitizeRestProps = ({
   basePath,
@@ -26,7 +26,6 @@ export interface FormGridProps extends GridProps {
 
 const FormGrid = ({
   basePath,
-  className,
   children,
   record,
   resource,
@@ -35,16 +34,16 @@ const FormGrid = ({
 }: FormGridProps) => (
   <Grid key={version} {...sanitizeRestProps(rest)}>
     {Children.map(children, field =>
-      field && isValidElement<any>(field) ? (
+      (field && isValidElement<any>(field) ? (
         field.props.addLabel ? (
           <Labeled
-            record={record}
-            resource={resource}
             basePath={basePath}
-            label={field.props.label}
-            source={field.props.source}
             disabled={false}
             fullWidth={field.props.fullWidth}
+            label={field.props.label}
+            record={record}
+            resource={resource}
+            source={field.props.source}
           >
             {field}
           </Labeled>
@@ -57,7 +56,7 @@ const FormGrid = ({
             basePath,
           })
         )
-    ) : null
+      ) : null),
     )}
   </Grid>
 );

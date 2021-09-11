@@ -1,15 +1,15 @@
 import React, {FC} from 'react';
 import {
   Filter,
-  TextInput
+  TextInput,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultPermissionFilter: FC<any> = (props) => (
   <Filter {...props}>
-      <TextInput label="Search" source="q" alwaysOn />
-      <TextInput fullWidth source='title' />
+    <TextInput label='Search' source='q' alwaysOn />
+    <TextInput fullWidth source='title' />
   </Filter>
 );
 

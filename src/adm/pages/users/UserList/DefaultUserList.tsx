@@ -5,7 +5,7 @@ import {
   Datagrid,
   ListProps,
   NumberField,
-  TextField
+  TextField,
 } from 'react-admin';
 import UserFilter from './UserFilter';
 
@@ -13,11 +13,11 @@ import UserFilter from './UserFilter';
 
 const DefaultUserList: FC<ListProps> = (props: ListProps) => (
   <List title={'Users'} exporter={false} filters={<UserFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="lastname" />
-      <TextField source="firstname" />
-      <TextField source="email" />
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='lastname' />
+      <TextField source='firstname' />
+      <TextField source='email' />
     </Datagrid>
   </List>
 );

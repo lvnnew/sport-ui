@@ -36,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AreaChartWidget: FC<AreaChartWidgetProps> = ({title, rows}) => {
-
   const classes = useStyles();
 
   return (

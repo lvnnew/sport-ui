@@ -12,9 +12,6 @@ import {
   Link,
 } from 'react-router-dom';
 
-import cartouche from './cartouche.png';
-import cartoucheDark from './cartoucheDark.png';
-
 export interface CardWithIconProps {
   icon: FC<any>;
   to?: string;
@@ -34,12 +31,14 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1),
     minHeight: 52,
     minWidth: '300px',
+    wordWrap: 'break-word',
   },
   main: () => ({
     '& .icon': {
       color: theme.palette.type === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
     },
     alignItems: 'center',
+
     // background: `url(${
     //   theme.palette.type === 'dark' ? cartoucheDark : cartouche
     // }) no-repeat`,
@@ -48,25 +47,29 @@ const useStyles = makeStyles(theme => ({
     overflow: 'inherit',
     padding: 16,
   }),
-  title: {},
+  titleBox: {
+    boxSizing: 'border-box',
+    width: 'auto',
+    maxWidth: '90%',
+  },
 }));
 
 const CardWithIcon: FC<CardWithIconProps> = props => {
-  const {icon, title, subtitle, to, children} = props;
+  const {to, children} = props;
   const classes = useStyles(props);
 
   return (
     <Card className={classes.card}>
-      {to ? <Link to={to}>
-        <HeaderView {...props} />
-      </Link> : 
-      <HeaderView {...props} />}
+      {to ?
+        <Link to={to}>
+          <HeaderView {...props} />
+        </Link> :
+        <HeaderView {...props} />}
       {children && <Divider />}
       {children}
     </Card>
   );
 };
-
 
 const HeaderView: FC<CardWithIconProps> = props => {
   const {icon, title, subtitle} = props;
@@ -77,11 +80,8 @@ const HeaderView: FC<CardWithIconProps> = props => {
       <Box className='icon' width='3em'>
         {createElement(icon, {fontSize: 'large'})}
       </Box>
-      <Box textAlign='right'>
-        <Typography
-          className={classes.title}
-          color='textSecondary'
-        >
+      <Box className={classes.titleBox} textAlign='right'>
+        <Typography color='textSecondary'>
           {title}
         </Typography>
         <Typography component='h2' variant='h5'>

@@ -6,7 +6,6 @@ import {
   useVersion,
 } from 'react-admin';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
 import CardWithIcon, {
   CardWithIconProps,
 } from './CardWithIcon/CardWithIcon';
@@ -20,19 +19,18 @@ export interface NumberWigetProps extends Omit<CardWithIconProps, 'icon'> {
   measuring?: string;
   request: DocumentNode;
   options?: QueryHookOptions;
-  // eslint-disable-next-line no-unused-vars
   resultToValue: (result: any) => number;
 }
 
 const NumberWiget: FC<NumberWigetProps> = (
   {
     request,
-     options,
-    resultToValue, 
+    options,
+    resultToValue,
     measuring = '',
-   icon,
-  ...rest}
-  ) => {
+    icon,
+    ...rest},
+) => {
   const {data: result, refetch} = useQuery(request, options);
   const version = useVersion();
 

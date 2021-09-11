@@ -9,7 +9,6 @@ import {
 import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import SendIcon from '@material-ui/icons/SendOutlined';
-
 import {
   gql, useLazyQuery,
 } from '@apollo/client';

@@ -6,7 +6,7 @@ import {
   ListProps,
   TextField,
   DateField,
-  NumberField
+  NumberField,
 } from 'react-admin';
 import StatFilter from './StatFilter';
 
@@ -14,10 +14,10 @@ import StatFilter from './StatFilter';
 
 const DefaultStatList: FC<ListProps> = (props: ListProps) => (
   <List title={'Stats'} exporter={false} filters={<StatFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <TextField source="id" />
-      <DateField source="updated" />
-      <NumberField source="helloCount" />
+    <Datagrid rowClick='show'>
+      <TextField source='id' />
+      <DateField source='updated' />
+      <NumberField source='helloCount' />
     </Datagrid>
   </List>
 );

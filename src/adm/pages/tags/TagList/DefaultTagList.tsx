@@ -5,7 +5,7 @@ import {
   Datagrid,
   ListProps,
   NumberField,
-  TextField
+  TextField,
 } from 'react-admin';
 import TagFilter from './TagFilter';
 
@@ -13,9 +13,9 @@ import TagFilter from './TagFilter';
 
 const DefaultTagList: FC<ListProps> = (props: ListProps) => (
   <List title={'Tags'} exporter={false} filters={<TagFilter />} {...props}>
-    <Datagrid rowClick="show">
-      <NumberField source="id" />
-      <TextField source="comment" />
+    <Datagrid rowClick='show'>
+      <NumberField source='id' />
+      <TextField source='comment' />
     </Datagrid>
   </List>
 );
