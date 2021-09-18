@@ -12,8 +12,8 @@ import PendingRequestsIcon from '@material-ui/icons/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
 import {Button} from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import {useDispatch} from 'react-redux';
-import {refreshView, useVersion} from 'ra-core';
+import {useVersion} from 'ra-core';
+import {useRefresh} from 'react-admin';
 
 const STATS_QUERY = gql`
   query {
@@ -46,23 +46,22 @@ const useStyles = makeStyles(() => ({
 const DashboardStats: FC = () => {
   const classes = useStyles();
   const version = useVersion();
+  const refresh = useRefresh();
 
   const {data, loading, refetch} = useQuery(STATS_QUERY);
 
   const [recalculateStats, {loading: recalcLoading}] = useMutation(RECALCULATE_STATS);
 
-  const dispatch = useDispatch();
-
   useEffect(() => {
     if (!loading) {
       refetch();
     }
-  }, [version]);
+  }, [version, refetch, loading]);
 
   const onClick = useCallback(async () => {
     await recalculateStats();
-    dispatch(refreshView());
-  }, [recalculateStats]);
+    refresh();
+  }, [recalculateStats, refresh]);
 
   const resultToValue = (result: any) => (String(result) || '0');
 
@@ -86,7 +85,7 @@ const DashboardStats: FC = () => {
         onClick={onClick}
         disabled={recalcLoading}
       >
-      Recalculate
+        Recalculate
         {recalcLoading && <CircularProgress size={24} className={classes.buttonProgress} />}
       </Button>
     </>

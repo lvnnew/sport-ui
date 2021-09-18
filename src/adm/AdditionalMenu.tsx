@@ -56,8 +56,7 @@ export const AdditionalMenu: FC<AdditionalMenuProps> = ({onMenuClick, dense, ope
               to={'/ref-file-saving'}
             />
           </SubMenu>
-        </>
-      }
+        </>}
     </>
   );
 };

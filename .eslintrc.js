@@ -8,8 +8,7 @@ module.exports = {
   },
   extends: [
     'canonical',
-
-    // 'canonical/react',
+    'canonical/react',
 
     // 'canonical/mocha',
     // 'canonical/jest',
@@ -43,6 +42,7 @@ module.exports = {
     'sort-keys-fix/sort-keys-fix': [0],
     'no-use-before-define': 'off',
     'eslint-comments/no-unused-disable': 'off',
+    'react/jsx-sort-props': 'off',
 
     // '@typescript-eslint/no-unused-vars': [1],
     // 'no-unused-vars': [1],

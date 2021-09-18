@@ -21,7 +21,7 @@ const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
       addLabel={false}
       reference='managerLogins'
       target='managerId'
-      pagination={<Pagination/>}
+      pagination={<Pagination />}
     >
       <Datagrid>
         <NumberField source='id' />
