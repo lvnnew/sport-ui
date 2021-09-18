@@ -50,7 +50,7 @@ const MetaPage: FC = () => {
           prefix: {result.Meta.prefix}
         </div>
         <div className={classes.section}>
-          description: {result.Meta.description}
+          needFor: {result.Meta.needFor}
         </div>
         <div className={classes.section}>
           deployEnvironments: {result.Meta.deployEnvironments.join(',')}
@@ -81,7 +81,7 @@ const Catalog: FC<{catalog: any}> = ({catalog}) => {
           name: {catalog.name}
         </div>
         <div className={classes.section}>
-          description: {catalog.description}
+          needFor: {catalog.needFor}
         </div>
         <div className={classes.section}>
           Fields:
@@ -112,7 +112,7 @@ const Field: FC<{field: any}> = ({field}) => {
           required: {field.required?.toString()}
         </div>
         <div className={classes.section}>
-          description: {field.description}
+          needFor: {field.needFor}
         </div>
         <div className={classes.section}>
           requiredOnInput: {field.requiredOnInput?.toString()}

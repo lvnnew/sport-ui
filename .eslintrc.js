@@ -13,7 +13,7 @@ module.exports = {
 
     // 'canonical/mocha',
     // 'canonical/jest',
-    // 'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'eslint:recommended',
     'plugin:jest/recommended',

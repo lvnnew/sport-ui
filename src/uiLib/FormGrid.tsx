@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable unicorn/no-nested-ternary */
 import * as React from 'react';
 import {Children, isValidElement, cloneElement, ReactNode} from 'react';
