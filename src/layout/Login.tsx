@@ -17,7 +17,7 @@ import {
   TextField,
 } from '@material-ui/core';
 import {
-  createMuiTheme, makeStyles,
+  createTheme, makeStyles,
 } from '@material-ui/core/styles';
 import {
   ThemeProvider,
@@ -203,7 +203,7 @@ const Login = () => {
 // Because otherwise the useStyles() hook used in Login won't get
 // the right theme
 const LoginWithTheme = (props: any) => (
-  <ThemeProvider theme={createMuiTheme(lightTheme)}>
+  <ThemeProvider theme={createTheme(lightTheme)}>
     <Login {...props} />
   </ThemeProvider>
 );
