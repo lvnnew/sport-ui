@@ -68,7 +68,7 @@ const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider =
       const identity = JSON.parse(stringified);
 
       return Promise.resolve(identity);
-    } catch (error) {
+    } catch (error: any) {
       return Promise.reject(error);
     }
   },
