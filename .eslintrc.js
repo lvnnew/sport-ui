@@ -42,6 +42,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'eslint-comments/no-unused-disable': 'off',
     'react/jsx-sort-props': 'off',
+    'import/no-named-as-default': 'off',
 
     // '@typescript-eslint/no-unused-vars': [1],
     // 'no-unused-vars': [1],
