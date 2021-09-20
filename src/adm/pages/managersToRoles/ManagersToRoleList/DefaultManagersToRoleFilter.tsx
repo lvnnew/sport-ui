@@ -12,7 +12,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
     <TextInput fullWidth source='title' />
-    <ReferenceInput source='manageId' reference='managers'>
+    <ReferenceInput source='managerId' reference='managers'>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
     <ReferenceInput source='roleId' reference='roles'>

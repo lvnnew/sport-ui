@@ -17,7 +17,7 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => (
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <TextField source='title' />
-      <ReferenceField source='manageId' reference='managers' link='show'>
+      <ReferenceField source='managerId' reference='managers' link='show'>
         <TextField source='title' />
       </ReferenceField>
       <ReferenceField source='roleId' reference='roles' link='show'>

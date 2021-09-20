@@ -3,50 +3,62 @@ import * as React from 'react';
 import {
   Resource,
 } from 'react-admin';
+
 import FileShow from './pages/files/FileShow';
 import FileEdit from './pages/files/FileEdit';
 import FileCreate from './pages/files/FileCreate';
 import FileList from './pages/files/FileList';
+
 import LanguageShow from './pages/languages/LanguageShow';
 import LanguageEdit from './pages/languages/LanguageEdit';
 import LanguageCreate from './pages/languages/LanguageCreate';
 import LanguageList from './pages/languages/LanguageList';
+
 import UserShow from './pages/users/UserShow';
 import UserEdit from './pages/users/UserEdit';
 import UserCreate from './pages/users/UserCreate';
 import UserList from './pages/users/UserList';
+
 import AppLoginShow from './pages/appLogins/AppLoginShow';
 import AppLoginEdit from './pages/appLogins/AppLoginEdit';
 import AppLoginCreate from './pages/appLogins/AppLoginCreate';
 import AppLoginList from './pages/appLogins/AppLoginList';
+
 import ManagerShow from './pages/managers/ManagerShow';
 import ManagerEdit from './pages/managers/ManagerEdit';
 import ManagerCreate from './pages/managers/ManagerCreate';
 import ManagerList from './pages/managers/ManagerList';
+
 import ManagerLoginShow from './pages/managerLogins/ManagerLoginShow';
 import ManagerLoginEdit from './pages/managerLogins/ManagerLoginEdit';
 import ManagerLoginCreate from './pages/managerLogins/ManagerLoginCreate';
 import ManagerLoginList from './pages/managerLogins/ManagerLoginList';
+
 import RoleShow from './pages/roles/RoleShow';
 import RoleEdit from './pages/roles/RoleEdit';
 import RoleCreate from './pages/roles/RoleCreate';
 import RoleList from './pages/roles/RoleList';
+
 import PermissionShow from './pages/permissions/PermissionShow';
 import PermissionEdit from './pages/permissions/PermissionEdit';
 import PermissionCreate from './pages/permissions/PermissionCreate';
 import PermissionList from './pages/permissions/PermissionList';
+
 import RolesToPermissionShow from './pages/rolesToPermissions/RolesToPermissionShow';
 import RolesToPermissionEdit from './pages/rolesToPermissions/RolesToPermissionEdit';
 import RolesToPermissionCreate from './pages/rolesToPermissions/RolesToPermissionCreate';
 import RolesToPermissionList from './pages/rolesToPermissions/RolesToPermissionList';
+
 import ManagersToRoleShow from './pages/managersToRoles/ManagersToRoleShow';
 import ManagersToRoleEdit from './pages/managersToRoles/ManagersToRoleEdit';
 import ManagersToRoleCreate from './pages/managersToRoles/ManagersToRoleCreate';
 import ManagersToRoleList from './pages/managersToRoles/ManagersToRoleList';
+
 import StatShow from './pages/stats/StatShow';
 import StatEdit from './pages/stats/StatEdit';
 import StatCreate from './pages/stats/StatCreate';
 import StatList from './pages/stats/StatList';
+
 import TagShow from './pages/tags/TagShow';
 import TagEdit from './pages/tags/TagEdit';
 import TagCreate from './pages/tags/TagCreate';

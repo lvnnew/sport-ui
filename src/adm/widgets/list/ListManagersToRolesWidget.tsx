@@ -44,7 +44,7 @@ export const ListManagersToRolesItem: FC<ManagersToRole> = (props) => {
               {`Title: ${props.title}`}
             </div>
             <div>
-              {`Manage id: ${props.manageId}`}
+              {`Manager id: ${props.managerId}`}
             </div>
             <div>
               {`Role id: ${props.roleId}`}
@@ -94,7 +94,7 @@ const ListManagersToRolesWidget: FC<ListManagersToRolesWidgetProps> = ({
           ) {
             id
             title
-            manageId
+            managerId
             roleId
           }
         }

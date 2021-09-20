@@ -14,18 +14,18 @@ import {
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagersToRolesManageIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
+const ManagersToRolesManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   <Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='managersToRoles'
-      target='manageId'
+      target='managerId'
       pagination={<Pagination />}
     >
       <Datagrid>
         <NumberField source='id' />
         <TextField source='title' />
-        <ReferenceField source='manageId' reference='managers' link='show'>
+        <ReferenceField source='managerId' reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <ReferenceField source='roleId' reference='roles' link='show'>
@@ -37,4 +37,4 @@ const ManagersToRolesManageIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   </Tab>
 );
 
-export default ManagersToRolesManageIdTab;
+export default ManagersToRolesManagerIdTab;
