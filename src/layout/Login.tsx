@@ -17,11 +17,10 @@ import {
   TextField,
 } from '@material-ui/core';
 import {
-  createTheme, makeStyles,
-} from '@material-ui/core/styles';
-import {
+  createTheme,
+  makeStyles,
   ThemeProvider,
-} from '@material-ui/styles';
+} from '@material-ui/core/styles';
 import LockIcon from '@material-ui/icons/Lock';
 import {
   Notification, useTranslate, useLogin, useNotify,

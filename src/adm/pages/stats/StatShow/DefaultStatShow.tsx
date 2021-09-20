@@ -5,7 +5,6 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 
