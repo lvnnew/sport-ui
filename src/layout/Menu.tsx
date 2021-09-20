@@ -18,6 +18,7 @@ import {
 import {
   ProjectMenu,
 } from '../adm/ProjectMenu';
+import {usePermissions} from '../contexts/PermissionsContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -34,11 +35,12 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
   );
   const open = useSelector((state: AppState) => state.admin.ui.sidebarOpen);
   useSelector((state: AppState) => state.theme); // force rerender on theme change
+  const {permissions} = usePermissions();
 
   return (
     <Box mt={1}>
       {' '}
-      <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />
+      {permissions.includes('dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
       <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
       {isXSmall && (
         <MenuItemLink

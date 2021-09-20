@@ -38,6 +38,7 @@ import {
   envConfig,
 } from './config/envConfig';
 import {DebugProvider} from './contexts/DebugContext';
+import {PermissionsProvider} from './contexts/PermissionsContext';
 import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
@@ -110,23 +111,25 @@ const App = () => {
 
   return (
     <ApolloProvider client={client}>
-      <DebugProvider>
-        <Admin
-          customReducers={{theme: themeReducer}}
-          customRoutes={customRoutes}
-          dashboard={Dashboard}
-          dataProvider={dataProvider}
-          history={history}
-          i18nProvider={i18nProvider}
-          layout={Layout}
-          loading={LoadingPage}
-          loginPage={Login}
-          authProvider={authProvider}
-          title=''
-        >
-          {resources}
-        </Admin>
-      </DebugProvider>
+      <PermissionsProvider>
+        <DebugProvider>
+          <Admin
+            customReducers={{theme: themeReducer}}
+            customRoutes={customRoutes}
+            dashboard={Dashboard}
+            dataProvider={dataProvider}
+            history={history}
+            i18nProvider={i18nProvider}
+            layout={Layout}
+            loading={LoadingPage}
+            loginPage={Login}
+            authProvider={authProvider}
+            title=''
+          >
+            {resources}
+          </Admin>
+        </DebugProvider>
+      </PermissionsProvider>
     </ApolloProvider>
   );
 };
