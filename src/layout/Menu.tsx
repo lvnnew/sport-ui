@@ -10,7 +10,10 @@ import {
   useMediaQuery, Theme, Box,
 } from '@material-ui/core';
 import {
-  useTranslate, DashboardMenuItem, MenuItemLink,
+  useTranslate,
+  DashboardMenuItem,
+  MenuItemLink,
+  usePermissions,
 } from 'react-admin';
 import {
   AppState,
@@ -18,7 +21,6 @@ import {
 import {
   ProjectMenu,
 } from '../adm/ProjectMenu';
-import {usePermissions} from '../contexts/PermissionsContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

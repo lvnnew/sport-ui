@@ -11,6 +11,7 @@ import {
   ApolloProvider,
   ApolloLink,
   from,
+  NormalizedCacheObject,
 } from '@apollo/client';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import './App.css';
@@ -34,11 +35,7 @@ import {
 import {
   Dashboard,
 } from './adm/dashboard';
-import {
-  envConfig,
-} from './config/envConfig';
 import {DebugProvider} from './contexts/DebugContext';
-import {PermissionsProvider} from './contexts/PermissionsContext';
 import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
@@ -62,16 +59,12 @@ const i18nProvider = polyglotI18nProvider(locale => {
 const App = () => {
   const [dataProvider, setDataProvider] = useState<any | null>(null);
   const [authProvider, setAuthProvider] = useState<AuthProvider | null>(null);
-  const [client, setClient] = useState<any | null>(null);
+  const [client, setClient] = useState<ApolloClient<NormalizedCacheObject> | null>(null);
   const [authVersion, setAuthVersion] = useState(0);
 
   useEffect(() => {
     const fetchDataProvider = async () => {
       const config = await getConfig();
-      setAuthProvider(getAuthProvider(config.endpoint, () => setAuthVersion(prev => prev + 1)));
-
-      log.info(config);
-      log.info(envConfig);
 
       const link = from([
         new RetryLink(),
@@ -91,6 +84,13 @@ const App = () => {
         link,
       });
       setClient(client);
+      setAuthProvider(
+        getAuthProvider(
+          config.endpoint,
+          client,
+          () => setAuthVersion(prev => prev + 1),
+        ),
+      );
       const dataProviderInstance = await dataProviderFactory(client);
       setDataProvider(() => dataProviderInstance);
     };
@@ -111,25 +111,23 @@ const App = () => {
 
   return (
     <ApolloProvider client={client}>
-      <PermissionsProvider>
-        <DebugProvider>
-          <Admin
-            customReducers={{theme: themeReducer}}
-            customRoutes={customRoutes}
-            dashboard={Dashboard}
-            dataProvider={dataProvider}
-            history={history}
-            i18nProvider={i18nProvider}
-            layout={Layout}
-            loading={LoadingPage}
-            loginPage={Login}
-            authProvider={authProvider}
-            title=''
-          >
-            {resources}
-          </Admin>
-        </DebugProvider>
-      </PermissionsProvider>
+      <DebugProvider>
+        <Admin
+          customReducers={{theme: themeReducer}}
+          customRoutes={customRoutes}
+          dashboard={Dashboard}
+          dataProvider={dataProvider}
+          history={history}
+          i18nProvider={i18nProvider}
+          layout={Layout}
+          loading={LoadingPage}
+          loginPage={Login}
+          authProvider={authProvider}
+          title=''
+        >
+          {resources}
+        </Admin>
+      </DebugProvider>
     </ApolloProvider>
   );
 };

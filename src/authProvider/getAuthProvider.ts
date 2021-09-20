@@ -1,11 +1,26 @@
+import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
+import {
+  ApolloClient,
+  NormalizedCacheObject,
+} from '@apollo/client';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
 
 export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 
-const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider = (endpoint, onLogin) => ({
+export const PERMISSIONS_QUERY = gql`
+  query {
+    getPermissions
+  }
+`;
+
+const getAuthProvider: (
+  endpoint: string,
+  client: ApolloClient<NormalizedCacheObject>,
+  onLogin: () => void,
+) => AuthProvider = (endpoint, client, onLogin) => ({
   login: async ({email, password}) => {
     // const endpoint = '213';
     // const {post, response, loading, error, data} = useFetch(
@@ -73,7 +88,12 @@ const getAuthProvider: (endpoint: string, onLogin: () => void) => AuthProvider =
     }
   },
   getPermissions: async () => {
-    return Promise.resolve();
+    const {data} = await client.query({
+      query: PERMISSIONS_QUERY,
+      fetchPolicy: 'cache-first',
+    });
+
+    return data.getPermissions;
   },
 });
 
