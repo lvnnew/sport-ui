@@ -66,17 +66,117 @@ import TagList from './pages/tags/TagList';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-export const resources = [
-  <Resource show={FileShow} edit={FileEdit} create={FileCreate} key='files' list={FileList} name='files' options={{label: 'Files'}} />,
-  <Resource show={LanguageShow} edit={LanguageEdit} create={LanguageCreate} key='languages' list={LanguageList} name='languages' options={{label: 'Languages'}} />,
-  <Resource show={UserShow} edit={UserEdit} create={UserCreate} key='users' list={UserList} name='users' options={{label: 'Users'}} />,
-  <Resource show={AppLoginShow} edit={AppLoginEdit} create={AppLoginCreate} key='appLogins' list={AppLoginList} name='appLogins' options={{label: 'Logins of usual (not admins) users'}} />,
-  <Resource show={ManagerShow} edit={ManagerEdit} create={ManagerCreate} key='managers' list={ManagerList} name='managers' options={{label: 'Manager'}} />,
-  <Resource show={ManagerLoginShow} edit={ManagerLoginEdit} create={ManagerLoginCreate} key='managerLogins' list={ManagerLoginList} name='managerLogins' options={{label: 'Manager logins'}} />,
-  <Resource show={RoleShow} edit={RoleEdit} create={RoleCreate} key='roles' list={RoleList} name='roles' options={{label: 'Roles'}} />,
-  <Resource show={PermissionShow} edit={PermissionEdit} create={PermissionCreate} key='permissions' list={PermissionList} name='permissions' options={{label: 'Permissions'}} />,
-  <Resource show={RolesToPermissionShow} edit={RolesToPermissionEdit} create={RolesToPermissionCreate} key='rolesToPermissions' list={RolesToPermissionList} name='rolesToPermissions' options={{label: 'Roles To Permissions'}} />,
-  <Resource show={ManagersToRoleShow} edit={ManagersToRoleEdit} create={ManagersToRoleCreate} key='managersToRoles' list={ManagersToRoleList} name='managersToRoles' options={{label: 'Managers To Roles'}} />,
-  <Resource show={StatShow} edit={StatEdit} create={StatCreate} key='stats' list={StatList} name='stats' options={{label: 'Stats'}} />,
-  <Resource show={TagShow} edit={TagEdit} create={TagCreate} key='tags' list={TagList} name='tags' options={{label: 'Tags'}} />,
-];
+export const getResources = (permissions: string[]) => (
+  permissions ?
+    [
+      <Resource
+        key='files'
+        name='files'
+        show={permissions.includes('files.get') ? FileShow : undefined}
+        edit={permissions.includes('files.update') ? FileEdit : undefined}
+        create={permissions.includes('files.create') ? FileCreate : undefined}
+        list={permissions.includes('files.all') ? FileList : undefined}
+        options={{label: 'Files'}}
+      />,
+      <Resource
+        key='languages'
+        name='languages'
+        show={permissions.includes('languages.get') ? LanguageShow : undefined}
+        edit={permissions.includes('languages.update') ? LanguageEdit : undefined}
+        create={permissions.includes('languages.create') ? LanguageCreate : undefined}
+        list={permissions.includes('languages.all') ? LanguageList : undefined}
+        options={{label: 'Languages'}}
+      />,
+      <Resource
+        key='users'
+        name='users'
+        show={permissions.includes('users.get') ? UserShow : undefined}
+        edit={permissions.includes('users.update') ? UserEdit : undefined}
+        create={permissions.includes('users.create') ? UserCreate : undefined}
+        list={permissions.includes('users.all') ? UserList : undefined}
+        options={{label: 'Users'}}
+      />,
+      <Resource
+        key='appLogins'
+        name='appLogins'
+        show={permissions.includes('appLogins.get') ? AppLoginShow : undefined}
+        edit={permissions.includes('appLogins.update') ? AppLoginEdit : undefined}
+        create={permissions.includes('appLogins.create') ? AppLoginCreate : undefined}
+        list={permissions.includes('appLogins.all') ? AppLoginList : undefined}
+        options={{label: 'Logins of usual (not admins) users'}}
+      />,
+      <Resource
+        key='managers'
+        name='managers'
+        show={permissions.includes('managers.get') ? ManagerShow : undefined}
+        edit={permissions.includes('managers.update') ? ManagerEdit : undefined}
+        create={permissions.includes('managers.create') ? ManagerCreate : undefined}
+        list={permissions.includes('managers.all') ? ManagerList : undefined}
+        options={{label: 'Manager'}}
+      />,
+      <Resource
+        key='managerLogins'
+        name='managerLogins'
+        show={permissions.includes('managerLogins.get') ? ManagerLoginShow : undefined}
+        edit={permissions.includes('managerLogins.update') ? ManagerLoginEdit : undefined}
+        create={permissions.includes('managerLogins.create') ? ManagerLoginCreate : undefined}
+        list={permissions.includes('managerLogins.all') ? ManagerLoginList : undefined}
+        options={{label: 'Manager logins'}}
+      />,
+      <Resource
+        key='roles'
+        name='roles'
+        show={permissions.includes('roles.get') ? RoleShow : undefined}
+        edit={permissions.includes('roles.update') ? RoleEdit : undefined}
+        create={permissions.includes('roles.create') ? RoleCreate : undefined}
+        list={permissions.includes('roles.all') ? RoleList : undefined}
+        options={{label: 'Roles'}}
+      />,
+      <Resource
+        key='permissions'
+        name='permissions'
+        show={permissions.includes('permissions.get') ? PermissionShow : undefined}
+        edit={permissions.includes('permissions.update') ? PermissionEdit : undefined}
+        create={permissions.includes('permissions.create') ? PermissionCreate : undefined}
+        list={permissions.includes('permissions.all') ? PermissionList : undefined}
+        options={{label: 'Permissions'}}
+      />,
+      <Resource
+        key='rolesToPermissions'
+        name='rolesToPermissions'
+        show={permissions.includes('rolesToPermissions.get') ? RolesToPermissionShow : undefined}
+        edit={permissions.includes('rolesToPermissions.update') ? RolesToPermissionEdit : undefined}
+        create={permissions.includes('rolesToPermissions.create') ? RolesToPermissionCreate : undefined}
+        list={permissions.includes('rolesToPermissions.all') ? RolesToPermissionList : undefined}
+        options={{label: 'Roles To Permissions'}}
+      />,
+      <Resource
+        key='managersToRoles'
+        name='managersToRoles'
+        show={permissions.includes('managersToRoles.get') ? ManagersToRoleShow : undefined}
+        edit={permissions.includes('managersToRoles.update') ? ManagersToRoleEdit : undefined}
+        create={permissions.includes('managersToRoles.create') ? ManagersToRoleCreate : undefined}
+        list={permissions.includes('managersToRoles.all') ? ManagersToRoleList : undefined}
+        options={{label: 'Managers To Roles'}}
+      />,
+      <Resource
+        key='stats'
+        name='stats'
+        show={permissions.includes('stats.get') ? StatShow : undefined}
+        edit={permissions.includes('stats.update') ? StatEdit : undefined}
+        create={permissions.includes('stats.create') ? StatCreate : undefined}
+        list={permissions.includes('stats.all') ? StatList : undefined}
+        options={{label: 'Stats'}}
+      />,
+      <Resource
+        key='tags'
+        name='tags'
+        show={permissions.includes('tags.get') ? TagShow : undefined}
+        edit={permissions.includes('tags.update') ? TagEdit : undefined}
+        create={permissions.includes('tags.create') ? TagCreate : undefined}
+        list={permissions.includes('tags.all') ? TagList : undefined}
+        options={{label: 'Tags'}}
+      />,
+    ] :
+    []
+);

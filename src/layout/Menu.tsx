@@ -37,12 +37,12 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
   );
   const open = useSelector((state: AppState) => state.admin.ui.sidebarOpen);
   useSelector((state: AppState) => state.theme); // force rerender on theme change
-  const {permissions} = usePermissions();
+  const {permissions} = usePermissions<string[]>();
 
   return (
     <Box mt={1}>
       {' '}
-      {permissions.includes('dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
+      {permissions && permissions.includes('dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
       <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
       {isXSmall && (
         <MenuItemLink

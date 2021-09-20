@@ -52,13 +52,9 @@ const useStyles = makeStyles((theme) => {
 const LoadingPage: FC<ILoadingPageProps> = memo((props: ILoadingPageProps) => {
   // const {title} = props;
   const mc = useStyles(props);
-  // eslint-disable-next-line no-console
-  console.log('00000000000000000000000000');
 
   return (
-    <div className={mc.root}>
-      123
-    </div>
+    <div className={mc.root} />
   );
 });
 

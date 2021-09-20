@@ -30,7 +30,7 @@ import {
   createBrowserHistory as createHistory,
 } from 'history';
 import {
-  resources,
+  getResources,
 } from './adm/resources';
 import {
   Dashboard,
@@ -125,7 +125,7 @@ const App = () => {
           authProvider={authProvider}
           title=''
         >
-          {resources}
+          {permissions => getResources(permissions)}
         </Admin>
       </DebugProvider>
     </ApolloProvider>
