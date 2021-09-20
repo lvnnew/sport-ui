@@ -16,7 +16,6 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => (
   <List title={'Managers to roles'} exporter={false} filters={<ManagersToRoleFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
-      <TextField source='title' />
       <ReferenceField source='managerId' reference='managers' link='show'>
         <TextField source='title' />
       </ReferenceField>

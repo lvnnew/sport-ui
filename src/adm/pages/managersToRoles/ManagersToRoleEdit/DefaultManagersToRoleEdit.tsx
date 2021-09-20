@@ -4,7 +4,6 @@ import {
   Edit,
   SimpleForm,
   EditProps,
-  TextInput,
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
@@ -19,9 +18,6 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
         initialValues={{}}
       >
         <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
-          </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput source='managerId' reference='managers'>
               <AutocompleteInput fullWidth optionText='title' />

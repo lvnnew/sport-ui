@@ -16,7 +16,6 @@ const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => (
   <List title={'Roles to permissions'} exporter={false} filters={<RolesToPermissionFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
-      <TextField source='title' />
       <ReferenceField source='roleId' reference='roles' link='show'>
         <TextField source='title' />
       </ReferenceField>

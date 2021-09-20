@@ -41,9 +41,6 @@ export const ListRolesToPermissionsItem: FC<RolesToPermission> = (props) => {
               {`Id: ${props.id}`}
             </div>
             <div>
-              {`Title: ${props.title}`}
-            </div>
-            <div>
               {`Role id: ${props.roleId}`}
             </div>
             <div>
@@ -93,7 +90,6 @@ const ListRolesToPermissionsWidget: FC<ListRolesToPermissionsWidgetProps> = ({
             filter: $filter
           ) {
             id
-            title
             roleId
             permissionId
           }

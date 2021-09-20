@@ -4,7 +4,6 @@ import {
   Create,
   SimpleForm,
   CreateProps,
-  TextInput,
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
@@ -19,9 +18,6 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
         initialValues={{}}
       >
         <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
-          </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput source='managerId' reference='managers'>
               <AutocompleteInput fullWidth optionText='title' />

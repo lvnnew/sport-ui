@@ -11,7 +11,6 @@ import {
 const DefaultRolesToPermissionFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='title' />
     <ReferenceInput source='roleId' reference='roles'>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>

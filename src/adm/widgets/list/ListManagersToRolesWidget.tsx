@@ -41,9 +41,6 @@ export const ListManagersToRolesItem: FC<ManagersToRole> = (props) => {
               {`Id: ${props.id}`}
             </div>
             <div>
-              {`Title: ${props.title}`}
-            </div>
-            <div>
               {`Manager id: ${props.managerId}`}
             </div>
             <div>
@@ -93,7 +90,6 @@ const ListManagersToRolesWidget: FC<ListManagersToRolesWidgetProps> = ({
             filter: $filter
           ) {
             id
-            title
             managerId
             roleId
           }

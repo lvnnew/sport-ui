@@ -24,7 +24,6 @@ const ManagersToRolesRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
     >
       <Datagrid>
         <NumberField source='id' />
-        <TextField source='title' />
         <ReferenceField source='managerId' reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
