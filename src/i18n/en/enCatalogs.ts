@@ -15,6 +15,7 @@ const enCatalogs = {
   managersToRoles: 'Managers To Roles',
   stats: 'Stats',
   tags: 'Tags',
+  units: 'Units',
 };
 
 export default enCatalogs;

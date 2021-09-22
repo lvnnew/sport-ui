@@ -15,12 +15,12 @@ import {
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
+const ManagersUnitIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   <Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='managers'
-      target='languageId'
+      target='unitId'
       pagination={<Pagination />}
     >
       <Datagrid>
@@ -42,4 +42,4 @@ const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   </Tab>
 );
 
-export default ManagersLanguageIdTab;
+export default ManagersUnitIdTab;

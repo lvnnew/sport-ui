@@ -6,7 +6,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  BooleanField,
   ReferenceManyField,
   Pagination,
   Datagrid,
@@ -15,31 +14,24 @@ import {
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
+const UnitsParentIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   <Tab {...props}>
     <ReferenceManyField
       addLabel={false}
-      reference='managers'
-      target='languageId'
+      reference='units'
+      target='parentId'
       pagination={<Pagination />}
     >
       <Datagrid>
         <NumberField source='id' />
         <TextField source='title' />
-        <TextField source='lastName' />
-        <TextField source='firstName' />
-        <ReferenceField source='languageId' reference='languages' link='show'>
+        <ReferenceField source='parentId' reference='units' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <TextField source='email' />
-        <ReferenceField source='unitId' reference='units' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
-        <BooleanField source='headOfUnit' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
   </Tab>
 );
 
-export default ManagersLanguageIdTab;
+export default UnitsParentIdTab;

@@ -50,6 +50,7 @@ const numberIdResources: string[] = [
   'rolesToPermissions',
   'managersToRoles',
   'tags',
+  'units',
 ];
 
 const customBuildQuery = (

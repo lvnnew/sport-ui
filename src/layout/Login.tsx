@@ -145,10 +145,10 @@ const Login = () => {
                   </Avatar>
                 </div>
                 <div className={classes.hint}>
-                  Login: manager@uzairways.com
+                  Login: admin@example.com
                 </div>
                 <div className={classes.hint}>
-                  Pass: manager1234
+                  Pass: admin
                 </div>
                 <div className={classes.form}>
                   <div className={classes.input}>

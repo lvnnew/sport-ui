@@ -156,6 +156,17 @@ const ResourcesPage: FC = () => {
           resultToValue={result => result?._allTagsMeta?.count}
           title={'Tags'}
           to='/tags' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allUnitsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allUnitsMeta?.count}
+          title={'Units'}
+          to='/units' />
       </div>
     </>
   );

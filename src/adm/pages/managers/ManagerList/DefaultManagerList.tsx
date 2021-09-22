@@ -7,6 +7,7 @@ import {
   NumberField,
   TextField,
   ReferenceField,
+  BooleanField,
 } from 'react-admin';
 import ManagerFilter from './ManagerFilter';
 
@@ -23,6 +24,10 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => (
         <TextField source='title' />
       </ReferenceField>
       <TextField source='email' />
+      <ReferenceField source='unitId' reference='units' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
+      <BooleanField source='headOfUnit' />
     </Datagrid>
   </List>
 );

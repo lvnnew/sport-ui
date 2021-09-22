@@ -64,6 +64,11 @@ import TagEdit from './pages/tags/TagEdit';
 import TagCreate from './pages/tags/TagCreate';
 import TagList from './pages/tags/TagList';
 
+import UnitShow from './pages/units/UnitShow';
+import UnitEdit from './pages/units/UnitEdit';
+import UnitCreate from './pages/units/UnitCreate';
+import UnitList from './pages/units/UnitList';
+
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export const getResources = (permissions: string[]) => (
@@ -176,6 +181,15 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('tags.create') ? TagCreate : undefined}
         list={permissions.includes('tags.all') ? TagList : undefined}
         options={{label: 'Tags'}}
+      />,
+      <Resource
+        key='units'
+        name='units'
+        show={permissions.includes('units.get') ? UnitShow : undefined}
+        edit={permissions.includes('units.update') ? UnitEdit : undefined}
+        create={permissions.includes('units.create') ? UnitCreate : undefined}
+        list={permissions.includes('units.all') ? UnitList : undefined}
+        options={{label: 'Units'}}
       />,
     ] :
     []

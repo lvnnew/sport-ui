@@ -4,6 +4,7 @@ import {
   TextInput,
   ReferenceInput,
   AutocompleteInput,
+  BooleanInput,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -18,6 +19,10 @@ const DefaultManagerFilter: FC<any> = (props) => (
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
     <TextInput fullWidth source='email' />
+    <ReferenceInput source='unitId' reference='units'>
+      <AutocompleteInput fullWidth optionText='title' />
+    </ReferenceInput>
+    <BooleanInput fullWidth source='headOfUnit' />
   </Filter>
 );
 

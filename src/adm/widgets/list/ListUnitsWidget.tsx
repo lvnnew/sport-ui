@@ -14,25 +14,25 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  Manager,
-  QueryAllManagersArgs,
+  Unit,
+  QueryAllUnitsArgs,
 } from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListManagersWidgetProps extends
-Omit<ListWigetProps<Manager>, 'request' | 'resultToValue'| 'children'>,
-QueryAllManagersArgs {
-  children?: FC<Manager>,
+interface ListUnitsWidgetProps extends
+Omit<ListWigetProps<Unit>, 'request' | 'resultToValue'| 'children'>,
+QueryAllUnitsArgs {
+  children?: FC<Unit>,
 }
 
-export const ListManagersItem: FC<Manager> = (props) => {
+export const ListUnitsItem: FC<Unit> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/managers/${props.id}/show`}
+      to={`/units/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -44,22 +44,7 @@ export const ListManagersItem: FC<Manager> = (props) => {
               {`Title: ${props.title}`}
             </div>
             <div>
-              {`Last name: ${props.lastName}`}
-            </div>
-            <div>
-              {`First name: ${props.firstName}`}
-            </div>
-            <div>
-              {`Language id: ${props.languageId}`}
-            </div>
-            <div>
-              {`Email: ${props.email}`}
-            </div>
-            <div>
-              {`Unit id: ${props.unitId}`}
-            </div>
-            <div>
-              {`Head of unit: ${props.headOfUnit}`}
+              {`Parent id: ${props.parentId}`}
             </div>
           </>
         }
@@ -68,17 +53,17 @@ export const ListManagersItem: FC<Manager> = (props) => {
   );
 };
 
-const ListManagersWidget: FC<ListManagersWidgetProps> = ({
+const ListUnitsWidget: FC<ListUnitsWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListManagersItem,
+  children = ListUnitsItem,
   ...rest
 }) => {
   return (
-    <ListWiget<Manager>
+    <ListWiget<Unit>
       {...rest}
       options={{
         variables: {
@@ -95,9 +80,9 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: ManagerFilter,
+          $filter: UnitFilter,
         ) {
-          allManagers(
+          allUnits(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -106,20 +91,15 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
           ) {
             id
             title
-            lastName
-            firstName
-            languageId
-            email
-            unitId
-            headOfUnit
+            parentId
           }
         }
       `}
-      resultToValue={result => result?.allManagers}
+      resultToValue={result => result?.allUnits}
     >
       {(record) => children(record)}
     </ListWiget>
   );
 };
 
-export default ListManagersWidget;
+export default ListUnitsWidget;

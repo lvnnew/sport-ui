@@ -13,4 +13,5 @@ export const mapping = {
   managersToRoles: 'ManagersToRole',
   stats: 'Stat',
   tags: 'Tag',
+  units: 'Unit',
 };
