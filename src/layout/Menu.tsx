@@ -7,7 +7,7 @@ import {
 } from 'react-redux';
 import SettingsIcon from '@material-ui/icons/Settings';
 import {
-  useMediaQuery, Theme, Box,
+  useMediaQuery, Theme,
 } from '@material-ui/core';
 import {
   useTranslate,
