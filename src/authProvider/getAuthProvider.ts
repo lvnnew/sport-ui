@@ -1,9 +1,6 @@
 import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
-import {
-  ApolloClient,
-  NormalizedCacheObject,
-} from '@apollo/client';
+import getApollo from '../getApollo';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
@@ -18,18 +15,9 @@ export const PERMISSIONS_QUERY = gql`
 
 const getAuthProvider: (
   endpoint: string,
-  client: ApolloClient<NormalizedCacheObject>,
   onLogin: () => void,
-) => AuthProvider = (endpoint, client, onLogin) => ({
+) => AuthProvider = (endpoint, onLogin) => ({
   login: async ({email, password}) => {
-    // const endpoint = '213';
-    // const {post, response, loading, error, data} = useFetch(
-    //   `${endpoint}/rest/login`,
-    //   {
-    //     cachePolicy: CachePolicies.NO_CACHE,
-    //   },
-    // );
-
     const request = new Request(`${endpoint}/rest/login`, {
       method: 'POST',
       body: JSON.stringify({email, password}),
@@ -88,6 +76,7 @@ const getAuthProvider: (
     }
   },
   getPermissions: async () => {
+    const client = getApollo(endpoint);
     const {data} = await client.query({
       query: PERMISSIONS_QUERY,
       fetchPolicy: 'cache-first',

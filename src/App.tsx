@@ -65,6 +65,7 @@ const App = () => {
   useEffect(() => {
     const fetchDataProvider = async () => {
       const config = await getConfig();
+      setAuthProvider(getAuthProvider(config.endpoint, () => setAuthVersion(prev => prev + 1)));
 
       const link = from([
         new RetryLink(),
@@ -84,13 +85,6 @@ const App = () => {
         link,
       });
       setClient(client);
-      setAuthProvider(
-        getAuthProvider(
-          config.endpoint,
-          client,
-          () => setAuthVersion(prev => prev + 1),
-        ),
-      );
       const dataProviderInstance = await dataProviderFactory(client);
       setDataProvider(() => dataProviderInstance);
     };

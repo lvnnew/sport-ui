@@ -21,8 +21,27 @@ import {
 import {
   ProjectMenu,
 } from '../adm/ProjectMenu';
+import {makeStyles} from '@material-ui/core/styles';
+import classnames from 'classnames';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  open: {
+    width: 240,
+  },
+  closed: {
+    width: 55,
+  },
+}));
 
 interface Props {
     dense: boolean;
@@ -32,6 +51,7 @@ interface Props {
 
 const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
   const translate = useTranslate();
+  const classes = useStyles();
   const isXSmall = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down('xs'),
   );
@@ -40,8 +60,12 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
   const {permissions} = usePermissions<string[]>();
 
   return (
-    <Box mt={1}>
-      {' '}
+    <div
+      className={classnames(classes.root, {
+        [classes.open]: open,
+        [classes.closed]: !open,
+      })}
+    >
       {permissions && permissions.includes('dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
       <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
       {isXSmall && (
@@ -55,7 +79,7 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
         />
       )}
       {isXSmall && logout}
-    </Box>
+    </div>
   );
 };
 
