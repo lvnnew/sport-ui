@@ -17,7 +17,7 @@
     "apollo-upload-client": "^16.0.0",
     "classnames": "^2.2.6",
     "dayjs": "^1.10.6",
-    "graphql": "^15.5.1",
+    "graphql": "^15.6.0",
     "material-ui-popup-state": "^1.8.3",
     "md5": "^2.3.0",
     "mui-rff": "^3.0.15",
@@ -38,10 +38,10 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.0.1",
-    "@graphql-codegen/introspection": "^2.0.0",
-    "@graphql-codegen/typescript": "^2.0.0",
-    "@graphql-codegen/typescript-resolvers": "^2.0.0",
+    "@graphql-codegen/cli": "^2.2.0",
+    "@graphql-codegen/introspection": "^2.1.0",
+    "@graphql-codegen/typescript": "^2.2.2",
+    "@graphql-codegen/typescript-resolvers": "^2.2.1",
     "@types/apollo-upload-client": "^14.1.0",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^26.0.24",
