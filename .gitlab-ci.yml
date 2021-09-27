@@ -79,7 +79,7 @@ deploy-stage:
 
 
 .deploy-dev:
-  extends: .deploy
+  extends: .deploy .deploy-ui
   stage: deploy-stage
   variables:
     DEV: "true"
@@ -90,7 +90,7 @@ deploy-stage:
     - master
 
 .deploy-prod:
-  extends: .deploy
+  extends: .deploy .deploy-ui
   stage: deploy-prod
   when: manual
   variables:
@@ -100,6 +100,10 @@ deploy-stage:
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
   only:
     - master
+
+.deploy-ui:
+  variables:
+    DEPLOY_KIND: "ui"
 
 .deploy:
   image:
@@ -118,6 +122,7 @@ deploy-stage:
       --timeout 3600s
       --set "global.envName=${ENV_NAME}"
       --set "global.env=${ENV}"
+      --set "global.deployKind=${DEPLOY_KIND}"
       --set "random=:$(date)"
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"

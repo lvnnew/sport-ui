@@ -15,7 +15,6 @@ export interface ILoadingPageProps {
 
 const useStyles = makeStyles((theme) => {
   // eslint-disable-next-line no-console
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1');
   // eslint-disable-next-line no-console
   console.log('theme.palette');
   // eslint-disable-next-line no-console
