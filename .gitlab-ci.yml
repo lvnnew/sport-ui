@@ -79,7 +79,9 @@ deploy-stage:
 
 
 .deploy-dev:
-  extends: .deploy .deploy-ui
+  extends:
+    - .deploy
+    - .deploy-ui
   stage: deploy-stage
   variables:
     DEV: "true"
@@ -90,7 +92,9 @@ deploy-stage:
     - master
 
 .deploy-prod:
-  extends: .deploy .deploy-ui
+  extends:
+    - .deploy
+    - .deploy-ui
   stage: deploy-prod
   when: manual
   variables:
@@ -127,4 +131,5 @@ deploy-stage:
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"
       --set "style=${STYLE}"
+      --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --namespace ${NAMESPACE}
