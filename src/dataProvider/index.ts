@@ -42,10 +42,10 @@ interface IntrospectionResults {
 }
 
 const numberIdResources: string[] = [
-  'appLogins',
   'files',
-  'managerLogins',
+  'appLogins',
   'managers',
+  'managerLogins',
   'managersToPermissions',
   'managersToRoles',
   'rolesToPermissions',
