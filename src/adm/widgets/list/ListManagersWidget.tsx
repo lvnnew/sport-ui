@@ -56,10 +56,16 @@ export const ListManagersItem: FC<Manager> = (props) => {
               {`Email: ${props.email}`}
             </div>
             <div>
+              {`Telegram login: ${props.telegramLogin}`}
+            </div>
+            <div>
               {`Unit id: ${props.unitId}`}
             </div>
             <div>
               {`Head of unit: ${props.headOfUnit}`}
+            </div>
+            <div>
+              {`Active: ${props.active}`}
             </div>
           </>
         }
@@ -110,8 +116,10 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
             firstName
             languageId
             email
+            telegramLogin
             unitId
             headOfUnit
+            active
           }
         }
       `}

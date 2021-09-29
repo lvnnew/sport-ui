@@ -32,10 +32,12 @@ const ManagersUnitIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
           <TextField source='title' />
         </ReferenceField>
         <TextField source='email' />
+        <TextField source='telegramLogin' />
         <ReferenceField source='unitId' reference='units' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <BooleanField source='headOfUnit' />
+        <BooleanField source='active' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

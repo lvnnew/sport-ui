@@ -24,10 +24,12 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => (
         <TextField source='title' />
       </ReferenceField>
       <TextField source='email' />
+      <TextField source='telegramLogin' />
       <ReferenceField source='unitId' reference='units' link='show'>
         <TextField source='title' />
       </ReferenceField>
       <BooleanField source='headOfUnit' />
+      <BooleanField source='active' />
     </Datagrid>
   </List>
 );
