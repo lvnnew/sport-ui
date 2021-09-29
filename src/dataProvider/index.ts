@@ -42,15 +42,16 @@ interface IntrospectionResults {
 }
 
 const numberIdResources: string[] = [
-  'files',
-  'users',
   'appLogins',
-  'managers',
+  'files',
   'managerLogins',
-  'rolesToPermissions',
+  'managers',
+  'managersToPermissions',
   'managersToRoles',
+  'rolesToPermissions',
   'tags',
   'units',
+  'users',
 ];
 
 const customBuildQuery = (

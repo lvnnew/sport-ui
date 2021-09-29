@@ -1,17 +1,18 @@
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export const mapping = {
+  appLogins: 'AppLogin',
   files: 'File',
   languages: 'Language',
-  users: 'User',
-  appLogins: 'AppLogin',
-  managers: 'Manager',
   managerLogins: 'ManagerLogin',
-  roles: 'Role',
-  permissions: 'Permission',
-  rolesToPermissions: 'RolesToPermission',
+  managers: 'Manager',
+  managersToPermissions: 'ManagersToPermission',
   managersToRoles: 'ManagersToRole',
+  permissions: 'Permission',
+  roles: 'Role',
+  rolesToPermissions: 'RolesToPermission',
   stats: 'Stat',
   tags: 'Tag',
   units: 'Unit',
+  users: 'User',
 };

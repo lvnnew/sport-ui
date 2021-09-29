@@ -27,6 +27,17 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allAppLoginsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allAppLoginsMeta?.count}
+          title={'Logins of usual (not admins) users'}
+          to='/appLogins' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allFilesMeta {
                   count
                 }
@@ -49,25 +60,14 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
-                _allUsersMeta {
+                _allManagerLoginsMeta {
                   count
                 }
               }
             `}
-          resultToValue={result => result?._allUsersMeta?.count}
-          title={'Users'}
-          to='/users' />
-        <NumberWiget
-          request={gql`
-              query {
-                _allAppLoginsMeta {
-                  count
-                }
-              }
-            `}
-          resultToValue={result => result?._allAppLoginsMeta?.count}
-          title={'Logins of usual (not admins) users'}
-          to='/appLogins' />
+          resultToValue={result => result?._allManagerLoginsMeta?.count}
+          title={'Manager logins'}
+          to='/managerLogins' />
         <NumberWiget
           request={gql`
               query {
@@ -82,25 +82,25 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
-                _allManagerLoginsMeta {
+                _allManagersToPermissionsMeta {
                   count
                 }
               }
             `}
-          resultToValue={result => result?._allManagerLoginsMeta?.count}
-          title={'Manager logins'}
-          to='/managerLogins' />
+          resultToValue={result => result?._allManagersToPermissionsMeta?.count}
+          title={'Managers To Permissions'}
+          to='/managersToPermissions' />
         <NumberWiget
           request={gql`
               query {
-                _allRolesMeta {
+                _allManagersToRolesMeta {
                   count
                 }
               }
             `}
-          resultToValue={result => result?._allRolesMeta?.count}
-          title={'Roles'}
-          to='/roles' />
+          resultToValue={result => result?._allManagersToRolesMeta?.count}
+          title={'Managers To Roles'}
+          to='/managersToRoles' />
         <NumberWiget
           request={gql`
               query {
@@ -115,6 +115,17 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allRolesMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allRolesMeta?.count}
+          title={'Roles'}
+          to='/roles' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allRolesToPermissionsMeta {
                   count
                 }
@@ -123,17 +134,6 @@ const ResourcesPage: FC = () => {
           resultToValue={result => result?._allRolesToPermissionsMeta?.count}
           title={'Roles To Permissions'}
           to='/rolesToPermissions' />
-        <NumberWiget
-          request={gql`
-              query {
-                _allManagersToRolesMeta {
-                  count
-                }
-              }
-            `}
-          resultToValue={result => result?._allManagersToRolesMeta?.count}
-          title={'Managers To Roles'}
-          to='/managersToRoles' />
         <NumberWiget
           request={gql`
               query {
@@ -167,6 +167,17 @@ const ResourcesPage: FC = () => {
           resultToValue={result => result?._allUnitsMeta?.count}
           title={'Units'}
           to='/units' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allUsersMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allUsersMeta?.count}
+          title={'Users'}
+          to='/users' />
       </div>
     </>
   );

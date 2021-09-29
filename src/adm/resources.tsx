@@ -4,6 +4,11 @@ import {
   Resource,
 } from 'react-admin';
 
+import AppLoginShow from './pages/appLogins/AppLoginShow';
+import AppLoginEdit from './pages/appLogins/AppLoginEdit';
+import AppLoginCreate from './pages/appLogins/AppLoginCreate';
+import AppLoginList from './pages/appLogins/AppLoginList';
+
 import FileShow from './pages/files/FileShow';
 import FileEdit from './pages/files/FileEdit';
 import FileCreate from './pages/files/FileCreate';
@@ -14,45 +19,40 @@ import LanguageEdit from './pages/languages/LanguageEdit';
 import LanguageCreate from './pages/languages/LanguageCreate';
 import LanguageList from './pages/languages/LanguageList';
 
-import UserShow from './pages/users/UserShow';
-import UserEdit from './pages/users/UserEdit';
-import UserCreate from './pages/users/UserCreate';
-import UserList from './pages/users/UserList';
-
-import AppLoginShow from './pages/appLogins/AppLoginShow';
-import AppLoginEdit from './pages/appLogins/AppLoginEdit';
-import AppLoginCreate from './pages/appLogins/AppLoginCreate';
-import AppLoginList from './pages/appLogins/AppLoginList';
+import ManagerLoginShow from './pages/managerLogins/ManagerLoginShow';
+import ManagerLoginEdit from './pages/managerLogins/ManagerLoginEdit';
+import ManagerLoginCreate from './pages/managerLogins/ManagerLoginCreate';
+import ManagerLoginList from './pages/managerLogins/ManagerLoginList';
 
 import ManagerShow from './pages/managers/ManagerShow';
 import ManagerEdit from './pages/managers/ManagerEdit';
 import ManagerCreate from './pages/managers/ManagerCreate';
 import ManagerList from './pages/managers/ManagerList';
 
-import ManagerLoginShow from './pages/managerLogins/ManagerLoginShow';
-import ManagerLoginEdit from './pages/managerLogins/ManagerLoginEdit';
-import ManagerLoginCreate from './pages/managerLogins/ManagerLoginCreate';
-import ManagerLoginList from './pages/managerLogins/ManagerLoginList';
+import ManagersToPermissionShow from './pages/managersToPermissions/ManagersToPermissionShow';
+import ManagersToPermissionEdit from './pages/managersToPermissions/ManagersToPermissionEdit';
+import ManagersToPermissionCreate from './pages/managersToPermissions/ManagersToPermissionCreate';
+import ManagersToPermissionList from './pages/managersToPermissions/ManagersToPermissionList';
 
-import RoleShow from './pages/roles/RoleShow';
-import RoleEdit from './pages/roles/RoleEdit';
-import RoleCreate from './pages/roles/RoleCreate';
-import RoleList from './pages/roles/RoleList';
+import ManagersToRoleShow from './pages/managersToRoles/ManagersToRoleShow';
+import ManagersToRoleEdit from './pages/managersToRoles/ManagersToRoleEdit';
+import ManagersToRoleCreate from './pages/managersToRoles/ManagersToRoleCreate';
+import ManagersToRoleList from './pages/managersToRoles/ManagersToRoleList';
 
 import PermissionShow from './pages/permissions/PermissionShow';
 import PermissionEdit from './pages/permissions/PermissionEdit';
 import PermissionCreate from './pages/permissions/PermissionCreate';
 import PermissionList from './pages/permissions/PermissionList';
 
+import RoleShow from './pages/roles/RoleShow';
+import RoleEdit from './pages/roles/RoleEdit';
+import RoleCreate from './pages/roles/RoleCreate';
+import RoleList from './pages/roles/RoleList';
+
 import RolesToPermissionShow from './pages/rolesToPermissions/RolesToPermissionShow';
 import RolesToPermissionEdit from './pages/rolesToPermissions/RolesToPermissionEdit';
 import RolesToPermissionCreate from './pages/rolesToPermissions/RolesToPermissionCreate';
 import RolesToPermissionList from './pages/rolesToPermissions/RolesToPermissionList';
-
-import ManagersToRoleShow from './pages/managersToRoles/ManagersToRoleShow';
-import ManagersToRoleEdit from './pages/managersToRoles/ManagersToRoleEdit';
-import ManagersToRoleCreate from './pages/managersToRoles/ManagersToRoleCreate';
-import ManagersToRoleList from './pages/managersToRoles/ManagersToRoleList';
 
 import StatShow from './pages/stats/StatShow';
 import StatEdit from './pages/stats/StatEdit';
@@ -69,11 +69,25 @@ import UnitEdit from './pages/units/UnitEdit';
 import UnitCreate from './pages/units/UnitCreate';
 import UnitList from './pages/units/UnitList';
 
+import UserShow from './pages/users/UserShow';
+import UserEdit from './pages/users/UserEdit';
+import UserCreate from './pages/users/UserCreate';
+import UserList from './pages/users/UserList';
+
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export const getResources = (permissions: string[]) => (
   permissions ?
     [
+      <Resource
+        key='appLogins'
+        name='appLogins'
+        show={permissions.includes('appLogins.get') ? AppLoginShow : undefined}
+        edit={permissions.includes('appLogins.update') ? AppLoginEdit : undefined}
+        create={permissions.includes('appLogins.create') ? AppLoginCreate : undefined}
+        list={permissions.includes('appLogins.all') ? AppLoginList : undefined}
+        options={{label: 'Logins of usual (not admins) users'}}
+      />,
       <Resource
         key='files'
         name='files'
@@ -93,22 +107,13 @@ export const getResources = (permissions: string[]) => (
         options={{label: 'Languages'}}
       />,
       <Resource
-        key='users'
-        name='users'
-        show={permissions.includes('users.get') ? UserShow : undefined}
-        edit={permissions.includes('users.update') ? UserEdit : undefined}
-        create={permissions.includes('users.create') ? UserCreate : undefined}
-        list={permissions.includes('users.all') ? UserList : undefined}
-        options={{label: 'Users'}}
-      />,
-      <Resource
-        key='appLogins'
-        name='appLogins'
-        show={permissions.includes('appLogins.get') ? AppLoginShow : undefined}
-        edit={permissions.includes('appLogins.update') ? AppLoginEdit : undefined}
-        create={permissions.includes('appLogins.create') ? AppLoginCreate : undefined}
-        list={permissions.includes('appLogins.all') ? AppLoginList : undefined}
-        options={{label: 'Logins of usual (not admins) users'}}
+        key='managerLogins'
+        name='managerLogins'
+        show={permissions.includes('managerLogins.get') ? ManagerLoginShow : undefined}
+        edit={permissions.includes('managerLogins.update') ? ManagerLoginEdit : undefined}
+        create={permissions.includes('managerLogins.create') ? ManagerLoginCreate : undefined}
+        list={permissions.includes('managerLogins.all') ? ManagerLoginList : undefined}
+        options={{label: 'Manager logins'}}
       />,
       <Resource
         key='managers'
@@ -120,22 +125,22 @@ export const getResources = (permissions: string[]) => (
         options={{label: 'Manager'}}
       />,
       <Resource
-        key='managerLogins'
-        name='managerLogins'
-        show={permissions.includes('managerLogins.get') ? ManagerLoginShow : undefined}
-        edit={permissions.includes('managerLogins.update') ? ManagerLoginEdit : undefined}
-        create={permissions.includes('managerLogins.create') ? ManagerLoginCreate : undefined}
-        list={permissions.includes('managerLogins.all') ? ManagerLoginList : undefined}
-        options={{label: 'Manager logins'}}
+        key='managersToPermissions'
+        name='managersToPermissions'
+        show={permissions.includes('managersToPermissions.get') ? ManagersToPermissionShow : undefined}
+        edit={permissions.includes('managersToPermissions.update') ? ManagersToPermissionEdit : undefined}
+        create={permissions.includes('managersToPermissions.create') ? ManagersToPermissionCreate : undefined}
+        list={permissions.includes('managersToPermissions.all') ? ManagersToPermissionList : undefined}
+        options={{label: 'Managers To Permissions'}}
       />,
       <Resource
-        key='roles'
-        name='roles'
-        show={permissions.includes('roles.get') ? RoleShow : undefined}
-        edit={permissions.includes('roles.update') ? RoleEdit : undefined}
-        create={permissions.includes('roles.create') ? RoleCreate : undefined}
-        list={permissions.includes('roles.all') ? RoleList : undefined}
-        options={{label: 'Roles'}}
+        key='managersToRoles'
+        name='managersToRoles'
+        show={permissions.includes('managersToRoles.get') ? ManagersToRoleShow : undefined}
+        edit={permissions.includes('managersToRoles.update') ? ManagersToRoleEdit : undefined}
+        create={permissions.includes('managersToRoles.create') ? ManagersToRoleCreate : undefined}
+        list={permissions.includes('managersToRoles.all') ? ManagersToRoleList : undefined}
+        options={{label: 'Managers To Roles'}}
       />,
       <Resource
         key='permissions'
@@ -147,6 +152,15 @@ export const getResources = (permissions: string[]) => (
         options={{label: 'Permissions'}}
       />,
       <Resource
+        key='roles'
+        name='roles'
+        show={permissions.includes('roles.get') ? RoleShow : undefined}
+        edit={permissions.includes('roles.update') ? RoleEdit : undefined}
+        create={permissions.includes('roles.create') ? RoleCreate : undefined}
+        list={permissions.includes('roles.all') ? RoleList : undefined}
+        options={{label: 'Roles'}}
+      />,
+      <Resource
         key='rolesToPermissions'
         name='rolesToPermissions'
         show={permissions.includes('rolesToPermissions.get') ? RolesToPermissionShow : undefined}
@@ -154,15 +168,6 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('rolesToPermissions.create') ? RolesToPermissionCreate : undefined}
         list={permissions.includes('rolesToPermissions.all') ? RolesToPermissionList : undefined}
         options={{label: 'Roles To Permissions'}}
-      />,
-      <Resource
-        key='managersToRoles'
-        name='managersToRoles'
-        show={permissions.includes('managersToRoles.get') ? ManagersToRoleShow : undefined}
-        edit={permissions.includes('managersToRoles.update') ? ManagersToRoleEdit : undefined}
-        create={permissions.includes('managersToRoles.create') ? ManagersToRoleCreate : undefined}
-        list={permissions.includes('managersToRoles.all') ? ManagersToRoleList : undefined}
-        options={{label: 'Managers To Roles'}}
       />,
       <Resource
         key='stats'
@@ -190,6 +195,15 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('units.create') ? UnitCreate : undefined}
         list={permissions.includes('units.all') ? UnitList : undefined}
         options={{label: 'Units'}}
+      />,
+      <Resource
+        key='users'
+        name='users'
+        show={permissions.includes('users.get') ? UserShow : undefined}
+        edit={permissions.includes('users.update') ? UserEdit : undefined}
+        create={permissions.includes('users.create') ? UserCreate : undefined}
+        list={permissions.includes('users.all') ? UserList : undefined}
+        options={{label: 'Users'}}
       />,
     ] :
     []

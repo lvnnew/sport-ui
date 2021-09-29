@@ -5,8 +5,8 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-import RolesToPermissionsRoleIdTab from './tabs/RolesToPermissionsRoleIdTab';
 import ManagersToRolesRoleIdTab from './tabs/ManagersToRolesRoleIdTab';
+import RolesToPermissionsRoleIdTab from './tabs/RolesToPermissionsRoleIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 
@@ -17,8 +17,8 @@ const DefaultRoleShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <RolesToPermissionsRoleIdTab label='Roles To Permissions' path='rolesToPermissions-roleId' />
       <ManagersToRolesRoleIdTab label='Managers To Roles' path='managersToRoles-roleId' />
+      <RolesToPermissionsRoleIdTab label='Roles To Permissions' path='rolesToPermissions-roleId' />
     </TabbedShowLayout>
   </Show>
 );
