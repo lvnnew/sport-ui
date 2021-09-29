@@ -1,9 +1,15 @@
 import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
 import getApollo from '../getApollo';
+import LRUCache from 'lru-cache';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
+
+const permissionsCache = new LRUCache({
+  maxAge: 1000 * 60 * 10,
+});
+const cacheKey = 'permissions';
 
 export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 
@@ -76,13 +82,17 @@ const getAuthProvider: (
     }
   },
   getPermissions: async () => {
-    const client = getApollo(endpoint);
-    const {data} = await client.query({
-      query: PERMISSIONS_QUERY,
-      fetchPolicy: 'cache-first',
-    });
+    if (!permissionsCache.has(cacheKey)) {
+      const client = getApollo(endpoint);
+      const {data} = await client.query({
+        query: PERMISSIONS_QUERY,
+        fetchPolicy: 'cache-first',
+      });
 
-    return data.getPermissions;
+      permissionsCache.set(cacheKey, data.getPermissions);
+    }
+
+    return permissionsCache.get(cacheKey);
   },
 });
 
