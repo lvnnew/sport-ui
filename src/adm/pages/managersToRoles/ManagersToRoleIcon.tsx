@@ -1,4 +1,4 @@
-import ManagersToRoleIcon from '@material-ui/icons/DescriptionOutlined';
+import ManagersToRoleIcon from '@mui/icons-material/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

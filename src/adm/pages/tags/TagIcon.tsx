@@ -1,4 +1,4 @@
-import TagIcon from '@material-ui/icons/DescriptionOutlined';
+import TagIcon from '@mui/icons-material/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

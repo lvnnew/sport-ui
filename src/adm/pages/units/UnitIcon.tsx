@@ -1,4 +1,4 @@
-import UnitIcon from '@material-ui/icons/DescriptionOutlined';
+import UnitIcon from '@mui/icons-material/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

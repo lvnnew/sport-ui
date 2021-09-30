@@ -1,4 +1,4 @@
-import LanguageIcon from '@material-ui/icons/DescriptionOutlined';
+import LanguageIcon from '@mui/icons-material/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

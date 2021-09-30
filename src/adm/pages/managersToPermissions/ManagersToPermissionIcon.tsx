@@ -1,4 +1,4 @@
-import ManagersToPermissionIcon from '@material-ui/icons/DescriptionOutlined';
+import ManagersToPermissionIcon from '@mui/icons-material/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

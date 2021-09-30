@@ -1,4 +1,4 @@
-import UserIcon from '@material-ui/icons/DescriptionOutlined';
+import UserIcon from '@mui/icons-material/DescriptionOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
