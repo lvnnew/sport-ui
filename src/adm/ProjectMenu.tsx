@@ -6,8 +6,8 @@ import {
 import {useDebug} from '../contexts/DebugContext';
 import {AdditionalMenu} from './AdditionalMenu';
 import SubMenu from '../layout/SubMenu';
-import DocumentsIcon from '@material-ui/icons/DescriptionOutlined';
-import DefaultIcon from '@material-ui/icons/DetailsOutlined';
+import DocumentsIcon from '@mui/icons-material/DescriptionOutlined';
+import DefaultIcon from '@mui/icons-material/DetailsOutlined';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

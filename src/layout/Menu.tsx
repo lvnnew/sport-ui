@@ -5,7 +5,7 @@ import {
 import {
   useSelector,
 } from 'react-redux';
-import SettingsIcon from '@material-ui/icons/Settings';
+import SettingsIcon from '@mui/icons-material/Settings';
 import {
   useMediaQuery, Theme,
 } from '@material-ui/core';
