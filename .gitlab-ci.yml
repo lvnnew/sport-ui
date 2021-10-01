@@ -51,7 +51,6 @@ build:
     - release
     - /^release-.*$/
 
-
 master-to-latest:
   extends: .tag-image
   stage: latest-image
@@ -76,14 +75,14 @@ deploy-stage:
   stage: deploy-stage
   variables:
     ENV: "stage"
-    ENV_NAME: "stage01"
+    CLUSTER_NAME: "stage-01"
 
 deploy-prod:
   extends: .deploy-prod
   stage: deploy-prod
   variables:
     ENV: "prod"
-    ENV_NAME: "prod01"
+    CLUSTER_NAME: "stage-01"
 
 
 .deploy-dev:
@@ -132,7 +131,7 @@ deploy-prod:
       --install
       --wait ${NAMESPACE}-${APPNAME} chart
       --timeout 3600s
-      --set "global.envName=${ENV_NAME}"
+      --set "global.clusterName=${CLUSTER_NAME}"
       --set "global.env=${ENV}"
       --set "global.deployKind=${DEPLOY_KIND}"
       --set "random=:$(date)"
