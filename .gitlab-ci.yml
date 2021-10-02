@@ -75,14 +75,14 @@ deploy-stage:
   stage: deploy-stage
   variables:
     ENV: "stage"
-    CLUSTER_NAME: "stage-01"
+    CLUSTER_NAME: "stage01"
 
 deploy-prod:
   extends: .deploy-prod
   stage: deploy-prod
   variables:
     ENV: "prod"
-    CLUSTER_NAME: "stage-01"
+    CLUSTER_NAME: "stage01"
 
 
 .deploy-dev:
