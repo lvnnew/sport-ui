@@ -4,10 +4,11 @@ import {
   ApolloLink,
   from,
 } from '@apollo/client';
-import {getJwtToken} from './authProvider/getAuthProvider';
+import {getJwtToken} from '../authProvider/getAuthProvider';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
-import './utils/polyfills/BigInt';
+import cacheTypePolicies from './cacheTypePolicies';
+import '../utils/polyfills/BigInt';
 
 const getApollo = (endpoint: string) => {
   const link = from([
@@ -21,11 +22,14 @@ const getApollo = (endpoint: string) => {
   ]);
 
   return new ApolloClient({
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      typePolicies: cacheTypePolicies,
+    }),
     defaultOptions: {
       query: {fetchPolicy: 'network-only'},
     },
     link,
   });
 };
+
 export default getApollo;

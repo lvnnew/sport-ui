@@ -1,6 +1,6 @@
 import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
-import getApollo from '../getApollo';
+import getApollo from '../apollo/getApollo';
 import LRUCache from 'lru-cache';
 
 const JWT_STORAGE_KEY = 'jwt';

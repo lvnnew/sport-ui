@@ -18,6 +18,7 @@ import {
   mapping,
 } from '../adm/entityMapping';
 import * as R from 'ramda';
+import cacheTypePolicies from '../apollo/cacheTypePolicies';
 import {__schema as schema} from '../generated/graphql.schema.json';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -88,7 +89,9 @@ const customBuildQuery = (
   };
 };
 
-const cache = new InMemoryCache();
+const cache = new InMemoryCache({
+  typePolicies: cacheTypePolicies,
+});
 
 export default (client: any) => {
   return buildApolloClient({

@@ -7,10 +7,7 @@ import {
 } from 'react-admin';
 import {
   ApolloClient,
-  InMemoryCache,
   ApolloProvider,
-  ApolloLink,
-  from,
   NormalizedCacheObject,
 } from '@apollo/client';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
@@ -36,10 +33,9 @@ import {
   Dashboard,
 } from './adm/dashboard';
 import {DebugProvider} from './contexts/DebugContext';
-import getAuthProvider, {getJwtToken} from './authProvider/getAuthProvider';
-import {RetryLink} from '@apollo/client/link/retry';
-import {createUploadLink} from 'apollo-upload-client';
+import getAuthProvider from './authProvider/getAuthProvider';
 import './utils/polyfills/BigInt';
+import getApollo from './apollo/getApollo';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -67,23 +63,7 @@ const App = () => {
       const config = await getConfig();
       setAuthProvider(getAuthProvider(config.endpoint, () => setAuthVersion(prev => prev + 1)));
 
-      const link = from([
-        new RetryLink(),
-        createUploadLink({
-          headers: {
-            authorization: `Bearer ${getJwtToken()}`,
-          },
-          uri: `${config.endpoint}/graph`,
-        }) as unknown as ApolloLink,
-      ]);
-
-      const client = new ApolloClient({
-        cache: new InMemoryCache(),
-        defaultOptions: {
-          query: {fetchPolicy: 'network-only'},
-        },
-        link,
-      });
+      const client = getApollo(config.endpoint);
       setClient(client);
       const dataProviderInstance = await dataProviderFactory(client);
       setDataProvider(() => dataProviderInstance);
