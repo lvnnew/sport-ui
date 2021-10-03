@@ -6,9 +6,6 @@ import {
   Field, withTypes,
 } from 'react-final-form';
 import {
-  useLocation,
-} from 'react-router-dom';
-import {
   Avatar,
   Button,
   Card,
@@ -99,12 +96,14 @@ const Login = () => {
   const classes = useStyles();
   const notify = useNotify();
   const login = useLogin();
-  const location = useLocation<{ nextPathname: string } | null>();
+
+  // const location = useLocation<{ nextPathname: string } | null>();
 
   const handleSubmit = (auth: FormValues) => {
     setLoading(true);
     try {
-      login(auth, location.state ? location.state.nextPathname : '/');
+      // login(auth, location.state ? location.state.nextPathname : '/');
+      login(auth, '/');
     } catch (error: any) {
       setLoading(false);
       notify(

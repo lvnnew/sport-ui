@@ -38,11 +38,11 @@ const getAuthProvider: (
 
         return response.json();
       })
-      .then(({id, token}) => {
+      .then(({id, token, fullName}) => {
         localStorage.setItem(JWT_STORAGE_KEY, token);
         localStorage.setItem(IDENTITY_STORAGE_KEY, JSON.stringify({
           id,
-          fullName: 'user',
+          fullName,
           avatar: 'some avatar',
         }));
         onLogin();

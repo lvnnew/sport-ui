@@ -6,7 +6,7 @@ import enMessages from 'ra-language-english';
 
 const customEnglishMessages: TranslationMessages = {
   ...enMessages,
-  pos: {
+  app: {
     configuration: 'Configuration',
     dashboard: {
       all_customers: 'See all customers',
