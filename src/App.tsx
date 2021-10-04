@@ -72,9 +72,6 @@ const App = () => {
     fetchDataProvider();
   }, [authVersion]);
 
-  log.info('dataProvider');
-  log.info(dataProvider);
-
   if (!dataProvider || !client || !authProvider) {
     return (
       <div className='loader-container'>

@@ -2,6 +2,7 @@ import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
 import getApollo from '../apollo/getApollo';
 import LRUCache from 'lru-cache';
+import {log} from '../utils/log';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
@@ -24,6 +25,7 @@ const getAuthProvider: (
   onLogin: () => void,
 ) => AuthProvider = (endpoint, onLogin) => ({
   login: async ({email, password}) => {
+    permissionsCache.reset();
     const request = new Request(`${endpoint}/rest/login`, {
       method: 'POST',
       body: JSON.stringify({email, password}),
@@ -65,6 +67,7 @@ const getAuthProvider: (
   },
   logout: async () => {
     localStorage.removeItem(JWT_STORAGE_KEY);
+    permissionsCache.reset();
 
     return Promise.resolve();
   },
@@ -83,6 +86,7 @@ const getAuthProvider: (
   },
   getPermissions: async () => {
     if (!permissionsCache.has(cacheKey)) {
+      log.info('!!!!!!!!!!!!!!!!!!!!!! getPermissions');
       const client = getApollo(endpoint);
       const {data} = await client.query({
         query: PERMISSIONS_QUERY,
