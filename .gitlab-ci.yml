@@ -107,7 +107,7 @@ deploy-prod:
   variables:
     DEV: "false"
     HOST: "making.ventures"
-    TAG: ":latest"
+    TAG: ":release"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
   only:
     - master
