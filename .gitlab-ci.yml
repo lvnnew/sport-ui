@@ -110,7 +110,8 @@ deploy-prod:
     TAG: ":release"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
   only:
-    - master
+    - release
+    - /^release-.*$/
 
 .deploy-ui:
   variables:
