@@ -38,6 +38,17 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allDelegationsMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allDelegationsMeta?.count}
+          title={'Delegations'}
+          to='/delegations' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allFilesMeta {
                   count
                 }

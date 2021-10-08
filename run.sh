@@ -5,10 +5,6 @@ set -v
 
 # docker build -t ui .
 
-# grep -R "{AUTH0_REDIRECT_URI}" *
-# grep -R "!!!!!!!!!!!!!!!!!!!!!!!" *
-# grep -R "333333333333333333333" *
-
 # export AUTH0_REDIRECT_URI=333333333333333333333
 
 BUILD_FOLDER='/usr/share/nginx/html'

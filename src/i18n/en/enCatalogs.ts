@@ -4,6 +4,7 @@
 
 const enCatalogs = {
   appLogins: 'Logins of usual (not admins) users',
+  delegations: 'Delegations',
   files: 'Files',
   languages: 'Languages',
   managerLogins: 'Manager logins',

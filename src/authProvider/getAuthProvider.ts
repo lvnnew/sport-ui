@@ -2,7 +2,6 @@ import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
 import getApollo from '../apollo/getApollo';
 import LRUCache from 'lru-cache';
-import {log} from '../utils/log';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
@@ -86,7 +85,6 @@ const getAuthProvider: (
   },
   getPermissions: async () => {
     if (!permissionsCache.has(cacheKey)) {
-      log.info('!!!!!!!!!!!!!!!!!!!!!! getPermissions');
       const client = getApollo(endpoint);
       const {data} = await client.query({
         query: PERMISSIONS_QUERY,

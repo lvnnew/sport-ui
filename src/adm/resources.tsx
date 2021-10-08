@@ -9,6 +9,11 @@ import AppLoginEdit from './pages/appLogins/AppLoginEdit';
 import AppLoginCreate from './pages/appLogins/AppLoginCreate';
 import AppLoginList from './pages/appLogins/AppLoginList';
 
+import DelegationShow from './pages/delegations/DelegationShow';
+import DelegationEdit from './pages/delegations/DelegationEdit';
+import DelegationCreate from './pages/delegations/DelegationCreate';
+import DelegationList from './pages/delegations/DelegationList';
+
 import FileShow from './pages/files/FileShow';
 import FileEdit from './pages/files/FileEdit';
 import FileCreate from './pages/files/FileCreate';
@@ -87,6 +92,15 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('appLogins.create') ? AppLoginCreate : undefined}
         list={permissions.includes('appLogins.all') ? AppLoginList : undefined}
         options={{label: 'Logins of usual (not admins) users'}}
+      />,
+      <Resource
+        key='delegations'
+        name='delegations'
+        show={permissions.includes('delegations.get') ? DelegationShow : undefined}
+        edit={permissions.includes('delegations.update') ? DelegationEdit : undefined}
+        create={permissions.includes('delegations.create') ? DelegationCreate : undefined}
+        list={permissions.includes('delegations.all') ? DelegationList : undefined}
+        options={{label: 'Delegations'}}
       />,
       <Resource
         key='files'
