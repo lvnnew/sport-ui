@@ -44,8 +44,6 @@ spec:
         env:
         - name: RANDOM
           value: {{ .Values.random | quote }}
-        - name: APP_NAME
-          value: agr-ui
         - name: ENV
           value: '{{ .Values.global.env }}'
         - name: ENDPOINT
