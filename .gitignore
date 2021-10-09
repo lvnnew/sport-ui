@@ -25,3 +25,10 @@ yarn-error.log*
 .eslintcache
 
 .idea
+
+.env
+*.env
+!default.env
+
+config
+!config/default.json
