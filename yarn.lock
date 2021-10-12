@@ -20,10 +20,10 @@
     tslib "^2.3.0"
     zen-observable-ts "~1.1.0"
 
-"@apollo/client@^3.4.15":
-  version "3.4.15"
-  resolved "https://registry.npmjs.com/@apollo/client/-/client-3.4.15.tgz#0aa05ff2bb54092919b501ef348ade6330911670"
-  integrity sha512-CnlT9i7TgHagkKQNvti81A9KcbIMqgpUPGJJL6bg5spTsB2R/5J6E7qiPcMvXuuXwR2xe4FmE4Ey4HizStb8Hg==
+"@apollo/client@^3.4.16":
+  version "3.4.16"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.4.16.tgz#67090d5655aa843fa64d26f1913315e384a5fa0f"
+  integrity sha512-iF4zEYwvebkri0BZQyv8zfavPfVEafsK0wkOofa6eC2yZu50J18uTutKtC174rjHZ2eyxZ8tV7NvAPKRT+OtZw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.0.0"
     "@wry/context" "^0.6.0"
@@ -1501,10 +1501,10 @@
     lodash "~4.17.0"
     tslib "~2.3.0"
 
-"@graphql-codegen/typescript-resolvers@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.npmjs.com/@graphql-codegen/typescript-resolvers/-/typescript-resolvers-2.2.1.tgz#2cf23b595ee94037a1152b669094db9bce616196"
-  integrity sha512-SlJEhlOeYFA+Qj5QJrVruNjmlFy1b8lc5u1NTd3mT+1Y2ZGXLftEfJeofag+9x5KB2I6RRjoAOc/gf0yUwxgxA==
+"@graphql-codegen/typescript-resolvers@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-resolvers/-/typescript-resolvers-2.3.0.tgz#76b4a1dd3fb353497320fd3b5e259f673bd211c4"
+  integrity sha512-EpekbMg/v9tB5VSAguztOIUIXnGRF+gijxI4mTb1F9IzbjiZm98FImypVMn61D0fDGSaaLK4hDbJ+BodMi7xVQ==
   dependencies:
     "@graphql-codegen/plugin-helpers" "^2.1.1"
     "@graphql-codegen/typescript" "^2.2.2"
@@ -3061,6 +3061,16 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
+"@typescript-eslint/parser@4.32.0":
+  version "4.32.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.32.0.tgz#751ecca0e2fecd3d44484a9b3049ffc1871616e5"
+  integrity sha512-lhtYqQ2iEPV5JqV7K+uOVlPePjClj4dOw7K4/Z1F2yvjIUvyr13yJnDzkK6uon4BjHYuHy3EG0c2Z9jEhFk56w==
+  dependencies:
+    "@typescript-eslint/scope-manager" "4.32.0"
+    "@typescript-eslint/types" "4.32.0"
+    "@typescript-eslint/typescript-estree" "4.32.0"
+    debug "^4.3.1"
+
 "@typescript-eslint/parser@^4.22.0", "@typescript-eslint/parser@^4.5.0":
   version "4.31.1"
   resolved "https://registry.npmjs.com/@typescript-eslint/parser/-/parser-4.31.1.tgz#8f9a2672033e6f6d33b1c0260eebdc0ddf539064"
@@ -3069,16 +3079,6 @@
     "@typescript-eslint/scope-manager" "4.31.1"
     "@typescript-eslint/types" "4.31.1"
     "@typescript-eslint/typescript-estree" "4.31.1"
-    debug "^4.3.1"
-
-"@typescript-eslint/parser@^4.32.0":
-  version "4.32.0"
-  resolved "https://registry.npmjs.com/@typescript-eslint/parser/-/parser-4.32.0.tgz#751ecca0e2fecd3d44484a9b3049ffc1871616e5"
-  integrity sha512-lhtYqQ2iEPV5JqV7K+uOVlPePjClj4dOw7K4/Z1F2yvjIUvyr13yJnDzkK6uon4BjHYuHy3EG0c2Z9jEhFk56w==
-  dependencies:
-    "@typescript-eslint/scope-manager" "4.32.0"
-    "@typescript-eslint/types" "4.32.0"
-    "@typescript-eslint/typescript-estree" "4.32.0"
     debug "^4.3.1"
 
 "@typescript-eslint/scope-manager@4.31.1":
@@ -6397,10 +6397,10 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-canonical@^27.0.1:
-  version "27.0.1"
-  resolved "https://registry.npmjs.com/eslint-config-canonical/-/eslint-config-canonical-27.0.1.tgz#288c1b2115ce142ab7aa8f837731d3eaed41045c"
-  integrity sha512-+TlvXWB0u6GykmJieGLVlW+M52I0hGa8pzuacNBXu7UBrz/oMVRkOaZd9DbnT4IFWdNIYJ/6sYj8mcBPUGDWXw==
+eslint-config-canonical@^28.0.0:
+  version "28.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-canonical/-/eslint-config-canonical-28.0.0.tgz#52b03a403aafb6a7738b8ace83817d8c37c3a807"
+  integrity sha512-hAKU73KWuLdSzk+3MZbq/zgFIkzcNoAA70+PZ/kZqfXjUxTDBwWDy4yBJfz2h1CIg2fniI/tZSWzVTm9k+wNxw==
   dependencies:
     "@babel/eslint-parser" "^7.13.14"
     "@typescript-eslint/eslint-plugin" "^4.22.0"
@@ -6661,10 +6661,10 @@ eslint-plugin-react@^7.21.5, eslint-plugin-react@^7.23.2:
     resolve "^2.0.0-next.3"
     string.prototype.matchall "^4.0.5"
 
-eslint-plugin-react@^7.26.0:
-  version "7.26.0"
-  resolved "https://registry.npmjs.com/eslint-plugin-react/-/eslint-plugin-react-7.26.0.tgz#3ae019a35d542b98e5af9e2f96b89c232c74b55b"
-  integrity sha512-dceliS5itjk4EZdQYtLMz6GulcsasguIs+VTXuiC7Q5IPIdGTkyfXVdmsQOqEhlD9MciofH4cMcT1bw1WWNxCQ==
+eslint-plugin-react@^7.26.1:
+  version "7.26.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.26.1.tgz#41bcfe3e39e6a5ac040971c1af94437c80daa40e"
+  integrity sha512-Lug0+NOFXeOE+ORZ5pbsh6mSKjBKXDXItUD2sQoT+5Yl0eoT82DqnXeTMfUare4QVCn9QwXbfzO/dBLjLXwVjQ==
   dependencies:
     array-includes "^3.1.3"
     array.prototype.flatmap "^1.2.4"
@@ -6794,7 +6794,7 @@ eslint-webpack-plugin@^2.5.2:
     normalize-path "^3.0.0"
     schema-utils "^3.0.0"
 
-eslint@^7.11.0, eslint@^7.32.0:
+eslint@7.32.0, eslint@^7.11.0:
   version "7.32.0"
   resolved "https://registry.npmjs.com/eslint/-/eslint-7.32.0.tgz#c6d328a14be3fb08c8d1d21e12c02fdb7a2a812d"
   integrity sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==
@@ -7746,10 +7746,10 @@ graphql@^15.3.0:
   resolved "https://registry.npmjs.com/graphql/-/graphql-15.5.3.tgz#c72349017d5c9f5446a897fe6908b3186db1da00"
   integrity sha512-sM+jXaO5KinTui6lbK/7b7H/Knj9BpjGxZ+Ki35v7YbUJxxdBCUqNM0h3CRVU1ZF9t5lNiBzvBCSYPvIwxPOQA==
 
-graphql@^15.6.0:
-  version "15.6.0"
-  resolved "https://registry.npmjs.com/graphql/-/graphql-15.6.0.tgz#e69323c6a9780a1a4b9ddf7e35ca8904bb04df02"
-  integrity sha512-WJR872Zlc9hckiEPhXgyUftXH48jp2EjO5tgBBOyNMRJZ9fviL2mJBD6CAysk6N5S0r9BTs09Qk39nnJBkvOXQ==
+graphql@^15.6.1:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.6.1.tgz#9125bdf057553525da251e19e96dab3d3855ddfc"
+  integrity sha512-3i5lu0z6dRvJ48QP9kFxBkJ7h4Kso7PS8eahyTFz5Jm6CvQfLtNIE8LX9N6JLnXTuwR+sIYnXzaWp6anOg0QQw==
 
 growly@^1.3.0:
   version "1.3.0"
@@ -12278,10 +12278,10 @@ quill@~1.3.6:
     parchment "^1.1.4"
     quill-delta "^3.6.2"
 
-ra-core@^3.18.2:
-  version "3.18.2"
-  resolved "https://registry.npmjs.com/ra-core/-/ra-core-3.18.2.tgz#bdc15248d29ebaac579b0e2729c83c330c272602"
-  integrity sha512-vSjtYAoyNSTpziUSIGi4+4TZnmZzUJgYLte/rTLCSHLyYuoTpkxKXMIEtvQvC/euCvXf1lkz2ebSegJNVL67Lg==
+ra-core@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.18.3.tgz#9a581de5d564895f06718d4d94f3a6a216c58abb"
+  integrity sha512-DRIsbf1G7Zvvzs55TiMJvZ56psDk5Syj/PxPBhmMmhVoSavZ/i23J+ObKrGUKWNk4cwNg3IZR8IxZCGyMEe1Qg==
   dependencies:
     classnames "~2.2.5"
     date-fns "^1.29.0"
@@ -12292,21 +12292,21 @@ ra-core@^3.18.2:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-graphql-simple@^3.13.2:
-  version "3.13.2"
-  resolved "https://registry.npmjs.com/ra-data-graphql-simple/-/ra-data-graphql-simple-3.13.2.tgz#3b4150e8c605d3d19b9d57e115fca9f6ee6bdd58"
-  integrity sha512-oKVffDqTdgt6vIwAHRCC04ODx2C+PIpxyCEeMdVOFGUFEDFLd9Mfiis+6Z2ivHWOMO7JlVi3KwXvVuH1QxZ8vg==
+ra-data-graphql-simple@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-data-graphql-simple/-/ra-data-graphql-simple-3.18.3.tgz#acdc36ae3b3526b3bf353574790e4e6d0333fca2"
+  integrity sha512-fN9hJfEFurbGJ64XiNwY7Y6yq1ZivInHg7LIqfpORo/a7A+2eR7EzNs07anwAHcvhragrhA34Jo4eLRCUIoyaA==
   dependencies:
     graphql-ast-types-browser "~1.0.2"
     graphql-tag "^2.10.1"
     lodash "~4.17.5"
     pluralize "~7.0.0"
-    ra-data-graphql "^3.11.4"
+    ra-data-graphql "^3.18.3"
 
-ra-data-graphql@^3.11.4:
-  version "3.11.4"
-  resolved "https://registry.npmjs.com/ra-data-graphql/-/ra-data-graphql-3.11.4.tgz#d4ab31fffd0e7494960fa6e5777865a4b782f34b"
-  integrity sha512-AZVQLscTQ99a6eLkALWiUFQR4l23unos4PjLwZRG8vqEN9DnwAdkZyvei7DOr/Nd0Tq90eaJm7Xi3+q9H3jtcw==
+ra-data-graphql@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-data-graphql/-/ra-data-graphql-3.18.3.tgz#2ba3496fc8f82ea3bae2710d59d278b7ade7936c"
+  integrity sha512-rSkl9q0nHeVrwERO4LlnZ02z82ymJmkkLfXcltTaDQS/g7ACEHf2quLTAyJonwoT6eIuxm0oy/own6n3APvV+w==
   dependencies:
     apollo-client "^2.6.3"
     apollo-client-preset "^1.0.8"
@@ -12314,35 +12314,35 @@ ra-data-graphql@^3.11.4:
     lodash "~4.17.5"
     pluralize "~7.0.0"
 
-ra-i18n-polyglot@^3.18.2:
-  version "3.18.2"
-  resolved "https://registry.npmjs.com/ra-i18n-polyglot/-/ra-i18n-polyglot-3.18.2.tgz#5533d033728b6865c5819b3ebf44d238ce96fc52"
-  integrity sha512-xMxSEY6O81Pi1WbRlY0clBoPIqaBk4wYoJUajEkDATQe9/eazbP61tsHQgoHIR8B4bdbysHyyPO/bX51L9IUJw==
+ra-i18n-polyglot@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-3.18.3.tgz#b4d9ba02fc0bc8b707b942f1acf6761ae10f8449"
+  integrity sha512-nUMtFguhMzy6iYw1MlKcVYkTFHces/tEhEgOi6SAGsBgcQ652g7G0UDVdJh6kWDYUiu4UvoREfmZhIorihuoDA==
   dependencies:
     node-polyglot "^2.2.2"
-    ra-core "^3.18.2"
+    ra-core "^3.18.3"
 
-ra-input-rich-text@^3.18.2:
-  version "3.18.2"
-  resolved "https://registry.npmjs.com/ra-input-rich-text/-/ra-input-rich-text-3.18.2.tgz#ef55f760e324bc812be82e9d35640d5834c669de"
-  integrity sha512-rJtzIPFJAxbdeI+85PxcHe6ZUQklFodyGUgfcbcHnADLHyL657Xc+fLTrKBmRv4Fryku4IvyntyhwtIwDWbgpg==
+ra-input-rich-text@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-input-rich-text/-/ra-input-rich-text-3.18.3.tgz#54c639239deab151ed338ea06c4fe3fb9ca831a5"
+  integrity sha512-1bguX10cOKDRbxDNnXsWrXeWgUycWRegE0co+yDS59V0kyed6LB3uhDBMT8+ntt/QUvZp4SzzcS8Bj8GMV+CEQ==
   dependencies:
     "@types/quill" "~1.3.0"
     lodash "~4.17.5"
     prop-types "^15.6.0"
     quill "~1.3.6"
 
-ra-language-english@^3.18.2:
-  version "3.18.2"
-  resolved "https://registry.npmjs.com/ra-language-english/-/ra-language-english-3.18.2.tgz#5aaaff7556da4de7950bfc0e0fd2549b8b13a787"
-  integrity sha512-IKMbDqPOyMSzNFVQaFpW+8/moqAbsTAOgkC3Jl1/Mi26fFxgvFudlmskSWSsyzCOByj+vp53wrzMxdq11dkdQQ==
+ra-language-english@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-3.18.3.tgz#83dfb204abc32c4cf9ff80406f22045616838c0e"
+  integrity sha512-w3020CLLmiammZOSKI4CsIWyD9ZFs/oNFWKSnPzvN6EqQI2dtSxxiycKjaxnwjKN7jmzNWe/5uzna0FIND4wgA==
   dependencies:
-    ra-core "^3.18.2"
+    ra-core "^3.18.3"
 
-ra-ui-materialui@^3.18.2:
-  version "3.18.2"
-  resolved "https://registry.npmjs.com/ra-ui-materialui/-/ra-ui-materialui-3.18.2.tgz#e00ee69acfb2d70fc3543aca07c421c0be026bde"
-  integrity sha512-UjUjbP1iHxX/sq55Mb3eMuKPCNHNDgvxLa4lYeDiB4TPldltJYTRIQJc/nl+U8lyW3jc2KMGVsw52jjItR93ig==
+ra-ui-materialui@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-3.18.3.tgz#36b03c25710c5a3bffe49d0199330206119f959d"
+  integrity sha512-rzeK0hm/CmL6EvNRDfk9PKcf1l/T25J/vCLALDvUhzDDa4QeMJ/tTC4CeHCmBS2dKhbV7tq3uz67fuoOHNZEDQ==
   dependencies:
     autosuggest-highlight "^3.1.1"
     classnames "~2.2.5"
@@ -12409,10 +12409,10 @@ rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-admin@^3.18.2:
-  version "3.18.2"
-  resolved "https://registry.npmjs.com/react-admin/-/react-admin-3.18.2.tgz#cb48884d111997131df1c442bd1b2e5a81a8ad93"
-  integrity sha512-a+EBWJLRA19qpwkTiXbhv5ilvCHKecV5LDpoNEtcInFDMuwxK4nXLnL+sfyVW/mLyaHSPh6F/nz/ElJYeI6JVg==
+react-admin@^3.18.3:
+  version "3.18.3"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-3.18.3.tgz#814d5aea60eafa27d6e1874cb8117daa7518cc98"
+  integrity sha512-Oml8q6hQboa026zY4k9T5UDWDWK6YA3ltxMPLuh1oRYmCYy+oAcUFGcoGu2nzkzVh/fUoz0HSZV75eWW5Foi+g==
   dependencies:
     "@material-ui/core" "^4.11.2"
     "@material-ui/icons" "^4.11.2"
@@ -12420,10 +12420,10 @@ react-admin@^3.18.2:
     connected-react-router "^6.5.2"
     final-form "^4.20.2"
     final-form-arrays "^3.0.2"
-    ra-core "^3.18.2"
-    ra-i18n-polyglot "^3.18.2"
-    ra-language-english "^3.18.2"
-    ra-ui-materialui "^3.18.2"
+    ra-core "^3.18.3"
+    ra-i18n-polyglot "^3.18.3"
+    ra-language-english "^3.18.3"
+    ra-ui-materialui "^3.18.3"
     react-final-form "^6.5.2"
     react-final-form-arrays "^3.1.3"
     react-redux "^7.1.0"
