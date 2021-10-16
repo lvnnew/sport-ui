@@ -91,6 +91,7 @@ deploy-prod:
     - .deploy-ui
   stage: deploy-stage
   variables:
+    ENV: "stage"
     DEV: "true"
     HOST: "making.ventures"
     TAG: ":latest"
@@ -105,6 +106,7 @@ deploy-prod:
   stage: deploy-prod
   when: manual
   variables:
+    ENV: "prod"
     DEV: "false"
     HOST: "making.ventures"
     TAG: ":release"
