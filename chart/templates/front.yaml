@@ -17,7 +17,7 @@ kind: Deployment
 metadata:
   name: agr-ui
 spec:
-  replicas: {{ .Values.app.replicas }}
+  replicas: {{ $.Values.app.replicas }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -36,18 +36,18 @@ spec:
     {{- end }}
       containers:
       - name: agr-ui
-        image: {{ .Values.dockerRegistry }}/agr-ui{{ .Values.app.tag }}
+        image: {{ $.Values.dockerRegistry }}/agr-ui{{ $.Values.app.tag }}
         ports:
         - name: main-port
           containerPort: 80
         imagePullPolicy: Always
         env:
         - name: RANDOM
-          value: {{ .Values.random | quote }}
+          value: {{ $.Values.random | quote }}
         - name: ENV
-          value: '{{ .Values.global.env }}'
+          value: '{{ $.Values.global.env }}'
         - name: ENDPOINT
-          value: 'https://{{ .Values.ingress.domains.endpoint }}.{{ .Values.global.env }}.apps.{{ .Values.global.clusterName }}.{{ .Values.ingress.host }}/adm'
+          value: 'https://{{ $.Values.ingress.domains.endpoint }}.{{ $.Values.global.env }}.apps.{{ $.Values.global.clusterName }}.{{ $.Values.ingress.host }}/adm'
 
         livenessProbe:
           httpGet:
