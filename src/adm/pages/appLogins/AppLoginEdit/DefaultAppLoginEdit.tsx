@@ -6,7 +6,7 @@ import {
   EditProps,
   TextInput,
   ReferenceInput,
-  SelectInput,
+  AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 
@@ -27,7 +27,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput source='userId' reference='users'>
-              <SelectInput fullWidth optionText='id' />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
         </FormGrid>

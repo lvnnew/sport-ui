@@ -5,22 +5,20 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-import AppLoginsUserIdTab from './tabs/AppLoginsUserIdTab';
-import AuditLogsUserIdTab from './tabs/AuditLogsUserIdTab';
+
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultUserShow: FC<ShowProps> = (props: ShowProps) => (
+const DefaultAuditLogShow: FC<ShowProps> = (props: ShowProps) => (
   <Show {...props}>
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <AppLoginsUserIdTab label='Logins of usual (not admins) users' path='appLogins-userId' />
-      <AuditLogsUserIdTab label='Audit' path='auditLogs-userId' />
+
     </TabbedShowLayout>
   </Show>
 );
 
-export default DefaultUserShow;
+export default DefaultAuditLogShow;

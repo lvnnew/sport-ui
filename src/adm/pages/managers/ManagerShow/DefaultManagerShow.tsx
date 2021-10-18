@@ -5,6 +5,7 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
+import AuditLogsManagerIdTab from './tabs/AuditLogsManagerIdTab';
 import DelegationsFromIdTab from './tabs/DelegationsFromIdTab';
 import DelegationsToIdTab from './tabs/DelegationsToIdTab';
 import ManagerLoginsManagerIdTab from './tabs/ManagerLoginsManagerIdTab';
@@ -20,6 +21,7 @@ const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+      <AuditLogsManagerIdTab label='Audit' path='auditLogs-managerId' />
       <DelegationsFromIdTab label='Delegations' path='delegations-fromId' />
       <DelegationsToIdTab label='Delegations' path='delegations-toId' />
       <ManagerLoginsManagerIdTab label='Manager logins' path='managerLogins-managerId' />

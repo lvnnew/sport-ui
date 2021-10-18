@@ -3,7 +3,7 @@ import {
   Filter,
   TextInput,
   ReferenceInput,
-  SelectInput,
+  AutocompleteInput,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -14,7 +14,7 @@ const DefaultAppLoginFilter: FC<any> = (props) => (
     <TextInput fullWidth source='login' />
     <TextInput fullWidth source='passwordHash' />
     <ReferenceInput source='userId' reference='users'>
-      <SelectInput fullWidth optionText='id' />
+      <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
   </Filter>
 );

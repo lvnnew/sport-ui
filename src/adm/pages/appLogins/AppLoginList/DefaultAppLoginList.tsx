@@ -19,7 +19,7 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => (
       <TextField source='login' />
       <TextField source='passwordHash' />
       <ReferenceField source='userId' reference='users' link='show'>
-        <NumberField source='id' />
+        <TextField source='title' />
       </ReferenceField>
     </Datagrid>
   </List>

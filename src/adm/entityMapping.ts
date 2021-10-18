@@ -2,6 +2,7 @@
 
 export const mapping = {
   appLogins: 'AppLogin',
+  auditLogs: 'AuditLog',
   delegations: 'Delegation',
   files: 'File',
   languages: 'Language',

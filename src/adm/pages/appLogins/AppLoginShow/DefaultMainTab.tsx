@@ -18,7 +18,7 @@ const MainTab: FC<Omit<TabProps, 'children'>> = (props) => (
       <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='login' /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='passwordHash' /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='userId' reference='users' link='show'>
-        <NumberField source='id' />
+        <TextField source='title' />
       </ReferenceField></FormGrid>
     </FormGrid>
   </Tab>

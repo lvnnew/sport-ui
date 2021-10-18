@@ -27,7 +27,7 @@ const AppLoginsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
         <TextField source='login' />
         <TextField source='passwordHash' />
         <ReferenceField source='userId' reference='users' link='show'>
-          <NumberField source='id' />
+          <TextField source='title' />
         </ReferenceField>
         <ShowButton />
       </Datagrid>

@@ -14,25 +14,25 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  User,
-  QueryAllUsersArgs,
+  AuditLog,
+  QueryAllAuditLogsArgs,
 } from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListUsersWidgetProps extends
-Omit<ListWigetProps<User>, 'request' | 'resultToValue'| 'children'>,
-QueryAllUsersArgs {
-  children?: FC<User>,
+interface ListAuditLogsWidgetProps extends
+Omit<ListWigetProps<AuditLog>, 'request' | 'resultToValue'| 'children'>,
+QueryAllAuditLogsArgs {
+  children?: FC<AuditLog>,
 }
 
-export const ListUsersItem: FC<User> = (props) => {
+export const ListAuditLogsItem: FC<AuditLog> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/users/${props.id}/show`}
+      to={`/auditLogs/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -41,16 +41,37 @@ export const ListUsersItem: FC<User> = (props) => {
               {`Id: ${props.id}`}
             </div>
             <div>
+              {`Date: ${props.date}`}
+            </div>
+            <div>
               {`Title: ${props.title}`}
             </div>
             <div>
-              {`Lastname: ${props.lastname}`}
+              {`Entity type: ${props.entityType}`}
             </div>
             <div>
-              {`Firstname: ${props.firstname}`}
+              {`Entity id: ${props.entityId}`}
             </div>
             <div>
-              {`Email: ${props.email}`}
+              {`Action: ${props.action}`}
+            </div>
+            <div>
+              {`Manager id: ${props.managerId}`}
+            </div>
+            <div>
+              {`User id: ${props.userId}`}
+            </div>
+            <div>
+              {`Foreign: ${props.foreign}`}
+            </div>
+            <div>
+              {`Foreign entity type: ${props.foreignEntityType}`}
+            </div>
+            <div>
+              {`Foreign entity id: ${props.foreignEntityId}`}
+            </div>
+            <div>
+              {`Action data: ${props.actionData}`}
             </div>
           </>
         }
@@ -59,17 +80,17 @@ export const ListUsersItem: FC<User> = (props) => {
   );
 };
 
-const ListUsersWidget: FC<ListUsersWidgetProps> = ({
+const ListAuditLogsWidget: FC<ListAuditLogsWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListUsersItem,
+  children = ListAuditLogsItem,
   ...rest
 }) => {
   return (
-    <ListWiget<User>
+    <ListWiget<AuditLog>
       {...rest}
       options={{
         variables: {
@@ -86,9 +107,9 @@ const ListUsersWidget: FC<ListUsersWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: UserFilter,
+          $filter: AuditLogFilter,
         ) {
-          allUsers(
+          allAuditLogs(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -96,18 +117,25 @@ const ListUsersWidget: FC<ListUsersWidgetProps> = ({
             filter: $filter
           ) {
             id
+            date
             title
-            lastname
-            firstname
-            email
+            entityType
+            entityId
+            action
+            managerId
+            userId
+            foreign
+            foreignEntityType
+            foreignEntityId
+            actionData
           }
         }
       `}
-      resultToValue={result => result?.allUsers}
+      resultToValue={result => result?.allAuditLogs}
     >
       {(record) => children(record)}
     </ListWiget>
   );
 };
 
-export default ListUsersWidget;
+export default ListAuditLogsWidget;

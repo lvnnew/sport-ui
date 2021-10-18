@@ -22,6 +22,22 @@ const LoadableAppLoginList = Loadable({
   loader: () => import('./pages/appLogins/AppLoginList'),
   loading: () => null,
 });
+const LoadableAuditLogShow = Loadable({
+  loader: () => import('./pages/auditLogs/AuditLogShow'),
+  loading: () => null,
+});
+const LoadableAuditLogEdit = Loadable({
+  loader: () => import('./pages/auditLogs/AuditLogEdit'),
+  loading: () => null,
+});
+const LoadableAuditLogCreate = Loadable({
+  loader: () => import('./pages/auditLogs/AuditLogCreate'),
+  loading: () => null,
+});
+const LoadableAuditLogList = Loadable({
+  loader: () => import('./pages/auditLogs/AuditLogList'),
+  loading: () => null,
+});
 const LoadableDelegationShow = Loadable({
   loader: () => import('./pages/delegations/DelegationShow'),
   loading: () => null,
@@ -257,6 +273,15 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={permissions.includes('appLogins.all') ? LoadableAppLoginList : undefined}
         options={{label: 'Logins of usual (not admins) users'}}
+      />,
+      <Resource
+        key='auditLogs'
+        name='auditLogs'
+        show={permissions.includes('auditLogs.get') ? LoadableAuditLogShow : undefined}
+        edit={permissions.includes('auditLogs.update') ? LoadableAuditLogEdit : undefined}
+        create={permissions.includes('auditLogs.create') ? LoadableAuditLogCreate : undefined}
+        list={permissions.includes('auditLogs.all') ? LoadableAuditLogList : undefined}
+        options={{label: 'Audit'}}
       />,
       <Resource
         key='delegations'

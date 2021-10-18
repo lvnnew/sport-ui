@@ -15,6 +15,7 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => (
   <List title={'Users'} exporter={false} filters={<UserFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
+      <TextField source='title' />
       <TextField source='lastname' />
       <TextField source='firstname' />
       <TextField source='email' />
