@@ -12,6 +12,7 @@ const enCatalogs = {
   managers: 'Manager',
   managersToPermissions: 'Managers To Permissions',
   managersToRoles: 'Managers To Roles',
+  messageTemplates: 'Message templates',
   permissions: 'Permissions',
   roles: 'Roles',
   rolesToPermissions: 'Roles To Permissions',

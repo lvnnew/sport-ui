@@ -10,6 +10,7 @@ export const mapping = {
   managers: 'Manager',
   managersToPermissions: 'ManagersToPermission',
   managersToRoles: 'ManagersToRole',
+  messageTemplates: 'MessageTemplate',
   permissions: 'Permission',
   roles: 'Role',
   rolesToPermissions: 'RolesToPermission',

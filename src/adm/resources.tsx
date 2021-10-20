@@ -150,6 +150,22 @@ const LoadableManagersToRoleList = Loadable({
   loader: () => import('./pages/managersToRoles/ManagersToRoleList'),
   loading: () => null,
 });
+const LoadableMessageTemplateShow = Loadable({
+  loader: () => import('./pages/messageTemplates/MessageTemplateShow'),
+  loading: () => null,
+});
+const LoadableMessageTemplateEdit = Loadable({
+  loader: () => import('./pages/messageTemplates/MessageTemplateEdit'),
+  loading: () => null,
+});
+const LoadableMessageTemplateCreate = Loadable({
+  loader: () => import('./pages/messageTemplates/MessageTemplateCreate'),
+  loading: () => null,
+});
+const LoadableMessageTemplateList = Loadable({
+  loader: () => import('./pages/messageTemplates/MessageTemplateList'),
+  loading: () => null,
+});
 const LoadablePermissionShow = Loadable({
   loader: () => import('./pages/permissions/PermissionShow'),
   loading: () => null,
@@ -345,6 +361,15 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('managersToRoles.create') ? LoadableManagersToRoleCreate : undefined}
         list={permissions.includes('managersToRoles.all') ? LoadableManagersToRoleList : undefined}
         options={{label: 'Managers To Roles'}}
+      />,
+      <Resource
+        key='messageTemplates'
+        name='messageTemplates'
+        show={permissions.includes('messageTemplates.get') ? LoadableMessageTemplateShow : undefined}
+        edit={permissions.includes('messageTemplates.update') ? LoadableMessageTemplateEdit : undefined}
+        create={permissions.includes('messageTemplates.create') ? LoadableMessageTemplateCreate : undefined}
+        list={permissions.includes('messageTemplates.all') ? LoadableMessageTemplateList : undefined}
+        options={{label: 'Message templates'}}
       />,
       <Resource
         key='permissions'
