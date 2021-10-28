@@ -30,5 +30,5 @@ yarn-error.log*
 *.env
 !default.env
 
-config
+config/*
 !config/default.json
