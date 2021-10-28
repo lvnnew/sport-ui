@@ -15,5 +15,6 @@ If both files exists they will be merged. `${ENV}.json` takes precedence.
 
 ## Configuration variables
 
-| Key in file | Environment | Description |
-| ----------- | ----------- | ----------- |
+| Key in file               | Environment                | Description                                |
+| ------------------------- | -------------------------- | ------------------------------------------ |
+| admin.recaptcha.publicKey | ADMIN_RECAPTCHA_PUBLIC_KEY | Публичный токен рекапчи приложения админки |

@@ -95,6 +95,7 @@ deploy-prod:
     HOST: "making.ventures"
     TAG: ":latest"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
+    ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
   only:
     - master
 
@@ -110,6 +111,7 @@ deploy-prod:
     HOST: "making.ventures"
     TAG: ":release"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
+    ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
   only:
     - release
     - /^release-.*$/
@@ -142,4 +144,5 @@ deploy-prod:
       --set "ingress.host=${HOST}"
       --set "style=${STYLE}"
       --set "ingress.rootEnabled=${ROOT_ENABLED}"
+      --set "admin.recaptcha.publicKey=${ADMIN_RECAPTCHA_PUBLIC_KEY}"
       --namespace ${NAMESPACE}
