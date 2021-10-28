@@ -25,13 +25,13 @@ spec:
   selector:
     matchLabels:
       app: agr-ui
-      clusterName: {{ $.Values.global.clusterName }}
-      env: {{ $.Values.global.env }}
-      deployKind: {{ $.Values.global.deployKind }}
   template:
     metadata:
       labels:
         app: agr-ui
+        clusterName: {{ $.Values.global.clusterName }}
+        env: {{ $.Values.global.env }}
+        deployKind: {{ $.Values.global.deployKind }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
