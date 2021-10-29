@@ -6,6 +6,10 @@ metadata:
   name: agr-ui
   labels:
     app: agr-ui
+    projectName: {{ $.Values.global.projectName }}
+    clusterName: {{ $.Values.global.clusterName }}
+    env: {{ $.Values.global.env }}
+    deployKind: {{ $.Values.global.deployKind }}
 spec:
   ports:
   - port: 80
@@ -29,6 +33,7 @@ spec:
     metadata:
       labels:
         app: agr-ui
+        projectName: {{ $.Values.global.projectName }}
         clusterName: {{ $.Values.global.clusterName }}
         env: {{ $.Values.global.env }}
         deployKind: {{ $.Values.global.deployKind }}
