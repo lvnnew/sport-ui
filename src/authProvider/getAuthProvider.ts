@@ -91,7 +91,9 @@ const getAuthProvider: (
         fetchPolicy: 'cache-first',
       });
 
-      permissionsCache.set(cacheKey, data.getPermissions);
+      if (data.getPermissions) {
+        permissionsCache.set(cacheKey, data.getPermissions);
+      }
     }
 
     return permissionsCache.get(cacheKey);

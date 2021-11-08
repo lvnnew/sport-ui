@@ -22,7 +22,6 @@ import enMessages from './i18n/en';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
 import log from 'loglevel';
-import LoadingPage from './shared/LoadingPage';
 import {
   createBrowserHistory as createHistory,
 } from 'history';
@@ -36,6 +35,7 @@ import {DebugProvider} from './contexts/DebugContext';
 import getAuthProvider from './authProvider/getAuthProvider';
 import './utils/polyfills/BigInt';
 import getApollo from './apollo/getApollo';
+import Loader from './shared/Loader';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -74,9 +74,7 @@ const App = () => {
 
   if (!dataProvider || !client || !authProvider) {
     return (
-      <div className='loader-container'>
-        <div className='loader'>Loading...</div>
-      </div>
+      <Loader />
     );
   }
 
@@ -91,7 +89,7 @@ const App = () => {
           history={history}
           i18nProvider={i18nProvider}
           layout={Layout}
-          loading={LoadingPage}
+          loading={Loader}
           loginPage={Login}
           authProvider={authProvider}
           title=''

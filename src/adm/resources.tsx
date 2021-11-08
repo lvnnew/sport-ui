@@ -4,279 +4,280 @@ import {
   Resource,
 } from 'react-admin';
 
+import Loader from '../shared/Loader';
 import Loadable from 'react-loadable';
 
 const LoadableAppLoginShow = Loadable({
   loader: () => import('./pages/appLogins/AppLoginShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAppLoginEdit = Loadable({
   loader: () => import('./pages/appLogins/AppLoginEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAppLoginCreate = Loadable({
   loader: () => import('./pages/appLogins/AppLoginCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAppLoginList = Loadable({
   loader: () => import('./pages/appLogins/AppLoginList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAuditLogShow = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAuditLogEdit = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAuditLogCreate = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableAuditLogList = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableDelegationShow = Loadable({
   loader: () => import('./pages/delegations/DelegationShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableDelegationEdit = Loadable({
   loader: () => import('./pages/delegations/DelegationEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableDelegationCreate = Loadable({
   loader: () => import('./pages/delegations/DelegationCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableDelegationList = Loadable({
   loader: () => import('./pages/delegations/DelegationList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableFileShow = Loadable({
   loader: () => import('./pages/files/FileShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableFileEdit = Loadable({
   loader: () => import('./pages/files/FileEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableFileCreate = Loadable({
   loader: () => import('./pages/files/FileCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableFileList = Loadable({
   loader: () => import('./pages/files/FileList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableLanguageShow = Loadable({
   loader: () => import('./pages/languages/LanguageShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableLanguageEdit = Loadable({
   loader: () => import('./pages/languages/LanguageEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableLanguageCreate = Loadable({
   loader: () => import('./pages/languages/LanguageCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableLanguageList = Loadable({
   loader: () => import('./pages/languages/LanguageList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerLoginShow = Loadable({
   loader: () => import('./pages/managerLogins/ManagerLoginShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerLoginEdit = Loadable({
   loader: () => import('./pages/managerLogins/ManagerLoginEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerLoginCreate = Loadable({
   loader: () => import('./pages/managerLogins/ManagerLoginCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerLoginList = Loadable({
   loader: () => import('./pages/managerLogins/ManagerLoginList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerShow = Loadable({
   loader: () => import('./pages/managers/ManagerShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerEdit = Loadable({
   loader: () => import('./pages/managers/ManagerEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerCreate = Loadable({
   loader: () => import('./pages/managers/ManagerCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagerList = Loadable({
   loader: () => import('./pages/managers/ManagerList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToPermissionShow = Loadable({
   loader: () => import('./pages/managersToPermissions/ManagersToPermissionShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToPermissionEdit = Loadable({
   loader: () => import('./pages/managersToPermissions/ManagersToPermissionEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToPermissionCreate = Loadable({
   loader: () => import('./pages/managersToPermissions/ManagersToPermissionCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToPermissionList = Loadable({
   loader: () => import('./pages/managersToPermissions/ManagersToPermissionList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToRoleShow = Loadable({
   loader: () => import('./pages/managersToRoles/ManagersToRoleShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToRoleEdit = Loadable({
   loader: () => import('./pages/managersToRoles/ManagersToRoleEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToRoleCreate = Loadable({
   loader: () => import('./pages/managersToRoles/ManagersToRoleCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableManagersToRoleList = Loadable({
   loader: () => import('./pages/managersToRoles/ManagersToRoleList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableMessageTemplateShow = Loadable({
   loader: () => import('./pages/messageTemplates/MessageTemplateShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableMessageTemplateEdit = Loadable({
   loader: () => import('./pages/messageTemplates/MessageTemplateEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableMessageTemplateCreate = Loadable({
   loader: () => import('./pages/messageTemplates/MessageTemplateCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableMessageTemplateList = Loadable({
   loader: () => import('./pages/messageTemplates/MessageTemplateList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadablePermissionShow = Loadable({
   loader: () => import('./pages/permissions/PermissionShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadablePermissionEdit = Loadable({
   loader: () => import('./pages/permissions/PermissionEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadablePermissionCreate = Loadable({
   loader: () => import('./pages/permissions/PermissionCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadablePermissionList = Loadable({
   loader: () => import('./pages/permissions/PermissionList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRoleShow = Loadable({
   loader: () => import('./pages/roles/RoleShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRoleEdit = Loadable({
   loader: () => import('./pages/roles/RoleEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRoleCreate = Loadable({
   loader: () => import('./pages/roles/RoleCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRoleList = Loadable({
   loader: () => import('./pages/roles/RoleList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRolesToPermissionShow = Loadable({
   loader: () => import('./pages/rolesToPermissions/RolesToPermissionShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRolesToPermissionEdit = Loadable({
   loader: () => import('./pages/rolesToPermissions/RolesToPermissionEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRolesToPermissionCreate = Loadable({
   loader: () => import('./pages/rolesToPermissions/RolesToPermissionCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableRolesToPermissionList = Loadable({
   loader: () => import('./pages/rolesToPermissions/RolesToPermissionList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableStatShow = Loadable({
   loader: () => import('./pages/stats/StatShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableStatEdit = Loadable({
   loader: () => import('./pages/stats/StatEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableStatCreate = Loadable({
   loader: () => import('./pages/stats/StatCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableStatList = Loadable({
   loader: () => import('./pages/stats/StatList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableTagShow = Loadable({
   loader: () => import('./pages/tags/TagShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableTagEdit = Loadable({
   loader: () => import('./pages/tags/TagEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableTagCreate = Loadable({
   loader: () => import('./pages/tags/TagCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableTagList = Loadable({
   loader: () => import('./pages/tags/TagList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUnitShow = Loadable({
   loader: () => import('./pages/units/UnitShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUnitEdit = Loadable({
   loader: () => import('./pages/units/UnitEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUnitCreate = Loadable({
   loader: () => import('./pages/units/UnitCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUnitList = Loadable({
   loader: () => import('./pages/units/UnitList'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUserShow = Loadable({
   loader: () => import('./pages/users/UserShow'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUserEdit = Loadable({
   loader: () => import('./pages/users/UserEdit'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUserCreate = Loadable({
   loader: () => import('./pages/users/UserCreate'),
-  loading: () => null,
+  loading: Loader,
 });
 const LoadableUserList = Loadable({
   loader: () => import('./pages/users/UserList'),
-  loading: () => null,
+  loading: Loader,
 });
 export const getResources = (permissions: string[]) => (
   permissions ?
