@@ -49,6 +49,28 @@ const ResourcesPage: FC = () => {
         <NumberWiget
           request={gql`
               query {
+                _allAutogenerationHistoryEntriesMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count}
+          title={'Autogeneration History'}
+          to='/autogenerationHistoryEntries' />
+        <NumberWiget
+          request={gql`
+              query {
+                _allAutogenerationRulesMeta {
+                  count
+                }
+              }
+            `}
+          resultToValue={result => result?._allAutogenerationRulesMeta?.count}
+          title={'Autogeneration Rules'}
+          to='/autogenerationRules' />
+        <NumberWiget
+          request={gql`
+              query {
                 _allDelegationsMeta {
                   count
                 }

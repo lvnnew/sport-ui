@@ -3,6 +3,8 @@
 export const mapping = {
   appLogins: 'AppLogin',
   auditLogs: 'AuditLog',
+  autogenerationHistoryEntries: 'AutogenerationHistoryEntry',
+  autogenerationRules: 'AutogenerationRule',
   delegations: 'Delegation',
   files: 'File',
   languages: 'Language',

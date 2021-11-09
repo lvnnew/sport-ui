@@ -85,6 +85,22 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
+            primaryText={'Autogeneration History'}
+            sidebarIsOpen={open}
+            to={'/autogenerationHistoryEntries'}
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText={'Autogeneration Rules'}
+            sidebarIsOpen={open}
+            to={'/autogenerationRules'}
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
             primaryText={'Delegations'}
             sidebarIsOpen={open}
             to={'/delegations'}

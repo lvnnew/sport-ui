@@ -44,6 +44,7 @@ interface IntrospectionResults {
 
 const numberIdResources: string[] = [
   'auditLogs',
+  'autogenerationHistoryEntries',
   'delegations',
   'files',
   'appLogins',

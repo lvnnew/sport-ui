@@ -5,6 +5,8 @@
 const enCatalogs = {
   appLogins: 'Logins of usual (not admins) users',
   auditLogs: 'Audit',
+  autogenerationHistoryEntries: 'Autogeneration History',
+  autogenerationRules: 'Autogeneration Rules',
   delegations: 'Delegations',
   files: 'Files',
   languages: 'Languages',

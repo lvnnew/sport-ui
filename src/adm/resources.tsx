@@ -39,6 +39,38 @@ const LoadableAuditLogList = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogList'),
   loading: Loader,
 });
+const LoadableAutogenerationHistoryEntryShow = Loadable({
+  loader: () => import('./pages/autogenerationHistoryEntries/AutogenerationHistoryEntryShow'),
+  loading: Loader,
+});
+const LoadableAutogenerationHistoryEntryEdit = Loadable({
+  loader: () => import('./pages/autogenerationHistoryEntries/AutogenerationHistoryEntryEdit'),
+  loading: Loader,
+});
+const LoadableAutogenerationHistoryEntryCreate = Loadable({
+  loader: () => import('./pages/autogenerationHistoryEntries/AutogenerationHistoryEntryCreate'),
+  loading: Loader,
+});
+const LoadableAutogenerationHistoryEntryList = Loadable({
+  loader: () => import('./pages/autogenerationHistoryEntries/AutogenerationHistoryEntryList'),
+  loading: Loader,
+});
+const LoadableAutogenerationRuleShow = Loadable({
+  loader: () => import('./pages/autogenerationRules/AutogenerationRuleShow'),
+  loading: Loader,
+});
+const LoadableAutogenerationRuleEdit = Loadable({
+  loader: () => import('./pages/autogenerationRules/AutogenerationRuleEdit'),
+  loading: Loader,
+});
+const LoadableAutogenerationRuleCreate = Loadable({
+  loader: () => import('./pages/autogenerationRules/AutogenerationRuleCreate'),
+  loading: Loader,
+});
+const LoadableAutogenerationRuleList = Loadable({
+  loader: () => import('./pages/autogenerationRules/AutogenerationRuleList'),
+  loading: Loader,
+});
 const LoadableDelegationShow = Loadable({
   loader: () => import('./pages/delegations/DelegationShow'),
   loading: Loader,
@@ -299,6 +331,24 @@ export const getResources = (permissions: string[]) => (
         create={permissions.includes('auditLogs.create') ? LoadableAuditLogCreate : undefined}
         list={permissions.includes('auditLogs.all') ? LoadableAuditLogList : undefined}
         options={{label: 'Audit'}}
+      />,
+      <Resource
+        key='autogenerationHistoryEntries'
+        name='autogenerationHistoryEntries'
+        show={permissions.includes('autogenerationHistoryEntries.get') ? LoadableAutogenerationHistoryEntryShow : undefined}
+        edit={permissions.includes('autogenerationHistoryEntries.update') ? LoadableAutogenerationHistoryEntryEdit : undefined}
+        create={permissions.includes('autogenerationHistoryEntries.create') ? LoadableAutogenerationHistoryEntryCreate : undefined}
+        list={permissions.includes('autogenerationHistoryEntries.all') ? LoadableAutogenerationHistoryEntryList : undefined}
+        options={{label: 'Autogeneration History'}}
+      />,
+      <Resource
+        key='autogenerationRules'
+        name='autogenerationRules'
+        show={permissions.includes('autogenerationRules.get') ? LoadableAutogenerationRuleShow : undefined}
+        edit={permissions.includes('autogenerationRules.update') ? LoadableAutogenerationRuleEdit : undefined}
+        create={permissions.includes('autogenerationRules.create') ? LoadableAutogenerationRuleCreate : undefined}
+        list={permissions.includes('autogenerationRules.all') ? LoadableAutogenerationRuleList : undefined}
+        options={{label: 'Autogeneration Rules'}}
       />,
       <Resource
         key='delegations'
