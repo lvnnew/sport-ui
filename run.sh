@@ -12,13 +12,6 @@ BUILD_FOLDER='/usr/share/nginx/html'
 
 echo $ENDPOINT
 
-find $BUILD_FOLDER -type f -exec sed -i "s/{AUTH0_CLIENT_ID}/$AUTH0_CLIENT_ID/g" {} +
-find $BUILD_FOLDER -type f -exec sed -i "s/{AUTH0_DOMAIN}/$AUTH0_DOMAIN/g" {} +
-find $BUILD_FOLDER -type f -exec sed -i "s@{AUTH0_REDIRECT_URI}@$AUTH0_REDIRECT_URI@g" {} +
-find $BUILD_FOLDER -type f -exec sed -i "s@{ENDPOINT}@$ENDPOINT@g" {} +
-
-find $BUILD_FOLDER -type f -exec sed -i "s/{DC_TOKEN}/$DC_TOKEN/g" {} +
-
 ls $BUILD_FOLDER
 
 cp $BUILD_FOLDER/config.json $BUILD_FOLDER/config.json.backup
