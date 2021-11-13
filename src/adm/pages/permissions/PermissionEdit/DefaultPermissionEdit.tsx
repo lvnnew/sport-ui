@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Edit,
@@ -19,7 +19,12 @@ const DefaultPermissionEdit: FC<EditProps> = (props: EditProps) => {
   const validate = useMemo(() => makeValidate(getPermissionValudation(t)), [t]);
 
   return (
-    <Edit {...props}>
+    <Edit
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{}}
         validate={validate}

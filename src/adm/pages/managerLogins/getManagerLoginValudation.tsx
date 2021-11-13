@@ -5,9 +5,6 @@ import {Translate} from 'react-admin';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const getManagerLoginValudation: GetValidation = (t: Translate) => Yup.object({
-  login: Yup.string().required().typeError(t('validation.required')),
-  passwordHash: Yup.string().required().typeError(t('validation.required')),
-  role: Yup.string().required().typeError(t('validation.required')),
   managerId: Yup.number().required().typeError(t('validation.onlyNumbers')),
 });
 

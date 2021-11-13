@@ -6,10 +6,6 @@ import {Translate} from 'react-admin';
 
 const getAuditLogValudation: GetValidation = (t: Translate) => Yup.object({
   date: Yup.date().required().typeError(t('validation.required')),
-  title: Yup.string().required().typeError(t('validation.required')),
-  entityType: Yup.string().required().typeError(t('validation.required')),
-  entityId: Yup.string().required().typeError(t('validation.required')),
-  action: Yup.string().required().typeError(t('validation.required')),
 });
 
 export default getAuditLogValudation;

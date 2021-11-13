@@ -6,7 +6,6 @@ import {Translate} from 'react-admin';
 
 const getManagersToPermissionValudation: GetValidation = (t: Translate) => Yup.object({
   managerId: Yup.number().required().typeError(t('validation.onlyNumbers')),
-  permissionId: Yup.string().required().typeError(t('validation.required')),
 });
 
 export default getManagersToPermissionValudation;

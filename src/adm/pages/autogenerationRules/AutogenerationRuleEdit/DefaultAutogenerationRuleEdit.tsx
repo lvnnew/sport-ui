@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Edit,
   SimpleForm,
   EditProps,
   TextInput,
-  DateInput,
   BooleanInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getAutogenerationRuleValudation from '../getAutogenerationRuleValudation';
@@ -21,7 +21,13 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
   const validate = useMemo(() => makeValidate(getAutogenerationRuleValudation(t)), [t]);
 
   return (
-    <Edit {...props}>
+    <Edit
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+        version: data.version || null,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{
           ignoreVersionOnHistory: false,

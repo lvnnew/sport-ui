@@ -6,9 +6,6 @@ import {Translate} from 'react-admin';
 
 const getAutogenerationHistoryEntryValudation: GetValidation = (t: Translate) => Yup.object({
   date: Yup.date().required().typeError(t('validation.required')),
-  originalEntityType: Yup.string().required().typeError(t('validation.required')),
-  originalEntityId: Yup.string().required().typeError(t('validation.required')),
-  autogenerationRuleId: Yup.string().required().typeError(t('validation.required')),
   version: Yup.date().required().typeError(t('validation.required')),
 });
 

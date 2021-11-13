@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Edit,
@@ -7,9 +7,9 @@ import {
   EditProps,
   ReferenceInput,
   AutocompleteInput,
-  DateInput,
   BooleanInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getDelegationValudation from '../getDelegationValudation';
@@ -22,7 +22,13 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
   const validate = useMemo(() => makeValidate(getDelegationValudation(t)), [t]);
 
   return (
-    <Edit {...props}>
+    <Edit
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+        expiresAt: data.expiresAt || null,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{
           active: false,

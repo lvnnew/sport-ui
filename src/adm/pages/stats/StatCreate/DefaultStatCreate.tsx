@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Create,
   SimpleForm,
   CreateProps,
   TextInput,
-  DateTimeInput,
   NumberInput,
 } from 'react-admin';
+import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getStatValudation from '../getStatValudation';
@@ -21,7 +21,13 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
   const validate = useMemo(() => makeValidate(getStatValudation(t)), [t]);
 
   return (
-    <Create {...props}>
+    <Create
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+        updated: data.updated || null,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{}}
         validate={validate}

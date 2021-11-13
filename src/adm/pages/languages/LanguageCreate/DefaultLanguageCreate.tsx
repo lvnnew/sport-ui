@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Create,
@@ -19,7 +19,12 @@ const DefaultLanguageCreate: FC<CreateProps> = (props: CreateProps) => {
   const validate = useMemo(() => makeValidate(getLanguageValudation(t)), [t]);
 
   return (
-    <Create {...props}>
+    <Create
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{}}
         validate={validate}

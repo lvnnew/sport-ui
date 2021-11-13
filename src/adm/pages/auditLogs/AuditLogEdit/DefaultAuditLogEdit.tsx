@@ -1,16 +1,16 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Edit,
   SimpleForm,
   EditProps,
-  DateInput,
   TextInput,
   ReferenceInput,
   AutocompleteInput,
   BooleanInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getAuditLogValudation from '../getAuditLogValudation';
@@ -23,7 +23,13 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
   const validate = useMemo(() => makeValidate(getAuditLogValudation(t)), [t]);
 
   return (
-    <Edit {...props}>
+    <Edit
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+        date: data.date || null,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{
           foreign: false,

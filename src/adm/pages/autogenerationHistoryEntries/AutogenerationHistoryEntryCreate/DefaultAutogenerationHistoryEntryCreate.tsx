@@ -1,16 +1,16 @@
 /* eslint-disable max-len */
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
   Create,
   SimpleForm,
   CreateProps,
-  DateInput,
   TextInput,
   ReferenceInput,
   AutocompleteInput,
   BooleanInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getAutogenerationHistoryEntryValudation from '../getAutogenerationHistoryEntryValudation';
@@ -23,7 +23,14 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
   const validate = useMemo(() => makeValidate(getAutogenerationHistoryEntryValudation(t)), [t]);
 
   return (
-    <Create {...props}>
+    <Create
+      {...props}
+      transform={useCallback((data) => ({
+        ...data,
+        date: data.date || null,
+        version: data.version || null,
+      }), [])}
+    >
       <SimpleForm
         initialValues={{
           errorOccurred: false,
