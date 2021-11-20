@@ -19,10 +19,10 @@ const DefaultAuditLogFilter: FC<any> = (props) => (
     <TextInput fullWidth source='entityId' />
     <TextInput fullWidth source='action' />
     <ReferenceInput source='managerId' reference='managers'>
-      <AutocompleteInput fullWidth optionText='title' />
+      <AutocompleteInput fullWidth optionText='title' resettable />
     </ReferenceInput>
     <ReferenceInput source='userId' reference='users'>
-      <AutocompleteInput fullWidth optionText='title' />
+      <AutocompleteInput fullWidth optionText='title' resettable />
     </ReferenceInput>
     <BooleanInput fullWidth source='foreign' />
     <TextInput fullWidth source='foreignEntityType' />

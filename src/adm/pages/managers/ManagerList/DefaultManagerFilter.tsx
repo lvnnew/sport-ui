@@ -16,12 +16,12 @@ const DefaultManagerFilter: FC<any> = (props) => (
     <TextInput fullWidth source='lastName' />
     <TextInput fullWidth source='firstName' />
     <ReferenceInput source='languageId' reference='languages'>
-      <AutocompleteInput fullWidth optionText='title' />
+      <AutocompleteInput fullWidth optionText='title' resettable />
     </ReferenceInput>
     <TextInput fullWidth source='email' />
     <TextInput fullWidth source='telegramLogin' />
     <ReferenceInput source='unitId' reference='units'>
-      <AutocompleteInput fullWidth optionText='title' />
+      <AutocompleteInput fullWidth optionText='title' resettable />
     </ReferenceInput>
     <BooleanInput fullWidth source='headOfUnit' />
     <BooleanInput fullWidth source='active' />

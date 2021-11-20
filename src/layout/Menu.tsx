@@ -23,6 +23,7 @@ import {
 } from '../adm/ProjectMenu';
 import {makeStyles} from '@material-ui/core/styles';
 import classnames from 'classnames';
+import {hasPermission} from '../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -66,7 +67,7 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
         [classes.closed]: !open,
       })}
     >
-      {permissions && permissions.includes('dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
+      {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
       <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
       {isXSmall && (
         <MenuItemLink
