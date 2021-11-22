@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 import {
   Link,
@@ -19,7 +20,7 @@ export interface CardWithIconProps {
   subtitle?: string | number;
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => createStyles({
   card: {
     '& a': {
       color: 'inherit',

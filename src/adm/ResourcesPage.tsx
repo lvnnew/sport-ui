@@ -7,9 +7,10 @@ import {
 } from '@apollo/client';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(() => createStyles({
   flex: {
     display: 'flex',
     flexWrap: 'wrap',

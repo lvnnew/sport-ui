@@ -15,6 +15,7 @@ import {
 } from 'recharts';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 
 export interface BarChartWidgetProps {
@@ -27,7 +28,7 @@ interface CountRow {
   count: number;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => createStyles({
   card: {
     margin: theme.spacing(1),
   },

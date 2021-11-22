@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
 import PendingRequestsIcon from '@material-ui/icons/ErrorOutlineOutlined';
@@ -29,7 +30,7 @@ const RECALCULATE_STATS = gql`
   }
 `;
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(() => createStyles({
   flex: {
     display: 'flex',
     flexWrap: 'wrap',

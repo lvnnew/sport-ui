@@ -10,6 +10,7 @@ import {
 } from 'react-admin';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 import {
   changeTheme,
@@ -18,10 +19,10 @@ import {
   AppState,
 } from '../types';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(() => createStyles({
   button: {margin: '1em'},
   label: {display: 'inline-block', width: '10em'},
-});
+}));
 
 const Configuration = () => {
   const translate = useTranslate();

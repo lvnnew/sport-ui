@@ -8,7 +8,8 @@
     "build": "cross-env DISABLE_ESLINT_PLUGIN=true craco build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "test": "react-scripts test",
-    "gen": "graphql-codegen --config codegen.yml"
+    "gen": "graphql-codegen --config codegen.yml",
+    "preinstall": "npx only-allow yarn"
   },
   "dependencies": {
     "@apollo/client": "^3.4.16",
@@ -26,11 +27,12 @@
     "md5": "^2.3.0",
     "mui-rff": "^3.0.16",
     "query-string": "^7.0.1",
-    "ra-data-graphql": "^3.18.3",
-    "ra-data-graphql-simple": "^3.18.3",
-    "ra-input-rich-text": "^3.18.3",
+    "ra-data-graphql": "^3.19.1",
+    "ra-data-graphql-simple": "^3.19.1",
+    "ra-i18n-polyglot": "^3.19.1",
+    "ra-language-english": "^3.19.1",
     "react": "^17.0.2",
-    "react-admin": "^3.18.3",
+    "react-admin": "^3.19.1",
     "react-dom": "^17.0.2",
     "react-hotkeys-hook": "^3.4.3",
     "react-loadable": "^5.5.0",

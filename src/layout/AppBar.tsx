@@ -9,12 +9,13 @@ import Typography from '@material-ui/core/Typography';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
   makeStyles,
+  createStyles,
   Theme,
 } from '@material-ui/core/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme: Theme) => createStyles({
   spacer: {
     flex: 1,
   },

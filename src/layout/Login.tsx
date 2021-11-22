@@ -16,6 +16,7 @@ import {
 import {
   createTheme,
   makeStyles,
+  createStyles,
   ThemeProvider,
 } from '@material-ui/core/styles';
 import LockIcon from '@material-ui/icons/Lock';
@@ -27,7 +28,7 @@ import {
 } from './themes';
 import AuthBg from './AuthBg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => createStyles({
   actions: {
     padding: '0 1em 1em 1em',
   },

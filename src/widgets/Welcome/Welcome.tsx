@@ -9,13 +9,14 @@ import HomeIcon from '@material-ui/icons/Home';
 import CodeIcon from '@material-ui/icons/Code';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 import {
   useTranslate,
 } from 'react-admin';
 import publishArticleImage from './welcome_illustration.svg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => createStyles({
   actions: {
     [theme.breakpoints.down('md')]: {
       '& a': {

@@ -1,11 +1,9 @@
-FROM node:15 AS builder
+FROM registry.gitlab.com/making.ventures/images/node-with-tools AS builder
 
 RUN mkdir /app
 WORKDIR /app
 
-RUN npm i -g serve
-
-COPY package.json yarn.lock ./
+COPY yarn.lock package.json ./
 RUN yarn
 COPY . .
 

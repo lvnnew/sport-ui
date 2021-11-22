@@ -11,12 +11,13 @@ import Collapse from '@material-ui/core/Collapse';
 import Tooltip from '@material-ui/core/Tooltip';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 import {
   useTranslate,
 } from 'react-admin';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => createStyles({
   icon: {minWidth: theme.spacing(5)},
   sidebarIsClosed: {
     '& a': {

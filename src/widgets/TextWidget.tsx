@@ -7,13 +7,14 @@ import {
 } from '@material-ui/core';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 
 interface TextWidgetProps {
   text: string;
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => createStyles({
   root: {
     background:
             theme.palette.type === 'dark' ?

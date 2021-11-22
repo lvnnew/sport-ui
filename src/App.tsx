@@ -21,7 +21,6 @@ import customRoutes from './routes';
 import enMessages from './i18n/en';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
-import log from 'loglevel';
 import {
   createBrowserHistory as createHistory,
 } from 'history';
@@ -40,8 +39,6 @@ import Loader from './shared/Loader';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const history = createHistory();
-
-log.setDefaultLevel(log.levels.INFO);
 
 const i18nProvider = polyglotI18nProvider(locale => {
   if (locale === 'ru') {

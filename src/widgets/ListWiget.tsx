@@ -11,6 +11,7 @@ import {
 } from 'react-admin';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 import {
   DocumentNode, QueryHookOptions, useQuery,
@@ -25,7 +26,7 @@ export interface ListWigetProps<T> {
   action?: React.ReactNode;
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => createStyles({
   cost: {
     color: theme.palette.text.primary,
     marginRight: '1em',

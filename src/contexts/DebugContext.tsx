@@ -3,7 +3,6 @@ import React, {
   memo,
   useMemo,
   ReactNode,
-  ReactNodeArray,
   useContext,
   useState,
   useCallback,
@@ -16,7 +15,7 @@ export interface IDebugContext {
 }
 
 interface IProps {
-  children: ReactNode | ReactNodeArray;
+  children: ReactNode | ReactNode[];
 }
 
 export const DebugContext = createContext<IDebugContext>(

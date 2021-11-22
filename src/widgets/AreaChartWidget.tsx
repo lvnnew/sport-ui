@@ -17,6 +17,7 @@ import {
 } from 'recharts';
 import {
   makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
 
 interface CountRow {
@@ -29,7 +30,7 @@ export interface AreaChartWidgetProps {
   rows: CountRow[];
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => createStyles({
   card: {
     margin: theme.spacing(1),
   },
