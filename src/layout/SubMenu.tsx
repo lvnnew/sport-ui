@@ -6,7 +6,7 @@ import ExpandMore from '@mui/icons/ExpandMore';
 import List from '@mui/base/List';
 import MenuItem from '@mui/base/MenuItem';
 import ListItemIcon from '@mui/base/ListItemIcon';
-import Typography from '@mui/base/Typography';
+import {Typography} from '@mui/material';
 import Collapse from '@mui/base/Collapse';
 import Tooltip from '@mui/base/Tooltip';
 import {

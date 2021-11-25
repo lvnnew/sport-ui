@@ -5,7 +5,7 @@ import {
 import {
   AppBar, UserMenu, MenuItemLink, useTranslate,
 } from 'react-admin';
-import Typography from '@mui/base/Typography';
+import {Typography} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
   makeStyles,

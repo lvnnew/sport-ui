@@ -1,5 +1,5 @@
-import loglevel from 'loglevel';
+import log from 'loglevel';
 
-loglevel.setDefaultLevel(loglevel.levels.INFO);
+export {default} from 'loglevel';
 
-export default loglevel;
+log.setDefaultLevel(log.levels.INFO);
