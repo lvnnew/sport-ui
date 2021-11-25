@@ -4,13 +4,13 @@ import {
 } from 'react';
 import {
   Box, Card, CardActions, Button, Typography,
-} from '@material-ui/core';
-import HomeIcon from '@material-ui/icons/Home';
-import CodeIcon from '@material-ui/icons/Code';
+} from '@mui/base';
+import HomeIcon from '@mui/icons/Home';
+import CodeIcon from '@mui/icons/Code';
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 import {
   useTranslate,
 } from 'react-admin';

@@ -7,12 +7,12 @@ import React, {
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
-import PendingRequestsIcon from '@material-ui/icons/ErrorOutlineOutlined';
+import PendingRequestsIcon from '@mui/icons/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
-import {Button} from '@material-ui/core';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import {Button} from '@mui/base';
+import CircularProgress from '@mui/base/CircularProgress';
 import {useVersion} from 'ra-core';
 import {useRefresh} from 'react-admin';
 

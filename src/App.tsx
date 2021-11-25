@@ -32,11 +32,13 @@ import {
 } from './adm/dashboard';
 import {DebugProvider} from './contexts/DebugContext';
 import getAuthProvider from './authProvider/getAuthProvider';
-import './utils/polyfills/BigInt';
+import {onStart} from './systemHooks';
 import getApollo from './apollo/getApollo';
 import Loader from './shared/Loader';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+onStart();
 
 const history = createHistory();
 

@@ -8,7 +8,7 @@ import {
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
   useMediaQuery, Theme,
-} from '@material-ui/core';
+} from '@mui/base';
 import {
   useTranslate,
   DashboardMenuItem,
@@ -21,7 +21,7 @@ import {
 import {
   ProjectMenu,
 } from '../adm/ProjectMenu';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {makeStyles, createStyles} from '@mui/base/styles';
 import classnames from 'classnames';
 import {hasPermission} from '../utils/permissions';
 

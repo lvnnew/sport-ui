@@ -5,9 +5,9 @@ import React, {
 } from 'react';
 import {
   Typography,
-} from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
+} from '@mui/base';
+import TextField from '@mui/base/TextField';
+import IconButton from '@mui/base/IconButton';
 import SendIcon from '@mui/icons-material/SendOutlined';
 import {
   gql, useLazyQuery,

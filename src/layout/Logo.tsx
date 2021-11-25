@@ -5,7 +5,7 @@ import {
 } from 'react';
 import {
   useTheme,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 
 const Logo = (props: SVGProps<SVGSVGElement>) => {
   const theme = useTheme();

@@ -6,7 +6,7 @@ import {
   Card,
   CardHeader,
   CardContent,
-} from '@material-ui/core';
+} from '@mui/base';
 import {
   ResponsiveContainer,
   AreaChart,
@@ -18,7 +18,7 @@ import {
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 
 interface CountRow {
   name: string;

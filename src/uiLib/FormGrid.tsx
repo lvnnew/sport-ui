@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Children, isValidElement, cloneElement, ReactNode} from 'react';
 import {Record} from 'ra-core';
-import {Grid, GridProps} from '@material-ui/core';
+import {Grid, GridProps} from '@mui/base';
 import {Labeled} from 'react-admin';
 
 const sanitizeRestProps = ({

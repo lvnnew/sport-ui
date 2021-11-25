@@ -2,17 +2,17 @@ import * as React from 'react';
 import {
   FC, ReactElement,
 } from 'react';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import List from '@material-ui/core/List';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Typography from '@material-ui/core/Typography';
-import Collapse from '@material-ui/core/Collapse';
-import Tooltip from '@material-ui/core/Tooltip';
+import ExpandMore from '@mui/icons/ExpandMore';
+import List from '@mui/base/List';
+import MenuItem from '@mui/base/MenuItem';
+import ListItemIcon from '@mui/base/ListItemIcon';
+import Typography from '@mui/base/Typography';
+import Collapse from '@mui/base/Collapse';
+import Tooltip from '@mui/base/Tooltip';
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 import {
   useTranslate,
 } from 'react-admin';

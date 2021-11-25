@@ -12,14 +12,14 @@ import {
   CardActions,
   CircularProgress,
   TextField,
-} from '@material-ui/core';
+} from '@mui/base';
 import {
   createTheme,
   makeStyles,
   createStyles,
   ThemeProvider,
-} from '@material-ui/core/styles';
-import LockIcon from '@material-ui/icons/Lock';
+} from '@mui/base/styles';
+import LockIcon from '@mui/icons/Lock';
 import {
   Notification, useTranslate, useLogin, useNotify,
 } from 'react-admin';

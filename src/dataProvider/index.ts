@@ -1,4 +1,4 @@
-import buildApolloClient, {
+import buildGraphQLProvider, {
   buildQuery as buildQueryFactory,
 } from 'ra-data-graphql-simple';
 import {
@@ -97,7 +97,7 @@ const cache = new InMemoryCache({
 });
 
 export default (client: any) => {
-  return buildApolloClient({
+  return buildGraphQLProvider({
     buildQuery: customBuildQuery,
     cache,
     client,

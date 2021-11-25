@@ -4,11 +4,11 @@ import {
 } from 'react';
 import {
   Box, Card, Typography,
-} from '@material-ui/core';
+} from '@mui/base';
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 
 interface TextWidgetProps {
   text: string;

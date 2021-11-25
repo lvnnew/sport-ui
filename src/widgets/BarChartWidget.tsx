@@ -4,7 +4,7 @@ import {
 } from 'react';
 import {
   Card, CardHeader, CardContent,
-} from '@material-ui/core';
+} from '@mui/base';
 import {
   ResponsiveContainer,
   BarChart,
@@ -16,7 +16,7 @@ import {
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 
 export interface BarChartWidgetProps {
   title?: string;

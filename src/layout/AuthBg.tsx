@@ -2,7 +2,7 @@ import React from 'react';
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core';
+} from '@mui/base';
 
 const useStyles = makeStyles(() => createStyles({
   bg: {

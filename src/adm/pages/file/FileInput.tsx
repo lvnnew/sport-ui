@@ -4,7 +4,7 @@ import {FileInputOptions} from 'ra-ui-materialui/lib/input/FileInput';
 import {gql, useMutation} from '@apollo/client';
 import {fileStateToNewURL, fileStateToFail, isFile, changeFileState, fileStateToLoading} from './utils';
 import {useForm} from 'react-final-form';
-import {log} from '../../../utils/log';
+import log from '../../../utils/log';
 
 export type FileInputProps = Readonly<RaFileInputProps & InputProps<FileInputOptions>>;
 

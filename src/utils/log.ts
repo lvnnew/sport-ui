@@ -1,3 +1,5 @@
 import loglevel from 'loglevel';
 
-export const log = loglevel;
+loglevel.setDefaultLevel(loglevel.levels.INFO);
+
+export default loglevel;

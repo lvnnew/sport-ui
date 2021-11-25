@@ -8,7 +8,6 @@ import {getJwtToken} from '../authProvider/getAuthProvider';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
 import cacheTypePolicies from './cacheTypePolicies';
-import '../utils/polyfills/BigInt';
 
 const getApollo = (endpoint: string) => {
   const link = from([

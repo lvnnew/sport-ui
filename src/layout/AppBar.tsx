@@ -5,13 +5,13 @@ import {
 import {
   AppBar, UserMenu, MenuItemLink, useTranslate,
 } from 'react-admin';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/base/Typography';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
   makeStyles,
   createStyles,
   Theme,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

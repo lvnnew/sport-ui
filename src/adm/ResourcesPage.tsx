@@ -8,7 +8,7 @@ import {
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 
 const useStyles = makeStyles(() => createStyles({
   flex: {

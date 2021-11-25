@@ -4,11 +4,11 @@ import {
 } from 'react';
 import {
   Card, Box, Typography, Divider,
-} from '@material-ui/core';
+} from '@mui/base';
 import {
   makeStyles,
   createStyles,
-} from '@material-ui/core/styles';
+} from '@mui/base/styles';
 import {
   Link,
 } from 'react-router-dom';
