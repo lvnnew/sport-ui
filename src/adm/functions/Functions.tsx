@@ -3,11 +3,7 @@ import React, {
   useState,
   ChangeEvent,
 } from 'react';
-import {
-  Typography,
-} from '@mui/base';
-import {TextField} from '@mui/material';
-import {IconButton} from '@mui/material';
+import {Typography, TextField, IconButton} from '@mui/material';
 import SendIcon from '@mui/icons-material/SendOutlined';
 import {
   gql, useLazyQuery,

@@ -13,10 +13,8 @@ import {
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import './App.css';
 import themeReducer from './themeReducer';
-import {
-  Layout,
-  Login,
-} from './layout';
+import Layout from './layout/Layout';
+import Login from './layout/Login';
 import customRoutes from './routes';
 import enMessages from './i18n/en';
 import dataProviderFactory from './dataProvider';
@@ -88,7 +86,7 @@ const App = () => {
           history={history}
           i18nProvider={i18nProvider}
           layout={Layout}
-          loading={<Loader />}
+          loading={Loader}
           loginPage={Login}
           authProvider={authProvider}
           title=''

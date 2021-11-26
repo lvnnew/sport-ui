@@ -6,7 +6,7 @@ import {
   Card,
   CardHeader,
   CardContent,
-} from '@mui/base';
+} from '@mui/material';
 import {
   ResponsiveContainer,
   AreaChart,
@@ -15,10 +15,7 @@ import {
   YAxis,
   Tooltip,
 } from 'recharts';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 interface CountRow {
   name: string;
@@ -32,7 +29,7 @@ export interface AreaChartWidgetProps {
 
 const useStyles = makeStyles((theme) => createStyles({
   card: {
-    margin: theme.spacing(1),
+    margin: (theme as any).spacing(1),
   },
 }));
 

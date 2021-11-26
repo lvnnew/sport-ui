@@ -4,7 +4,7 @@ import {
 } from 'react';
 import {
   Card, CardHeader, CardContent,
-} from '@mui/base';
+} from '@mui/material';
 import {
   ResponsiveContainer,
   AreaChart,
@@ -14,10 +14,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from 'recharts';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 // import {
 //   useTranslate,
@@ -28,7 +25,7 @@ import {
 
 const useStyles = makeStyles((theme) => createStyles({
   card: {
-    margin: theme.spacing(1),
+    margin: (theme as any).spacing(1),
   },
 }));
 
@@ -52,6 +49,7 @@ const aggregateOrdersByDay = (orders: Order[]): { [key: number]: number } =>
       if (!acc[day]) {
         acc[day] = 0;
       }
+
       acc[day] += curr.total;
 
       return acc;

@@ -7,8 +7,9 @@ import {
 } from 'react-redux';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
+  // eslint-disable-next-line import/no-deprecated
   useMediaQuery, Theme,
-} from '@mui/base';
+} from '@mui/material';
 import {
   useTranslate,
   DashboardMenuItem,
@@ -29,11 +30,11 @@ import {hasPermission} from '../utils/permissions';
 
 const useStyles = makeStyles(theme => createStyles({
   root: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+    marginTop: (theme as any).spacing(1),
+    marginBottom: (theme as any).spacing(1),
+    transition: (theme as any).transitions.create('width', {
+      easing: (theme as any).transitions.easing.sharp,
+      duration: (theme as any).transitions.duration.leavingScreen,
     }),
   },
   open: {
@@ -53,8 +54,9 @@ interface Props {
 const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
   const translate = useTranslate();
   const classes = useStyles();
+  // eslint-disable-next-line import/no-deprecated
   const isXSmall = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down('xs'),
+    (theme as any).breakpoints.down('xs'),
   );
   const open = useSelector((state: AppState) => state.admin.ui.sidebarOpen);
   useSelector((state: AppState) => state.theme); // force rerender on theme change

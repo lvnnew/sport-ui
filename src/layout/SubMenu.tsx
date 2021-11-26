@@ -3,31 +3,23 @@ import {
   FC, ReactElement,
 } from 'react';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import {List} from '@mui/material';
-import {MenuItem} from '@mui/material';
-import {ListItemIcon} from '@mui/material';
-import {Typography} from '@mui/material';
-import {Collapse} from '@mui/material';
-import {Tooltip} from '@mui/material';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {List, MenuItem, ListItemIcon, Typography, Collapse, Tooltip} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
 import {
   useTranslate,
 } from 'react-admin';
 
 const useStyles = makeStyles(theme => createStyles({
-  icon: {minWidth: theme.spacing(5)},
+  icon: {minWidth: (theme as any).spacing(5)},
   sidebarIsClosed: {
     '& a': {
-      paddingLeft: theme.spacing(2),
+      paddingLeft: (theme as any).spacing(2),
       transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
     },
   },
   sidebarIsOpen: {
     '& a': {
-      paddingLeft: theme.spacing(4),
+      paddingLeft: (theme as any).spacing(4),
       transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
     },
   },
@@ -55,7 +47,7 @@ const SubMenu: FC<Props> = ({
   const classes = useStyles();
 
   const header = (
-    <MenuItem button dense={dense} onClick={handleToggle}>
+    <MenuItem dense={dense} onClick={handleToggle}>
       <ListItemIcon className={classes.icon}>
         {isOpen ? <ExpandMore /> : icon}
       </ListItemIcon>

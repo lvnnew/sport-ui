@@ -5,16 +5,12 @@ import {
 import {
   AppBar as MuiAppBar,
   UserMenu,
-  MenuItemLink, 
+  MenuItemLink,
   useTranslate,
 } from 'react-admin';
-import {Typography} from '@mui/material';
+import {Typography, Theme} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
-import {
-  makeStyles,
-  createStyles,
-  Theme,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -29,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     whiteSpace: 'nowrap',
   },
   centerTitle: {
-    color: theme.palette.primary.main,
+    color: (theme as any).palette.primary.main,
   },
 }));
 

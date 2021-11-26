@@ -19,7 +19,7 @@ const Logo = (props: SVGProps<SVGSVGElement>) => {
     >
       <g
         aria-label='~Posters Galore~'
-        fill={theme.palette.secondary.light}
+        fill={(theme as any).palette.secondary.light}
         fontFamily='Permanent Marker'
         fontSize={7.056}
         fontWeight={400}

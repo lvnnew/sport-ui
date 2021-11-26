@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 const useStyles = makeStyles(() => createStyles({
   bg: {

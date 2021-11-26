@@ -7,10 +7,7 @@ import {
   Card,
   Typography,
 } from '@mui/material';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 interface TextWidgetProps {
   text: string;
@@ -19,13 +16,13 @@ interface TextWidgetProps {
 const useStyles = makeStyles(theme => createStyles({
   root: {
     background:
-            theme.palette.type === 'dark' ?
+            (theme as any).palette.type === 'dark' ?
               '#535353' :
               // eslint-disable-next-line max-len
               'linear-gradient(to right, #8975fb 0%, #746be7 35%), linear-gradient(to bottom, #8975fb 0%, #6f4ceb 50%), #6f4ceb',
 
     color: '#fff',
-    margin: theme.spacing(1),
+    margin: (theme as any).spacing(1),
     padding: 20,
   },
 }));

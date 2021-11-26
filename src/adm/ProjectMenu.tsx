@@ -46,184 +46,185 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           dense={dense}
           leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
-          primaryText={'Functions'}
+          primaryText='Functions'
           sidebarIsOpen={open}
-          to={'/functions'}
+          to='/functions'
         />
         <MenuItemLink
           dense={dense}
           leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
-          primaryText={'Resources'}
+          primaryText='Resources'
           sidebarIsOpen={open}
-          to={'/resources'}
+          to='/resources'
         />
         <MenuItemLink
           dense={dense}
           leftIcon={<DefaultIcon />}
           onClick={onMenuClick}
-          primaryText={'Meta'}
+          primaryText='Meta'
           sidebarIsOpen={open}
-          to={'/meta'}
+          to='/meta'
         />
         <SubMenu
           dense={dense}
           handleToggle={() => handleToggle('catalogs')}
           icon={<DocumentsIcon />}
           isOpen={state.catalogs}
-          name={'catalogs'}
-          sidebarIsOpen={open}>
+          name='catalogs'
+          sidebarIsOpen={open}
+        >
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Audit'}
+            primaryText='Audit'
             sidebarIsOpen={open}
-            to={'/auditLogs'}
+            to='/auditLogs'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Autogeneration History'}
+            primaryText='Autogeneration History'
             sidebarIsOpen={open}
-            to={'/autogenerationHistoryEntries'}
+            to='/autogenerationHistoryEntries'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Autogeneration Rules'}
+            primaryText='Autogeneration Rules'
             sidebarIsOpen={open}
-            to={'/autogenerationRules'}
+            to='/autogenerationRules'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Delegations'}
+            primaryText='Delegations'
             sidebarIsOpen={open}
-            to={'/delegations'}
+            to='/delegations'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Files'}
+            primaryText='Files'
             sidebarIsOpen={open}
-            to={'/files'}
+            to='/files'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Languages'}
+            primaryText='Languages'
             sidebarIsOpen={open}
-            to={'/languages'}
+            to='/languages'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Logins of usual (not admins) users'}
+            primaryText='Logins of usual (not admins) users'
             sidebarIsOpen={open}
-            to={'/appLogins'}
+            to='/appLogins'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Manager'}
+            primaryText='Manager'
             sidebarIsOpen={open}
-            to={'/managers'}
+            to='/managers'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Manager logins'}
+            primaryText='Manager logins'
             sidebarIsOpen={open}
-            to={'/managerLogins'}
+            to='/managerLogins'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Managers To Permissions'}
+            primaryText='Managers To Permissions'
             sidebarIsOpen={open}
-            to={'/managersToPermissions'}
+            to='/managersToPermissions'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Managers To Roles'}
+            primaryText='Managers To Roles'
             sidebarIsOpen={open}
-            to={'/managersToRoles'}
+            to='/managersToRoles'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Message templates'}
+            primaryText='Message templates'
             sidebarIsOpen={open}
-            to={'/messageTemplates'}
+            to='/messageTemplates'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Permissions'}
+            primaryText='Permissions'
             sidebarIsOpen={open}
-            to={'/permissions'}
+            to='/permissions'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Roles'}
+            primaryText='Roles'
             sidebarIsOpen={open}
-            to={'/roles'}
+            to='/roles'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Roles To Permissions'}
+            primaryText='Roles To Permissions'
             sidebarIsOpen={open}
-            to={'/rolesToPermissions'}
+            to='/rolesToPermissions'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Stats'}
+            primaryText='Stats'
             sidebarIsOpen={open}
-            to={'/stats'}
+            to='/stats'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Tags'}
+            primaryText='Tags'
             sidebarIsOpen={open}
-            to={'/tags'}
+            to='/tags'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Units'}
+            primaryText='Units'
             sidebarIsOpen={open}
-            to={'/units'}
+            to='/units'
           />
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Users'}
+            primaryText='Users'
             sidebarIsOpen={open}
-            to={'/users'}
+            to='/users'
           />
         </SubMenu>
       </>}

@@ -3,16 +3,11 @@ import * as React from 'react';
 import {
   FC, useEffect, useMemo, ReactElement,
 } from 'react';
-import {Card} from '@mui/material';
-import {CardHeader} from '@mui/material';
-import {List} from '@mui/material';
+import {Card, CardHeader, List} from '@mui/material';
 import {
   useVersion,
 } from 'react-admin';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 import {
   DocumentNode, QueryHookOptions, useQuery,
 } from '@apollo/client';
@@ -28,12 +23,12 @@ export interface ListWigetProps<T> {
 
 const useStyles = makeStyles(theme => createStyles({
   cost: {
-    color: theme.palette.text.primary,
+    color: (theme as any).palette.text.primary,
     marginRight: '1em',
   },
   root: {
     flex: '1 1 160px',
-    margin: theme.spacing(1),
+    margin: (theme as any).spacing(1),
     minHeight: 52,
     minWidth: '300px',
   },

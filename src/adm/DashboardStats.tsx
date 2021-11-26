@@ -4,15 +4,11 @@ import React, {
   useCallback,
   useEffect,
 } from 'react';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
 import PendingRequestsIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
-import {Button} from '@mui/material';
-import {CircularProgress} from '@mui/material';
+import {Button, CircularProgress} from '@mui/material';
 import {useVersion} from 'ra-core';
 import {useRefresh} from 'react-admin';
 
@@ -77,7 +73,6 @@ const DashboardStats: FC = () => {
           />
         </div>
       )}
-
       <Button
         style={{marginLeft: 2}}
         size='large'

@@ -1,46 +1,21 @@
-import buildGraphQLProvider, {
-  buildQuery as buildQueryFactory,
-} from 'ra-data-graphql-simple';
-import {
-  DELETE, LegacyDataProvider,
-} from 'ra-core';
+import buildGraphQLProvider, {buildQuery as buildQueryFactory} from 'ra-data-graphql-simple';
+import {IntrospectionResult} from 'ra-data-graphql';
+import {DELETE} from 'ra-core';
 import gql from 'graphql-tag';
-import {
-  IntrospectionField,
-  IntrospectionSchema,
-  IntrospectionType,
-} from 'graphql';
-import {
-  InMemoryCache,
-  ApolloQueryResult,
-} from '@apollo/client';
-import {
-  mapping,
-} from '../adm/entityMapping';
-import * as R from 'ramda';
-import cacheTypePolicies from '../apollo/cacheTypePolicies';
+import {IntrospectionType, IntrospectionSchema} from 'graphql';
+import {mapping} from '../adm/entityMapping';
 import {__schema as schema} from '../generated/graphql.schema.json';
+import {ApolloClient} from '@apollo/client';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getGqlResource = async (resource: string) => {
+const getGqlResource = (resource: string) => {
   if (resource in mapping) {
     return mapping[resource as keyof typeof mapping];
   } else {
-    return Promise.reject(new Error(`Unknown resource ${resource}`));
+    throw new Error(`Unknown resource ${resource}`);
   }
 };
-
-type IntrospectionResource = IntrospectionType & {
-    [key: string]: IntrospectionField;
-};
-
-interface IntrospectionResults {
-    types: IntrospectionType[];
-    queries: IntrospectionField[];
-    resources: IntrospectionResource[];
-    schema: IntrospectionSchema;
-}
 
 const numberIdResources: string[] = [
   'auditLogs',
@@ -58,67 +33,49 @@ const numberIdResources: string[] = [
   'users',
 ];
 
-const customBuildQuery = (
-  introspectionResults: IntrospectionResults,
-): LegacyDataProvider => {
-  const buildQuery = buildQueryFactory(introspectionResults);
+const customBuildQuery = (introspection: IntrospectionResult) =>
+  (fetchType: string, originalResource: string, params: any) => {
+    const resource = getGqlResource(originalResource);
 
-  return (type, resource, params) => {
-    if (type === DELETE) {
-      const mappedResourcePair = R.toPairs(mapping)
-        .find(([, value]: [string, string]) => value === resource);
-      const mappedResource = mappedResourcePair ? mappedResourcePair[0] : '';
+    const builtQuery = buildQueryFactory(introspection)(fetchType, resource, params);
 
+    if (numberIdResources.includes(resource) && fetchType === 'GET_ONE' && 'id' in params) {
+      params.id = Number.parseInt(params.id, 10);
+    }
+
+    if (resource === 'Command' && fetchType === 'GET_ONE') {
       return {
-        parseResponse: ({data}: ApolloQueryResult<any>) => {
-          if (data[`remove${resource}`]) {
-            return {data: {id: params.id}};
-          }
+      // Use the default query variables and parseResponse
+        ...builtQuery,
 
-          throw new Error(`Could not delete ${resource}`);
-        },
-        query: gql`mutation remove${resource}($id: ${
-          numberIdResources.includes(mappedResource) ?
-            'Int!' :
-            'ID!'
-        }) {
-                    remove${resource}(id: $id)
-              }`,
-        variables: {id: params.id},
+        // Override the query
+        query: gql`
+          query Command($id: ID!) {
+              data: Command(id: $id) {
+                  id
+                  reference
+                  customer {
+                      id
+                      firstName
+                      lastName
+                  }
+              }
+          }
+        `,
       };
     }
 
-    return buildQuery(type, resource, params);
+    return builtQuery;
   };
-};
 
-const cache = new InMemoryCache({
-  typePolicies: cacheTypePolicies,
+export default (client: ApolloClient<unknown>) => buildGraphQLProvider({
+  buildQuery: customBuildQuery,
+  client: client as any,
+  introspection: {
+    schema: schema as unknown as IntrospectionSchema,
+    operationNames: {
+      [DELETE]: (resource: IntrospectionType) =>
+        `remove${resource.name}`,
+    },
+  },
 });
-
-export default (client: any) => {
-  return buildGraphQLProvider({
-    buildQuery: customBuildQuery,
-    cache,
-    client,
-    introspection: {
-      schema,
-      operationNames: {
-        [DELETE]: (resource: IntrospectionType) =>
-          `remove${resource.name}`,
-      },
-    },
-  }).then(
-    (dataProvider: LegacyDataProvider) => (
-      ...rest: Parameters<LegacyDataProvider>
-    ) => {
-      const [type, resource, params] = rest;
-
-      if (numberIdResources.includes(resource) && type === 'GET_ONE' && 'id' in params) {
-        params.id = Number.parseInt(params.id, 10);
-      }
-
-      return getGqlResource(resource).then(gqlResource => dataProvider(type, gqlResource, params));
-    },
-  );
-};

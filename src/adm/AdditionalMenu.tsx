@@ -36,24 +36,25 @@ export const AdditionalMenu: FC<AdditionalMenuProps> = ({onMenuClick, dense, ope
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={'Stats'}
+            primaryText='Stats'
             sidebarIsOpen={open}
-            to={'/statsDashboard'}
+            to='/statsDashboard'
           />
           <SubMenu
             dense={dense}
             handleToggle={() => handleToggle('menuFunctions')}
             icon={<DefaultIcon />}
             isOpen={state.menuFunctions}
-            name={'Functions'}
-            sidebarIsOpen={open}>
+            name='Functions'
+            sidebarIsOpen={open}
+          >
             <MenuItemLink
               dense={dense}
               leftIcon={<FileSaving />}
               onClick={onMenuClick}
-              primaryText={'Test file saving'}
+              primaryText='Test file saving'
               sidebarIsOpen={open}
-              to={'/ref-file-saving'}
+              to='/ref-file-saving'
             />
           </SubMenu>
         </>}

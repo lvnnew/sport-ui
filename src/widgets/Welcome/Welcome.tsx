@@ -11,10 +11,7 @@ import {
 } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from '@mui/icons-material/Code';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 import {
   useTranslate,
 } from 'react-admin';
@@ -22,7 +19,7 @@ import publishArticleImage from './welcome_illustration.svg';
 
 const useStyles = makeStyles(theme => createStyles({
   actions: {
-    [theme.breakpoints.down('md')]: {
+    [(theme as any).breakpoints.down('md')]: {
       '& a': {
         marginLeft: '0!important',
         marginRight: '1em',
@@ -38,14 +35,14 @@ const useStyles = makeStyles(theme => createStyles({
   },
   root: {
     background:
-            theme.palette.type === 'dark' ?
+            (theme as any).palette.type === 'dark' ?
               '#535353' :
               // eslint-disable-next-line max-len
               'linear-gradient(to right, #8975fb 0%, #746be7 35%), linear-gradient(to bottom, #8975fb 0%, #6f4ceb 50%), #6f4ceb',
 
     color: '#fff',
     marginBottom: '1em',
-    marginTop: theme.spacing(2),
+    marginTop: (theme as any).spacing(2),
     padding: 20,
   },
 }));
@@ -83,7 +80,6 @@ const Welcome: FC = () => {
             </Button>
           </CardActions>
         </Box>
-
         <Box
           className={classes.media}
           display={{md: 'block', sm: 'none', xs: 'none'}}

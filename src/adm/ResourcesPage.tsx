@@ -5,10 +5,7 @@ import NumberWiget from '../widgets/NumberWiget';
 import {
   gql,
 } from '@apollo/client';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 const useStyles = makeStyles(() => createStyles({
   flex: {

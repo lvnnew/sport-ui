@@ -4,11 +4,8 @@ import {
 } from 'react';
 import {
   Card, Box, Typography, Divider,
-} from '@mui/base';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
 import {
   Link,
 } from 'react-router-dom';
@@ -29,19 +26,19 @@ const useStyles = makeStyles(theme => createStyles({
     display: 'flex',
     flex: '1 1 160px',
     flexDirection: 'column',
-    margin: theme.spacing(1),
+    margin: (theme as any).spacing(1),
     minHeight: 52,
     minWidth: '300px',
     wordWrap: 'break-word',
   },
   main: () => ({
     '& .icon': {
-      color: theme.palette.type === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
+      color: (theme as any).palette.type === 'dark' ? (theme as any).palette.primary.dark : (theme as any).palette.primary.light,
     },
     alignItems: 'center',
 
     // background: `url(${
-    //   theme.palette.type === 'dark' ? cartoucheDark : cartouche
+    //   (theme as any).palette.type === 'dark' ? cartoucheDark : cartouche
     // }) no-repeat`,
     display: 'flex',
     justifyContent: 'space-between',

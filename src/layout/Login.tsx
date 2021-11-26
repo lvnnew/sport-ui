@@ -12,13 +12,10 @@ import {
   CardActions,
   CircularProgress,
   TextField,
-} from '@mui/base';
-import {
   createTheme,
-  makeStyles,
-  createStyles,
   ThemeProvider,
-} from '@mui/styles';
+} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
 import LockIcon from '@mui/icons-material/Lock';
 import {
   Notification, useTranslate, useLogin, useNotify,
@@ -40,19 +37,19 @@ const useStyles = makeStyles(theme => createStyles({
   card: {
     marginTop: '6em',
     minWidth: 300,
-    zIndex: theme.zIndex.modal,
+    zIndex: (theme as any).zIndex.modal,
   },
   form: {
     padding: '0 1em 1em 1em',
   },
   hint: {
-    color: theme.palette.grey[500],
+    color: (theme as any).palette.grey[500],
     display: 'flex',
     justifyContent: 'center',
     marginTop: '1em',
   },
   icon: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: (theme as any).palette.secondary.main,
   },
   input: {
     marginTop: '1em',

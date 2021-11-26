@@ -2,16 +2,11 @@ import * as React from 'react';
 import {
   useSelector, useDispatch,
 } from 'react-redux';
-import {Card} from '@mui/material';
-import {CardContent} from '@mui/material';
-import {Button} from '@mui/material';
+import {Card, CardContent, Button} from '@mui/material';
 import {
   useTranslate, useLocale, useSetLocale, Title,
 } from 'react-admin';
-import {
-  makeStyles,
-  createStyles,
-} from '@mui/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 import {
   changeTheme,
 } from './actions';
@@ -41,7 +36,7 @@ const Configuration = () => {
         </div>
         <Button
           className={classes.button}
-          color={theme === 'light' ? 'primary' : 'default'}
+          color={theme === 'light' ? 'primary' : 'secondary'}
           onClick={() => dispatch(changeTheme('light'))}
           variant='contained'
         >
@@ -49,7 +44,7 @@ const Configuration = () => {
         </Button>
         <Button
           className={classes.button}
-          color={theme === 'dark' ? 'primary' : 'default'}
+          color={theme === 'dark' ? 'primary' : 'secondary'}
           onClick={() => dispatch(changeTheme('dark'))}
           variant='contained'
         >
@@ -60,7 +55,7 @@ const Configuration = () => {
         <div className={classes.label}>{translate('app.language')}</div>
         <Button
           className={classes.button}
-          color={locale === 'en' ? 'primary' : 'default'}
+          color={locale === 'en' ? 'primary' : 'secondary'}
           onClick={() => setLocale('en')}
           variant='contained'
         >
@@ -68,7 +63,7 @@ const Configuration = () => {
         </Button>
         <Button
           className={classes.button}
-          color={locale === 'ru' ? 'primary' : 'default'}
+          color={locale === 'ru' ? 'primary' : 'secondary'}
           onClick={() => setLocale('ru')}
           variant='contained'
         >
