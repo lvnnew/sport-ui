@@ -35,7 +35,8 @@ const CountTagsWidget: FC<CountTagsWidgetProps> = ({
           _allTagsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allTagsMeta?.count}
     />
   );

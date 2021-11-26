@@ -5,7 +5,7 @@ import {
 import {
   useVersion,
 } from 'react-admin';
-import ArrowForwardIosIcon from '@mui/icons/ArrowForwardIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CardWithIcon, {
   CardWithIconProps,
 } from './CardWithIcon/CardWithIcon';

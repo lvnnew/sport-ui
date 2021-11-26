@@ -16,7 +16,7 @@ import {
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 
 export interface BarChartWidgetProps {
   title?: string;

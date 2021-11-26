@@ -15,7 +15,7 @@ import DelegationFilter from './DelegationFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultDelegationList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Delegations'} exporter={false} filters={<DelegationFilter />} {...props}>
+  <List title='Delegations' exporter={false} filters={<DelegationFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <ReferenceField source='fromId' reference='managers' link='show'>

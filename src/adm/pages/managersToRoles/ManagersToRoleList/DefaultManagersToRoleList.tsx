@@ -13,7 +13,7 @@ import ManagersToRoleFilter from './ManagersToRoleFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Managers to roles'} exporter={false} filters={<ManagersToRoleFilter />} {...props}>
+  <List title='Managers to roles' exporter={false} filters={<ManagersToRoleFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <ReferenceField source='managerId' reference='managers' link='show'>

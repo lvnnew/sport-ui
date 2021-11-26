@@ -14,7 +14,7 @@ import ManagerLoginFilter from './ManagerLoginFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Manager logins'} exporter={false} filters={<ManagerLoginFilter />} {...props}>
+  <List title='Manager logins' exporter={false} filters={<ManagerLoginFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <TextField source='login' />

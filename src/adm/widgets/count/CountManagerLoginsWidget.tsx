@@ -35,7 +35,8 @@ const CountManagerLoginsWidget: FC<CountManagerLoginsWidgetProps> = ({
           _allManagerLoginsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allManagerLoginsMeta?.count}
     />
   );

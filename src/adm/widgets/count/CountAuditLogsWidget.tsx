@@ -35,7 +35,8 @@ const CountAuditLogsWidget: FC<CountAuditLogsWidgetProps> = ({
           _allAuditLogsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allAuditLogsMeta?.count}
     />
   );

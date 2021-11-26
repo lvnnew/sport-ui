@@ -88,7 +88,7 @@ const App = () => {
           history={history}
           i18nProvider={i18nProvider}
           layout={Layout}
-          loading={() => <Loader />}
+          loading={<Loader />}
           loginPage={Login}
           authProvider={authProvider}
           title=''

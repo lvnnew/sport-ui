@@ -13,7 +13,7 @@ import AutogenerationRuleFilter from './AutogenerationRuleFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Autogeneration rules'} exporter={false} filters={<AutogenerationRuleFilter />} {...props}>
+  <List title='Autogeneration rules' exporter={false} filters={<AutogenerationRuleFilter />} {...props}>
     <Datagrid rowClick='show'>
       <TextField source='id' />
       <TextField source='title' />

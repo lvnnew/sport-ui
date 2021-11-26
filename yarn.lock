@@ -1313,7 +1313,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@craco/craco@^6.4.1":
+"@craco/craco@^6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-6.4.2.tgz#11cf0fce1d38be6599bf4bb09e340a9ed821f29c"
   integrity sha512-egIooyvuzKM5dsvWe/U5ISyFpZwLnG9uuTF1fU4s/6b/hE8MvoxyaxKymQKgbtpfOZeH0ebtEP4cbH7xZ4XRbw==
@@ -3103,7 +3103,7 @@
   resolved "https://registry.npmjs.com/@types/q/-/q-1.5.5.tgz#75a2a8e7d8ab4b230414505d92335d1dcb53a6df"
   integrity sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==
 
-"@types/ramda@^0.27.51":
+"@types/ramda@^0.27.52":
   version "0.27.52"
   resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.27.52.tgz#867c41c24563e610f6ee27e7ae278772729bb88e"
   integrity sha512-7wB3lv+fk4acUc8o2518OgzngeKDC+QQk7hdBoQF8sKoieorG8LxNaDMmr/hT7SALSYRXr/nHkrGu+rBACvGUA==
@@ -3192,7 +3192,7 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^17.0.36":
+"@types/react@^17.0.37":
   version "17.0.37"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.37.tgz#6884d0aa402605935c397ae689deed115caad959"
   integrity sha512-2FS1oTqBGcH/s0E+CjrCCR9+JMpsu9b69RTFO+40ua43ZqP5MmQ4iUde/dMjWR909KxZwmOQIFq6AV6NjEG5xg==
@@ -6647,7 +6647,7 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-canonical@^32.42.0:
+eslint-config-canonical@^32.43.0:
   version "32.43.0"
   resolved "https://registry.yarnpkg.com/eslint-config-canonical/-/eslint-config-canonical-32.43.0.tgz#abcc8d2a8fab63cc2838850cea1969960334626e"
   integrity sha512-kJUWQE6AHd/vMETZ3m6bq9Wkl3Ww761Rw062pF/WxykmsxcUmfih/7ilMpTQhhbkQh+f4ysXZJsyb2bDxUPhWQ==

@@ -1,3 +1,1 @@
-import DefaultMainTab from './DefaultMainTab';
-
-export default DefaultMainTab;
+export {default} from './DefaultMainTab';

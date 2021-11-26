@@ -35,7 +35,8 @@ const CountLanguagesWidget: FC<CountLanguagesWidgetProps> = ({
           _allLanguagesMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allLanguagesMeta?.count}
     />
   );

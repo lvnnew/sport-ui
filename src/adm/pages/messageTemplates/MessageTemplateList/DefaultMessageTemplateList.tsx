@@ -12,7 +12,7 @@ import MessageTemplateFilter from './MessageTemplateFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Message templates'} exporter={false} filters={<MessageTemplateFilter />} {...props}>
+  <List title='Message templates' exporter={false} filters={<MessageTemplateFilter />} {...props}>
     <Datagrid rowClick='show'>
       <TextField source='id' />
       <TextField source='title' />

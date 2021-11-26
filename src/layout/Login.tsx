@@ -18,8 +18,8 @@ import {
   makeStyles,
   createStyles,
   ThemeProvider,
-} from '@mui/base/styles';
-import LockIcon from '@mui/icons/Lock';
+} from '@mui/styles';
+import LockIcon from '@mui/icons-material/Lock';
 import {
   Notification, useTranslate, useLogin, useNotify,
 } from 'react-admin';
@@ -123,6 +123,7 @@ const Login = () => {
     if (!values.email) {
       errors.email = translate('ra.validation.required');
     }
+
     if (!values.password) {
       errors.password = translate('ra.validation.required');
     }

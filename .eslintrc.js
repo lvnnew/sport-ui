@@ -1,3 +1,4 @@
+/* eslint-disable canonical/filename-match-regex */
 module.exports = {
   env: {
     browser: true,
@@ -37,6 +38,11 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'canonical/id-match': 'off',
+    'canonical/filename-match-exported': 'off',
+    'canonical/filename-match-regex': 'off',
+    'unicorn/no-array-reduce': 'off',
+    'canonical/sort-keys': 'off',
     'import/no-extraneous-dependencies': [0],
     'sort-keys-fix/sort-keys-fix': [0],
     'no-use-before-define': 'off',

@@ -13,7 +13,7 @@ import StatFilter from './StatFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultStatList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Stats'} exporter={false} filters={<StatFilter />} {...props}>
+  <List title='Stats' exporter={false} filters={<StatFilter />} {...props}>
     <Datagrid rowClick='show'>
       <TextField source='id' />
       <DateField source='updated' />

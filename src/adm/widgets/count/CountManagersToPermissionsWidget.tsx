@@ -35,7 +35,8 @@ const CountManagersToPermissionsWidget: FC<CountManagersToPermissionsWidgetProps
           _allManagersToPermissionsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allManagersToPermissionsMeta?.count}
     />
   );

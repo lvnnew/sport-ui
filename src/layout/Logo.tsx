@@ -5,7 +5,7 @@ import {
 } from 'react';
 import {
   useTheme,
-} from '@mui/base/styles';
+} from '@mui/styles';
 
 const Logo = (props: SVGProps<SVGSVGElement>) => {
   const theme = useTheme();

@@ -35,7 +35,8 @@ const CountFilesWidget: FC<CountFilesWidgetProps> = ({
           _allFilesMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allFilesMeta?.count}
     />
   );

@@ -12,7 +12,7 @@ import {
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 
 const useStyles = makeStyles(() => createStyles({
   section: {

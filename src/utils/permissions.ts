@@ -10,6 +10,7 @@ export const hasAnyOfPermissions = (allPermissions: string[] | undefined, permis
   if (!allPermissions || allPermissions.length === 0) {
     return false;
   }
+
   if (permissions.length === 0) {
     return true;
   }

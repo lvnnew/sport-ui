@@ -8,8 +8,7 @@ import {
 import {
   Link,
 } from 'react-router-dom';
-import ListItem from '@mui/base/ListItem';
-import ListItemText from '@mui/base/ListItemText';
+import {ListItem, ListItemText} from '@mui/material';
 import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';

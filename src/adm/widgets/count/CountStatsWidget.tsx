@@ -35,7 +35,8 @@ const CountStatsWidget: FC<CountStatsWidgetProps> = ({
           _allStatsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allStatsMeta?.count}
     />
   );

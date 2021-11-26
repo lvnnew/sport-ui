@@ -14,11 +14,15 @@ type Action =
     | { type: 'OTHER_ACTION'; payload?: any };
 
 const themeReducer: Reducer<State, Action> = (
-  previousState = 'dark',
+  previousState,
   action,
 ) => {
   if (action.type === CHANGE_THEME) {
     return action.payload;
+  }
+
+  if (!previousState) {
+    return 'dark';
   }
 
   return previousState;

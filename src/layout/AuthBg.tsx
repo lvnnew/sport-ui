@@ -2,7 +2,7 @@ import React from 'react';
 import {
   makeStyles,
   createStyles,
-} from '@mui/base';
+} from '@mui/styles';
 
 const useStyles = makeStyles(() => createStyles({
   bg: {

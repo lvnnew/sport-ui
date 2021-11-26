@@ -35,7 +35,8 @@ const CountUsersWidget: FC<CountUsersWidgetProps> = ({
           _allUsersMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allUsersMeta?.count}
     />
   );

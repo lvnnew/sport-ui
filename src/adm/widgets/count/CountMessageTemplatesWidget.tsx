@@ -35,7 +35,8 @@ const CountMessageTemplatesWidget: FC<CountMessageTemplatesWidgetProps> = ({
           _allMessageTemplatesMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allMessageTemplatesMeta?.count}
     />
   );

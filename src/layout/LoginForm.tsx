@@ -10,9 +10,8 @@ import {
 } from 'react-admin';
 import {
   withStyles, createStyles,
-} from '@mui/base/styles';
-import CardActions from '@mui/base/CardActions';
-import Button from '@mui/base/Button';
+} from '@mui/styles';
+import {CardActions, Button} from '@mui/material';
 
 const styles = ({spacing}: any) =>
   createStyles({

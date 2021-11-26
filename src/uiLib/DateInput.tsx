@@ -10,10 +10,12 @@ const format = (value: string | Date) => {
 };
 
 const DateInput = (props: DateInputProps) => (
-  <RaDateInput {...{
-    format,
-    ...props,
-  }} />
+  <RaDateInput
+    {...{
+      format,
+      ...props,
+    }}
+  />
 );
 
 export default DateInput;

@@ -10,10 +10,12 @@ const parse = (value: string) => {
 };
 
 const DateTimeInput = (props: DateTimeInputProps) => (
-  <RaDateTimeInput {...{
-    parse,
-    ...props,
-  }} />
+  <RaDateTimeInput
+    {...{
+      parse,
+      ...props,
+    }}
+  />
 );
 
 export default DateTimeInput;

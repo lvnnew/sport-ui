@@ -35,7 +35,8 @@ const CountUnitsWidget: FC<CountUnitsWidgetProps> = ({
           _allUnitsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allUnitsMeta?.count}
     />
   );

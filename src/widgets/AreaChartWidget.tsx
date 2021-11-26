@@ -18,7 +18,7 @@ import {
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 
 interface CountRow {
   name: string;

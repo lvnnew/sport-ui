@@ -3,7 +3,7 @@ import {useEffectOnce, useUnmount, useUpdateEffect} from 'react-use';
 
 const useInterval = (callback: () => void, ms: number) => {
   const timeout = useRef<ReturnType<typeof setTimeout>>();
-  const planCallFunc = useRef<() => void>();
+  const plannedCallFunc = useRef<() => void>();
   const callbackFunc = useRef<() => void>(callback);
   const isLoading = useRef<boolean>(false);
 
@@ -19,7 +19,7 @@ const useInterval = (callback: () => void, ms: number) => {
   }, []);
 
   // schedules a function call
-  const planCall = useCallback(() => {
+  const plannedCall = useCallback(() => {
     if (!isLoading.current) {
       timeout.current = setTimeout(async () => {
         isLoading.current = true;
@@ -34,16 +34,16 @@ const useInterval = (callback: () => void, ms: number) => {
 
         isLoading.current = false;
 
-        if (planCallFunc.current) {
-          planCallFunc.current();
+        if (plannedCallFunc.current) {
+          plannedCallFunc.current();
         }
       }, ms);
     }
   }, [ms]);
 
   useEffect(() => {
-    planCallFunc.current = planCall;
-  }, [planCall]);
+    plannedCallFunc.current = plannedCall;
+  }, [plannedCall]);
 
   const callNowAndResetTimer = useCallback<() => Promise<void>>(async () => {
     if (!isLoading.current) {
@@ -55,19 +55,20 @@ const useInterval = (callback: () => void, ms: number) => {
         await callbackFunc.current();
       }
 
+      // eslint-disable-next-line require-atomic-updates
       isLoading.current = false;
 
-      planCall();
+      plannedCall();
     }
-  }, [clear, planCall]);
+  }, [clear, plannedCall]);
 
   useEffectOnce(() => {
-    planCall();
+    plannedCall();
   });
 
   useUnmount(clear);
 
-  return [callNowAndResetTimer, planCall, clear];
+  return [callNowAndResetTimer, plannedCall, clear];
 };
 
 export default useInterval;

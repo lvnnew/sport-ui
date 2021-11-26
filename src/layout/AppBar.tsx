@@ -3,7 +3,10 @@ import {
   forwardRef,
 } from 'react';
 import {
-  AppBar, UserMenu, MenuItemLink, useTranslate,
+  AppBar as MuiAppBar,
+  UserMenu,
+  MenuItemLink, 
+  useTranslate,
 } from 'react-admin';
 import {Typography} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -11,7 +14,7 @@ import {
   makeStyles,
   createStyles,
   Theme,
-} from '@mui/base/styles';
+} from '@mui/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -51,11 +54,11 @@ const CustomUserMenu = (props: any) => (
   </UserMenu>
 );
 
-const CustomAppBar = (props: any) => {
+const AppBar = (props: any) => {
   const classes = useStyles();
 
   return (
-    <AppBar {...props} elevation={1} userMenu={<CustomUserMenu />}>
+    <MuiAppBar {...props} elevation={1} userMenu={<CustomUserMenu />}>
       <Typography
         className={classes.title}
         color='inherit'
@@ -71,8 +74,8 @@ const CustomAppBar = (props: any) => {
         Agro Platform
       </Typography>
       <span className={classes.spacer} />
-    </AppBar>
+    </MuiAppBar>
   );
 };
 
-export default CustomAppBar;
+export default AppBar;

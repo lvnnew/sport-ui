@@ -15,7 +15,7 @@ import AutogenerationHistoryEntryFilter from './AutogenerationHistoryEntryFilter
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Autogeneration history entries'} exporter={false} filters={<AutogenerationHistoryEntryFilter />} {...props}>
+  <List title='Autogeneration history entries' exporter={false} filters={<AutogenerationHistoryEntryFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <DateField source='date' />

@@ -12,7 +12,7 @@ import UserFilter from './UserFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultUserList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Users'} exporter={false} filters={<UserFilter />} {...props}>
+  <List title='Users' exporter={false} filters={<UserFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <TextField source='title' />

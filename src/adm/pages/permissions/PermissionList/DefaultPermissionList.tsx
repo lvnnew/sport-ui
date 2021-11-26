@@ -11,7 +11,7 @@ import PermissionFilter from './PermissionFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultPermissionList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Permissions'} exporter={false} filters={<PermissionFilter />} {...props}>
+  <List title='Permissions' exporter={false} filters={<PermissionFilter />} {...props}>
     <Datagrid rowClick='show'>
       <TextField source='id' />
       <TextField source='title' />

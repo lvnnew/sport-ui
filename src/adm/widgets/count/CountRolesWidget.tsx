@@ -35,7 +35,8 @@ const CountRolesWidget: FC<CountRolesWidgetProps> = ({
           _allRolesMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allRolesMeta?.count}
     />
   );

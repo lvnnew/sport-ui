@@ -3,12 +3,14 @@ import {
   FC,
 } from 'react';
 import {
-  Box, Card, Typography,
-} from '@mui/base';
+  Box,
+  Card,
+  Typography,
+} from '@mui/material';
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 
 interface TextWidgetProps {
   text: string;

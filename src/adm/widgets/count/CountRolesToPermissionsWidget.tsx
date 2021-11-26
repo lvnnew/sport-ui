@@ -35,7 +35,8 @@ const CountRolesToPermissionsWidget: FC<CountRolesToPermissionsWidgetProps> = ({
           _allRolesToPermissionsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allRolesToPermissionsMeta?.count}
     />
   );

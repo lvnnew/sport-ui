@@ -35,7 +35,8 @@ const CountAutogenerationRulesWidget: FC<CountAutogenerationRulesWidgetProps> = 
           _allAutogenerationRulesMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allAutogenerationRulesMeta?.count}
     />
   );

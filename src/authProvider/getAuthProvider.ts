@@ -50,7 +50,7 @@ const getAuthProvider: (
       });
   },
   checkError: async (error) => {
-    const status = error.status;
+    const {status} = error;
     if (status === 401 || status === 403) {
       localStorage.removeItem(JWT_STORAGE_KEY);
 
@@ -75,6 +75,7 @@ const getAuthProvider: (
     if (!stringified) {
       return Promise.reject(new Error('No identty'));
     }
+
     try {
       const identity = JSON.parse(stringified);
 

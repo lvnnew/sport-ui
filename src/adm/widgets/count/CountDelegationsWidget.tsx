@@ -35,7 +35,8 @@ const CountDelegationsWidget: FC<CountDelegationsWidgetProps> = ({
           _allDelegationsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allDelegationsMeta?.count}
     />
   );

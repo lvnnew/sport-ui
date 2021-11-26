@@ -14,7 +14,7 @@ import ManagerFilter from './ManagerFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagerList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Managers'} exporter={false} filters={<ManagerFilter />} {...props}>
+  <List title='Managers' exporter={false} filters={<ManagerFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <TextField source='title' />

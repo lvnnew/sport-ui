@@ -15,7 +15,7 @@ import AuditLogFilter from './AuditLogFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Audit logs'} exporter={false} filters={<AuditLogFilter />} {...props}>
+  <List title='Audit logs' exporter={false} filters={<AuditLogFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <DateField source='date' />

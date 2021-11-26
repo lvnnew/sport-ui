@@ -21,7 +21,7 @@ import {
 import {
   ProjectMenu,
 } from '../adm/ProjectMenu';
-import {makeStyles, createStyles} from '@mui/base/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 import classnames from 'classnames';
 import {hasPermission} from '../utils/permissions';
 

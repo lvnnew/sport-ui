@@ -2,10 +2,10 @@ import React, {useState, FC} from 'react';
 import {useSelector} from 'react-redux';
 import {MenuItemLink} from 'react-admin';
 import SubMenu from '../layout/SubMenu';
-import FileSaving from '@mui/icons/PermMedia';
+import FileSaving from '@mui/icons-material/PermMedia';
 import {AppState} from '../types';
 import {useDebug} from '../contexts/DebugContext';
-import DefaultIcon from '@mui/icons/DetailsOutlined';
+import DefaultIcon from '@mui/icons-material/DetailsOutlined';
 
 const defaultState = {
   menuFunctions: false,

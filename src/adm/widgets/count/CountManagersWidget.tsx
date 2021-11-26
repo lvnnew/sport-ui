@@ -35,7 +35,8 @@ const CountManagersWidget: FC<CountManagersWidgetProps> = ({
           _allManagersMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allManagersMeta?.count}
     />
   );

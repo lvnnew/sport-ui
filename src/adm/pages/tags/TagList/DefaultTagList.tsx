@@ -12,7 +12,7 @@ import TagFilter from './TagFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultTagList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Tags'} exporter={false} filters={<TagFilter />} {...props}>
+  <List title='Tags' exporter={false} filters={<TagFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <TextField source='comment' />

@@ -13,7 +13,7 @@ import UnitFilter from './UnitFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultUnitList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Units'} exporter={false} filters={<UnitFilter />} {...props}>
+  <List title='Units' exporter={false} filters={<UnitFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <TextField source='title' />

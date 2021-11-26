@@ -7,12 +7,12 @@ import React, {
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
-import PendingRequestsIcon from '@mui/icons/ErrorOutlineOutlined';
+import PendingRequestsIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
-import {Button} from '@mui/base';
-import CircularProgress from '@mui/base/CircularProgress';
+import {Button} from '@mui/material';
+import {CircularProgress} from '@mui/material';
 import {useVersion} from 'ra-core';
 import {useRefresh} from 'react-admin';
 
@@ -73,7 +73,7 @@ const DashboardStats: FC = () => {
           <CardWithIcon
             icon={PendingRequestsIcon}
             subtitle={resultToValue(data.Stat.helloCount)}
-            title={'Hello Count'}
+            title='Hello Count'
           />
         </div>
       )}

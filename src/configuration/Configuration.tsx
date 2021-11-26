@@ -2,16 +2,16 @@ import * as React from 'react';
 import {
   useSelector, useDispatch,
 } from 'react-redux';
-import Card from '@mui/base/Card';
-import CardContent from '@mui/base/CardContent';
-import Button from '@mui/base/Button';
+import {Card} from '@mui/material';
+import {CardContent} from '@mui/material';
+import {Button} from '@mui/material';
 import {
   useTranslate, useLocale, useSetLocale, Title,
 } from 'react-admin';
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 import {
   changeTheme,
 } from './actions';

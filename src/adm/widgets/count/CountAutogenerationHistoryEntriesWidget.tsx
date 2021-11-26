@@ -35,7 +35,8 @@ const CountAutogenerationHistoryEntriesWidget: FC<CountAutogenerationHistoryEntr
           _allAutogenerationHistoryEntriesMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count}
     />
   );

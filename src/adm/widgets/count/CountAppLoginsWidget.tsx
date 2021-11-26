@@ -35,7 +35,8 @@ const CountAppLoginsWidget: FC<CountAppLoginsWidgetProps> = ({
           _allAppLoginsMeta(filter: $filter) {
             count
           }
-        }`}
+        }
+      `}
       resultToValue={result => result?._allAppLoginsMeta?.count}
     />
   );

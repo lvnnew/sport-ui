@@ -13,7 +13,7 @@ import ManagersToPermissionFilter from './ManagersToPermissionFilter';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => (
-  <List title={'Managers to permissions'} exporter={false} filters={<ManagersToPermissionFilter />} {...props}>
+  <List title='Managers to permissions' exporter={false} filters={<ManagersToPermissionFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
       <ReferenceField source='managerId' reference='managers' link='show'>

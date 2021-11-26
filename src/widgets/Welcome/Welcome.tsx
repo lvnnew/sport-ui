@@ -3,14 +3,18 @@ import {
   FC,
 } from 'react';
 import {
-  Box, Card, CardActions, Button, Typography,
-} from '@mui/base';
-import HomeIcon from '@mui/icons/Home';
-import CodeIcon from '@mui/icons/Code';
+  Box,
+  Card,
+  CardActions,
+  Button,
+  Typography,
+} from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import CodeIcon from '@mui/icons-material/Code';
 import {
   makeStyles,
   createStyles,
-} from '@mui/base/styles';
+} from '@mui/styles';
 import {
   useTranslate,
 } from 'react-admin';
