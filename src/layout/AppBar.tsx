@@ -8,13 +8,13 @@ import {
   MenuItemLink,
   useTranslate,
 } from 'react-admin';
-import {Typography, Theme} from '@mui/material';
+import {Typography} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {makeStyles, createStyles} from '@mui/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
+const useStyles = makeStyles(() => createStyles({
   spacer: {
     flex: 1,
   },
