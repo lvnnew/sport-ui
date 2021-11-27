@@ -9,17 +9,16 @@ import {
   useTranslate,
 } from 'react-admin';
 
-const useStyles = makeStyles(theme => createStyles({
-  icon: {minWidth: (theme as any).spacing(5)},
+const useStyles = makeStyles(() => createStyles({
   sidebarIsClosed: {
     '& a': {
-      paddingLeft: (theme as any).spacing(2),
+      paddingLeft: 16,
       transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
     },
   },
   sidebarIsOpen: {
     '& a': {
-      paddingLeft: (theme as any).spacing(4),
+      paddingLeft: 32,
       transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
     },
   },
@@ -48,7 +47,7 @@ const SubMenu: FC<Props> = ({
 
   const header = (
     <MenuItem dense={dense} onClick={handleToggle}>
-      <ListItemIcon className={classes.icon}>
+      <ListItemIcon sx={{minWidth: 5}}>
         {isOpen ? <ExpandMore /> : icon}
       </ListItemIcon>
       <Typography color='textSecondary' variant='inherit'>

@@ -21,14 +21,9 @@ export interface ListWigetProps<T> {
   action?: React.ReactNode;
 }
 
-const useStyles = makeStyles(theme => createStyles({
-  cost: {
-    color: (theme as any).palette.text.primary,
-    marginRight: '1em',
-  },
+const useStyles = makeStyles(() => createStyles({
   root: {
     flex: '1 1 160px',
-    margin: (theme as any).spacing(1),
     minHeight: 52,
     minWidth: '300px',
   },
@@ -48,7 +43,7 @@ const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
   const records = useMemo(() => resultToValue(result), [resultToValue, result]);
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} sx={{m: 1}}>
       <CardHeader
         title={title}
         action={action}

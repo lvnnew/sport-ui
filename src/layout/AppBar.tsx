@@ -24,9 +24,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
   },
-  centerTitle: {
-    color: (theme as any).palette.primary.main,
-  },
 }));
 
 const ConfigurationMenu = forwardRef<any, any>((props, ref) => {
@@ -62,7 +59,9 @@ const AppBar = (props: any) => {
         variant='h6'
       />
       <Typography
-        className={classes.centerTitle}
+        sx={{
+          color: 'primary.main',
+        }}
         color='inherit'
         id='react-admin-title'
         variant='h6'

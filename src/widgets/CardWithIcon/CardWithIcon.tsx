@@ -17,7 +17,7 @@ export interface CardWithIconProps {
   subtitle?: string | number;
 }
 
-const useStyles = makeStyles(theme => createStyles({
+const useStyles = makeStyles(() => createStyles({
   card: {
     '& a': {
       color: 'inherit',
@@ -26,14 +26,13 @@ const useStyles = makeStyles(theme => createStyles({
     display: 'flex',
     flex: '1 1 160px',
     flexDirection: 'column',
-    margin: (theme as any).spacing(1),
     minHeight: 52,
     minWidth: '300px',
     wordWrap: 'break-word',
   },
   main: () => ({
     '& .icon': {
-      color: (theme as any).palette.type === 'dark' ? (theme as any).palette.primary.dark : (theme as any).palette.primary.light,
+      // color: (theme as any).palette.type === 'dark' ? (theme as any).palette.primary.dark : (theme as any).palette.primary.light,
     },
     alignItems: 'center',
 
@@ -57,7 +56,7 @@ const CardWithIcon: FC<CardWithIconProps> = props => {
   const classes = useStyles(props);
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} sx={{m: 1}}>
       {to ?
         <Link to={to}>
           <HeaderView {...props} />

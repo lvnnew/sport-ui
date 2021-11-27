@@ -14,20 +14,9 @@ import {
   CartesianGrid,
   Tooltip,
 } from 'recharts';
-import {makeStyles, createStyles} from '@mui/styles';
-
-// import {
-//   useTranslate,
-// } from 'react-admin';
 import {
   Order,
 } from '../types';
-
-const useStyles = makeStyles((theme) => createStyles({
-  card: {
-    margin: (theme as any).spacing(1),
-  },
-}));
 
 const lastDay = new Date(new Date().toDateString()).getTime();
 const oneDay = 24 * 60 * 60 * 1000;
@@ -65,15 +54,12 @@ const getRevenuePerDay = (orders: Order[]): TotalByDay[] => {
 };
 
 const ChartWiget: FC<{ orders?: Order[]; title?: string }> = ({orders, title}) => {
-  const classes = useStyles();
-
-  // const translate = useTranslate();
   if (!orders) {
     return null;
   }
 
   return (
-    <Card className={classes.card}>
+    <Card sx={{m: 1}}>
       <CardHeader title={title} />
       <CardContent>
         <div style={{height: 300, width: '100%'}}>

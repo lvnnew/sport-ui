@@ -8,7 +8,7 @@ import {
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
   // eslint-disable-next-line import/no-deprecated
-  useMediaQuery, Theme,
+  useMediaQuery, Box, useTheme,
 } from '@mui/material';
 import {
   useTranslate,
@@ -28,14 +28,9 @@ import {hasPermission} from '../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const useStyles = makeStyles(theme => createStyles({
+const useStyles = makeStyles(() => createStyles({
   root: {
-    marginTop: (theme as any).spacing(1),
-    marginBottom: (theme as any).spacing(1),
-    transition: (theme as any).transitions.create('width', {
-      easing: (theme as any).transitions.easing.sharp,
-      duration: (theme as any).transitions.duration.leavingScreen,
-    }),
+    transition: 'width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;',
   },
   open: {
     width: 240,
@@ -54,20 +49,23 @@ interface Props {
 const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
   const translate = useTranslate();
   const classes = useStyles();
+  const theme = useTheme();
   // eslint-disable-next-line import/no-deprecated
-  const isXSmall = useMediaQuery((theme: Theme) =>
-    (theme as any).breakpoints.down('xs'),
-  );
+  const isXSmall = useMediaQuery(theme.breakpoints.down('xs'));
   const open = useSelector((state: AppState) => state.admin.ui.sidebarOpen);
   useSelector((state: AppState) => state.theme); // force rerender on theme change
   const {permissions} = usePermissions<string[]>();
 
   return (
-    <div
+    <Box
       className={classnames(classes.root, {
         [classes.open]: open,
         [classes.closed]: !open,
       })}
+      sx={{
+        marginTop: 1,
+        marginBottom: 1,
+      }}
     >
       {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
       <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
@@ -82,7 +80,7 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
         />
       )}
       {isXSmall && logout}
-    </div>
+    </Box>
   );
 };
 

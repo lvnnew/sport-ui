@@ -14,6 +14,7 @@ import {
   TextField,
   createTheme,
   ThemeProvider,
+  Box,
 } from '@mui/material';
 import {makeStyles, createStyles} from '@mui/styles';
 import LockIcon from '@mui/icons-material/Lock';
@@ -25,7 +26,7 @@ import {
 } from './themes';
 import AuthBg from './AuthBg';
 
-const useStyles = makeStyles(theme => createStyles({
+const useStyles = makeStyles(() => createStyles({
   actions: {
     padding: '0 1em 1em 1em',
   },
@@ -37,19 +38,14 @@ const useStyles = makeStyles(theme => createStyles({
   card: {
     marginTop: '6em',
     minWidth: 300,
-    zIndex: (theme as any).zIndex.modal,
   },
   form: {
     padding: '0 1em 1em 1em',
   },
   hint: {
-    color: (theme as any).palette.grey[500],
     display: 'flex',
     justifyContent: 'center',
     marginTop: '1em',
-  },
-  icon: {
-    backgroundColor: (theme as any).palette.secondary.main,
   },
   input: {
     marginTop: '1em',
@@ -136,18 +132,18 @@ const Login = () => {
         render={({handleSubmit, hasValidationErrors}) => (
           <form noValidate onSubmit={handleSubmit}>
             <div className={classes.main}>
-              <Card className={classes.card}>
+              <Card className={classes.card} sx={{zIndex: 'modal'}}>
                 <div className={classes.avatar}>
-                  <Avatar className={classes.icon}>
+                  <Avatar sx={{bgcolor: 'secondary.main'}}>
                     <LockIcon />
                   </Avatar>
                 </div>
-                <div className={classes.hint}>
+                <Box className={classes.hint} sx={{color: 'grey.500'}}>
                   Login: admin@example.com
-                </div>
-                <div className={classes.hint}>
+                </Box>
+                <Box className={classes.hint} sx={{color: 'grey.500'}}>
                   Pass: admin
-                </div>
+                </Box>
                 <div className={classes.form}>
                   <div className={classes.input}>
                     <Field

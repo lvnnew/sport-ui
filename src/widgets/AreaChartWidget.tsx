@@ -15,7 +15,6 @@ import {
   YAxis,
   Tooltip,
 } from 'recharts';
-import {makeStyles, createStyles} from '@mui/styles';
 
 interface CountRow {
   name: string;
@@ -27,17 +26,9 @@ export interface AreaChartWidgetProps {
   rows: CountRow[];
 }
 
-const useStyles = makeStyles((theme) => createStyles({
-  card: {
-    margin: (theme as any).spacing(1),
-  },
-}));
-
 const AreaChartWidget: FC<AreaChartWidgetProps> = ({title, rows}) => {
-  const classes = useStyles();
-
   return (
-    <Card className={classes.card}>
+    <Card sx={{m: 1}}>
       <CardHeader title={title} />
       <CardContent>
         <ResponsiveContainer height={300} width='100%'>

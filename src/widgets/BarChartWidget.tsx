@@ -13,7 +13,6 @@ import {
   YAxis,
   Tooltip,
 } from 'recharts';
-import {makeStyles, createStyles} from '@mui/styles';
 
 export interface BarChartWidgetProps {
   title?: string;
@@ -25,17 +24,9 @@ interface CountRow {
   count: number;
 }
 
-const useStyles = makeStyles((theme) => createStyles({
-  card: {
-    margin: (theme as any).spacing(1),
-  },
-}));
-
 const BarChartWidget: FC<BarChartWidgetProps> = ({title, rows}) => {
-  const classes = useStyles();
-
   return (
-    <Card className={classes.card}>
+    <Card sx={{m: 1}}>
       <CardHeader title={title} />
       <CardContent>
         <ResponsiveContainer height={300} width='100%'>

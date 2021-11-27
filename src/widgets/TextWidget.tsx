@@ -13,16 +13,15 @@ interface TextWidgetProps {
   text: string;
 }
 
-const useStyles = makeStyles(theme => createStyles({
+const useStyles = makeStyles(() => createStyles({
   root: {
-    background:
-            (theme as any).palette.type === 'dark' ?
-              '#535353' :
-              // eslint-disable-next-line max-len
-              'linear-gradient(to right, #8975fb 0%, #746be7 35%), linear-gradient(to bottom, #8975fb 0%, #6f4ceb 50%), #6f4ceb',
+    // background:
+    //         (theme as any).palette.type === 'dark' ?
+    //           '#535353' :
+    //           // eslint-disable-next-line max-len
+    //           'linear-gradient(to right, #8975fb 0%, #746be7 35%), linear-gradient(to bottom, #8975fb 0%, #6f4ceb 50%), #6f4ceb',
 
     color: '#fff',
-    margin: (theme as any).spacing(1),
     padding: 20,
   },
 }));
@@ -31,7 +30,7 @@ const TextWidget: FC<TextWidgetProps> = ({text}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} sx={{m: 1}}>
       <Box display='flex'>
         <Box flex='1'>
           <Typography component='h2' gutterBottom variant='h5'>
