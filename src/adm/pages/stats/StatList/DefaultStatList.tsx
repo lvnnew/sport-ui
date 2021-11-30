@@ -16,7 +16,7 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => (
   <List title='Stats' exporter={false} filters={<StatFilter />} {...props}>
     <Datagrid rowClick='show'>
       <TextField source='id' />
-      <DateField source='updated' />
+      <DateField source='updated' showTime />
       <NumberField source='helloCount' />
     </Datagrid>
   </List>

@@ -12,9 +12,9 @@ import {
   CardActions,
   CircularProgress,
   TextField,
-  createTheme,
   ThemeProvider,
   Box,
+  Typography,
 } from '@mui/material';
 import {makeStyles, createStyles} from '@mui/styles';
 import LockIcon from '@mui/icons-material/Lock';
@@ -139,10 +139,14 @@ const Login = () => {
                   </Avatar>
                 </div>
                 <Box className={classes.hint} sx={{color: 'grey.500'}}>
-                  Login: admin@example.com
+                  <Typography>
+                    Login: admin@example.com
+                  </Typography>
                 </Box>
                 <Box className={classes.hint} sx={{color: 'grey.500'}}>
-                  Pass: admin
+                  <Typography>
+                    Pass: admin
+                  </Typography>
                 </Box>
                 <div className={classes.form}>
                   <div className={classes.input}>
@@ -196,7 +200,7 @@ const Login = () => {
 // Because otherwise the useStyles() hook used in Login won't get
 // the right theme
 const LoginWithTheme = (props: any) => (
-  <ThemeProvider theme={createTheme(lightTheme)}>
+  <ThemeProvider theme={lightTheme}>
     <Login {...props} />
   </ThemeProvider>
 );

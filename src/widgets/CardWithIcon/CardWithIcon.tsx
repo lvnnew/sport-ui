@@ -31,13 +31,10 @@ const useStyles = makeStyles(() => createStyles({
     wordWrap: 'break-word',
   },
   main: () => ({
-    '& .icon': {
-      // color: (theme as any).palette.type === 'dark' ? (theme as any).palette.primary.dark : (theme as any).palette.primary.light,
-    },
     alignItems: 'center',
 
     // background: `url(${
-    //   (theme as any).palette.type === 'dark' ? cartoucheDark : cartouche
+    //   (theme as any).palette.mode === 'dark' ? cartoucheDark : cartouche
     // }) no-repeat`,
     display: 'flex',
     justifyContent: 'space-between',
@@ -74,7 +71,13 @@ const HeaderView: FC<CardWithIconProps> = props => {
 
   return (
     <div className={classes.main}>
-      <Box className='icon' width='3em'>
+      <Box
+        className='icon'
+        width='3em'
+        sx={{
+          color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light'),
+        }}
+      >
         {createElement(icon, {fontSize: 'large'})}
       </Box>
       <Box className={classes.titleBox} textAlign='right'>

@@ -16,7 +16,7 @@ interface TextWidgetProps {
 const useStyles = makeStyles(() => createStyles({
   root: {
     // background:
-    //         (theme as any).palette.type === 'dark' ?
+    //         (theme as any).palette.mode === 'dark' ?
     //           '#535353' :
     //           // eslint-disable-next-line max-len
     //           'linear-gradient(to right, #8975fb 0%, #746be7 35%), linear-gradient(to bottom, #8975fb 0%, #6f4ceb 50%), #6f4ceb',

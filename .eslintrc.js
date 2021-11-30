@@ -38,6 +38,8 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'unicorn/prefer-object-from-entries': 'off',
+    'mocha/no-skipped-tests': 'off',
     'jest/consistent-test-it': 'off',
     'mocha/no-global-tests': 'off',
     'jest/require-top-level-describe': 'off',

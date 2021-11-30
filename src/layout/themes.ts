@@ -1,10 +1,18 @@
-export const darkTheme = {
+import {createTheme, ThemeOptions} from '@mui/material';
+
+export const darkThemeOptions = {
   overrides: {
     MuiAppBar: {
       colorSecondary: {
         backgroundColor: '#616161e6',
         color: '#ffffffb3',
       },
+    },
+  },
+  typography: {
+    fontFamily: '"Google Sans", "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    button: {
+      textTransform: 'none',
     },
   },
   palette: {
@@ -16,9 +24,11 @@ export const darkTheme = {
     },
     type: 'dark', // Switching the dark mode on is a single property value change.
   },
-};
+} as ThemeOptions;
 
-export const lightTheme = {
+export const darkTheme = createTheme(darkThemeOptions);
+
+export const lightThemeOptions = {
   overrides: {
     MuiAppBar: {
       colorSecondary: {
@@ -67,6 +77,12 @@ export const lightTheme = {
       },
     },
   },
+  typography: {
+    fontFamily: '"Google Sans", "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    button: {
+      textTransform: 'none',
+    },
+  },
   palette: {
     background: {
       default: '#fcfcfe',
@@ -84,4 +100,6 @@ export const lightTheme = {
   shape: {
     borderRadius: 10,
   },
-};
+} as ThemeOptions;
+
+export const lightTheme = createTheme(lightThemeOptions);
