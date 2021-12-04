@@ -21,7 +21,7 @@
     "@mui/lab": "^5.0.0-alpha.58",
     "@mui/material": "^5.2.2",
     "@mui/styles": "^5.2.2",
-    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/user-event": "^13.5.0",
     "apollo-upload-client": "^16.0.0",
     "classnames": "^2.3.1",
@@ -72,7 +72,7 @@
     "@typescript-eslint/parser": "5.5.0",
     "craco-swc": "^0.2.0",
     "cross-env": "^7.0.3",
-    "eslint-config-canonical": "^32.43.1",
+    "eslint-config-canonical": "^32.43.2",
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-react": "^7.27.1",
     "utility-types": "^3.10.0"
