@@ -4,9 +4,9 @@ import {
   TextInput,
   ReferenceInput,
   AutocompleteInput,
-  DateInput,
   BooleanInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

@@ -6,13 +6,13 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  DateField,
   BooleanField,
   ReferenceManyField,
   Pagination,
   Datagrid,
   ShowButton,
 } from 'react-admin';
+import DateField from '../../../../../uiLib/DateField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

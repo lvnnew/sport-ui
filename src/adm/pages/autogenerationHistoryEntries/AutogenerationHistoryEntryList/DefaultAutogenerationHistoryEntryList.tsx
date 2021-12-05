@@ -5,11 +5,11 @@ import {
   Datagrid,
   ListProps,
   NumberField,
-  DateField,
   TextField,
   ReferenceField,
   BooleanField,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import AutogenerationHistoryEntryFilter from './AutogenerationHistoryEntryFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE

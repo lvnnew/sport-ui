@@ -4,9 +4,9 @@ import {
   Tab,
   TabProps,
   TextField,
-  DateField,
   BooleanField,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import FormGrid from '../../../../uiLib/FormGrid';
 
 // DO NOT EDIT! THIS IS GENERATED FILE

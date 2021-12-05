@@ -2,11 +2,11 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
-  DateInput,
   ReferenceInput,
   AutocompleteInput,
   BooleanInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

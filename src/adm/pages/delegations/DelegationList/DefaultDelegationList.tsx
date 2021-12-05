@@ -7,9 +7,9 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  DateField,
   BooleanField,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import DelegationFilter from './DelegationFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE

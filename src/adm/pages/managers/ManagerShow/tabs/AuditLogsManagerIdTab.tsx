@@ -4,7 +4,6 @@ import {
   TabProps,
   Tab,
   NumberField,
-  DateField,
   TextField,
   ReferenceField,
   BooleanField,
@@ -13,6 +12,7 @@ import {
   Datagrid,
   ShowButton,
 } from 'react-admin';
+import DateField from '../../../../../uiLib/DateField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

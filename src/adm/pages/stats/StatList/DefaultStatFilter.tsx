@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
-  DateTimeInput,
   NumberInput,
 } from 'react-admin';
+import DateTimeInput from '../../../../uiLib/DateTimeInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

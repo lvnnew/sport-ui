@@ -11,10 +11,8 @@ const parse = (value: string) => {
 
 const DateTimeInput = (props: DateTimeInputProps) => (
   <RaDateTimeInput
-    {...{
-      parse,
-      ...props,
-    }}
+    parse={parse}
+    {...props}
   />
 );
 

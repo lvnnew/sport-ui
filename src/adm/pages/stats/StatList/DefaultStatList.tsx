@@ -5,9 +5,9 @@ import {
   Datagrid,
   ListProps,
   TextField,
-  DateField,
   NumberField,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import StatFilter from './StatFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
