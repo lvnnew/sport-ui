@@ -63,27 +63,27 @@ spec:
           httpGet:
             path: /
             port: main-port
-          initialDelaySeconds: 60
+          initialDelaySeconds: 600
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /
             port: main-port
-          initialDelaySeconds: 60
+          initialDelaySeconds: 600
           periodSeconds: 5
         startupProbe:
           httpGet:
             path: /
             port: main-port
-          initialDelaySeconds: 60
+          initialDelaySeconds: 600
           failureThreshold: 10
           periodSeconds: 10
 
         resources:
           requests:
-            memory: "256Mi"
+            memory: "2048Mi"
             cpu: "0.15"
           limits:
-            memory: "512Mi"
+            memory: "2048Mi"
             cpu: "1"
 ---
