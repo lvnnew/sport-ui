@@ -47,7 +47,8 @@ const SubMenu: FC<Props> = ({
 
   const header = (
     <MenuItem dense={dense} onClick={handleToggle}>
-      <ListItemIcon sx={{minWidth: 5}}>
+      <ListItemIcon>
+        {/* sx={{pr: 1}} */}
         {isOpen ? <ExpandMore /> : icon}
       </ListItemIcon>
       <Typography color='textSecondary' variant='inherit'>
