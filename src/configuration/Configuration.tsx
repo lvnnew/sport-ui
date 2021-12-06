@@ -2,11 +2,11 @@ import * as React from 'react';
 import {
   useSelector, useDispatch,
 } from 'react-redux';
-import {Card, CardContent, Button} from '@mui/material';
+import {Card, CardContent, Button} from '@material-ui/core';
 import {
   useTranslate, useLocale, useSetLocale, Title,
 } from 'react-admin';
-import {makeStyles, createStyles} from '@mui/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {
   changeTheme,
 } from './actions';

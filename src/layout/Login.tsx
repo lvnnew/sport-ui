@@ -15,9 +15,9 @@ import {
   ThemeProvider,
   Box,
   Typography,
-} from '@mui/material';
-import {makeStyles, createStyles} from '@mui/styles';
-import LockIcon from '@mui/icons-material/Lock';
+} from '@material-ui/core';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
+import LockIcon from '@material-ui/icons/Lock';
 import {
   Notification, useTranslate, useLogin, useNotify,
 } from 'react-admin';
@@ -132,18 +132,28 @@ const Login = () => {
         render={({handleSubmit, hasValidationErrors}) => (
           <form noValidate onSubmit={handleSubmit}>
             <div className={classes.main}>
-              <Card className={classes.card} sx={{zIndex: 'modal'}}>
+              <Card
+                className={classes.card}
+                // sx={{zIndex: 'modal'}}
+              >
                 <div className={classes.avatar}>
-                  <Avatar sx={{bgcolor: 'secondary.main'}}>
+                  <Avatar >
+                    {/* sx={{bgcolor: 'secondary.main'}} */}
                     <LockIcon />
                   </Avatar>
                 </div>
-                <Box className={classes.hint} sx={{color: 'grey.500'}}>
+                <Box
+                  className={classes.hint}
+                  // sx={{color: 'grey.500'}}
+                >
                   <Typography>
                     Login: admin@example.com
                   </Typography>
                 </Box>
-                <Box className={classes.hint} sx={{color: 'grey.500'}}>
+                <Box
+                  className={classes.hint}
+                  // sx={{color: 'grey.500'}}
+                >
                   <Typography>
                     Pass: admin
                   </Typography>

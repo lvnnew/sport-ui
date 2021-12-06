@@ -6,8 +6,8 @@ import {
   Box,
   Card,
   Typography,
-} from '@mui/material';
-import {makeStyles, createStyles} from '@mui/styles';
+} from '@material-ui/core';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 
 interface TextWidgetProps {
   text: string;

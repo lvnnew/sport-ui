@@ -9,7 +9,7 @@ import {
   gql,
   useQuery,
 } from '@apollo/client';
-import {makeStyles, createStyles} from '@mui/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => createStyles({
   section: {

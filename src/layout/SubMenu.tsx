@@ -2,9 +2,9 @@ import * as React from 'react';
 import {
   FC, ReactElement,
 } from 'react';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import {List, MenuItem, ListItemIcon, Typography, Collapse, Tooltip} from '@mui/material';
-import {makeStyles, createStyles} from '@mui/styles';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import {List, MenuItem, ListItemIcon, Typography, Collapse, Tooltip} from '@material-ui/core';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {
   useTranslate,
 } from 'react-admin';

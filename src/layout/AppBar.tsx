@@ -8,9 +8,9 @@ import {
   MenuItemLink,
   useTranslate,
 } from 'react-admin';
-import {Typography} from '@mui/material';
-import SettingsIcon from '@mui/icons-material/Settings';
-import {makeStyles, createStyles} from '@mui/styles';
+import {Typography} from '@material-ui/core';
+import SettingsIcon from '@material-ui/icons/Settings';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

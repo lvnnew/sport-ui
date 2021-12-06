@@ -5,11 +5,11 @@ import {
 import {
   useSelector,
 } from 'react-redux';
-import SettingsIcon from '@mui/icons-material/Settings';
+import SettingsIcon from '@material-ui/icons/Settings';
 import {
   // eslint-disable-next-line import/no-deprecated
   useMediaQuery, Box, useTheme,
-} from '@mui/material';
+} from '@material-ui/core';
 import {
   useTranslate,
   DashboardMenuItem,
@@ -22,7 +22,7 @@ import {
 import {
   ProjectMenu,
 } from '../adm/ProjectMenu';
-import {makeStyles, createStyles} from '@mui/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import classnames from 'classnames';
 import {hasPermission} from '../utils/permissions';
 

@@ -3,8 +3,8 @@ import React, {
   useState,
   ChangeEvent,
 } from 'react';
-import {Typography, TextField, IconButton} from '@mui/material';
-import SendIcon from '@mui/icons-material/SendOutlined';
+import {Typography, TextField, IconButton} from '@material-ui/core';
+import SendIcon from '@material-ui/icons/SendOutlined';
 import {
   gql, useLazyQuery,
 } from '@apollo/client';

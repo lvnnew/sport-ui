@@ -4,11 +4,11 @@ import React, {
   useCallback,
   useEffect,
 } from 'react';
-import {makeStyles, createStyles} from '@mui/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
-import PendingRequestsIcon from '@mui/icons-material/ErrorOutlineOutlined';
+import PendingRequestsIcon from '@material-ui/icons/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
-import {Button, CircularProgress} from '@mui/material';
+import {Button, CircularProgress} from '@material-ui/core';
 import {useVersion} from 'ra-core';
 import {useRefresh} from 'react-admin';
 

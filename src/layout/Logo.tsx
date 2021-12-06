@@ -3,7 +3,7 @@ import * as React from 'react';
 import {
   SVGProps,
 } from 'react';
-import {useTheme} from '@mui/material';
+import {useTheme} from '@material-ui/core';
 
 const Logo = (props: SVGProps<SVGSVGElement>) => {
   const theme = useTheme();

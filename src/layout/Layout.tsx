@@ -16,7 +16,7 @@ import {
 import {
   AppState,
 } from '../types';
-import {ThemeProvider} from '@mui/material';
+import {ThemeProvider} from '@material-ui/core';
 
 const CustomSidebar = (props: any) => <Sidebar {...props} size={200} />;
 

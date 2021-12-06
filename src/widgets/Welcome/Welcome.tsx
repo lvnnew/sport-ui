@@ -8,10 +8,10 @@ import {
   CardActions,
   Button,
   Typography,
-} from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import CodeIcon from '@mui/icons-material/Code';
-import {makeStyles, createStyles} from '@mui/styles';
+} from '@material-ui/core';
+import HomeIcon from '@material-ui/icons/Home';
+import CodeIcon from '@material-ui/icons/Code';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {
   useTranslate,
 } from 'react-admin';

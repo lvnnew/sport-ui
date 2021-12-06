@@ -4,8 +4,8 @@ import {
 } from 'react';
 import {
   Card, Box, Typography, Divider,
-} from '@mui/material';
-import {makeStyles, createStyles} from '@mui/styles';
+} from '@material-ui/core';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {
   Link,
 } from 'react-router-dom';
@@ -74,7 +74,7 @@ const HeaderView: FC<CardWithIconProps> = props => {
       <Box
         className='icon'
         width='3em'
-        sx={{color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light')}}
+        // sx={{color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light')}}
       >
         {createElement(icon, {fontSize: 'large'})}
       </Box>

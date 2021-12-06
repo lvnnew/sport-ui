@@ -3,11 +3,11 @@ import * as React from 'react';
 import {
   FC, useEffect, useMemo, ReactElement,
 } from 'react';
-import {Card, CardHeader, List} from '@mui/material';
+import {Card, CardHeader, List} from '@material-ui/core';
 import {
   useVersion,
 } from 'react-admin';
-import {makeStyles, createStyles} from '@mui/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {
   DocumentNode, QueryHookOptions, useQuery,
 } from '@apollo/client';

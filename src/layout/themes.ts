@@ -1,4 +1,4 @@
-import {createTheme, ThemeOptions} from '@mui/material';
+import {createTheme, ThemeOptions} from '@material-ui/core';
 
 export const darkThemeOptions = {
   overrides: {
