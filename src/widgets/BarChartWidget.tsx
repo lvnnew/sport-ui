@@ -26,7 +26,7 @@ interface CountRow {
 
 const BarChartWidget: FC<BarChartWidgetProps> = ({title, rows}) => {
   return (
-    <Card sx={{m: 1}}>
+    <Card style={{margin: 8}}>
       <CardHeader title={title} />
       <CardContent>
         <ResponsiveContainer height={300} width='100%'>

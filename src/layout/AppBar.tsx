@@ -59,9 +59,7 @@ const AppBar = (props: any) => {
         variant='h6'
       />
       <Typography
-        sx={{
-          color: 'primary.main',
-        }}
+        // sx={{color: 'primary.main'}}
         color='inherit'
         id='react-admin-title'
         variant='h6'

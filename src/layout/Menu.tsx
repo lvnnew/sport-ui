@@ -62,10 +62,8 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
         [classes.open]: open,
         [classes.closed]: !open,
       })}
-      sx={{
-        marginTop: 1,
-        marginBottom: 1,
-      }}
+      // sx={{marginTop: 1, marginBottom: 1}}
+      style={{marginTop: 8, marginBottom: 8}}
     >
       {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
       <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />

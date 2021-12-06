@@ -43,7 +43,7 @@ const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
   const records = useMemo(() => resultToValue(result), [resultToValue, result]);
 
   return (
-    <Card className={classes.root} sx={{m: 1}}>
+    <Card className={classes.root} style={{margin: 8}}>
       <CardHeader
         title={title}
         action={action}

@@ -53,7 +53,7 @@ const CardWithIcon: FC<CardWithIconProps> = props => {
   const classes = useStyles(props);
 
   return (
-    <Card className={classes.card} sx={{m: 1}}>
+    <Card className={classes.card} style={{margin: 8}}>
       {to ?
         <Link to={to}>
           <HeaderView {...props} />
@@ -74,9 +74,7 @@ const HeaderView: FC<CardWithIconProps> = props => {
       <Box
         className='icon'
         width='3em'
-        sx={{
-          color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light'),
-        }}
+        sx={{color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light')}}
       >
         {createElement(icon, {fontSize: 'large'})}
       </Box>

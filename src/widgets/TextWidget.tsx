@@ -30,7 +30,7 @@ const TextWidget: FC<TextWidgetProps> = ({text}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} sx={{m: 1}}>
+    <Card className={classes.root} style={{margin: 8}}>
       <Box display='flex'>
         <Box flex='1'>
           <Typography component='h2' gutterBottom variant='h5'>
