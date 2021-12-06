@@ -17,7 +17,7 @@ export interface CardWithIconProps {
   subtitle?: string | number;
 }
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles((theme) => createStyles({
   card: {
     '& a': {
       color: 'inherit',
@@ -31,6 +31,9 @@ const useStyles = makeStyles(() => createStyles({
     wordWrap: 'break-word',
   },
   main: () => ({
+    '& .icon': {
+      color: theme.palette.type === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
+    },
     alignItems: 'center',
 
     // background: `url(${

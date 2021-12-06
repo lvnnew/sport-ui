@@ -26,7 +26,7 @@ import {
 } from './themes';
 import AuthBg from './AuthBg';
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles((theme) => createStyles({
   actions: {
     padding: '0 1em 1em 1em',
   },
@@ -38,14 +38,19 @@ const useStyles = makeStyles(() => createStyles({
   card: {
     marginTop: '6em',
     minWidth: 300,
+    zIndex: theme.zIndex.modal,
   },
   form: {
     padding: '0 1em 1em 1em',
   },
   hint: {
+    color: theme.palette.grey[500],
     display: 'flex',
     justifyContent: 'center',
     marginTop: '1em',
+  },
+  icon: {
+    backgroundColor: theme.palette.secondary.main,
   },
   input: {
     marginTop: '1em',
@@ -137,8 +142,10 @@ const Login = () => {
                 // sx={{zIndex: 'modal'}}
               >
                 <div className={classes.avatar}>
-                  <Avatar >
-                    {/* sx={{bgcolor: 'secondary.main'}} */}
+                  <Avatar
+                    className={classes.icon}
+                    // sx={{bgcolor: 'secondary.main'}}
+                  >
                     <LockIcon />
                   </Avatar>
                 </div>
