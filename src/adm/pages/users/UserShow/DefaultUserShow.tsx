@@ -9,11 +9,12 @@ import AppLoginsUserIdTab from './tabs/AppLoginsUserIdTab';
 import AuditLogsUserIdTab from './tabs/AuditLogsUserIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
+import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultUserShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show {...props}>
+  <Show actions={<DefaultActions />} {...props}>
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
