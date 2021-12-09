@@ -64,7 +64,7 @@ const AppBar = (props: any) => {
         id='react-admin-title'
         variant='h6'
       >
-        Mtbaseo Platform
+        Meta Template Base
       </Typography>
       <span className={classes.spacer} />
     </MuiAppBar>
