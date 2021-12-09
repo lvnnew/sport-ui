@@ -8,7 +8,7 @@ global:
 
 dev: false
 
-dockerRegistry: registry.gitlab.com/agro-sys
+dockerRegistry: registry.gitlab.com/mtbase
 
 app:
   tag: :master
@@ -46,8 +46,8 @@ ingress:
   host: "apps.making.ventures"
   letsencryptCert: true
   domains:
-    app: "agr"
-    endpoint: "agr-ep"
+    app: "mtbase"
+    endpoint: "mtbase-ep"
 
 resources:
   {}

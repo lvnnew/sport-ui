@@ -64,7 +64,7 @@ const AppBar = (props: any) => {
         id='react-admin-title'
         variant='h6'
       >
-        Agro Platform
+        Mtbaseo Platform
       </Typography>
       <span className={classes.spacer} />
     </MuiAppBar>
