@@ -18,7 +18,7 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => (
   <List title='Audit logs' exporter={false} filters={<AuditLogFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
-      <DateField source='date' />
+      <DateField source='date' showTime />
       <TextField source='title' />
       <TextField source='entityType' />
       <TextField source='entityId' />

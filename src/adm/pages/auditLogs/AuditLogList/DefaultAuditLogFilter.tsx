@@ -6,14 +6,14 @@ import {
   AutocompleteInput,
   BooleanInput,
 } from 'react-admin';
-import DateInput from '../../../../uiLib/DateInput';
+import DateTimeInput from '../../../../uiLib/DateTimeInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAuditLogFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <DateInput fullWidth source='date' />
+    <DateTimeInput fullWidth source='date' />
     <TextInput fullWidth source='title' />
     <TextInput fullWidth source='entityType' />
     <TextInput fullWidth source='entityId' />

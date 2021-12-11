@@ -10,7 +10,7 @@ import {
   AutocompleteInput,
   BooleanInput,
 } from 'react-admin';
-import DateInput from '../../../../uiLib/DateInput';
+import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getAuditLogValudation from '../getAuditLogValudation';
@@ -38,7 +38,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateInput fullWidth source='date' />
+            <DateTimeInput fullWidth source='date' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <TextInput fullWidth source='title' />

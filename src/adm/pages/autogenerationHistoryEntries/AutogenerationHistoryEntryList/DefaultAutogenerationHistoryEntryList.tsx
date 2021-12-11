@@ -18,7 +18,7 @@ const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) 
   <List title='Autogeneration history entries' exporter={false} filters={<AutogenerationHistoryEntryFilter />} {...props}>
     <Datagrid rowClick='show'>
       <NumberField source='id' />
-      <DateField source='date' />
+      <DateField source='date' showTime />
       <TextField source='originalEntityType' />
       <TextField source='originalEntityId' />
       <ReferenceField source='autogenerationRuleId' reference='autogenerationRules' link='show'>

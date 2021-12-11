@@ -26,7 +26,7 @@ const AuditLogsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
     >
       <Datagrid>
         <NumberField source='id' />
-        <DateField source='date' />
+        <DateField source='date' showTime />
         <TextField source='title' />
         <TextField source='entityType' />
         <TextField source='entityId' />

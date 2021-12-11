@@ -26,7 +26,7 @@ const AutogenerationHistoryEntriesAutogenerationRuleIdTab: FC<Omit<TabProps, 'ch
     >
       <Datagrid>
         <NumberField source='id' />
-        <DateField source='date' />
+        <DateField source='date' showTime />
         <TextField source='originalEntityType' />
         <TextField source='originalEntityId' />
         <ReferenceField source='autogenerationRuleId' reference='autogenerationRules' link='show'>
