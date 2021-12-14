@@ -17,7 +17,7 @@ const DefaultLanguageShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersLanguageIdTab label='Manager' path='managers-languageId' />
+      <ManagersLanguageIdTab label='Managers' path='managers-languageId' />
     </TabbedShowLayout>
   </Show>
 );

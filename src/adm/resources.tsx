@@ -244,7 +244,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'appLogins.update') ? LoadableAppLoginEdit : undefined}
         create={hasPermission(permissions, 'appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={hasPermission(permissions, 'appLogins.all') ? LoadableAppLoginList : undefined}
-        options={{label: 'Logins of usual (not admins) users'}}
+        options={{label: 'User' logins'}}
       />,
       <Resource
         key='auditLogs'
@@ -316,7 +316,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'managers.update') ? LoadableManagerEdit : undefined}
         create={hasPermission(permissions, 'managers.create') ? LoadableManagerCreate : undefined}
         list={hasPermission(permissions, 'managers.all') ? LoadableManagerList : undefined}
-        options={{label: 'Manager'}}
+        options={{label: 'Managers'}}
       />,
       <Resource
         key='managersToPermissions'

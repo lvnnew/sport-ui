@@ -22,14 +22,14 @@ const numberIdResources: string[] = [
   'autogenerationHistoryEntries',
   'delegations',
   'files',
-  'appLogins',
-  'managers',
   'managerLogins',
+  'managers',
   'managersToPermissions',
   'managersToRoles',
   'rolesToPermissions',
   'tags',
   'units',
+  'appLogins',
   'users',
 ];
 

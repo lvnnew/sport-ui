@@ -3,7 +3,7 @@
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const enCatalogs = {
-  appLogins: 'Logins of usual (not admins) users',
+  appLogins: 'User' logins',
   auditLogs: 'Audit',
   autogenerationHistoryEntries: 'Autogeneration History',
   autogenerationRules: 'Autogeneration Rules',
@@ -11,7 +11,7 @@ const enCatalogs = {
   files: 'Files',
   languages: 'Languages',
   managerLogins: 'Manager logins',
-  managers: 'Manager',
+  managers: 'Managers',
   managersToPermissions: 'Managers To Permissions',
   managersToRoles: 'Managers To Roles',
   messageTemplates: 'Message templates',

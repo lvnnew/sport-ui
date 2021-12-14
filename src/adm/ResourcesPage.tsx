@@ -30,7 +30,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppLoginsMeta?.count}
-        title='Logins of usual (not admins) users'
+        title='User' logins'
         to='/appLogins'
       />
       <NumberWiget
@@ -126,7 +126,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersMeta?.count}
-        title='Manager'
+        title='Managers'
         to='/managers'
       />
       <NumberWiget

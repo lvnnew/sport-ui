@@ -126,25 +126,17 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText='Logins of usual (not admins) users'
-            sidebarIsOpen={open}
-            to='/appLogins'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Manager'
-            sidebarIsOpen={open}
-            to='/managers'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
             primaryText='Manager logins'
             sidebarIsOpen={open}
             to='/managerLogins'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Managers'
+            sidebarIsOpen={open}
+            to='/managers'
           />
           <MenuItemLink
             dense={dense}
@@ -217,6 +209,14 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             primaryText='Units'
             sidebarIsOpen={open}
             to='/units'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='User' logins'
+            sidebarIsOpen={open}
+            to='/appLogins'
           />
           <MenuItemLink
             dense={dense}
