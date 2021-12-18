@@ -4,10 +4,12 @@ import {DELETE} from 'ra-core';
 import gql from 'graphql-tag';
 import {IntrospectionType, IntrospectionSchema} from 'graphql';
 import {mapping} from '../adm/entityMapping';
-import {__schema as schema} from '../generated/graphql.schema.json';
+import sch from '../generated/graphql.schema.json';
 import {ApolloClient} from '@apollo/client';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const schema = sch.__schema;
 
 const getGqlResource = (resource: string) => {
   if (resource in mapping) {
