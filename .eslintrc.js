@@ -38,6 +38,10 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'array-bracket-newline': 'off',
+    'array-element-newline': 'off',
+    'canonical/import-specifier-newline': 'off',
+    'canonical/destructuring-property-newline': 'off',
     'unicorn/prefer-object-from-entries': 'off',
     'mocha/no-skipped-tests': 'off',
     'jest/consistent-test-it': 'off',
