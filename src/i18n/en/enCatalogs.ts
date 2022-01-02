@@ -3,7 +3,7 @@
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const enCatalogs = {
-  appLogins: 'User' logins',
+  appLogins: 'Logins of users',
   auditLogs: 'Audit',
   autogenerationHistoryEntries: 'Autogeneration History',
   autogenerationRules: 'Autogeneration Rules',

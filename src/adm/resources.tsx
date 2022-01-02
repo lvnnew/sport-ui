@@ -244,7 +244,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'appLogins.update') ? LoadableAppLoginEdit : undefined}
         create={hasPermission(permissions, 'appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={hasPermission(permissions, 'appLogins.all') ? LoadableAppLoginList : undefined}
-        options={{label: 'User' logins'}}
+        options={{label: 'Logins of users'}}
       />,
       <Resource
         key='auditLogs'

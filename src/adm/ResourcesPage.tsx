@@ -30,7 +30,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppLoginsMeta?.count}
-        title='User' logins'
+        title='Logins of users'
         to='/appLogins'
       />
       <NumberWiget
