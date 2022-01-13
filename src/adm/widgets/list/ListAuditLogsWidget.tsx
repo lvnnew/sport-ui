@@ -52,7 +52,7 @@ export const ListAuditLogsItem: FC<AuditLog> = (props) => {
               {`Entity id: ${props.entityId}`}
             </div>
             <div>
-              {`Action: ${props.action}`}
+              {`Action type id: ${props.actionTypeId}`}
             </div>
             <div>
               {`Manager id: ${props.managerId}`}
@@ -120,7 +120,7 @@ const ListAuditLogsWidget: FC<ListAuditLogsWidgetProps> = ({
             title
             entityType
             entityId
-            action
+            actionTypeId
             managerId
             userId
             foreign

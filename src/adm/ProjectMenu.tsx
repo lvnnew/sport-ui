@@ -86,6 +86,14 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
+            primaryText='Audit action types'
+            sidebarIsOpen={open}
+            to='/auditLogActionTypes'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
             primaryText='Autogeneration History'
             sidebarIsOpen={open}
             to='/autogenerationHistoryEntries'

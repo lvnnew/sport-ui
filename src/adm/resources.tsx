@@ -18,6 +18,18 @@ const LoadableAppLoginCreate = Loadable({
 const LoadableAppLoginList = Loadable({
   loader: () => import('./pages/appLogins/AppLoginList'),
 });
+const LoadableAuditLogActionTypeShow = Loadable({
+  loader: () => import('./pages/auditLogActionTypes/AuditLogActionTypeShow'),
+});
+const LoadableAuditLogActionTypeEdit = Loadable({
+  loader: () => import('./pages/auditLogActionTypes/AuditLogActionTypeEdit'),
+});
+const LoadableAuditLogActionTypeCreate = Loadable({
+  loader: () => import('./pages/auditLogActionTypes/AuditLogActionTypeCreate'),
+});
+const LoadableAuditLogActionTypeList = Loadable({
+  loader: () => import('./pages/auditLogActionTypes/AuditLogActionTypeList'),
+});
 const LoadableAuditLogShow = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogShow'),
 });
@@ -245,6 +257,15 @@ export const getResources = (permissions: string[]) => (
         create={hasPermission(permissions, 'appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={hasPermission(permissions, 'appLogins.all') ? LoadableAppLoginList : undefined}
         options={{label: 'Logins of users'}}
+      />,
+      <Resource
+        key='auditLogActionTypes'
+        name='auditLogActionTypes'
+        show={hasPermission(permissions, 'auditLogActionTypes.get') ? LoadableAuditLogActionTypeShow : undefined}
+        edit={hasPermission(permissions, 'auditLogActionTypes.update') ? LoadableAuditLogActionTypeEdit : undefined}
+        create={hasPermission(permissions, 'auditLogActionTypes.create') ? LoadableAuditLogActionTypeCreate : undefined}
+        list={hasPermission(permissions, 'auditLogActionTypes.all') ? LoadableAuditLogActionTypeList : undefined}
+        options={{label: 'Audit action types'}}
       />,
       <Resource
         key='auditLogs'

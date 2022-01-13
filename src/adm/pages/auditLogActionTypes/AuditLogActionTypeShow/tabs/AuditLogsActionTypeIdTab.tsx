@@ -16,12 +16,12 @@ import DateField from '../../../../../uiLib/DateField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const AuditLogsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
+const AuditLogsActionTypeIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   <Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='auditLogs'
-      target='userId'
+      target='actionTypeId'
       pagination={<Pagination />}
     >
       <Datagrid>
@@ -49,4 +49,4 @@ const AuditLogsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
   </Tab>
 );
 
-export default AuditLogsUserIdTab;
+export default AuditLogsActionTypeIdTab;

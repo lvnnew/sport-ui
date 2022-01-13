@@ -4,6 +4,7 @@
 
 const enCatalogs = {
   appLogins: 'Logins of users',
+  auditLogActionTypes: 'Audit action types',
   auditLogs: 'Audit',
   autogenerationHistoryEntries: 'Autogeneration History',
   autogenerationRules: 'Autogeneration Rules',

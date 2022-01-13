@@ -2,6 +2,7 @@
 
 export const mapping = {
   appLogins: 'AppLogin',
+  auditLogActionTypes: 'AuditLogActionType',
   auditLogs: 'AuditLog',
   autogenerationHistoryEntries: 'AutogenerationHistoryEntry',
   autogenerationRules: 'AutogenerationRule',

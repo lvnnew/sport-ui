@@ -30,7 +30,9 @@ const AuditLogsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
         <TextField source='title' />
         <TextField source='entityType' />
         <TextField source='entityId' />
-        <TextField source='action' />
+        <ReferenceField source='actionTypeId' reference='auditLogActionTypes' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
         <ReferenceField source='managerId' reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
