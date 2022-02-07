@@ -6,6 +6,18 @@ import {
 import Loadable from '../shared/Loadable';
 import {hasPermission} from '../utils/permissions';
 
+const LoadableAdmRefreshTokenShow = Loadable({
+  loader: () => import('./pages/admRefreshTokens/AdmRefreshTokenShow'),
+});
+const LoadableAdmRefreshTokenEdit = Loadable({
+  loader: () => import('./pages/admRefreshTokens/AdmRefreshTokenEdit'),
+});
+const LoadableAdmRefreshTokenCreate = Loadable({
+  loader: () => import('./pages/admRefreshTokens/AdmRefreshTokenCreate'),
+});
+const LoadableAdmRefreshTokenList = Loadable({
+  loader: () => import('./pages/admRefreshTokens/AdmRefreshTokenList'),
+});
 const LoadableAppLoginShow = Loadable({
   loader: () => import('./pages/appLogins/AppLoginShow'),
 });
@@ -17,6 +29,18 @@ const LoadableAppLoginCreate = Loadable({
 });
 const LoadableAppLoginList = Loadable({
   loader: () => import('./pages/appLogins/AppLoginList'),
+});
+const LoadableAppRefreshTokenShow = Loadable({
+  loader: () => import('./pages/appRefreshTokens/AppRefreshTokenShow'),
+});
+const LoadableAppRefreshTokenEdit = Loadable({
+  loader: () => import('./pages/appRefreshTokens/AppRefreshTokenEdit'),
+});
+const LoadableAppRefreshTokenCreate = Loadable({
+  loader: () => import('./pages/appRefreshTokens/AppRefreshTokenCreate'),
+});
+const LoadableAppRefreshTokenList = Loadable({
+  loader: () => import('./pages/appRefreshTokens/AppRefreshTokenList'),
 });
 const LoadableAuditLogActionTypeShow = Loadable({
   loader: () => import('./pages/auditLogActionTypes/AuditLogActionTypeShow'),
@@ -250,6 +274,15 @@ export const getResources = (permissions: string[]) => (
   permissions ?
     [
       <Resource
+        key='admRefreshTokens'
+        name='admRefreshTokens'
+        show={hasPermission(permissions, 'admRefreshTokens.get') ? LoadableAdmRefreshTokenShow : undefined}
+        edit={hasPermission(permissions, 'admRefreshTokens.update') ? LoadableAdmRefreshTokenEdit : undefined}
+        create={hasPermission(permissions, 'admRefreshTokens.create') ? LoadableAdmRefreshTokenCreate : undefined}
+        list={hasPermission(permissions, 'admRefreshTokens.all') ? LoadableAdmRefreshTokenList : undefined}
+        options={{label: 'Ui refresh tokens'}}
+      />,
+      <Resource
         key='appLogins'
         name='appLogins'
         show={hasPermission(permissions, 'appLogins.get') ? LoadableAppLoginShow : undefined}
@@ -257,6 +290,15 @@ export const getResources = (permissions: string[]) => (
         create={hasPermission(permissions, 'appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={hasPermission(permissions, 'appLogins.all') ? LoadableAppLoginList : undefined}
         options={{label: 'Logins of users'}}
+      />,
+      <Resource
+        key='appRefreshTokens'
+        name='appRefreshTokens'
+        show={hasPermission(permissions, 'appRefreshTokens.get') ? LoadableAppRefreshTokenShow : undefined}
+        edit={hasPermission(permissions, 'appRefreshTokens.update') ? LoadableAppRefreshTokenEdit : undefined}
+        create={hasPermission(permissions, 'appRefreshTokens.create') ? LoadableAppRefreshTokenCreate : undefined}
+        list={hasPermission(permissions, 'appRefreshTokens.all') ? LoadableAppRefreshTokenList : undefined}
+        options={{label: 'App refresh tokens'}}
       />,
       <Resource
         key='auditLogActionTypes'

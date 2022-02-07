@@ -1,7 +1,9 @@
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export const mapping = {
+  admRefreshTokens: 'AdmRefreshToken',
   appLogins: 'AppLogin',
+  appRefreshTokens: 'AppRefreshToken',
   auditLogActionTypes: 'AuditLogActionType',
   auditLogs: 'AuditLog',
   autogenerationHistoryEntries: 'AutogenerationHistoryEntry',

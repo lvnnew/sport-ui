@@ -20,6 +20,7 @@ const getGqlResource = (resource: string) => {
 };
 
 const numberIdResources: string[] = [
+  'appRefreshTokens',
   'auditLogs',
   'autogenerationHistoryEntries',
   'delegations',
@@ -31,6 +32,7 @@ const numberIdResources: string[] = [
   'managersToRoles',
   'rolesToPermissions',
   'tags',
+  'admRefreshTokens',
   'units',
   'users',
 ];

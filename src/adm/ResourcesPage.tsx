@@ -24,6 +24,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allAdmRefreshTokensMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allAdmRefreshTokensMeta?.count}
+        title='Ui refresh tokens'
+        to='/admRefreshTokens'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allAppLoginsMeta {
               count
             }
@@ -32,6 +44,18 @@ const ResourcesPage: FC = () => {
         resultToValue={result => result?._allAppLoginsMeta?.count}
         title='Logins of users'
         to='/appLogins'
+      />
+      <NumberWiget
+        request={gql`
+          query {
+            _allAppRefreshTokensMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allAppRefreshTokensMeta?.count}
+        title='App refresh tokens'
+        to='/appRefreshTokens'
       />
       <NumberWiget
         request={gql`

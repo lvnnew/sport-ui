@@ -3,7 +3,9 @@
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const enCatalogs = {
+  admRefreshTokens: 'Ui refresh tokens',
   appLogins: 'Logins of users',
+  appRefreshTokens: 'App refresh tokens',
   auditLogActionTypes: 'Audit action types',
   auditLogs: 'Audit',
   autogenerationHistoryEntries: 'Autogeneration History',
