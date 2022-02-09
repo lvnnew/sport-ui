@@ -190,6 +190,14 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
+            primaryText='Message types'
+            sidebarIsOpen={open}
+            to='/messageTypes'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
             primaryText='Permissions'
             sidebarIsOpen={open}
             to='/permissions'

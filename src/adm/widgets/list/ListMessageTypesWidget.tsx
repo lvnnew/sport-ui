@@ -13,25 +13,25 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  MessageTemplate,
-  QueryAllMessageTemplatesArgs,
+  MessageType,
+  QueryAllMessageTypesArgs,
 } from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListMessageTemplatesWidgetProps extends
-Omit<ListWigetProps<MessageTemplate>, 'request' | 'resultToValue'| 'children'>,
-QueryAllMessageTemplatesArgs {
-  children?: FC<MessageTemplate>,
+interface ListMessageTypesWidgetProps extends
+Omit<ListWigetProps<MessageType>, 'request' | 'resultToValue'| 'children'>,
+QueryAllMessageTypesArgs {
+  children?: FC<MessageType>,
 }
 
-export const ListMessageTemplatesItem: FC<MessageTemplate> = (props) => {
+export const ListMessageTypesItem: FC<MessageType> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/messageTemplates/${props.id}/show`}
+      to={`/messageTypes/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -43,10 +43,7 @@ export const ListMessageTemplatesItem: FC<MessageTemplate> = (props) => {
               {`Title: ${props.title}`}
             </div>
             <div>
-              {`Secret data: ${props.secretData}`}
-            </div>
-            <div>
-              {`Message type id: ${props.messageTypeId}`}
+              {`Description: ${props.description}`}
             </div>
           </>
         }
@@ -55,17 +52,17 @@ export const ListMessageTemplatesItem: FC<MessageTemplate> = (props) => {
   );
 };
 
-const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
+const ListMessageTypesWidget: FC<ListMessageTypesWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListMessageTemplatesItem,
+  children = ListMessageTypesItem,
   ...rest
 }) => {
   return (
-    <ListWiget<MessageTemplate>
+    <ListWiget<MessageType>
       {...rest}
       options={{
         variables: {
@@ -82,9 +79,9 @@ const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: MessageTemplateFilter,
+          $filter: MessageTypeFilter,
         ) {
-          allMessageTemplates(
+          allMessageTypes(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -93,16 +90,15 @@ const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
           ) {
             id
             title
-            secretData
-            messageTypeId
+            description
           }
         }
       `}
-      resultToValue={result => result?.allMessageTemplates}
+      resultToValue={result => result?.allMessageTypes}
     >
       {(record) => children(record)}
     </ListWiget>
   );
 };
 
-export default ListMessageTemplatesWidget;
+export default ListMessageTypesWidget;

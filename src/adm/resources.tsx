@@ -186,6 +186,18 @@ const LoadableMessageTemplateCreate = Loadable({
 const LoadableMessageTemplateList = Loadable({
   loader: () => import('./pages/messageTemplates/MessageTemplateList'),
 });
+const LoadableMessageTypeShow = Loadable({
+  loader: () => import('./pages/messageTypes/MessageTypeShow'),
+});
+const LoadableMessageTypeEdit = Loadable({
+  loader: () => import('./pages/messageTypes/MessageTypeEdit'),
+});
+const LoadableMessageTypeCreate = Loadable({
+  loader: () => import('./pages/messageTypes/MessageTypeCreate'),
+});
+const LoadableMessageTypeList = Loadable({
+  loader: () => import('./pages/messageTypes/MessageTypeList'),
+});
 const LoadablePermissionShow = Loadable({
   loader: () => import('./pages/permissions/PermissionShow'),
 });
@@ -407,6 +419,15 @@ export const getResources = (permissions: string[]) => (
         create={hasPermission(permissions, 'messageTemplates.create') ? LoadableMessageTemplateCreate : undefined}
         list={hasPermission(permissions, 'messageTemplates.all') ? LoadableMessageTemplateList : undefined}
         options={{label: 'Message templates'}}
+      />,
+      <Resource
+        key='messageTypes'
+        name='messageTypes'
+        show={hasPermission(permissions, 'messageTypes.get') ? LoadableMessageTypeShow : undefined}
+        edit={hasPermission(permissions, 'messageTypes.update') ? LoadableMessageTypeEdit : undefined}
+        create={hasPermission(permissions, 'messageTypes.create') ? LoadableMessageTypeCreate : undefined}
+        list={hasPermission(permissions, 'messageTypes.all') ? LoadableMessageTypeList : undefined}
+        options={{label: 'Message types'}}
       />,
       <Resource
         key='permissions'

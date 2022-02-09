@@ -7,6 +7,8 @@ import {
   CreateProps,
   TextInput,
   BooleanInput,
+  ReferenceInput,
+  AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
@@ -41,6 +43,11 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput fullWidth source='secretData' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <ReferenceInput source='messageTypeId' reference='messageTypes'>
+              <AutocompleteInput fullWidth optionText='title' resettable />
+            </ReferenceInput>
           </FormGrid>
         </FormGrid>
       </SimpleForm>

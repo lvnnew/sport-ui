@@ -204,6 +204,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allMessageTypesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMessageTypesMeta?.count}
+        title='Message types'
+        to='/messageTypes'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allPermissionsMeta {
               count
             }

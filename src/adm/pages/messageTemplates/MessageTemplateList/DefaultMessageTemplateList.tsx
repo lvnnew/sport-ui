@@ -6,6 +6,7 @@ import {
   ListProps,
   TextField,
   BooleanField,
+  ReferenceField,
 } from 'react-admin';
 import MessageTemplateFilter from './MessageTemplateFilter';
 
@@ -17,6 +18,9 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => (
       <TextField source='id' />
       <TextField source='title' />
       <BooleanField source='secretData' />
+      <ReferenceField source='messageTypeId' reference='messageTypes' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
     </Datagrid>
   </List>
 );

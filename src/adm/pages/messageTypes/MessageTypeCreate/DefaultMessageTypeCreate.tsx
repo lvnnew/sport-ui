@@ -2,54 +2,47 @@
 import React, {FC, useMemo, useCallback} from 'react';
 import {
   useTranslate,
-  Edit,
+  Create,
   SimpleForm,
-  EditProps,
+  CreateProps,
   TextInput,
-  BooleanInput,
-  ReferenceInput,
-  AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getMessageTemplateValudation from '../getMessageTemplateValudation';
+import getMessageTypeValudation from '../getMessageTypeValudation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
+const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
   const t = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getMessageTemplateValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getMessageTypeValudation(t)), [t]);
 
   return (
-    <Edit
+    <Create
       {...props}
       transform={useCallback((data) => ({
         ...data,
       }), [])}
     >
       <SimpleForm
-        initialValues={{
-          secretData: false,
-        }}
+        initialValues={{}}
         validate={validate}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='id' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <TextInput fullWidth source='title' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='secretData' />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='messageTypeId' reference='messageTypes'>
-              <AutocompleteInput fullWidth optionText='title' resettable />
-            </ReferenceInput>
+            <TextInput fullWidth source='description' />
           </FormGrid>
         </FormGrid>
       </SimpleForm>
-    </Edit>
+    </Create>
   );
 };
 
-export default DefaultMessageTemplateEdit;
+export default DefaultMessageTypeCreate;

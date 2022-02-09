@@ -6,20 +6,17 @@ import {
   SimpleForm,
   EditProps,
   TextInput,
-  BooleanInput,
-  ReferenceInput,
-  AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getMessageTemplateValudation from '../getMessageTemplateValudation';
+import getMessageTypeValudation from '../getMessageTypeValudation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
+const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
   const t = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getMessageTemplateValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getMessageTypeValudation(t)), [t]);
 
   return (
     <Edit
@@ -29,9 +26,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
-          secretData: false,
-        }}
+        initialValues={{}}
         validate={validate}
       >
         <FormGrid container spacing={2}>
@@ -39,12 +34,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput fullWidth source='title' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='secretData' />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='messageTypeId' reference='messageTypes'>
-              <AutocompleteInput fullWidth optionText='title' resettable />
-            </ReferenceInput>
+            <TextInput fullWidth source='description' />
           </FormGrid>
         </FormGrid>
       </SimpleForm>
@@ -52,4 +42,4 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
   );
 };
 
-export default DefaultMessageTemplateEdit;
+export default DefaultMessageTypeEdit;
