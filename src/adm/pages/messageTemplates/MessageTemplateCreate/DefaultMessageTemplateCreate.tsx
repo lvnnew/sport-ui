@@ -46,7 +46,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput source='messageTypeId' reference='messageTypes'>
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
         </FormGrid>

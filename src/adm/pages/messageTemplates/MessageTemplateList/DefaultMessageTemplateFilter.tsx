@@ -15,7 +15,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => (
     <TextInput fullWidth source='title' />
     <BooleanInput fullWidth source='secretData' />
     <ReferenceInput source='messageTypeId' reference='messageTypes'>
-      <AutocompleteInput fullWidth optionText='title' resettable />
+      <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
   </Filter>
 );
