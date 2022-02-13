@@ -11701,20 +11701,34 @@ ra-core@^3.19.7:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-graphql-simple@^3.19.5:
-  version "3.19.5"
-  resolved "https://registry.yarnpkg.com/ra-data-graphql-simple/-/ra-data-graphql-simple-3.19.5.tgz#258759e5e97aeb0024f269ce9d2961e76de4915f"
-  integrity sha512-G9U9XqGzC4Tv3sJQHakmWhES17f8O97OREcZbFZyjO4Cog+3m8ae8jTl85obAbUTGhu5X63+VEVVXvTUsD9YSw==
+ra-core@^3.19.8:
+  version "3.19.8"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.19.8.tgz#ce16b2b568d932e13700eef8d5a77bd63761d350"
+  integrity sha512-EyN4pBDfrgBaZol+IfxrN5khtvnmVSeUDU1b5a1aPHAcbZly72eVI0rdPZUABrs8z6h82T0sUkzgC6kV5trM6A==
+  dependencies:
+    classnames "~2.3.1"
+    date-fns "^1.29.0"
+    eventemitter3 "^3.0.0"
+    inflection "~1.13.1"
+    lodash "~4.17.5"
+    prop-types "^15.6.1"
+    query-string "^5.1.1"
+    reselect "~3.0.0"
+
+ra-data-graphql-simple@^3.19.8:
+  version "3.19.8"
+  resolved "https://registry.yarnpkg.com/ra-data-graphql-simple/-/ra-data-graphql-simple-3.19.8.tgz#d1327c24577d7610d84dc22eff0cb17f006ef565"
+  integrity sha512-ztAOMuglp6FGsZp00ztoG5OASPZ3FLALCzdAE7mzoX8vrVgODA0Hk/ZEfN2bXow3cQGCVLo1vP+xuFvixT4mHA==
   dependencies:
     graphql-ast-types-browser "~1.0.2"
     lodash "~4.17.5"
     pluralize "~7.0.0"
-    ra-data-graphql "^3.19.1"
+    ra-data-graphql "^3.19.8"
 
-ra-data-graphql@^3.19.1:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/ra-data-graphql/-/ra-data-graphql-3.19.1.tgz#f8ae570ca817df511739750c3ec735556e8d49d9"
-  integrity sha512-Upd8cQJZIy9+GjbZZ4RtQkMhT3SXasLx1P5cWqlCxLIVg0/KfcbyqSFmGV6QMnA5BPrA7xbwfVueflwxmTf8gw==
+ra-data-graphql@^3.19.8:
+  version "3.19.8"
+  resolved "https://registry.yarnpkg.com/ra-data-graphql/-/ra-data-graphql-3.19.8.tgz#2c8b44ba9c995a05c98607740c9303c77d4d15d3"
+  integrity sha512-THXXesSIKTaZr/fwuMytM8OyQONS2Q6hkr99PGEGd5Y2Zd8O40XPJcZbzjku1aig7PO+3zEpdsCwferJfpJFSw==
   dependencies:
     "@apollo/client" "^3.3.19"
     lodash "~4.17.5"
@@ -11728,12 +11742,27 @@ ra-i18n-polyglot@^3.19.7:
     node-polyglot "^2.2.2"
     ra-core "^3.19.7"
 
+ra-i18n-polyglot@^3.19.8:
+  version "3.19.8"
+  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-3.19.8.tgz#b0d010945c944712275b265b4af1af946a6fb301"
+  integrity sha512-KbZCbF0eO5lzlXWm2Pel5xeNfAtMvwghFVxmzIm2w4yjTxaKz5wViwx+kYas+u1GEERqQTA2m38UP9fBfbnFpg==
+  dependencies:
+    node-polyglot "^2.2.2"
+    ra-core "^3.19.8"
+
 ra-language-english@^3.19.7:
   version "3.19.7"
   resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-3.19.7.tgz#fe6fe553eb72e5a37e50e55b83e5d928508841ea"
   integrity sha512-iqSWXaAOafzrh8uPlJG9Ey1fCCFFnGajynnHlZXh+E10pZ/ZDlIVZDpd7GAY1BxkKh5GPYRqNk+kDxCwXAG3fQ==
   dependencies:
     ra-core "^3.19.7"
+
+ra-language-english@^3.19.8:
+  version "3.19.8"
+  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-3.19.8.tgz#d43fb8ac40fe44fab6c1cf04d37ed133e1fe7b1a"
+  integrity sha512-2FIm4ZqnPzxi7umtu3U6O46HV5chxHgYHvxDKiTosc0//YzvuIkJxurbLTkpKLx1OThvWjqfhfYJkF6EqA0zNA==
+  dependencies:
+    ra-core "^3.19.8"
 
 ra-ui-materialui@^3.19.7:
   version "3.19.7"
@@ -12176,10 +12205,10 @@ recharts-scale@^0.4.4:
   dependencies:
     decimal.js-light "^2.4.1"
 
-recharts@^2.1.8:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.1.8.tgz#ca8774fcec5f5d7ec15dedd638db9ee12faf1c09"
-  integrity sha512-Wi7ufdDGyvy/BPf1za1Ok7VeWB2KtEejaewO9ulmlUhvn5l5RPS4AOkrUfhtMRTTjgJ4K6AbWMDpwtDjczUHJA==
+recharts@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.1.9.tgz#a52d411a7d822d118f7754cfc9c50db8fab46fb9"
+  integrity sha512-VozH5uznUvGqD7n224FGj7cmMAenlS0HPCs+7r2HeeHiQK6un6z0CTZfWVAB860xbcr4m+BN/EGMPZmYWd34Rg==
   dependencies:
     "@types/d3-interpolate" "^2.0.0"
     "@types/d3-scale" "^3.0.0"
