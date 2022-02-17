@@ -11906,13 +11906,6 @@ react-final-form@^6.5.7:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-react-final-form@^6.5.8:
-  version "6.5.8"
-  resolved "https://registry.yarnpkg.com/react-final-form/-/react-final-form-6.5.8.tgz#08b17bc6d4124300a9f2ea1f6b2e608150d3bab0"
-  integrity sha512-j8Rmr5zAaMliNbh+CPnY734exHfk7MjQ8I6ZcykcChmPDFPV2aF40PFAcmQ/KreA10AI8ew0tff6q0gVqwFaGA==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-
 react-hotkeys-hook@^3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/react-hotkeys-hook/-/react-hotkeys-hook-3.4.4.tgz#52ba5d8ef5e47cc2e776c70a9036d518e0993d51"
