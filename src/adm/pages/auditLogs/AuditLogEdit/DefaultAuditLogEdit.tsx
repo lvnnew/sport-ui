@@ -44,7 +44,9 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput fullWidth source='title' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='entityType' />
+            <ReferenceInput source='entityTypeId' reference='entities'>
+              <AutocompleteInput fullWidth optionText='title' />
+            </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <TextInput fullWidth source='entityId' />

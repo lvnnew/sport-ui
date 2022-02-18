@@ -22,7 +22,7 @@ const DefaultMessageTemplateActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='messageTemplate' />
+        <OpenAudit entityTypeId='messageTemplate' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='messageTemplates' />)}

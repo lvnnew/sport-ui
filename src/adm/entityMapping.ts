@@ -9,6 +9,7 @@ export const mapping = {
   autogenerationHistoryEntries: 'AutogenerationHistoryEntry',
   autogenerationRules: 'AutogenerationRule',
   delegations: 'Delegation',
+  entities: 'Entity',
   files: 'File',
   languages: 'Language',
   managerLogins: 'ManagerLogin',

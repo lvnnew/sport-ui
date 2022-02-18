@@ -15,7 +15,9 @@ const DefaultAuditLogFilter: FC<any> = (props) => (
     <TextInput label='Search' source='q' alwaysOn />
     <DateTimeInput fullWidth source='date' />
     <TextInput fullWidth source='title' />
-    <TextInput fullWidth source='entityType' />
+    <ReferenceInput source='entityTypeId' reference='entities'>
+      <AutocompleteInput fullWidth optionText='title' />
+    </ReferenceInput>
     <TextInput fullWidth source='entityId' />
     <ReferenceInput source='actionTypeId' reference='auditLogActionTypes'>
       <AutocompleteInput fullWidth optionText='title' />

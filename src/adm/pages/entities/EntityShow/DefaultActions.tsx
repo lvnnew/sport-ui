@@ -15,20 +15,20 @@ const useStyles = makeStyles(() => createStyles({
   toolbar: {alignItems: 'center'},
 }));
 
-const DefaultAutogenerationRuleActions = ({basePath, data}: any) => {
+const DefaultEntityActions = ({basePath, data}: any) => {
   const {permissions} = usePermissions<string[]>();
   const classes = useStyles();
 
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityTypeId='autogenerationRule' />
+        <OpenAudit entityTypeId='entity' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
-        <OpenHelp entityType='autogenerationRules' />)}
+        <OpenHelp entityType='entities' />)}
       <EditButton basePath={basePath} record={data} />
     </TopToolbar>
   ) : null;
 };
 
-export default DefaultAutogenerationRuleActions;
+export default DefaultEntityActions;

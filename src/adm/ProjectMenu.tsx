@@ -126,6 +126,14 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
+            primaryText='Entities'
+            sidebarIsOpen={open}
+            to='/entities'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
             primaryText='Files'
             sidebarIsOpen={open}
             to='/files'

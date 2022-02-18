@@ -102,6 +102,18 @@ const LoadableDelegationCreate = Loadable({
 const LoadableDelegationList = Loadable({
   loader: () => import('./pages/delegations/DelegationList'),
 });
+const LoadableEntityShow = Loadable({
+  loader: () => import('./pages/entities/EntityShow'),
+});
+const LoadableEntityEdit = Loadable({
+  loader: () => import('./pages/entities/EntityEdit'),
+});
+const LoadableEntityCreate = Loadable({
+  loader: () => import('./pages/entities/EntityCreate'),
+});
+const LoadableEntityList = Loadable({
+  loader: () => import('./pages/entities/EntityList'),
+});
 const LoadableFileShow = Loadable({
   loader: () => import('./pages/files/FileShow'),
 });
@@ -356,6 +368,15 @@ export const getResources = (permissions: string[]) => (
         create={hasPermission(permissions, 'delegations.create') ? LoadableDelegationCreate : undefined}
         list={hasPermission(permissions, 'delegations.all') ? LoadableDelegationList : undefined}
         options={{label: 'Delegations'}}
+      />,
+      <Resource
+        key='entities'
+        name='entities'
+        show={hasPermission(permissions, 'entities.get') ? LoadableEntityShow : undefined}
+        edit={hasPermission(permissions, 'entities.update') ? LoadableEntityEdit : undefined}
+        create={hasPermission(permissions, 'entities.create') ? LoadableEntityCreate : undefined}
+        list={hasPermission(permissions, 'entities.all') ? LoadableEntityList : undefined}
+        options={{label: 'Entities'}}
       />,
       <Resource
         key='files'

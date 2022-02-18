@@ -22,7 +22,7 @@ const DefaultAdmRefreshTokenActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='admRefreshToken' />
+        <OpenAudit entityTypeId='admRefreshToken' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='admRefreshTokens' />)}

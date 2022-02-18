@@ -22,7 +22,7 @@ const DefaultRoleActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='role' />
+        <OpenAudit entityTypeId='role' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='roles' />)}

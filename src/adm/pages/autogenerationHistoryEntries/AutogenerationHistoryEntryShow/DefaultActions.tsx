@@ -22,7 +22,7 @@ const DefaultAutogenerationHistoryEntryActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='autogenerationHistoryEntry' />
+        <OpenAudit entityTypeId='autogenerationHistoryEntry' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='autogenerationHistoryEntries' />)}

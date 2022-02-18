@@ -22,7 +22,7 @@ const DefaultLanguageActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='language' />
+        <OpenAudit entityTypeId='language' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='languages' />)}

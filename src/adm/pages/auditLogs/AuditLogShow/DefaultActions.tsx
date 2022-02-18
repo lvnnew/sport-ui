@@ -22,7 +22,7 @@ const DefaultAuditLogActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='auditLog' />
+        <OpenAudit entityTypeId='auditLog' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='auditLogs' />)}

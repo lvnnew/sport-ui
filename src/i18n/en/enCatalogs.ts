@@ -11,6 +11,7 @@ const enCatalogs = {
   autogenerationHistoryEntries: 'Autogeneration History',
   autogenerationRules: 'Autogeneration Rules',
   delegations: 'Delegations',
+  entities: 'Entities',
   files: 'Files',
   languages: 'Languages',
   managerLogins: 'Manager logins',

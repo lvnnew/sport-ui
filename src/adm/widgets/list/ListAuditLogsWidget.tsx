@@ -46,7 +46,7 @@ export const ListAuditLogsItem: FC<AuditLog> = (props) => {
               {`Title: ${props.title}`}
             </div>
             <div>
-              {`Entity type: ${props.entityType}`}
+              {`Entity type id: ${props.entityTypeId}`}
             </div>
             <div>
               {`Entity id: ${props.entityId}`}
@@ -118,7 +118,7 @@ const ListAuditLogsWidget: FC<ListAuditLogsWidgetProps> = ({
             id
             date
             title
-            entityType
+            entityTypeId
             entityId
             actionTypeId
             managerId

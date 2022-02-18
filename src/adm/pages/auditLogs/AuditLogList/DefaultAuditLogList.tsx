@@ -20,7 +20,9 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => (
       <NumberField source='id' />
       <DateField source='date' showTime />
       <TextField source='title' />
-      <TextField source='entityType' />
+      <ReferenceField source='entityTypeId' reference='entities' link='show'>
+        <TextField source='title' />
+      </ReferenceField>
       <TextField source='entityId' />
       <ReferenceField source='actionTypeId' reference='auditLogActionTypes' link='show'>
         <TextField source='title' />

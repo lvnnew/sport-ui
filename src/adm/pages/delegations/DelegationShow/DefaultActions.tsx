@@ -22,7 +22,7 @@ const DefaultDelegationActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='delegation' />
+        <OpenAudit entityTypeId='delegation' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='delegations' />)}

@@ -22,7 +22,7 @@ const DefaultAppRefreshTokenActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='appRefreshToken' />
+        <OpenAudit entityTypeId='appRefreshToken' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='appRefreshTokens' />)}

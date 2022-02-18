@@ -22,7 +22,7 @@ const DefaultFileActions = ({basePath, data}: any) => {
   return data ? (
     <TopToolbar className={classes.toolbar}>
       {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityType='file' />
+        <OpenAudit entityTypeId='file' />
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='files' />)}
