@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-const OpenAudit: FC<{entityType: string}> = ({entityType}) => {
+const OpenAudit: FC<{entityTypeId: string}> = ({entityTypeId}) => {
   const classes = useStyles();
   const [drawer, setOpenDrawer] = useState(false);
   const record = useRecordContext();
@@ -49,7 +49,7 @@ const OpenAudit: FC<{entityType: string}> = ({entityType}) => {
           <ReferenceManyField
             label='Audit'
             reference='auditLogs'
-            filter={{entityType}}
+            filter={{entityTypeId}}
             source='id'
             target='entityId'
           >
