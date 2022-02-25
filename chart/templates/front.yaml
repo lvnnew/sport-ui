@@ -64,18 +64,21 @@ spec:
             path: /
             port: main-port
           initialDelaySeconds: 60
+          timeoutSeconds: 15
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /
             port: main-port
           initialDelaySeconds: 60
+          timeoutSeconds: 15
           periodSeconds: 5
         startupProbe:
           httpGet:
             path: /
             port: main-port
           initialDelaySeconds: 60
+          timeoutSeconds: 15
           failureThreshold: 10
           periodSeconds: 10
 
