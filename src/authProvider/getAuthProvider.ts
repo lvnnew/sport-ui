@@ -9,7 +9,8 @@ const IDENTITY_STORAGE_KEY = 'identity';
 const permissionsCache = new LRUCache({
   ttl: 1000 * 60 * 10,
   max: 3000,
-})
+});
+
 const cacheKey = 'permissions';
 
 export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
