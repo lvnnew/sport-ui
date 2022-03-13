@@ -28,7 +28,8 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
     >
       <SimpleForm
         initialValues={{
-          hasFullAccess: false,
+          hasAllPermissions: false,
+          allTenantsAvailable: false,
         }}
         validate={validate}
       >
@@ -40,7 +41,10 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput fullWidth source='title' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='hasFullAccess' />
+            <BooleanInput fullWidth source='hasAllPermissions' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <BooleanInput fullWidth source='allTenantsAvailable' />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

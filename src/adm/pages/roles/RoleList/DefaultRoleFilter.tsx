@@ -11,7 +11,8 @@ const DefaultRoleFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
     <TextInput fullWidth source='title' />
-    <BooleanInput fullWidth source='hasFullAccess' />
+    <BooleanInput fullWidth source='hasAllPermissions' />
+    <BooleanInput fullWidth source='allTenantsAvailable' />
   </Filter>
 );
 

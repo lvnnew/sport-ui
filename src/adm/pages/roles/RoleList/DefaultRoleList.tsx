@@ -16,7 +16,8 @@ const DefaultRoleList: FC<ListProps> = (props: ListProps) => (
     <Datagrid rowClick='show'>
       <TextField source='id' />
       <TextField source='title' />
-      <BooleanField source='hasFullAccess' />
+      <BooleanField source='hasAllPermissions' />
+      <BooleanField source='allTenantsAvailable' />
     </Datagrid>
   </List>
 );

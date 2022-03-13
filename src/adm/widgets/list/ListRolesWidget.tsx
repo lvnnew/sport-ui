@@ -43,7 +43,10 @@ export const ListRolesItem: FC<Role> = (props) => {
               {`Title: ${props.title}`}
             </div>
             <div>
-              {`Has full access: ${props.hasFullAccess}`}
+              {`Has all permissions: ${props.hasAllPermissions}`}
+            </div>
+            <div>
+              {`All tenants available: ${props.allTenantsAvailable}`}
             </div>
           </>
         }
@@ -90,7 +93,8 @@ const ListRolesWidget: FC<ListRolesWidgetProps> = ({
           ) {
             id
             title
-            hasFullAccess
+            hasAllPermissions
+            allTenantsAvailable
           }
         }
       `}
