@@ -1,12 +1,33 @@
 /* eslint-disable max-len */
-import {
-  TranslationMessages,
-} from 'react-admin';
+import {TranslationMessages} from 'react-admin';
 import enMessages from 'ra-language-english';
+import ruDocs from './ruDocs';
+import ruReports from './ruReports';
 
 const customEnglishMessages: TranslationMessages = {
   ...enMessages,
   app: {
+    documents: 'Документы',
+    catalogs: 'Справочники',
+    infoRegistries: 'Регистры сведений',
+    sumRegistries: 'Регистры накоплений',
+    reports: 'Отчеты',
+    sbrInvestigation: 'Sbr Investigation',
+    cardIssue: 'Выпуск карты',
+
+    approve: 'Утвердить',
+    cancel: 'Отмена',
+    review: 'Отклонить',
+    reviewReason: 'Причина отклонения',
+    createManualAccounting: 'Создать ручное начисление',
+
+    addRole: 'Добавить роль',
+    addPermission: 'Добавить разрешение',
+    from: 'From',
+    to: 'To',
+    add: 'Добавить',
+    actions: 'Действия',
+    edit: 'Редактировать профиль',
     configuration: 'Configuration',
     dashboard: {
       all_customers: 'See all customers',
@@ -17,7 +38,7 @@ const customEnglishMessages: TranslationMessages = {
       new_orders: 'New Orders',
       order: {
         items:
-                    'by %{customer_name}, one item |||| by %{customer_name}, %{nb_items} items',
+          'by %{customer_name}, one item |||| by %{customer_name}, %{nb_items} items',
       },
       pending_orders: 'Pending Orders',
       pending_reviews: 'Pending Reviews',
@@ -25,7 +46,7 @@ const customEnglishMessages: TranslationMessages = {
         demo_button: 'Source for this demo',
         ra_button: 'react-admin site',
         subtitle:
-                    'This is the admin of an imaginary poster shop. Feel free to explore and modify the data - it\'s local to your computer, and will reset each time you reload.',
+          'This is the admin of an imaginary poster shop. Feel free to explore and modify the data - it\'s local to your computer, and will reset each time you reload.',
         title: 'Welcome to the react-admin e-commerce demo',
       },
     },
@@ -35,15 +56,70 @@ const customEnglishMessages: TranslationMessages = {
       customers: 'Customers',
       sales: 'Sales',
     },
-    search: 'Search',
+    search: 'Поиск',
     theme: {
       dark: 'Dark',
       light: 'Light',
       name: 'Theme',
     },
   },
+  validation: {
+    minLength: 'Длина минимум:',
+    maxLength: 'Длина максимум:',
+    minValue: 'Минимальное значение',
+    noSpaces: 'Пробелы запрещены.',
+    noDigits: 'Цифры запрещены.',
+    notFutureDate: 'Выбор будущей даты не допустим',
+    required: 'Это обязательное поле',
+    onlyLatinLetters: 'Разрешено использовать только латинские буквы. ',
+    onlyNumbers: 'Разрешено использовать только цифры',
+    exactLength: 'Точное количество символов: %{smart_count}.',
+  },
+  reportsColumns: {
+    date: 'Дата',
+    cardNmber: 'Номер карты',
+    partner: 'Партнер',
+    miles: 'Баллов',
+  },
+  reports: ruReports,
+  docs: ruDocs,
+  menu: {
+    dashboard: 'Панель управления',
+    members: 'Участники',
+    managers: 'Менеджеры',
+    newMember: 'Новый участник',
+    mergeProfiles: 'Склеить профили',
+    transactions: 'Транзакции',
+    issueCardByManager: 'Выпуск карты',
+  },
+  calcs: {
+    calculators: 'Калькуляторы',
+    milesCalc: 'Начисления за полеты',
+    upgradeCalc: 'Списания за апгрейд',
+    flightCalc: 'Списания за наградной билет',
+  },
+  managers: {
+    deactivate: 'Деактивировать',
+    deactivated: 'Менеджер деактивирован',
+  },
+  member: {
+    show: {
+      recalculate: 'Обновить баллы',
+      markedAsDeleted: 'Пользователь помечен удаленным',
+    },
+  },
+  members: {
+    list: {
+      memberType: 'Тип участия',
+      search: 'Поиск',
+    },
+  },
   ra: {
     ...enMessages.ra,
+    page: {
+      ...enMessages.ra.page,
+      dashboard: 'Панель управления',
+    },
     boolean: {
       ...enMessages.ra.boolean,
       null: 'No value',
@@ -91,7 +167,7 @@ const customEnglishMessages: TranslationMessages = {
     customers: {
       errors: {
         password_mismatch:
-                    'The password confirmation is not the same as the password.',
+          'The password confirmation is not the same as the password.',
       },
       fieldGroups: {
         address: 'Address',
@@ -141,9 +217,6 @@ const customEnglishMessages: TranslationMessages = {
         total_gte: 'Min amount',
       },
       name: 'Invoice |||| Invoices',
-    },
-    posts: {
-      name: 'Posts',
     },
     products: {
       fields: {
@@ -223,9 +296,6 @@ const customEnglishMessages: TranslationMessages = {
         name: 'Name',
       },
       name: 'Segment |||| Segments',
-    },
-    users: {
-      name: 'Users',
     },
   },
 };

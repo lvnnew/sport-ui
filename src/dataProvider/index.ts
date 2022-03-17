@@ -21,20 +21,20 @@ const getGqlResource = (resource: string) => {
 
 const numberIdResources: string[] = [
   'appRefreshTokens',
-  'auditLogs',
-  'autogenerationHistoryEntries',
-  'delegations',
   'files',
-  'appLogins',
-  'managerLogins',
-  'managers',
-  'managersToPermissions',
-  'managersToRoles',
-  'rolesToPermissions',
   'tags',
   'admRefreshTokens',
   'units',
+  'auditLogs',
+  'delegations',
+  'autogenerationHistoryEntries',
+  'managerLogins',
+  'appLogins',
+  'managers',
   'users',
+  'managersToPermissions',
+  'rolesToPermissions',
+  'managersToRoles',
 ];
 
 const customBuildQuery = (introspection: IntrospectionResult) =>

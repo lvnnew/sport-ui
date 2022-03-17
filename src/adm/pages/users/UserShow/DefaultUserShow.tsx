@@ -19,9 +19,9 @@ const DefaultUserShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <AppLoginsUserIdTab label='Logins of users' path='appLogins-userId' />
+      <AppLoginsUserIdTab label='Логины пользователей' path='appLogins-userId' />
       <AppRefreshTokensUserIdTab label='App refresh tokens' path='appRefreshTokens-userId' />
-      <AuditLogsUserIdTab label='Audit' path='auditLogs-userId' />
+      <AuditLogsUserIdTab label='Аудит' path='auditLogs-userId' />
     </TabbedShowLayout>
   </Show>
 );

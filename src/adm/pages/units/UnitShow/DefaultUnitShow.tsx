@@ -18,7 +18,7 @@ const DefaultUnitShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersUnitIdTab label='Managers' path='managers-unitId' />
+      <ManagersUnitIdTab label='Менеджеры' path='managers-unitId' />
       <UnitsParentIdTab label='Units' path='units-parentId' />
     </TabbedShowLayout>
   </Show>

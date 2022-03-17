@@ -24,12 +24,12 @@ const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => (
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
       <AdmRefreshTokensManagerIdTab label='Ui refresh tokens' path='admRefreshTokens-managerId' />
-      <AuditLogsManagerIdTab label='Audit' path='auditLogs-managerId' />
-      <DelegationsFromIdTab label='Delegations' path='delegations-fromId' />
-      <DelegationsToIdTab label='Delegations' path='delegations-toId' />
-      <ManagerLoginsManagerIdTab label='Manager logins' path='managerLogins-managerId' />
-      <ManagersToPermissionsManagerIdTab label='Managers To Permissions' path='managersToPermissions-managerId' />
-      <ManagersToRolesManagerIdTab label='Managers To Roles' path='managersToRoles-managerId' />
+      <AuditLogsManagerIdTab label='Аудит' path='auditLogs-managerId' />
+      <DelegationsFromIdTab label='Делегирование' path='delegations-fromId' />
+      <DelegationsToIdTab label='Делегирование' path='delegations-toId' />
+      <ManagerLoginsManagerIdTab label='Логины менеджеров' path='managerLogins-managerId' />
+      <ManagersToPermissionsManagerIdTab label='Разрешения менеджеров' path='managersToPermissions-managerId' />
+      <ManagersToRolesManagerIdTab label='Роли менеджеров' path='managersToRoles-managerId' />
     </TabbedShowLayout>
   </Show>
 );

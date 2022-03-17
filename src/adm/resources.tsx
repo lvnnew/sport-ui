@@ -313,7 +313,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'appLogins.update') ? LoadableAppLoginEdit : undefined}
         create={hasPermission(permissions, 'appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={hasPermission(permissions, 'appLogins.all') ? LoadableAppLoginList : undefined}
-        options={{label: 'Logins of users'}}
+        options={{label: 'Логины пользователей'}}
       />,
       <Resource
         key='appRefreshTokens'
@@ -331,7 +331,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'auditLogActionTypes.update') ? LoadableAuditLogActionTypeEdit : undefined}
         create={hasPermission(permissions, 'auditLogActionTypes.create') ? LoadableAuditLogActionTypeCreate : undefined}
         list={hasPermission(permissions, 'auditLogActionTypes.all') ? LoadableAuditLogActionTypeList : undefined}
-        options={{label: 'Audit action types'}}
+        options={{label: 'Типы событий аудита'}}
       />,
       <Resource
         key='auditLogs'
@@ -340,7 +340,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'auditLogs.update') ? LoadableAuditLogEdit : undefined}
         create={hasPermission(permissions, 'auditLogs.create') ? LoadableAuditLogCreate : undefined}
         list={hasPermission(permissions, 'auditLogs.all') ? LoadableAuditLogList : undefined}
-        options={{label: 'Audit'}}
+        options={{label: 'Аудит'}}
       />,
       <Resource
         key='autogenerationHistoryEntries'
@@ -349,7 +349,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'autogenerationHistoryEntries.update') ? LoadableAutogenerationHistoryEntryEdit : undefined}
         create={hasPermission(permissions, 'autogenerationHistoryEntries.create') ? LoadableAutogenerationHistoryEntryCreate : undefined}
         list={hasPermission(permissions, 'autogenerationHistoryEntries.all') ? LoadableAutogenerationHistoryEntryList : undefined}
-        options={{label: 'Autogeneration History'}}
+        options={{label: 'История автогенерации'}}
       />,
       <Resource
         key='autogenerationRules'
@@ -358,7 +358,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'autogenerationRules.update') ? LoadableAutogenerationRuleEdit : undefined}
         create={hasPermission(permissions, 'autogenerationRules.create') ? LoadableAutogenerationRuleCreate : undefined}
         list={hasPermission(permissions, 'autogenerationRules.all') ? LoadableAutogenerationRuleList : undefined}
-        options={{label: 'Autogeneration Rules'}}
+        options={{label: 'Правила автогенерации'}}
       />,
       <Resource
         key='delegations'
@@ -367,7 +367,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'delegations.update') ? LoadableDelegationEdit : undefined}
         create={hasPermission(permissions, 'delegations.create') ? LoadableDelegationCreate : undefined}
         list={hasPermission(permissions, 'delegations.all') ? LoadableDelegationList : undefined}
-        options={{label: 'Delegations'}}
+        options={{label: 'Делегирование'}}
       />,
       <Resource
         key='entities'
@@ -376,7 +376,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'entities.update') ? LoadableEntityEdit : undefined}
         create={hasPermission(permissions, 'entities.create') ? LoadableEntityCreate : undefined}
         list={hasPermission(permissions, 'entities.all') ? LoadableEntityList : undefined}
-        options={{label: 'Entities'}}
+        options={{label: 'Сущности'}}
       />,
       <Resource
         key='files'
@@ -403,7 +403,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'managerLogins.update') ? LoadableManagerLoginEdit : undefined}
         create={hasPermission(permissions, 'managerLogins.create') ? LoadableManagerLoginCreate : undefined}
         list={hasPermission(permissions, 'managerLogins.all') ? LoadableManagerLoginList : undefined}
-        options={{label: 'Manager logins'}}
+        options={{label: 'Логины менеджеров'}}
       />,
       <Resource
         key='managers'
@@ -412,7 +412,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'managers.update') ? LoadableManagerEdit : undefined}
         create={hasPermission(permissions, 'managers.create') ? LoadableManagerCreate : undefined}
         list={hasPermission(permissions, 'managers.all') ? LoadableManagerList : undefined}
-        options={{label: 'Managers'}}
+        options={{label: 'Менеджеры'}}
       />,
       <Resource
         key='managersToPermissions'
@@ -421,7 +421,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'managersToPermissions.update') ? LoadableManagersToPermissionEdit : undefined}
         create={hasPermission(permissions, 'managersToPermissions.create') ? LoadableManagersToPermissionCreate : undefined}
         list={hasPermission(permissions, 'managersToPermissions.all') ? LoadableManagersToPermissionList : undefined}
-        options={{label: 'Managers To Permissions'}}
+        options={{label: 'Разрешения менеджеров'}}
       />,
       <Resource
         key='managersToRoles'
@@ -430,7 +430,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'managersToRoles.update') ? LoadableManagersToRoleEdit : undefined}
         create={hasPermission(permissions, 'managersToRoles.create') ? LoadableManagersToRoleCreate : undefined}
         list={hasPermission(permissions, 'managersToRoles.all') ? LoadableManagersToRoleList : undefined}
-        options={{label: 'Managers To Roles'}}
+        options={{label: 'Роли менеджеров'}}
       />,
       <Resource
         key='messageTemplates'
@@ -439,7 +439,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'messageTemplates.update') ? LoadableMessageTemplateEdit : undefined}
         create={hasPermission(permissions, 'messageTemplates.create') ? LoadableMessageTemplateCreate : undefined}
         list={hasPermission(permissions, 'messageTemplates.all') ? LoadableMessageTemplateList : undefined}
-        options={{label: 'Message templates'}}
+        options={{label: 'Шаблоны сообщений'}}
       />,
       <Resource
         key='messageTypes'
@@ -448,7 +448,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'messageTypes.update') ? LoadableMessageTypeEdit : undefined}
         create={hasPermission(permissions, 'messageTypes.create') ? LoadableMessageTypeCreate : undefined}
         list={hasPermission(permissions, 'messageTypes.all') ? LoadableMessageTypeList : undefined}
-        options={{label: 'Message types'}}
+        options={{label: 'Типы сообщений'}}
       />,
       <Resource
         key='permissions'
@@ -457,7 +457,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'permissions.update') ? LoadablePermissionEdit : undefined}
         create={hasPermission(permissions, 'permissions.create') ? LoadablePermissionCreate : undefined}
         list={hasPermission(permissions, 'permissions.all') ? LoadablePermissionList : undefined}
-        options={{label: 'Permissions'}}
+        options={{label: 'Разрешения'}}
       />,
       <Resource
         key='roles'
@@ -466,7 +466,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'roles.update') ? LoadableRoleEdit : undefined}
         create={hasPermission(permissions, 'roles.create') ? LoadableRoleCreate : undefined}
         list={hasPermission(permissions, 'roles.all') ? LoadableRoleList : undefined}
-        options={{label: 'Roles'}}
+        options={{label: 'Роли'}}
       />,
       <Resource
         key='rolesToPermissions'
@@ -475,7 +475,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'rolesToPermissions.update') ? LoadableRolesToPermissionEdit : undefined}
         create={hasPermission(permissions, 'rolesToPermissions.create') ? LoadableRolesToPermissionCreate : undefined}
         list={hasPermission(permissions, 'rolesToPermissions.all') ? LoadableRolesToPermissionList : undefined}
-        options={{label: 'Roles To Permissions'}}
+        options={{label: 'Разрешения ролей'}}
       />,
       <Resource
         key='stats'
@@ -511,7 +511,7 @@ export const getResources = (permissions: string[]) => (
         edit={hasPermission(permissions, 'users.update') ? LoadableUserEdit : undefined}
         create={hasPermission(permissions, 'users.create') ? LoadableUserCreate : undefined}
         list={hasPermission(permissions, 'users.all') ? LoadableUserList : undefined}
-        options={{label: 'Users'}}
+        options={{label: 'Пользователи'}}
       />,
     ] :
     []

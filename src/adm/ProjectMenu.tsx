@@ -86,54 +86,6 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText='Audit'
-            sidebarIsOpen={open}
-            to='/auditLogs'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Audit action types'
-            sidebarIsOpen={open}
-            to='/auditLogActionTypes'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Autogeneration History'
-            sidebarIsOpen={open}
-            to='/autogenerationHistoryEntries'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Autogeneration Rules'
-            sidebarIsOpen={open}
-            to='/autogenerationRules'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Delegations'
-            sidebarIsOpen={open}
-            to='/delegations'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Entities'
-            sidebarIsOpen={open}
-            to='/entities'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
             primaryText='Files'
             sidebarIsOpen={open}
             to='/files'
@@ -145,86 +97,6 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             primaryText='Languages'
             sidebarIsOpen={open}
             to='/languages'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Logins of users'
-            sidebarIsOpen={open}
-            to='/appLogins'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Manager logins'
-            sidebarIsOpen={open}
-            to='/managerLogins'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Managers'
-            sidebarIsOpen={open}
-            to='/managers'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Managers To Permissions'
-            sidebarIsOpen={open}
-            to='/managersToPermissions'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Managers To Roles'
-            sidebarIsOpen={open}
-            to='/managersToRoles'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Message templates'
-            sidebarIsOpen={open}
-            to='/messageTemplates'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Message types'
-            sidebarIsOpen={open}
-            to='/messageTypes'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Permissions'
-            sidebarIsOpen={open}
-            to='/permissions'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Roles'
-            sidebarIsOpen={open}
-            to='/roles'
-          />
-          <MenuItemLink
-            dense={dense}
-            leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
-            primaryText='Roles To Permissions'
-            sidebarIsOpen={open}
-            to='/rolesToPermissions'
           />
           <MenuItemLink
             dense={dense}
@@ -262,9 +134,137 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText='Users'
+            primaryText='Аудит'
+            sidebarIsOpen={open}
+            to='/auditLogs'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Делегирование'
+            sidebarIsOpen={open}
+            to='/delegations'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='История автогенерации'
+            sidebarIsOpen={open}
+            to='/autogenerationHistoryEntries'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Логины менеджеров'
+            sidebarIsOpen={open}
+            to='/managerLogins'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Логины пользователей'
+            sidebarIsOpen={open}
+            to='/appLogins'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Менеджеры'
+            sidebarIsOpen={open}
+            to='/managers'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Пользователи'
             sidebarIsOpen={open}
             to='/users'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Правила автогенерации'
+            sidebarIsOpen={open}
+            to='/autogenerationRules'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Разрешения'
+            sidebarIsOpen={open}
+            to='/permissions'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Разрешения менеджеров'
+            sidebarIsOpen={open}
+            to='/managersToPermissions'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Разрешения ролей'
+            sidebarIsOpen={open}
+            to='/rolesToPermissions'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Роли'
+            sidebarIsOpen={open}
+            to='/roles'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Роли менеджеров'
+            sidebarIsOpen={open}
+            to='/managersToRoles'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Сущности'
+            sidebarIsOpen={open}
+            to='/entities'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Типы событий аудита'
+            sidebarIsOpen={open}
+            to='/auditLogActionTypes'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Типы сообщений'
+            sidebarIsOpen={open}
+            to='/messageTypes'
+          />
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onMenuClick}
+            primaryText='Шаблоны сообщений'
+            sidebarIsOpen={open}
+            to='/messageTemplates'
           />
         </SubMenu>
       </>}

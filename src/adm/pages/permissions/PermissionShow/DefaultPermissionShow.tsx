@@ -18,8 +18,8 @@ const DefaultPermissionShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersToPermissionsPermissionIdTab label='Managers To Permissions' path='managersToPermissions-permissionId' />
-      <RolesToPermissionsPermissionIdTab label='Roles To Permissions' path='rolesToPermissions-permissionId' />
+      <ManagersToPermissionsPermissionIdTab label='Разрешения менеджеров' path='managersToPermissions-permissionId' />
+      <RolesToPermissionsPermissionIdTab label='Разрешения ролей' path='rolesToPermissions-permissionId' />
     </TabbedShowLayout>
   </Show>
 );

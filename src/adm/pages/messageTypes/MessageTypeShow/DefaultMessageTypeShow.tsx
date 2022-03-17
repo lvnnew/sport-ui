@@ -17,7 +17,7 @@ const DefaultMessageTypeShow: FC<ShowProps> = (props: ShowProps) => (
     <TabbedShowLayout>
       <MainTab label='Summary' />
       {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <MessageTemplatesMessageTypeIdTab label='Message templates' path='messageTemplates-messageTypeId' />
+      <MessageTemplatesMessageTypeIdTab label='Шаблоны сообщений' path='messageTemplates-messageTypeId' />
     </TabbedShowLayout>
   </Show>
 );

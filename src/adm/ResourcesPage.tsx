@@ -42,7 +42,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppLoginsMeta?.count}
-        title='Logins of users'
+        title='Логины пользователей'
         to='/appLogins'
       />
       <NumberWiget
@@ -66,7 +66,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAuditLogActionTypesMeta?.count}
-        title='Audit action types'
+        title='Типы событий аудита'
         to='/auditLogActionTypes'
       />
       <NumberWiget
@@ -78,7 +78,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAuditLogsMeta?.count}
-        title='Audit'
+        title='Аудит'
         to='/auditLogs'
       />
       <NumberWiget
@@ -90,7 +90,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count}
-        title='Autogeneration History'
+        title='История автогенерации'
         to='/autogenerationHistoryEntries'
       />
       <NumberWiget
@@ -102,7 +102,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAutogenerationRulesMeta?.count}
-        title='Autogeneration Rules'
+        title='Правила автогенерации'
         to='/autogenerationRules'
       />
       <NumberWiget
@@ -114,7 +114,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allDelegationsMeta?.count}
-        title='Delegations'
+        title='Делегирование'
         to='/delegations'
       />
       <NumberWiget
@@ -126,7 +126,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allEntitiesMeta?.count}
-        title='Entities'
+        title='Сущности'
         to='/entities'
       />
       <NumberWiget
@@ -162,7 +162,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagerLoginsMeta?.count}
-        title='Manager logins'
+        title='Логины менеджеров'
         to='/managerLogins'
       />
       <NumberWiget
@@ -174,7 +174,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersMeta?.count}
-        title='Managers'
+        title='Менеджеры'
         to='/managers'
       />
       <NumberWiget
@@ -186,7 +186,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersToPermissionsMeta?.count}
-        title='Managers To Permissions'
+        title='Разрешения менеджеров'
         to='/managersToPermissions'
       />
       <NumberWiget
@@ -198,7 +198,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersToRolesMeta?.count}
-        title='Managers To Roles'
+        title='Роли менеджеров'
         to='/managersToRoles'
       />
       <NumberWiget
@@ -210,7 +210,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTemplatesMeta?.count}
-        title='Message templates'
+        title='Шаблоны сообщений'
         to='/messageTemplates'
       />
       <NumberWiget
@@ -222,7 +222,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTypesMeta?.count}
-        title='Message types'
+        title='Типы сообщений'
         to='/messageTypes'
       />
       <NumberWiget
@@ -234,7 +234,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allPermissionsMeta?.count}
-        title='Permissions'
+        title='Разрешения'
         to='/permissions'
       />
       <NumberWiget
@@ -246,7 +246,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allRolesMeta?.count}
-        title='Roles'
+        title='Роли'
         to='/roles'
       />
       <NumberWiget
@@ -258,7 +258,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allRolesToPermissionsMeta?.count}
-        title='Roles To Permissions'
+        title='Разрешения ролей'
         to='/rolesToPermissions'
       />
       <NumberWiget
@@ -306,7 +306,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allUsersMeta?.count}
-        title='Users'
+        title='Пользователи'
         to='/users'
       />
     </div>

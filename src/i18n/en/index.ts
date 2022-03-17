@@ -1,12 +1,33 @@
 /* eslint-disable max-len */
-import {
-  TranslationMessages,
-} from 'react-admin';
+import {TranslationMessages} from 'react-admin';
 import enMessages from 'ra-language-english';
+import enDocs from './enDocs';
+import enReports from './enReports';
 
 const customEnglishMessages: TranslationMessages = {
   ...enMessages,
   app: {
+    documents: 'Documents',
+    catalogs: 'Catalogs',
+    infoRegistries: 'Info registries',
+    sumRegistries: 'Sum registries',
+    reports: 'Reports',
+    sbrInvestigation: 'Sbr Investigation',
+    cardIssue: 'Card issue',
+
+    approve: 'Approve',
+    cancel: 'Cancel',
+    review: 'Review',
+    reviewReason: 'Review reason',
+    createManualAccounting: 'Create manual accounting',
+
+    addRole: 'Add role',
+    addPermission: 'Add permission',
+    from: 'From',
+    to: 'To',
+    add: 'Add',
+    actions: 'Actions',
+    edit: 'Edit',
     configuration: 'Configuration',
     dashboard: {
       all_customers: 'See all customers',
@@ -40,6 +61,57 @@ const customEnglishMessages: TranslationMessages = {
       dark: 'Dark',
       light: 'Light',
       name: 'Theme',
+    },
+  },
+  validation: {
+    minLength: 'Minimum length:',
+    maxLength: 'Maximum length:',
+    minValue: 'Minimum value',
+    noSpaces: 'Spaces are not allowed. ',
+    noDigits: 'Digits are not allowed. ',
+    notFutureDate: 'Choosing a future date is not allowed',
+    required: 'This field is required',
+    onlyLatinLetters: 'Only latin letters allowed. ',
+    onlyNumbers: 'Only numbers allowed',
+    exactLength: 'Exact symbols quantity: %{smart_count}.',
+  },
+  reportsColumns: {
+    date: 'Date',
+    cardNmber: 'Card number',
+    partner: 'Partner',
+    miles: 'Miles',
+  },
+  reports: enReports,
+  calcs: {
+    calculators: 'Calculators',
+    milesCalc: 'Miles to receive',
+    upgradeCalc: 'Upgrade calculator',
+    flightCalc: 'Flight calculator',
+  },
+  docs: enDocs,
+  menu: {
+    dashboard: 'Dashboard',
+    members: 'Members',
+    managers: 'Managers',
+    newMember: 'New member',
+    mergeProfiles: 'Merge profiles',
+    transactions: 'Transactions',
+    issueCardByManager: 'Card issue',
+  },
+  managers: {
+    deactivate: 'Deactivate',
+    deactivated: 'Manager deactivated',
+  },
+  member: {
+    show: {
+      recalculate: 'Recalculate',
+      markedAsDeleted: 'Status changed to Deleted',
+    },
+  },
+  members: {
+    list: {
+      memberType: 'Member type',
+      search: 'Search',
     },
   },
   ra: {
@@ -142,6 +214,9 @@ const customEnglishMessages: TranslationMessages = {
       },
       name: 'Invoice |||| Invoices',
     },
+    posts: {
+      name: 'Posts',
+    },
     products: {
       fields: {
         category_id: 'Category',
@@ -220,6 +295,9 @@ const customEnglishMessages: TranslationMessages = {
         name: 'Name',
       },
       name: 'Segment |||| Segments',
+    },
+    users: {
+      name: 'Users',
     },
   },
 };
