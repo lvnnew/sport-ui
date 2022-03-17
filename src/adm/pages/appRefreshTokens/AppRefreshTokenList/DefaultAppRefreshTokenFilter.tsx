@@ -13,7 +13,11 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
     <DateTimeInput fullWidth source='create' />
-    <ReferenceInput source='userId' reference='users' sort={{id: 'id', order: 'DESC'}}>
+    <ReferenceInput
+      source='userId'
+      reference='users'
+      sort={{id: 'id', order: 'DESC'}}
+    >
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
     <TextInput fullWidth source='token' />

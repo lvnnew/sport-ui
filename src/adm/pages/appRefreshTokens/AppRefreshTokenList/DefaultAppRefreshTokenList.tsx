@@ -7,23 +7,28 @@ import {
   NumberField,
   TextField,
   ReferenceField,
+  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AppRefreshTokenFilter from './AppRefreshTokenFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => (
-  <List title='App refresh tokens' exporter={false} filters={<AppRefreshTokenFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <NumberField source='id' />
-      <DateField source='create' showTime />
-      <ReferenceField source='userId' reference='users' link='show'>
-        <TextField source='title' />
-      </ReferenceField>
-      <TextField source='token' />
-    </Datagrid>
-  </List>
-);
+const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.appRefreshTokens')} exporter={false} filters={<AppRefreshTokenFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <NumberField source='id' />
+        <DateField source='create' showTime />
+        <ReferenceField source='userId' reference='users' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <TextField source='token' />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultAppRefreshTokenList;

@@ -11,10 +11,18 @@ import {
 const DefaultManagersToPermissionFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <ReferenceInput source='managerId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
+    <ReferenceInput
+      source='managerId'
+      reference='managers'
+      sort={{id: 'id', order: 'DESC'}}
+    >
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
-    <ReferenceInput source='permissionId' reference='permissions' sort={{id: 'id', order: 'DESC'}}>
+    <ReferenceInput
+      source='permissionId'
+      reference='permissions'
+      sort={{id: 'id', order: 'DESC'}}
+    >
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
   </Filter>

@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import AutogenerationHistoryEntriesAutogenerationRuleIdTab from './tabs/AutogenerationHistoryEntriesAutogenerationRuleIdTab';
 import MainTab from './MainTab';
@@ -12,14 +13,18 @@ import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAutogenerationRuleShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <AutogenerationHistoryEntriesAutogenerationRuleIdTab label='История автогенерации' path='autogenerationHistoryEntries-autogenerationRuleId' />
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultAutogenerationRuleShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <AutogenerationHistoryEntriesAutogenerationRuleIdTab label={translate('catalogs.autogenerationHistoryEntries')} path='autogenerationHistoryEntries-autogenerationRuleId' />
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultAutogenerationRuleShow;

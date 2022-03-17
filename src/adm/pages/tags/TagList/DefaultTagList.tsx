@@ -6,18 +6,23 @@ import {
   ListProps,
   NumberField,
   TextField,
+  useTranslate,
 } from 'react-admin';
 import TagFilter from './TagFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultTagList: FC<ListProps> = (props: ListProps) => (
-  <List title='Tags' exporter={false} filters={<TagFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <NumberField source='id' />
-      <TextField source='comment' />
-    </Datagrid>
-  </List>
-);
+const DefaultTagList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.tags')} exporter={false} filters={<TagFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <NumberField source='id' />
+        <TextField source='comment' />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultTagList;

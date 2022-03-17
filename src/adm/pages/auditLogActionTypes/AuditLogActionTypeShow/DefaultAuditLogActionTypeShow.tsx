@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import AuditLogsActionTypeIdTab from './tabs/AuditLogsActionTypeIdTab';
 import MainTab from './MainTab';
@@ -12,14 +13,18 @@ import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAuditLogActionTypeShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <AuditLogsActionTypeIdTab label='Аудит' path='auditLogs-actionTypeId' />
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultAuditLogActionTypeShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <AuditLogsActionTypeIdTab label={translate('catalogs.auditLogs')} path='auditLogs-actionTypeId' />
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultAuditLogActionTypeShow;

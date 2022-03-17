@@ -14,7 +14,11 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => (
     <TextInput label='Search' source='q' alwaysOn />
     <TextInput fullWidth source='title' />
     <BooleanInput fullWidth source='secretData' />
-    <ReferenceInput source='messageTypeId' reference='messageTypes' sort={{id: 'id', order: 'DESC'}}>
+    <ReferenceInput
+      source='messageTypeId'
+      reference='messageTypes'
+      sort={{id: 'id', order: 'DESC'}}
+    >
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
   </Filter>

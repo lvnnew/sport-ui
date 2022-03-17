@@ -7,22 +7,27 @@ import {
   TextField,
   BooleanField,
   ReferenceField,
+  useTranslate,
 } from 'react-admin';
 import MessageTemplateFilter from './MessageTemplateFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => (
-  <List title='Message templates' exporter={false} filters={<MessageTemplateFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <TextField source='id' />
-      <TextField source='title' />
-      <BooleanField source='secretData' />
-      <ReferenceField source='messageTypeId' reference='messageTypes' link='show'>
+const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.messageTemplates')} exporter={false} filters={<MessageTemplateFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <TextField source='id' />
         <TextField source='title' />
-      </ReferenceField>
-    </Datagrid>
-  </List>
-);
+        <BooleanField source='secretData' />
+        <ReferenceField source='messageTypeId' reference='messageTypes' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultMessageTemplateList;

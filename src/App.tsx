@@ -2,9 +2,7 @@ import * as React from 'react';
 import {
   useState, useEffect,
 } from 'react';
-import {
-  Admin, AuthProvider,
-} from 'react-admin';
+import {Admin, AuthProvider, useTranslate} from 'react-admin';
 import {
   ApolloClient,
   ApolloProvider,
@@ -54,6 +52,7 @@ const App = () => {
   const [authProvider, setAuthProvider] = useState<AuthProvider | null>(null);
   const [client, setClient] = useState<ApolloClient<NormalizedCacheObject> | null>(null);
   const [authVersion, setAuthVersion] = useState(0);
+  const translate = useTranslate();
 
   useEffect(() => {
     const fetchDataProvider = async () => {
@@ -91,7 +90,7 @@ const App = () => {
           authProvider={authProvider}
           title=''
         >
-          {permissions => getResources(permissions)}
+          {permissions => getResources(translate, permissions)}
         </Admin>
       </DebugProvider>
     </ApolloProvider>

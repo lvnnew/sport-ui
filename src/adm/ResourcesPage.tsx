@@ -6,6 +6,7 @@ import {
   gql,
 } from '@apollo/client';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {useTranslate} from 'react-admin';
 
 const useStyles = makeStyles(() => createStyles({
   flex: {
@@ -18,6 +19,7 @@ const useStyles = makeStyles(() => createStyles({
 
 const ResourcesPage: FC = () => {
   const classes = useStyles();
+  const translate = useTranslate();
 
   return (
     <div className={classes.flex}>
@@ -30,7 +32,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAdmRefreshTokensMeta?.count}
-        title='Ui refresh tokens'
+        title={translate('catalogs.admRefreshTokens')}
         to='/admRefreshTokens'
       />
       <NumberWiget
@@ -42,7 +44,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppLoginsMeta?.count}
-        title='Логины пользователей'
+        title={translate('catalogs.appLogins')}
         to='/appLogins'
       />
       <NumberWiget
@@ -54,7 +56,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppRefreshTokensMeta?.count}
-        title='App refresh tokens'
+        title={translate('catalogs.appRefreshTokens')}
         to='/appRefreshTokens'
       />
       <NumberWiget
@@ -66,7 +68,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAuditLogActionTypesMeta?.count}
-        title='Типы событий аудита'
+        title={translate('catalogs.auditLogActionTypes')}
         to='/auditLogActionTypes'
       />
       <NumberWiget
@@ -78,7 +80,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAuditLogsMeta?.count}
-        title='Аудит'
+        title={translate('catalogs.auditLogs')}
         to='/auditLogs'
       />
       <NumberWiget
@@ -90,7 +92,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count}
-        title='История автогенерации'
+        title={translate('catalogs.autogenerationHistoryEntries')}
         to='/autogenerationHistoryEntries'
       />
       <NumberWiget
@@ -102,7 +104,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAutogenerationRulesMeta?.count}
-        title='Правила автогенерации'
+        title={translate('catalogs.autogenerationRules')}
         to='/autogenerationRules'
       />
       <NumberWiget
@@ -114,7 +116,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allDelegationsMeta?.count}
-        title='Делегирование'
+        title={translate('catalogs.delegations')}
         to='/delegations'
       />
       <NumberWiget
@@ -126,7 +128,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allEntitiesMeta?.count}
-        title='Сущности'
+        title={translate('catalogs.entities')}
         to='/entities'
       />
       <NumberWiget
@@ -138,7 +140,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allFilesMeta?.count}
-        title='Files'
+        title={translate('catalogs.files')}
         to='/files'
       />
       <NumberWiget
@@ -150,7 +152,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allLanguagesMeta?.count}
-        title='Languages'
+        title={translate('catalogs.languages')}
         to='/languages'
       />
       <NumberWiget
@@ -162,7 +164,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagerLoginsMeta?.count}
-        title='Логины менеджеров'
+        title={translate('catalogs.managerLogins')}
         to='/managerLogins'
       />
       <NumberWiget
@@ -174,7 +176,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersMeta?.count}
-        title='Менеджеры'
+        title={translate('catalogs.managers')}
         to='/managers'
       />
       <NumberWiget
@@ -186,7 +188,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersToPermissionsMeta?.count}
-        title='Разрешения менеджеров'
+        title={translate('catalogs.managersToPermissions')}
         to='/managersToPermissions'
       />
       <NumberWiget
@@ -198,7 +200,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersToRolesMeta?.count}
-        title='Роли менеджеров'
+        title={translate('catalogs.managersToRoles')}
         to='/managersToRoles'
       />
       <NumberWiget
@@ -210,7 +212,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTemplatesMeta?.count}
-        title='Шаблоны сообщений'
+        title={translate('catalogs.messageTemplates')}
         to='/messageTemplates'
       />
       <NumberWiget
@@ -222,7 +224,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTypesMeta?.count}
-        title='Типы сообщений'
+        title={translate('catalogs.messageTypes')}
         to='/messageTypes'
       />
       <NumberWiget
@@ -234,7 +236,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allPermissionsMeta?.count}
-        title='Разрешения'
+        title={translate('catalogs.permissions')}
         to='/permissions'
       />
       <NumberWiget
@@ -246,7 +248,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allRolesMeta?.count}
-        title='Роли'
+        title={translate('catalogs.roles')}
         to='/roles'
       />
       <NumberWiget
@@ -258,7 +260,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allRolesToPermissionsMeta?.count}
-        title='Разрешения ролей'
+        title={translate('catalogs.rolesToPermissions')}
         to='/rolesToPermissions'
       />
       <NumberWiget
@@ -270,7 +272,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allStatsMeta?.count}
-        title='Stats'
+        title={translate('catalogs.stats')}
         to='/stats'
       />
       <NumberWiget
@@ -282,7 +284,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allTagsMeta?.count}
-        title='Tags'
+        title={translate('catalogs.tags')}
         to='/tags'
       />
       <NumberWiget
@@ -294,7 +296,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allUnitsMeta?.count}
-        title='Units'
+        title={translate('catalogs.units')}
         to='/units'
       />
       <NumberWiget
@@ -306,7 +308,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allUsersMeta?.count}
-        title='Пользователи'
+        title={translate('catalogs.users')}
         to='/users'
       />
     </div>

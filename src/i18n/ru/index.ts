@@ -3,6 +3,9 @@ import {TranslationMessages} from 'react-admin';
 import enMessages from 'ra-language-english';
 import ruDocs from './ruDocs';
 import ruReports from './ruReports';
+import ruCatalogs from './ruCatalogs';
+import ruInfoRegistries from './ruInfoRegistries';
+import ruSumRegistries from './ruSumRegistries';
 
 const customEnglishMessages: TranslationMessages = {
   ...enMessages,
@@ -83,6 +86,9 @@ const customEnglishMessages: TranslationMessages = {
   },
   reports: ruReports,
   docs: ruDocs,
+  catalogs: ruCatalogs,
+  infoRegistries: ruInfoRegistries,
+  sumRegistries: ruSumRegistries,
   menu: {
     dashboard: 'Панель управления',
     members: 'Участники',

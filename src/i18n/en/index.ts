@@ -3,6 +3,9 @@ import {TranslationMessages} from 'react-admin';
 import enMessages from 'ra-language-english';
 import enDocs from './enDocs';
 import enReports from './enReports';
+import enCatalogs from './enCatalogs';
+import enInfoRegistries from './enInfoRegistries';
+import enSumRegistries from './enSumRegistries';
 
 const customEnglishMessages: TranslationMessages = {
   ...enMessages,
@@ -89,6 +92,9 @@ const customEnglishMessages: TranslationMessages = {
     flightCalc: 'Flight calculator',
   },
   docs: enDocs,
+  catalogs: enCatalogs,
+  infoRegistries: enInfoRegistries,
+  sumRegistries: enSumRegistries,
   menu: {
     dashboard: 'Dashboard',
     members: 'Members',

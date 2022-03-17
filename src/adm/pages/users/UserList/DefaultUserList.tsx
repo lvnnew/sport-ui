@@ -6,21 +6,26 @@ import {
   ListProps,
   NumberField,
   TextField,
+  useTranslate,
 } from 'react-admin';
 import UserFilter from './UserFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultUserList: FC<ListProps> = (props: ListProps) => (
-  <List title='Users' exporter={false} filters={<UserFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <NumberField source='id' />
-      <TextField source='title' />
-      <TextField source='lastname' />
-      <TextField source='firstname' />
-      <TextField source='email' />
-    </Datagrid>
-  </List>
-);
+const DefaultUserList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.users')} exporter={false} filters={<UserFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <NumberField source='id' />
+        <TextField source='title' />
+        <TextField source='lastname' />
+        <TextField source='firstname' />
+        <TextField source='email' />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultUserList;

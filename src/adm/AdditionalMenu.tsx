@@ -1,6 +1,6 @@
 import React, {useState, FC} from 'react';
 import {useSelector} from 'react-redux';
-import {MenuItemLink} from 'react-admin';
+import {MenuItemLink, useTranslate} from 'react-admin';
 import SubMenu from '../layout/SubMenu';
 import FileSaving from '@material-ui/icons/PermMedia';
 import {AppState} from '../types';
@@ -20,6 +20,7 @@ export interface AdditionalMenuProps {
 }
 
 export const AdditionalMenu: FC<AdditionalMenuProps> = ({onMenuClick, dense, open}) => {
+  const translate = useTranslate();
   const [state, setState] = useState(defaultState);
   useSelector((state: AppState) => state.theme); // force rerender on theme change
   const {debug} = useDebug();
@@ -36,7 +37,7 @@ export const AdditionalMenu: FC<AdditionalMenuProps> = ({onMenuClick, dense, ope
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText='Stats'
+            primaryText={translate('catalogs.stats')}
             sidebarIsOpen={open}
             to='/statsDashboard'
           />

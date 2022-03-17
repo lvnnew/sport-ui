@@ -6,25 +6,30 @@ import {
   ListProps,
   TextField,
   BooleanField,
+  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationRuleFilter from './AutogenerationRuleFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => (
-  <List title='Autogeneration rules' exporter={false} filters={<AutogenerationRuleFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <TextField source='id' />
-      <TextField source='title' />
-      <DateField source='version' />
-      <TextField source='originalEntityType' />
-      <TextField source='generatingEntityType' />
-      <TextField source='originalEntityFilter' />
-      <TextField source='generatingEntityConstructionRules' />
-      <BooleanField source='ignoreVersionOnHistory' />
-    </Datagrid>
-  </List>
-);
+const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.autogenerationRules')} exporter={false} filters={<AutogenerationRuleFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <TextField source='id' />
+        <TextField source='title' />
+        <DateField source='version' />
+        <TextField source='originalEntityType' />
+        <TextField source='generatingEntityType' />
+        <TextField source='originalEntityFilter' />
+        <TextField source='generatingEntityConstructionRules' />
+        <BooleanField source='ignoreVersionOnHistory' />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultAutogenerationRuleList;

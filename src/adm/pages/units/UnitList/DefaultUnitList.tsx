@@ -7,21 +7,26 @@ import {
   NumberField,
   TextField,
   ReferenceField,
+  useTranslate,
 } from 'react-admin';
 import UnitFilter from './UnitFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultUnitList: FC<ListProps> = (props: ListProps) => (
-  <List title='Units' exporter={false} filters={<UnitFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <NumberField source='id' />
-      <TextField source='title' />
-      <ReferenceField source='parentId' reference='units' link='show'>
+const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.units')} exporter={false} filters={<UnitFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <NumberField source='id' />
         <TextField source='title' />
-      </ReferenceField>
-    </Datagrid>
-  </List>
-);
+        <ReferenceField source='parentId' reference='units' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultUnitList;

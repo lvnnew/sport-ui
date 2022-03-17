@@ -37,12 +37,20 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='fromId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
+            <ReferenceInput
+              source='fromId'
+              reference='managers'
+              sort={{id: 'id', order: 'DESC'}}
+            >
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='toId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
+            <ReferenceInput
+              source='toId'
+              reference='managers'
+              sort={{id: 'id', order: 'DESC'}}
+            >
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>

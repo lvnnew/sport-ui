@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import ManagersToPermissionsPermissionIdTab from './tabs/ManagersToPermissionsPermissionIdTab';
 import RolesToPermissionsPermissionIdTab from './tabs/RolesToPermissionsPermissionIdTab';
@@ -13,15 +14,19 @@ import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultPermissionShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersToPermissionsPermissionIdTab label='Разрешения менеджеров' path='managersToPermissions-permissionId' />
-      <RolesToPermissionsPermissionIdTab label='Разрешения ролей' path='rolesToPermissions-permissionId' />
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultPermissionShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <ManagersToPermissionsPermissionIdTab label={translate('catalogs.managersToPermissions')} path='managersToPermissions-permissionId' />
+        <RolesToPermissionsPermissionIdTab label={translate('catalogs.rolesToPermissions')} path='rolesToPermissions-permissionId' />
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultPermissionShow;

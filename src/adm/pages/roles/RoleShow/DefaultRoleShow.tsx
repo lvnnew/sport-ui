@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import ManagersToRolesRoleIdTab from './tabs/ManagersToRolesRoleIdTab';
 import RolesToPermissionsRoleIdTab from './tabs/RolesToPermissionsRoleIdTab';
@@ -13,15 +14,19 @@ import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultRoleShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <ManagersToRolesRoleIdTab label='Роли менеджеров' path='managersToRoles-roleId' />
-      <RolesToPermissionsRoleIdTab label='Разрешения ролей' path='rolesToPermissions-roleId' />
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultRoleShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <ManagersToRolesRoleIdTab label={translate('catalogs.managersToRoles')} path='managersToRoles-roleId' />
+        <RolesToPermissionsRoleIdTab label={translate('catalogs.rolesToPermissions')} path='rolesToPermissions-roleId' />
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultRoleShow;

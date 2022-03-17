@@ -12,7 +12,11 @@ const DefaultUnitFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
     <TextInput fullWidth source='title' />
-    <ReferenceInput source='parentId' reference='units' sort={{id: 'id', order: 'DESC'}}>
+    <ReferenceInput
+      source='parentId'
+      reference='units'
+      sort={{id: 'id', order: 'DESC'}}
+    >
       <AutocompleteInput fullWidth optionText='title' resettable />
     </ReferenceInput>
   </Filter>

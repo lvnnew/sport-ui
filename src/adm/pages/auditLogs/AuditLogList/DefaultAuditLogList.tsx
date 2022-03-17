@@ -8,37 +8,42 @@ import {
   TextField,
   ReferenceField,
   BooleanField,
+  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AuditLogFilter from './AuditLogFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => (
-  <List title='Audit logs' exporter={false} filters={<AuditLogFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <NumberField source='id' />
-      <DateField source='date' showTime />
-      <TextField source='title' />
-      <ReferenceField source='entityTypeId' reference='entities' link='show'>
+const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.auditLogs')} exporter={false} filters={<AuditLogFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <NumberField source='id' />
+        <DateField source='date' showTime />
         <TextField source='title' />
-      </ReferenceField>
-      <TextField source='entityId' />
-      <ReferenceField source='actionTypeId' reference='auditLogActionTypes' link='show'>
-        <TextField source='title' />
-      </ReferenceField>
-      <ReferenceField source='managerId' reference='managers' link='show'>
-        <TextField source='title' />
-      </ReferenceField>
-      <ReferenceField source='userId' reference='users' link='show'>
-        <TextField source='title' />
-      </ReferenceField>
-      <BooleanField source='foreign' />
-      <TextField source='foreignEntityType' />
-      <TextField source='foreignEntityId' />
-      <TextField source='actionData' />
-    </Datagrid>
-  </List>
-);
+        <ReferenceField source='entityTypeId' reference='entities' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <TextField source='entityId' />
+        <ReferenceField source='actionTypeId' reference='auditLogActionTypes' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='managerId' reference='managers' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='userId' reference='users' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <BooleanField source='foreign' />
+        <TextField source='foreignEntityType' />
+        <TextField source='foreignEntityId' />
+        <TextField source='actionData' />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultAuditLogList;

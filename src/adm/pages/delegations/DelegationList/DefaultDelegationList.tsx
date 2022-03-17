@@ -8,26 +8,31 @@ import {
   TextField,
   ReferenceField,
   BooleanField,
+  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import DelegationFilter from './DelegationFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultDelegationList: FC<ListProps> = (props: ListProps) => (
-  <List title='Delegations' exporter={false} filters={<DelegationFilter />} {...props}>
-    <Datagrid rowClick='show'>
-      <NumberField source='id' />
-      <ReferenceField source='fromId' reference='managers' link='show'>
-        <TextField source='title' />
-      </ReferenceField>
-      <ReferenceField source='toId' reference='managers' link='show'>
-        <TextField source='title' />
-      </ReferenceField>
-      <DateField source='expiresAt' />
-      <BooleanField source='active' />
-    </Datagrid>
-  </List>
-);
+const DefaultDelegationList: FC<ListProps> = (props: ListProps) => {
+  const translate = useTranslate();
+
+  return (
+    <List title={translate('catalogs.delegations')} exporter={false} filters={<DelegationFilter />} {...props}>
+      <Datagrid rowClick='show'>
+        <NumberField source='id' />
+        <ReferenceField source='fromId' reference='managers' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='toId' reference='managers' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <DateField source='expiresAt' />
+        <BooleanField source='active' />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default DefaultDelegationList;

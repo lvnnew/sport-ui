@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import AdmRefreshTokensManagerIdTab from './tabs/AdmRefreshTokensManagerIdTab';
 import AuditLogsManagerIdTab from './tabs/AuditLogsManagerIdTab';
@@ -18,20 +19,24 @@ import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <AdmRefreshTokensManagerIdTab label='Ui refresh tokens' path='admRefreshTokens-managerId' />
-      <AuditLogsManagerIdTab label='Аудит' path='auditLogs-managerId' />
-      <DelegationsFromIdTab label='Делегирование' path='delegations-fromId' />
-      <DelegationsToIdTab label='Делегирование' path='delegations-toId' />
-      <ManagerLoginsManagerIdTab label='Логины менеджеров' path='managerLogins-managerId' />
-      <ManagersToPermissionsManagerIdTab label='Разрешения менеджеров' path='managersToPermissions-managerId' />
-      <ManagersToRolesManagerIdTab label='Роли менеджеров' path='managersToRoles-managerId' />
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <AdmRefreshTokensManagerIdTab label={translate('catalogs.admRefreshTokens')} path='admRefreshTokens-managerId' />
+        <AuditLogsManagerIdTab label={translate('catalogs.auditLogs')} path='auditLogs-managerId' />
+        <DelegationsFromIdTab label={translate('catalogs.delegations')} path='delegations-fromId' />
+        <DelegationsToIdTab label={translate('catalogs.delegations')} path='delegations-toId' />
+        <ManagerLoginsManagerIdTab label={translate('catalogs.managerLogins')} path='managerLogins-managerId' />
+        <ManagersToPermissionsManagerIdTab label={translate('catalogs.managersToPermissions')} path='managersToPermissions-managerId' />
+        <ManagersToRolesManagerIdTab label={translate('catalogs.managersToRoles')} path='managersToRoles-managerId' />
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultManagerShow;

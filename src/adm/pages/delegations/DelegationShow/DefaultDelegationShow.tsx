@@ -5,21 +5,21 @@ import {
   ShowProps,
   TabbedShowLayout,
 } from 'react-admin';
-
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultDelegationShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultDelegationShow: FC<ShowProps> = (props: ShowProps) => {
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultDelegationShow;

@@ -17,7 +17,11 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => (
     <DateTimeInput fullWidth source='date' />
     <TextInput fullWidth source='originalEntityType' />
     <TextInput fullWidth source='originalEntityId' />
-    <ReferenceInput source='autogenerationRuleId' reference='autogenerationRules' sort={{id: 'id', order: 'DESC'}}>
+    <ReferenceInput
+      source='autogenerationRuleId'
+      reference='autogenerationRules'
+      sort={{id: 'id', order: 'DESC'}}
+    >
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
     <DateInput fullWidth source='version' />

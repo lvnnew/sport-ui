@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import MessageTemplatesMessageTypeIdTab from './tabs/MessageTemplatesMessageTypeIdTab';
 import MainTab from './MainTab';
@@ -12,14 +13,18 @@ import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultMessageTypeShow: FC<ShowProps> = (props: ShowProps) => (
-  <Show actions={<DefaultActions />} {...props}>
-    <TabbedShowLayout>
-      <MainTab label='Summary' />
-      {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-      <MessageTemplatesMessageTypeIdTab label='Шаблоны сообщений' path='messageTemplates-messageTypeId' />
-    </TabbedShowLayout>
-  </Show>
-);
+const DefaultMessageTypeShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
+  return (
+    <Show actions={<DefaultActions />} {...props}>
+      <TabbedShowLayout>
+        <MainTab label='Summary' />
+        {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <MessageTemplatesMessageTypeIdTab label={translate('catalogs.messageTemplates')} path='messageTemplates-messageTypeId' />
+      </TabbedShowLayout>
+    </Show>
+  );
+};
 
 export default DefaultMessageTypeShow;
