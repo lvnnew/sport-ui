@@ -46,7 +46,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput fullWidth source='firstName' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='languageId' reference='languages'>
+            <ReferenceInput source='languageId' reference='languages' sort={{id: 'id', order: 'DESC'}}>
               <AutocompleteInput fullWidth optionText='title' resettable />
             </ReferenceInput>
           </FormGrid>
@@ -57,7 +57,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput fullWidth source='telegramLogin' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='unitId' reference='units'>
+            <ReferenceInput source='unitId' reference='units' sort={{id: 'id', order: 'DESC'}}>
               <AutocompleteInput fullWidth optionText='title' resettable />
             </ReferenceInput>
           </FormGrid>

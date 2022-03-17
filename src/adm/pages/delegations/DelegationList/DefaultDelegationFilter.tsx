@@ -13,10 +13,10 @@ import DateInput from '../../../../uiLib/DateInput';
 const DefaultDelegationFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <ReferenceInput source='fromId' reference='managers'>
+    <ReferenceInput source='fromId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
-    <ReferenceInput source='toId' reference='managers'>
+    <ReferenceInput source='toId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
     <DateInput fullWidth source='expiresAt' />

@@ -45,7 +45,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
             <BooleanInput fullWidth source='secretData' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='messageTypeId' reference='messageTypes'>
+            <ReferenceInput source='messageTypeId' reference='messageTypes' sort={{id: 'id', order: 'DESC'}}>
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>

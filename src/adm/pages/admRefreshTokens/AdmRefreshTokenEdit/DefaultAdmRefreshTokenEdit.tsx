@@ -38,7 +38,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
             <DateTimeInput fullWidth source='create' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput source='managerId' reference='managers'>
+            <ReferenceInput source='managerId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>

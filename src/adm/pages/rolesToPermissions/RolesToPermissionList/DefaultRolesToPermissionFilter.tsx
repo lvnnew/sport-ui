@@ -11,10 +11,10 @@ import {
 const DefaultRolesToPermissionFilter: FC<any> = (props) => (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <ReferenceInput source='roleId' reference='roles'>
+    <ReferenceInput source='roleId' reference='roles' sort={{id: 'id', order: 'DESC'}}>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
-    <ReferenceInput source='permissionId' reference='permissions'>
+    <ReferenceInput source='permissionId' reference='permissions' sort={{id: 'id', order: 'DESC'}}>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
   </Filter>

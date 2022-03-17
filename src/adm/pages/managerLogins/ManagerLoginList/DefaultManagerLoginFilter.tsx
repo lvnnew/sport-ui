@@ -18,7 +18,7 @@ const DefaultManagerLoginFilter: FC<any> = (props) => (
     <BooleanInput fullWidth source='emailVerified' />
     <BooleanInput fullWidth source='initialPasswordChanged' />
     <BooleanInput fullWidth source='locked' />
-    <ReferenceInput source='managerId' reference='managers'>
+    <ReferenceInput source='managerId' reference='managers' sort={{id: 'id', order: 'DESC'}}>
       <AutocompleteInput fullWidth optionText='title' />
     </ReferenceInput>
   </Filter>
