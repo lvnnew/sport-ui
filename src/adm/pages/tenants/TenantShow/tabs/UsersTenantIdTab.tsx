@@ -1,24 +1,28 @@
 /* eslint-disable max-len */
 import React, {FC} from 'react';
 import {
-  List,
-  Datagrid,
-  ListProps,
+  TabProps,
+  Tab,
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
+  ReferenceManyField,
+  Pagination,
+  Datagrid,
+  ShowButton,
 } from 'react-admin';
-import UserFilter from './UserFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultUserList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
-  return (
-    <List title={translate('catalogs.users')} exporter={false} filters={<UserFilter />} {...props}>
-      <Datagrid rowClick='show'>
+const UsersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
+  <Tab {...props}>
+    <ReferenceManyField
+      addLabel={false}
+      reference='users'
+      target='tenantId'
+      pagination={<Pagination />}
+    >
+      <Datagrid>
         <NumberField source='id' />
         <TextField source='title' />
         <TextField source='lastname' />
@@ -27,9 +31,10 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => {
         <ReferenceField source='tenantId' reference='tenants' link='show'>
           <TextField source='title' />
         </ReferenceField>
+        <ShowButton />
       </Datagrid>
-    </List>
-  );
-};
+    </ReferenceManyField>
+  </Tab>
+);
 
-export default DefaultUserList;
+export default UsersTenantIdTab;

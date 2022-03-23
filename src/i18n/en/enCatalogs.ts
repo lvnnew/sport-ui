@@ -25,6 +25,7 @@ const enCatalogs = {
   rolesToPermissions: 'Roles To Permissions',
   stats: 'Stats',
   tags: 'Tags',
+  tenants: 'Tenants',
   units: 'Units',
   users: 'Users',
 };

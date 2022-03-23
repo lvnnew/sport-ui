@@ -1,25 +1,29 @@
 /* eslint-disable max-len */
 import React, {FC} from 'react';
 import {
-  List,
-  Datagrid,
-  ListProps,
+  TabProps,
+  Tab,
   NumberField,
   TextField,
   ReferenceField,
   BooleanField,
-  useTranslate,
+  ReferenceManyField,
+  Pagination,
+  Datagrid,
+  ShowButton,
 } from 'react-admin';
-import ManagerFilter from './ManagerFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
-  return (
-    <List title={translate('catalogs.managers')} exporter={false} filters={<ManagerFilter />} {...props}>
-      <Datagrid rowClick='show'>
+const ManagersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
+  <Tab {...props}>
+    <ReferenceManyField
+      addLabel={false}
+      reference='managers'
+      target='tenantId'
+      pagination={<Pagination />}
+    >
+      <Datagrid>
         <NumberField source='id' />
         <TextField source='title' />
         <TextField source='lastName' />
@@ -39,9 +43,10 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
         </ReferenceField>
         <BooleanField source='headOfUnit' />
         <BooleanField source='active' />
+        <ShowButton />
       </Datagrid>
-    </List>
-  );
-};
+    </ReferenceManyField>
+  </Tab>
+);
 
-export default DefaultManagerList;
+export default ManagersTenantIdTab;

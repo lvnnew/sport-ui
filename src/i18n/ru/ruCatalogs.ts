@@ -25,6 +25,7 @@ const ruCatalogs = {
   rolesToPermissions: 'Разрешения ролей',
   stats: 'Stats',
   tags: 'Tags',
+  tenants: 'Тенанты',
   units: 'Units',
   users: 'Пользователи',
 };

@@ -290,6 +290,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allTenantsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTenantsMeta?.count}
+        title={translate('catalogs.tenants')}
+        to='/tenants'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allUnitsMeta {
               count
             }

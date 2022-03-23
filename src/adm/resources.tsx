@@ -268,6 +268,18 @@ const LoadableTagCreate = Loadable({
 const LoadableTagList = Loadable({
   loader: () => import('./pages/tags/TagList'),
 });
+const LoadableTenantShow = Loadable({
+  loader: () => import('./pages/tenants/TenantShow'),
+});
+const LoadableTenantEdit = Loadable({
+  loader: () => import('./pages/tenants/TenantEdit'),
+});
+const LoadableTenantCreate = Loadable({
+  loader: () => import('./pages/tenants/TenantCreate'),
+});
+const LoadableTenantList = Loadable({
+  loader: () => import('./pages/tenants/TenantList'),
+});
 const LoadableUnitShow = Loadable({
   loader: () => import('./pages/units/UnitShow'),
 });
@@ -292,6 +304,7 @@ const LoadableUserCreate = Loadable({
 const LoadableUserList = Loadable({
   loader: () => import('./pages/users/UserList'),
 });
+
 export const getResources = (translate: Translate, permissions: string[]) => (
   permissions ?
     [
@@ -492,6 +505,15 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'tags.create') ? LoadableTagCreate : undefined}
         list={hasPermission(permissions, 'tags.all') ? LoadableTagList : undefined}
         options={{label: translate('catalogs.tags')}}
+      />,
+      <Resource
+        key='tenants'
+        name='tenants'
+        show={hasPermission(permissions, 'tenants.get') ? LoadableTenantShow : undefined}
+        edit={hasPermission(permissions, 'tenants.update') ? LoadableTenantEdit : undefined}
+        create={hasPermission(permissions, 'tenants.create') ? LoadableTenantCreate : undefined}
+        list={hasPermission(permissions, 'tenants.all') ? LoadableTenantList : undefined}
+        options={{label: translate('catalogs.tenants')}}
       />,
       <Resource
         key='units'

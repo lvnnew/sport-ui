@@ -23,8 +23,13 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => (
         <TextField source='title' />
       </ReferenceField></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='email' /></FormGrid>
+      <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='phone' /></FormGrid>
+      <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='photo' /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='telegramLogin' /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='unitId' reference='units' link='show'>
+        <TextField source='title' />
+      </ReferenceField></FormGrid>
+      <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='tenantId' reference='tenants' link='show'>
         <TextField source='title' />
       </ReferenceField></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source='headOfUnit' /></FormGrid>

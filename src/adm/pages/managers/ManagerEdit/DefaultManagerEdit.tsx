@@ -58,12 +58,27 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput fullWidth source='email' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='phone' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <TextInput fullWidth source='photo' />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <TextInput fullWidth source='telegramLogin' />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='unitId'
               reference='units'
+              sort={{id: 'id', order: 'DESC'}}
+            >
+              <AutocompleteInput fullWidth optionText='title' resettable />
+            </ReferenceInput>
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <ReferenceInput
+              source='tenantId'
+              reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >
               <AutocompleteInput fullWidth optionText='title' resettable />

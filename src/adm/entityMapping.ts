@@ -23,6 +23,7 @@ export const mapping = {
   rolesToPermissions: 'RolesToPermission',
   stats: 'Stat',
   tags: 'Tag',
+  tenants: 'Tenant',
   units: 'Unit',
   users: 'User',
 };

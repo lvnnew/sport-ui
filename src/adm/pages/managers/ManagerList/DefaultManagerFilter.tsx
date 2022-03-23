@@ -23,10 +23,19 @@ const DefaultManagerFilter: FC<any> = (props) => (
       <AutocompleteInput fullWidth optionText='title' resettable />
     </ReferenceInput>
     <TextInput fullWidth source='email' />
+    <TextInput fullWidth source='phone' />
+    <TextInput fullWidth source='photo' />
     <TextInput fullWidth source='telegramLogin' />
     <ReferenceInput
       source='unitId'
       reference='units'
+      sort={{id: 'id', order: 'DESC'}}
+    >
+      <AutocompleteInput fullWidth optionText='title' resettable />
+    </ReferenceInput>
+    <ReferenceInput
+      source='tenantId'
+      reference='tenants'
       sort={{id: 'id', order: 'DESC'}}
     >
       <AutocompleteInput fullWidth optionText='title' resettable />

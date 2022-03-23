@@ -32,8 +32,13 @@ const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
           <TextField source='title' />
         </ReferenceField>
         <TextField source='email' />
+        <TextField source='phone' />
+        <TextField source='photo' />
         <TextField source='telegramLogin' />
         <ReferenceField source='unitId' reference='units' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='tenantId' reference='tenants' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <BooleanField source='headOfUnit' />

@@ -13,25 +13,25 @@ import ListWiget, {
   ListWigetProps,
 } from '../../../widgets/ListWiget';
 import {
-  User,
-  QueryAllUsersArgs,
+  Tenant,
+  QueryAllTenantsArgs,
 } from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListUsersWidgetProps extends
-Omit<ListWigetProps<User>, 'request' | 'resultToValue'| 'children'>,
-QueryAllUsersArgs {
-  children?: FC<User>,
+interface ListTenantsWidgetProps extends
+Omit<ListWigetProps<Tenant>, 'request' | 'resultToValue'| 'children'>,
+QueryAllTenantsArgs {
+  children?: FC<Tenant>,
 }
 
-export const ListUsersItem: FC<User> = (props) => {
+export const ListTenantsItem: FC<Tenant> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/users/${props.id}/show`}
+      to={`/tenants/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -42,18 +42,6 @@ export const ListUsersItem: FC<User> = (props) => {
             <div>
               {`Title: ${props.title}`}
             </div>
-            <div>
-              {`Lastname: ${props.lastname}`}
-            </div>
-            <div>
-              {`Firstname: ${props.firstname}`}
-            </div>
-            <div>
-              {`Email: ${props.email}`}
-            </div>
-            <div>
-              {`Tenant id: ${props.tenantId}`}
-            </div>
           </>
         }
       />
@@ -61,17 +49,17 @@ export const ListUsersItem: FC<User> = (props) => {
   );
 };
 
-const ListUsersWidget: FC<ListUsersWidgetProps> = ({
+const ListTenantsWidget: FC<ListTenantsWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListUsersItem,
+  children = ListTenantsItem,
   ...rest
 }) => {
   return (
-    <ListWiget<User>
+    <ListWiget<Tenant>
       {...rest}
       options={{
         variables: {
@@ -88,9 +76,9 @@ const ListUsersWidget: FC<ListUsersWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: UserFilter,
+          $filter: TenantFilter,
         ) {
-          allUsers(
+          allTenants(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -99,18 +87,14 @@ const ListUsersWidget: FC<ListUsersWidgetProps> = ({
           ) {
             id
             title
-            lastname
-            firstname
-            email
-            tenantId
           }
         }
       `}
-      resultToValue={result => result?.allUsers}
+      resultToValue={result => result?.allTenants}
     >
       {(record) => children(record)}
     </ListWiget>
   );
 };
 
-export default ListUsersWidget;
+export default ListTenantsWidget;
