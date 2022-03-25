@@ -91,7 +91,7 @@ const customEnglishMessages: TranslationMessages = {
     upgradeCalc: 'Upgrade calculator',
     flightCalc: 'Flight calculator',
   },
-  docs: enDocs,
+  documents: enDocs,
   catalogs: enCatalogs,
   infoRegistries: enInfoRegistries,
   sumRegistries: enSumRegistries,

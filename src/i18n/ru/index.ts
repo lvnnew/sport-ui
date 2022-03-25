@@ -85,7 +85,7 @@ const customEnglishMessages: TranslationMessages = {
     miles: 'Баллов',
   },
   reports: ruReports,
-  docs: ruDocs,
+  documents: ruDocs,
   catalogs: ruCatalogs,
   infoRegistries: ruInfoRegistries,
   sumRegistries: ruSumRegistries,
