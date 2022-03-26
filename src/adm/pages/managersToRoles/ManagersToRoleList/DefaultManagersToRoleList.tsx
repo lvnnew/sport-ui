@@ -17,7 +17,7 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.managersToRoles')} exporter={false} filters={<ManagersToRoleFilter />} {...props}>
+    <List title={translate('catalogs.managersToRoles.title')} exporter={false} filters={<ManagersToRoleFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <ReferenceField source='managerId' reference='managers' link='show'>

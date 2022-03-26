@@ -17,7 +17,7 @@ const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.rolesToPermissions')} exporter={false} filters={<RolesToPermissionFilter />} {...props}>
+    <List title={translate('catalogs.rolesToPermissions.title')} exporter={false} filters={<RolesToPermissionFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <ReferenceField source='roleId' reference='roles' link='show'>

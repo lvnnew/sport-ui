@@ -18,7 +18,7 @@ const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.managerLogins')} exporter={false} filters={<ManagerLoginFilter />} {...props}>
+    <List title={translate('catalogs.managerLogins.title')} exporter={false} filters={<ManagerLoginFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='login' />

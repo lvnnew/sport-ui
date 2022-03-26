@@ -19,7 +19,7 @@ const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) 
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.autogenerationHistoryEntries')} exporter={false} filters={<AutogenerationHistoryEntryFilter />} {...props}>
+    <List title={translate('catalogs.autogenerationHistoryEntries.title')} exporter={false} filters={<AutogenerationHistoryEntryFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <DateField source='date' showTime />

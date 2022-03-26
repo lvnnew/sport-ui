@@ -15,7 +15,7 @@ const DefaultLanguageList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.languages')} exporter={false} filters={<LanguageFilter />} {...props}>
+    <List title={translate('catalogs.languages.title')} exporter={false} filters={<LanguageFilter />} {...props}>
       <Datagrid rowClick='show'>
         <TextField source='id' />
         <TextField source='title' />

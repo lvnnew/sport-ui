@@ -16,7 +16,7 @@ const DefaultRoleList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.roles')} exporter={false} filters={<RoleFilter />} {...props}>
+    <List title={translate('catalogs.roles.title')} exporter={false} filters={<RoleFilter />} {...props}>
       <Datagrid rowClick='show'>
         <TextField source='id' />
         <TextField source='title' />

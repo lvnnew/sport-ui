@@ -15,7 +15,7 @@ const DefaultPermissionList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.permissions')} exporter={false} filters={<PermissionFilter />} {...props}>
+    <List title={translate('catalogs.permissions.title')} exporter={false} filters={<PermissionFilter />} {...props}>
       <Datagrid rowClick='show'>
         <TextField source='id' />
         <TextField source='title' />

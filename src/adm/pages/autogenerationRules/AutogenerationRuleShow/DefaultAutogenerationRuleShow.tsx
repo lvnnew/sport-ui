@@ -21,7 +21,7 @@ const DefaultAutogenerationRuleShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label='Summary' />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <AutogenerationHistoryEntriesAutogenerationRuleIdTab label={translate('catalogs.autogenerationHistoryEntries')} path='autogenerationHistoryEntries-autogenerationRuleId' />
+        <AutogenerationHistoryEntriesAutogenerationRuleIdTab label={translate('catalogs.autogenerationHistoryEntries.title')} path='autogenerationHistoryEntries-autogenerationRuleId' />
       </TabbedShowLayout>
     </Show>
   );

@@ -17,7 +17,7 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.appLogins')} exporter={false} filters={<AppLoginFilter />} {...props}>
+    <List title={translate('catalogs.appLogins.title')} exporter={false} filters={<AppLoginFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='login' />

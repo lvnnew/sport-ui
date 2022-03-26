@@ -17,7 +17,7 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.stats')} exporter={false} filters={<StatFilter />} {...props}>
+    <List title={translate('catalogs.stats.title')} exporter={false} filters={<StatFilter />} {...props}>
       <Datagrid rowClick='show'>
         <TextField source='id' />
         <DateField source='updated' showTime />

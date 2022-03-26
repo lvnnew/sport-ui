@@ -17,7 +17,7 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.users')} exporter={false} filters={<UserFilter />} {...props}>
+    <List title={translate('catalogs.users.title')} exporter={false} filters={<UserFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='title' />

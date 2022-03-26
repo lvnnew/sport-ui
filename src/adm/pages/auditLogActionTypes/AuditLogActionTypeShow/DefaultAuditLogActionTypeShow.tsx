@@ -21,7 +21,7 @@ const DefaultAuditLogActionTypeShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label='Summary' />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <AuditLogsActionTypeIdTab label={translate('catalogs.auditLogs')} path='auditLogs-actionTypeId' />
+        <AuditLogsActionTypeIdTab label={translate('catalogs.auditLogs.title')} path='auditLogs-actionTypeId' />
       </TabbedShowLayout>
     </Show>
   );

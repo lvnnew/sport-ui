@@ -18,7 +18,7 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.managers')} exporter={false} filters={<ManagerFilter />} {...props}>
+    <List title={translate('catalogs.managers.title')} exporter={false} filters={<ManagerFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='title' />

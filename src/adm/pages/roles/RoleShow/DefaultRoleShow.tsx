@@ -22,8 +22,8 @@ const DefaultRoleShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label='Summary' />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <ManagersToRolesRoleIdTab label={translate('catalogs.managersToRoles')} path='managersToRoles-roleId' />
-        <RolesToPermissionsRoleIdTab label={translate('catalogs.rolesToPermissions')} path='rolesToPermissions-roleId' />
+        <ManagersToRolesRoleIdTab label={translate('catalogs.managersToRoles.title')} path='managersToRoles-roleId' />
+        <RolesToPermissionsRoleIdTab label={translate('catalogs.rolesToPermissions.title')} path='rolesToPermissions-roleId' />
       </TabbedShowLayout>
     </Show>
   );

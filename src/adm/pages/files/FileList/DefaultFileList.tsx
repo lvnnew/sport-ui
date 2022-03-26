@@ -16,7 +16,7 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.files')} exporter={false} filters={<FileFilter />} {...props}>
+    <List title={translate('catalogs.files.title')} exporter={false} filters={<FileFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='originalName' />

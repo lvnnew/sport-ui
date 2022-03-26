@@ -16,7 +16,7 @@ const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.tenants')} exporter={false} filters={<TenantFilter />} {...props}>
+    <List title={translate('catalogs.tenants.title')} exporter={false} filters={<TenantFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='title' />

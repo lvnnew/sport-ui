@@ -17,7 +17,7 @@ const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.managersToPermissions')} exporter={false} filters={<ManagersToPermissionFilter />} {...props}>
+    <List title={translate('catalogs.managersToPermissions.title')} exporter={false} filters={<ManagersToPermissionFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <ReferenceField source='managerId' reference='managers' link='show'>

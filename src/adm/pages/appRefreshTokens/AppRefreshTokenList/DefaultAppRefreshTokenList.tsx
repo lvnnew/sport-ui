@@ -18,7 +18,7 @@ const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.appRefreshTokens')} exporter={false} filters={<AppRefreshTokenFilter />} {...props}>
+    <List title={translate('catalogs.appRefreshTokens.title')} exporter={false} filters={<AppRefreshTokenFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <DateField source='create' showTime />

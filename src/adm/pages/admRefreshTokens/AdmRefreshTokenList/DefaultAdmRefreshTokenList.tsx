@@ -18,7 +18,7 @@ const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.admRefreshTokens')} exporter={false} filters={<AdmRefreshTokenFilter />} {...props}>
+    <List title={translate('catalogs.admRefreshTokens.title')} exporter={false} filters={<AdmRefreshTokenFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <DateField source='create' showTime />

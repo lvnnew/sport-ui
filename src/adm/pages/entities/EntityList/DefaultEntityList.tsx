@@ -15,7 +15,7 @@ const DefaultEntityList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.entities')} exporter={false} filters={<EntityFilter />} {...props}>
+    <List title={translate('catalogs.entities.title')} exporter={false} filters={<EntityFilter />} {...props}>
       <Datagrid rowClick='show'>
         <TextField source='id' />
         <TextField source='title' />

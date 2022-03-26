@@ -19,7 +19,7 @@ const DefaultDelegationList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.delegations')} exporter={false} filters={<DelegationFilter />} {...props}>
+    <List title={translate('catalogs.delegations.title')} exporter={false} filters={<DelegationFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <ReferenceField source='fromId' reference='managers' link='show'>

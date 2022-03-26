@@ -27,13 +27,13 @@ const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label='Summary' />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <AdmRefreshTokensManagerIdTab label={translate('catalogs.admRefreshTokens')} path='admRefreshTokens-managerId' />
-        <AuditLogsManagerIdTab label={translate('catalogs.auditLogs')} path='auditLogs-managerId' />
-        <DelegationsFromIdTab label={translate('catalogs.delegations')} path='delegations-fromId' />
-        <DelegationsToIdTab label={translate('catalogs.delegations')} path='delegations-toId' />
-        <ManagerLoginsManagerIdTab label={translate('catalogs.managerLogins')} path='managerLogins-managerId' />
-        <ManagersToPermissionsManagerIdTab label={translate('catalogs.managersToPermissions')} path='managersToPermissions-managerId' />
-        <ManagersToRolesManagerIdTab label={translate('catalogs.managersToRoles')} path='managersToRoles-managerId' />
+        <AdmRefreshTokensManagerIdTab label={translate('catalogs.admRefreshTokens.title')} path='admRefreshTokens-managerId' />
+        <AuditLogsManagerIdTab label={translate('catalogs.auditLogs.title')} path='auditLogs-managerId' />
+        <DelegationsFromIdTab label={translate('catalogs.delegations.title')} path='delegations-fromId' />
+        <DelegationsToIdTab label={translate('catalogs.delegations.title')} path='delegations-toId' />
+        <ManagerLoginsManagerIdTab label={translate('catalogs.managerLogins.title')} path='managerLogins-managerId' />
+        <ManagersToPermissionsManagerIdTab label={translate('catalogs.managersToPermissions.title')} path='managersToPermissions-managerId' />
+        <ManagersToRolesManagerIdTab label={translate('catalogs.managersToRoles.title')} path='managersToRoles-managerId' />
       </TabbedShowLayout>
     </Show>
   );

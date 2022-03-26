@@ -22,8 +22,8 @@ const DefaultTenantShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label='Summary' />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <ManagersTenantIdTab label={translate('catalogs.managers')} path='managers-tenantId' />
-        <UsersTenantIdTab label={translate('catalogs.users')} path='users-tenantId' />
+        <ManagersTenantIdTab label={translate('catalogs.managers.title')} path='managers-tenantId' />
+        <UsersTenantIdTab label={translate('catalogs.users.title')} path='users-tenantId' />
       </TabbedShowLayout>
     </Show>
   );

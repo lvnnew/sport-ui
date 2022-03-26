@@ -17,7 +17,7 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.units')} exporter={false} filters={<UnitFilter />} {...props}>
+    <List title={translate('catalogs.units.title')} exporter={false} filters={<UnitFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <TextField source='title' />

@@ -19,7 +19,7 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.auditLogs')} exporter={false} filters={<AuditLogFilter />} {...props}>
+    <List title={translate('catalogs.auditLogs.title')} exporter={false} filters={<AuditLogFilter />} {...props}>
       <Datagrid rowClick='show'>
         <NumberField source='id' />
         <DateField source='date' showTime />
