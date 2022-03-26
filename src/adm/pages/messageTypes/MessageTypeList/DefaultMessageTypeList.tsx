@@ -17,9 +17,9 @@ const DefaultMessageTypeList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.messageTypes.title')} exporter={false} filters={<MessageTypeFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <TextField source='id' />
-        <TextField source='title' />
-        <TextField source='description' />
+        <TextField source='id' label={translate('catalogs.messageTypes.fields.id')} />
+        <TextField source='title' label={translate('catalogs.messageTypes.fields.title')} />
+        <TextField source='description' label={translate('catalogs.messageTypes.fields.description')} />
       </Datagrid>
     </List>
   );

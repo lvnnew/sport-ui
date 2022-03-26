@@ -2,6 +2,6 @@
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const enDocs = {};
+const enDocuments = {};
 
-export default enDocs;
+export default enDocuments;

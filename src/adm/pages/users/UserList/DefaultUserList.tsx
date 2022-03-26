@@ -19,12 +19,12 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.users.title')} exporter={false} filters={<UserFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <TextField source='title' />
-        <TextField source='lastname' />
-        <TextField source='firstname' />
-        <TextField source='email' />
-        <ReferenceField source='tenantId' reference='tenants' link='show'>
+        <NumberField source='id' label={translate('catalogs.users.fields.id')} />
+        <TextField source='title' label={translate('catalogs.users.fields.title')} />
+        <TextField source='lastname' label={translate('catalogs.users.fields.lastname')} />
+        <TextField source='firstname' label={translate('catalogs.users.fields.firstname')} />
+        <TextField source='email' label={translate('catalogs.users.fields.email')} />
+        <ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show'>
           <TextField source='title' />
         </ReferenceField>
       </Datagrid>

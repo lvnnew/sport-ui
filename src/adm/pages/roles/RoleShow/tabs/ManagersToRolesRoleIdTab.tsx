@@ -10,12 +10,15 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagersToRolesRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
-  <Tab {...props}>
+const ManagersToRolesRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='managersToRoles'
@@ -23,17 +26,17 @@ const ManagersToRolesRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
       pagination={<Pagination />}
     >
       <Datagrid>
-        <NumberField source='id' />
-        <ReferenceField source='managerId' reference='managers' link='show'>
+        <NumberField source='id' label={translate('catalogs.managersToRoles.fields.id')} />
+        <ReferenceField source='managerId' label={translate('catalogs.managersToRoles.fields.managerId')} reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <ReferenceField source='roleId' reference='roles' link='show'>
+        <ReferenceField source='roleId' label={translate('catalogs.managersToRoles.fields.roleId')} reference='roles' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
-  </Tab>
-);
+  </Tab>);
+};
 
 export default ManagersToRolesRoleIdTab;

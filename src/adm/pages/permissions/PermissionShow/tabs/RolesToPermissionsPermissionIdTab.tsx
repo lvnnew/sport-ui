@@ -10,12 +10,15 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const RolesToPermissionsPermissionIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
-  <Tab {...props}>
+const RolesToPermissionsPermissionIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='rolesToPermissions'
@@ -23,17 +26,17 @@ const RolesToPermissionsPermissionIdTab: FC<Omit<TabProps, 'children'>> = (props
       pagination={<Pagination />}
     >
       <Datagrid>
-        <NumberField source='id' />
-        <ReferenceField source='roleId' reference='roles' link='show'>
+        <NumberField source='id' label={translate('catalogs.rolesToPermissions.fields.id')} />
+        <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <ReferenceField source='permissionId' reference='permissions' link='show'>
+        <ReferenceField source='permissionId' label={translate('catalogs.rolesToPermissions.fields.permissionId')} reference='permissions' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
-  </Tab>
-);
+  </Tab>);
+};
 
 export default RolesToPermissionsPermissionIdTab;

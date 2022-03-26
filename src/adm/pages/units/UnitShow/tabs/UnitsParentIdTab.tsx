@@ -10,12 +10,15 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const UnitsParentIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
-  <Tab {...props}>
+const UnitsParentIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='units'
@@ -23,15 +26,15 @@ const UnitsParentIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
       pagination={<Pagination />}
     >
       <Datagrid>
-        <NumberField source='id' />
-        <TextField source='title' />
-        <ReferenceField source='parentId' reference='units' link='show'>
+        <NumberField source='id' label={translate('catalogs.units.fields.id')} />
+        <TextField source='title' label={translate('catalogs.units.fields.title')} />
+        <ReferenceField source='parentId' label={translate('catalogs.units.fields.parentId')} reference='units' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
-  </Tab>
-);
+  </Tab>);
+};
 
 export default UnitsParentIdTab;

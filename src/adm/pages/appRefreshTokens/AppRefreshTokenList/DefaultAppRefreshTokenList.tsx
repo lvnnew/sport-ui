@@ -20,12 +20,12 @@ const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.appRefreshTokens.title')} exporter={false} filters={<AppRefreshTokenFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <DateField source='create' showTime />
-        <ReferenceField source='userId' reference='users' link='show'>
+        <NumberField source='id' label={translate('catalogs.appRefreshTokens.fields.id')} />
+        <DateField source='create' label={translate('catalogs.appRefreshTokens.fields.create')} showTime />
+        <ReferenceField source='userId' label={translate('catalogs.appRefreshTokens.fields.userId')} reference='users' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <TextField source='token' />
+        <TextField source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
       </Datagrid>
     </List>
   );

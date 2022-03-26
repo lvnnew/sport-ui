@@ -11,12 +11,15 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
-  <Tab {...props}>
+const ManagersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='managers'
@@ -24,29 +27,29 @@ const ManagersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
       pagination={<Pagination />}
     >
       <Datagrid>
-        <NumberField source='id' />
-        <TextField source='title' />
-        <TextField source='lastName' />
-        <TextField source='firstName' />
-        <ReferenceField source='languageId' reference='languages' link='show'>
+        <NumberField source='id' label={translate('catalogs.managers.fields.id')} />
+        <TextField source='title' label={translate('catalogs.managers.fields.title')} />
+        <TextField source='lastName' label={translate('catalogs.managers.fields.lastName')} />
+        <TextField source='firstName' label={translate('catalogs.managers.fields.firstName')} />
+        <ReferenceField source='languageId' label={translate('catalogs.managers.fields.languageId')} reference='languages' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <TextField source='email' />
-        <TextField source='phone' />
-        <TextField source='photo' />
-        <TextField source='telegramLogin' />
-        <ReferenceField source='unitId' reference='units' link='show'>
+        <TextField source='email' label={translate('catalogs.managers.fields.email')} />
+        <TextField source='phone' label={translate('catalogs.managers.fields.phone')} />
+        <TextField source='photo' label={translate('catalogs.managers.fields.photo')} />
+        <TextField source='telegramLogin' label={translate('catalogs.managers.fields.telegramLogin')} />
+        <ReferenceField source='unitId' label={translate('catalogs.managers.fields.unitId')} reference='units' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <ReferenceField source='tenantId' reference='tenants' link='show'>
+        <ReferenceField source='tenantId' label={translate('catalogs.managers.fields.tenantId')} reference='tenants' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <BooleanField source='headOfUnit' />
-        <BooleanField source='active' />
+        <BooleanField source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} />
+        <BooleanField source='active' label={translate('catalogs.managers.fields.active')} />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
-  </Tab>
-);
+  </Tab>);
+};
 
 export default ManagersTenantIdTab;

@@ -18,12 +18,12 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.files.title')} exporter={false} filters={<FileFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <TextField source='originalName' />
-        <TextField source='url' />
-        <TextField source='mimetype' />
-        <TextField source='s3Key' />
-        <TextField source='eTag' />
+        <NumberField source='id' label={translate('catalogs.files.fields.id')} />
+        <TextField source='originalName' label={translate('catalogs.files.fields.originalName')} />
+        <TextField source='url' label={translate('catalogs.files.fields.url')} />
+        <TextField source='mimetype' label={translate('catalogs.files.fields.mimetype')} />
+        <TextField source='s3Key' label={translate('catalogs.files.fields.s3Key')} />
+        <TextField source='eTag' label={translate('catalogs.files.fields.eTag')} />
       </Datagrid>
     </List>
   );

@@ -21,15 +21,15 @@ const DefaultDelegationList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.delegations.title')} exporter={false} filters={<DelegationFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <ReferenceField source='fromId' reference='managers' link='show'>
+        <NumberField source='id' label={translate('catalogs.delegations.fields.id')} />
+        <ReferenceField source='fromId' label={translate('catalogs.delegations.fields.fromId')} reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <ReferenceField source='toId' reference='managers' link='show'>
+        <ReferenceField source='toId' label={translate('catalogs.delegations.fields.toId')} reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <DateField source='expiresAt' />
-        <BooleanField source='active' />
+        <DateField source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
+        <BooleanField source='active' label={translate('catalogs.delegations.fields.active')} />
       </Datagrid>
     </List>
   );

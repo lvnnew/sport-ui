@@ -19,10 +19,10 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.appLogins.title')} exporter={false} filters={<AppLoginFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <TextField source='login' />
-        <TextField source='passwordHash' />
-        <ReferenceField source='userId' reference='users' link='show'>
+        <NumberField source='id' label={translate('catalogs.appLogins.fields.id')} />
+        <TextField source='login' label={translate('catalogs.appLogins.fields.login')} />
+        <TextField source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
+        <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show'>
           <TextField source='title' />
         </ReferenceField>
       </Datagrid>

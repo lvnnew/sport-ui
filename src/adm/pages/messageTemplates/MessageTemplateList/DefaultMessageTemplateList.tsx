@@ -19,10 +19,10 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.messageTemplates.title')} exporter={false} filters={<MessageTemplateFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <TextField source='id' />
-        <TextField source='title' />
-        <BooleanField source='secretData' />
-        <ReferenceField source='messageTypeId' reference='messageTypes' link='show'>
+        <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
+        <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
+        <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
+        <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show'>
           <TextField source='title' />
         </ReferenceField>
       </Datagrid>

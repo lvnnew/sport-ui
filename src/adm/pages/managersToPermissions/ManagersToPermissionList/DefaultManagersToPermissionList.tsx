@@ -19,11 +19,11 @@ const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.managersToPermissions.title')} exporter={false} filters={<ManagersToPermissionFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <ReferenceField source='managerId' reference='managers' link='show'>
+        <NumberField source='id' label={translate('catalogs.managersToPermissions.fields.id')} />
+        <ReferenceField source='managerId' label={translate('catalogs.managersToPermissions.fields.managerId')} reference='managers' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <ReferenceField source='permissionId' reference='permissions' link='show'>
+        <ReferenceField source='permissionId' label={translate('catalogs.managersToPermissions.fields.permissionId')} reference='permissions' link='show'>
           <TextField source='title' />
         </ReferenceField>
       </Datagrid>

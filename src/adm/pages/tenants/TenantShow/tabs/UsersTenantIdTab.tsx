@@ -10,12 +10,15 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const UsersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
-  <Tab {...props}>
+const UsersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='users'
@@ -23,18 +26,18 @@ const UsersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
       pagination={<Pagination />}
     >
       <Datagrid>
-        <NumberField source='id' />
-        <TextField source='title' />
-        <TextField source='lastname' />
-        <TextField source='firstname' />
-        <TextField source='email' />
-        <ReferenceField source='tenantId' reference='tenants' link='show'>
+        <NumberField source='id' label={translate('catalogs.users.fields.id')} />
+        <TextField source='title' label={translate('catalogs.users.fields.title')} />
+        <TextField source='lastname' label={translate('catalogs.users.fields.lastname')} />
+        <TextField source='firstname' label={translate('catalogs.users.fields.firstname')} />
+        <TextField source='email' label={translate('catalogs.users.fields.email')} />
+        <ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
-  </Tab>
-);
+  </Tab>);
+};
 
 export default UsersTenantIdTab;

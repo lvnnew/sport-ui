@@ -19,9 +19,9 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.stats.title')} exporter={false} filters={<StatFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <TextField source='id' />
-        <DateField source='updated' showTime />
-        <NumberField source='helloCount' />
+        <TextField source='id' label={translate('catalogs.stats.fields.id')} />
+        <DateField source='updated' label={translate('catalogs.stats.fields.updated')} showTime />
+        <NumberField source='helloCount' label={translate('catalogs.stats.fields.helloCount')} />
       </Datagrid>
     </List>
   );

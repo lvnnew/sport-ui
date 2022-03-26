@@ -17,8 +17,8 @@ const DefaultEntityList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.entities.title')} exporter={false} filters={<EntityFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <TextField source='id' />
-        <TextField source='title' />
+        <TextField source='id' label={translate('catalogs.entities.fields.id')} />
+        <TextField source='title' label={translate('catalogs.entities.fields.title')} />
       </Datagrid>
     </List>
   );

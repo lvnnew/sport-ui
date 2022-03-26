@@ -37,7 +37,7 @@ export const AdditionalMenu: FC<AdditionalMenuProps> = ({onMenuClick, dense, ope
             dense={dense}
             leftIcon={<DefaultIcon />}
             onClick={onMenuClick}
-            primaryText={translate('catalogs.stats')}
+            primaryText={translate('catalogs.stats.title')}
             sidebarIsOpen={open}
             to='/statsDashboard'
           />

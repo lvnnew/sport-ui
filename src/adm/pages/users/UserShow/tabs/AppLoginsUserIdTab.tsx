@@ -10,12 +10,15 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const AppLoginsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
-  <Tab {...props}>
+const AppLoginsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
     <ReferenceManyField
       addLabel={false}
       reference='appLogins'
@@ -23,16 +26,16 @@ const AppLoginsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => (
       pagination={<Pagination />}
     >
       <Datagrid>
-        <NumberField source='id' />
-        <TextField source='login' />
-        <TextField source='passwordHash' />
-        <ReferenceField source='userId' reference='users' link='show'>
+        <NumberField source='id' label={translate('catalogs.appLogins.fields.id')} />
+        <TextField source='login' label={translate('catalogs.appLogins.fields.login')} />
+        <TextField source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
+        <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show'>
           <TextField source='title' />
         </ReferenceField>
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
-  </Tab>
-);
+  </Tab>);
+};
 
 export default AppLoginsUserIdTab;

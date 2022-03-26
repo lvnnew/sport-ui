@@ -17,8 +17,8 @@ const DefaultAuditLogActionTypeList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.auditLogActionTypes.title')} exporter={false} filters={<AuditLogActionTypeFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <TextField source='id' />
-        <TextField source='title' />
+        <TextField source='id' label={translate('catalogs.auditLogActionTypes.fields.id')} />
+        <TextField source='title' label={translate('catalogs.auditLogActionTypes.fields.title')} />
       </Datagrid>
     </List>
   );

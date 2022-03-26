@@ -2,6 +2,6 @@
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ruDocs = {};
+const ruDocuments = {};
 
-export default ruDocs;
+export default ruDocuments;

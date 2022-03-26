@@ -18,8 +18,8 @@ const DefaultTagList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.tags.title')} exporter={false} filters={<TagFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <NumberField source='id' />
-        <TextField source='comment' />
+        <NumberField source='id' label={translate('catalogs.tags.fields.id')} />
+        <TextField source='comment' label={translate('catalogs.tags.fields.comment')} />
       </Datagrid>
     </List>
   );

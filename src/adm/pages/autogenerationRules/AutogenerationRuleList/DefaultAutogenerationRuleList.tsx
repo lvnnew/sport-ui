@@ -19,14 +19,14 @@ const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
   return (
     <List title={translate('catalogs.autogenerationRules.title')} exporter={false} filters={<AutogenerationRuleFilter />} {...props}>
       <Datagrid rowClick='show'>
-        <TextField source='id' />
-        <TextField source='title' />
-        <DateField source='version' />
-        <TextField source='originalEntityType' />
-        <TextField source='generatingEntityType' />
-        <TextField source='originalEntityFilter' />
-        <TextField source='generatingEntityConstructionRules' />
-        <BooleanField source='ignoreVersionOnHistory' />
+        <TextField source='id' label={translate('catalogs.autogenerationRules.fields.id')} />
+        <TextField source='title' label={translate('catalogs.autogenerationRules.fields.title')} />
+        <DateField source='version' label={translate('catalogs.autogenerationRules.fields.version')} />
+        <TextField source='originalEntityType' label={translate('catalogs.autogenerationRules.fields.originalEntityType')} />
+        <TextField source='generatingEntityType' label={translate('catalogs.autogenerationRules.fields.generatingEntityType')} />
+        <TextField source='originalEntityFilter' label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')} />
+        <TextField source='generatingEntityConstructionRules' label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')} />
+        <BooleanField source='ignoreVersionOnHistory' label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')} />
       </Datagrid>
     </List>
   );
