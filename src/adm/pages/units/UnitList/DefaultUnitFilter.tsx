@@ -13,19 +13,19 @@ const DefaultUnitFilter: FC<any> = (props) => {
   const translate = useTranslate();
 
   return (
-  <Filter {...props}>
-    <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='title' label={translate('catalogs.units.fields.title')} />
-    <ReferenceInput
-      source='parentId'
-      label={translate('catalogs.units.fields.parentId')}
-      reference='units'
-      sort={{id: 'id', order: 'DESC'}}
-    >
-      <AutocompleteInput fullWidth optionText='title' resettable />
-    </ReferenceInput>
-  </Filter>
-);
+    <Filter {...props}>
+      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput fullWidth source='title' label={translate('catalogs.units.fields.title')} />
+      <ReferenceInput
+        source='parentId'
+        label={translate('catalogs.units.fields.parentId')}
+        reference='units'
+        sort={{id: 'id', order: 'DESC'}}
+      >
+        <AutocompleteInput fullWidth optionText='title' resettable />
+      </ReferenceInput>
+    </Filter>
+  );
 };
 
 export default DefaultUnitFilter;

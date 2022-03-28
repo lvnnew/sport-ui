@@ -15,28 +15,28 @@ const DefaultDelegationFilter: FC<any> = (props) => {
   const translate = useTranslate();
 
   return (
-  <Filter {...props}>
-    <TextInput label='Search' source='q' alwaysOn />
-    <ReferenceInput
-      source='fromId'
-      label={translate('catalogs.delegations.fields.fromId')}
-      reference='managers'
-      sort={{id: 'id', order: 'DESC'}}
-    >
-      <AutocompleteInput fullWidth optionText='title' />
-    </ReferenceInput>
-    <ReferenceInput
-      source='toId'
-      label={translate('catalogs.delegations.fields.toId')}
-      reference='managers'
-      sort={{id: 'id', order: 'DESC'}}
-    >
-      <AutocompleteInput fullWidth optionText='title' />
-    </ReferenceInput>
-    <DateInput fullWidth source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
-    <BooleanInput fullWidth source='active' label={translate('catalogs.delegations.fields.active')} />
-  </Filter>
-);
+    <Filter {...props}>
+      <TextInput label='Search' source='q' alwaysOn />
+      <ReferenceInput
+        source='fromId'
+        label={translate('catalogs.delegations.fields.fromId')}
+        reference='managers'
+        sort={{id: 'id', order: 'DESC'}}
+      >
+        <AutocompleteInput fullWidth optionText='title' />
+      </ReferenceInput>
+      <ReferenceInput
+        source='toId'
+        label={translate('catalogs.delegations.fields.toId')}
+        reference='managers'
+        sort={{id: 'id', order: 'DESC'}}
+      >
+        <AutocompleteInput fullWidth optionText='title' />
+      </ReferenceInput>
+      <DateInput fullWidth source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
+      <BooleanInput fullWidth source='active' label={translate('catalogs.delegations.fields.active')} />
+    </Filter>
+  );
 };
 
 export default DefaultDelegationFilter;

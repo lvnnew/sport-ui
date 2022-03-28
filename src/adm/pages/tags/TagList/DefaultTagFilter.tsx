@@ -11,11 +11,11 @@ const DefaultTagFilter: FC<any> = (props) => {
   const translate = useTranslate();
 
   return (
-  <Filter {...props}>
-    <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='comment' label={translate('catalogs.tags.fields.comment')} />
-  </Filter>
-);
+    <Filter {...props}>
+      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput fullWidth source='comment' label={translate('catalogs.tags.fields.comment')} />
+    </Filter>
+  );
 };
 
 export default DefaultTagFilter;

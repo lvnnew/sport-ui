@@ -32,11 +32,11 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='unitId' label={translate('catalogs.managers.fields.unitId')} reference='units' link='show'>
         <TextField source='title' />
       </ReferenceField></FormGrid>
+      <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} /></FormGrid>
+      <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source='active' label={translate('catalogs.managers.fields.active')} /></FormGrid>
       <FormGrid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='tenantId' label={translate('catalogs.managers.fields.tenantId')} reference='tenants' link='show'>
         <TextField source='title' />
       </ReferenceField></FormGrid>
-      <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} /></FormGrid>
-      <FormGrid item xs={12} sm={6} md={3} lg={2}><BooleanField source='active' label={translate('catalogs.managers.fields.active')} /></FormGrid>
     </FormGrid>
   </Tab>);
 };

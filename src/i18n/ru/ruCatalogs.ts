@@ -154,9 +154,9 @@ const ruCatalogs = {
       photo: 'Photo',
       telegramLogin: 'Telegram login',
       unitId: 'Unit',
-      tenantId: 'Tenant',
       headOfUnit: 'Head of unit',
       active: 'Active',
+      tenantId: 'Tenant',
     },
   },
   managersToPermissions: {

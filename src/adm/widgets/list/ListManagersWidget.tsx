@@ -67,13 +67,13 @@ export const ListManagersItem: FC<Manager> = (props) => {
               {`Unit id: ${props.unitId}`}
             </div>
             <div>
-              {`Tenant id: ${props.tenantId}`}
-            </div>
-            <div>
               {`Head of unit: ${props.headOfUnit}`}
             </div>
             <div>
               {`Active: ${props.active}`}
+            </div>
+            <div>
+              {`Tenant id: ${props.tenantId}`}
             </div>
           </>
         }
@@ -128,9 +128,9 @@ const ListManagersWidget: FC<ListManagersWidgetProps> = ({
             photo
             telegramLogin
             unitId
-            tenantId
             headOfUnit
             active
+            tenantId
           }
         }
       `}

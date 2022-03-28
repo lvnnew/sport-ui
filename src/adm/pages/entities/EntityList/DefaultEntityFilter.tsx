@@ -11,11 +11,11 @@ const DefaultEntityFilter: FC<any> = (props) => {
   const translate = useTranslate();
 
   return (
-  <Filter {...props}>
-    <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='title' label={translate('catalogs.entities.fields.title')} />
-  </Filter>
-);
+    <Filter {...props}>
+      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput fullWidth source='title' label={translate('catalogs.entities.fields.title')} />
+    </Filter>
+  );
 };
 
 export default DefaultEntityFilter;

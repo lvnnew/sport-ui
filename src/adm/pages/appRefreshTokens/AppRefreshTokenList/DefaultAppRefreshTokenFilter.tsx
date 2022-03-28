@@ -14,20 +14,20 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
   const translate = useTranslate();
 
   return (
-  <Filter {...props}>
-    <TextInput label='Search' source='q' alwaysOn />
-    <DateTimeInput fullWidth source='create' label={translate('catalogs.appRefreshTokens.fields.create')} />
-    <ReferenceInput
-      source='userId'
-      label={translate('catalogs.appRefreshTokens.fields.userId')}
-      reference='users'
-      sort={{id: 'id', order: 'DESC'}}
-    >
-      <AutocompleteInput fullWidth optionText='title' />
-    </ReferenceInput>
-    <TextInput fullWidth source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
-  </Filter>
-);
+    <Filter {...props}>
+      <TextInput label='Search' source='q' alwaysOn />
+      <DateTimeInput fullWidth source='create' label={translate('catalogs.appRefreshTokens.fields.create')} />
+      <ReferenceInput
+        source='userId'
+        label={translate('catalogs.appRefreshTokens.fields.userId')}
+        reference='users'
+        sort={{id: 'id', order: 'DESC'}}
+      >
+        <AutocompleteInput fullWidth optionText='title' />
+      </ReferenceInput>
+      <TextInput fullWidth source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
+    </Filter>
+  );
 };
 
 export default DefaultAppRefreshTokenFilter;

@@ -41,11 +41,11 @@ const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
         <ReferenceField source='unitId' label={translate('catalogs.managers.fields.unitId')} reference='units' link='show'>
           <TextField source='title' />
         </ReferenceField>
+        <BooleanField source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} />
+        <BooleanField source='active' label={translate('catalogs.managers.fields.active')} />
         <ReferenceField source='tenantId' label={translate('catalogs.managers.fields.tenantId')} reference='tenants' link='show'>
           <TextField source='title' />
         </ReferenceField>
-        <BooleanField source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} />
-        <BooleanField source='active' label={translate('catalogs.managers.fields.active')} />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

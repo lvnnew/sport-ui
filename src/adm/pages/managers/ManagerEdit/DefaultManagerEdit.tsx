@@ -10,6 +10,7 @@ import {
   AutocompleteInput,
   BooleanInput,
 } from 'react-admin';
+import {useDebug} from '../../../../contexts/DebugContext';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
 import getManagerValudation from '../getManagerValudation';
@@ -17,6 +18,7 @@ import getManagerValudation from '../getManagerValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
+  const {debug} = useDebug();
   const translate = useTranslate();
 
   const validate = useMemo(() => makeValidate(getManagerValudation(translate)), [translate]);
@@ -32,6 +34,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
         initialValues={{
           headOfUnit: false,
           active: false,
+          tenantId: 1,
         }}
         validate={validate}
       >
@@ -78,6 +81,12 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <BooleanInput fullWidth source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <BooleanInput fullWidth source='active' label={translate('catalogs.managers.fields.active')} />
+          </FormGrid>
+          {debug && <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='tenantId'
               label={translate('catalogs.managers.fields.tenantId')}
@@ -86,13 +95,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' resettable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='headOfUnit' label={translate('catalogs.managers.fields.headOfUnit')} />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='active' label={translate('catalogs.managers.fields.active')} />
-          </FormGrid>
+          </FormGrid>}
         </FormGrid>
       </SimpleForm>
     </Edit>

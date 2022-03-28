@@ -13,26 +13,26 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
   const translate = useTranslate();
 
   return (
-  <Filter {...props}>
-    <TextInput label='Search' source='q' alwaysOn />
-    <ReferenceInput
-      source='managerId'
-      label={translate('catalogs.managersToPermissions.fields.managerId')}
-      reference='managers'
-      sort={{id: 'id', order: 'DESC'}}
-    >
-      <AutocompleteInput fullWidth optionText='title' />
-    </ReferenceInput>
-    <ReferenceInput
-      source='permissionId'
-      label={translate('catalogs.managersToPermissions.fields.permissionId')}
-      reference='permissions'
-      sort={{id: 'id', order: 'DESC'}}
-    >
-      <AutocompleteInput fullWidth optionText='title' />
-    </ReferenceInput>
-  </Filter>
-);
+    <Filter {...props}>
+      <TextInput label='Search' source='q' alwaysOn />
+      <ReferenceInput
+        source='managerId'
+        label={translate('catalogs.managersToPermissions.fields.managerId')}
+        reference='managers'
+        sort={{id: 'id', order: 'DESC'}}
+      >
+        <AutocompleteInput fullWidth optionText='title' />
+      </ReferenceInput>
+      <ReferenceInput
+        source='permissionId'
+        label={translate('catalogs.managersToPermissions.fields.permissionId')}
+        reference='permissions'
+        sort={{id: 'id', order: 'DESC'}}
+      >
+        <AutocompleteInput fullWidth optionText='title' />
+      </ReferenceInput>
+    </Filter>
+  );
 };
 
 export default DefaultManagersToPermissionFilter;
