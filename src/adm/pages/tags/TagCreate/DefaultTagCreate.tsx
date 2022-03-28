@@ -14,9 +14,9 @@ import getTagValudation from '../getTagValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultTagCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getTagValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getTagValudation(translate)), [translate]);
 
   return (
     <Create
@@ -31,7 +31,7 @@ const DefaultTagCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='comment' />
+            <TextInput fullWidth source='comment' label={translate('catalogs.tags.fields.comment')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

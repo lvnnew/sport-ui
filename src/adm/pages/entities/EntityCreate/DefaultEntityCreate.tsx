@@ -14,9 +14,9 @@ import getEntityValudation from '../getEntityValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultEntityCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getEntityValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getEntityValudation(translate)), [translate]);
 
   return (
     <Create
@@ -31,10 +31,10 @@ const DefaultEntityCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='id' />
+            <TextInput fullWidth source='id' label={translate('catalogs.entities.fields.id')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
+            <TextInput fullWidth source='title' label={translate('catalogs.entities.fields.title')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

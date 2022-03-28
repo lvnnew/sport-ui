@@ -16,9 +16,9 @@ import getStatValudation from '../getStatValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getStatValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getStatValudation(translate)), [translate]);
 
   return (
     <Create
@@ -34,13 +34,13 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='id' />
+            <TextInput fullWidth source='id' label={translate('catalogs.stats.fields.id')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='updated' />
+            <DateTimeInput fullWidth source='updated' label={translate('catalogs.stats.fields.updated')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <NumberInput fullWidth source='helloCount' />
+            <NumberInput fullWidth source='helloCount' label={translate('catalogs.stats.fields.helloCount')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

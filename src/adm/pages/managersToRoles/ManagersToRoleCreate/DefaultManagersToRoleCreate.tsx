@@ -15,9 +15,9 @@ import getManagersToRoleValudation from '../getManagersToRoleValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getManagersToRoleValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getManagersToRoleValudation(translate)), [translate]);
 
   return (
     <Create
@@ -34,6 +34,7 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='managerId'
+              label={translate('catalogs.managersToRoles.fields.managerId')}
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
@@ -43,6 +44,7 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='roleId'
+              label={translate('catalogs.managersToRoles.fields.roleId')}
               reference='roles'
               sort={{id: 'id', order: 'DESC'}}
             >

@@ -17,9 +17,9 @@ import getDelegationValudation from '../getDelegationValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getDelegationValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getDelegationValudation(translate)), [translate]);
 
   return (
     <Create
@@ -39,6 +39,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='fromId'
+              label={translate('catalogs.delegations.fields.fromId')}
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
@@ -48,6 +49,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='toId'
+              label={translate('catalogs.delegations.fields.toId')}
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
@@ -55,10 +57,10 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateInput fullWidth source='expiresAt' />
+            <DateInput fullWidth source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='active' />
+            <BooleanInput fullWidth source='active' label={translate('catalogs.delegations.fields.active')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

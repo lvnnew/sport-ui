@@ -2,15 +2,20 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultTagFilter: FC<any> = (props) => (
+const DefaultTagFilter: FC<any> = (props) => {
+  const translate = useTranslate();
+
+  return (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='comment' />
+    <TextInput fullWidth source='comment' label={translate('catalogs.tags.fields.comment')} />
   </Filter>
 );
+};
 
 export default DefaultTagFilter;

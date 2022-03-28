@@ -18,9 +18,9 @@ import getUserValudation from '../getUserValudation';
 
 const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getUserValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getUserValudation(translate)), [translate]);
 
   return (
     <Create
@@ -37,20 +37,21 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
+            <TextInput fullWidth source='title' label={translate('catalogs.users.fields.title')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='lastname' />
+            <TextInput fullWidth source='lastname' label={translate('catalogs.users.fields.lastname')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='firstname' />
+            <TextInput fullWidth source='firstname' label={translate('catalogs.users.fields.firstname')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='email' />
+            <TextInput fullWidth source='email' label={translate('catalogs.users.fields.email')} />
           </FormGrid>
           {debug && <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='tenantId'
+              label={translate('catalogs.users.fields.tenantId')}
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >

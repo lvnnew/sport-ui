@@ -14,9 +14,9 @@ import getMessageTypeValudation from '../getMessageTypeValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getMessageTypeValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getMessageTypeValudation(translate)), [translate]);
 
   return (
     <Create
@@ -31,13 +31,13 @@ const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='id' />
+            <TextInput fullWidth source='id' label={translate('catalogs.messageTypes.fields.id')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
+            <TextInput fullWidth source='title' label={translate('catalogs.messageTypes.fields.title')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='description' />
+            <TextInput fullWidth source='description' label={translate('catalogs.messageTypes.fields.description')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

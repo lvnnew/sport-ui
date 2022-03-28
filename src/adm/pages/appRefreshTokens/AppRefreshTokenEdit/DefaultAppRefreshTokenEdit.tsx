@@ -17,9 +17,9 @@ import getAppRefreshTokenValudation from '../getAppRefreshTokenValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAppRefreshTokenValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getAppRefreshTokenValudation(translate)), [translate]);
 
   return (
     <Edit
@@ -35,11 +35,12 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='create' />
+            <DateTimeInput fullWidth source='create' label={translate('catalogs.appRefreshTokens.fields.create')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='userId'
+              label={translate('catalogs.appRefreshTokens.fields.userId')}
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
@@ -47,7 +48,7 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='token' />
+            <TextInput fullWidth source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

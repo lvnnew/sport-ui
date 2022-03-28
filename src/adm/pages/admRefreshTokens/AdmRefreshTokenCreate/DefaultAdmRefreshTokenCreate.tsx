@@ -17,9 +17,9 @@ import getAdmRefreshTokenValudation from '../getAdmRefreshTokenValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAdmRefreshTokenValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getAdmRefreshTokenValudation(translate)), [translate]);
 
   return (
     <Create
@@ -35,11 +35,12 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='create' />
+            <DateTimeInput fullWidth source='create' label={translate('catalogs.admRefreshTokens.fields.create')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='managerId'
+              label={translate('catalogs.admRefreshTokens.fields.managerId')}
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
@@ -47,7 +48,7 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='token' />
+            <TextInput fullWidth source='token' label={translate('catalogs.admRefreshTokens.fields.token')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

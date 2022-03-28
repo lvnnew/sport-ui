@@ -14,9 +14,9 @@ import getPermissionValudation from '../getPermissionValudation';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultPermissionCreate: FC<CreateProps> = (props: CreateProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getPermissionValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getPermissionValudation(translate)), [translate]);
 
   return (
     <Create
@@ -31,10 +31,10 @@ const DefaultPermissionCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='id' />
+            <TextInput fullWidth source='id' label={translate('catalogs.permissions.fields.id')} />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
+            <TextInput fullWidth source='title' label={translate('catalogs.permissions.fields.title')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

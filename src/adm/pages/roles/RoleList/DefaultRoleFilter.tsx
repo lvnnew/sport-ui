@@ -3,17 +3,22 @@ import {
   Filter,
   TextInput,
   BooleanInput,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultRoleFilter: FC<any> = (props) => (
+const DefaultRoleFilter: FC<any> = (props) => {
+  const translate = useTranslate();
+
+  return (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='title' />
-    <BooleanInput fullWidth source='hasAllPermissions' />
-    <BooleanInput fullWidth source='allTenantsAvailable' />
+    <TextInput fullWidth source='title' label={translate('catalogs.roles.fields.title')} />
+    <BooleanInput fullWidth source='hasAllPermissions' label={translate('catalogs.roles.fields.hasAllPermissions')} />
+    <BooleanInput fullWidth source='allTenantsAvailable' label={translate('catalogs.roles.fields.allTenantsAvailable')} />
   </Filter>
 );
+};
 
 export default DefaultRoleFilter;

@@ -4,17 +4,22 @@ import {
   TextInput,
   ReferenceInput,
   AutocompleteInput,
+  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAppLoginFilter: FC<any> = (props) => (
+const DefaultAppLoginFilter: FC<any> = (props) => {
+  const translate = useTranslate();
+
+  return (
   <Filter {...props}>
     <TextInput label='Search' source='q' alwaysOn />
-    <TextInput fullWidth source='login' />
-    <TextInput fullWidth source='passwordHash' />
+    <TextInput fullWidth source='login' label={translate('catalogs.appLogins.fields.login')} />
+    <TextInput fullWidth source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
     <ReferenceInput
       source='userId'
+      label={translate('catalogs.appLogins.fields.userId')}
       reference='users'
       sort={{id: 'id', order: 'DESC'}}
     >
@@ -22,5 +27,6 @@ const DefaultAppLoginFilter: FC<any> = (props) => (
     </ReferenceInput>
   </Filter>
 );
+};
 
 export default DefaultAppLoginFilter;

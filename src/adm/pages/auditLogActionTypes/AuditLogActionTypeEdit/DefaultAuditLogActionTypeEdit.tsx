@@ -14,9 +14,9 @@ import getAuditLogActionTypeValudation from '../getAuditLogActionTypeValudation'
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
-  const t = useTranslate();
+  const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAuditLogActionTypeValudation(t)), [t]);
+  const validate = useMemo(() => makeValidate(getAuditLogActionTypeValudation(translate)), [translate]);
 
   return (
     <Edit
@@ -31,7 +31,7 @@ const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' />
+            <TextInput fullWidth source='title' label={translate('catalogs.auditLogActionTypes.fields.title')} />
           </FormGrid>
         </FormGrid>
       </SimpleForm>
