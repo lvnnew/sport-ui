@@ -12,8 +12,16 @@ const DefaultLanguageFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.languages.fields.title')} />
+      <TextInput
+        label={translate('catalogs.languages.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.languages.fields.title')}
+      />
     </Filter>
   );
 };

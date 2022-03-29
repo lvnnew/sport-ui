@@ -37,16 +37,32 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' label={translate('catalogs.users.fields.title')} />
+            <TextInput
+              fullWidth
+              source='title'
+              label={translate('catalogs.users.fields.title')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='lastname' label={translate('catalogs.users.fields.lastname')} />
+            <TextInput
+              fullWidth
+              source='lastname'
+              label={translate('catalogs.users.fields.lastname')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='firstname' label={translate('catalogs.users.fields.firstname')} />
+            <TextInput
+              fullWidth
+              source='firstname'
+              label={translate('catalogs.users.fields.firstname')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='email' label={translate('catalogs.users.fields.email')} />
+            <TextInput
+              fullWidth
+              source='email'
+              label={translate('catalogs.users.fields.email')}
+            />
           </FormGrid>
           {debug && <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput

@@ -33,10 +33,18 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='updated' label={translate('catalogs.stats.fields.updated')} />
+            <DateTimeInput
+              fullWidth
+              source='updated'
+              label={translate('catalogs.stats.fields.updated')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <NumberInput fullWidth source='helloCount' label={translate('catalogs.stats.fields.helloCount')} />
+            <NumberInput
+              fullWidth
+              source='helloCount'
+              label={translate('catalogs.stats.fields.helloCount')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

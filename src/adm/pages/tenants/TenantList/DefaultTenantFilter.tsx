@@ -12,8 +12,16 @@ const DefaultTenantFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.tenants.fields.title')} />
+      <TextInput
+        label={translate('catalogs.tenants.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.tenants.fields.title')}
+      />
     </Filter>
   );
 };

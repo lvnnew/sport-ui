@@ -14,14 +14,46 @@ const DefaultAutogenerationRuleFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.autogenerationRules.fields.title')} />
-      <DateInput fullWidth source='version' label={translate('catalogs.autogenerationRules.fields.version')} />
-      <TextInput fullWidth source='originalEntityType' label={translate('catalogs.autogenerationRules.fields.originalEntityType')} />
-      <TextInput fullWidth source='generatingEntityType' label={translate('catalogs.autogenerationRules.fields.generatingEntityType')} />
-      <TextInput fullWidth source='originalEntityFilter' label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')} />
-      <TextInput fullWidth source='generatingEntityConstructionRules' label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')} />
-      <BooleanInput fullWidth source='ignoreVersionOnHistory' label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')} />
+      <TextInput
+        label={translate('catalogs.autogenerationRules.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.autogenerationRules.fields.title')}
+      />
+      <DateInput
+        fullWidth
+        source='version'
+        label={translate('catalogs.autogenerationRules.fields.version')}
+      />
+      <TextInput
+        fullWidth
+        source='originalEntityType'
+        label={translate('catalogs.autogenerationRules.fields.originalEntityType')}
+      />
+      <TextInput
+        fullWidth
+        source='generatingEntityType'
+        label={translate('catalogs.autogenerationRules.fields.generatingEntityType')}
+      />
+      <TextInput
+        fullWidth
+        source='originalEntityFilter'
+        label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')}
+      />
+      <TextInput
+        fullWidth
+        source='generatingEntityConstructionRules'
+        label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')}
+      />
+      <BooleanInput
+        fullWidth
+        source='ignoreVersionOnHistory'
+        label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')}
+      />
     </Filter>
   );
 };

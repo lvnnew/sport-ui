@@ -31,10 +31,18 @@ const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' label={translate('catalogs.messageTypes.fields.title')} />
+            <TextInput
+              fullWidth
+              source='title'
+              label={translate('catalogs.messageTypes.fields.title')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='description' label={translate('catalogs.messageTypes.fields.description')} />
+            <TextInput
+              fullWidth
+              source='description'
+              label={translate('catalogs.messageTypes.fields.description')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

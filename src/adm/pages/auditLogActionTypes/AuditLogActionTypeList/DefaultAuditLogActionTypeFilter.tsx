@@ -12,8 +12,16 @@ const DefaultAuditLogActionTypeFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.auditLogActionTypes.fields.title')} />
+      <TextInput
+        label={translate('catalogs.auditLogActionTypes.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.auditLogActionTypes.fields.title')}
+      />
     </Filter>
   );
 };

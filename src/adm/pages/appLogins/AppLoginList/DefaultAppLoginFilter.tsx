@@ -14,9 +14,21 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='login' label={translate('catalogs.appLogins.fields.login')} />
-      <TextInput fullWidth source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
+      <TextInput
+        label={translate('catalogs.appLogins.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='login'
+        label={translate('catalogs.appLogins.fields.login')}
+      />
+      <TextInput
+        fullWidth
+        source='passwordHash'
+        label={translate('catalogs.appLogins.fields.passwordHash')}
+      />
       <ReferenceInput
         source='userId'
         label={translate('catalogs.appLogins.fields.userId')}

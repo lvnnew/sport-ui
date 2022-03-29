@@ -15,9 +15,21 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.messageTemplates.fields.title')} />
-      <BooleanInput fullWidth source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
+      <TextInput
+        label={translate('catalogs.messageTemplates.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.messageTemplates.fields.title')}
+      />
+      <BooleanInput
+        fullWidth
+        source='secretData'
+        label={translate('catalogs.messageTemplates.fields.secretData')}
+      />
       <ReferenceInput
         source='messageTypeId'
         label={translate('catalogs.messageTemplates.fields.messageTypeId')}

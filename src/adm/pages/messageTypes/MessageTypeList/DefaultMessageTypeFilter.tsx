@@ -12,9 +12,21 @@ const DefaultMessageTypeFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.messageTypes.fields.title')} />
-      <TextInput fullWidth source='description' label={translate('catalogs.messageTypes.fields.description')} />
+      <TextInput
+        label={translate('catalogs.messageTypes.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.messageTypes.fields.title')}
+      />
+      <TextInput
+        fullWidth
+        source='description'
+        label={translate('catalogs.messageTypes.fields.description')}
+      />
     </Filter>
   );
 };

@@ -33,10 +33,18 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='login' label={translate('catalogs.appLogins.fields.login')} />
+            <TextInput
+              fullWidth
+              source='login'
+              label={translate('catalogs.appLogins.fields.login')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
+            <TextInput
+              fullWidth
+              source='passwordHash'
+              label={translate('catalogs.appLogins.fields.passwordHash')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput

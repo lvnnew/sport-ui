@@ -14,9 +14,21 @@ const DefaultStatFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <DateTimeInput fullWidth source='updated' label={translate('catalogs.stats.fields.updated')} />
-      <NumberInput fullWidth source='helloCount' label={translate('catalogs.stats.fields.helloCount')} />
+      <TextInput
+        label={translate('catalogs.stats.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <DateTimeInput
+        fullWidth
+        source='updated'
+        label={translate('catalogs.stats.fields.updated')}
+      />
+      <NumberInput
+        fullWidth
+        source='helloCount'
+        label={translate('catalogs.stats.fields.helloCount')}
+      />
     </Filter>
   );
 };

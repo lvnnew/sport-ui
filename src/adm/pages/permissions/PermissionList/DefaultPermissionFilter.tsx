@@ -12,8 +12,16 @@ const DefaultPermissionFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.permissions.fields.title')} />
+      <TextInput
+        label={translate('catalogs.permissions.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.permissions.fields.title')}
+      />
     </Filter>
   );
 };

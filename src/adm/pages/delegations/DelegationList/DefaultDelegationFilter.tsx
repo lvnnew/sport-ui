@@ -16,7 +16,11 @@ const DefaultDelegationFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput
+        label={translate('catalogs.delegations.fields.search')}
+        source='q'
+        alwaysOn
+      />
       <ReferenceInput
         source='fromId'
         label={translate('catalogs.delegations.fields.fromId')}
@@ -33,8 +37,16 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       >
         <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
-      <DateInput fullWidth source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
-      <BooleanInput fullWidth source='active' label={translate('catalogs.delegations.fields.active')} />
+      <DateInput
+        fullWidth
+        source='expiresAt'
+        label={translate('catalogs.delegations.fields.expiresAt')}
+      />
+      <BooleanInput
+        fullWidth
+        source='active'
+        label={translate('catalogs.delegations.fields.active')}
+      />
     </Filter>
   );
 };

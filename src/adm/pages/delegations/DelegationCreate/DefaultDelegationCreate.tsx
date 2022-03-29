@@ -57,10 +57,18 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateInput fullWidth source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
+            <DateInput
+              fullWidth
+              source='expiresAt'
+              label={translate('catalogs.delegations.fields.expiresAt')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='active' label={translate('catalogs.delegations.fields.active')} />
+            <BooleanInput
+              fullWidth
+              source='active'
+              label={translate('catalogs.delegations.fields.active')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

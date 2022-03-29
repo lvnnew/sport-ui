@@ -15,8 +15,16 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <DateTimeInput fullWidth source='create' label={translate('catalogs.appRefreshTokens.fields.create')} />
+      <TextInput
+        label={translate('catalogs.appRefreshTokens.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <DateTimeInput
+        fullWidth
+        source='create'
+        label={translate('catalogs.appRefreshTokens.fields.create')}
+      />
       <ReferenceInput
         source='userId'
         label={translate('catalogs.appRefreshTokens.fields.userId')}
@@ -25,7 +33,11 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
       >
         <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
-      <TextInput fullWidth source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
+      <TextInput
+        fullWidth
+        source='token'
+        label={translate('catalogs.appRefreshTokens.fields.token')}
+      />
     </Filter>
   );
 };

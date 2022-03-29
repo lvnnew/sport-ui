@@ -13,10 +13,26 @@ const DefaultRoleFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.roles.fields.title')} />
-      <BooleanInput fullWidth source='hasAllPermissions' label={translate('catalogs.roles.fields.hasAllPermissions')} />
-      <BooleanInput fullWidth source='allTenantsAvailable' label={translate('catalogs.roles.fields.allTenantsAvailable')} />
+      <TextInput
+        label={translate('catalogs.roles.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.roles.fields.title')}
+      />
+      <BooleanInput
+        fullWidth
+        source='hasAllPermissions'
+        label={translate('catalogs.roles.fields.hasAllPermissions')}
+      />
+      <BooleanInput
+        fullWidth
+        source='allTenantsAvailable'
+        label={translate('catalogs.roles.fields.allTenantsAvailable')}
+      />
     </Filter>
   );
 };

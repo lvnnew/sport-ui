@@ -38,22 +38,46 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='login' label={translate('catalogs.managerLogins.fields.login')} />
+            <TextInput
+              fullWidth
+              source='login'
+              label={translate('catalogs.managerLogins.fields.login')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} />
+            <TextInput
+              fullWidth
+              source='passwordHash'
+              label={translate('catalogs.managerLogins.fields.passwordHash')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='role' label={translate('catalogs.managerLogins.fields.role')} />
+            <TextInput
+              fullWidth
+              source='role'
+              label={translate('catalogs.managerLogins.fields.role')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
+            <BooleanInput
+              fullWidth
+              source='emailVerified'
+              label={translate('catalogs.managerLogins.fields.emailVerified')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
+            <BooleanInput
+              fullWidth
+              source='initialPasswordChanged'
+              label={translate('catalogs.managerLogins.fields.initialPasswordChanged')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='locked' label={translate('catalogs.managerLogins.fields.locked')} />
+            <BooleanInput
+              fullWidth
+              source='locked'
+              label={translate('catalogs.managerLogins.fields.locked')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput

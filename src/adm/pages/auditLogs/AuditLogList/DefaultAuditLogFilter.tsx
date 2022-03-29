@@ -16,9 +16,21 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <DateTimeInput fullWidth source='date' label={translate('catalogs.auditLogs.fields.date')} />
-      <TextInput fullWidth source='title' label={translate('catalogs.auditLogs.fields.title')} />
+      <TextInput
+        label={translate('catalogs.auditLogs.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <DateTimeInput
+        fullWidth
+        source='date'
+        label={translate('catalogs.auditLogs.fields.date')}
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.auditLogs.fields.title')}
+      />
       <ReferenceInput
         source='entityTypeId'
         label={translate('catalogs.auditLogs.fields.entityTypeId')}
@@ -27,7 +39,11 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       >
         <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
-      <TextInput fullWidth source='entityId' label={translate('catalogs.auditLogs.fields.entityId')} />
+      <TextInput
+        fullWidth
+        source='entityId'
+        label={translate('catalogs.auditLogs.fields.entityId')}
+      />
       <ReferenceInput
         source='actionTypeId'
         label={translate('catalogs.auditLogs.fields.actionTypeId')}
@@ -52,10 +68,26 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       >
         <AutocompleteInput fullWidth optionText='title' resettable />
       </ReferenceInput>
-      <BooleanInput fullWidth source='foreign' label={translate('catalogs.auditLogs.fields.foreign')} />
-      <TextInput fullWidth source='foreignEntityType' label={translate('catalogs.auditLogs.fields.foreignEntityType')} />
-      <TextInput fullWidth source='foreignEntityId' label={translate('catalogs.auditLogs.fields.foreignEntityId')} />
-      <TextInput fullWidth source='actionData' label={translate('catalogs.auditLogs.fields.actionData')} />
+      <BooleanInput
+        fullWidth
+        source='foreign'
+        label={translate('catalogs.auditLogs.fields.foreign')}
+      />
+      <TextInput
+        fullWidth
+        source='foreignEntityType'
+        label={translate('catalogs.auditLogs.fields.foreignEntityType')}
+      />
+      <TextInput
+        fullWidth
+        source='foreignEntityId'
+        label={translate('catalogs.auditLogs.fields.foreignEntityId')}
+      />
+      <TextInput
+        fullWidth
+        source='actionData'
+        label={translate('catalogs.auditLogs.fields.actionData')}
+      />
     </Filter>
   );
 };

@@ -35,7 +35,11 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='create' label={translate('catalogs.appRefreshTokens.fields.create')} />
+            <DateTimeInput
+              fullWidth
+              source='create'
+              label={translate('catalogs.appRefreshTokens.fields.create')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
@@ -48,7 +52,11 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
+            <TextInput
+              fullWidth
+              source='token'
+              label={translate('catalogs.appRefreshTokens.fields.token')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

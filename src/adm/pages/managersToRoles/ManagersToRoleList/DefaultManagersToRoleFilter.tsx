@@ -14,7 +14,11 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput
+        label={translate('catalogs.managersToRoles.fields.search')}
+        source='q'
+        alwaysOn
+      />
       <ReferenceInput
         source='managerId'
         label={translate('catalogs.managersToRoles.fields.managerId')}

@@ -31,7 +31,11 @@ const DefaultTagEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='comment' label={translate('catalogs.tags.fields.comment')} />
+            <TextInput
+              fullWidth
+              source='comment'
+              label={translate('catalogs.tags.fields.comment')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

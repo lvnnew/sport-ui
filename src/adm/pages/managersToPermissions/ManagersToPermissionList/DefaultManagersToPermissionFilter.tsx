@@ -14,7 +14,11 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput
+        label={translate('catalogs.managersToPermissions.fields.search')}
+        source='q'
+        alwaysOn
+      />
       <ReferenceInput
         source='managerId'
         label={translate('catalogs.managersToPermissions.fields.managerId')}

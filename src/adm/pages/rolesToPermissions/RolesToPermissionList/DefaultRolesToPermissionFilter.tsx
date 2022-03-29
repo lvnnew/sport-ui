@@ -14,7 +14,11 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
+      <TextInput
+        label={translate('catalogs.rolesToPermissions.fields.search')}
+        source='q'
+        alwaysOn
+      />
       <ReferenceInput
         source='roleId'
         label={translate('catalogs.rolesToPermissions.fields.roleId')}

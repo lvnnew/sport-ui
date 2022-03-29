@@ -15,8 +15,16 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <DateTimeInput fullWidth source='create' label={translate('catalogs.admRefreshTokens.fields.create')} />
+      <TextInput
+        label={translate('catalogs.admRefreshTokens.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <DateTimeInput
+        fullWidth
+        source='create'
+        label={translate('catalogs.admRefreshTokens.fields.create')}
+      />
       <ReferenceInput
         source='managerId'
         label={translate('catalogs.admRefreshTokens.fields.managerId')}
@@ -25,7 +33,11 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
       >
         <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
-      <TextInput fullWidth source='token' label={translate('catalogs.admRefreshTokens.fields.token')} />
+      <TextInput
+        fullWidth
+        source='token'
+        label={translate('catalogs.admRefreshTokens.fields.token')}
+      />
     </Filter>
   );
 };

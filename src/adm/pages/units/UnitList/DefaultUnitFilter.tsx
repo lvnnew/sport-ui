@@ -14,8 +14,16 @@ const DefaultUnitFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <TextInput fullWidth source='title' label={translate('catalogs.units.fields.title')} />
+      <TextInput
+        label={translate('catalogs.units.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <TextInput
+        fullWidth
+        source='title'
+        label={translate('catalogs.units.fields.title')}
+      />
       <ReferenceInput
         source='parentId'
         label={translate('catalogs.units.fields.parentId')}

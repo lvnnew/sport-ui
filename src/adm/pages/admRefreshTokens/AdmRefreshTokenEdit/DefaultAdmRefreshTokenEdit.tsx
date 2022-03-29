@@ -35,7 +35,11 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='create' label={translate('catalogs.admRefreshTokens.fields.create')} />
+            <DateTimeInput
+              fullWidth
+              source='create'
+              label={translate('catalogs.admRefreshTokens.fields.create')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
@@ -48,7 +52,11 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='token' label={translate('catalogs.admRefreshTokens.fields.token')} />
+            <TextInput
+              fullWidth
+              source='token'
+              label={translate('catalogs.admRefreshTokens.fields.token')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

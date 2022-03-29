@@ -38,10 +38,18 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='date' label={translate('catalogs.auditLogs.fields.date')} />
+            <DateTimeInput
+              fullWidth
+              source='date'
+              label={translate('catalogs.auditLogs.fields.date')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='title' label={translate('catalogs.auditLogs.fields.title')} />
+            <TextInput
+              fullWidth
+              source='title'
+              label={translate('catalogs.auditLogs.fields.title')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
@@ -54,7 +62,11 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='entityId' label={translate('catalogs.auditLogs.fields.entityId')} />
+            <TextInput
+              fullWidth
+              source='entityId'
+              label={translate('catalogs.auditLogs.fields.entityId')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
@@ -87,16 +99,32 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='foreign' label={translate('catalogs.auditLogs.fields.foreign')} />
+            <BooleanInput
+              fullWidth
+              source='foreign'
+              label={translate('catalogs.auditLogs.fields.foreign')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='foreignEntityType' label={translate('catalogs.auditLogs.fields.foreignEntityType')} />
+            <TextInput
+              fullWidth
+              source='foreignEntityType'
+              label={translate('catalogs.auditLogs.fields.foreignEntityType')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='foreignEntityId' label={translate('catalogs.auditLogs.fields.foreignEntityId')} />
+            <TextInput
+              fullWidth
+              source='foreignEntityId'
+              label={translate('catalogs.auditLogs.fields.foreignEntityId')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='actionData' label={translate('catalogs.auditLogs.fields.actionData')} />
+            <TextInput
+              fullWidth
+              source='actionData'
+              label={translate('catalogs.auditLogs.fields.actionData')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

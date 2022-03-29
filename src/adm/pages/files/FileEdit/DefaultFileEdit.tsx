@@ -31,19 +31,39 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='originalName' label={translate('catalogs.files.fields.originalName')} />
+            <TextInput
+              fullWidth
+              source='originalName'
+              label={translate('catalogs.files.fields.originalName')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='url' label={translate('catalogs.files.fields.url')} />
+            <TextInput
+              fullWidth
+              source='url'
+              label={translate('catalogs.files.fields.url')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='mimetype' label={translate('catalogs.files.fields.mimetype')} />
+            <TextInput
+              fullWidth
+              source='mimetype'
+              label={translate('catalogs.files.fields.mimetype')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='s3Key' label={translate('catalogs.files.fields.s3Key')} />
+            <TextInput
+              fullWidth
+              source='s3Key'
+              label={translate('catalogs.files.fields.s3Key')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='eTag' label={translate('catalogs.files.fields.eTag')} />
+            <TextInput
+              fullWidth
+              source='eTag'
+              label={translate('catalogs.files.fields.eTag')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>

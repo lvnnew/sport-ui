@@ -17,10 +17,26 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
 
   return (
     <Filter {...props}>
-      <TextInput label='Search' source='q' alwaysOn />
-      <DateTimeInput fullWidth source='date' label={translate('catalogs.autogenerationHistoryEntries.fields.date')} />
-      <TextInput fullWidth source='originalEntityType' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')} />
-      <TextInput fullWidth source='originalEntityId' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')} />
+      <TextInput
+        label={translate('catalogs.autogenerationHistoryEntries.fields.search')}
+        source='q'
+        alwaysOn
+      />
+      <DateTimeInput
+        fullWidth
+        source='date'
+        label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
+      />
+      <TextInput
+        fullWidth
+        source='originalEntityType'
+        label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
+      />
+      <TextInput
+        fullWidth
+        source='originalEntityId'
+        label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
+      />
       <ReferenceInput
         source='autogenerationRuleId'
         label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
@@ -29,9 +45,21 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
       >
         <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
-      <DateInput fullWidth source='version' label={translate('catalogs.autogenerationHistoryEntries.fields.version')} />
-      <BooleanInput fullWidth source='errorOccurred' label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')} />
-      <TextInput fullWidth source='error' label={translate('catalogs.autogenerationHistoryEntries.fields.error')} />
+      <DateInput
+        fullWidth
+        source='version'
+        label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
+      />
+      <BooleanInput
+        fullWidth
+        source='errorOccurred'
+        label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
+      />
+      <TextInput
+        fullWidth
+        source='error'
+        label={translate('catalogs.autogenerationHistoryEntries.fields.error')}
+      />
     </Filter>
   );
 };

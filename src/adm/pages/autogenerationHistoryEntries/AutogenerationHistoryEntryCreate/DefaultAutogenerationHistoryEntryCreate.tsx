@@ -40,13 +40,25 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput fullWidth source='date' label={translate('catalogs.autogenerationHistoryEntries.fields.date')} />
+            <DateTimeInput
+              fullWidth
+              source='date'
+              label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='originalEntityType' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')} />
+            <TextInput
+              fullWidth
+              source='originalEntityType'
+              label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='originalEntityId' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')} />
+            <TextInput
+              fullWidth
+              source='originalEntityId'
+              label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
@@ -59,13 +71,25 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <DateInput fullWidth source='version' label={translate('catalogs.autogenerationHistoryEntries.fields.version')} />
+            <DateInput
+              fullWidth
+              source='version'
+              label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <BooleanInput fullWidth source='errorOccurred' label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')} />
+            <BooleanInput
+              fullWidth
+              source='errorOccurred'
+              label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
+            />
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput fullWidth source='error' label={translate('catalogs.autogenerationHistoryEntries.fields.error')} />
+            <TextInput
+              fullWidth
+              source='error'
+              label={translate('catalogs.autogenerationHistoryEntries.fields.error')}
+            />
           </FormGrid>
         </FormGrid>
       </SimpleForm>
