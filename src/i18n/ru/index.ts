@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import {TranslationMessages} from 'react-admin';
-import enMessages from 'ra-language-english';
+import ruMessages from 'ra-language-russian';
 import ruDocs from './ruDocs';
 import ruReports from './ruReports';
 import ruCatalogs from './ruCatalogs';
@@ -8,7 +8,7 @@ import ruInfoRegistries from './ruInfoRegistries';
 import ruSumRegistries from './ruSumRegistries';
 
 const customEnglishMessages: TranslationMessages = {
-  ...enMessages,
+  ...ruMessages,
   app: {
     documents: 'Документы',
     catalogs: 'Справочники',
@@ -121,13 +121,13 @@ const customEnglishMessages: TranslationMessages = {
     },
   },
   ra: {
-    ...enMessages.ra,
+    ...ruMessages.ra,
     page: {
-      ...enMessages.ra.page,
+      ...ruMessages.ra.page,
       dashboard: 'Панель управления',
     },
     boolean: {
-      ...enMessages.ra.boolean,
+      ...ruMessages.ra.boolean,
       null: 'No value',
     },
   },

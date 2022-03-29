@@ -22,7 +22,7 @@ const themeReducer: Reducer<State, Action> = (
   }
 
   if (!previousState) {
-    return 'dark';
+    return 'light';
   }
 
   return previousState;
