@@ -3,7 +3,9 @@ import {
   FC, createElement,
 } from 'react';
 import {
-  Card, Box, Typography, Divider,
+  Card,
+  Box,
+  Typography,
 } from '@material-ui/core';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {
@@ -42,12 +44,21 @@ const useStyles = makeStyles((theme) => createStyles({
     display: 'flex',
     justifyContent: 'space-between',
     overflow: 'inherit',
-    padding: 16,
+    padding: theme.spacing(2),
+    paddingBottom: 0,
   }),
   titleBox: {
     boxSizing: 'border-box',
     width: 'auto',
     maxWidth: '90%',
+  },
+  body: {
+    textAlign: 'end',
+    padding: theme.spacing(1),
+  },
+  header: {
+    textAlign: 'end',
+    padding: theme.spacing(1),
   },
 }));
 
@@ -62,8 +73,9 @@ const CardWithIcon: FC<CardWithIconProps> = props => {
           <HeaderView {...props} />
         </Link> :
         <HeaderView {...props} />}
-      {children && <Divider />}
-      {children}
+      <div className={classes.body}>
+        {children}
+      </div>
     </Card>
   );
 };
@@ -85,9 +97,9 @@ const HeaderView: FC<CardWithIconProps> = props => {
         <Typography color='textSecondary'>
           {title}
         </Typography>
-        <Typography component='h2' variant='h5'>
-          {subtitle || ' '}
-        </Typography>
+        {subtitle && <Typography component='h2' variant='h5'>
+          {subtitle}
+        </Typography>}
       </Box>
     </div>
   );
