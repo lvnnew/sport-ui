@@ -26,6 +26,8 @@ import {
 } from './themes';
 import AuthBg from './AuthBg';
 
+const CIRCULAR_SIZE = 25;
+
 const useStyles = makeStyles((theme) => createStyles({
   actions: {
     padding: '0 1em 1em 1em',
@@ -66,6 +68,11 @@ const useStyles = makeStyles((theme) => createStyles({
     justifyContent: 'flex-start',
     minHeight: '100vh',
   },
+  loader: {
+    position: 'absolute',
+    top: `calc(50% - ${CIRCULAR_SIZE / 2})`,
+    left: `calc(50% - ${CIRCULAR_SIZE / 2})`,
+  },
 }));
 
 const renderInput = ({
@@ -100,10 +107,7 @@ const Login = () => {
 
   const handleSubmit = (auth: FormValues) => {
     setLoading(true);
-    try {
-      // login(auth, location.state ? location.state.nextPathname : '/');
-      login(auth, '/');
-    } catch (error: any) {
+    login(auth, '/').catch((error) => {
       setLoading(false);
       notify(
         typeof error === 'string' ?
@@ -113,7 +117,7 @@ const Login = () => {
             error.message),
         'warning',
       );
-    }
+    });
   };
 
   const validate = (values: FormValues) => {
@@ -195,7 +199,8 @@ const Login = () => {
                   >
                     {loading && (
                       <CircularProgress
-                        size={25}
+                        className={classes.loader}
+                        size={CIRCULAR_SIZE}
                         thickness={2}
                       />
                     )}

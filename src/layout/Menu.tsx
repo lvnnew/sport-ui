@@ -43,10 +43,10 @@ const useStyles = makeStyles(() => createStyles({
 interface Props {
     dense: boolean;
     logout: () => void;
-    onMenuClick: () => void;
+    onClick: () => void;
 }
 
-const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
+const Menu: FC<Props> = ({onClick, dense, logout}) => {
   const translate = useTranslate();
   const classes = useStyles();
   const theme = useTheme();
@@ -65,13 +65,13 @@ const Menu: FC<Props> = ({onMenuClick, dense, logout}) => {
       // sx={{marginTop: 1, marginBottom: 1}}
       style={{marginTop: 8, marginBottom: 8}}
     >
-      {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem onClick={onMenuClick} sidebarIsOpen={open} />}
-      <ProjectMenu dense={dense} onMenuClick={onMenuClick} open={open} />
+      {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem onClick={onClick} sidebarIsOpen={open} />}
+      <ProjectMenu dense={dense} onClick={onClick} open={open} />
       {isXSmall && (
         <MenuItemLink
           dense={dense}
           leftIcon={<SettingsIcon />}
-          onClick={onMenuClick}
+          onClick={onClick}
           primaryText={translate('app.configuration')}
           sidebarIsOpen={open}
           to='/configuration'

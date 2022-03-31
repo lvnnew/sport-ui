@@ -12,7 +12,7 @@ import DefaultIcon from '@material-ui/icons/DetailsOutlined';
 interface Props {
   dense: boolean;
   open: boolean;
-  onMenuClick: () => void;
+  onClick: () => void;
 }
 
 const defaultState = {
@@ -24,7 +24,7 @@ const defaultState = {
 
 type MenuName = keyof typeof defaultState;
 
-export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
+export const ProjectMenu: FC<Props> = ({onClick, dense, open}) => {
   const {debug} = useDebug();
   const [state, setState] = useState(defaultState);
   const translate = useTranslate();
@@ -37,14 +37,14 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
     <>
       <AdditionalMenu
         dense={dense}
-        onMenuClick={onMenuClick}
+        onClick={onClick}
         open={open}
       />
       {debug && <>
         <MenuItemLink
           dense={dense}
           leftIcon={<DefaultIcon />}
-          onClick={onMenuClick}
+          onClick={onClick}
           primaryText='Functions'
           sidebarIsOpen={open}
           to='/functions'
@@ -52,7 +52,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
         <MenuItemLink
           dense={dense}
           leftIcon={<DefaultIcon />}
-          onClick={onMenuClick}
+          onClick={onClick}
           primaryText='Resources'
           sidebarIsOpen={open}
           to='/resources'
@@ -60,7 +60,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
         <MenuItemLink
           dense={dense}
           leftIcon={<DefaultIcon />}
-          onClick={onMenuClick}
+          onClick={onClick}
           primaryText='Meta'
           sidebarIsOpen={open}
           to='/meta'
@@ -76,7 +76,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.appRefreshTokens.title')}
             sidebarIsOpen={open}
             to='/appRefreshTokens'
@@ -84,7 +84,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.files.title')}
             sidebarIsOpen={open}
             to='/files'
@@ -92,7 +92,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.languages.title')}
             sidebarIsOpen={open}
             to='/languages'
@@ -100,7 +100,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.stats.title')}
             sidebarIsOpen={open}
             to='/stats'
@@ -108,7 +108,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.tags.title')}
             sidebarIsOpen={open}
             to='/tags'
@@ -116,7 +116,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.admRefreshTokens.title')}
             sidebarIsOpen={open}
             to='/admRefreshTokens'
@@ -124,7 +124,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.units.title')}
             sidebarIsOpen={open}
             to='/units'
@@ -132,7 +132,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.auditLogs.title')}
             sidebarIsOpen={open}
             to='/auditLogs'
@@ -140,7 +140,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.delegations.title')}
             sidebarIsOpen={open}
             to='/delegations'
@@ -148,7 +148,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.autogenerationHistoryEntries.title')}
             sidebarIsOpen={open}
             to='/autogenerationHistoryEntries'
@@ -156,7 +156,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.managerLogins.title')}
             sidebarIsOpen={open}
             to='/managerLogins'
@@ -164,7 +164,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.appLogins.title')}
             sidebarIsOpen={open}
             to='/appLogins'
@@ -172,7 +172,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.managers.title')}
             sidebarIsOpen={open}
             to='/managers'
@@ -180,7 +180,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.users.title')}
             sidebarIsOpen={open}
             to='/users'
@@ -188,7 +188,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.autogenerationRules.title')}
             sidebarIsOpen={open}
             to='/autogenerationRules'
@@ -196,7 +196,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.permissions.title')}
             sidebarIsOpen={open}
             to='/permissions'
@@ -204,7 +204,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.managersToPermissions.title')}
             sidebarIsOpen={open}
             to='/managersToPermissions'
@@ -212,7 +212,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.rolesToPermissions.title')}
             sidebarIsOpen={open}
             to='/rolesToPermissions'
@@ -220,7 +220,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.roles.title')}
             sidebarIsOpen={open}
             to='/roles'
@@ -228,7 +228,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.managersToRoles.title')}
             sidebarIsOpen={open}
             to='/managersToRoles'
@@ -236,7 +236,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.entities.title')}
             sidebarIsOpen={open}
             to='/entities'
@@ -244,7 +244,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.tenants.title')}
             sidebarIsOpen={open}
             to='/tenants'
@@ -252,7 +252,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.auditLogActionTypes.title')}
             sidebarIsOpen={open}
             to='/auditLogActionTypes'
@@ -260,7 +260,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.messageTypes.title')}
             sidebarIsOpen={open}
             to='/messageTypes'
@@ -268,7 +268,7 @@ export const ProjectMenu: FC<Props> = ({onMenuClick, dense, open}) => {
           <MenuItemLink
             dense={dense}
             leftIcon={<DefaultIcon />}
-            onClick={onMenuClick}
+            onClick={onClick}
             primaryText={translate('catalogs.messageTemplates.title')}
             sidebarIsOpen={open}
             to='/messageTemplates'
