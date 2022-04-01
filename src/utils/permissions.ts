@@ -1,19 +1,31 @@
-export const hasPermission = (allPermissions: string[] | undefined, permission: string) => {
-  if (!allPermissions || allPermissions.length === 0) {
+export const hasPermission = (currentPermissions: string[] | undefined, requiredPermission: string) => {
+  if (!currentPermissions || currentPermissions.length === 0) {
     return false;
   }
 
-  return allPermissions.includes(permission);
+  return currentPermissions.includes(requiredPermission);
 };
 
-export const hasAnyOfPermissions = (allPermissions: string[] | undefined, permissions: string[]) => {
-  if (!allPermissions || allPermissions.length === 0) {
-    return false;
-  }
-
-  if (permissions.length === 0) {
+export const hasAnyPermission = (currentPermissions: string[] | undefined, requiredPermissions: string[]) => {
+  if (requiredPermissions.length === 0) {
     return true;
   }
 
-  return allPermissions.some(permission => permissions.includes(permission));
+  if (!currentPermissions || currentPermissions.length === 0) {
+    return false;
+  }
+
+  return requiredPermissions.some(permission => currentPermissions.includes(permission));
+};
+
+export const hasAllPermissions = (currentPermissions: string[] | undefined, requiredPermissions: string[]) => {
+  if (requiredPermissions.length === 0) {
+    return true;
+  }
+
+  if (!currentPermissions || currentPermissions.length === 0) {
+    return false;
+  }
+
+  return requiredPermissions.every(permission => currentPermissions.includes(permission));
 };
