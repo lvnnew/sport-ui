@@ -4,6 +4,7 @@ import {
   Show,
   ShowProps,
   TabbedShowLayout,
+  useTranslate,
 } from 'react-admin';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
@@ -12,10 +13,12 @@ import DefaultActions from './DefaultActions';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAdmRefreshTokenShow: FC<ShowProps> = (props: ShowProps) => {
+  const translate = useTranslate();
+
   return (
     <Show actions={<DefaultActions />} {...props}>
       <TabbedShowLayout>
-        <MainTab label='Summary' />
+        <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
       </TabbedShowLayout>
     </Show>

@@ -31,7 +31,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         initialValues={{
-          tenantId: 1,
+          tenantId: undefined,
         }}
         validate={validate}
       >

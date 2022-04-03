@@ -19,7 +19,7 @@ const DefaultEntityShow: FC<ShowProps> = (props: ShowProps) => {
   return (
     <Show actions={<DefaultActions />} {...props}>
       <TabbedShowLayout>
-        <MainTab label='Summary' />
+        <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
         <AuditLogsEntityTypeIdTab label={translate('catalogs.auditLogs.title')} path='auditLogs-entityTypeId' />
       </TabbedShowLayout>

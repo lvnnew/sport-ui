@@ -20,7 +20,7 @@ const DefaultTenantShow: FC<ShowProps> = (props: ShowProps) => {
   return (
     <Show actions={<DefaultActions />} {...props}>
       <TabbedShowLayout>
-        <MainTab label='Summary' />
+        <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
         <ManagersTenantIdTab label={translate('catalogs.managers.title')} path='managers-tenantId' />
         <UsersTenantIdTab label={translate('catalogs.users.title')} path='users-tenantId' />

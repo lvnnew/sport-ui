@@ -26,6 +26,7 @@ const customEnglishMessages: TranslationMessages = {
 
     addRole: 'Добавить роль',
     addPermission: 'Добавить разрешение',
+    mainTab: 'Основная',
     from: 'From',
     to: 'To',
     add: 'Добавить',

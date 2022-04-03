@@ -34,7 +34,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
         initialValues={{
           headOfUnit: false,
           active: false,
-          tenantId: 1,
+          tenantId: undefined,
         }}
         validate={validate}
       >

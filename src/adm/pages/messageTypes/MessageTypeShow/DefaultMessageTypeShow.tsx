@@ -19,7 +19,7 @@ const DefaultMessageTypeShow: FC<ShowProps> = (props: ShowProps) => {
   return (
     <Show actions={<DefaultActions />} {...props}>
       <TabbedShowLayout>
-        <MainTab label='Summary' />
+        <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
         <MessageTemplatesMessageTypeIdTab label={translate('catalogs.messageTemplates.title')} path='messageTemplates-messageTypeId' />
       </TabbedShowLayout>

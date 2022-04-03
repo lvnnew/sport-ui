@@ -31,7 +31,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
     >
       <SimpleForm
         initialValues={{
-          tenantId: 1,
+          tenantId: undefined,
         }}
         validate={validate}
       >
