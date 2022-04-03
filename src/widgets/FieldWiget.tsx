@@ -23,7 +23,7 @@ const FieldWiget: FC<FieldWigetProps> = (
   {
     source,
     measuring = '',
-    defaultValue = '',
+    defaultValue,
     icon,
     prepare,
     ...rest
@@ -33,13 +33,13 @@ const FieldWiget: FC<FieldWigetProps> = (
   const val = record[source] || defaultValue;
   const prepared = prepare ? prepare(val) : val;
 
-  return (
+  return val ? (
     <CardWithIcon
       {...rest}
       icon={icon || ArrowForwardIosIcon}
       subtitle={String(prepared) + ' ' + measuring}
     />
-  );
+  ) : null;
 };
 
 export default FieldWiget;
