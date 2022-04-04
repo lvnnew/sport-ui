@@ -6,7 +6,7 @@ const ruCatalogs = {
   admRefreshTokens: {
     title: 'Ui refresh tokens',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       create: 'Create',
       managerId: 'Manager',
@@ -16,7 +16,7 @@ const ruCatalogs = {
   appLogins: {
     title: 'Логины пользователей',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       login: 'Login',
       passwordHash: 'Password hash',
@@ -26,7 +26,7 @@ const ruCatalogs = {
   appRefreshTokens: {
     title: 'App refresh tokens',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       create: 'Create',
       userId: 'User',
@@ -36,7 +36,7 @@ const ruCatalogs = {
   auditLogActionTypes: {
     title: 'Типы событий аудита',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
     },
@@ -44,7 +44,7 @@ const ruCatalogs = {
   auditLogs: {
     title: 'Аудит',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       date: 'Date',
       title: 'Title',
@@ -62,7 +62,7 @@ const ruCatalogs = {
   autogenerationHistoryEntries: {
     title: 'История автогенерации',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       date: 'Дату проверки',
       originalEntityType: 'Тип сущности, на которой запускалось правило',
@@ -76,7 +76,7 @@ const ruCatalogs = {
   autogenerationRules: {
     title: 'Правила автогенерации',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Название правила',
       version: 'Дата последнего изменения правила',
@@ -90,7 +90,7 @@ const ruCatalogs = {
   delegations: {
     title: 'Делегирование',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       fromId: 'From',
       toId: 'To',
@@ -101,7 +101,7 @@ const ruCatalogs = {
   entities: {
     title: 'Сущности',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
     },
@@ -109,7 +109,7 @@ const ruCatalogs = {
   files: {
     title: 'Files',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       originalName: 'Original name',
       url: 'Url',
@@ -121,7 +121,7 @@ const ruCatalogs = {
   languages: {
     title: 'Languages',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
     },
@@ -129,7 +129,7 @@ const ruCatalogs = {
   managerLogins: {
     title: 'Логины менеджеров',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       login: 'Login',
       passwordHash: 'Password hash',
@@ -143,7 +143,7 @@ const ruCatalogs = {
   managers: {
     title: 'Менеджеры',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
       lastName: 'Last name',
@@ -162,7 +162,7 @@ const ruCatalogs = {
   managersToPermissions: {
     title: 'Разрешения менеджеров',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       managerId: 'Manager',
       permissionId: 'Permission',
@@ -171,7 +171,7 @@ const ruCatalogs = {
   managersToRoles: {
     title: 'Роли менеджеров',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       managerId: 'Manager',
       roleId: 'Role',
@@ -180,7 +180,7 @@ const ruCatalogs = {
   messageTemplates: {
     title: 'Шаблоны сообщений',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
       secretData: 'Secret data',
@@ -190,7 +190,7 @@ const ruCatalogs = {
   messageTypes: {
     title: 'Типы сообщений',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
       description: 'Description',
@@ -199,7 +199,7 @@ const ruCatalogs = {
   permissions: {
     title: 'Разрешения',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
     },
@@ -207,7 +207,7 @@ const ruCatalogs = {
   roles: {
     title: 'Роли',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
       hasAllPermissions: 'Has all permissions',
@@ -217,7 +217,7 @@ const ruCatalogs = {
   rolesToPermissions: {
     title: 'Разрешения ролей',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       roleId: 'Role',
       permissionId: 'Permission',
@@ -226,7 +226,7 @@ const ruCatalogs = {
   stats: {
     title: 'Stats',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       updated: 'Updated',
       helloCount: 'Hello count',
@@ -235,7 +235,7 @@ const ruCatalogs = {
   tags: {
     title: 'Tags',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       comment: 'Comment',
     },
@@ -243,7 +243,7 @@ const ruCatalogs = {
   tenants: {
     title: 'Тенанты',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
     },
@@ -251,7 +251,7 @@ const ruCatalogs = {
   units: {
     title: 'Units',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
       parentId: 'Parent',
@@ -260,7 +260,7 @@ const ruCatalogs = {
   users: {
     title: 'Пользователи',
     fields: {
-      id: 'Id',
+      id: 'Ид',
       search: 'Search',
       title: 'Title',
       lastname: 'Lastname',

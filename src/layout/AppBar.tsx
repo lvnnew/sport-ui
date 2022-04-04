@@ -11,6 +11,7 @@ import {
 import {Typography} from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {Link} from 'react-router-dom';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -64,7 +65,12 @@ const AppBar = (props: any) => {
         id='react-admin-title'
         variant='h6'
       >
-        Meta Template Base
+        <Link
+          to='/'
+          style={{textDecoration: 'none', color: 'inherit'}}
+        >
+          Meta Template Base
+        </Link>
       </Typography>
       <span className={classes.spacer} />
     </MuiAppBar>
