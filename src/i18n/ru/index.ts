@@ -7,7 +7,7 @@ import ruCatalogs from './ruCatalogs';
 import ruInfoRegistries from './ruInfoRegistries';
 import ruSumRegistries from './ruSumRegistries';
 
-const customEnglishMessages: TranslationMessages = {
+const translationMessages: TranslationMessages = {
   ...ruMessages,
   app: {
     documents: 'Документы',
@@ -307,4 +307,4 @@ const customEnglishMessages: TranslationMessages = {
   },
 };
 
-export default customEnglishMessages;
+export default translationMessages;

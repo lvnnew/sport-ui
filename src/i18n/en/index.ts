@@ -7,7 +7,7 @@ import enCatalogs from './enCatalogs';
 import enInfoRegistries from './enInfoRegistries';
 import enSumRegistries from './enSumRegistries';
 
-const customEnglishMessages: TranslationMessages = {
+const translationMessages: TranslationMessages = {
   ...enMessages,
   app: {
     documents: 'Documents',
@@ -309,4 +309,4 @@ const customEnglishMessages: TranslationMessages = {
   },
 };
 
-export default customEnglishMessages;
+export default translationMessages;
