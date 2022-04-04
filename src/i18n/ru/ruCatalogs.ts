@@ -7,7 +7,7 @@ const ruCatalogs = {
     title: 'Ui refresh tokens',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       create: 'Create',
       managerId: 'Manager',
       token: 'Token',
@@ -17,7 +17,7 @@ const ruCatalogs = {
     title: 'Логины пользователей',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       login: 'Login',
       passwordHash: 'Password hash',
       userId: 'User',
@@ -27,7 +27,7 @@ const ruCatalogs = {
     title: 'App refresh tokens',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       create: 'Create',
       userId: 'User',
       token: 'Token',
@@ -37,7 +37,7 @@ const ruCatalogs = {
     title: 'Типы событий аудита',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
     },
   },
@@ -45,7 +45,7 @@ const ruCatalogs = {
     title: 'Аудит',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       date: 'Date',
       title: 'Title',
       entityTypeId: 'Сущность',
@@ -63,7 +63,7 @@ const ruCatalogs = {
     title: 'История автогенерации',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       date: 'Дату проверки',
       originalEntityType: 'Тип сущности, на которой запускалось правило',
       originalEntityId: 'Идентификатор сущности, на котором запускалось правило',
@@ -77,7 +77,7 @@ const ruCatalogs = {
     title: 'Правила автогенерации',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Название правила',
       version: 'Дата последнего изменения правила',
       originalEntityType: 'На основе какой сущности производится генерация',
@@ -91,7 +91,7 @@ const ruCatalogs = {
     title: 'Делегирование',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       fromId: 'From',
       toId: 'To',
       expiresAt: 'Expires at',
@@ -102,7 +102,7 @@ const ruCatalogs = {
     title: 'Сущности',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
     },
   },
@@ -110,7 +110,7 @@ const ruCatalogs = {
     title: 'Files',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       originalName: 'Original name',
       url: 'Url',
       mimetype: 'Mimetype',
@@ -122,7 +122,7 @@ const ruCatalogs = {
     title: 'Languages',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
     },
   },
@@ -130,7 +130,7 @@ const ruCatalogs = {
     title: 'Логины менеджеров',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       login: 'Login',
       passwordHash: 'Password hash',
       role: 'Role',
@@ -144,7 +144,7 @@ const ruCatalogs = {
     title: 'Менеджеры',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
       lastName: 'Last name',
       firstName: 'First name',
@@ -163,7 +163,7 @@ const ruCatalogs = {
     title: 'Разрешения менеджеров',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       managerId: 'Manager',
       permissionId: 'Permission',
     },
@@ -172,7 +172,7 @@ const ruCatalogs = {
     title: 'Роли менеджеров',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       managerId: 'Manager',
       roleId: 'Role',
     },
@@ -181,7 +181,7 @@ const ruCatalogs = {
     title: 'Шаблоны сообщений',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
       secretData: 'Secret data',
       messageTypeId: 'Message type',
@@ -191,7 +191,7 @@ const ruCatalogs = {
     title: 'Типы сообщений',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
       description: 'Description',
     },
@@ -200,7 +200,7 @@ const ruCatalogs = {
     title: 'Разрешения',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
     },
   },
@@ -208,7 +208,7 @@ const ruCatalogs = {
     title: 'Роли',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
       hasAllPermissions: 'Has all permissions',
       allTenantsAvailable: 'All tenants available',
@@ -218,7 +218,7 @@ const ruCatalogs = {
     title: 'Разрешения ролей',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       roleId: 'Role',
       permissionId: 'Permission',
     },
@@ -227,7 +227,7 @@ const ruCatalogs = {
     title: 'Stats',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       updated: 'Updated',
       helloCount: 'Hello count',
     },
@@ -236,7 +236,7 @@ const ruCatalogs = {
     title: 'Tags',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       comment: 'Comment',
     },
   },
@@ -244,7 +244,7 @@ const ruCatalogs = {
     title: 'Тенанты',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
     },
   },
@@ -252,7 +252,7 @@ const ruCatalogs = {
     title: 'Units',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
       parentId: 'Parent',
     },
@@ -261,7 +261,7 @@ const ruCatalogs = {
     title: 'Пользователи',
     fields: {
       id: 'Ид',
-      search: 'Search',
+      search: 'Поиск',
       title: 'Title',
       lastname: 'Lastname',
       firstname: 'Firstname',
