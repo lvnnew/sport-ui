@@ -246,6 +246,7 @@ const ruCatalogs = {
       id: 'Ид',
       search: 'Поиск',
       title: 'Title',
+      utcOffset: 'Utc offset',
     },
   },
   units: {

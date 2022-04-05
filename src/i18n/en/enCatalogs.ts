@@ -246,6 +246,7 @@ const enCatalogs = {
       id: 'Id',
       search: 'Search',
       title: 'Title',
+      utcOffset: 'Utc offset',
     },
   },
   units: {

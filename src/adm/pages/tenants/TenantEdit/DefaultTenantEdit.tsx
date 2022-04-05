@@ -6,6 +6,7 @@ import {
   SimpleForm,
   EditProps,
   TextInput,
+  NumberInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
@@ -35,6 +36,13 @@ const DefaultTenantEdit: FC<EditProps> = (props: EditProps) => {
               fullWidth
               source='title'
               label={translate('catalogs.tenants.fields.title')}
+            />
+          </FormGrid>
+          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+            <NumberInput
+              fullWidth
+              source='utcOffset'
+              label={translate('catalogs.tenants.fields.utcOffset')}
             />
           </FormGrid>
         </FormGrid>

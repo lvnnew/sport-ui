@@ -42,6 +42,9 @@ export const ListTenantsItem: FC<Tenant> = (props) => {
             <div>
               {`Title: ${props.title}`}
             </div>
+            <div>
+              {`Utc offset: ${props.utcOffset}`}
+            </div>
           </>
         }
       />
@@ -87,6 +90,7 @@ const ListTenantsWidget: FC<ListTenantsWidgetProps> = ({
           ) {
             id
             title
+            utcOffset
           }
         }
       `}

@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
+  NumberInput,
   useTranslate,
 } from 'react-admin';
 
@@ -21,6 +22,11 @@ const DefaultTenantFilter: FC<any> = (props) => {
         fullWidth
         source='title'
         label={translate('catalogs.tenants.fields.title')}
+      />
+      <NumberInput
+        fullWidth
+        source='utcOffset'
+        label={translate('catalogs.tenants.fields.utcOffset')}
       />
     </Filter>
   );

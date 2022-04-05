@@ -20,6 +20,7 @@ const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.tenants.fields.id')} />
         <TextField source='title' label={translate('catalogs.tenants.fields.title')} />
+        <NumberField source='utcOffset' label={translate('catalogs.tenants.fields.utcOffset')} />
       </Datagrid>
     </List>
   );
