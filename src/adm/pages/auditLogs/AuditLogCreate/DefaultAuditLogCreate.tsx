@@ -13,14 +13,14 @@ import {
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAuditLogValudation from '../getAuditLogValudation';
+import getAuditLogValidation from '../getAuditLogValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAuditLogValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAuditLogValidation(translate)), [translate]);
 
   return (
     <Create

@@ -10,14 +10,14 @@ import {
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getStatValudation from '../getStatValudation';
+import getStatValidation from '../getStatValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getStatValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getStatValidation(translate)), [translate]);
 
   return (
     <Edit

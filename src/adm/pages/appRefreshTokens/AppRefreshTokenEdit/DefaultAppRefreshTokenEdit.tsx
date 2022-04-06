@@ -12,14 +12,14 @@ import {
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAppRefreshTokenValudation from '../getAppRefreshTokenValudation';
+import getAppRefreshTokenValidation from '../getAppRefreshTokenValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAppRefreshTokenValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAppRefreshTokenValidation(translate)), [translate]);
 
   return (
     <Edit

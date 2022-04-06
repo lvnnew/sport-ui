@@ -4,8 +4,8 @@ import {Translate} from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getAdmRefreshTokenValudation: GetValidation = (t: Translate) => Yup.object({
+const getManagersToPermissionValidation: GetValidation = (t: Translate) => Yup.object({
   managerId: Yup.number().required().typeError(t('validation.onlyNumbers')),
 });
 
-export default getAdmRefreshTokenValudation;
+export default getManagersToPermissionValidation;

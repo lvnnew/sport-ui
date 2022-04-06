@@ -10,14 +10,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getManagersToRoleValudation from '../getManagersToRoleValudation';
+import getManagersToRoleValidation from '../getManagersToRoleValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getManagersToRoleValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getManagersToRoleValidation(translate)), [translate]);
 
   return (
     <Edit

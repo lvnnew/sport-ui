@@ -14,14 +14,14 @@ import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAutogenerationHistoryEntryValudation from '../getAutogenerationHistoryEntryValudation';
+import getAutogenerationHistoryEntryValidation from '../getAutogenerationHistoryEntryValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAutogenerationHistoryEntryValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAutogenerationHistoryEntryValidation(translate)), [translate]);
 
   return (
     <Edit

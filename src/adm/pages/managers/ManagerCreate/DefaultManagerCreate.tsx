@@ -13,7 +13,7 @@ import {
 import {useDebug} from '../../../../contexts/DebugContext';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getManagerValudation from '../getManagerValudation';
+import getManagerValidation from '../getManagerValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -21,7 +21,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getManagerValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getManagerValidation(translate)), [translate]);
 
   return (
     <Create

@@ -11,14 +11,14 @@ import {
 import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAutogenerationRuleValudation from '../getAutogenerationRuleValudation';
+import getAutogenerationRuleValidation from '../getAutogenerationRuleValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAutogenerationRuleValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAutogenerationRuleValidation(translate)), [translate]);
 
   return (
     <Create

@@ -12,14 +12,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getManagerLoginValudation from '../getManagerLoginValudation';
+import getManagerLoginValidation from '../getManagerLoginValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getManagerLoginValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getManagerLoginValidation(translate)), [translate]);
 
   return (
     <Create

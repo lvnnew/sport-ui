@@ -12,14 +12,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getMessageTemplateValudation from '../getMessageTemplateValudation';
+import getMessageTemplateValidation from '../getMessageTemplateValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getMessageTemplateValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getMessageTemplateValidation(translate)), [translate]);
 
   return (
     <Edit

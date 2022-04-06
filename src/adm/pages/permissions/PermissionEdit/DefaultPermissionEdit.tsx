@@ -9,14 +9,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getPermissionValudation from '../getPermissionValudation';
+import getPermissionValidation from '../getPermissionValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultPermissionEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getPermissionValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getPermissionValidation(translate)), [translate]);
 
   return (
     <Edit

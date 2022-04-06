@@ -12,7 +12,7 @@ import {
 import {useDebug} from '../../../../contexts/DebugContext';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getUserValudation from '../getUserValudation';
+import getUserValidation from '../getUserValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -20,7 +20,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
   const {debug} = useDebug();
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getUserValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getUserValidation(translate)), [translate]);
 
   return (
     <Edit

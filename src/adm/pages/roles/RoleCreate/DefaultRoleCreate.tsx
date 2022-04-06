@@ -10,14 +10,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getRoleValudation from '../getRoleValudation';
+import getRoleValidation from '../getRoleValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getRoleValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getRoleValidation(translate)), [translate]);
 
   return (
     <Create

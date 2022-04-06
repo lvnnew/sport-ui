@@ -10,14 +10,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getRolesToPermissionValudation from '../getRolesToPermissionValudation';
+import getRolesToPermissionValidation from '../getRolesToPermissionValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getRolesToPermissionValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getRolesToPermissionValidation(translate)), [translate]);
 
   return (
     <Create

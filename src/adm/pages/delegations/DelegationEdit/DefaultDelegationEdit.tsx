@@ -12,14 +12,14 @@ import {
 import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getDelegationValudation from '../getDelegationValudation';
+import getDelegationValidation from '../getDelegationValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getDelegationValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getDelegationValidation(translate)), [translate]);
 
   return (
     <Edit

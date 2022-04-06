@@ -9,14 +9,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAuditLogActionTypeValudation from '../getAuditLogActionTypeValudation';
+import getAuditLogActionTypeValidation from '../getAuditLogActionTypeValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAuditLogActionTypeValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAuditLogActionTypeValidation(translate)), [translate]);
 
   return (
     <Edit

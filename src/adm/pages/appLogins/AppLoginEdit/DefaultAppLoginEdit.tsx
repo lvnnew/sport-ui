@@ -11,14 +11,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAppLoginValudation from '../getAppLoginValudation';
+import getAppLoginValidation from '../getAppLoginValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAppLoginValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAppLoginValidation(translate)), [translate]);
 
   return (
     <Edit

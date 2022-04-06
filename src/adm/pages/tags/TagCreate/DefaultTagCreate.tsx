@@ -9,14 +9,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getTagValudation from '../getTagValudation';
+import getTagValidation from '../getTagValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultTagCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getTagValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getTagValidation(translate)), [translate]);
 
   return (
     <Create

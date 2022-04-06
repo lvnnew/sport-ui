@@ -9,14 +9,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getEntityValudation from '../getEntityValudation';
+import getEntityValidation from '../getEntityValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultEntityEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getEntityValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getEntityValidation(translate)), [translate]);
 
   return (
     <Edit

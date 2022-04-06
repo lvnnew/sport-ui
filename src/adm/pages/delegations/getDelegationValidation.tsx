@@ -4,9 +4,9 @@ import {Translate} from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getDelegationValudation: GetValidation = (t: Translate) => Yup.object({
+const getDelegationValidation: GetValidation = (t: Translate) => Yup.object({
   fromId: Yup.number().required().typeError(t('validation.onlyNumbers')),
   toId: Yup.number().required().typeError(t('validation.onlyNumbers')),
 });
 
-export default getDelegationValudation;
+export default getDelegationValidation;

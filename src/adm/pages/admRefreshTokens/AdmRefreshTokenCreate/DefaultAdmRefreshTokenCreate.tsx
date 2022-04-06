@@ -12,14 +12,14 @@ import {
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getAdmRefreshTokenValudation from '../getAdmRefreshTokenValudation';
+import getAdmRefreshTokenValidation from '../getAdmRefreshTokenValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAdmRefreshTokenValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getAdmRefreshTokenValidation(translate)), [translate]);
 
   return (
     <Create

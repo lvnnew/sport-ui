@@ -4,8 +4,8 @@ import {Translate} from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getTenantValudation: GetValidation = (t: Translate) => Yup.object({
+const getTenantValidation: GetValidation = (t: Translate) => Yup.object({
   utcOffset: Yup.number().required().typeError(t('validation.onlyNumbers')),
 });
 
-export default getTenantValudation;
+export default getTenantValidation;

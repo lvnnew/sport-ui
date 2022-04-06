@@ -10,14 +10,14 @@ import {
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
 import {makeValidate} from 'mui-rff';
-import getTenantValudation from '../getTenantValudation';
+import getTenantValidation from '../getTenantValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultTenantCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getTenantValudation(translate)), [translate]);
+  const validate = useMemo(() => makeValidate(getTenantValidation(translate)), [translate]);
 
   return (
     <Create

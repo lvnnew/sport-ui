@@ -3,6 +3,6 @@ import GetValidation from '../../../types/GetValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getLanguageValudation: GetValidation = () => Yup.object({});
+const getRolesToPermissionValidation: GetValidation = () => Yup.object({});
 
-export default getLanguageValudation;
+export default getRolesToPermissionValidation;
