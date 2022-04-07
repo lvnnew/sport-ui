@@ -76,7 +76,7 @@
     "@typescript-eslint/parser": "5.18.0",
     "craco-swc": "^0.5.1",
     "cross-env": "^7.0.3",
-    "eslint-config-canonical": "^33.0.1",
+    "eslint-config-canonical": "33.0.1",
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-react": "^7.27.1",
     "utility-types": "^3.10.0"
