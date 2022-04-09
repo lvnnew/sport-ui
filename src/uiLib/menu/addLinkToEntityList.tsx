@@ -2,7 +2,7 @@ import {MenuElement} from './MenuItem';
 
 const addLinkToEntityList = (entityName: string, debugOnly = false) => ({
   label: `catalogs.${entityName}.title`,
-  link: '/statsDashboard',
+  link: `/${entityName}`,
   icon: 'DetailsOutlined',
   debugOnly,
 } as MenuElement);
