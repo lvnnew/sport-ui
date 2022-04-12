@@ -30,9 +30,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
-          tenantId: undefined,
-        }}
+        initialValues={{}}
         validate={validate}
       >
         <FormGrid container spacing={2}>

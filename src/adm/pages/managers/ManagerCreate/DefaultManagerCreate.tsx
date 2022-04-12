@@ -34,7 +34,6 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
         initialValues={{
           headOfUnit: false,
           active: false,
-          tenantId: undefined,
         }}
         validate={validate}
       >

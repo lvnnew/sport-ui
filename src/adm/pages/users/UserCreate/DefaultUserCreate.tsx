@@ -30,9 +30,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
-          tenantId: undefined,
-        }}
+        initialValues={{}}
         validate={validate}
       >
         <FormGrid container spacing={2}>
