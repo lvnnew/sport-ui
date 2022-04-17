@@ -5,24 +5,16 @@ import NumberWiget from '../widgets/NumberWiget';
 import {
   gql,
 } from '@apollo/client';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {useTranslate} from 'react-admin';
-
-const useStyles = makeStyles(() => createStyles({
-  flex: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-}));
+import Grid from '@material-ui/core/Grid';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const ResourcesPage: FC = () => {
-  const classes = useStyles();
   const translate = useTranslate();
 
   return (
-    <div className={classes.flex}>
+    <Grid container>
       <NumberWiget
         request={gql`
           query {
@@ -323,7 +315,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.users.title')}
         to='/users'
       />
-    </div>
+    </Grid>
   );
 };
 

@@ -8,6 +8,7 @@ import {
   TextField,
   SimpleShowLayout,
   useRecordContext,
+  Pagination,
 } from 'react-admin';
 
 const useStyles = makeStyles(() => createStyles({
@@ -52,6 +53,7 @@ const OpenAudit: FC<{entityTypeId: string}> = ({entityTypeId}) => {
             filter={{entityTypeId}}
             source='id'
             target='entityId'
+            pagination={<Pagination />}
           >
             <Datagrid>
               <TextField source='title' />

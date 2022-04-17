@@ -8,7 +8,7 @@ import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
 import PendingRequestsIcon from '@material-ui/icons/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
-import {Button, CircularProgress} from '@material-ui/core';
+import {Button, CircularProgress, Grid} from '@material-ui/core';
 import {useVersion} from 'ra-core';
 import {useRefresh} from 'react-admin';
 
@@ -27,10 +27,6 @@ const RECALCULATE_STATS = gql`
 `;
 
 const useStyles = makeStyles(() => createStyles({
-  flex: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   buttonProgress: {
     position: 'absolute',
     top: '50%',
@@ -65,13 +61,13 @@ const DashboardStats: FC = () => {
   return (
     <>
       {!loading && data && data.Stat && (
-        <div className={classes.flex}>
+        <Grid container>
           <CardWithIcon
             icon={PendingRequestsIcon}
             subtitle={resultToValue(data.Stat.helloCount)}
             title='Hello Count'
           />
-        </div>
+        </Grid>
       )}
       <Button
         style={{marginLeft: 2}}
