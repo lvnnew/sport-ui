@@ -18,6 +18,7 @@ export interface FieldWigetProps extends Omit<CardWithIconProps, 'icon' | 'to'> 
   defaultValue?: string;
   prepare?: (val: any) => string;
   to?: string | ((field: string) => string);
+  hideIfNoValue?: boolean;
 }
 
 const FieldWiget: FC<FieldWigetProps> = (
@@ -28,6 +29,7 @@ const FieldWiget: FC<FieldWigetProps> = (
     icon,
     prepare,
     to,
+    hideIfNoValue,
     ...rest
   },
 ) => {
@@ -36,7 +38,7 @@ const FieldWiget: FC<FieldWigetProps> = (
   const prepared = useMemo(() => (prepare ? prepare(val) : val), [prepare, val]);
   const toValue = useMemo(() => (typeof to === 'function' ? to(prepared) : to), [to, prepared]);
 
-  return val ? (
+  return val || !hideIfNoValue ? (
     <CardWithIcon
       {...rest}
       to={toValue}
