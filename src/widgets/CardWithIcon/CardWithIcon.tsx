@@ -6,15 +6,14 @@ import {
   Card,
   Box,
   Typography,
+  Link,
 } from '@material-ui/core';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
-import {
-  Link,
-} from 'react-router-dom';
 
 export interface CardWithIconProps {
   icon: FC<any>;
   to?: string;
+  openInNewWindow?: boolean;
   title?: string;
   subtitle?: string | number;
 }
@@ -63,13 +62,13 @@ const useStyles = makeStyles((theme) => createStyles({
 }));
 
 const CardWithIcon: FC<CardWithIconProps> = props => {
-  const {to, children} = props;
+  const {to, children, openInNewWindow} = props;
   const classes = useStyles(props);
 
   return (
     <Card className={classes.card} style={{margin: 8}}>
       {to ?
-        <Link to={to}>
+        <Link href={to} target={openInNewWindow ? '_blank' : undefined}>
           <HeaderView {...props} />
         </Link> :
         <HeaderView {...props} />}
