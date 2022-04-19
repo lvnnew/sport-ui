@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {SimpleForm, FileField} from 'react-admin';
-import {FileInput} from './FileInput';
+import {SimpleForm} from 'react-admin';
+import {FileInput} from '../../../uiLib/file/FileInput';
 
 const FilePage: FC = () => {
   return (
@@ -11,12 +11,7 @@ const FilePage: FC = () => {
         source='files'
 
         // accept="application/pdf"
-      >
-        <FileField
-          source='src'
-          title='title'
-        />
-      </FileInput>
+      />
     </SimpleForm>
   );
 };

@@ -1,18 +1,20 @@
-import React, {FC, useCallback} from 'react';
-import {FileInput as RaFileInput, FileInputProps as RaFileInputProps, InputProps} from 'react-admin';
+import React, {FC, useCallback, useEffect, ReactElement} from 'react';
+import {FileField, FileInput as RaFileInput, FileInputProps as RaFileInputProps, InputProps} from 'react-admin';
 import {FileInputOptions} from 'ra-ui-materialui/lib/input/FileInput';
 import {gql, useMutation} from '@apollo/client';
-import {fileStateToNewURL, fileStateToFail, isFile, changeFileState, fileStateToLoading} from './utils';
 import {useForm} from 'react-final-form';
-import log from '../../../utils/log';
+import {isEmpty} from 'ramda';
+
+import {fileStateToNewURL, fileStateToFail, isFile, changeFileState, fileStateToLoading} from './utils';
+import log from '../../utils/log';
 
 export type FileInputProps = Readonly<RaFileInputProps & InputProps<FileInputOptions>>;
 
 export type FileFieldState = {
-  id?: string;
+  id?: string | number;
   rawFile: File;
   src: string;
-  title?: string;
+  title?: string | ReactElement;
   error?: boolean;
   isLoading?: boolean;
 };
@@ -27,11 +29,32 @@ const SAVE_FILE = gql`
 `;
 
 export const FileInput: FC<FileInputProps> = (props) => {
-  const {onChange: onChangeOverridden, ...rest} = props;
+  const {
+    children,
+    onChange: onChangeOverridden,
+    record,
+    ...rest
+  } = props;
   const finalName = props.name || props.source;
 
   const [loadFile] = useMutation<{ saveFile: {id: string, url: string} }>(SAVE_FILE);
   const form = useForm(); // Todo: dont change ref
+
+  useEffect(() => { // to type value
+    if (record && !isEmpty(record)) { // Todo: maybe need add work with choise
+      if (Array.isArray(record)) {
+        throw new TypeError('Array file is not supported');
+      }
+
+      form.change(
+        finalName,
+        changeFileState(
+          form.getState().values[finalName],
+          fileStateToNewURL(record.url, record.id, {type: record.mimetype} as File),
+        ),
+      );
+    }
+  }, [finalName, form, record]);
 
   const onChange = useCallback(async (file: File | File[] | FileFieldState | FileFieldState[]) => {
     onChangeOverridden?.(file);
@@ -41,8 +64,8 @@ export const FileInput: FC<FileInputProps> = (props) => {
     for (const file of needLoadFileList) {
       const newState = changeFileState(
         form.getState().values[finalName],
+        fileStateToLoading(file.name),
         file,
-        fileStateToLoading,
       );
 
       form.change(finalName, newState);
@@ -58,21 +81,20 @@ export const FileInput: FC<FileInputProps> = (props) => {
         }
 
         const {url, id} = savedFile;
-        form.change(
-          finalName,
-          changeFileState(
-            form.getState().values[finalName],
-            file,
-            fileStateToNewURL(url, id),
-          ),
+        const newState = changeFileState(
+          form.getState().values[finalName],
+          fileStateToNewURL(url, id, file),
+          file,
         );
+
+        form.change(finalName, newState);
       } catch (error: any) {
         log.error(`Fail save file in back: ${error.message}`);
 
         const newState = changeFileState(
           form.getState().values[finalName],
-          file,
           fileStateToFail,
+          file,
         );
 
         form.change(finalName, newState);
@@ -84,6 +106,8 @@ export const FileInput: FC<FileInputProps> = (props) => {
     <RaFileInput
       onChange={onChange}
       {...rest}
-    />
+    >
+      {children ?? <FileField source='src' title='title' />}
+    </RaFileInput>
   );
 };
