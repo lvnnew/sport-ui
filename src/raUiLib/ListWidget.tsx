@@ -3,6 +3,7 @@ import React, {FC, ReactElement} from 'react';
 import {
   Datagrid,
   List,
+  ListProps,
   useRecordContext,
 } from 'react-admin';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => createStyles({
   },
 }));
 
-export interface ListWidgetProps {
+export interface ListWidgetProps extends ListProps {
   title: string;
   reference: string;
   target: string;
@@ -38,6 +39,7 @@ const ListWidget: FC<ListWidgetProps> = ({
   source = 'id',
   filters,
   children,
+  ...rest
 }) => {
   const record = useRecordContext();
   const classes = useStyles();
@@ -53,6 +55,7 @@ const ListWidget: FC<ListWidgetProps> = ({
           filters={filters}
           resource={reference}
           basePath=''
+          {...rest}
         >
           <Datagrid rowClick='show'>
             {children}
