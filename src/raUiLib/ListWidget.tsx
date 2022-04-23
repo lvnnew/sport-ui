@@ -54,7 +54,7 @@ const ListWidget: FC<ListWidgetProps> = ({
           }}
           filters={filters}
           resource={reference}
-          basePath=''
+          basePath={`/${reference}`}
           {...rest}
         >
           <Datagrid rowClick='show'>

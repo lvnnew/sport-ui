@@ -20,6 +20,7 @@ const getGqlResource = (resource: string) => {
 };
 
 const numberIdResources: string[] = [
+  'aggregateTrackings',
   'appRefreshTokens',
   'files',
   'tags',

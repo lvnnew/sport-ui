@@ -6,15 +6,13 @@ import {
   TabbedShowLayout,
   useTranslate,
 } from 'react-admin';
-import AggregateTrackingsEntityTypeIdTab from './tabs/AggregateTrackingsEntityTypeIdTab';
-import AuditLogsEntityTypeIdTab from './tabs/AuditLogsEntityTypeIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultEntityShow: FC<ShowProps> = (props: ShowProps) => {
+const DefaultAggregateTrackingShow: FC<ShowProps> = (props: ShowProps) => {
   const translate = useTranslate();
 
   return (
@@ -22,11 +20,9 @@ const DefaultEntityShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <AggregateTrackingsEntityTypeIdTab label={translate('infoRegistries.aggregateTrackings.title')} path='aggregateTrackings-entityTypeId' />
-        <AuditLogsEntityTypeIdTab label={translate('catalogs.auditLogs.title')} path='auditLogs-entityTypeId' />
       </TabbedShowLayout>
     </Show>
   );
 };
 
-export default DefaultEntityShow;
+export default DefaultAggregateTrackingShow;

@@ -30,6 +30,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allAggregateTrackingsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allAggregateTrackingsMeta?.count}
+        title={translate('infoRegistries.aggregateTrackings.title')}
+        to='/aggregateTrackings'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allAppLoginsMeta {
               count
             }

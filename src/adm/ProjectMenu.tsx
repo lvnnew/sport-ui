@@ -67,6 +67,23 @@ export const ProjectMenu: FC<Props> = ({onClick, dense, open}) => {
         />
         <SubMenu
           dense={dense}
+          handleToggle={() => handleToggle('infoRegistries')}
+          icon={<DocumentsIcon />}
+          isOpen={state.infoRegistries}
+          name='infoRegistries'
+          sidebarIsOpen={open}
+        >
+          <MenuItemLink
+            dense={dense}
+            leftIcon={<DefaultIcon />}
+            onClick={onClick}
+            primaryText={translate('infoRegistries.aggregateTrackings.title')}
+            sidebarIsOpen={open}
+            to='/aggregateTrackings'
+          />
+        </SubMenu>
+        <SubMenu
+          dense={dense}
           handleToggle={() => handleToggle('catalogs')}
           icon={<DocumentsIcon />}
           isOpen={state.catalogs}

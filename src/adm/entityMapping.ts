@@ -2,6 +2,7 @@
 
 export const mapping = {
   admRefreshTokens: 'AdmRefreshToken',
+  aggregateTrackings: 'AggregateTracking',
   appLogins: 'AppLogin',
   appRefreshTokens: 'AppRefreshToken',
   auditLogActionTypes: 'AuditLogActionType',

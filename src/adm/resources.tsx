@@ -16,6 +16,18 @@ const LoadableAdmRefreshTokenCreate = Loadable({
 const LoadableAdmRefreshTokenList = Loadable({
   loader: () => import('./pages/admRefreshTokens/AdmRefreshTokenList'),
 });
+const LoadableAggregateTrackingShow = Loadable({
+  loader: () => import('./pages/aggregateTrackings/AggregateTrackingShow'),
+});
+const LoadableAggregateTrackingEdit = Loadable({
+  loader: () => import('./pages/aggregateTrackings/AggregateTrackingEdit'),
+});
+const LoadableAggregateTrackingCreate = Loadable({
+  loader: () => import('./pages/aggregateTrackings/AggregateTrackingCreate'),
+});
+const LoadableAggregateTrackingList = Loadable({
+  loader: () => import('./pages/aggregateTrackings/AggregateTrackingList'),
+});
 const LoadableAppLoginShow = Loadable({
   loader: () => import('./pages/appLogins/AppLoginShow'),
 });
@@ -316,6 +328,15 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'admRefreshTokens.create') ? LoadableAdmRefreshTokenCreate : undefined}
         list={hasPermission(permissions, 'admRefreshTokens.all') ? LoadableAdmRefreshTokenList : undefined}
         options={{label: translate('catalogs.admRefreshTokens.title')}}
+      />,
+      <Resource
+        key='aggregateTrackings'
+        name='aggregateTrackings'
+        show={hasPermission(permissions, 'aggregateTrackings.get') ? LoadableAggregateTrackingShow : undefined}
+        edit={hasPermission(permissions, 'aggregateTrackings.update') ? LoadableAggregateTrackingEdit : undefined}
+        create={hasPermission(permissions, 'aggregateTrackings.create') ? LoadableAggregateTrackingCreate : undefined}
+        list={hasPermission(permissions, 'aggregateTrackings.all') ? LoadableAggregateTrackingList : undefined}
+        options={{label: translate('infoRegistries.aggregateTrackings.title')}}
       />,
       <Resource
         key='appLogins'
