@@ -50,6 +50,7 @@ const ListWidget: FC<ListWidgetProps> = ({
       <CardContent className={classes.cardContent}>
         <List
           filter={{
+            ...rest.filter,
             [target]: record[source],
           }}
           filters={filters}
