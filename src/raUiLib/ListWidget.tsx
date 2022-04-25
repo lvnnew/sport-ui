@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => createStyles({
   cardHeader: {
     paddingBottom: theme.spacing(0.5),
   },
+  listRoot: {
+    overflow: 'auto',
+  },
 }));
 
 export interface ListWidgetProps extends ListProps {
@@ -56,6 +59,7 @@ const ListWidget: FC<ListWidgetProps> = ({
           filters={filters}
           resource={reference}
           basePath={`/${reference}`}
+          className={classes.listRoot}
           {...rest}
         >
           <Datagrid rowClick='show'>
