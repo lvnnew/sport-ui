@@ -33,7 +33,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           errorOccurred: false,
         }}
         validate={validate}

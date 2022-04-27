@@ -31,7 +31,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           headOfUnit: false,
           active: true,
         }}

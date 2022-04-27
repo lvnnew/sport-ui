@@ -31,7 +31,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           headOfUnit: false,
           active: true,
         }}

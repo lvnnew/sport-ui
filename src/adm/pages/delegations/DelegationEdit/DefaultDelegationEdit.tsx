@@ -30,7 +30,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           active: false,
         }}
         validate={validate}

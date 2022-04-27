@@ -29,7 +29,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           ignoreVersionOnHistory: false,
         }}
         validate={validate}

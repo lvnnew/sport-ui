@@ -30,7 +30,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           active: false,
         }}
         validate={validate}

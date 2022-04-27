@@ -27,7 +27,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           hasAllPermissions: false,
           allTenantsAvailable: false,
         }}

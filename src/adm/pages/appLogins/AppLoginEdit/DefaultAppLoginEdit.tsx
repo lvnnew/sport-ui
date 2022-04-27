@@ -28,7 +28,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{}}
+        defaultValues={{}}
         validate={validate}
       >
         <FormGrid container spacing={2}>

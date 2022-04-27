@@ -31,7 +31,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           foreign: false,
         }}
         validate={validate}

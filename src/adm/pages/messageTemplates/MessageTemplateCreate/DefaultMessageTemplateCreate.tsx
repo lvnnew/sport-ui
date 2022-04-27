@@ -29,7 +29,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           secretData: false,
         }}
         validate={validate}

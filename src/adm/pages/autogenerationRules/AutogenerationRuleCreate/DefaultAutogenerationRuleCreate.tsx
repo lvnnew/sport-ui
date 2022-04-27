@@ -29,7 +29,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           ignoreVersionOnHistory: false,
         }}
         validate={validate}

@@ -29,7 +29,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           secretData: false,
         }}
         validate={validate}

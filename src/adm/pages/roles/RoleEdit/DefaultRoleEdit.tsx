@@ -27,7 +27,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           hasAllPermissions: false,
           allTenantsAvailable: false,
         }}

@@ -29,7 +29,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           emailVerified: false,
           initialPasswordChanged: false,
           locked: false,

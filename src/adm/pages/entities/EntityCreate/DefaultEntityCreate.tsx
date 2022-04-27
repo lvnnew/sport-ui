@@ -26,7 +26,7 @@ const DefaultEntityCreate: FC<CreateProps> = (props: CreateProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{}}
+        defaultValues={{}}
         validate={validate}
       >
         <FormGrid container spacing={2}>

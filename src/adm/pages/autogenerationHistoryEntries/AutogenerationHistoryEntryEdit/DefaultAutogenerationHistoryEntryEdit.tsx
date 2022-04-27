@@ -33,7 +33,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           errorOccurred: false,
         }}
         validate={validate}

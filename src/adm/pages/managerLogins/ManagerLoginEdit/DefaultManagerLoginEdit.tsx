@@ -29,7 +29,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
       }), [])}
     >
       <SimpleForm
-        initialValues={{
+        defaultValues={{
           emailVerified: false,
           initialPasswordChanged: false,
           locked: false,
