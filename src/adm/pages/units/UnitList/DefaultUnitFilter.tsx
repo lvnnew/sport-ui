@@ -30,7 +30,7 @@ const DefaultUnitFilter: FC<any> = (props) => {
         reference='units'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' resettable />
+        <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
     </Filter>
   );

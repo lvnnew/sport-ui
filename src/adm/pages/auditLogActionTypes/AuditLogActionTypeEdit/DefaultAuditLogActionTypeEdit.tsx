@@ -8,7 +8,7 @@ import {
   TextInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogActionTypeValidation from '../getAuditLogActionTypeValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -16,7 +16,7 @@ import getAuditLogActionTypeValidation from '../getAuditLogActionTypeValidation'
 const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAuditLogActionTypeValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAuditLogActionTypeValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -27,7 +27,7 @@ const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

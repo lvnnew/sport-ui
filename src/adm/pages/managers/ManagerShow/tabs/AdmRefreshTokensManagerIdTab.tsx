@@ -21,7 +21,7 @@ const AdmRefreshTokensManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => 
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='admRefreshTokens'
       target='managerId'
       pagination={<Pagination />}

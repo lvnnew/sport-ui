@@ -20,7 +20,7 @@ const UnitsParentIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='units'
       target='parentId'
       pagination={<Pagination />}

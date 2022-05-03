@@ -11,7 +11,7 @@ import {
 } from 'react-admin';
 import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getDelegationValidation from '../getDelegationValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -19,7 +19,7 @@ import getDelegationValidation from '../getDelegationValidation';
 const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getDelegationValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getDelegationValidation(translate)), [translate]);
 
   return (
     <Create
@@ -33,7 +33,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
         defaultValues={{
           active: false,
         }}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -43,7 +43,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -53,7 +53,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

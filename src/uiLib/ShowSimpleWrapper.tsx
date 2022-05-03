@@ -2,12 +2,11 @@
 /* eslint-disable unicorn/no-nested-ternary */
 import * as React from 'react';
 import {Children, isValidElement, cloneElement, ReactNode} from 'react';
-import {Record} from 'ra-core';
-import {Grid, GridProps} from '@material-ui/core';
+import {RaRecord} from 'ra-core';
+import {Grid, GridProps} from '@mui/material';
 import {Labeled} from 'react-admin';
 
 const sanitizeRestProps = ({
-  basePath,
   className,
   children,
   record,
@@ -17,16 +16,14 @@ const sanitizeRestProps = ({
 }: any) => rest;
 
 export interface ShowSimpleWrapperProps {
-  basePath?: string;
   className?: string;
   children: ReactNode;
-  record?: Record;
+  record?: RaRecord;
   resource?: string;
   version?: number;
 }
 
 const ShowSimpleWrapper = ({
-  basePath,
   children,
   record,
   resource,
@@ -42,7 +39,6 @@ const ShowSimpleWrapper = ({
           cloneElement(field, {
             record,
             resource,
-            basePath,
           })
         )
       ) : null),

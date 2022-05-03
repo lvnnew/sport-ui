@@ -1,6 +1,5 @@
 import React, {FC, useCallback, useEffect, ReactElement} from 'react';
-import {FileField, FileInput as RaFileInput, FileInputProps as RaFileInputProps, InputProps} from 'react-admin';
-import {FileInputOptions} from 'ra-ui-materialui/lib/input/FileInput';
+import {FileField, FileInput as RaFileInput, FileInputProps as RaFileInputProps, useRecordContext} from 'react-admin';
 import {gql, useMutation} from '@apollo/client';
 import {useForm} from 'react-final-form';
 import {isEmpty} from 'ramda';
@@ -8,7 +7,7 @@ import {isEmpty} from 'ramda';
 import {fileStateToNewURL, fileStateToFail, isFile, changeFileState, fileStateToLoading} from './utils';
 import log from '../../utils/log';
 
-export type FileInputProps = Readonly<RaFileInputProps & InputProps<FileInputOptions>>;
+export type FileInputProps = Readonly<RaFileInputProps>;
 
 export type FileFieldState = {
   id?: string | number;
@@ -32,13 +31,13 @@ export const FileInput: FC<FileInputProps> = (props) => {
   const {
     children,
     onChange: onChangeOverridden,
-    record,
     ...rest
   } = props;
   const finalName = props.name || props.source;
 
   const [loadFile] = useMutation<{ saveFile: {id: string, url: string} }>(SAVE_FILE);
   const form = useForm(); // Todo: dont change ref
+  const record = useRecordContext();
 
   useEffect(() => { // to type value
     if (record && !isEmpty(record)) { // Todo: maybe need add work with choise

@@ -20,7 +20,7 @@ const AppLoginsUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='appLogins'
       target='userId'
       pagination={<Pagination />}

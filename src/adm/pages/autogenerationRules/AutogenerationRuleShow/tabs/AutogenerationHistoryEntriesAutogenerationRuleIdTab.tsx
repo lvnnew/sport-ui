@@ -22,7 +22,7 @@ const AutogenerationHistoryEntriesAutogenerationRuleIdTab: FC<Omit<TabProps, 'ch
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='autogenerationHistoryEntries'
       target='autogenerationRuleId'
       pagination={<Pagination />}

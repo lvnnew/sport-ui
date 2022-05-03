@@ -36,7 +36,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         reference='messageTypes'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' disableClearable />
       </ReferenceInput>
     </Filter>
   );

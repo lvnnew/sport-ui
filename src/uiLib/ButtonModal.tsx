@@ -10,7 +10,7 @@ import React, {
   MouseEvent,
   ComponentProps,
 } from 'react';
-import {DialogTitle, Dialog, DialogActions, DialogContent, Button} from '@material-ui/core';
+import {DialogTitle, Dialog, DialogActions, DialogContent, Button} from '@mui/material';
 
 interface ModalContextData {
   close: () => void;

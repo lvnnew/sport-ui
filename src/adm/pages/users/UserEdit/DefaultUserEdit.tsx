@@ -11,7 +11,7 @@ import {
 } from 'react-admin';
 import {useDebug} from '../../../../contexts/DebugContext';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getUserValidation from '../getUserValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -20,7 +20,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
   const {debug} = useDebug();
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getUserValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getUserValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -31,7 +31,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -69,7 +69,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>}
         </FormGrid>

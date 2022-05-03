@@ -21,7 +21,7 @@ const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='managers'
       target='languageId'
       pagination={<Pagination />}

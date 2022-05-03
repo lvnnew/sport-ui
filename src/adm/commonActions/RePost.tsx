@@ -1,6 +1,6 @@
 import React, {FC, useCallback} from 'react';
-import {IconButton, Tooltip} from '@material-ui/core';
-import CachedOutlinedIcon from '@material-ui/icons/CachedOutlined';
+import {IconButton, Tooltip} from '@mui/material';
+import CachedOutlinedIcon from '@mui/icons-material/CachedOutlined';
 import {
   useRecordContext,
 } from 'react-admin';

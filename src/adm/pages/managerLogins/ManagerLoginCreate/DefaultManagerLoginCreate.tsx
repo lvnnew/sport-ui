@@ -11,7 +11,7 @@ import {
   AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerLoginValidation from '../getManagerLoginValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -19,7 +19,7 @@ import getManagerLoginValidation from '../getManagerLoginValidation';
 const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getManagerLoginValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getManagerLoginValidation(translate)), [translate]);
 
   return (
     <Create
@@ -34,7 +34,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
           initialPasswordChanged: false,
           locked: false,
         }}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -86,7 +86,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
         </FormGrid>

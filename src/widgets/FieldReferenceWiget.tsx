@@ -6,7 +6,7 @@ import {
   ChipField,
   ReferenceField,
 } from 'react-admin';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CardWithIcon, {CardWithIconProps} from './CardWithIcon/CardWithIcon';
 
 export interface FieldReferenceWigetProps extends Omit<CardWithIconProps, 'icon'> {

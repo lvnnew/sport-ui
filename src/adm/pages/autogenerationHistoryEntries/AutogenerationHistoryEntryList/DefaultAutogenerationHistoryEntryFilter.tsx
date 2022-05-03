@@ -43,7 +43,7 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
         reference='autogenerationRules'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' disableClearable />
       </ReferenceInput>
       <DateInput
         fullWidth

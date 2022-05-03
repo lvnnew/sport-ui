@@ -12,7 +12,7 @@ import {
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogValidation from '../getAuditLogValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -20,7 +20,7 @@ import getAuditLogValidation from '../getAuditLogValidation';
 const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAuditLogValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAuditLogValidation(translate)), [translate]);
 
   return (
     <Create
@@ -34,7 +34,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
         defaultValues={{
           foreign: false,
         }}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -58,7 +58,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -75,7 +75,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='auditLogActionTypes'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -85,7 +85,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -95,7 +95,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

@@ -7,7 +7,7 @@ import {
 import {hasPermission} from '../../../../utils/permissions';
 import OpenAudit from '../../../commonActions/OpenAudit';
 import OpenHelp from '../../../commonActions/OpenHelp';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => createStyles({
   toolbar: {alignItems: 'center'},
 }));
 
-const DefaultAggregateTrackingActions = ({basePath, data}: any) => {
+const DefaultAggregateTrackingActions = ({data}: any) => {
   const {permissions} = usePermissions<string[]>();
   const classes = useStyles();
 
@@ -26,7 +26,7 @@ const DefaultAggregateTrackingActions = ({basePath, data}: any) => {
       )}
       {hasPermission(permissions, 'help.getHelp') && (
         <OpenHelp entityType='aggregateTrackings' />)}
-      <EditButton basePath={basePath} record={data} />
+      <EditButton record={data} />
     </TopToolbar>
   ) : null;
 };

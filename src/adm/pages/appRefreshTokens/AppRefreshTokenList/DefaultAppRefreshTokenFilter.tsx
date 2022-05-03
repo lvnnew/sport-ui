@@ -31,7 +31,7 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' disableClearable />
       </ReferenceInput>
       <TextInput
         fullWidth

@@ -12,7 +12,7 @@ import {
 } from 'react-admin';
 import {useDebug} from '../../../../contexts/DebugContext';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerValidation from '../getManagerValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -21,7 +21,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getManagerValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getManagerValidation(translate)), [translate]);
 
   return (
     <Create
@@ -35,7 +35,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
           headOfUnit: false,
           active: true,
         }}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -66,7 +66,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='languages'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -104,7 +104,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -128,7 +128,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>}
         </FormGrid>

@@ -10,7 +10,7 @@ import {
 } from 'react-admin';
 import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationRuleValidation from '../getAutogenerationRuleValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -18,7 +18,7 @@ import getAutogenerationRuleValidation from '../getAutogenerationRuleValidation'
 const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAutogenerationRuleValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAutogenerationRuleValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -32,7 +32,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
         defaultValues={{
           ignoreVersionOnHistory: false,
         }}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

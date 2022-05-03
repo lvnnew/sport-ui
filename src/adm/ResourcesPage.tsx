@@ -6,7 +6,7 @@ import {
   gql,
 } from '@apollo/client';
 import {useTranslate} from 'react-admin';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 

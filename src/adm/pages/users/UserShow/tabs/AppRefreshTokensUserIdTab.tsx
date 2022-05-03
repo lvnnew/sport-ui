@@ -21,7 +21,7 @@ const AppRefreshTokensUserIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='appRefreshTokens'
       target='userId'
       pagination={<Pagination />}

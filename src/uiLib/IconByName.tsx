@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import * as Icons from '@material-ui/icons';
+import * as Icons from '@mui/icons-material';
 
 export interface IconByNameProps {
   name: keyof typeof Icons;

@@ -5,9 +5,7 @@ import ParentMenuItem, {ParentMenuElement, ParentMenuItemProps} from './ParentMe
 export type MenuElement = EndMenuElement | ParentMenuElement;
 
 type MenuItemProps = MenuElement & {
-  dense: boolean;
-  open: boolean;
-  onClick: () => void;
+  dense?: boolean;
 }
 
 const MenuItem: FC<MenuItemProps> =

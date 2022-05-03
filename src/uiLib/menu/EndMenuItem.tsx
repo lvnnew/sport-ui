@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {MenuItemLink, usePermissions, useTranslate} from 'react-admin';
 import {useDebug} from '../../contexts/DebugContext';
-import * as Icons from '@material-ui/icons';
+import * as Icons from '@mui/icons-material';
 import {IconByName} from '../IconByName';
 import {hasAllPermissions} from '../../utils/permissions';
 

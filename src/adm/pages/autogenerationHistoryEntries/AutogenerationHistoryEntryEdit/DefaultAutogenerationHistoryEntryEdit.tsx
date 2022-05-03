@@ -13,7 +13,7 @@ import {
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import DateInput from '../../../../uiLib/DateInput';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationHistoryEntryValidation from '../getAutogenerationHistoryEntryValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -21,7 +21,7 @@ import getAutogenerationHistoryEntryValidation from '../getAutogenerationHistory
 const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAutogenerationHistoryEntryValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAutogenerationHistoryEntryValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -36,7 +36,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
         defaultValues={{
           errorOccurred: false,
         }}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -67,7 +67,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
               reference='autogenerationRules'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

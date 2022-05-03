@@ -4,7 +4,7 @@ import {
 } from 'react';
 import {
   Card, CardHeader, CardContent,
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   ResponsiveContainer,
   BarChart,

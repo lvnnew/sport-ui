@@ -10,7 +10,7 @@ import {
   AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getUnitValidation from '../getUnitValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -18,7 +18,7 @@ import getUnitValidation from '../getUnitValidation';
 const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getUnitValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getUnitValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -29,7 +29,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -46,7 +46,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' resettable />
+              <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
           </FormGrid>
         </FormGrid>

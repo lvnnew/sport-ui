@@ -22,7 +22,7 @@ const DelegationsFromIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='delegations'
       target='fromId'
       pagination={<Pagination />}

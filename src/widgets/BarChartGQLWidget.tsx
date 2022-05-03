@@ -1,12 +1,9 @@
 import * as React from 'react';
+import {FC} from 'react';
 import {
-  FC, useEffect,
-} from 'react';
-import {
-  useVersion,
-} from 'react-admin';
-import {
-  DocumentNode, QueryHookOptions, useQuery,
+  DocumentNode,
+  QueryHookOptions,
+  useQuery,
 } from '@apollo/client';
 import BarChartWidget, {BarChartWidgetProps} from './BarChartWidget';
 
@@ -22,12 +19,7 @@ interface CountRow {
 }
 
 const BarChartGQLWidget: FC<BarChartGQLWidgetProps> = ({title, request, options, resultToValue}) => {
-  const {data: result, refetch} = useQuery(request, options);
-  const version = useVersion();
-
-  useEffect(() => {
-    refetch();
-  }, [refetch, version]);
+  const {data: result} = useQuery(request, options);
 
   return <BarChartWidget title={title} rows={resultToValue(result)} />;
 };

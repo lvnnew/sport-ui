@@ -12,7 +12,7 @@ import {
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getAggregateTrackingValidation from '../getAggregateTrackingValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -20,7 +20,7 @@ import getAggregateTrackingValidation from '../getAggregateTrackingValidation';
 const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAggregateTrackingValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAggregateTrackingValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -33,7 +33,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -43,7 +43,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

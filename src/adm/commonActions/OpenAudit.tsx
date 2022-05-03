@@ -1,7 +1,7 @@
 import React, {FC, useCallback, useState} from 'react';
-import {Drawer, IconButton, Tooltip} from '@material-ui/core';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
-import PlaylistAddCheckOutlinedIcon from '@material-ui/icons/PlaylistAddCheckOutlined';
+import {Drawer, IconButton, Tooltip} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
+import PlaylistAddCheckOutlinedIcon from '@mui/icons-material/PlaylistAddCheckOutlined';
 import {
   Datagrid,
   ReferenceManyField,

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import AttachFile from '@material-ui/icons/AttachFile';
+import AttachFile from '@mui/icons-material/AttachFile';
 import {ReferenceField} from 'react-admin';
 
 import CardWithIcon, {CardWithIconProps} from '../../widgets/CardWithIcon/CardWithIcon';

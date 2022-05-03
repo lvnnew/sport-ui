@@ -1,7 +1,7 @@
-import React, {useState, useMemo, FC} from 'react';
+import React, {useMemo, FC} from 'react';
 import {usePermissions, useTranslate} from 'react-admin';
 import {useDebug} from '../../contexts/DebugContext';
-import * as Icons from '@material-ui/icons';
+import * as Icons from '@mui/icons-material';
 import SubMenu from '../../layout/SubMenu';
 import {IconByName} from '../IconByName';
 import MenuItem, {MenuElement} from './MenuItem';
@@ -17,8 +17,6 @@ export interface ParentMenuElement {
 
 export type ParentMenuItemProps = ParentMenuElement & {
   dense: boolean;
-  open: boolean;
-  onClick: () => void;
 }
 
 const ParentMenuItem: FC<ParentMenuItemProps> = ({
@@ -27,16 +25,10 @@ const ParentMenuItem: FC<ParentMenuItemProps> = ({
   debugOnly,
   children,
   dense,
-  onClick,
 }) => {
   const translate = useTranslate();
   const {debug} = useDebug();
   const {permissions: currentPermissions} = usePermissions<string[]>();
-  const [open, setOpen] = useState(false);
-
-  const handleToggle = () => {
-    setOpen(open => !open);
-  };
 
   const requiredPermissions = useMemo(
     () =>
@@ -47,18 +39,13 @@ const ParentMenuItem: FC<ParentMenuItemProps> = ({
   return (debug || !debugOnly) && hasAnyPermission(currentPermissions, requiredPermissions) ?
     <SubMenu
       dense={dense}
-      handleToggle={() => handleToggle()}
       icon={<IconByName name={icon} />}
-      isOpen={open}
       name={translate(label)}
-      sidebarIsOpen={open}
     >
       {children.map((d, i) => (<MenuItem
         key={i}
         {...d}
         dense={dense}
-        open={open}
-        onClick={onClick}
       />))}
     </SubMenu> : null;
 };

@@ -11,7 +11,7 @@ import {
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getAppRefreshTokenValidation from '../getAppRefreshTokenValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -19,7 +19,7 @@ import getAppRefreshTokenValidation from '../getAppRefreshTokenValidation';
 const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getAppRefreshTokenValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAppRefreshTokenValidation(translate)), [translate]);
 
   return (
     <Create
@@ -31,7 +31,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

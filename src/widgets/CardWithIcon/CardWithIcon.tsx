@@ -7,8 +7,8 @@ import {
   Box,
   Typography,
   Link,
-} from '@material-ui/core';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
 
 export interface CardWithIconProps {
   icon: FC<any>;
@@ -18,7 +18,7 @@ export interface CardWithIconProps {
   subtitle?: string | number;
 }
 
-const useStyles = makeStyles((theme) => createStyles({
+const useStyles = makeStyles(() => createStyles({
   card: {
     '& a': {
       color: 'inherit',
@@ -31,33 +31,10 @@ const useStyles = makeStyles((theme) => createStyles({
     minWidth: '300px',
     wordWrap: 'break-word',
   },
-  main: () => ({
-    '& .icon': {
-      color: theme.palette.type === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
-    },
-    alignItems: 'center',
-
-    // background: `url(${
-    //   (theme as any).palette.mode === 'dark' ? cartoucheDark : cartouche
-    // }) no-repeat`,
-    display: 'flex',
-    justifyContent: 'space-between',
-    overflow: 'inherit',
-    padding: theme.spacing(2),
-    paddingBottom: 0,
-  }),
   titleBox: {
     boxSizing: 'border-box',
     width: 'auto',
     maxWidth: '90%',
-  },
-  body: {
-    textAlign: 'end',
-    padding: theme.spacing(1),
-  },
-  header: {
-    textAlign: 'end',
-    padding: theme.spacing(1),
   },
 }));
 
@@ -72,9 +49,14 @@ const CardWithIcon: FC<CardWithIconProps> = props => {
           <HeaderView {...props} />
         </Link> :
         <HeaderView {...props} />}
-      <div className={classes.body}>
+      <Box
+        sx={{
+          textAlign: 'end',
+          padding: 1,
+        }}
+      >
         {children}
-      </div>
+      </Box>
     </Card>
   );
 };
@@ -84,11 +66,20 @@ const HeaderView: FC<CardWithIconProps> = props => {
   const classes = useStyles(props);
 
   return (
-    <div className={classes.main}>
+    <Box
+      sx={{
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'space-between',
+        overflow: 'inherit',
+        padding: 2,
+        paddingBottom: 0,
+      }}
+    >
       <Box
         className='icon'
         width='3em'
-        // sx={{color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light')}}
+        sx={{color: (theme) => (theme.palette.mode === 'dark' ? 'primary.dark' : 'primary.light')}}
       >
         {createElement(icon, {fontSize: 'large'})}
       </Box>
@@ -100,7 +91,7 @@ const HeaderView: FC<CardWithIconProps> = props => {
           {subtitle}
         </Typography>}
       </Box>
-    </div>
+    </Box>
   );
 };
 

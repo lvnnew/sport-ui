@@ -1,38 +1,20 @@
 /* eslint-disable max-len */
-import React, {FC, ReactElement} from 'react';
+import React, {FC, ReactElement, ReactNode} from 'react';
 import {
   Datagrid,
   List,
   ListProps,
   useRecordContext,
 } from 'react-admin';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
-import {Card, CardContent, CardHeader} from '@material-ui/core';
+import {Card, CardContent, CardHeader} from '@mui/material';
 
-const useStyles = makeStyles((theme) => createStyles({
-  card: {
-    margin: theme.spacing(1),
-  },
-  cardContent: {
-    '&:last-child': {
-      padding: theme.spacing(2),
-    },
-    paddingTop: theme.spacing(0.5),
-  },
-  cardHeader: {
-    paddingBottom: theme.spacing(0.5),
-  },
-  listRoot: {
-    overflow: 'auto',
-  },
-}));
-
-export interface ListWidgetProps extends ListProps {
+export interface ListWidgetProps extends Omit<ListProps, 'children'> {
   title: string;
   reference: string;
   target: string;
   source?: string;
   filters?: ReactElement | ReactElement[];
+  children: ReactNode | ReactNode[];
 }
 
 const ListWidget: FC<ListWidgetProps> = ({
@@ -45,12 +27,11 @@ const ListWidget: FC<ListWidgetProps> = ({
   ...rest
 }) => {
   const record = useRecordContext();
-  const classes = useStyles();
 
   return (
-    <Card className={classes.card} >
-      <CardHeader title={title} className={classes.cardHeader} />
-      <CardContent className={classes.cardContent}>
+    <Card sx={{m: 1}} >
+      <CardHeader title={title} sx={{pb: 0.5}} />
+      <CardContent sx={{pt: 0.5, '&:last-child': {p: 2}}}>
         <List
           filter={{
             ...rest.filter,
@@ -58,8 +39,7 @@ const ListWidget: FC<ListWidgetProps> = ({
           }}
           filters={filters}
           resource={reference}
-          basePath={`/${reference}`}
-          className={classes.listRoot}
+          sx={{overflow: 'auto'}}
           {...rest}
         >
           <Datagrid rowClick='show'>

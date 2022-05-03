@@ -1,6 +1,6 @@
-import {createTheme, ThemeOptions} from '@material-ui/core';
+import {ThemeOptions} from '@mui/material';
 
-export const darkThemeOptions = {
+export const darkTheme = {
   overrides: {
     MuiAppBar: {
       colorSecondary: {
@@ -22,13 +22,11 @@ export const darkThemeOptions = {
     secondary: {
       main: '#FBBA72',
     },
-    type: 'dark', // Switching the dark mode on is a single property value change.
+    mode: 'dark', // Switching the dark mode on is a single property value change.
   },
 } as ThemeOptions;
 
-export const darkTheme = createTheme(darkThemeOptions);
-
-export const lightThemeOptions = {
+export const lightTheme = {
   overrides: {
     MuiAppBar: {
       colorSecondary: {
@@ -101,5 +99,3 @@ export const lightThemeOptions = {
     borderRadius: 10,
   },
 } as ThemeOptions;
-
-export const lightTheme = createTheme(lightThemeOptions);

@@ -8,7 +8,7 @@ import {
   TextInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getLanguageValidation from '../getLanguageValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -16,7 +16,7 @@ import getLanguageValidation from '../getLanguageValidation';
 const DefaultLanguageEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getLanguageValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getLanguageValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -27,7 +27,7 @@ const DefaultLanguageEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

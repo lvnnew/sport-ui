@@ -1,7 +1,7 @@
 import React, {FC, useCallback, useState} from 'react';
-import {Drawer, IconButton, Tooltip} from '@material-ui/core';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import {Drawer, IconButton, Tooltip} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import {gql, useLazyQuery} from '@apollo/client';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';

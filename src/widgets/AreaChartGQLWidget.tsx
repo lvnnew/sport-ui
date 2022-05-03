@@ -1,10 +1,5 @@
 import * as React from 'react';
-import {
-  FC, useEffect,
-} from 'react';
-import {
-  useVersion,
-} from 'react-admin';
+import {FC} from 'react';
 import {
   DocumentNode, QueryHookOptions, useQuery,
 } from '@apollo/client';
@@ -22,12 +17,7 @@ export interface AreaChartGQLWidgetProps extends Omit<AreaChartWidgetProps, 'row
 }
 
 const AreaChartGQLWidget: FC<AreaChartGQLWidgetProps> = ({title, request, options, resultToValue}) => {
-  const {data: result, refetch} = useQuery(request, options);
-  const version = useVersion();
-
-  useEffect(() => {
-    refetch();
-  }, [refetch, version]);
+  const {data: result} = useQuery(request, options);
 
   return <AreaChartWidget title={title} rows={resultToValue(result)} />;
 };

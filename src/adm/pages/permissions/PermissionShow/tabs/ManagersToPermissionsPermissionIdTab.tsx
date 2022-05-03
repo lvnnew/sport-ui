@@ -20,7 +20,7 @@ const ManagersToPermissionsPermissionIdTab: FC<Omit<TabProps, 'children'>> = (pr
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='managersToPermissions'
       target='permissionId'
       pagination={<Pagination />}

@@ -37,7 +37,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         reference='entities'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' disableClearable />
       </ReferenceInput>
       <TextInput
         fullWidth
@@ -50,7 +50,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         reference='auditLogActionTypes'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' disableClearable />
       </ReferenceInput>
       <ReferenceInput
         source='managerId'
@@ -58,7 +58,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' resettable />
+        <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
       <ReferenceInput
         source='userId'
@@ -66,7 +66,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' resettable />
+        <AutocompleteInput fullWidth optionText='title' />
       </ReferenceInput>
       <BooleanInput
         fullWidth

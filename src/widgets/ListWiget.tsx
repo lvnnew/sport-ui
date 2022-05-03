@@ -1,13 +1,10 @@
 /* eslint-_disable_ @typescript-eslint/camelcase */
 import * as React from 'react';
 import {
-  FC, useEffect, useMemo, ReactElement,
+  FC, useMemo, ReactElement,
 } from 'react';
-import {Card, CardHeader, List} from '@material-ui/core';
-import {
-  useVersion,
-} from 'react-admin';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {Card, CardHeader, List} from '@mui/material';
+import {makeStyles, createStyles} from '@mui/styles';
 import {
   DocumentNode, QueryHookOptions, useQuery,
 } from '@apollo/client';
@@ -32,13 +29,8 @@ const useStyles = makeStyles(() => createStyles({
 const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
   {title, children, request, options, resultToValue, action}: ListWigetProps<T>,
 ) => {
-  const {data: result, refetch} = useQuery(request, options);
-  const version = useVersion();
+  const {data: result} = useQuery(request, options);
   const classes = useStyles();
-
-  useEffect(() => {
-    refetch();
-  }, [refetch, version]);
 
   const records = useMemo(() => resultToValue(result), [resultToValue, result]);
 

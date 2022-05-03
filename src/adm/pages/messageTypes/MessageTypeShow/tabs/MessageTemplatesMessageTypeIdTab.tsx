@@ -20,7 +20,7 @@ const MessageTemplatesMessageTypeIdTab: FC<Omit<TabProps, 'children'>> = (props)
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='messageTemplates'
       target='messageTypeId'
       pagination={<Pagination />}

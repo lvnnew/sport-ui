@@ -12,6 +12,6 @@ const LoadableFilePage = Loadable({
 });
 
 export const additionalRoutes = [
-  <Route component={LoadableDashboardStats} exact key='statsDashboard' path='/statsDashboard' />,
-  <Route component={LoadableFilePage} exact key='files' path='/ref-file-saving' />,
+  <Route element={LoadableDashboardStats} key='statsDashboard' path='/statsDashboard' />,
+  <Route element={LoadableFilePage} key='files' path='/ref-file-saving' />,
 ];

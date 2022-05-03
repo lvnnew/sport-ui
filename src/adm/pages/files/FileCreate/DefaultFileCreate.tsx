@@ -8,7 +8,7 @@ import {
   TextInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getFileValidation from '../getFileValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -16,7 +16,7 @@ import getFileValidation from '../getFileValidation';
 const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getFileValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getFileValidation(translate)), [translate]);
 
   return (
     <Create
@@ -27,7 +27,7 @@ const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>

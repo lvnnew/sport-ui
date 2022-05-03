@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles} from '@mui/styles';
 
 const useStyles = makeStyles<any, {src: string, alt?: string, type?: 'preview'}>(() => ({
   img: ({type}) => (type === 'preview' ? {

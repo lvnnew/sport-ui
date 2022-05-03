@@ -1,15 +1,9 @@
-import React, {
-  FC,
-  useEffect,
-} from 'react';
-import {
-  useVersion,
-} from 'react-admin';
+import React, {FC} from 'react';
 import {
   gql,
   useQuery,
 } from '@apollo/client';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 
 const useStyles = makeStyles(() => createStyles({
   section: {
@@ -31,12 +25,7 @@ const META_REQUEST = gql`
 
 const MetaPage: FC = () => {
   const classes = useStyles();
-  const {data: result, refetch} = useQuery(META_REQUEST);
-  const version = useVersion();
-
-  useEffect(() => {
-    refetch();
-  }, [refetch, version]);
+  const {data: result} = useQuery(META_REQUEST);
 
   return (
     <>

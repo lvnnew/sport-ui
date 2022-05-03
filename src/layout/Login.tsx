@@ -1,113 +1,44 @@
 import * as React from 'react';
-import {
-  useState,
-} from 'react';
-import {
-  Field, withTypes,
-} from 'react-final-form';
+import {useState} from 'react';
+import {useLocation} from 'react-router-dom';
 import {
   Avatar,
   Button,
   Card,
   CardActions,
   CircularProgress,
-  TextField,
-  ThemeProvider,
-  Box,
-  Typography,
-} from '@material-ui/core';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
-import LockIcon from '@material-ui/icons/Lock';
+} from '@mui/material';
+import LockIcon from '@mui/icons-material/Lock';
 import {
-  Notification, useTranslate, useLogin, useNotify,
+  Form,
+  required,
+  TextInput,
+  useTranslate,
+  useLogin,
+  useNotify,
 } from 'react-admin';
-import {
-  lightTheme,
-} from './themes';
+import Box from '@mui/material/Box';
 import AuthBg from './AuthBg';
 
-const CIRCULAR_SIZE = 25;
-
-const useStyles = makeStyles((theme) => createStyles({
-  actions: {
-    padding: '0 1em 1em 1em',
-  },
-  avatar: {
-    display: 'flex',
-    justifyContent: 'center',
-    margin: '1em',
-  },
-  card: {
-    marginTop: '6em',
-    minWidth: 300,
-    zIndex: theme.zIndex.modal,
-  },
-  form: {
-    padding: '0 1em 1em 1em',
-  },
-  hint: {
-    color: theme.palette.grey[500],
-    display: 'flex',
-    justifyContent: 'center',
-    marginTop: '1em',
-  },
-  icon: {
-    backgroundColor: theme.palette.secondary.main,
-  },
-  input: {
-    marginTop: '1em',
-  },
-  main: {
-    alignItems: 'center',
-
-    // background: 'url(https://source.unsplash.com/random/1600x900)',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundSize: 'cover',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    minHeight: '100vh',
-  },
-  loader: {
-    position: 'absolute',
-    top: `calc(50% - ${CIRCULAR_SIZE / 2})`,
-    left: `calc(50% - ${CIRCULAR_SIZE / 2})`,
-  },
-}));
-
-const renderInput = ({
-  meta: {touched, error} = {error: undefined, touched: false},
-  input: {...inputProps},
-  ...props
-}: React.PropsWithChildren<any>) => (
-  <TextField
-    error={Boolean(touched && error)}
-    helperText={touched && error}
-    {...inputProps}
-    {...props}
-    fullWidth
-  />
-);
-
 interface FormValues {
-  email?: string;
+  username?: string;
   password?: string;
 }
-
-const {Form} = withTypes<FormValues>();
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const translate = useTranslate();
-  const classes = useStyles();
+
   const notify = useNotify();
   const login = useLogin();
-
-  // const location = useLocation<{ nextPathname: string } | null>();
+  const location = useLocation();
 
   const handleSubmit = (auth: FormValues) => {
     setLoading(true);
-    login(auth, '/').catch((error) => {
+    login(
+      auth,
+      location.state ? (location.state as any).nextPathname : '/',
+    ).catch((error: Error) => {
       setLoading(false);
       notify(
         typeof error === 'string' ?
@@ -115,116 +46,112 @@ const Login = () => {
           (typeof error === 'undefined' || !error.message ?
             'ra.auth.sign_in_error' :
             error.message),
-        'warning',
+        {
+          type: 'warning',
+          messageArgs: {
+            _:
+              typeof error === 'string' ?
+                error :
+                (error && error.message ?
+                  error.message :
+                  undefined),
+          },
+        },
       );
     });
-  };
-
-  const validate = (values: FormValues) => {
-    const errors: FormValues = {};
-    if (!values.email) {
-      errors.email = translate('ra.validation.required');
-    }
-
-    if (!values.password) {
-      errors.password = translate('ra.validation.required');
-    }
-
-    return errors;
   };
 
   return (
     <>
       <AuthBg />
-      <Form
-        onSubmit={handleSubmit}
-        render={({handleSubmit, hasValidationErrors}) => (
-          <form noValidate onSubmit={handleSubmit}>
-            <div className={classes.main}>
-              <Card
-                className={classes.card}
-                // sx={{zIndex: 'modal'}}
+      <Form onSubmit={handleSubmit} noValidate>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+          }}
+        >
+          <Card sx={{
+            minWidth: 300,
+            marginTop: '6em',
+            zIndex: theme => theme.zIndex.modal,
+          }}
+          >
+            <Box
+              sx={{
+                margin: '1em',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <Avatar sx={{bgcolor: 'secondary.main'}}>
+                <LockIcon />
+              </Avatar>
+            </Box>
+            <Box
+              sx={{
+                marginTop: '1em',
+                display: 'flex',
+                justifyContent: 'center',
+                color: theme => theme.palette.grey[500],
+              }}
+            >
+              Login: admin@example.com
+            </Box>
+            <Box
+              sx={{
+                marginTop: '1em',
+                display: 'flex',
+                justifyContent: 'center',
+                color: theme => theme.palette.grey[500],
+              }}
+            >
+              Pass: admin
+            </Box>
+            <Box sx={{padding: '0 1em 1em 1em'}}>
+              <Box sx={{marginTop: '1em'}}>
+                <TextInput
+                  autoFocus
+                  source='email'
+                  label={translate('email')}
+                  disabled={loading}
+                  validate={required()}
+                  fullWidth
+                />
+              </Box>
+              <Box sx={{marginTop: '1em'}}>
+                <TextInput
+                  source='password'
+                  label={translate('ra.auth.password')}
+                  type='password'
+                  disabled={loading}
+                  validate={required()}
+                  fullWidth
+                />
+              </Box>
+            </Box>
+            <CardActions sx={{padding: '0 1em 1em 1em'}}>
+              <Button
+                variant='contained'
+                type='submit'
+                color='primary'
+                disabled={loading}
+                fullWidth
               >
-                <div className={classes.avatar}>
-                  <Avatar
-                    className={classes.icon}
-                    // sx={{bgcolor: 'secondary.main'}}
-                  >
-                    <LockIcon />
-                  </Avatar>
-                </div>
-                <Box
-                  className={classes.hint}
-                  // sx={{color: 'grey.500'}}
-                >
-                  <Typography>
-                    Login: admin@example.com
-                  </Typography>
-                </Box>
-                <Box
-                  className={classes.hint}
-                  // sx={{color: 'grey.500'}}
-                >
-                  <Typography>
-                    Pass: admin
-                  </Typography>
-                </Box>
-                <div className={classes.form}>
-                  <div className={classes.input}>
-                    <Field
-                      autoFocus
-                      component={renderInput}
-                      disabled={loading}
-                      label={translate('ra.auth.username')}
-                      name='email'
-                    />
-                  </div>
-                  <div className={classes.input}>
-                    <Field
-                      component={renderInput}
-                      disabled={loading}
-                      label={translate('ra.auth.password')}
-                      name='password'
-                      type='password'
-                    />
-                  </div>
-                </div>
-                <CardActions className={classes.actions}>
-                  <Button
-                    color='primary'
-                    disabled={hasValidationErrors || loading}
-                    fullWidth
-                    type='submit'
-                    variant='contained'
-                  >
-                    {loading && (
-                      <CircularProgress
-                        className={classes.loader}
-                        size={CIRCULAR_SIZE}
-                        thickness={2}
-                      />
-                    )}
-                    {translate('ra.auth.sign_in')}
-                  </Button>
-                </CardActions>
-              </Card>
-              <Notification />
-            </div>
-          </form>
-        )}
-        validate={validate}
-      />
+                {loading && (
+                  <CircularProgress size={25} thickness={2} />
+                )}
+                {translate('ra.auth.sign_in')}
+              </Button>
+            </CardActions>
+          </Card>
+        </Box>
+      </Form>
     </>
   );
 };
 
-// We need to put the ThemeProvider decoration in another component
-// Because otherwise the useStyles() hook used in Login won't get
-// the right theme
-const LoginWithTheme = (props: any) => (
-  <ThemeProvider theme={lightTheme}>
-    <Login {...props} />
-  </ThemeProvider>
-);
-
-export default LoginWithTheme;
+export default Login;

@@ -2,14 +2,12 @@
 import React, {
   FC,
   useCallback,
-  useEffect,
 } from 'react';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {makeStyles, createStyles} from '@mui/styles';
 import {gql, useQuery, useMutation} from '@apollo/client';
-import PendingRequestsIcon from '@material-ui/icons/ErrorOutlineOutlined';
+import PendingRequestsIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import CardWithIcon from '../widgets/CardWithIcon/CardWithIcon';
-import {Button, CircularProgress, Grid} from '@material-ui/core';
-import {useVersion} from 'ra-core';
+import {Button, CircularProgress, Grid} from '@mui/material';
 import {useRefresh} from 'react-admin';
 
 const STATS_QUERY = gql`
@@ -38,18 +36,11 @@ const useStyles = makeStyles(() => createStyles({
 
 const DashboardStats: FC = () => {
   const classes = useStyles();
-  const version = useVersion();
   const refresh = useRefresh();
 
-  const {data, loading, refetch} = useQuery(STATS_QUERY);
+  const {data, loading} = useQuery(STATS_QUERY);
 
   const [recalculateStats, {loading: recalcLoading}] = useMutation(RECALCULATE_STATS);
-
-  useEffect(() => {
-    if (!loading) {
-      refetch();
-    }
-  }, [version, refetch, loading]);
 
   const onClick = useCallback(async () => {
     await recalculateStats();

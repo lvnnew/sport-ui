@@ -9,7 +9,7 @@ import {
   AutocompleteInput,
 } from 'react-admin';
 import FormGrid from '../../../../uiLib/FormGrid';
-import {makeValidate} from 'mui-rff';
+import {yupResolver} from '@hookform/resolvers/yup';
 import getRolesToPermissionValidation from '../getRolesToPermissionValidation';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -17,7 +17,7 @@ import getRolesToPermissionValidation from '../getRolesToPermissionValidation';
 const DefaultRolesToPermissionEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
 
-  const validate = useMemo(() => makeValidate(getRolesToPermissionValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getRolesToPermissionValidation(translate)), [translate]);
 
   return (
     <Edit
@@ -28,7 +28,7 @@ const DefaultRolesToPermissionEdit: FC<EditProps> = (props: EditProps) => {
     >
       <SimpleForm
         defaultValues={{}}
-        validate={validate}
+        resolver={resolver}
       >
         <FormGrid container spacing={2}>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -38,7 +38,7 @@ const DefaultRolesToPermissionEdit: FC<EditProps> = (props: EditProps) => {
               reference='roles'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
           <FormGrid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultRolesToPermissionEdit: FC<EditProps> = (props: EditProps) => {
               reference='permissions'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
           </FormGrid>
         </FormGrid>

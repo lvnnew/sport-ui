@@ -21,7 +21,7 @@ const AggregateTrackingsEntityTypeIdTab: FC<Omit<TabProps, 'children'>> = (props
 
   return (<Tab {...props}>
     <ReferenceManyField
-      addLabel={false}
+      label={false}
       reference='aggregateTrackings'
       target='entityTypeId'
       pagination={<Pagination />}

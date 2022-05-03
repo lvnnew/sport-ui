@@ -13,10 +13,10 @@ import {additionalRoutes} from './additionalRoutes';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export const routes = [
-  <Route component={Dashboard} exact key='dashboard' path='/dashboard' />,
-  <Route component={Functions} exact key='functions' path='/functions' />,
-  <Route component={ResourcesPage} exact key='resources' path='/resources' />,
-  <Route component={MetaPage} exact key='meta' path='/meta' />,
+  <Route element={Dashboard} key='dashboard' path='/dashboard' />,
+  <Route element={Functions} key='functions' path='/functions' />,
+  <Route element={ResourcesPage} key='resources' path='/resources' />,
+  <Route element={MetaPage} key='meta' path='/meta' />,
   ...additionalRoutes,
 ];
 

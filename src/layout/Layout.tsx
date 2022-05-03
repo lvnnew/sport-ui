@@ -1,42 +1,8 @@
 import * as React from 'react';
-import {
-  useSelector,
-} from 'react-redux';
-import {
-  Layout, Sidebar,
-} from 'react-admin';
+import {Layout as RaLayout, LayoutProps} from 'react-admin';
 import AppBar from './AppBar';
 import Menu from './Menu';
-import {
-  darkThemeOptions,
-  lightThemeOptions,
-  darkTheme,
-  lightTheme,
-} from './themes';
-import {
-  AppState,
-} from '../types';
-import {ThemeProvider} from '@material-ui/core';
 
-const CustomSidebar = (props: any) => <Sidebar {...props} size={200} />;
+const Layout = (props: LayoutProps) => (<RaLayout {...props} appBar={AppBar} menu={Menu} />);
 
-export default (props: any) => {
-  const themeOptions = useSelector((state: AppState) =>
-    (state.theme === 'dark' ? darkThemeOptions : lightThemeOptions),
-  );
-  const theme = useSelector((state: AppState) =>
-    (state.theme === 'dark' ? darkTheme : lightTheme),
-  );
-
-  return (
-    <ThemeProvider theme={theme}>
-      <Layout
-        {...props}
-        appBar={AppBar}
-        menu={Menu}
-        sidebar={CustomSidebar}
-        theme={themeOptions}
-      />
-    </ThemeProvider>
-  );
-};
+export default Layout;

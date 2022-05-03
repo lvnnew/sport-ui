@@ -1,11 +1,6 @@
 import * as React from 'react';
-import {
-  FC, useEffect,
-} from 'react';
-import {
-  useVersion,
-} from 'react-admin';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import {FC} from 'react';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CardWithIcon, {
   CardWithIconProps,
 } from './CardWithIcon/CardWithIcon';
@@ -31,12 +26,7 @@ const NumberWiget: FC<NumberWigetProps> = (
     icon,
     ...rest},
 ) => {
-  const {data: result, refetch} = useQuery(request, options);
-  const version = useVersion();
-
-  useEffect(() => {
-    refetch();
-  }, [refetch, version]);
+  const {data: result} = useQuery(request, options);
 
   return (
     <CardWithIcon

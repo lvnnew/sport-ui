@@ -10,10 +10,8 @@ import {
 } from '@apollo/client';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import './App.css';
-import themeReducer from './themeReducer';
 import Layout from './layout/Layout';
 import Login from './layout/Login';
-import customRoutes from './routes';
 import defaultMessages from './i18n/ru';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
@@ -31,6 +29,8 @@ import getAuthProvider from './authProvider/getAuthProvider';
 import {onStart} from './systemHooks';
 import getApollo from './apollo/getApollo';
 import Loader from './shared/Loader';
+import CustomRoutes from './CustomRoutes';
+import {lightTheme} from './layout/themes';
 import log from './utils/log';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -82,8 +82,6 @@ const App = () => {
     <ApolloProvider client={client}>
       <DebugProvider>
         <Admin
-          customReducers={{theme: themeReducer}}
-          customRoutes={customRoutes}
           dashboard={Dashboard}
           dataProvider={dataProvider}
           history={history}
@@ -93,7 +91,9 @@ const App = () => {
           loginPage={Login}
           authProvider={authProvider}
           title=''
+          theme={lightTheme}
         >
+          <CustomRoutes />
           {permissions => getResources(translate, permissions)}
         </Admin>
       </DebugProvider>

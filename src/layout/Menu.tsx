@@ -1,83 +1,44 @@
 import * as React from 'react';
+import Box from '@mui/material/Box';
+import {hasPermission} from '../utils/permissions';
 import {
-  FC,
-} from 'react';
-import {
-  useSelector,
-} from 'react-redux';
-import SettingsIcon from '@material-ui/icons/Settings';
-import {
-  // eslint-disable-next-line import/no-deprecated
-  useMediaQuery, Box, useTheme,
-} from '@material-ui/core';
-import {
-  useTranslate,
   DashboardMenuItem,
-  MenuItemLink,
+  useSidebarState,
   usePermissions,
 } from 'react-admin';
-import {
-  AppState,
-} from '../types';
-import {
-  ProjectMenu,
-} from '../adm/ProjectMenu';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
-import classnames from 'classnames';
-import {hasPermission} from '../utils/permissions';
+import getAdditionalMenu from '../adm/getAdditionalMenu';
+import defaultMenu from '../adm/getDefaultMenu';
+import MenuItem from '../uiLib/menu/MenuItem';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const useStyles = makeStyles(() => createStyles({
-  root: {
-    transition: 'width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;',
-  },
-  open: {
-    width: 240,
-  },
-  closed: {
-    width: 55,
-  },
-}));
-
-interface Props {
-    dense: boolean;
-    logout: () => void;
-    onClick: () => void;
-}
-
-const Menu: FC<Props> = ({onClick, dense, logout}) => {
-  const translate = useTranslate();
-  const classes = useStyles();
-  const theme = useTheme();
-  // eslint-disable-next-line import/no-deprecated
-  const isXSmall = useMediaQuery(theme.breakpoints.down('xs'));
-  const open = useSelector((state: AppState) => state.admin.ui.sidebarOpen);
-  useSelector((state: AppState) => state.theme); // force rerender on theme change
+const Menu = () => {
+  const [open] = useSidebarState();
   const {permissions} = usePermissions<string[]>();
+
+  const menuData = [
+    ...getAdditionalMenu(),
+    ...defaultMenu(),
+  ];
 
   return (
     <Box
-      className={classnames(classes.root, {
-        [classes.open]: open,
-        [classes.closed]: !open,
-      })}
-      // sx={{marginTop: 1, marginBottom: 1}}
-      style={{marginTop: 8, marginBottom: 8}}
+      sx={{
+        width: open ? undefined : 50,
+        marginTop: 1,
+        marginBottom: 1,
+        transition: theme =>
+          theme.transitions.create('width', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+          }),
+      }}
     >
-      {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem onClick={onClick} sidebarIsOpen={open} />}
-      <ProjectMenu dense={dense} onClick={onClick} open={open} />
-      {isXSmall && (
-        <MenuItemLink
-          dense={dense}
-          leftIcon={<SettingsIcon />}
-          onClick={onClick}
-          primaryText={translate('app.configuration')}
-          sidebarIsOpen={open}
-          to='/configuration'
-        />
-      )}
-      {isXSmall && logout}
+      {hasPermission(permissions, 'dashboards.main') && <DashboardMenuItem />}
+      {menuData.map((d, i) => (<MenuItem
+        key={i}
+        {...d}
+      />))}
     </Box>
   );
 };

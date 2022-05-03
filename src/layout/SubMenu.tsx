@@ -1,86 +1,68 @@
 import * as React from 'react';
+import {FC, ReactElement, ReactNode, useCallback, useState} from 'react';
 import {
-  FC, ReactElement,
-} from 'react';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import {List, MenuItem, ListItemIcon, Typography, Collapse, Tooltip} from '@material-ui/core';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
-import {
-  useTranslate,
-} from 'react-admin';
+  List,
+  MenuItem,
+  ListItemIcon,
+  Typography,
+  Collapse,
+  Tooltip,
+} from '@mui/material';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import {useTranslate, useSidebarState} from 'react-admin';
 
-const useStyles = makeStyles(() => createStyles({
-  sidebarIsClosed: {
-    '& a': {
-      paddingLeft: 16,
-      transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
-    },
-  },
-  sidebarIsOpen: {
-    '& a': {
-      paddingLeft: 32,
-      transition: 'padding-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
-    },
-  },
-}));
-
-interface Props {
-    dense: boolean;
-    handleToggle: () => void;
-    icon: ReactElement;
-    isOpen: boolean;
-    name: string;
-    sidebarIsOpen: boolean;
+interface SubMenuProps {
+  dense?: boolean;
+  icon: ReactElement;
+  name: string;
+  children: ReactNode;
 }
 
-const SubMenu: FC<Props> = ({
-  handleToggle,
-  sidebarIsOpen,
-  isOpen,
-  name,
-  icon,
-  children,
-  dense,
-}) => {
+const SubMenu: FC<SubMenuProps> = (props) => {
+  const {name, icon, children, dense} = props;
   const translate = useTranslate();
-  const classes = useStyles();
+
+  const [sidebarIsOpen] = useSidebarState();
+  const [open, setOpen] = useState(false);
+  const handleToggle = useCallback(() => setOpen(open => !open), [setOpen]);
 
   const header = (
     <MenuItem dense={dense} onClick={handleToggle}>
-      <ListItemIcon>
-        {/* sx={{pr: 1}} */}
-        {isOpen ? <ExpandMore /> : icon}
+      <ListItemIcon sx={{minWidth: 5}}>
+        {open ? <ExpandMore /> : icon}
       </ListItemIcon>
-      <Typography color='textSecondary' variant='inherit'>
+      <Typography variant='inherit' color='textSecondary'>
         {translate(name)}
       </Typography>
     </MenuItem>
   );
 
   return (
-    <>
-      {sidebarIsOpen || isOpen ? (
+    <div>
+      {sidebarIsOpen || open ? (
         header
       ) : (
-        <Tooltip placement='right' title={translate(name)}>
+        <Tooltip title={translate(name)} placement='right'>
           {header}
         </Tooltip>
       )}
-      <Collapse in={isOpen} timeout='auto' unmountOnExit>
+      <Collapse in={open} timeout='auto' unmountOnExit>
         <List
-          className={
-            sidebarIsOpen ?
-              classes.sidebarIsOpen :
-              classes.sidebarIsClosed
-          }
-          component='div'
           dense={dense}
+          component='div'
           disablePadding
+          sx={{
+            '& > *': {
+              transition:
+                  'margin-left 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+              marginLeft: sidebarIsOpen ? 4 : 0,
+            },
+          }}
         >
           {children}
         </List>
       </Collapse>
-    </>
+    </div>
   );
 };
 

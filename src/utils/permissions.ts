@@ -19,7 +19,7 @@ export const hasAnyPermission = (currentPermissions: string[] | undefined, requi
 };
 
 export const hasAllPermissions = (currentPermissions: string[] | undefined, requiredPermissions: string[]) => {
-  if (requiredPermissions.length === 0) {
+  if (!requiredPermissions || requiredPermissions.length === 0) {
     return true;
   }
 
