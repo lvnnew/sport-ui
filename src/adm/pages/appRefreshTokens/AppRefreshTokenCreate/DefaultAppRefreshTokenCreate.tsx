@@ -10,7 +10,7 @@ import {
   TextInput,
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAppRefreshTokenValidation from '../getAppRefreshTokenValidation';
 
@@ -33,15 +33,15 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
               source='create'
               label={translate('catalogs.appRefreshTokens.fields.create')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='userId'
               label={translate('catalogs.appRefreshTokens.fields.userId')}
@@ -50,15 +50,15 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='token'
               label={translate('catalogs.appRefreshTokens.fields.token')}
             />
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );

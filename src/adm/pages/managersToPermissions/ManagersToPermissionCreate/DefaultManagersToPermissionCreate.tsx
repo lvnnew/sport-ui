@@ -8,7 +8,7 @@ import {
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToPermissionValidation from '../getManagersToPermissionValidation';
 
@@ -30,8 +30,8 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='managerId'
               label={translate('catalogs.managersToPermissions.fields.managerId')}
@@ -40,8 +40,8 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='permissionId'
               label={translate('catalogs.managersToPermissions.fields.permissionId')}
@@ -50,8 +50,8 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );

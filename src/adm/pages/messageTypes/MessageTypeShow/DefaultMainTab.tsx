@@ -6,7 +6,7 @@ import {
   TextField,
   useTranslate,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -14,11 +14,11 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
   const translate = useTranslate();
 
   return (<Tab {...props}>
-    <FormGrid container spacing={2}>
-      <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='id' label={translate('catalogs.messageTypes.fields.id')} /></FormGrid>
-      <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='title' label={translate('catalogs.messageTypes.fields.title')} /></FormGrid>
-      <FormGrid item xs={12} sm={6} md={3} lg={2}><TextField source='description' label={translate('catalogs.messageTypes.fields.description')} /></FormGrid>
-    </FormGrid>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='id' label={translate('catalogs.messageTypes.fields.id')} /></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='title' label={translate('catalogs.messageTypes.fields.title')} /></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='description' label={translate('catalogs.messageTypes.fields.description')} /></Grid>
+    </Grid>
   </Tab>);
 };
 

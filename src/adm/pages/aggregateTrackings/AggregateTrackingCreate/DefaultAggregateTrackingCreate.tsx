@@ -11,7 +11,7 @@ import {
   NumberInput,
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAggregateTrackingValidation from '../getAggregateTrackingValidation';
 
@@ -35,8 +35,8 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='entityTypeId'
               label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
@@ -45,36 +45,36 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='entityId'
               label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
               source='lastAggregatesComputed'
               label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
               source='lastEntityUpdate'
               label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <NumberInput
               fullWidth
               source='aggregateVersion'
               label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
             />
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );

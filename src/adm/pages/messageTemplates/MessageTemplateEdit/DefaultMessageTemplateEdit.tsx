@@ -10,7 +10,7 @@ import {
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getMessageTemplateValidation from '../getMessageTemplateValidation';
 
@@ -34,22 +34,22 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
         }}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='title'
               label={translate('catalogs.messageTemplates.fields.title')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
               source='secretData'
               label={translate('catalogs.messageTemplates.fields.secretData')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='messageTypeId'
               label={translate('catalogs.messageTemplates.fields.messageTypeId')}
@@ -58,8 +58,8 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Edit>
   );

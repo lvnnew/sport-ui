@@ -12,7 +12,7 @@ import {
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import DateInput from '../../../../uiLib/DateInput';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationHistoryEntryValidation from '../getAutogenerationHistoryEntryValidation';
 
@@ -38,29 +38,29 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
         }}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
               source='date'
               label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='originalEntityType'
               label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='originalEntityId'
               label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='autogenerationRuleId'
               label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
@@ -69,29 +69,29 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateInput
               fullWidth
               source='version'
               label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
               source='errorOccurred'
               label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='error'
               label={translate('catalogs.autogenerationHistoryEntries.fields.error')}
             />
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Edit>
   );

@@ -9,7 +9,7 @@ import {
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getUnitValidation from '../getUnitValidation';
 
@@ -31,15 +31,15 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='title'
               label={translate('catalogs.units.fields.title')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='parentId'
               label={translate('catalogs.units.fields.parentId')}
@@ -48,8 +48,8 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );

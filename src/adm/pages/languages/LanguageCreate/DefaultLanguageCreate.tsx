@@ -7,7 +7,7 @@ import {
   CreateProps,
   TextInput,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getLanguageValidation from '../getLanguageValidation';
 
@@ -29,22 +29,22 @@ const DefaultLanguageCreate: FC<CreateProps> = (props: CreateProps) => {
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='id'
               label={translate('catalogs.languages.fields.id')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='title'
               label={translate('catalogs.languages.fields.title')}
             />
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );

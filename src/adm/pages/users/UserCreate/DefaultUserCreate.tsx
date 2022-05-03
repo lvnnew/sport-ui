@@ -10,7 +10,7 @@ import {
   AutocompleteInput,
 } from 'react-admin';
 import {useDebug} from '../../../../contexts/DebugContext';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getUserValidation from '../getUserValidation';
 
@@ -33,36 +33,36 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='title'
               label={translate('catalogs.users.fields.title')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='lastname'
               label={translate('catalogs.users.fields.lastname')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='firstname'
               label={translate('catalogs.users.fields.firstname')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='email'
               label={translate('catalogs.users.fields.email')}
             />
-          </FormGrid>
-          {debug && <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          {debug && <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='tenantId'
               label={translate('catalogs.users.fields.tenantId')}
@@ -71,8 +71,8 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' />
             </ReferenceInput>
-          </FormGrid>}
-        </FormGrid>
+          </Grid>}
+        </Grid>
       </SimpleForm>
     </Create>
   );

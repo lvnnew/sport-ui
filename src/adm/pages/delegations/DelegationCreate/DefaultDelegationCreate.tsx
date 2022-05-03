@@ -10,7 +10,7 @@ import {
   BooleanInput,
 } from 'react-admin';
 import DateInput from '../../../../uiLib/DateInput';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getDelegationValidation from '../getDelegationValidation';
 
@@ -35,8 +35,8 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
         }}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='fromId'
               label={translate('catalogs.delegations.fields.fromId')}
@@ -45,8 +45,8 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='toId'
               label={translate('catalogs.delegations.fields.toId')}
@@ -55,22 +55,22 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateInput
               fullWidth
               source='expiresAt'
               label={translate('catalogs.delegations.fields.expiresAt')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
               source='active'
               label={translate('catalogs.delegations.fields.active')}
             />
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );

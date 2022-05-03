@@ -8,7 +8,7 @@ import {
   TextInput,
   NumberInput,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getTenantValidation from '../getTenantValidation';
 
@@ -30,22 +30,22 @@ const DefaultTenantEdit: FC<EditProps> = (props: EditProps) => {
         defaultValues={{}}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='title'
               label={translate('catalogs.tenants.fields.title')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <NumberInput
               fullWidth
               source='utcOffset'
               label={translate('catalogs.tenants.fields.utcOffset')}
             />
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Edit>
   );

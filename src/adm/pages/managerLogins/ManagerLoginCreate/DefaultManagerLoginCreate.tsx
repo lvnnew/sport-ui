@@ -10,7 +10,7 @@ import {
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
-import FormGrid from '../../../../uiLib/FormGrid';
+import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerLoginValidation from '../getManagerLoginValidation';
 
@@ -36,50 +36,50 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
         }}
         resolver={resolver}
       >
-        <FormGrid container spacing={2}>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='login'
               label={translate('catalogs.managerLogins.fields.login')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='passwordHash'
               label={translate('catalogs.managerLogins.fields.passwordHash')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
               source='role'
               label={translate('catalogs.managerLogins.fields.role')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
               source='emailVerified'
               label={translate('catalogs.managerLogins.fields.emailVerified')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
               source='initialPasswordChanged'
               label={translate('catalogs.managerLogins.fields.initialPasswordChanged')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
               source='locked'
               label={translate('catalogs.managerLogins.fields.locked')}
             />
-          </FormGrid>
-          <FormGrid item xs={12} sm={6} md={3} lg={2}>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='managerId'
               label={translate('catalogs.managerLogins.fields.managerId')}
@@ -88,8 +88,8 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
             >
               <AutocompleteInput fullWidth optionText='title' disableClearable />
             </ReferenceInput>
-          </FormGrid>
-        </FormGrid>
+          </Grid>
+        </Grid>
       </SimpleForm>
     </Create>
   );
