@@ -7,6 +7,7 @@ import {
   Card,
   CardActions,
   CircularProgress,
+  Typography,
 } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
 import {
@@ -91,7 +92,7 @@ const Login = () => {
                 <LockIcon />
               </Avatar>
             </Box>
-            <Box
+            <Typography
               sx={{
                 marginTop: '1em',
                 display: 'flex',
@@ -100,8 +101,8 @@ const Login = () => {
               }}
             >
               Login: admin@example.com
-            </Box>
-            <Box
+            </Typography>
+            <Typography
               sx={{
                 marginTop: '1em',
                 display: 'flex',
@@ -110,7 +111,7 @@ const Login = () => {
               }}
             >
               Pass: admin
-            </Box>
+            </Typography>
             <Box sx={{padding: '0 1em 1em 1em'}}>
               <Box sx={{marginTop: '1em'}}>
                 <TextInput

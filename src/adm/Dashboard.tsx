@@ -3,8 +3,10 @@ import React, {
 } from 'react';
 import ResourcesPage from './ResourcesPage';
 
-export const Dashboard: FC = () => {
+const Dashboard: FC = () => {
   return (
     <ResourcesPage />
   );
 };
+
+export default Dashboard;

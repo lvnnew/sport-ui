@@ -11,7 +11,9 @@ const LoadableFilePage = Loadable({
   loader: () => import('./pages/file/FilePage'),
 });
 
-export const additionalRoutes = [
+const additionalRoutes = [
   <Route element={LoadableDashboardStats} key='statsDashboard' path='/statsDashboard' />,
   <Route element={LoadableFilePage} key='files' path='/ref-file-saving' />,
 ];
+
+export default additionalRoutes;

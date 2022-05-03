@@ -29,9 +29,11 @@ export const darkTheme = {
 export const lightTheme = {
   overrides: {
     MuiAppBar: {
-      colorSecondary: {
-        backgroundColor: '#fff',
-        color: '#808080',
+      styleOverrides: {
+        colorSecondary: {
+          backgroundColor: '#fff',
+          color: '#808080',
+        },
       },
     },
     MuiButton: {

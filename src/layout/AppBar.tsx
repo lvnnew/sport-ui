@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar as RaAppBar, ToggleThemeButton} from 'react-admin';
+import {AppBar as RaAppBar, ToggleThemeButton, LocalesMenuButton} from 'react-admin';
 import {Box, Typography} from '@mui/material';
 import {Link} from 'react-router-dom';
 import {darkTheme, lightTheme} from './themes';
@@ -43,6 +43,12 @@ const AppBar = (props: any) => (
     <ToggleThemeButton
       lightTheme={lightTheme}
       darkTheme={darkTheme}
+    />
+    <LocalesMenuButton
+      languages={[
+        {locale: 'ru', name: 'Russian'},
+        {locale: 'en', name: 'English'},
+      ]}
     />
   </RaAppBar>
 );

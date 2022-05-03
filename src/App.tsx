@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useState, useEffect,
 } from 'react';
-import {Admin, AuthProvider, useTranslate} from 'react-admin';
+import {Admin, AuthProvider, useTranslate, CustomRoutes} from 'react-admin';
 import {
   ApolloClient,
   ApolloProvider,
@@ -15,22 +15,16 @@ import Login from './layout/Login';
 import defaultMessages from './i18n/ru';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
-import {
-  createBrowserHistory as createHistory,
-} from 'history';
-import {
-  getResources,
-} from './adm/resources';
-import {
-  Dashboard,
-} from './adm/dashboard';
+import {createBrowserHistory as createHistory} from 'history';
+import {getResources} from './adm/resources';
+import Dashboard from './adm/Dashboard';
 import {DebugProvider} from './contexts/DebugContext';
 import getAuthProvider from './authProvider/getAuthProvider';
 import {onStart} from './systemHooks';
 import getApollo from './apollo/getApollo';
 import Loader from './shared/Loader';
-import CustomRoutes from './CustomRoutes';
 import {lightTheme} from './layout/themes';
+import {routes} from './adm/routes';
 import log from './utils/log';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -93,7 +87,9 @@ const App = () => {
           title=''
           theme={lightTheme}
         >
-          <CustomRoutes />
+          <CustomRoutes>
+            {routes}
+          </CustomRoutes>
           {permissions => getResources(translate, permissions)}
         </Admin>
       </DebugProvider>
