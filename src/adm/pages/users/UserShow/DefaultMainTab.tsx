@@ -7,6 +7,7 @@ import {
   TextField,
   ReferenceField,
   useTranslate,
+  Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 
@@ -17,14 +18,38 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} md={3} lg={2}><NumberField source='id' label={translate('catalogs.users.fields.id')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='title' label={translate('catalogs.users.fields.title')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='lastname' label={translate('catalogs.users.fields.lastname')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='firstname' label={translate('catalogs.users.fields.firstname')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='email' label={translate('catalogs.users.fields.email')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show'>
-        <TextField source='title' />
-      </ReferenceField></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <NumberField source='id' label={translate('catalogs.users.fields.id')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='title' label={translate('catalogs.users.fields.title')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='lastname' label={translate('catalogs.users.fields.lastname')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='firstname' label={translate('catalogs.users.fields.firstname')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='email' label={translate('catalogs.users.fields.email')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show'>
+            <TextField source='title' />
+          </ReferenceField>
+        </Labeled>
+      </Grid>
     </Grid>
   </Tab>);
 };

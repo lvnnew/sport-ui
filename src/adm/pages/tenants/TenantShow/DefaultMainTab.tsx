@@ -6,6 +6,7 @@ import {
   NumberField,
   TextField,
   useTranslate,
+  Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 
@@ -16,9 +17,21 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} md={3} lg={2}><NumberField source='id' label={translate('catalogs.tenants.fields.id')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='title' label={translate('catalogs.tenants.fields.title')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><NumberField source='utcOffset' label={translate('catalogs.tenants.fields.utcOffset')} /></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <NumberField source='id' label={translate('catalogs.tenants.fields.id')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='title' label={translate('catalogs.tenants.fields.title')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <NumberField source='utcOffset' label={translate('catalogs.tenants.fields.utcOffset')} />
+        </Labeled>
+      </Grid>
     </Grid>
   </Tab>);
 };

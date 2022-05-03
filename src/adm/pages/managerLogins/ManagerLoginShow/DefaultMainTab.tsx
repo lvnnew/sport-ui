@@ -8,6 +8,7 @@ import {
   BooleanField,
   ReferenceField,
   useTranslate,
+  Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 
@@ -18,16 +19,48 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} md={3} lg={2}><NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='login' label={translate('catalogs.managerLogins.fields.login')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='role' label={translate('catalogs.managerLogins.fields.role')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show'>
-        <TextField source='title' />
-      </ReferenceField></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='role' label={translate('catalogs.managerLogins.fields.role')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show'>
+            <TextField source='title' />
+          </ReferenceField>
+        </Labeled>
+      </Grid>
     </Grid>
   </Tab>);
 };

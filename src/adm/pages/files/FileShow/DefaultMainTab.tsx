@@ -6,6 +6,7 @@ import {
   NumberField,
   TextField,
   useTranslate,
+  Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 
@@ -16,12 +17,36 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} md={3} lg={2}><NumberField source='id' label={translate('catalogs.files.fields.id')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='originalName' label={translate('catalogs.files.fields.originalName')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='url' label={translate('catalogs.files.fields.url')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='mimetype' label={translate('catalogs.files.fields.mimetype')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='s3Key' label={translate('catalogs.files.fields.s3Key')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='eTag' label={translate('catalogs.files.fields.eTag')} /></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <NumberField source='id' label={translate('catalogs.files.fields.id')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='originalName' label={translate('catalogs.files.fields.originalName')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='url' label={translate('catalogs.files.fields.url')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='mimetype' label={translate('catalogs.files.fields.mimetype')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='s3Key' label={translate('catalogs.files.fields.s3Key')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='eTag' label={translate('catalogs.files.fields.eTag')} />
+        </Labeled>
+      </Grid>
     </Grid>
   </Tab>);
 };

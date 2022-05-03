@@ -5,6 +5,7 @@ import {
   TabProps,
   TextField,
   useTranslate,
+  Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 
@@ -15,9 +16,21 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
 
   return (<Tab {...props}>
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='id' label={translate('catalogs.messageTypes.fields.id')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='title' label={translate('catalogs.messageTypes.fields.title')} /></Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}><TextField source='description' label={translate('catalogs.messageTypes.fields.description')} /></Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='id' label={translate('catalogs.messageTypes.fields.id')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='title' label={translate('catalogs.messageTypes.fields.title')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='description' label={translate('catalogs.messageTypes.fields.description')} />
+        </Labeled>
+      </Grid>
     </Grid>
   </Tab>);
 };
