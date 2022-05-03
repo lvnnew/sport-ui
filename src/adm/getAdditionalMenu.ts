@@ -9,7 +9,7 @@ const getAdditionalMenu = () => {
       debugOnly: true,
     },
     {
-      label: 'Functions',
+      label: 'app.menu.functions',
       icon: 'DetailsOutlined',
       debugOnly: true,
       children: [

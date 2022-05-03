@@ -1,5 +1,5 @@
 import React, {useMemo, FC} from 'react';
-import {usePermissions, useTranslate} from 'react-admin';
+import {usePermissions} from 'react-admin';
 import {useDebug} from '../../contexts/DebugContext';
 import * as Icons from '@mui/icons-material';
 import SubMenu from '../../layout/SubMenu';
@@ -26,7 +26,6 @@ const ParentMenuItem: FC<ParentMenuItemProps> = ({
   children,
   dense,
 }) => {
-  const translate = useTranslate();
   const {debug} = useDebug();
   const {permissions: currentPermissions} = usePermissions<string[]>();
 
@@ -40,7 +39,7 @@ const ParentMenuItem: FC<ParentMenuItemProps> = ({
     <SubMenu
       dense={dense}
       icon={<IconByName name={icon} />}
-      name={translate(label)}
+      name={label}
     >
       {children.map((d, i) => (<MenuItem
         key={i}

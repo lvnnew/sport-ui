@@ -5,18 +5,22 @@ import {MenuElement} from '../uiLib/menu/MenuItem';
 const getDefaultMenu = () => {
   const menuData: MenuElement[] = [
     {
-      label: 'menu.members',
-      link: '/members',
-      icon: 'AccountCircleOutlined',
-      debugOnly: false,
-      permissions: ['members.all'],
+      label: 'app.menu.functions',
+      link: '/functions',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
     },
     {
-      label: 'menu.newMember',
-      link: '/memberByManager',
-      icon: 'PersonAddOutlined',
-      debugOnly: false,
-      permissions: ['members.newMemberByManager'],
+      label: 'app.menu.resources',
+      link: '/resources',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'app.menu.meta',
+      link: '/meta',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
     },
   ];
 

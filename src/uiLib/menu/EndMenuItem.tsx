@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {MenuItemLink, usePermissions, useTranslate} from 'react-admin';
+import {MenuItemLink, usePermissions} from 'react-admin';
 import {useDebug} from '../../contexts/DebugContext';
 import * as Icons from '@mui/icons-material';
 import {IconByName} from '../IconByName';
@@ -29,7 +29,6 @@ const EndMenuItem: FC<EndMenuItemProps> = ({
   onClick,
   permissions,
 }) => {
-  const translate = useTranslate();
   const {debug} = useDebug();
   const {permissions: currentPermissions} = usePermissions<string[]>();
 
@@ -37,7 +36,7 @@ const EndMenuItem: FC<EndMenuItemProps> = ({
     dense={dense}
     leftIcon={<IconByName name={icon} />}
     onClick={onClick}
-    primaryText={translate(label)}
+    primaryText={label}
     sidebarIsOpen={open}
     to={link}
   /> : null;
