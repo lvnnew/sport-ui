@@ -51,6 +51,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
             <NumberInput
               fullWidth
               source='helloCount'
+              defaultValue={null}
               label={translate('catalogs.stats.fields.helloCount')}
             />
           </Grid>

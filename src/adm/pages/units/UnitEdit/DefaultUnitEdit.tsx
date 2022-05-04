@@ -46,7 +46,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>
         </Grid>

@@ -41,7 +41,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         reference='languages'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
       </ReferenceInput>
       <TextInput
         fullWidth
@@ -69,7 +69,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         reference='units'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
       </ReferenceInput>
       <BooleanInput
         fullWidth
@@ -87,7 +87,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         reference='tenants'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
       </ReferenceInput>
     </Filter>
   );

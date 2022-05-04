@@ -69,7 +69,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>}
         </Grid>

@@ -69,7 +69,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>}
         </Grid>

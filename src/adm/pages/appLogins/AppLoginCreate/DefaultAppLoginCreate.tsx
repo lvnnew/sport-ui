@@ -53,7 +53,7 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' disableClearable />
+              <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
             </ReferenceInput>
           </Grid>
         </Grid>

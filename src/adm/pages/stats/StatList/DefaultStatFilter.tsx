@@ -27,6 +27,7 @@ const DefaultStatFilter: FC<any> = (props) => {
       <NumberInput
         fullWidth
         source='helloCount'
+        defaultValue={null}
         label={translate('catalogs.stats.fields.helloCount')}
       />
     </Filter>

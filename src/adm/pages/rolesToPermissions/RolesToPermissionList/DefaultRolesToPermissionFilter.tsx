@@ -25,7 +25,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
         reference='roles'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' disableClearable />
+        <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
       </ReferenceInput>
       <ReferenceInput
         source='permissionId'
@@ -33,7 +33,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
         reference='permissions'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' disableClearable />
+        <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
       </ReferenceInput>
     </Filter>
   );

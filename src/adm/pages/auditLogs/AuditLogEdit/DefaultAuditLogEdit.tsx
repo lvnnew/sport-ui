@@ -58,7 +58,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' disableClearable />
+              <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -75,7 +75,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
               reference='auditLogActionTypes'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' disableClearable />
+              <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -85,7 +85,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -95,7 +95,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>

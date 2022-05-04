@@ -15,7 +15,7 @@ import Login from './layout/Login';
 import defaultMessages from './i18n/ru';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
-import {createBrowserHistory as createHistory} from 'history';
+import {createBrowserHistory} from 'history';
 import {getResources} from './adm/resources';
 import Dashboard from './adm/Dashboard';
 import {DebugProvider} from './contexts/DebugContext';
@@ -31,7 +31,7 @@ import log from './utils/log';
 
 onStart();
 
-const history = createHistory();
+const history = createBrowserHistory();
 
 const i18nProvider = polyglotI18nProvider(locale => {
   switch (locale) {

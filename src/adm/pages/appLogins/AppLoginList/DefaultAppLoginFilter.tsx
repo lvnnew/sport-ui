@@ -35,7 +35,7 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' disableClearable />
+        <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
       </ReferenceInput>
     </Filter>
   );

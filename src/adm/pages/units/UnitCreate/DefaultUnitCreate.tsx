@@ -46,7 +46,7 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>
         </Grid>

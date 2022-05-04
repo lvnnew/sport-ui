@@ -53,7 +53,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' disableClearable />
+              <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
             </ReferenceInput>
           </Grid>
         </Grid>

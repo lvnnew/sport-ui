@@ -43,6 +43,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
             <NumberInput
               fullWidth
               source='helloCount'
+              defaultValue={null}
               label={translate('catalogs.stats.fields.helloCount')}
             />
           </Grid>
