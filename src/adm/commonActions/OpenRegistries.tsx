@@ -9,10 +9,11 @@ import {hasPermission, hasAnyPermission} from '../../utils/permissions';
 import PopupState, {bindTrigger, bindMenu} from 'material-ui-popup-state';
 
 interface OpenRegistriesProps {
+  document: string;
   registries: string[];
 }
 
-const OpenRegistries: FC<OpenRegistriesProps> = ({registries}) => {
+const OpenRegistries: FC<OpenRegistriesProps> = ({document, registries}) => {
   const record = useRecordContext();
   const {permissions} = usePermissions<string[]>();
 
@@ -36,9 +37,7 @@ const OpenRegistries: FC<OpenRegistriesProps> = ({registries}) => {
               <Link
                 key={r}
                 to={
-                  '/milesRegistryEntries?filter=%7B"registrarId"%3A' +
-                      record.id +
-                      '%2C"registrarTypeId"%3A%22autoMilesForCashierDocument%22%7D&'
+                  `/${r}?filter=%7B"registrarId"%3A${record.id}%2C"registrarTypeId"%3A%22${document}%22%7D&`
                 }
               >
                 <MenuItem>{r}</MenuItem>
