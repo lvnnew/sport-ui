@@ -2,33 +2,18 @@ import React from 'react';
 import {
   EditButton,
   TopToolbar,
-  usePermissions,
 } from 'react-admin';
-import {hasPermission} from '../../../../utils/permissions';
 import OpenAudit from '../../../commonActions/OpenAudit';
 import OpenHelp from '../../../commonActions/OpenHelp';
-import {makeStyles, createStyles} from '@mui/styles';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const useStyles = makeStyles(() => createStyles({
-  toolbar: {alignItems: 'center'},
-}));
-
-const DefaultRoleActions = ({data}: any) => {
-  const {permissions} = usePermissions<string[]>();
-  const classes = useStyles();
-
-  return data ? (
-    <TopToolbar className={classes.toolbar}>
-      {hasPermission(permissions, 'auditLogs.all') && (
-        <OpenAudit entityTypeId='role' />
-      )}
-      {hasPermission(permissions, 'help.getHelp') && (
-        <OpenHelp entityType='roles' />)}
-      <EditButton record={data} />
-    </TopToolbar>
-  ) : null;
-};
+const DefaultRoleActions = () => (
+  <TopToolbar sx={{alignItems: 'center'}}>
+    <OpenAudit entityTypeId='role' />
+    <OpenHelp entityType='roles' />
+    <EditButton />
+  </TopToolbar>
+);
 
 export default DefaultRoleActions;

@@ -9,7 +9,9 @@ import {
   SimpleShowLayout,
   useRecordContext,
   Pagination,
+  usePermissions,
 } from 'react-admin';
+import {hasPermission} from '../../utils/permissions';
 
 const useStyles = makeStyles(() => createStyles({
   drawerPaper: {
@@ -21,11 +23,16 @@ const OpenAudit: FC<{entityTypeId: string}> = ({entityTypeId}) => {
   const classes = useStyles();
   const [drawer, setOpenDrawer] = useState(false);
   const record = useRecordContext();
+  const {permissions} = usePermissions<string[]>();
 
   const openDrawer = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     setOpenDrawer(true);
   }, [setOpenDrawer]);
+
+  if (!record || !hasPermission(permissions, 'auditLogs.all')) {
+    return null;
+  }
 
   return (
     <>

@@ -5,6 +5,8 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import {gql, useLazyQuery} from '@apollo/client';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import {hasPermission} from '../../utils/permissions';
+import {usePermissions} from 'react-admin';
 
 const useStyles = makeStyles(() => createStyles({
   drawerPaper: {
@@ -25,8 +27,8 @@ export const GET_ENTITY_HELP = gql`
 
 const OpenHelp: FC<{entityType: string}> = ({entityType}) => {
   const classes = useStyles();
-
   const [drawer, setOpenDrawer] = useState(false);
+  const {permissions} = usePermissions<string[]>();
 
   const [getHelp, {loading, data}] = useLazyQuery(
     GET_ENTITY_HELP,
@@ -44,6 +46,10 @@ const OpenHelp: FC<{entityType: string}> = ({entityType}) => {
       },
     });
   }, [setOpenDrawer, getHelp, entityType]);
+
+  if (!hasPermission(permissions, 'help.getHelp')) {
+    return null;
+  }
 
   return (
     <>
