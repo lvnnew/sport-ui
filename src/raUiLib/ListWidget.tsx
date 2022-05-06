@@ -5,8 +5,10 @@ import {
   List,
   ListProps,
   useRecordContext,
+  usePermissions,
 } from 'react-admin';
 import {Card, CardContent, CardHeader} from '@mui/material';
+import {hasPermission} from '../utils/permissions';
 
 export interface ListWidgetProps extends Omit<ListProps, 'children'> {
   title: string;
@@ -27,6 +29,11 @@ const ListWidget: FC<ListWidgetProps> = ({
   ...rest
 }) => {
   const record = useRecordContext();
+  const {permissions} = usePermissions<string[]>();
+
+  if (!hasPermission(permissions, `${reference}.all`)) {
+    return null;
+  }
 
   if (!record) {
     return null;
