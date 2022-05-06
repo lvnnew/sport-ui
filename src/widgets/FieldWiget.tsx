@@ -34,9 +34,13 @@ const FieldWiget: FC<FieldWigetProps> = (
   },
 ) => {
   const record = useRecordContext();
-  const val = record[source] || defaultValue;
+  const val = useMemo(() => (record && record[source] ? record[source] : defaultValue), [record, source, defaultValue]);
   const prepared = useMemo(() => (prepare ? prepare(val) : val), [prepare, val]);
   const toValue = useMemo(() => (typeof to === 'function' ? to(prepared) : to), [to, prepared]);
+
+  if (!record) {
+    return null;
+  }
 
   return val || !hideIfNoValue ? (
     <CardWithIcon

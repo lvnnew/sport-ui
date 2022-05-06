@@ -28,6 +28,10 @@ const ListWidget: FC<ListWidgetProps> = ({
 }) => {
   const record = useRecordContext();
 
+  if (!record) {
+    return null;
+  }
+
   return (
     <Card sx={{m: 1}} >
       <CardHeader title={title} sx={{pb: 0.5}} />
