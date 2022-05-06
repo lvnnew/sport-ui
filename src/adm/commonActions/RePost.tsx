@@ -13,17 +13,21 @@ const getRepostQuery = (serviceName: string) => gql`
 `;
 
 const RePost: FC<{serviceName: string}> = ({serviceName}) => {
-  const {id} = useRecordContext();
+  const record = useRecordContext();
 
   const [rePost, {loading}] = useMutation(getRepostQuery(serviceName), {
     variables: {
-      id,
+      id: record?.id,
     },
   });
 
   const onClick = useCallback(async () => {
     await rePost();
   }, [rePost]);
+
+  if (!record) {
+    return null;
+  }
 
   return (
     <Tooltip title='Repost document'>
