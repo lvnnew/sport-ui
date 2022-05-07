@@ -37,7 +37,7 @@ const CountAuditLogActionTypesWidget: FC<CountAuditLogActionTypesWidgetProps> = 
           }
         }
       `}
-      resultToValue={result => result?._allAuditLogActionTypesMeta?.count}
+      resultToValue={result => result?._allAuditLogActionTypesMeta?.count?.toLocaleString()}
     />
   );
 };

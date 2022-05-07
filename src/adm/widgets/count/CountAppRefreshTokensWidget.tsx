@@ -37,7 +37,7 @@ const CountAppRefreshTokensWidget: FC<CountAppRefreshTokensWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allAppRefreshTokensMeta?.count}
+      resultToValue={result => result?._allAppRefreshTokensMeta?.count?.toLocaleString()}
     />
   );
 };

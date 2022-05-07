@@ -37,7 +37,7 @@ const CountDelegationsWidget: FC<CountDelegationsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allDelegationsMeta?.count}
+      resultToValue={result => result?._allDelegationsMeta?.count?.toLocaleString()}
     />
   );
 };

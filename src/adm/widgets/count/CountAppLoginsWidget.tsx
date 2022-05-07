@@ -37,7 +37,7 @@ const CountAppLoginsWidget: FC<CountAppLoginsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allAppLoginsMeta?.count}
+      resultToValue={result => result?._allAppLoginsMeta?.count?.toLocaleString()}
     />
   );
 };

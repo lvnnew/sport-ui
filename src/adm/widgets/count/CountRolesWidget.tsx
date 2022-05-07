@@ -37,7 +37,7 @@ const CountRolesWidget: FC<CountRolesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allRolesMeta?.count}
+      resultToValue={result => result?._allRolesMeta?.count?.toLocaleString()}
     />
   );
 };

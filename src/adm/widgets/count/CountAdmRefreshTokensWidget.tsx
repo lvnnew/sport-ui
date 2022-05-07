@@ -37,7 +37,7 @@ const CountAdmRefreshTokensWidget: FC<CountAdmRefreshTokensWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allAdmRefreshTokensMeta?.count}
+      resultToValue={result => result?._allAdmRefreshTokensMeta?.count?.toLocaleString()}
     />
   );
 };

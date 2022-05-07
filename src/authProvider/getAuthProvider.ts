@@ -1,7 +1,7 @@
-import {gql} from '@apollo/client/core';
 import {AuthProvider} from 'react-admin';
 import getApollo from '../apollo/getApollo';
 import LRUCache from 'lru-cache';
+import {ApolloClient, NormalizedCacheObject, gql, ApolloQueryResult} from '@apollo/client';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
@@ -21,12 +21,28 @@ export const PERMISSIONS_QUERY = gql`
   }
 `;
 
+let permissionsCall: Promise<ApolloQueryResult<any>> | null = null;
+const getPermissionsCall = (client: ApolloClient<NormalizedCacheObject>) => {
+  if (!permissionsCall) {
+    permissionsCall = client.query({
+      query: PERMISSIONS_QUERY,
+      fetchPolicy: 'cache-first',
+    }).then(data => {
+      permissionsCall = null;
+
+      return data;
+    });
+  }
+
+  return permissionsCall;
+};
+
 const getAuthProvider: (
   endpoint: string,
   onLogin: () => void,
 ) => AuthProvider = (endpoint, onLogin) => ({
   login: async ({email, password}) => {
-    permissionsCache.reset();
+    permissionsCache.clear();
     const request = new Request(`${endpoint}/rest/login`, {
       method: 'POST',
       body: JSON.stringify({email, password}),
@@ -68,7 +84,7 @@ const getAuthProvider: (
   },
   logout: async () => {
     localStorage.removeItem(JWT_STORAGE_KEY);
-    permissionsCache.reset();
+    permissionsCache.clear();
 
     return Promise.resolve();
   },
@@ -89,10 +105,8 @@ const getAuthProvider: (
   getPermissions: async () => {
     if (!permissionsCache.has(cacheKey)) {
       const client = getApollo(endpoint);
-      const {data} = await client.query({
-        query: PERMISSIONS_QUERY,
-        fetchPolicy: 'cache-first',
-      });
+
+      const {data} = await getPermissionsCall(client);
 
       if (data.getManagerPermissions) {
         permissionsCache.set(cacheKey, data.getManagerPermissions);

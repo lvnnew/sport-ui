@@ -37,7 +37,7 @@ const CountAutogenerationHistoryEntriesWidget: FC<CountAutogenerationHistoryEntr
           }
         }
       `}
-      resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count}
+      resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count?.toLocaleString()}
     />
   );
 };

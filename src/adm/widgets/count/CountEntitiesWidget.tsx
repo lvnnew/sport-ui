@@ -37,7 +37,7 @@ const CountEntitiesWidget: FC<CountEntitiesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allEntitiesMeta?.count}
+      resultToValue={result => result?._allEntitiesMeta?.count?.toLocaleString()}
     />
   );
 };

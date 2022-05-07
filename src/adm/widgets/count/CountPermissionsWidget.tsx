@@ -37,7 +37,7 @@ const CountPermissionsWidget: FC<CountPermissionsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allPermissionsMeta?.count}
+      resultToValue={result => result?._allPermissionsMeta?.count?.toLocaleString()}
     />
   );
 };

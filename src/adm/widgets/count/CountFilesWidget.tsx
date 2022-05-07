@@ -37,7 +37,7 @@ const CountFilesWidget: FC<CountFilesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allFilesMeta?.count}
+      resultToValue={result => result?._allFilesMeta?.count?.toLocaleString()}
     />
   );
 };

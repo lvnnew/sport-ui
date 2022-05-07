@@ -37,7 +37,7 @@ const CountManagerLoginsWidget: FC<CountManagerLoginsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allManagerLoginsMeta?.count}
+      resultToValue={result => result?._allManagerLoginsMeta?.count?.toLocaleString()}
     />
   );
 };

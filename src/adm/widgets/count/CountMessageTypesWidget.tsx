@@ -37,7 +37,7 @@ const CountMessageTypesWidget: FC<CountMessageTypesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allMessageTypesMeta?.count}
+      resultToValue={result => result?._allMessageTypesMeta?.count?.toLocaleString()}
     />
   );
 };

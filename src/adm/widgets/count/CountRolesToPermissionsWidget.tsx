@@ -37,7 +37,7 @@ const CountRolesToPermissionsWidget: FC<CountRolesToPermissionsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allRolesToPermissionsMeta?.count}
+      resultToValue={result => result?._allRolesToPermissionsMeta?.count?.toLocaleString()}
     />
   );
 };

@@ -37,7 +37,7 @@ const CountMessageTemplatesWidget: FC<CountMessageTemplatesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allMessageTemplatesMeta?.count}
+      resultToValue={result => result?._allMessageTemplatesMeta?.count?.toLocaleString()}
     />
   );
 };

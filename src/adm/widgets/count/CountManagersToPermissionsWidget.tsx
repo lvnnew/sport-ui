@@ -37,7 +37,7 @@ const CountManagersToPermissionsWidget: FC<CountManagersToPermissionsWidgetProps
           }
         }
       `}
-      resultToValue={result => result?._allManagersToPermissionsMeta?.count}
+      resultToValue={result => result?._allManagersToPermissionsMeta?.count?.toLocaleString()}
     />
   );
 };

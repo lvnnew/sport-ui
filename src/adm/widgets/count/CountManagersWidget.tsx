@@ -37,7 +37,7 @@ const CountManagersWidget: FC<CountManagersWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allManagersMeta?.count}
+      resultToValue={result => result?._allManagersMeta?.count?.toLocaleString()}
     />
   );
 };

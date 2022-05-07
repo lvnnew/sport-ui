@@ -37,7 +37,7 @@ const CountAutogenerationRulesWidget: FC<CountAutogenerationRulesWidgetProps> = 
           }
         }
       `}
-      resultToValue={result => result?._allAutogenerationRulesMeta?.count}
+      resultToValue={result => result?._allAutogenerationRulesMeta?.count?.toLocaleString()}
     />
   );
 };

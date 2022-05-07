@@ -37,7 +37,7 @@ const CountAggregateTrackingsWidget: FC<CountAggregateTrackingsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allAggregateTrackingsMeta?.count}
+      resultToValue={result => result?._allAggregateTrackingsMeta?.count?.toLocaleString()}
     />
   );
 };

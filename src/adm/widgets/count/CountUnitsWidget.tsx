@@ -37,7 +37,7 @@ const CountUnitsWidget: FC<CountUnitsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allUnitsMeta?.count}
+      resultToValue={result => result?._allUnitsMeta?.count?.toLocaleString()}
     />
   );
 };

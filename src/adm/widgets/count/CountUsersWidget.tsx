@@ -37,7 +37,7 @@ const CountUsersWidget: FC<CountUsersWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allUsersMeta?.count}
+      resultToValue={result => result?._allUsersMeta?.count?.toLocaleString()}
     />
   );
 };

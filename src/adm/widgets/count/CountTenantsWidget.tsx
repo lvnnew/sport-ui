@@ -37,7 +37,7 @@ const CountTenantsWidget: FC<CountTenantsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allTenantsMeta?.count}
+      resultToValue={result => result?._allTenantsMeta?.count?.toLocaleString()}
     />
   );
 };

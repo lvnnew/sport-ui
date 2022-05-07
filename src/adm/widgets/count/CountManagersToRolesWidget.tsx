@@ -37,7 +37,7 @@ const CountManagersToRolesWidget: FC<CountManagersToRolesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allManagersToRolesMeta?.count}
+      resultToValue={result => result?._allManagersToRolesMeta?.count?.toLocaleString()}
     />
   );
 };

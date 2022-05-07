@@ -37,7 +37,7 @@ const CountTagsWidget: FC<CountTagsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allTagsMeta?.count}
+      resultToValue={result => result?._allTagsMeta?.count?.toLocaleString()}
     />
   );
 };

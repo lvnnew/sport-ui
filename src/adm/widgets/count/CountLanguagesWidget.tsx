@@ -37,7 +37,7 @@ const CountLanguagesWidget: FC<CountLanguagesWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allLanguagesMeta?.count}
+      resultToValue={result => result?._allLanguagesMeta?.count?.toLocaleString()}
     />
   );
 };

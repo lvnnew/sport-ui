@@ -37,7 +37,7 @@ const CountAuditLogsWidget: FC<CountAuditLogsWidgetProps> = ({
           }
         }
       `}
-      resultToValue={result => result?._allAuditLogsMeta?.count}
+      resultToValue={result => result?._allAuditLogsMeta?.count?.toLocaleString()}
     />
   );
 };
