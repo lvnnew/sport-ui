@@ -101,6 +101,10 @@ export const FileInput: FC<FileInputProps> = (props) => {
     }
   }, [loadFile, onChangeOverridden, finalName, form]);
 
+  if (!record) {
+    return null;
+  }
+
   return (
     <RaFileInput
       onChange={onChange}

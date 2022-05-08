@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "cross-env PORT=8080 DISABLE_ESLINT_PLUGIN=true craco start",
     "dev:stage": "cross-env PORT=8080 REACT_APP_ENDPOINT=https://mtbase-ep.stage.apps.stage01.making.ventures/adm DISABLE_ESLINT_PLUGIN=true craco start",
-    "build": "cross-env DISABLE_ESLINT_PLUGIN=true craco build",
+    "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false craco build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "test": "react-scripts test",
     "gen": "graphql-codegen --config codegen.yml",

@@ -1,17 +1,18 @@
 import {AuthProvider} from 'react-admin';
 import getApollo from '../apollo/getApollo';
-import LRUCache from 'lru-cache';
+// import LRUCache from 'lru-cache';
 import {ApolloClient, NormalizedCacheObject, gql, ApolloQueryResult} from '@apollo/client';
 
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
+const PERMISSINS_STORAGE_KEY = 'permissions';
 
-const permissionsCache = new LRUCache({
-  ttl: 1000 * 60 * 10,
-  max: 3000,
-});
+// const permissionsCache = new LRUCache({
+//   ttl: 1000 * 60 * 10,
+//   max: 3000,
+// });
 
-const cacheKey = 'permissions';
+// const cacheKey = 'permissions';
 
 export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 
@@ -42,7 +43,8 @@ const getAuthProvider: (
   onLogin: () => void,
 ) => AuthProvider = (endpoint, onLogin) => ({
   login: async ({email, password}) => {
-    permissionsCache.clear();
+    localStorage.removeItem(PERMISSINS_STORAGE_KEY);
+    // permissionsCache.reset();
     const request = new Request(`${endpoint}/rest/login`, {
       method: 'POST',
       body: JSON.stringify({email, password}),
@@ -84,7 +86,8 @@ const getAuthProvider: (
   },
   logout: async () => {
     localStorage.removeItem(JWT_STORAGE_KEY);
-    permissionsCache.clear();
+    localStorage.removeItem(PERMISSINS_STORAGE_KEY);
+    // permissionsCache.reset();
 
     return Promise.resolve();
   },
@@ -103,17 +106,18 @@ const getAuthProvider: (
     }
   },
   getPermissions: async () => {
-    if (!permissionsCache.has(cacheKey)) {
+    if (!localStorage.getItem(PERMISSINS_STORAGE_KEY)) {
       const client = getApollo(endpoint);
 
       const {data} = await getPermissionsCall(client);
 
       if (data.getManagerPermissions) {
-        permissionsCache.set(cacheKey, data.getManagerPermissions);
+        // permissionsCache.set(cacheKey, data.getManagerPermissions);
+        localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(data.getManagerPermissions));
       }
     }
 
-    return permissionsCache.get(cacheKey);
+    return JSON.parse(localStorage.getItem(PERMISSINS_STORAGE_KEY) as string);
   },
 });
 
