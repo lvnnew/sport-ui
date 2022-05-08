@@ -2,7 +2,13 @@ import * as React from 'react';
 import {
   useState, useEffect,
 } from 'react';
-import {Admin, AuthProvider, useTranslate, CustomRoutes} from 'react-admin';
+import {
+  Admin,
+  AuthProvider,
+  useTranslate,
+  CustomRoutes,
+  localStorageStore,
+} from 'react-admin';
 import {
   ApolloClient,
   ApolloProvider,
@@ -86,6 +92,7 @@ const App = () => {
           authProvider={authProvider}
           title=''
           theme={lightTheme}
+          store={localStorageStore('2')}
         >
           <CustomRoutes>
             {routes}
