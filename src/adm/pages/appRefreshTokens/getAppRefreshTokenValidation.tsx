@@ -5,6 +5,7 @@ import {Translate} from 'react-admin';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const getAppRefreshTokenValidation: GetValidation = (t: Translate) => Yup.object({
+  create: Yup.date().required().typeError(t('validation.required')),
   userId: Yup.number().required().typeError(t('validation.onlyNumbers')),
 });
 
