@@ -34,7 +34,7 @@ const FieldWiget: FC<FieldWigetProps> = (
   },
 ) => {
   const record = useRecordContext();
-  const val = useMemo(() => (record && record[source] ? record[source] : defaultValue), [record, source, defaultValue]);
+  const val = useMemo(() => (record ? record[source] ?? defaultValue : defaultValue), [record, source, defaultValue]);
   const prepared = useMemo(() => (prepare ? prepare(val) : val), [prepare, val]);
   const toValue = useMemo(() => (typeof to === 'function' ? to(prepared) : to), [to, prepared]);
 
