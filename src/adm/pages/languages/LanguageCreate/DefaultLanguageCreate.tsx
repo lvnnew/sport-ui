@@ -21,7 +21,7 @@ const DefaultLanguageCreate: FC<CreateProps> = (props: CreateProps) => {
   return (
     <Create
       {...props}
-      transform={useCallback((data) => ({
+      transform={useCallback((data: any) => ({
         ...data,
       }), [])}
     >

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  FC, createElement,
+  FC, createElement, ReactNode,
 } from 'react';
 import {
   Card,
@@ -16,6 +16,7 @@ export interface CardWithIconProps {
   openInNewWindow?: boolean;
   title?: string;
   subtitle?: string | number;
+  children?: ReactNode | ReactNode[];
 }
 
 const useStyles = makeStyles(() => createStyles({

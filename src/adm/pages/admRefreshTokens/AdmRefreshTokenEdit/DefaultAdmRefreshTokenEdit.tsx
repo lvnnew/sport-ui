@@ -24,7 +24,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
   return (
     <Edit
       {...props}
-      transform={useCallback((data) => ({
+      transform={useCallback((data: any) => ({
         ...data,
         create: data.create || null,
       }), [])}

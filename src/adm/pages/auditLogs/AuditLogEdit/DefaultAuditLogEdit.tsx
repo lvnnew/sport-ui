@@ -25,7 +25,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
   return (
     <Edit
       {...props}
-      transform={useCallback((data) => ({
+      transform={useCallback((data: any) => ({
         ...data,
         date: data.date || null,
       }), [])}

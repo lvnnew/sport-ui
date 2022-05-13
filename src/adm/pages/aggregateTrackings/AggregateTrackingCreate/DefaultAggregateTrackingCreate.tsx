@@ -25,7 +25,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
   return (
     <Create
       {...props}
-      transform={useCallback((data) => ({
+      transform={useCallback((data: any) => ({
         ...data,
         lastAggregatesComputed: data.lastAggregatesComputed || null,
         lastEntityUpdate: data.lastEntityUpdate || null,

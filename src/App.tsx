@@ -94,10 +94,14 @@ const App = () => {
           theme={lightTheme}
           store={localStorageStore('2')}
         >
-          <CustomRoutes>
-            {routes}
-          </CustomRoutes>
-          {permissions => getResources(translate, permissions)}
+          {permissions => [
+            (
+              <CustomRoutes key='customRoutes'>
+                {routes}
+              </CustomRoutes>
+            ),
+            ...getResources(translate, permissions),
+          ]}
         </Admin>
       </DebugProvider>
     </ApolloProvider>

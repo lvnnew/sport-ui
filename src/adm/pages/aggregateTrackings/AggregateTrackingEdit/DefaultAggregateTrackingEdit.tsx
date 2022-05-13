@@ -25,7 +25,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
   return (
     <Edit
       {...props}
-      transform={useCallback((data) => ({
+      transform={useCallback((data: any) => ({
         ...data,
         lastAggregatesComputed: data.lastAggregatesComputed || null,
         lastEntityUpdate: data.lastEntityUpdate || null,

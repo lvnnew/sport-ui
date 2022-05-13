@@ -9,6 +9,6 @@ type MenuItemProps = MenuElement & {
 }
 
 const MenuItem: FC<MenuItemProps> =
-  (props) => (props.children ? <ParentMenuItem {...props as ParentMenuItemProps} /> : <EndMenuItem {...props as EndMenuItemProps} />);
+  (props) => ('children' in props ? <ParentMenuItem {...props as ParentMenuItemProps} /> : <EndMenuItem {...props as EndMenuItemProps} />);
 
 export default MenuItem;
