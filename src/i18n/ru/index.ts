@@ -120,6 +120,13 @@ const translationMessages: TranslationMessages = {
       search: 'Поиск',
     },
   },
+  ra: {
+    ...ruMessages.ra,
+    boolean: {
+      ...ruMessages.ra.boolean,
+      null: 'null',
+    },
+  },
 };
 
 export default translationMessages;

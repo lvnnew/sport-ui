@@ -120,6 +120,13 @@ const translationMessages: TranslationMessages = {
       search: 'Search',
     },
   },
+  ra: {
+    ...enMessages.ra,
+    boolean: {
+      ...enMessages.ra.boolean,
+      null: 'null',
+    },
+  },
 };
 
 export default translationMessages;
