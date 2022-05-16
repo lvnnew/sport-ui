@@ -56,7 +56,7 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
       </ReferenceInput>
     </Filter>
   );

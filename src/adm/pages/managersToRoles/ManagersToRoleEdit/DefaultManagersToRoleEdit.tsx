@@ -38,7 +38,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
               reference='roles'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
             </ReferenceInput>
           </Grid>
         </Grid>

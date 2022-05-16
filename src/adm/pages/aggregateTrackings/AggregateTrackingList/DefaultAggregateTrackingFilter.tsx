@@ -22,7 +22,7 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
         reference='entities'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' disableClearable defaultValue={null} />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
       </ReferenceInput>
       <TextInput
         fullWidth

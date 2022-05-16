@@ -5,9 +5,11 @@ import {Translate} from 'react-admin';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const getAggregateTrackingValidation: GetValidation = (t: Translate) => Yup.object({
-  lastAggregatesComputed: Yup.date().required().typeError(t('validation.required')),
-  lastEntityUpdate: Yup.date().required().typeError(t('validation.required')),
-  aggregateVersion: Yup.number().required().typeError(t('validation.onlyNumbers')),
+  entityTypeId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
+  entityId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
+  lastAggregatesComputed: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
+  lastEntityUpdate: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
+  aggregateVersion: Yup.number().required().typeError(t('validation.required')),
 });
 
 export default getAggregateTrackingValidation;
