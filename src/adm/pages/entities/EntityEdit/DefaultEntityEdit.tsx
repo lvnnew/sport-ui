@@ -34,6 +34,7 @@ const DefaultEntityEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.entities.fields.title')}
             />
           </Grid>

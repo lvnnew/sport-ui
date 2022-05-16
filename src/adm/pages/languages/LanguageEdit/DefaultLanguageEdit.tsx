@@ -34,6 +34,7 @@ const DefaultLanguageEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.languages.fields.title')}
             />
           </Grid>

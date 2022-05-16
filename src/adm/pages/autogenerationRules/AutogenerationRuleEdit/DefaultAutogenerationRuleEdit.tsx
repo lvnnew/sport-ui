@@ -46,6 +46,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
             <DateInput
               fullWidth
               source='version'
+              defaultValue={null}
               label={translate('catalogs.autogenerationRules.fields.version')}
             />
           </Grid>

@@ -48,6 +48,7 @@ const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='description'
+              defaultValue={null}
               label={translate('catalogs.messageTypes.fields.description')}
             />
           </Grid>

@@ -20,6 +20,7 @@ const DefaultPermissionFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='title'
+        defaultValue={null}
         label={translate('catalogs.permissions.fields.title')}
       />
     </Filter>

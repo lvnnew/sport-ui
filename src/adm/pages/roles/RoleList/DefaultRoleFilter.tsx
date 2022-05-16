@@ -21,6 +21,7 @@ const DefaultRoleFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='title'
+        defaultValue={null}
         label={translate('catalogs.roles.fields.title')}
       />
       <BooleanInput

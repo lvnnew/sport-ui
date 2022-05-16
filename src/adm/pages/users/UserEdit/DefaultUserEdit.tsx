@@ -38,6 +38,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.users.fields.title')}
             />
           </Grid>

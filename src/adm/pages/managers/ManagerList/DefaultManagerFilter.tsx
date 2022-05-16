@@ -23,6 +23,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='title'
+        defaultValue={null}
         label={translate('catalogs.managers.fields.title')}
       />
       <TextInput
@@ -51,16 +52,19 @@ const DefaultManagerFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='phone'
+        defaultValue={null}
         label={translate('catalogs.managers.fields.phone')}
       />
       <TextInput
         fullWidth
         source='photo'
+        defaultValue={null}
         label={translate('catalogs.managers.fields.photo')}
       />
       <TextInput
         fullWidth
         source='telegramLogin'
+        defaultValue={null}
         label={translate('catalogs.managers.fields.telegramLogin')}
       />
       <ReferenceInput

@@ -22,6 +22,7 @@ const DefaultUserFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='title'
+        defaultValue={null}
         label={translate('catalogs.users.fields.title')}
       />
       <TextInput

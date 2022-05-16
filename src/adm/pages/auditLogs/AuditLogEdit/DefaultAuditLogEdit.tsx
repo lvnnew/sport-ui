@@ -102,6 +102,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             <BooleanInput
               fullWidth
               source='foreign'
+              defaultValue={null}
               label={translate('catalogs.auditLogs.fields.foreign')}
             />
           </Grid>
@@ -109,6 +110,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='foreignEntityType'
+              defaultValue={null}
               label={translate('catalogs.auditLogs.fields.foreignEntityType')}
             />
           </Grid>
@@ -116,6 +118,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='foreignEntityId'
+              defaultValue={null}
               label={translate('catalogs.auditLogs.fields.foreignEntityId')}
             />
           </Grid>
@@ -123,6 +126,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='actionData'
+              defaultValue={null}
               label={translate('catalogs.auditLogs.fields.actionData')}
             />
           </Grid>

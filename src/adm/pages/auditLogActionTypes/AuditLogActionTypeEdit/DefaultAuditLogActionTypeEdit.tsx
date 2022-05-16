@@ -34,6 +34,7 @@ const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.auditLogActionTypes.fields.title')}
             />
           </Grid>

@@ -42,6 +42,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.managers.fields.title')}
             />
           </Grid>
@@ -80,6 +81,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='phone'
+              defaultValue={null}
               label={translate('catalogs.managers.fields.phone')}
             />
           </Grid>
@@ -87,6 +89,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='photo'
+              defaultValue={null}
               label={translate('catalogs.managers.fields.photo')}
             />
           </Grid>
@@ -94,6 +97,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='telegramLogin'
+              defaultValue={null}
               label={translate('catalogs.managers.fields.telegramLogin')}
             />
           </Grid>

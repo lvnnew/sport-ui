@@ -36,6 +36,7 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.units.fields.title')}
             />
           </Grid>

@@ -27,6 +27,7 @@ const DefaultAutogenerationRuleFilter: FC<any> = (props) => {
       <DateInput
         fullWidth
         source='version'
+        defaultValue={null}
         label={translate('catalogs.autogenerationRules.fields.version')}
       />
       <TextInput

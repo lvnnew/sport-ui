@@ -124,7 +124,7 @@ const translationMessages: TranslationMessages = {
     ...ruMessages.ra,
     boolean: {
       ...ruMessages.ra.boolean,
-      null: 'null',
+      null: 'не выбрано',
     },
   },
 };

@@ -35,6 +35,7 @@ const DefaultTenantEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.tenants.fields.title')}
             />
           </Grid>

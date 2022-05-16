@@ -88,6 +88,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
             <TextInput
               fullWidth
               source='error'
+              defaultValue={null}
               label={translate('catalogs.autogenerationHistoryEntries.fields.error')}
             />
           </Grid>

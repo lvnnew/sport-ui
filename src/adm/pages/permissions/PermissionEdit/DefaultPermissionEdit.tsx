@@ -34,6 +34,7 @@ const DefaultPermissionEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.permissions.fields.title')}
             />
           </Grid>

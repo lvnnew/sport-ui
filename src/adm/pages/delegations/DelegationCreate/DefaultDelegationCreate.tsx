@@ -60,6 +60,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
             <DateInput
               fullWidth
               source='expiresAt'
+              defaultValue={null}
               label={translate('catalogs.delegations.fields.expiresAt')}
             />
           </Grid>

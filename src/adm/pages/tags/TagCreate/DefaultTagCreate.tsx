@@ -34,6 +34,7 @@ const DefaultTagCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='comment'
+              defaultValue={null}
               label={translate('catalogs.tags.fields.comment')}
             />
           </Grid>

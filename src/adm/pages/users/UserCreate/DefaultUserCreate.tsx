@@ -38,6 +38,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.users.fields.title')}
             />
           </Grid>

@@ -41,6 +41,7 @@ const DefaultEntityCreate: FC<CreateProps> = (props: CreateProps) => {
             <TextInput
               fullWidth
               source='title'
+              defaultValue={null}
               label={translate('catalogs.entities.fields.title')}
             />
           </Grid>

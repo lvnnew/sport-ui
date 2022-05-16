@@ -53,6 +53,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
             <DateInput
               fullWidth
               source='version'
+              defaultValue={null}
               label={translate('catalogs.autogenerationRules.fields.version')}
             />
           </Grid>

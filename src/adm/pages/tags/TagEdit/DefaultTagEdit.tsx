@@ -34,6 +34,7 @@ const DefaultTagEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='comment'
+              defaultValue={null}
               label={translate('catalogs.tags.fields.comment')}
             />
           </Grid>

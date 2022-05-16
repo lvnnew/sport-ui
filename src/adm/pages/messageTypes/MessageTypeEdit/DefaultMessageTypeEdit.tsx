@@ -41,6 +41,7 @@ const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='description'
+              defaultValue={null}
               label={translate('catalogs.messageTypes.fields.description')}
             />
           </Grid>

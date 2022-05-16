@@ -58,6 +58,7 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='error'
+        defaultValue={null}
         label={translate('catalogs.autogenerationHistoryEntries.fields.error')}
       />
     </Filter>

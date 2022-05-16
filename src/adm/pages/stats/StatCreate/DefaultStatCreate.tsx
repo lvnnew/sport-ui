@@ -44,6 +44,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
             <DateTimeInput
               fullWidth
               source='updated'
+              defaultValue={null}
               label={translate('catalogs.stats.fields.updated')}
             />
           </Grid>

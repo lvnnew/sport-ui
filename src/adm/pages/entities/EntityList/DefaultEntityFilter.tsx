@@ -20,6 +20,7 @@ const DefaultEntityFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='title'
+        defaultValue={null}
         label={translate('catalogs.entities.fields.title')}
       />
     </Filter>

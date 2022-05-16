@@ -20,6 +20,7 @@ const DefaultLanguageFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         source='title'
+        defaultValue={null}
         label={translate('catalogs.languages.fields.title')}
       />
     </Filter>

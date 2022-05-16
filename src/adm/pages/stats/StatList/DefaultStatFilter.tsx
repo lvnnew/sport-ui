@@ -22,6 +22,7 @@ const DefaultStatFilter: FC<any> = (props) => {
       <DateTimeInput
         fullWidth
         source='updated'
+        defaultValue={null}
         label={translate('catalogs.stats.fields.updated')}
       />
       <NumberInput

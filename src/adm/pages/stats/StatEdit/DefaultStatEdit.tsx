@@ -36,6 +36,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
             <DateTimeInput
               fullWidth
               source='updated'
+              defaultValue={null}
               label={translate('catalogs.stats.fields.updated')}
             />
           </Grid>

@@ -124,7 +124,7 @@ const translationMessages: TranslationMessages = {
     ...enMessages.ra,
     boolean: {
       ...enMessages.ra.boolean,
-      null: 'null',
+      null: 'not selected',
     },
   },
 };

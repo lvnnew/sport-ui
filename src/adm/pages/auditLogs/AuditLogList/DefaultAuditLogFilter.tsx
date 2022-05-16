@@ -71,21 +71,25 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       <BooleanInput
         fullWidth
         source='foreign'
+        defaultValue={null}
         label={translate('catalogs.auditLogs.fields.foreign')}
       />
       <TextInput
         fullWidth
         source='foreignEntityType'
+        defaultValue={null}
         label={translate('catalogs.auditLogs.fields.foreignEntityType')}
       />
       <TextInput
         fullWidth
         source='foreignEntityId'
+        defaultValue={null}
         label={translate('catalogs.auditLogs.fields.foreignEntityId')}
       />
       <TextInput
         fullWidth
         source='actionData'
+        defaultValue={null}
         label={translate('catalogs.auditLogs.fields.actionData')}
       />
     </Filter>
