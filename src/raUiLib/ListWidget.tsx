@@ -44,6 +44,7 @@ const ListWidget: FC<ListWidgetProps> = ({
       <CardHeader title={title} sx={{pb: 0.5}} />
       <CardContent sx={{pt: 0.5, '&:last-child': {p: 2}}}>
         <List
+          empty={false}
           filter={{
             ...rest.filter,
             [target]: record[source],

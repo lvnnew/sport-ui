@@ -4154,14 +4154,14 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/parser@5.24.0":
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.24.0.tgz#fe6563483f264aa9fe48b7fd9b329aa5f985841a"
-  integrity sha512-4q29C6xFYZ5B2CXqSBBdcS0lPyfM9M09DoQLtHS5kf+WbpV8pBBhHDLNhXfgyVwFnhrhYzOu7xmg02DzxeF2Uw==
+"@typescript-eslint/parser@5.25.0":
+  version "5.25.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.25.0.tgz#fb533487147b4b9efd999a4d2da0b6c263b64f7f"
+  integrity sha512-r3hwrOWYbNKP1nTcIw/aZoH+8bBnh/Lh1iDHoFpyG4DnCpvEdctrSl6LOo19fZbzypjQMHdajolxs6VpYoChgA==
   dependencies:
-    "@typescript-eslint/scope-manager" "5.24.0"
-    "@typescript-eslint/types" "5.24.0"
-    "@typescript-eslint/typescript-estree" "5.24.0"
+    "@typescript-eslint/scope-manager" "5.25.0"
+    "@typescript-eslint/types" "5.25.0"
+    "@typescript-eslint/typescript-estree" "5.25.0"
     debug "^4.3.4"
 
 "@typescript-eslint/parser@^5.5.0":
@@ -4191,14 +4191,6 @@
   dependencies:
     "@typescript-eslint/types" "5.18.0"
     "@typescript-eslint/visitor-keys" "5.18.0"
-
-"@typescript-eslint/scope-manager@5.24.0":
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.24.0.tgz#ac8c4d65064204b596909c204fe9b7e30c3f51b2"
-  integrity sha512-WpMWipcDzGmMzdT7NtTjRXFabx10WleLUGrJpuJLGaxSqpcyq5ACpKSD5VE40h2nz3melQ91aP4Du7lh9FliCA==
-  dependencies:
-    "@typescript-eslint/types" "5.24.0"
-    "@typescript-eslint/visitor-keys" "5.24.0"
 
 "@typescript-eslint/scope-manager@5.25.0":
   version "5.25.0"
@@ -4246,11 +4238,6 @@
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.18.0.tgz#4f0425d85fdb863071680983853c59a62ce9566e"
   integrity sha512-bhV1+XjM+9bHMTmXi46p1Led5NP6iqQcsOxgx7fvk6gGiV48c6IynY0apQb7693twJDsXiVzNXTflhplmaiJaw==
 
-"@typescript-eslint/types@5.24.0":
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.24.0.tgz#565ff94a4b89073265e27514dc65225d18aabe6c"
-  integrity sha512-Tpg1c3shTDgTmZd3qdUyd+16r/pGmVaVEbLs+ufuWP0EruVbUiEOmpBBQxBb9a8iPRxi8Rb2oiwOxuZJzSq11A==
-
 "@typescript-eslint/types@5.25.0":
   version "5.25.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.25.0.tgz#dee51b1855788b24a2eceeae54e4adb89b088dd8"
@@ -4282,19 +4269,6 @@
     globby "^11.0.4"
     is-glob "^4.0.3"
     semver "^7.3.5"
-    tsutils "^3.21.0"
-
-"@typescript-eslint/typescript-estree@5.24.0":
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.24.0.tgz#30b9cbc1af475b9e02aca34cfe9ba9e1bb820143"
-  integrity sha512-zcor6vQkQmZAQfebSPVwUk/FD+CvnsnlfKXYeQDsWXRF+t7SBPmIfNia/wQxCSeu1h1JIjwV2i9f5/DdSp/uDw==
-  dependencies:
-    "@typescript-eslint/types" "5.24.0"
-    "@typescript-eslint/visitor-keys" "5.24.0"
-    debug "^4.3.4"
-    globby "^11.1.0"
-    is-glob "^4.0.3"
-    semver "^7.3.7"
     tsutils "^3.21.0"
 
 "@typescript-eslint/typescript-estree@5.25.0":
@@ -4368,14 +4342,6 @@
   dependencies:
     "@typescript-eslint/types" "5.18.0"
     eslint-visitor-keys "^3.0.0"
-
-"@typescript-eslint/visitor-keys@5.24.0":
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-5.24.0.tgz#bb3e9a788ccd50c53e03557e4e203599880c3123"
-  integrity sha512-qzGwSXMyMnogcAo+/2fU+jhlPPVMXlIH2PeAonIKjJSoDKl1+lJVvG5Z5Oud36yU0TWK2cs1p/FaSN5J2OUFYA==
-  dependencies:
-    "@typescript-eslint/types" "5.24.0"
-    eslint-visitor-keys "^3.3.0"
 
 "@typescript-eslint/visitor-keys@5.25.0":
   version "5.25.0"
@@ -12181,10 +12147,10 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-ra-core@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-4.0.4.tgz#c1494b71401721a7a8c6ce57fff855eb36bc659e"
-  integrity sha512-ATWQDdYgv0P9vninXB7hb/wXU/8/BGUNvHGgtDa3HTg4aihBbkANk9QeOh74VsvpmHUzhRImxC06prWyNM5rTQ==
+ra-core@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-4.1.0.tgz#8ee84c73f78e41f433ebb7c7de22095287b2a555"
+  integrity sha512-Df2w4nm/d9F53XN+q8lC6krrAI8bAbCARDVwPa1fafZHBMoI0CTPkQEOu1PEw7l8IQVt75ZKhXH4Pv48KsdZRQ==
   dependencies:
     clsx "^1.1.1"
     date-fns "^2.19.0"
@@ -12217,30 +12183,30 @@ ra-data-graphql@^4.0.3:
     lodash "~4.17.5"
     pluralize "~7.0.0"
 
-ra-i18n-polyglot@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.0.4.tgz#6a4675e1614cdf5c7cf7ec3a5c82ad5e49e28000"
-  integrity sha512-Ok+58ac9Af+8Jzb8kJThnTi0duAJ6bU5QUGOmJ0iyB8KLQ4vmaCa89KMbiCW+PsZau/KqZlPwCc4dpNbIzDmUQ==
+ra-i18n-polyglot@^4.0.5, ra-i18n-polyglot@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.1.0.tgz#437092584e43e72b6833f422340eb046ad3b151d"
+  integrity sha512-eUIY9mS3+nsojhk4AEP38vNH3HRjy7WNsbBSjftGqEFgVR0fUIOQa9xSsRlRnReLfZAzH1cO0cxuheu3S2JAeQ==
   dependencies:
     node-polyglot "^2.2.2"
-    ra-core "^4.0.4"
+    ra-core "^4.1.0"
 
-ra-language-english@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-4.0.4.tgz#ea0c3a2924d25693a5969178b8bd9d6eb09bcefe"
-  integrity sha512-olNgvAbAN8gEpslzXcRt1AR1zh7Q0UR8QhTl2xjsDABhDbxRBD4zFyVdmybiddldK6BUnztceazBvY2gGRk0fA==
+ra-language-english@^4.0.5, ra-language-english@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-4.1.0.tgz#7505ff29206e77f0de5d341ab03d79857657373b"
+  integrity sha512-baF771lEIvT7j1BidwAI70qjurbPXpOJ70CMYFT3Fs+NtOMdrV8GWmXzpWDVjZPEfFk+CWMD51Qe/hAF1xqsPg==
   dependencies:
-    ra-core "^4.0.4"
+    ra-core "^4.1.0"
 
 ra-language-russian@^3.13.5:
   version "3.13.5"
   resolved "https://registry.yarnpkg.com/ra-language-russian/-/ra-language-russian-3.13.5.tgz#576f668e6d1ad6b18839df9d4d13123a692a72ca"
   integrity sha512-Ppgb6BvBTCCsvqZWs9GN5kIWOZh2/DxRxAAPV31bUGavD4i8a9BN7pBzy30fjHJbutn2qwXHkZtvaIxdzn9y/A==
 
-ra-ui-materialui@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-4.0.4.tgz#f21b8fd9681e6eaeb95fe2893a92c1fc97c2a316"
-  integrity sha512-GgMVl15+6T2XdaFwOZuw1lIU7WVAlk0fCLQUZTHJvnilDESvqx6xKzrR+Au388jPQcHPQv/0ev1cao6ps6FvNA==
+ra-ui-materialui@^4.0.5, ra-ui-materialui@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-4.1.0.tgz#c9fa862f6dc6cae43754f31823048cc6f5aceb51"
+  integrity sha512-1ofmDevEV9iEdfrC24x3gkKgxGv7aeT3u2rAgBRzzwBb1cwm7DKDjAj/epALJZTpjgygxeB58RqQlUSvX/ew+Q==
   dependencies:
     autosuggest-highlight "^3.1.1"
     clsx "^1.1.1"
@@ -12298,20 +12264,20 @@ rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-admin@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-4.0.4.tgz#d878db49bc954d3496f7843e0494c6a157f05dc5"
-  integrity sha512-oQQt72ijJ2fQfiMxQjXTayK6aQXyZUW7U0pZyFROI7qLRmhm6A/TQx0GSZFhOrsCWpS2ZZRDWLBFlwgD41lAIg==
+react-admin@^4.0.5:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-4.1.0.tgz#a7a71b4a22ebf1eed79848ea7a0c330183f07426"
+  integrity sha512-YWgMvJKsbgax0fcc6QI37CpHava2gc/4OxLdAMeL0K7V/lcGzBp0WnsJ0ERPkhlfP7UncNcB5xgBHe3zbCjXyA==
   dependencies:
     "@emotion/react" "^11.4.1"
     "@emotion/styled" "^11.3.0"
     "@mui/icons-material" "^5.0.1"
     "@mui/material" "^5.0.2"
     history "^5.1.0"
-    ra-core "^4.0.4"
-    ra-i18n-polyglot "^4.0.4"
-    ra-language-english "^4.0.4"
-    ra-ui-materialui "^4.0.4"
+    ra-core "^4.1.0"
+    ra-i18n-polyglot "^4.1.0"
+    ra-language-english "^4.1.0"
+    ra-ui-materialui "^4.1.0"
     react-hook-form "^7.27.0"
     react-router "^6.1.0"
     react-router-dom "^6.1.0"
