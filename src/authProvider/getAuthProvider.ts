@@ -74,10 +74,8 @@ const getAuthProvider: (
     if (status === 401 || status === 403) {
       localStorage.removeItem(JWT_STORAGE_KEY);
 
-      return Promise.reject(new Error('Unauthorised'));
+      throw new Error('Unauthorised');
     }
-
-    return Promise.resolve();
   },
   checkAuth: async () => {
     return localStorage.getItem(JWT_STORAGE_KEY) ?
@@ -88,22 +86,16 @@ const getAuthProvider: (
     localStorage.removeItem(JWT_STORAGE_KEY);
     localStorage.removeItem(PERMISSINS_STORAGE_KEY);
     // permissionsCache.reset();
-
-    return Promise.resolve();
   },
   getIdentity: async () => {
     const stringified = localStorage.getItem(IDENTITY_STORAGE_KEY);
     if (!stringified) {
-      return Promise.reject(new Error('No identty'));
+      throw new Error('No identty');
     }
 
-    try {
-      const identity = JSON.parse(stringified);
+    const identity = JSON.parse(stringified);
 
-      return Promise.resolve(identity);
-    } catch (error: any) {
-      return Promise.reject(error);
-    }
+    return identity;
   },
   getPermissions: async () => {
     if (!localStorage.getItem(PERMISSINS_STORAGE_KEY)) {

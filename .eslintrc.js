@@ -10,7 +10,7 @@ module.exports = {
   extends: [
     'canonical',
     'canonical/react',
-    'canonical/mocha',
+    // 'canonical/mocha',
     'canonical/jest',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',

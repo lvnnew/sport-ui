@@ -27,7 +27,7 @@ export const GET_ENTITY_HELP = gql`
 
 const OpenHelp: FC<{entityType: string}> = ({entityType}) => {
   const classes = useStyles();
-  const [drawer, setOpenDrawer] = useState(false);
+  const [drawerOpened, setDrawerOpened] = useState(false);
   const {permissions} = usePermissions<string[]>();
 
   const [getHelp, {loading, data}] = useLazyQuery(
@@ -39,13 +39,13 @@ const OpenHelp: FC<{entityType: string}> = ({entityType}) => {
 
   const openDrawer = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
-    setOpenDrawer(true);
+    setDrawerOpened(true);
     getHelp({
       variables: {
         entityType,
       },
     });
-  }, [setOpenDrawer, getHelp, entityType]);
+  }, [setDrawerOpened, getHelp, entityType]);
 
   if (!hasPermission(permissions, 'help.getHelp')) {
     return null;
@@ -63,7 +63,7 @@ const OpenHelp: FC<{entityType: string}> = ({entityType}) => {
         </IconButton>
       </Tooltip>
       <Drawer
-        anchor='right' open={drawer} onClose={() => setOpenDrawer(false)}
+        anchor='right' open={drawerOpened} onClose={() => setDrawerOpened(false)}
         classes={{
           paper: classes.drawerPaper,
         }}

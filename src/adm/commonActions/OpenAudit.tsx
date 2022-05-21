@@ -21,14 +21,14 @@ const useStyles = makeStyles(() => createStyles({
 
 const OpenAudit: FC<{entityTypeId: string}> = ({entityTypeId}) => {
   const classes = useStyles();
-  const [drawer, setOpenDrawer] = useState(false);
+  const [drawerOpened, setDrawerOpened] = useState(false);
   const record = useRecordContext();
   const {permissions} = usePermissions<string[]>();
 
   const openDrawer = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
-    setOpenDrawer(true);
-  }, [setOpenDrawer]);
+    setDrawerOpened(true);
+  }, [setDrawerOpened]);
 
   if (!record || !hasPermission(permissions, 'auditLogs.all')) {
     return null;
@@ -46,7 +46,7 @@ const OpenAudit: FC<{entityTypeId: string}> = ({entityTypeId}) => {
         </IconButton>
       </Tooltip>
       <Drawer
-        anchor='right' open={drawer} onClose={() => setOpenDrawer(false)}
+        anchor='right' open={drawerOpened} onClose={() => setDrawerOpened(false)}
         classes={{
           paper: classes.drawerPaper,
         }}
