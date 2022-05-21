@@ -3126,7 +3126,7 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
-"@mui/utils@^5.8.0":
+"@mui/utils@^5.7.0", "@mui/utils@^5.8.0":
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-5.8.0.tgz#4b1d19cbcf70773283375e763b7b3552b84cb58f"
   integrity sha512-7LgUtCvz78676iC0wpTH7HizMdCrTphhBmRWimIMFrp5Ph6JbDFVuKS1CwYnWWxRyYKL0QzXrDL0lptAU90EXg==
@@ -3137,12 +3137,13 @@
     prop-types "^15.8.1"
     react-is "^17.0.2"
 
-"@mui/x-data-grid@^5.11.0":
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-5.11.0.tgz#436a2e95fef231dfe895ea72de95ec3411c84342"
-  integrity sha512-hVGzzmtAUjTvsOKo26gWbmNQhApfelUh1SSA8BLQhMDYwaOHVrC6hBlIOJV/Qlw3sAIAdq60iAg+G9NeHEib4w==
+"@mui/x-data-grid@^5.11.1":
+  version "5.11.1"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-5.11.1.tgz#4780d76fd41e11f1e45935327e931313b47c3158"
+  integrity sha512-Iwm3gmHciZrYsmAOrX1W2JKo2CexgGhdG7ZXvHh1rW3OD66ITSoFilThPtrb88Eg1fZI/goDWnPr6R7JXLHc5Q==
   dependencies:
-    "@mui/utils" "^5.6.1"
+    "@babel/runtime" "^7.17.2"
+    "@mui/utils" "^5.7.0"
     clsx "^1.1.1"
     prop-types "^15.8.1"
     reselect "^4.1.5"
@@ -3649,34 +3650,10 @@
   dependencies:
     postcss "5 - 7"
 
-"@types/d3-color@^2":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@types/d3-color/-/d3-color-2.0.3.tgz#8bc4589073c80e33d126345542f588056511fe82"
-  integrity sha512-+0EtEjBfKEDtH9Rk3u3kLOUXM5F+iZK+WvASPb0MhIZl8J8NUvGeZRwKCXl+P3HkYx5TdU4YtcibpqHkSR9n7w==
-
-"@types/d3-interpolate@^2.0.0":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@types/d3-interpolate/-/d3-interpolate-2.0.2.tgz#78eddf7278b19e48e8652603045528d46897aba0"
-  integrity sha512-lElyqlUfIPyWG/cD475vl6msPL4aMU7eJvx1//Q177L8mdXoVPFl1djIESF2FKnc0NyaHvQlJpWwKJYwAhUoCw==
-  dependencies:
-    "@types/d3-color" "^2"
-
 "@types/d3-path@^1":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@types/d3-path/-/d3-path-1.0.9.tgz#73526b150d14cd96e701597cbf346cfd1fd4a58c"
   integrity sha512-NaIeSIBiFgSC6IGUBjZWcscUJEq7vpVu7KthHN8eieTV9d9MqkSOZLH4chq1PmcKy06PNe3axLeKmRIyxJ+PZQ==
-
-"@types/d3-path@^2":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/d3-path/-/d3-path-2.0.1.tgz#ca03dfa8b94d8add97ad0cd97e96e2006b4763cb"
-  integrity sha512-6K8LaFlztlhZO7mwsZg7ClRsdLg3FJRzIIi6SZXDWmmSJc2x8dd2VkESbLXdk3p8cuvz71f36S0y8Zv2AxqvQw==
-
-"@types/d3-scale@^3.0.0":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@types/d3-scale/-/d3-scale-3.3.2.tgz#18c94e90f4f1c6b1ee14a70f14bfca2bd1c61d06"
-  integrity sha512-gGqr7x1ost9px3FvIfUMi5XA/F/yAf4UkUDtdQhpH92XCT0Oa7zkkRzY61gPVJq+DxpHn/btouw5ohWkbBsCzQ==
-  dependencies:
-    "@types/d3-time" "^2"
 
 "@types/d3-shape@^1":
   version "1.3.8"
@@ -3684,18 +3661,6 @@
   integrity sha512-gqfnMz6Fd5H6GOLYixOZP/xlrMtJms9BaS+6oWxTKHNqPGZ93BkWWupQSCYm6YHqx6h9wjRupuJb90bun6ZaYg==
   dependencies:
     "@types/d3-path" "^1"
-
-"@types/d3-shape@^2.0.0":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@types/d3-shape/-/d3-shape-2.1.3.tgz#35d397b9e687abaa0de82343b250b9897b8cacf3"
-  integrity sha512-HAhCel3wP93kh4/rq+7atLdybcESZ5bRHDEZUojClyZWsRuEMo3A52NGYJSh48SxfxEU6RZIVbZL2YFZ2OAlzQ==
-  dependencies:
-    "@types/d3-path" "^2"
-
-"@types/d3-time@^2":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@types/d3-time/-/d3-time-2.1.1.tgz#743fdc821c81f86537cbfece07093ac39b4bc342"
-  integrity sha512-9MVYlmIgmRR31C5b4FVSWtuMmBHh2mOWQYfl7XAYOa8dsnb7iEmUmRSWSFgXFtkjxO65d7hTUHQC+RhR/9IWFg==
 
 "@types/debug@^4.0.0":
   version "4.1.7"
@@ -12183,7 +12148,7 @@ ra-data-graphql@^4.0.3:
     lodash "~4.17.5"
     pluralize "~7.0.0"
 
-ra-i18n-polyglot@^4.0.5, ra-i18n-polyglot@^4.1.0:
+ra-i18n-polyglot@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.1.0.tgz#437092584e43e72b6833f422340eb046ad3b151d"
   integrity sha512-eUIY9mS3+nsojhk4AEP38vNH3HRjy7WNsbBSjftGqEFgVR0fUIOQa9xSsRlRnReLfZAzH1cO0cxuheu3S2JAeQ==
@@ -12191,7 +12156,7 @@ ra-i18n-polyglot@^4.0.5, ra-i18n-polyglot@^4.1.0:
     node-polyglot "^2.2.2"
     ra-core "^4.1.0"
 
-ra-language-english@^4.0.5, ra-language-english@^4.1.0:
+ra-language-english@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-4.1.0.tgz#7505ff29206e77f0de5d341ab03d79857657373b"
   integrity sha512-baF771lEIvT7j1BidwAI70qjurbPXpOJ70CMYFT3Fs+NtOMdrV8GWmXzpWDVjZPEfFk+CWMD51Qe/hAF1xqsPg==
@@ -12203,7 +12168,7 @@ ra-language-russian@^3.13.5:
   resolved "https://registry.yarnpkg.com/ra-language-russian/-/ra-language-russian-3.13.5.tgz#576f668e6d1ad6b18839df9d4d13123a692a72ca"
   integrity sha512-Ppgb6BvBTCCsvqZWs9GN5kIWOZh2/DxRxAAPV31bUGavD4i8a9BN7pBzy30fjHJbutn2qwXHkZtvaIxdzn9y/A==
 
-ra-ui-materialui@^4.0.5, ra-ui-materialui@^4.1.0:
+ra-ui-materialui@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-4.1.0.tgz#c9fa862f6dc6cae43754f31823048cc6f5aceb51"
   integrity sha512-1ofmDevEV9iEdfrC24x3gkKgxGv7aeT3u2rAgBRzzwBb1cwm7DKDjAj/epALJZTpjgygxeB58RqQlUSvX/ew+Q==
@@ -12264,7 +12229,7 @@ rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-admin@^4.0.5:
+react-admin@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-4.1.0.tgz#a7a71b4a22ebf1eed79848ea7a0c330183f07426"
   integrity sha512-YWgMvJKsbgax0fcc6QI37CpHava2gc/4OxLdAMeL0K7V/lcGzBp0WnsJ0ERPkhlfP7UncNcB5xgBHe3zbCjXyA==
@@ -12548,10 +12513,10 @@ react-universal-interface@^0.6.2:
   resolved "https://registry.yarnpkg.com/react-universal-interface/-/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"
   integrity sha512-dg8yXdcQmvgR13RIlZbTRQOoUrDciFVoSBZILwjE2LFISxZZ8loVJKAkuzswl5js8BHda79bIb2b84ehU8IjXw==
 
-react-use@^17.3.2:
-  version "17.3.2"
-  resolved "https://registry.yarnpkg.com/react-use/-/react-use-17.3.2.tgz#448abf515f47c41c32455024db28167cb6e53be8"
-  integrity sha512-bj7OD0/1wL03KyWmzFXAFe425zziuTf7q8olwCYBfOeFHY1qfO1FAMjROQLsLZYwG4Rx63xAfb7XAbBrJsZmEw==
+react-use@^17.4.0:
+  version "17.4.0"
+  resolved "https://registry.yarnpkg.com/react-use/-/react-use-17.4.0.tgz#cefef258b0a6c534a5c8021c2528ac6e1a4cdc6d"
+  integrity sha512-TgbNTCA33Wl7xzIJegn1HndB4qTS9u03QUwyNycUnXaweZkE4Kq2SB+Yoxx8qbshkZGYBDvUXbXWRUmQDcZZ/Q==
   dependencies:
     "@types/js-cookie" "^2.2.6"
     "@xobotyi/scrollbar-width" "^1.9.5"
@@ -12630,14 +12595,11 @@ recharts-scale@^0.4.4:
   dependencies:
     decimal.js-light "^2.4.1"
 
-recharts@^2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.1.9.tgz#a52d411a7d822d118f7754cfc9c50db8fab46fb9"
-  integrity sha512-VozH5uznUvGqD7n224FGj7cmMAenlS0HPCs+7r2HeeHiQK6un6z0CTZfWVAB860xbcr4m+BN/EGMPZmYWd34Rg==
+recharts@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.1.10.tgz#4253f4354fcb9328a162f66d7c5c8d33ef7741db"
+  integrity sha512-me6c8m2Gs88X/nuM2gDSTDIhpSLNMbiTrlE4Cu53hjZNegT3g3xLlTrbYSAQuBCFWuWJAZXCmEuMr6AwizLyaA==
   dependencies:
-    "@types/d3-interpolate" "^2.0.0"
-    "@types/d3-scale" "^3.0.0"
-    "@types/d3-shape" "^2.0.0"
     classnames "^2.2.5"
     d3-interpolate "^2.0.0"
     d3-scale "^3.0.0"
