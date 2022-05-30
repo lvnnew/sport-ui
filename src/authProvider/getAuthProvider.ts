@@ -59,13 +59,14 @@ const getAuthProvider: (
 
         return response.json();
       })
-      .then(({id, token, fullName}) => {
+      .then(({id, token, fullName, permissions}) => {
         localStorage.setItem(JWT_STORAGE_KEY, token);
         localStorage.setItem(IDENTITY_STORAGE_KEY, JSON.stringify({
           id,
           fullName,
           avatar: 'some avatar',
         }));
+        localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(permissions));
         onLogin();
       });
   },
