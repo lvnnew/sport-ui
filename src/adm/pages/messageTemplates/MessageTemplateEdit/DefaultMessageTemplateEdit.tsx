@@ -56,7 +56,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
               reference='messageTypes'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
             </ReferenceInput>
           </Grid>
         </Grid>

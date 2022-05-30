@@ -31,7 +31,7 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
       </ReferenceInput>
       <TextInput
         fullWidth

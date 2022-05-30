@@ -43,7 +43,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -53,7 +53,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>

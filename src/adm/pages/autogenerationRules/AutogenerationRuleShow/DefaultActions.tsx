@@ -2,18 +2,24 @@ import React from 'react';
 import {
   EditButton,
   TopToolbar,
+  usePermissions,
 } from 'react-admin';
 import OpenAudit from '../../../commonActions/OpenAudit';
+import {hasPermission} from '../../../../utils/permissions';
 import OpenHelp from '../../../commonActions/OpenHelp';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultAutogenerationRuleActions = () => (
-  <TopToolbar sx={{alignItems: 'center'}}>
-    <OpenAudit entityTypeId='autogenerationRule' />
-    <OpenHelp entityType='autogenerationRules' />
-    <EditButton />
-  </TopToolbar>
-);
+const DefaultAutogenerationRuleActions = () => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <TopToolbar sx={{alignItems: 'center'}}>
+      <OpenAudit entityTypeId='autogenerationRule' />
+      <OpenHelp entityType='autogenerationRules' />
+      {hasPermission(permissions, 'autogenerationRules.update') && <EditButton />}
+    </TopToolbar>
+  );
+};
 
 export default DefaultAutogenerationRuleActions;

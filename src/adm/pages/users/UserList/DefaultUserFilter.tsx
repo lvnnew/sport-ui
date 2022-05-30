@@ -46,7 +46,7 @@ const DefaultUserFilter: FC<any> = (props) => {
         reference='tenants'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
+        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
       </ReferenceInput>
     </Filter>
   );

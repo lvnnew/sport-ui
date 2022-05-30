@@ -19,11 +19,15 @@ const LoadableResourcesPage = Loadable({
 const LoadableMetaPage = Loadable({
   loader: () => import('./MetaPage'),
 });
+const LoadableDebugPage = Loadable({
+  loader: () => import('./utility/DebugPage'),
+});
 
 export const routes = [
   <Route element={<LoadableDashboard />} key='dashboard' path='/dashboard' />,
   <Route element={<LoadableFunctions />} key='functions' path='/functions' />,
   <Route element={<LoadableResourcesPage />} key='resources' path='/resources' />,
   <Route element={<LoadableMetaPage />} key='meta' path='/meta' />,
+  <Route element={<LoadableDebugPage />} key='debug' path='/debug' />,
   ...additionalRoutes,
 ];

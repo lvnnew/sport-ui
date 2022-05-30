@@ -3,6 +3,8 @@
 set -e
 set -v
 
+npm i -g runlify
+
 # Static checks
 yarn lint
 yarn build

@@ -86,7 +86,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} />
+              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
             </ReferenceInput>
           </Grid>
         </Grid>

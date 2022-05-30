@@ -2,18 +2,24 @@ import React from 'react';
 import {
   EditButton,
   TopToolbar,
+  usePermissions,
 } from 'react-admin';
 import OpenAudit from '../../../commonActions/OpenAudit';
+import {hasPermission} from '../../../../utils/permissions';
 import OpenHelp from '../../../commonActions/OpenHelp';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const DefaultStatActions = () => (
-  <TopToolbar sx={{alignItems: 'center'}}>
-    <OpenAudit entityTypeId='stat' />
-    <OpenHelp entityType='stats' />
-    <EditButton />
-  </TopToolbar>
-);
+const DefaultStatActions = () => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <TopToolbar sx={{alignItems: 'center'}}>
+      <OpenAudit entityTypeId='stat' />
+      <OpenHelp entityType='stats' />
+      {hasPermission(permissions, 'stats.update') && <EditButton />}
+    </TopToolbar>
+  );
+};
 
 export default DefaultStatActions;

@@ -6,12 +6,14 @@ import React, {
   useContext,
   useState,
   useCallback,
+  Dispatch,
+  SetStateAction,
 } from 'react';
 import {useHotkeys} from 'react-hotkeys-hook';
 
 export interface IDebugContext {
   debug: boolean;
-  setDebug: (debug: boolean) => void;
+  setDebug: Dispatch<SetStateAction<boolean>>;
 }
 
 interface IProps {
