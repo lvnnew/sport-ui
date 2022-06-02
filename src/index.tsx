@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Trackers from './Trackers';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Trackers />
     <App />
   </React.StrictMode>,
   document.querySelector('#root'),
