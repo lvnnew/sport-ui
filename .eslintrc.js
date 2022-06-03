@@ -11,7 +11,7 @@ module.exports = {
     'canonical',
     'canonical/react',
     // 'canonical/mocha',
-    'canonical/jest',
+    // 'canonical/jest',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'eslint:recommended',
