@@ -1,13 +1,19 @@
-import React, {FC, useCallback, useEffect, ReactElement} from 'react';
-import {FileField, FileInput as RaFileInput, FileInputProps as RaFileInputProps, useRecordContext} from 'react-admin';
+import React, {FC, useCallback, ReactElement} from 'react';
+import {
+  ImageField,
+  FileInput as RaFileInput,
+  FileInputProps as RaFileInputProps,
+  NonEmptyReferenceField,
+  FileField,
+} from 'react-admin';
 import {gql, useMutation} from '@apollo/client';
-import {useForm} from 'react-final-form';
-import {isEmpty} from 'ramda';
-
-import {fileStateToNewURL, fileStateToFail, isFile, changeFileState, fileStateToLoading} from './utils';
+import {useController} from 'react-hook-form';
 import log from '../../utils/log';
+import {makeStyles} from '@mui/styles';
 
-export type FileInputProps = Readonly<RaFileInputProps>;
+export type FileInputProps = Readonly<RaFileInputProps> & {
+  type?: 'image';
+};
 
 export type FileFieldState = {
   id?: string | number;
@@ -27,33 +33,29 @@ const SAVE_FILE = gql`
   }
 `;
 
+const useStyles = makeStyles(() => ({
+  img: {
+    '& > img': {
+      maxWidth: '100%',
+      maxHeight: '25vw',
+    },
+  },
+}));
+
+const isFile = (file: File | any): file is File => file instanceof File;
+
 export const FileInput: FC<FileInputProps> = (props) => {
+  const mc = useStyles();
   const {
-    children,
     onChange: onChangeOverridden,
+    type,
+    accept = type === 'image' ? 'image/png, image/jpeg, image/webp, image/svg' : undefined,
     ...rest
   } = props;
   const finalName = props.name || props.source;
 
-  const [loadFile] = useMutation<{ saveFile: {id: string, url: string} }>(SAVE_FILE);
-  const form = useForm(); // Todo: dont change ref
-  const record = useRecordContext();
-
-  useEffect(() => { // to type value
-    if (record && !isEmpty(record)) { // Todo: maybe need add work with choise
-      if (Array.isArray(record)) {
-        throw new TypeError('Array file is not supported');
-      }
-
-      form.change(
-        finalName,
-        changeFileState(
-          form.getState().values[finalName],
-          fileStateToNewURL(record.url, record.id, {type: record.mimetype} as File),
-        ),
-      );
-    }
-  }, [finalName, form, record]);
+  const [loadFile] = useMutation<{ saveFile: { id: string, url: string } }>(SAVE_FILE);
+  const {field} = useController({name: finalName});
 
   const onChange = useCallback(async (file: File | File[] | FileFieldState | FileFieldState[]) => {
     onChangeOverridden?.(file);
@@ -61,13 +63,7 @@ export const FileInput: FC<FileInputProps> = (props) => {
     const needLoadFileList: File[] = (Array.isArray(file) ? file : [file]).filter(isFile);
 
     for (const file of needLoadFileList) {
-      const newState = changeFileState(
-        form.getState().values[finalName],
-        fileStateToLoading(file.name),
-        file,
-      );
-
-      form.change(finalName, newState);
+      field.onChange(null);
 
       try {
         const result = await loadFile({variables: {file}});
@@ -79,38 +75,38 @@ export const FileInput: FC<FileInputProps> = (props) => {
           return;
         }
 
-        const {url, id} = savedFile;
-        const newState = changeFileState(
-          form.getState().values[finalName],
-          fileStateToNewURL(url, id, file),
-          file,
-        );
+        const {id} = savedFile;
 
-        form.change(finalName, newState);
+        field.onChange(id);
       } catch (error: any) {
         log.error(`Fail save file in back: ${error.message}`);
 
-        const newState = changeFileState(
-          form.getState().values[finalName],
-          fileStateToFail,
-          file,
-        );
-
-        form.change(finalName, newState);
+        // todo: off loader
+        field.onChange(null);
       }
     }
-  }, [loadFile, onChangeOverridden, finalName, form]);
-
-  if (!record) {
-    return null;
-  }
+  }, [loadFile, onChangeOverridden, field]);
 
   return (
     <RaFileInput
       onChange={onChange}
+      accept={accept}
       {...rest}
     >
-      {children ?? <FileField source='src' title='title' />}
+      <NonEmptyReferenceField
+        {...rest}
+        reference='files'
+        id={field.value}
+      >
+        {type === 'image' ? <ImageField
+          source='url'
+          title='originalName'
+          className={mc.img}
+        /> : <FileField
+          source='url'
+          title='originalName'
+        />}
+      </NonEmptyReferenceField>
     </RaFileInput>
   );
 };
