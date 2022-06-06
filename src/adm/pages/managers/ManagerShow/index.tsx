@@ -3,10 +3,10 @@ import React, {FC} from 'react';
 import {
   ShowProps,
 } from 'react-admin';
-import DefaultManagerShow from './DefaultManagerShow';
+import CustomManagerShow from './CustomManagerShow';
 
 const ManagerShow: FC<ShowProps> = (props: ShowProps) => (
-  <DefaultManagerShow {...props} />
+  <CustomManagerShow {...props} />
 );
 
 export default ManagerShow;
