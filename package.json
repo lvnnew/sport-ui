@@ -66,6 +66,7 @@
     "@types/jest": "^28.1.1",
     "@types/lru-cache": "^7.10.10",
     "@types/md5": "^2.3.2",
+    "@types/pluralize": "^0.0.29",
     "@types/ramda": "^0.28.14",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
@@ -73,12 +74,14 @@
     "@types/recharts": "^1.8.23",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "5.27.1",
+    "add": "^2.0.6",
     "craco-swc": "^0.5.1",
     "cross-env": "^7.0.3",
     "eslint-config-canonical": "^35.0.1",
     "eslint-plugin-jest": "^26.5.3",
     "eslint-plugin-react": "^7.30.0",
-    "utility-types": "^3.10.0"
+    "utility-types": "^3.10.0",
+    "yarn": "^1.22.19"
   },
   "eslintConfig": {
     "extends": "react-app"
