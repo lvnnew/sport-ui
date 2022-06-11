@@ -38,11 +38,16 @@ const DefaultManagerFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='languageId'
-        label={translate('catalogs.managers.fields.languageId')}
         reference='languages'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.managers.fields.languageId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <TextInput
         fullWidth
@@ -69,11 +74,16 @@ const DefaultManagerFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='unitId'
-        label={translate('catalogs.managers.fields.unitId')}
         reference='units'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.managers.fields.unitId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <BooleanInput
         fullWidth
@@ -87,11 +97,16 @@ const DefaultManagerFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='tenantId'
-        label={translate('catalogs.managers.fields.tenantId')}
         reference='tenants'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.managers.fields.tenantId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
     </Filter>
   );

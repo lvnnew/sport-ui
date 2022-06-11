@@ -23,19 +23,29 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='fromId'
-        label={translate('catalogs.delegations.fields.fromId')}
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.delegations.fields.fromId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <ReferenceInput
         source='toId'
-        label={translate('catalogs.delegations.fields.toId')}
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.delegations.fields.toId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <DateInput
         fullWidth

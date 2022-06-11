@@ -43,11 +43,16 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='parentId'
-              label={translate('catalogs.units.fields.parentId')}
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.units.fields.parentId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
         </Grid>

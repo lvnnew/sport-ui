@@ -34,21 +34,31 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='managerId'
-              label={translate('catalogs.managersToRoles.fields.managerId')}
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.managersToRoles.fields.managerId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='roleId'
-              label={translate('catalogs.managersToRoles.fields.roleId')}
               reference='roles'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.managersToRoles.fields.roleId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
         </Grid>

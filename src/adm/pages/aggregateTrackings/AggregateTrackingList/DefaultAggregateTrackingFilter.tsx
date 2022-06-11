@@ -18,11 +18,16 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
     <Filter {...props}>
       <ReferenceInput
         source='entityTypeId'
-        label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
         reference='entities'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <TextInput
         fullWidth

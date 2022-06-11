@@ -32,11 +32,16 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='messageTypeId'
-        label={translate('catalogs.messageTemplates.fields.messageTypeId')}
         reference='messageTypes'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.messageTemplates.fields.messageTypeId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
     </Filter>
   );

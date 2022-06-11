@@ -31,11 +31,16 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='userId'
-        label={translate('catalogs.appLogins.fields.userId')}
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.appLogins.fields.userId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
     </Filter>
   );

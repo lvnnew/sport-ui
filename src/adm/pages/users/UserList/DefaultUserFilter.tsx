@@ -42,11 +42,16 @@ const DefaultUserFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='tenantId'
-        label={translate('catalogs.users.fields.tenantId')}
         reference='tenants'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.users.fields.tenantId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
     </Filter>
   );

@@ -54,11 +54,16 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='entityTypeId'
-              label={translate('catalogs.auditLogs.fields.entityTypeId')}
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.auditLogs.fields.entityTypeId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -71,31 +76,46 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='actionTypeId'
-              label={translate('catalogs.auditLogs.fields.actionTypeId')}
               reference='auditLogActionTypes'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.auditLogs.fields.actionTypeId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='managerId'
-              label={translate('catalogs.auditLogs.fields.managerId')}
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.auditLogs.fields.managerId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='userId'
-              label={translate('catalogs.auditLogs.fields.userId')}
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.auditLogs.fields.userId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>

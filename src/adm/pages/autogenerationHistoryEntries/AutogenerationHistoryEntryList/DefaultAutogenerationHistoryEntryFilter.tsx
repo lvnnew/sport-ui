@@ -39,11 +39,16 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='autogenerationRuleId'
-        label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
         reference='autogenerationRules'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <DateInput
         fullWidth

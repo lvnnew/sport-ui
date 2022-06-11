@@ -27,11 +27,16 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='userId'
-        label={translate('catalogs.appRefreshTokens.fields.userId')}
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.appRefreshTokens.fields.userId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <TextInput
         fullWidth

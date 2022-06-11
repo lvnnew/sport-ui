@@ -27,11 +27,16 @@ const DefaultUnitFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='parentId'
-        label={translate('catalogs.units.fields.parentId')}
         reference='units'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.units.fields.parentId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
     </Filter>
   );

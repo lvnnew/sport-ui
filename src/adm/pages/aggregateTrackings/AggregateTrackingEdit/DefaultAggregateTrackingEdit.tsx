@@ -39,11 +39,16 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='entityTypeId'
-              label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>

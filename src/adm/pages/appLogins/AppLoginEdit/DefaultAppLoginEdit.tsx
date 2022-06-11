@@ -49,11 +49,16 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='userId'
-              label={translate('catalogs.appLogins.fields.userId')}
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.appLogins.fields.userId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
         </Grid>

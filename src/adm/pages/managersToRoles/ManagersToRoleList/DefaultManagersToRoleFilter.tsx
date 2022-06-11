@@ -21,19 +21,29 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='managerId'
-        label={translate('catalogs.managersToRoles.fields.managerId')}
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.managersToRoles.fields.managerId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <ReferenceInput
         source='roleId'
-        label={translate('catalogs.managersToRoles.fields.roleId')}
         reference='roles'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.managersToRoles.fields.roleId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
     </Filter>
   );

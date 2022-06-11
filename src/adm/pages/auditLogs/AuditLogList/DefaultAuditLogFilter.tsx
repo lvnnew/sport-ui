@@ -33,11 +33,16 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='entityTypeId'
-        label={translate('catalogs.auditLogs.fields.entityTypeId')}
         reference='entities'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.auditLogs.fields.entityTypeId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <TextInput
         fullWidth
@@ -46,27 +51,42 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       />
       <ReferenceInput
         source='actionTypeId'
-        label={translate('catalogs.auditLogs.fields.actionTypeId')}
         reference='auditLogActionTypes'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.auditLogs.fields.actionTypeId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <ReferenceInput
         source='managerId'
-        label={translate('catalogs.auditLogs.fields.managerId')}
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.auditLogs.fields.managerId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <ReferenceInput
         source='userId'
-        label={translate('catalogs.auditLogs.fields.userId')}
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
       >
-        <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+        <AutocompleteInput
+          fullWidth
+          label={translate('catalogs.auditLogs.fields.userId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
       </ReferenceInput>
       <BooleanInput
         fullWidth

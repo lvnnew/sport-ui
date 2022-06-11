@@ -63,11 +63,16 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='languageId'
-              label={translate('catalogs.managers.fields.languageId')}
               reference='languages'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.managers.fields.languageId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -104,11 +109,16 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='unitId'
-              label={translate('catalogs.managers.fields.unitId')}
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.managers.fields.unitId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -128,11 +138,16 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
           {debug && <Grid item xs={12} sm={6} md={3} lg={2}>
             <ReferenceInput
               source='tenantId'
-              label={translate('catalogs.managers.fields.tenantId')}
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
             >
-              <AutocompleteInput fullWidth optionText='title' defaultValue={null} parse={val => val || null} />
+              <AutocompleteInput
+                fullWidth
+                label={translate('catalogs.managers.fields.tenantId')}
+                optionText='title'
+                defaultValue={null}
+                parse={val => val || null}
+              />
             </ReferenceInput>
           </Grid>}
         </Grid>
