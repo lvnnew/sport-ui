@@ -3,6 +3,7 @@ import {AppBar as RaAppBar, ToggleThemeButton, LocalesMenuButton} from 'react-ad
 import {Box, Typography} from '@mui/material';
 import {Link} from 'react-router-dom';
 import {darkTheme, lightTheme} from './themes';
+import UserMenu from './UserMenu/UserMenu';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -19,6 +20,7 @@ const AppBar = (props: any) => (
     {...props}
     elevation={1}
     color='secondary'
+    userMenu={<UserMenu />}
   >
     <Typography
       variant='h6'
