@@ -1,19 +1,19 @@
-import React, {FC, useCallback, ReactElement} from 'react';
+import React, {FC, ReactElement, useRef} from 'react';
 import {
   ImageField,
   FileInput as RaFileInput,
   FileInputProps as RaFileInputProps,
-  NonEmptyReferenceField,
   FileField,
+  NonEmptyReferenceField,
 } from 'react-admin';
 import {gql, useMutation} from '@apollo/client';
 import {useController} from 'react-hook-form';
 import log from '../../utils/log';
 import {makeStyles} from '@mui/styles';
 
-export type FileInputProps = Readonly<RaFileInputProps> & {
+export type FileInputProps = Readonly<RaFileInputProps & {
   type?: 'image';
-};
+}>;
 
 export type FileFieldState = {
   id?: string | number;
@@ -42,32 +42,59 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const FileReferenceField: FC<Pick<FileInputProps, 'type'>> = ({type, ...rest}) => {
+  const mc = useStyles();
+
+  return (
+    <NonEmptyReferenceField
+      {...rest}
+      reference='files'
+      id={(rest as any).record} // This field adds the component above
+    >
+      {type === 'image' ? <ImageField
+        source='url'
+        title='originalName'
+        className={mc.img}
+      /> : <FileField
+        source='url'
+        title='originalName'
+      />}
+    </NonEmptyReferenceField>
+  );
+};
+
 const isFile = (file: File | any): file is File => file instanceof File;
 
 export const FileInput: FC<FileInputProps> = (props) => {
-  const mc = useStyles();
   const {
     onChange: onChangeOverridden,
     type,
+    multiple,
     accept = type === 'image' ? 'image/png, image/jpeg, image/webp, image/svg' : undefined,
     ...rest
   } = props;
   const finalName = props.name || props.source;
 
-  const [loadFile] = useMutation<{ saveFile: { id: string, url: string } }>(SAVE_FILE);
+  const [loadFile] = useMutation<{ saveFile: { id: number, url: string } }>(SAVE_FILE);
   const {field} = useController({name: finalName});
+  const refValue = useRef<Array<number | FileFieldState>>(field.value); // Only for multiple field
+  refValue.current = field.value;
 
-  const onChange = useCallback(async (file: File | File[] | FileFieldState | FileFieldState[]) => {
+  // Todo: minimize
+  const onChange = async (file: File | File[] | FileFieldState | FileFieldState[]) => {
     onChangeOverridden?.(file);
 
     const needLoadFileList: File[] = (Array.isArray(file) ? file : [file]).filter(isFile);
+    // Todo: need check const value
 
     for (const file of needLoadFileList) {
-      field.onChange(null);
+      if (!multiple) {
+        field.onChange(null);
+      }
 
-      try {
-        const result = await loadFile({variables: {file}});
+      // todo: check isMount...
 
+      loadFile({variables: {file}}).then((result) => {
         // Todo: change after server saving
         const savedFile = result.data?.saveFile;
 
@@ -77,36 +104,46 @@ export const FileInput: FC<FileInputProps> = (props) => {
 
         const {id} = savedFile;
 
-        field.onChange(id);
-      } catch (error: any) {
+        if (multiple) {
+          const value = refValue.current ?? [];
+          const currentIdx = value.findIndex((f) => typeof f === 'object' && f.rawFile === file);
+
+          // eslint-disable-next-line no-negated-condition
+          if (currentIdx !== -1) {
+            const newValue = [...value];
+            newValue.splice(currentIdx, 1, id);
+
+            field.onChange(newValue);
+            refValue.current = newValue;
+          } else {
+            // todo: throw some error with status failed load image, maybe set notify
+          }
+        } else {
+          field.onChange(id);
+        }
+      }).catch((error: any) => {
         log.error(`Fail save file in back: ${error.message}`);
 
         // todo: off loader
-        field.onChange(null);
-      }
+        if (multiple) {
+          // todo: remove obj from values, Unblock save button
+        } else {
+          field.onChange(null);
+        }
+      });
     }
-  }, [loadFile, onChangeOverridden, field]);
+  };
 
   return (
     <RaFileInput
       onChange={onChange}
       accept={accept}
+      multiple={multiple}
       {...rest}
     >
-      <NonEmptyReferenceField
-        {...rest}
-        reference='files'
-        id={field.value}
-      >
-        {type === 'image' ? <ImageField
-          source='url'
-          title='originalName'
-          className={mc.img}
-        /> : <FileField
-          source='url'
-          title='originalName'
-        />}
-      </NonEmptyReferenceField>
+      <FileReferenceField type={type} {...rest} />
     </RaFileInput>
   );
 };
+
+// todo: добавить блокирование кнопки сохранения, когда файл загружается.
