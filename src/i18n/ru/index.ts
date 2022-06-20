@@ -81,6 +81,7 @@ const translationMessages: TranslationMessages = {
     minValue: 'Минимальное значение',
     noSpaces: 'Пробелы запрещены.',
     noDigits: 'Цифры запрещены.',
+    passwordRegExp: 'Пароль должен содержать строчные и прописные буквы, цифры и спецсимволы.',
     notFutureDate: 'Выбор будущей даты не допустим',
     required: 'Это обязательное поле',
     onlyLatinLetters: 'Разрешено использовать только латинские буквы. ',

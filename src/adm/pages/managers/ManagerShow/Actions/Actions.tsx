@@ -10,7 +10,7 @@ import {hasPermission, hasAnyPermission} from '../../../../../utils/permissions'
 import OpenAudit from '../../../../commonActions/OpenAudit';
 import OpenHelp from '../../../../commonActions/OpenHelp';
 import DeactivateManagerButton from './DeactivateManagerButton';
-import ChangePasswordButton from './ChangePasswordButton';
+import ChangeManagerPasswordButton from './ChangeManagerPasswordButton';
 
 const useStyles = makeStyles(() => createStyles({
   toolbar: {alignItems: 'center'},
@@ -30,7 +30,7 @@ const Actions = () => {
       {record.active && hasPermission(permissions, 'managers.deactivateManagers') &&
         <DeactivateManagerButton managerIds={[record.id as number]} />}
       {hasPermission(permissions, 'managers.changePassword') &&
-        <ChangePasswordButton />}
+        <ChangeManagerPasswordButton />}
       {hasAnyPermission(permissions, ['auditLogs.all', 'help.getHelp']) && (
         <>
           <OpenAudit entityTypeId='manager' />

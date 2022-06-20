@@ -15,6 +15,7 @@ import {gql, useMutation} from '@apollo/client';
 import {yupResolver} from '@hookform/resolvers/yup';
 import log from '../../../../../utils/log';
 import ButtonModal, {useModal} from '../../../../../uiLib/ButtonModal';
+import {passwordRegExp} from '../../../../../utils/regExps';
 
 const useStyles = makeStyles(() => createStyles({
   buttonProgress: {
@@ -26,19 +27,19 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-export const CHANGE_PASSWORD = gql`
-  mutation changePassword(
+export const CHANGE_PASSWORD_BY_MANAGER_ID = gql`
+  mutation changePasswordByManagerId(
     $password: String!, 
     $managerId: Int!
   ) {
-    changePassword(
+    changePasswordByManagerId(
       password: $password
       managerId: $managerId
       )
   }
 `;
 
-const ChangePasswordButtonForm: FC = () => {
+const ChangeManagerPasswordButtonForm: FC = () => {
   const classes = useStyles();
   const record = useRecordContext();
   const {close} = useModal();
@@ -46,11 +47,11 @@ const ChangePasswordButtonForm: FC = () => {
   const t = useTranslate();
   const notify = useNotify();
 
-  const [changePassword, {loading}] = useMutation(CHANGE_PASSWORD);
+  const [changePasswordByManagerId, {loading}] = useMutation(CHANGE_PASSWORD_BY_MANAGER_ID);
 
   const onSubmit = useCallback(async (state: any) => {
     try {
-      await changePassword({
+      await changePasswordByManagerId({
         variables: {
           managerId: record?.id,
           password: state.password,
@@ -63,11 +64,16 @@ const ChangePasswordButtonForm: FC = () => {
 
     close();
     refresh();
-  }, [notify, close, refresh, changePassword, record]);
+  }, [notify, close, refresh, changePasswordByManagerId, record]);
 
   const resolver = useMemo(() => yupResolver(
     Yup.object({
-      password: Yup.string().required().typeError(t('validation.required')),
+      password: Yup.string()
+        .matches(passwordRegExp, t('validation.passwordRegExp'))
+        .min(6, `${t('validation.minLength')} 6.`)
+        .max(30, `${t('validation.maxLength')} 30.`)
+        .required()
+        .typeError(t('validation.required')),
     }),
   ), [t]);
 
@@ -78,7 +84,7 @@ const ChangePasswordButtonForm: FC = () => {
   return (
     <Form onSubmit={onSubmit} resolver={resolver}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid item xs={12} marginTop={0.5}>
           <TextInput source='password' label={t('app.newPassword')} />
         </Grid>
         <Grid item xs={12}>
@@ -99,7 +105,7 @@ const ChangePasswordButtonForm: FC = () => {
   );
 };
 
-const ChangePasswordButton = () => {
+const ChangeManagerPasswordButton = () => {
   const t = useTranslate();
 
   return (
@@ -109,9 +115,9 @@ const ChangePasswordButton = () => {
       color='primary'
       variant='contained'
     >
-      <ChangePasswordButtonForm />
+      <ChangeManagerPasswordButtonForm />
     </ButtonModal>
   );
 };
 
-export default ChangePasswordButton;
+export default ChangeManagerPasswordButton;
