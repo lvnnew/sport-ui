@@ -19,6 +19,7 @@ import {gql, useMutation} from '@apollo/client';
 import {yupResolver} from '@hookform/resolvers/yup';
 import ButtonModal, {useModal} from '../../uiLib/ButtonModal';
 import log from '../../utils/log';
+import {passwordRegExp} from '../../utils/regExps';
 
 const useStyles = makeStyles(() => createStyles({
   buttonProgress: {
@@ -40,7 +41,7 @@ export const CHANGE_PASSWORD = gql`
   }
 `;
 
-const ChangeManagerPasswordButtonForm: FC = () => {
+const ChangeMyPasswordForm: FC = () => {
   const classes = useStyles();
   const {close} = useModal();
   const refresh = useRefresh();
@@ -67,14 +68,19 @@ const ChangeManagerPasswordButtonForm: FC = () => {
 
   const resolver = useMemo(() => yupResolver(
     Yup.object({
-      password: Yup.string().required().typeError(t('validation.required')),
+      password: Yup.string()
+        .matches(passwordRegExp, t('validation.passwordRegExp'))
+        .min(6, `${t('validation.minLength')} 6.`)
+        .max(30, `${t('validation.maxLength')} 30.`)
+        .required()
+        .typeError(t('validation.required')),
     }),
   ), [t]);
 
   return (
     <Form onSubmit={onSubmit} resolver={resolver}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid item xs={12} marginTop={0.5}>
           <TextInput source='password' label={t('app.newPassword')} />
         </Grid>
         <Grid item xs={12}>
@@ -110,7 +116,7 @@ const ChangeMyPassword: FC = () => {
           buttonText={t('app.changePassword')}
           style={{color: 'grey'}}
         >
-          <ChangeManagerPasswordButtonForm />
+          <ChangeMyPasswordForm />
         </ButtonModal>
       </ListItemText>
     </MenuItem>
