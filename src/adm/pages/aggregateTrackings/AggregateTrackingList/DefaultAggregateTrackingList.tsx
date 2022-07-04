@@ -10,7 +10,6 @@ import {
   useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
-import RegistrarField from '../../../../raUiLib/RegistrarField';
 import AggregateTrackingFilter from './AggregateTrackingFilter';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -29,7 +28,6 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
         <DateField source='lastAggregatesComputed' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')} showTime />
         <DateField source='lastEntityUpdate' label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')} showTime />
         <NumberField source='aggregateVersion' label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')} />
-        <RegistrarField label='Registrar' />
       </Datagrid>
     </List>
   );
