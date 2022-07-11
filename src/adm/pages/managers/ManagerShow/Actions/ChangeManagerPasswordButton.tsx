@@ -14,7 +14,8 @@ import {makeStyles, createStyles} from '@mui/styles';
 import {gql, useMutation} from '@apollo/client';
 import {yupResolver} from '@hookform/resolvers/yup';
 import log from '../../../../../utils/log';
-import ButtonModal, {useModal} from '../../../../../uiLib/ButtonModal';
+import ButtonModal from '../../../../../uiLib/ButtonModal';
+import {useModal} from '../../../../../uiLib/contexts/ModalContext';
 import {passwordRegExp} from '../../../../../utils/regExps';
 
 const useStyles = makeStyles(() => createStyles({

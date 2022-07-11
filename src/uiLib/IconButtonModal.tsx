@@ -1,26 +1,24 @@
 import React, {
   FC,
   useState,
+  ReactElement,
   useCallback,
-  MouseEvent,
-  ComponentProps,
 } from 'react';
-import {DialogTitle, Dialog, DialogActions, DialogContent, Button} from '@mui/material';
+import {DialogTitle, Dialog, DialogActions, DialogContent, Button, IconButton} from '@mui/material';
 import {ModalProvider} from './contexts/ModalContext';
 
-interface ButtonModalProps extends ComponentProps<typeof Button> {
+interface IconButtonModalProps {
+  Icon: ReactElement<any, any>;
   dialogTitleText: string;
   children: React.ReactNode;
-  buttonText: string;
 }
 
-const ButtonModal: FC<ButtonModalProps> = (props) => {
-  const {buttonText, dialogTitleText, children, ...rest} = props;
+const IconButtonModal: FC<IconButtonModalProps> = (props) => {
+  const {Icon, dialogTitleText, children} = props;
 
   const [open, setOpen] = useState(false);
 
-  const handleClickOpen = (event: MouseEvent) => {
-    event.stopPropagation();
+  const handleClickOpen = () => {
     setOpen(true);
   };
 
@@ -29,14 +27,13 @@ const ButtonModal: FC<ButtonModalProps> = (props) => {
   }, [setOpen]);
 
   return (
-    <div onClick={useCallback((event: MouseEvent) => event.stopPropagation(), [])}>
-      <Button
+    <div>
+      <IconButton
         aria-label='settings'
         onClick={handleClickOpen}
-        {...rest}
       >
-        {buttonText}
-      </Button>
+        {Icon}
+      </IconButton>
       <Dialog onClose={handleClose} open={open}>
         <DialogTitle>{dialogTitleText}</DialogTitle>
         <DialogContent>
@@ -54,4 +51,4 @@ const ButtonModal: FC<ButtonModalProps> = (props) => {
   );
 };
 
-export default ButtonModal;
+export default IconButtonModal;

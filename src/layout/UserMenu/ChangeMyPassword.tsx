@@ -17,7 +17,8 @@ import {Button, Grid, CircularProgress} from '@mui/material';
 import {makeStyles, createStyles} from '@mui/styles';
 import {gql, useMutation} from '@apollo/client';
 import {yupResolver} from '@hookform/resolvers/yup';
-import ButtonModal, {useModal} from '../../uiLib/ButtonModal';
+import ButtonModal from '../../uiLib/ButtonModal';
+import {useModal} from '../../uiLib/contexts/ModalContext';
 import log from '../../utils/log';
 import {passwordRegExp} from '../../utils/regExps';
 
