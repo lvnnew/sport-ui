@@ -24,6 +24,8 @@ const translationMessages: TranslationMessages = {
     reviewReason: 'Review reason',
     createManualAccounting: 'Create manual accounting',
 
+    newPassword: 'New password',
+    changePassword: 'Change password',
     addRole: 'Add role',
     addPermission: 'Add permission',
     mainTab: 'Summary',

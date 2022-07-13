@@ -24,6 +24,8 @@ const translationMessages: TranslationMessages = {
     reviewReason: 'Причина отклонения',
     createManualAccounting: 'Создать ручное начисление',
 
+    newPassword: 'Новый пароль',
+    changePassword: 'Изменить пароль',
     addRole: 'Добавить роль',
     addPermission: 'Добавить разрешение',
     mainTab: 'Основная',
