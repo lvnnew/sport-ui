@@ -45,6 +45,7 @@ const ListWidget: FC<ListWidgetProps> = ({
       <CardContent sx={{pt: 0.5, '&:last-child': {p: 2}}}>
         <List
           empty={false}
+          disableSyncWithLocation={true}
           filter={{
             ...rest.filter,
             [target]: record[source],
