@@ -9,7 +9,6 @@ import {
 import {gql, useMutation} from '@apollo/client';
 import {useController} from 'react-hook-form';
 import log from '../../utils/log';
-import {makeStyles} from '@mui/styles';
 
 export type FileInputProps = Readonly<RaFileInputProps & {
   type?: 'image';
@@ -33,31 +32,27 @@ const SAVE_FILE = gql`
   }
 `;
 
-const useStyles = makeStyles(() => ({
-  img: {
-    '& > img': {
-      maxWidth: '100%',
-      maxHeight: '25vw',
-    },
-  },
-}));
-
-const FileReferenceField: FC<Pick<FileInputProps, 'type'>> = ({type, ...rest}) => {
-  const mc = useStyles();
-
-  const record = (rest as any).record;
-
-  const render = () => (type === 'image' ? <ImageField
+const Field: FC<Pick<FileInputProps, 'type'>> = ({type}) => (
+  type === 'image' ? <ImageField
     source='url'
     title='originalName'
-    className={mc.img}
+    sx={{
+      '& > img': {
+        maxWidth: '100%',
+        maxHeight: '25vw',
+      },
+    }}
   /> : <FileField
     source='url'
     title='originalName'
-  />);
+  />
+);
+
+const FileReferenceField: FC<Pick<FileInputProps, 'type'>> = ({type, ...rest}) => {
+  const record = (rest as any).record;
 
   if (typeof record !== 'number') {
-    return render();
+    return <Field type={type} />;
   }
 
   return (
@@ -66,7 +61,7 @@ const FileReferenceField: FC<Pick<FileInputProps, 'type'>> = ({type, ...rest}) =
       reference='files'
       id={record} // This field adds the component above
     >
-      {render()}
+      <Field type={type} />
     </NonEmptyReferenceField>
   );
 };
