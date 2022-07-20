@@ -45,20 +45,28 @@ const useStyles = makeStyles(() => ({
 const FileReferenceField: FC<Pick<FileInputProps, 'type'>> = ({type, ...rest}) => {
   const mc = useStyles();
 
+  const record = (rest as any).record;
+
+  const render = () => (type === 'image' ? <ImageField
+    source='url'
+    title='originalName'
+    className={mc.img}
+  /> : <FileField
+    source='url'
+    title='originalName'
+  />);
+
+  if (typeof record !== 'number') {
+    return render();
+  }
+
   return (
     <NonEmptyReferenceField
       {...rest}
       reference='files'
-      id={(rest as any).record} // This field adds the component above
+      id={record} // This field adds the component above
     >
-      {type === 'image' ? <ImageField
-        source='url'
-        title='originalName'
-        className={mc.img}
-      /> : <FileField
-        source='url'
-        title='originalName'
-      />}
+      {render()}
     </NonEmptyReferenceField>
   );
 };
