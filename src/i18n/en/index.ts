@@ -25,7 +25,7 @@ const translationMessages: TranslationMessages = {
     createManualAccounting: 'Create manual accounting',
 
     newPassword: 'New password',
-    changePassword: 'Change password',
+    changePasswordByManagerId: 'Change password',
     addRole: 'Add role',
     addPermission: 'Add permission',
     mainTab: 'Summary',

@@ -29,7 +29,7 @@ const Actions = () => {
     <TopToolbar className={classes.toolbar}>
       {record.active && hasPermission(permissions, 'managers.deactivateManagers') &&
         <DeactivateManagerButton managerIds={[record.id as number]} />}
-      {hasPermission(permissions, 'managers.changePassword') &&
+      {hasPermission(permissions, 'managers.changePasswordByManagerId') &&
         <ChangeManagerPasswordButton />}
       {hasAnyPermission(permissions, ['auditLogs.all', 'help.getHelp']) && (
         <>

@@ -33,10 +33,10 @@ const useStyles = makeStyles(() => createStyles({
 }));
 
 export const CHANGE_PASSWORD = gql`
-  mutation changeManagerPassword(
+  mutation changePassword(
     $password: String!
   ) {
-    changeManagerPassword(
+    changePassword(
       password: $password
     )
   }
@@ -49,11 +49,11 @@ const ChangeMyPasswordForm: FC = () => {
   const t = useTranslate();
   const notify = useNotify();
 
-  const [changeManagerPassword, {loading}] = useMutation(CHANGE_PASSWORD);
+  const [changePassword, {loading}] = useMutation(CHANGE_PASSWORD);
 
   const onSubmit = useCallback(async (state: any) => {
     try {
-      await changeManagerPassword({
+      await changePassword({
         variables: {
           password: state.password,
         },
@@ -65,7 +65,7 @@ const ChangeMyPasswordForm: FC = () => {
 
     close();
     refresh();
-  }, [notify, close, refresh, changeManagerPassword]);
+  }, [notify, close, refresh, changePassword]);
 
   const resolver = useMemo(() => yupResolver(
     Yup.object({
@@ -113,8 +113,8 @@ const ChangeMyPassword: FC = () => {
       </ListItemIcon>
       <ListItemText>
         <ButtonModal
-          dialogTitleText={t('app.changePassword')}
-          buttonText={t('app.changePassword')}
+          dialogTitleText={t('app.changePasswordByManagerId')}
+          buttonText={t('app.changePasswordByManagerId')}
           style={{color: 'grey'}}
         >
           <ChangeMyPasswordForm />

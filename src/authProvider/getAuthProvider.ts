@@ -18,7 +18,7 @@ export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 
 export const PERMISSIONS_QUERY = gql`
   query {
-    getManagerPermissions
+    getPermissions
   }
 `;
 
@@ -104,9 +104,9 @@ const getAuthProvider: (
 
       const {data} = await getPermissionsCall(client);
 
-      if (data.getManagerPermissions) {
-        // permissionsCache.set(cacheKey, data.getManagerPermissions);
-        localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(data.getManagerPermissions));
+      if (data.getPermissions) {
+        // permissionsCache.set(cacheKey, data.getPermissions);
+        localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(data.getPermissions));
       }
     }
 

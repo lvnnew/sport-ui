@@ -25,7 +25,7 @@ const translationMessages: TranslationMessages = {
     createManualAccounting: 'Создать ручное начисление',
 
     newPassword: 'Новый пароль',
-    changePassword: 'Изменить пароль',
+    changePasswordByManagerId: 'Изменить пароль',
     addRole: 'Добавить роль',
     addPermission: 'Добавить разрешение',
     mainTab: 'Основная',

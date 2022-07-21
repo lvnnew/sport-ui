@@ -111,8 +111,8 @@ const ChangeManagerPasswordButton = () => {
 
   return (
     <ButtonModal
-      dialogTitleText={t('app.changePassword')}
-      buttonText={t('app.changePassword')}
+      dialogTitleText={t('app.changePasswordByManagerId')}
+      buttonText={t('app.changePasswordByManagerId')}
       color='primary'
       variant='contained'
     >
