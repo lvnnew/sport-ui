@@ -6,6 +6,7 @@ import {ApolloClient, NormalizedCacheObject, gql, ApolloQueryResult} from '@apol
 const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
 const PERMISSINS_STORAGE_KEY = 'permissions';
+const ROLES_STORAGE_KEY = 'roles';
 
 // const permissionsCache = new LRUCache({
 //   ttl: 1000 * 60 * 10,
@@ -19,6 +20,7 @@ export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 const PERMISSIONS_QUERY = gql`
   query {
     getPermissions
+    getRoles
   }
 `;
 
@@ -59,7 +61,7 @@ const getAuthProvider: (
 
         return response.json();
       })
-      .then(({id, token, fullName, permissions}) => {
+      .then(({id, token, fullName, permissions, roles}) => {
         localStorage.setItem(JWT_STORAGE_KEY, token);
         localStorage.setItem(IDENTITY_STORAGE_KEY, JSON.stringify({
           id,
@@ -67,6 +69,7 @@ const getAuthProvider: (
           avatar: 'some avatar',
         }));
         localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(permissions));
+        localStorage.setItem(ROLES_STORAGE_KEY, JSON.stringify(roles));
         onLogin();
       });
   },
@@ -86,6 +89,7 @@ const getAuthProvider: (
   logout: async () => {
     localStorage.removeItem(JWT_STORAGE_KEY);
     localStorage.removeItem(PERMISSINS_STORAGE_KEY);
+    localStorage.removeItem(ROLES_STORAGE_KEY);
     // permissionsCache.reset();
   },
   getIdentity: async () => {
@@ -107,6 +111,10 @@ const getAuthProvider: (
       if (data.getPermissions) {
         // permissionsCache.set(cacheKey, data.getPermissions);
         localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(data.getPermissions));
+      }
+
+      if (data.getRoles) {
+        localStorage.setItem(ROLES_STORAGE_KEY, JSON.stringify(data.getRoles));
       }
     }
 
