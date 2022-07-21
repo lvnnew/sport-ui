@@ -16,7 +16,7 @@ const PERMISSINS_STORAGE_KEY = 'permissions';
 
 export const getJwtToken = () => localStorage.getItem(JWT_STORAGE_KEY);
 
-export const PERMISSIONS_QUERY = gql`
+const PERMISSIONS_QUERY = gql`
   query {
     getPermissions
   }
