@@ -36,7 +36,6 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
             <TextInput
               fullWidth
               source='title'
-              defaultValue={null}
               label={translate('catalogs.units.fields.title')}
             />
           </Grid>
