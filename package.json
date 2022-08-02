@@ -21,7 +21,7 @@
     "@mui/styles": "^5.9.3",
     "@mui/x-data-grid": "^5.15.0",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/user-event": "^14.3.0",
+    "@testing-library/user-event": "^14.4.0",
     "apollo-upload-client": "^17.0.0",
     "classnames": "^2.3.1",
     "dayjs": "^1.11.4",
