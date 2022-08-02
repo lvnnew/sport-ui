@@ -19,6 +19,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         label={translate('catalogs.managers.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth
@@ -40,9 +41,12 @@ const DefaultManagerFilter: FC<any> = (props) => {
         source='languageId'
         reference='languages'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.managers.fields.languageId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.managers.fields.languageId')}
           optionText='title'
           defaultValue={null}
@@ -76,9 +80,12 @@ const DefaultManagerFilter: FC<any> = (props) => {
         source='unitId'
         reference='units'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.managers.fields.unitId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.managers.fields.unitId')}
           optionText='title'
           defaultValue={null}
@@ -99,9 +106,12 @@ const DefaultManagerFilter: FC<any> = (props) => {
         source='tenantId'
         reference='tenants'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.managers.fields.tenantId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.managers.fields.tenantId')}
           optionText='title'
           defaultValue={null}

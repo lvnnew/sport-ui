@@ -18,6 +18,7 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
         label={translate('catalogs.appLogins.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth
@@ -33,9 +34,12 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
         source='userId'
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.appLogins.fields.userId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.appLogins.fields.userId')}
           optionText='title'
           defaultValue={null}

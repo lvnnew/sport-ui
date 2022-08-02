@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListRolesWidgetProps extends
-Omit<ListWigetProps<Role>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Role>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllRolesArgs {
   children?: FC<Role>,
 }
@@ -67,6 +67,7 @@ const ListRolesWidget: FC<ListRolesWidgetProps> = ({
   return (
     <ListWiget<Role>
       {...rest}
+      source='roles'
       options={{
         variables: {
           page,

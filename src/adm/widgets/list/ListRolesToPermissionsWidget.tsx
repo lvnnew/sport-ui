@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListRolesToPermissionsWidgetProps extends
-Omit<ListWigetProps<RolesToPermission>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<RolesToPermission>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllRolesToPermissionsArgs {
   children?: FC<RolesToPermission>,
 }
@@ -64,6 +64,7 @@ const ListRolesToPermissionsWidget: FC<ListRolesToPermissionsWidgetProps> = ({
   return (
     <ListWiget<RolesToPermission>
       {...rest}
+      source='rolesToPermissions'
       options={{
         variables: {
           page,

@@ -16,6 +16,7 @@ const DefaultLanguageFilter: FC<any> = (props) => {
         label={translate('catalogs.languages.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

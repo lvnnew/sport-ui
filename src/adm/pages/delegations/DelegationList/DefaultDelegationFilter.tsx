@@ -20,14 +20,18 @@ const DefaultDelegationFilter: FC<any> = (props) => {
         label={translate('catalogs.delegations.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <ReferenceInput
         source='fromId'
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.delegations.fields.fromId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.delegations.fields.fromId')}
           optionText='title'
           defaultValue={null}
@@ -38,9 +42,12 @@ const DefaultDelegationFilter: FC<any> = (props) => {
         source='toId'
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.delegations.fields.toId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.delegations.fields.toId')}
           optionText='title'
           defaultValue={null}

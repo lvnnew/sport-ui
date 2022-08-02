@@ -20,6 +20,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         label={translate('catalogs.auditLogs.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <DateTimeInput
         fullWidth
@@ -35,9 +36,12 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='entityTypeId'
         reference='entities'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.auditLogs.fields.entityTypeId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.auditLogs.fields.entityTypeId')}
           optionText='title'
           defaultValue={null}
@@ -53,9 +57,12 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='actionTypeId'
         reference='auditLogActionTypes'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.auditLogs.fields.actionTypeId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.auditLogs.fields.actionTypeId')}
           optionText='title'
           defaultValue={null}
@@ -66,9 +73,12 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.auditLogs.fields.managerId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.auditLogs.fields.managerId')}
           optionText='title'
           defaultValue={null}
@@ -79,9 +89,12 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='userId'
         reference='users'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.auditLogs.fields.userId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.auditLogs.fields.userId')}
           optionText='title'
           defaultValue={null}

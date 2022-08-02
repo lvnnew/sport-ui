@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAdmRefreshTokensWidgetProps extends
-Omit<ListWigetProps<AdmRefreshToken>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AdmRefreshToken>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAdmRefreshTokensArgs {
   children?: FC<AdmRefreshToken>,
 }
@@ -67,6 +67,7 @@ const ListAdmRefreshTokensWidget: FC<ListAdmRefreshTokensWidgetProps> = ({
   return (
     <ListWiget<AdmRefreshToken>
       {...rest}
+      source='admRefreshTokens'
       options={{
         variables: {
           page,

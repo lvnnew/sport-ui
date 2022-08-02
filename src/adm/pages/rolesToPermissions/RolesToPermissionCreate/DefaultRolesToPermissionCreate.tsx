@@ -36,9 +36,12 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
               source='roleId'
               reference='roles'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.rolesToPermissions.fields.roleId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.rolesToPermissions.fields.roleId')}
                 optionText='title'
                 defaultValue={null}
@@ -51,9 +54,12 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
               source='permissionId'
               reference='permissions'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.rolesToPermissions.fields.permissionId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.rolesToPermissions.fields.permissionId')}
                 optionText='title'
                 defaultValue={null}

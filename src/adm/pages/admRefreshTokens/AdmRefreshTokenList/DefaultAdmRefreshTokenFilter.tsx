@@ -19,6 +19,7 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
         label={translate('catalogs.admRefreshTokens.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <DateTimeInput
         fullWidth
@@ -29,9 +30,12 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.admRefreshTokens.fields.managerId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.admRefreshTokens.fields.managerId')}
           optionText='title'
           defaultValue={null}

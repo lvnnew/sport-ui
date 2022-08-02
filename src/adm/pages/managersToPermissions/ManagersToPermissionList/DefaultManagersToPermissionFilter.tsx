@@ -18,14 +18,18 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
         label={translate('catalogs.managersToPermissions.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <ReferenceInput
         source='managerId'
         reference='managers'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.managersToPermissions.fields.managerId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.managersToPermissions.fields.managerId')}
           optionText='title'
           defaultValue={null}
@@ -36,9 +40,12 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
         source='permissionId'
         reference='permissions'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.managersToPermissions.fields.permissionId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.managersToPermissions.fields.permissionId')}
           optionText='title'
           defaultValue={null}

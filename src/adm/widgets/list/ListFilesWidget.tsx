@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListFilesWidgetProps extends
-Omit<ListWigetProps<File>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<File>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllFilesArgs {
   children?: FC<File>,
 }
@@ -73,6 +73,7 @@ const ListFilesWidget: FC<ListFilesWidgetProps> = ({
   return (
     <ListWiget<File>
       {...rest}
+      source='files'
       options={{
         variables: {
           page,

@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListTagsWidgetProps extends
-Omit<ListWigetProps<Tag>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Tag>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllTagsArgs {
   children?: FC<Tag>,
 }
@@ -61,6 +61,7 @@ const ListTagsWidget: FC<ListTagsWidgetProps> = ({
   return (
     <ListWiget<Tag>
       {...rest}
+      source='tags'
       options={{
         variables: {
           page,

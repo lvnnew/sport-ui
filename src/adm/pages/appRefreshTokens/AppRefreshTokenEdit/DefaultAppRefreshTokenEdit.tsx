@@ -46,9 +46,12 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
               source='userId'
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.appRefreshTokens.fields.userId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.appRefreshTokens.fields.userId')}
                 optionText='title'
                 defaultValue={null}

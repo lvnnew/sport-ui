@@ -18,6 +18,7 @@ const DefaultAutogenerationRuleFilter: FC<any> = (props) => {
         label={translate('catalogs.autogenerationRules.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

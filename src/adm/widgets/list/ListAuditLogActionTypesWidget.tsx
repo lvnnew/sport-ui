@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAuditLogActionTypesWidgetProps extends
-Omit<ListWigetProps<AuditLogActionType>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AuditLogActionType>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAuditLogActionTypesArgs {
   children?: FC<AuditLogActionType>,
 }
@@ -61,6 +61,7 @@ const ListAuditLogActionTypesWidget: FC<ListAuditLogActionTypesWidgetProps> = ({
   return (
     <ListWiget<AuditLogActionType>
       {...rest}
+      source='auditLogActionTypes'
       options={{
         variables: {
           page,

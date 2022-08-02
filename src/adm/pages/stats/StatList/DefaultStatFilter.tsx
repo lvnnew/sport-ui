@@ -18,6 +18,7 @@ const DefaultStatFilter: FC<any> = (props) => {
         label={translate('catalogs.stats.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <DateTimeInput
         fullWidth

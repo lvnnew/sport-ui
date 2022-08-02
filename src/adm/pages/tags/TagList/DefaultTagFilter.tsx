@@ -16,6 +16,7 @@ const DefaultTagFilter: FC<any> = (props) => {
         label={translate('catalogs.tags.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListTenantsWidgetProps extends
-Omit<ListWigetProps<Tenant>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Tenant>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllTenantsArgs {
   children?: FC<Tenant>,
 }
@@ -64,6 +64,7 @@ const ListTenantsWidget: FC<ListTenantsWidgetProps> = ({
   return (
     <ListWiget<Tenant>
       {...rest}
+      source='tenants'
       options={{
         variables: {
           page,

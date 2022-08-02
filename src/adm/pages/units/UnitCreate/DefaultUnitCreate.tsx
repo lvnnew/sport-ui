@@ -44,9 +44,12 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
               source='parentId'
               reference='units'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.units.fields.parentId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.units.fields.parentId')}
                 optionText='title'
                 defaultValue={null}

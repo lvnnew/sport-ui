@@ -68,9 +68,12 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
               source='tenantId'
               reference='tenants'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.users.fields.tenantId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.users.fields.tenantId')}
                 optionText='title'
                 defaultValue={null}

@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAutogenerationRulesWidgetProps extends
-Omit<ListWigetProps<AutogenerationRule>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AutogenerationRule>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAutogenerationRulesArgs {
   children?: FC<AutogenerationRule>,
 }
@@ -79,6 +79,7 @@ const ListAutogenerationRulesWidget: FC<ListAutogenerationRulesWidgetProps> = ({
   return (
     <ListWiget<AutogenerationRule>
       {...rest}
+      source='autogenerationRules'
       options={{
         variables: {
           page,

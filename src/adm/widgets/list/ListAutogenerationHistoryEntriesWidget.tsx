@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAutogenerationHistoryEntriesWidgetProps extends
-Omit<ListWigetProps<AutogenerationHistoryEntry>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AutogenerationHistoryEntry>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAutogenerationHistoryEntriesArgs {
   children?: FC<AutogenerationHistoryEntry>,
 }
@@ -79,6 +79,7 @@ const ListAutogenerationHistoryEntriesWidget: FC<ListAutogenerationHistoryEntrie
   return (
     <ListWiget<AutogenerationHistoryEntry>
       {...rest}
+      source='autogenerationHistoryEntries'
       options={{
         variables: {
           page,

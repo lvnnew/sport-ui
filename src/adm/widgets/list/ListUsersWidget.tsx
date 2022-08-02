@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListUsersWidgetProps extends
-Omit<ListWigetProps<User>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<User>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllUsersArgs {
   children?: FC<User>,
 }
@@ -73,6 +73,7 @@ const ListUsersWidget: FC<ListUsersWidgetProps> = ({
   return (
     <ListWiget<User>
       {...rest}
+      source='users'
       options={{
         variables: {
           page,

@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAggregateTrackingsWidgetProps extends
-Omit<ListWigetProps<AggregateTracking>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AggregateTracking>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAggregateTrackingsArgs {
   children?: FC<AggregateTracking>,
 }
@@ -73,6 +73,7 @@ const ListAggregateTrackingsWidget: FC<ListAggregateTrackingsWidgetProps> = ({
   return (
     <ListWiget<AggregateTracking>
       {...rest}
+      source='aggregateTrackings'
       options={{
         variables: {
           page,

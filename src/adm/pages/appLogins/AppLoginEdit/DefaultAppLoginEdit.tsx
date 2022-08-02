@@ -51,9 +51,12 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
               source='userId'
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.appLogins.fields.userId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.appLogins.fields.userId')}
                 optionText='title'
                 defaultValue={null}

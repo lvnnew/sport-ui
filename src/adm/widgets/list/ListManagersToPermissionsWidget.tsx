@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListManagersToPermissionsWidgetProps extends
-Omit<ListWigetProps<ManagersToPermission>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<ManagersToPermission>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllManagersToPermissionsArgs {
   children?: FC<ManagersToPermission>,
 }
@@ -64,6 +64,7 @@ const ListManagersToPermissionsWidget: FC<ListManagersToPermissionsWidgetProps> 
   return (
     <ListWiget<ManagersToPermission>
       {...rest}
+      source='managersToPermissions'
       options={{
         variables: {
           page,

@@ -16,6 +16,7 @@ const DefaultFileFilter: FC<any> = (props) => {
         label={translate('catalogs.files.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

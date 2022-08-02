@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAppRefreshTokensWidgetProps extends
-Omit<ListWigetProps<AppRefreshToken>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AppRefreshToken>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAppRefreshTokensArgs {
   children?: FC<AppRefreshToken>,
 }
@@ -67,6 +67,7 @@ const ListAppRefreshTokensWidget: FC<ListAppRefreshTokensWidgetProps> = ({
   return (
     <ListWiget<AppRefreshToken>
       {...rest}
+      source='appRefreshTokens'
       options={{
         variables: {
           page,

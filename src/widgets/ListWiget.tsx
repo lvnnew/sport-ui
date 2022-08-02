@@ -6,14 +6,18 @@ import {
 import {Card, CardHeader, List} from '@mui/material';
 import {makeStyles, createStyles} from '@mui/styles';
 import {
-  DocumentNode, QueryHookOptions, useQuery,
+  DocumentNode,
+  QueryOptions,
+  useApolloClient,
 } from '@apollo/client';
+import {useQuery} from 'react-query';
 
 export interface ListWigetProps<T> {
   title?: string;
   children: FC<T>;
   request: DocumentNode;
-  options?: QueryHookOptions;
+  source: string;
+  options?: Omit<QueryOptions, 'query'>;
   resultToValue: (result: any) => T[];
   action?: React.ReactNode;
 }
@@ -27,12 +31,21 @@ const useStyles = makeStyles(() => createStyles({
 }));
 
 const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
-  {title, children, request, options, resultToValue, action}: ListWigetProps<T>,
+  {title, children, request, options, resultToValue, action, source}: ListWigetProps<T>,
 ) => {
-  const {data: result} = useQuery(request, options);
+  const client = useApolloClient();
+
+  const {data} = useQuery(
+    [source, options?.variables],
+    () => client.query({
+      ...options,
+      query: request,
+    }),
+  );
+
   const classes = useStyles();
 
-  const records = useMemo(() => resultToValue(result), [resultToValue, result]);
+  const records = useMemo(() => resultToValue(data?.data), [resultToValue, data]);
 
   return (
     <Card className={classes.root} style={{margin: 8}}>

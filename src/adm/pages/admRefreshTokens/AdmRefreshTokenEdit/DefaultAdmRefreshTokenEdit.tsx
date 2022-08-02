@@ -46,9 +46,12 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
               source='managerId'
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.admRefreshTokens.fields.managerId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.admRefreshTokens.fields.managerId')}
                 optionText='title'
                 defaultValue={null}

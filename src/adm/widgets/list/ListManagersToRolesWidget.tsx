@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListManagersToRolesWidgetProps extends
-Omit<ListWigetProps<ManagersToRole>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<ManagersToRole>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllManagersToRolesArgs {
   children?: FC<ManagersToRole>,
 }
@@ -64,6 +64,7 @@ const ListManagersToRolesWidget: FC<ListManagersToRolesWidgetProps> = ({
   return (
     <ListWiget<ManagersToRole>
       {...rest}
+      source='managersToRoles'
       options={{
         variables: {
           page,

@@ -41,9 +41,12 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
               source='fromId'
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.delegations.fields.fromId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.delegations.fields.fromId')}
                 optionText='title'
                 defaultValue={null}
@@ -56,9 +59,12 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
               source='toId'
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.delegations.fields.toId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.delegations.fields.toId')}
                 optionText='title'
                 defaultValue={null}

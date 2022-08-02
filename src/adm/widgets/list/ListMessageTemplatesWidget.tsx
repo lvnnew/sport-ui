@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListMessageTemplatesWidgetProps extends
-Omit<ListWigetProps<MessageTemplate>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<MessageTemplate>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllMessageTemplatesArgs {
   children?: FC<MessageTemplate>,
 }
@@ -67,6 +67,7 @@ const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
   return (
     <ListWiget<MessageTemplate>
       {...rest}
+      source='messageTemplates'
       options={{
         variables: {
           page,

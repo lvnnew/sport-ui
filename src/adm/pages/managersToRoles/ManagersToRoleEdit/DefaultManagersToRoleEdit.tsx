@@ -36,9 +36,12 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
               source='managerId'
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.managersToRoles.fields.managerId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.managersToRoles.fields.managerId')}
                 optionText='title'
                 defaultValue={null}
@@ -51,9 +54,12 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
               source='roleId'
               reference='roles'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.managersToRoles.fields.roleId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.managersToRoles.fields.roleId')}
                 optionText='title'
                 defaultValue={null}

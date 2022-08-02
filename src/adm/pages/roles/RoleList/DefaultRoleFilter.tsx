@@ -17,6 +17,7 @@ const DefaultRoleFilter: FC<any> = (props) => {
         label={translate('catalogs.roles.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

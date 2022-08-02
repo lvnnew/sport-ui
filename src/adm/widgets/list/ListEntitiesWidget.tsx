@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListEntitiesWidgetProps extends
-Omit<ListWigetProps<Entity>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Entity>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllEntitiesArgs {
   children?: FC<Entity>,
 }
@@ -61,6 +61,7 @@ const ListEntitiesWidget: FC<ListEntitiesWidgetProps> = ({
   return (
     <ListWiget<Entity>
       {...rest}
+      source='entities'
       options={{
         variables: {
           page,

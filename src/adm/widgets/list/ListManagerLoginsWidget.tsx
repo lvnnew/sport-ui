@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListManagerLoginsWidgetProps extends
-Omit<ListWigetProps<ManagerLogin>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<ManagerLogin>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllManagerLoginsArgs {
   children?: FC<ManagerLogin>,
 }
@@ -79,6 +79,7 @@ const ListManagerLoginsWidget: FC<ListManagerLoginsWidgetProps> = ({
   return (
     <ListWiget<ManagerLogin>
       {...rest}
+      source='managerLogins'
       options={{
         variables: {
           page,

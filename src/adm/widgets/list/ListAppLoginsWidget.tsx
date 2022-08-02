@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAppLoginsWidgetProps extends
-Omit<ListWigetProps<AppLogin>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<AppLogin>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAppLoginsArgs {
   children?: FC<AppLogin>,
 }
@@ -67,6 +67,7 @@ const ListAppLoginsWidget: FC<ListAppLoginsWidgetProps> = ({
   return (
     <ListWiget<AppLogin>
       {...rest}
+      source='appLogins'
       options={{
         variables: {
           page,

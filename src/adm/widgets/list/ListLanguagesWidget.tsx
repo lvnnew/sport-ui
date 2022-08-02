@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListLanguagesWidgetProps extends
-Omit<ListWigetProps<Language>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Language>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllLanguagesArgs {
   children?: FC<Language>,
 }
@@ -61,6 +61,7 @@ const ListLanguagesWidget: FC<ListLanguagesWidgetProps> = ({
   return (
     <ListWiget<Language>
       {...rest}
+      source='languages'
       options={{
         variables: {
           page,

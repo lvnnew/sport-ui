@@ -36,9 +36,12 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
               source='managerId'
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.managersToPermissions.fields.managerId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.managersToPermissions.fields.managerId')}
                 optionText='title'
                 defaultValue={null}
@@ -51,9 +54,12 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
               source='permissionId'
               reference='permissions'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.managersToPermissions.fields.permissionId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.managersToPermissions.fields.permissionId')}
                 optionText='title'
                 defaultValue={null}

@@ -65,9 +65,12 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
               source='autogenerationRuleId'
               reference='autogenerationRules'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
                 optionText='title'
                 defaultValue={null}

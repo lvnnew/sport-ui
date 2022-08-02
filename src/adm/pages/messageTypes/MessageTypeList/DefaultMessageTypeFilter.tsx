@@ -16,6 +16,7 @@ const DefaultMessageTypeFilter: FC<any> = (props) => {
         label={translate('catalogs.messageTypes.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

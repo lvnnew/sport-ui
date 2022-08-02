@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListDelegationsWidgetProps extends
-Omit<ListWigetProps<Delegation>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Delegation>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllDelegationsArgs {
   children?: FC<Delegation>,
 }
@@ -70,6 +70,7 @@ const ListDelegationsWidget: FC<ListDelegationsWidgetProps> = ({
   return (
     <ListWiget<Delegation>
       {...rest}
+      source='delegations'
       options={{
         variables: {
           page,

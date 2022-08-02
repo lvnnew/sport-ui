@@ -54,9 +54,12 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
               source='messageTypeId'
               reference='messageTypes'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.messageTemplates.fields.messageTypeId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.messageTemplates.fields.messageTypeId')}
                 optionText='title'
                 defaultValue={null}

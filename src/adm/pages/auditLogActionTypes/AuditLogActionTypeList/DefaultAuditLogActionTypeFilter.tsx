@@ -16,6 +16,7 @@ const DefaultAuditLogActionTypeFilter: FC<any> = (props) => {
         label={translate('catalogs.auditLogActionTypes.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth

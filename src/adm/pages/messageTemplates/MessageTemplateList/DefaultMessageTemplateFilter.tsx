@@ -19,6 +19,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         label={translate('catalogs.messageTemplates.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth
@@ -34,9 +35,12 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         source='messageTypeId'
         reference='messageTypes'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.messageTemplates.fields.messageTypeId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.messageTemplates.fields.messageTypeId')}
           optionText='title'
           defaultValue={null}

@@ -41,9 +41,12 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
               source='entityTypeId'
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
                 optionText='title'
                 defaultValue={null}

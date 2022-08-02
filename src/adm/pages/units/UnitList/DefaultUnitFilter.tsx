@@ -18,6 +18,7 @@ const DefaultUnitFilter: FC<any> = (props) => {
         label={translate('catalogs.units.fields.search')}
         source='q'
         alwaysOn
+        sx={{m: 1}}
       />
       <TextInput
         fullWidth
@@ -28,9 +29,12 @@ const DefaultUnitFilter: FC<any> = (props) => {
         source='parentId'
         reference='units'
         sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.units.fields.parentId')}
       >
         <AutocompleteInput
           fullWidth
+          sx={{m: 1}}
+          size='small'
           label={translate('catalogs.units.fields.parentId')}
           optionText='title'
           defaultValue={null}

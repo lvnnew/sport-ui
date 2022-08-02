@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListUnitsWidgetProps extends
-Omit<ListWigetProps<Unit>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Unit>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllUnitsArgs {
   children?: FC<Unit>,
 }
@@ -64,6 +64,7 @@ const ListUnitsWidget: FC<ListUnitsWidgetProps> = ({
   return (
     <ListWiget<Unit>
       {...rest}
+      source='units'
       options={{
         variables: {
           page,

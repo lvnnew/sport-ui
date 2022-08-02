@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListMessageTypesWidgetProps extends
-Omit<ListWigetProps<MessageType>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<MessageType>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllMessageTypesArgs {
   children?: FC<MessageType>,
 }
@@ -64,6 +64,7 @@ const ListMessageTypesWidget: FC<ListMessageTypesWidgetProps> = ({
   return (
     <ListWiget<MessageType>
       {...rest}
+      source='messageTypes'
       options={{
         variables: {
           page,

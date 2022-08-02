@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListStatsWidgetProps extends
-Omit<ListWigetProps<Stat>, 'request' | 'resultToValue'| 'children'>,
+Omit<ListWigetProps<Stat>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllStatsArgs {
   children?: FC<Stat>,
 }
@@ -64,6 +64,7 @@ const ListStatsWidget: FC<ListStatsWidgetProps> = ({
   return (
     <ListWiget<Stat>
       {...rest}
+      source='stats'
       options={{
         variables: {
           page,

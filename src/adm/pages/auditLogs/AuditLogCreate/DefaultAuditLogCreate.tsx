@@ -56,9 +56,12 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               source='entityTypeId'
               reference='entities'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.auditLogs.fields.entityTypeId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.auditLogs.fields.entityTypeId')}
                 optionText='title'
                 defaultValue={null}
@@ -78,9 +81,12 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               source='actionTypeId'
               reference='auditLogActionTypes'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.auditLogs.fields.actionTypeId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.auditLogs.fields.actionTypeId')}
                 optionText='title'
                 defaultValue={null}
@@ -93,9 +99,12 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               source='managerId'
               reference='managers'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.auditLogs.fields.managerId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.auditLogs.fields.managerId')}
                 optionText='title'
                 defaultValue={null}
@@ -108,9 +117,12 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               source='userId'
               reference='users'
               sort={{id: 'id', order: 'DESC'}}
+              label={translate('catalogs.auditLogs.fields.userId')}
             >
               <AutocompleteInput
                 fullWidth
+                sx={{m: 1}}
+                size='small'
                 label={translate('catalogs.auditLogs.fields.userId')}
                 optionText='title'
                 defaultValue={null}

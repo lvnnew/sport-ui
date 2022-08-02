@@ -5,6 +5,7 @@ import {Translate} from 'react-admin';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const getAutogenerationRuleValidation: GetValidation = (t: Translate) => Yup.object({
+  id: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   title: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   originalEntityType: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   generatingEntityType: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
