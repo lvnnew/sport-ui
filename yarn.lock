@@ -3812,10 +3812,10 @@
     "@testing-library/dom" "^8.5.0"
     "@types/react-dom" "^18.0.0"
 
-"@testing-library/user-event@^14.4.2":
-  version "14.4.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.2.tgz#d3fb5d24e2d7d019a7d2e9978a8deb90b0aa230b"
-  integrity sha512-1gVTWtueNimveOjcm2ApFCnCTeky7WqY3EX31/GRKLWyCd+HfH+Gd2l1J8go9FpDNe+0Mx8X4zbQHTg0WWNJwg==
+"@testing-library/user-event@^14.4.3":
+  version "14.4.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.3.tgz#af975e367743fa91989cd666666aec31a8f50591"
+  integrity sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -10387,10 +10387,10 @@ match-sorter@^6.0.2:
     "@babel/runtime" "^7.12.5"
     remove-accents "0.4.2"
 
-material-ui-popup-state@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/material-ui-popup-state/-/material-ui-popup-state-4.0.1.tgz#356258aa5d6be40d22512c1e9bb4c58f303d0e3f"
-  integrity sha512-4Ywj2QFOaS4mirRRtX4xps1waJQPa+IIEnVj/nnA4+aglinEcPkALPq+akAlvzKAjkjkmIjiku8SbdmTl0hTCQ==
+material-ui-popup-state@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/material-ui-popup-state/-/material-ui-popup-state-4.0.2.tgz#98bff4d50d7ef62a3bbe761b8f21c022c62488a6"
+  integrity sha512-N/Dx0QAKkBxpyXGOE5+xaHijFkGZ5Sed/VYDpIk2TMKVDRIxszxuTFoOLoHrsk/SuQflBoCGLzzld/XYAdZymg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@mui/material" "^5.0.0"
