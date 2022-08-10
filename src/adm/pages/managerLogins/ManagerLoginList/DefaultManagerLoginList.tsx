@@ -4,6 +4,9 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   BooleanField,
@@ -11,14 +14,31 @@ import {
   useTranslate,
 } from 'react-admin';
 import ManagerLoginFilter from './ManagerLoginFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'managerLogins.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.managerLogins.title')} exporter={false} filters={<ManagerLoginFilter />} {...props}>
+    <List
+      title={translate('catalogs.managerLogins.title')}
+      exporter={false}
+      filters={<ManagerLoginFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
         <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />

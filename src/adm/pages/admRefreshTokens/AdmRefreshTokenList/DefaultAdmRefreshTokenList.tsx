@@ -4,6 +4,9 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
@@ -11,14 +14,31 @@ import {
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AdmRefreshTokenFilter from './AdmRefreshTokenFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'admRefreshTokens.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.admRefreshTokens.title')} exporter={false} filters={<AdmRefreshTokenFilter />} {...props}>
+    <List
+      title={translate('catalogs.admRefreshTokens.title')}
+      exporter={false}
+      filters={<AdmRefreshTokenFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.admRefreshTokens.fields.id')} />
         <DateField source='create' label={translate('catalogs.admRefreshTokens.fields.create')} showTime />

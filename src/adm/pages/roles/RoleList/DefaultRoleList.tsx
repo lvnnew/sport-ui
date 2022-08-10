@@ -4,19 +4,39 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   TextField,
   BooleanField,
   useTranslate,
 } from 'react-admin';
 import RoleFilter from './RoleFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'roles.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultRoleList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.roles.title')} exporter={false} filters={<RoleFilter />} {...props}>
+    <List
+      title={translate('catalogs.roles.title')}
+      exporter={false}
+      filters={<RoleFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <TextField source='id' label={translate('catalogs.roles.fields.id')} />
         <TextField source='title' label={translate('catalogs.roles.fields.title')} />

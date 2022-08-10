@@ -4,6 +4,9 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
@@ -12,14 +15,31 @@ import {
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AuditLogFilter from './AuditLogFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'auditLogs.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.auditLogs.title')} exporter={false} filters={<AuditLogFilter />} {...props}>
+    <List
+      title={translate('catalogs.auditLogs.title')}
+      exporter={false}
+      filters={<AuditLogFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.auditLogs.fields.id')} />
         <DateField source='date' label={translate('catalogs.auditLogs.fields.date')} showTime />

@@ -5,14 +5,34 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  ToolbarProps,
+  Toolbar,
+  SaveButton,
+  DeleteButton,
+  usePermissions,
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToRoleValidation from '../getManagersToRoleValidation';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomToolbar = (props: ToolbarProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <Toolbar
+      {...props}
+      sx={{display: 'flex', justifyContent: 'space-between'}}
+    >
+      <SaveButton />
+      {hasPermission(permissions, 'managersToRoles.delete') && <DeleteButton mutationMode='pessimistic' />}
+    </Toolbar>
+  );
+};
 
 const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
   const translate = useTranslate();
@@ -29,6 +49,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
       <SimpleForm
         defaultValues={{}}
         resolver={resolver}
+        toolbar={<CustomToolbar />}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3} lg={2}>

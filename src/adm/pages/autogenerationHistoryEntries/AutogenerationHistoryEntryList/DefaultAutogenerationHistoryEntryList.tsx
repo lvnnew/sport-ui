@@ -4,6 +4,9 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
@@ -12,14 +15,31 @@ import {
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationHistoryEntryFilter from './AutogenerationHistoryEntryFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'autogenerationHistoryEntries.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.autogenerationHistoryEntries.title')} exporter={false} filters={<AutogenerationHistoryEntryFilter />} {...props}>
+    <List
+      title={translate('catalogs.autogenerationHistoryEntries.title')}
+      exporter={false}
+      filters={<AutogenerationHistoryEntryFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.autogenerationHistoryEntries.fields.id')} />
         <DateField source='date' label={translate('catalogs.autogenerationHistoryEntries.fields.date')} showTime />

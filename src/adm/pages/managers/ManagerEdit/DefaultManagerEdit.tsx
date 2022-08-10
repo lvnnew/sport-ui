@@ -5,6 +5,11 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  ToolbarProps,
+  Toolbar,
+  SaveButton,
+  DeleteButton,
+  usePermissions,
   TextInput,
   ReferenceInput,
   AutocompleteInput,
@@ -14,8 +19,23 @@ import {useDebug} from '../../../../contexts/DebugContext';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerValidation from '../getManagerValidation';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomToolbar = (props: ToolbarProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <Toolbar
+      {...props}
+      sx={{display: 'flex', justifyContent: 'space-between'}}
+    >
+      <SaveButton />
+      {hasPermission(permissions, 'managers.delete') && <DeleteButton mutationMode='pessimistic' />}
+    </Toolbar>
+  );
+};
 
 const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
   const {debug} = useDebug();
@@ -36,6 +56,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           active: true,
         }}
         resolver={resolver}
+        toolbar={<CustomToolbar />}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3} lg={2}>

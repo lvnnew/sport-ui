@@ -4,6 +4,9 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
@@ -11,14 +14,31 @@ import {
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AggregateTrackingFilter from './AggregateTrackingFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'aggregateTrackings.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('infoRegistries.aggregateTrackings.title')} exporter={false} filters={<AggregateTrackingFilter />} {...props}>
+    <List
+      title={translate('infoRegistries.aggregateTrackings.title')}
+      exporter={false}
+      filters={<AggregateTrackingFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('infoRegistries.aggregateTrackings.fields.id')} />
         <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show'>

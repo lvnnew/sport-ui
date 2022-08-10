@@ -4,6 +4,9 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
@@ -11,14 +14,31 @@ import {
   useTranslate,
 } from 'react-admin';
 import ManagerFilter from './ManagerFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'managers.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.managers.title')} exporter={false} filters={<ManagerFilter />} {...props}>
+    <List
+      title={translate('catalogs.managers.title')}
+      exporter={false}
+      filters={<ManagerFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.managers.fields.id')} />
         <TextField source='title' label={translate('catalogs.managers.fields.title')} />

@@ -4,20 +4,40 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   TextField,
   BooleanField,
   useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationRuleFilter from './AutogenerationRuleFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'autogenerationRules.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.autogenerationRules.title')} exporter={false} filters={<AutogenerationRuleFilter />} {...props}>
+    <List
+      title={translate('catalogs.autogenerationRules.title')}
+      exporter={false}
+      filters={<AutogenerationRuleFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <TextField source='id' label={translate('catalogs.autogenerationRules.fields.id')} />
         <TextField source='title' label={translate('catalogs.autogenerationRules.fields.title')} />

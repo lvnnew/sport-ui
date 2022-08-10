@@ -4,20 +4,40 @@ import {
   List,
   Datagrid,
   ListProps,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
   useTranslate,
 } from 'react-admin';
 import UnitFilter from './UnitFilter';
+import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
+
+const CustomBulkActionButton = (props: BulkActionProps) => {
+  const {permissions} = usePermissions<string[]>();
+
+  return (
+    <>
+      {hasPermission(permissions, 'units.delete') && <BulkDeleteButton {...props} />}
+    </>
+  );
+};
 
 const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
   const translate = useTranslate();
 
   return (
-    <List title={translate('catalogs.units.title')} exporter={false} filters={<UnitFilter />} {...props}>
+    <List
+      title={translate('catalogs.units.title')}
+      exporter={false}
+      filters={<UnitFilter />}
+      bulkActionButtons={<CustomBulkActionButton />}
+      {...props}
+    >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.units.fields.id')} />
         <TextField source='title' label={translate('catalogs.units.fields.title')} />
