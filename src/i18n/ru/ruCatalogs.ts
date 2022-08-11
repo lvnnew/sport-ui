@@ -250,7 +250,7 @@ const ruCatalogs = {
     },
   },
   units: {
-    title: 'Units',
+    title: 'Подразделения',
     fields: {
       id: 'Ид',
       search: 'Поиск',

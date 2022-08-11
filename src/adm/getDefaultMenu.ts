@@ -106,12 +106,6 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
-      label: 'catalogs.units.title',
-      link: '/units',
-      icon: 'DetailsOutlined',
-      debugOnly: true,
-    },
-    {
       label: 'catalogs.auditLogs.title',
       link: '/auditLogs',
       icon: 'DetailsOutlined',
@@ -144,6 +138,12 @@ const getDefaultMenu = () => {
     {
       label: 'catalogs.managers.title',
       link: '/managers',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'catalogs.units.title',
+      link: '/units',
       icon: 'DetailsOutlined',
       debugOnly: true,
     },
