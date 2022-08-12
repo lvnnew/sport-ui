@@ -1,7 +1,7 @@
 import {ThemeOptions} from '@mui/material';
 
 export const darkTheme = {
-  overrides: {
+  components: {
     MuiAppBar: {
       colorSecondary: {
         backgroundColor: '#616161e6',
@@ -27,7 +27,7 @@ export const darkTheme = {
 } as ThemeOptions;
 
 export const lightTheme = {
-  overrides: {
+  components: {
     MuiAppBar: {
       styleOverrides: {
         colorSecondary: {
@@ -74,6 +74,13 @@ export const lightTheme = {
       },
       root: {
         borderLeft: '3px solid #fff',
+      },
+    },
+    RaSidebar: {
+      styleOverrides: {
+        root: {
+          height: 'auto',
+        },
       },
     },
   },
