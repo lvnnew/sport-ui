@@ -33,7 +33,7 @@ const OpenRegistries: FC<OpenRegistriesProps> = ({document, registries}) => {
             Registries
           </Button>
           <Menu {...bindMenu(popupState)}>
-            {registries.filter(r => hasPermission(permissions, `${r}.all`)).map(r => (
+            {registries.filter(r => hasPermission(permissions, `${r.name}.all`)).map(r => (
               <Link
                 key={r}
                 to={
