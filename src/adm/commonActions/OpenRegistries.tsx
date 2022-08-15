@@ -17,7 +17,7 @@ const OpenRegistries: FC<OpenRegistriesProps> = ({document, registries}) => {
   const record = useRecordContext();
   const {permissions} = usePermissions<string[]>();
 
-  if (!record || !hasAnyPermission(permissions, registries.map(r => `${r}.all`))) {
+  if (!record || !hasAnyPermission(permissions, registries.map(r => `${r.name}.all`))) {
     return null;
   }
 
