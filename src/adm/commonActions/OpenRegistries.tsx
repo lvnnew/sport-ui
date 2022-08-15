@@ -4,18 +4,20 @@ import {
   useRecordContext,
   usePermissions,
   Link,
+  useTranslate,
 } from 'react-admin';
 import {hasPermission, hasAnyPermission} from '../../utils/permissions';
 import PopupState, {bindTrigger, bindMenu} from 'material-ui-popup-state';
 
 interface OpenRegistriesProps {
   document: string;
-  registries: string[];
+  registries: {name: string; type: 'sumRegistry' | 'infoRegistry'}[];
 }
 
 const OpenRegistries: FC<OpenRegistriesProps> = ({document, registries}) => {
   const record = useRecordContext();
   const {permissions} = usePermissions<string[]>();
+  const t = useTranslate();
 
   if (!record || !hasAnyPermission(permissions, registries.map(r => `${r.name}.all`))) {
     return null;
@@ -35,12 +37,16 @@ const OpenRegistries: FC<OpenRegistriesProps> = ({document, registries}) => {
           <Menu {...bindMenu(popupState)}>
             {registries.filter(r => hasPermission(permissions, `${r.name}.all`)).map(r => (
               <Link
-                key={r}
+                key={r.name}
                 to={
-                  `/${r}?filter=%7B"registrarId"%3A${record.id}%2C"registrarTypeId"%3A%22${document}%22%7D&`
+                  `/${r.name}?filter=%7B"registrarId"%3A${record.id}%2C"registrarTypeId"%3A%22${document}%22%7D&`
                 }
               >
-                <MenuItem>{r}</MenuItem>
+                <MenuItem>
+                  {r.type === 'sumRegistry' ?
+                    t(`sumRegistries.${r.name}.title`) :
+                    t(`infoRegistries.${r.name}.title`)}
+                </MenuItem>
               </Link>
             ))}
           </Menu>
