@@ -34,21 +34,25 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
       </ReferenceInput>
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='entityId'
         label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
       />
       <DateTimeInput
         fullWidth
+        sx={{m: 1}}
         source='lastAggregatesComputed'
         label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
       />
       <DateTimeInput
         fullWidth
+        sx={{m: 1}}
         source='lastEntityUpdate'
         label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
       />
       <NumberInput
         fullWidth
+        sx={{m: 1}}
         source='aggregateVersion'
         label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
       />

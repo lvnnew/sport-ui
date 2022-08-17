@@ -54,6 +54,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='originalName'
               label={translate('catalogs.files.fields.originalName')}
             />
@@ -61,6 +62,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='url'
               label={translate('catalogs.files.fields.url')}
             />
@@ -68,6 +70,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='mimetype'
               label={translate('catalogs.files.fields.mimetype')}
             />
@@ -75,6 +78,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='s3Key'
               label={translate('catalogs.files.fields.s3Key')}
             />
@@ -82,6 +86,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='eTag'
               label={translate('catalogs.files.fields.eTag')}
             />

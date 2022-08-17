@@ -22,6 +22,7 @@ const DefaultUnitFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='title'
         label={translate('catalogs.units.fields.title')}
       />

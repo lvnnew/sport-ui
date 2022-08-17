@@ -56,12 +56,14 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       </ReferenceInput>
       <DateInput
         fullWidth
+        sx={{m: 1}}
         source='expiresAt'
         defaultValue={null}
         label={translate('catalogs.delegations.fields.expiresAt')}
       />
       <BooleanInput
         fullWidth
+        sx={{m: 1}}
         source='active'
         label={translate('catalogs.delegations.fields.active')}
       />

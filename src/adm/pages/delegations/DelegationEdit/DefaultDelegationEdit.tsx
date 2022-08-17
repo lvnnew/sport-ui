@@ -96,6 +96,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateInput
               fullWidth
+              sx={{m: 1}}
               source='expiresAt'
               defaultValue={null}
               label={translate('catalogs.delegations.fields.expiresAt')}
@@ -104,6 +105,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='active'
               label={translate('catalogs.delegations.fields.active')}
             />

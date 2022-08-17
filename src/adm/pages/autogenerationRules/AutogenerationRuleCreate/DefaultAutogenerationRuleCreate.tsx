@@ -38,6 +38,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='id'
               label={translate('catalogs.autogenerationRules.fields.id')}
             />
@@ -45,6 +46,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               label={translate('catalogs.autogenerationRules.fields.title')}
             />
@@ -52,6 +54,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateInput
               fullWidth
+              sx={{m: 1}}
               source='version'
               defaultValue={null}
               label={translate('catalogs.autogenerationRules.fields.version')}
@@ -60,6 +63,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='originalEntityType'
               label={translate('catalogs.autogenerationRules.fields.originalEntityType')}
             />
@@ -67,6 +71,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='generatingEntityType'
               label={translate('catalogs.autogenerationRules.fields.generatingEntityType')}
             />
@@ -74,6 +79,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='originalEntityFilter'
               label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')}
             />
@@ -81,6 +87,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='generatingEntityConstructionRules'
               label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')}
             />
@@ -88,6 +95,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='ignoreVersionOnHistory'
               label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')}
             />

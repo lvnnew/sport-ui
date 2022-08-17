@@ -54,6 +54,7 @@ const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               label={translate('catalogs.messageTypes.fields.title')}
             />
@@ -61,6 +62,7 @@ const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='description'
               defaultValue={null}
               label={translate('catalogs.messageTypes.fields.description')}

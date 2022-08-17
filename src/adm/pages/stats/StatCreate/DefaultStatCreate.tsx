@@ -36,6 +36,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='id'
               label={translate('catalogs.stats.fields.id')}
             />
@@ -43,6 +44,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='updated'
               defaultValue={null}
               label={translate('catalogs.stats.fields.updated')}
@@ -51,6 +53,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <NumberInput
               fullWidth
+              sx={{m: 1}}
               source='helloCount'
               defaultValue={null}
               label={translate('catalogs.stats.fields.helloCount')}

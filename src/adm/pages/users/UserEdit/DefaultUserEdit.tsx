@@ -58,6 +58,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               defaultValue={null}
               label={translate('catalogs.users.fields.title')}
@@ -66,6 +67,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='lastname'
               label={translate('catalogs.users.fields.lastname')}
             />
@@ -73,6 +75,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='firstname'
               label={translate('catalogs.users.fields.firstname')}
             />
@@ -80,6 +83,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='email'
               label={translate('catalogs.users.fields.email')}
             />

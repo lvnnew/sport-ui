@@ -23,6 +23,7 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
       />
       <DateTimeInput
         fullWidth
+        sx={{m: 1}}
         source='create'
         label={translate('catalogs.appRefreshTokens.fields.create')}
       />
@@ -44,6 +45,7 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
       </ReferenceInput>
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='token'
         label={translate('catalogs.appRefreshTokens.fields.token')}
       />

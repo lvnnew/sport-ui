@@ -35,6 +35,7 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='login'
               label={translate('catalogs.appLogins.fields.login')}
             />
@@ -42,6 +43,7 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='passwordHash'
               label={translate('catalogs.appLogins.fields.passwordHash')}
             />

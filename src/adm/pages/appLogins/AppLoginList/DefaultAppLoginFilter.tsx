@@ -22,11 +22,13 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='login'
         label={translate('catalogs.appLogins.fields.login')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='passwordHash'
         label={translate('catalogs.appLogins.fields.passwordHash')}
       />

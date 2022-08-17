@@ -24,11 +24,13 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       />
       <DateTimeInput
         fullWidth
+        sx={{m: 1}}
         source='date'
         label={translate('catalogs.auditLogs.fields.date')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='title'
         label={translate('catalogs.auditLogs.fields.title')}
       />
@@ -50,6 +52,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       </ReferenceInput>
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='entityId'
         label={translate('catalogs.auditLogs.fields.entityId')}
       />
@@ -103,24 +106,28 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       </ReferenceInput>
       <BooleanInput
         fullWidth
+        sx={{m: 1}}
         source='foreign'
         defaultValue={null}
         label={translate('catalogs.auditLogs.fields.foreign')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='foreignEntityType'
         defaultValue={null}
         label={translate('catalogs.auditLogs.fields.foreignEntityType')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='foreignEntityId'
         defaultValue={null}
         label={translate('catalogs.auditLogs.fields.foreignEntityId')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='actionData'
         defaultValue={null}
         label={translate('catalogs.auditLogs.fields.actionData')}

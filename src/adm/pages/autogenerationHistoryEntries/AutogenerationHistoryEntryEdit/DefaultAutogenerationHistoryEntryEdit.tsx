@@ -63,6 +63,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='date'
               label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
             />
@@ -70,6 +71,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='originalEntityType'
               label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
             />
@@ -77,6 +79,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='originalEntityId'
               label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
             />
@@ -102,6 +105,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateInput
               fullWidth
+              sx={{m: 1}}
               source='version'
               label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
             />
@@ -109,6 +113,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='errorOccurred'
               label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
             />
@@ -116,6 +121,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='error'
               defaultValue={null}
               label={translate('catalogs.autogenerationHistoryEntries.fields.error')}

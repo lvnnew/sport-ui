@@ -23,6 +23,7 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
       />
       <DateTimeInput
         fullWidth
+        sx={{m: 1}}
         source='create'
         label={translate('catalogs.admRefreshTokens.fields.create')}
       />
@@ -44,6 +45,7 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
       </ReferenceInput>
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='token'
         label={translate('catalogs.admRefreshTokens.fields.token')}
       />

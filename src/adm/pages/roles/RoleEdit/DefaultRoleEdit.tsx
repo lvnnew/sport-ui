@@ -58,6 +58,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               defaultValue={null}
               label={translate('catalogs.roles.fields.title')}
@@ -66,6 +67,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='hasAllPermissions'
               label={translate('catalogs.roles.fields.hasAllPermissions')}
             />
@@ -73,6 +75,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='allTenantsAvailable'
               label={translate('catalogs.roles.fields.allTenantsAvailable')}
             />

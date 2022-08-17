@@ -37,6 +37,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='create'
               label={translate('catalogs.appRefreshTokens.fields.create')}
             />
@@ -62,6 +63,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='token'
               label={translate('catalogs.appRefreshTokens.fields.token')}
             />

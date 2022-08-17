@@ -62,6 +62,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               defaultValue={null}
               label={translate('catalogs.managers.fields.title')}
@@ -70,6 +71,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='lastName'
               label={translate('catalogs.managers.fields.lastName')}
             />
@@ -77,6 +79,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='firstName'
               label={translate('catalogs.managers.fields.firstName')}
             />
@@ -102,6 +105,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='email'
               label={translate('catalogs.managers.fields.email')}
             />
@@ -109,6 +113,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='phone'
               defaultValue={null}
               label={translate('catalogs.managers.fields.phone')}
@@ -117,6 +122,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='photo'
               defaultValue={null}
               label={translate('catalogs.managers.fields.photo')}
@@ -125,6 +131,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='telegramLogin'
               defaultValue={null}
               label={translate('catalogs.managers.fields.telegramLogin')}
@@ -151,6 +158,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='headOfUnit'
               label={translate('catalogs.managers.fields.headOfUnit')}
             />
@@ -158,6 +166,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='active'
               label={translate('catalogs.managers.fields.active')}
             />

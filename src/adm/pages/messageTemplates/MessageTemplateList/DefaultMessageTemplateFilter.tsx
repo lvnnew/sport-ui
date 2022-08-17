@@ -23,11 +23,13 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='title'
         label={translate('catalogs.messageTemplates.fields.title')}
       />
       <BooleanInput
         fullWidth
+        sx={{m: 1}}
         source='secretData'
         label={translate('catalogs.messageTemplates.fields.secretData')}
       />

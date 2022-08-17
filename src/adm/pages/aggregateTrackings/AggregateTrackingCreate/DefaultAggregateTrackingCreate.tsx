@@ -57,6 +57,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='entityId'
               label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
             />
@@ -64,6 +65,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='lastAggregatesComputed'
               label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
             />
@@ -71,6 +73,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='lastEntityUpdate'
               label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
             />
@@ -78,6 +81,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <NumberInput
               fullWidth
+              sx={{m: 1}}
               source='aggregateVersion'
               label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
             />

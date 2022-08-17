@@ -56,6 +56,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='updated'
               defaultValue={null}
               label={translate('catalogs.stats.fields.updated')}
@@ -64,6 +65,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <NumberInput
               fullWidth
+              sx={{m: 1}}
               source='helloCount'
               defaultValue={null}
               label={translate('catalogs.stats.fields.helloCount')}

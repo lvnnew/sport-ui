@@ -23,17 +23,20 @@ const DefaultManagerFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='title'
         defaultValue={null}
         label={translate('catalogs.managers.fields.title')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='lastName'
         label={translate('catalogs.managers.fields.lastName')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='firstName'
         label={translate('catalogs.managers.fields.firstName')}
       />
@@ -55,23 +58,27 @@ const DefaultManagerFilter: FC<any> = (props) => {
       </ReferenceInput>
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='email'
         label={translate('catalogs.managers.fields.email')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='phone'
         defaultValue={null}
         label={translate('catalogs.managers.fields.phone')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='photo'
         defaultValue={null}
         label={translate('catalogs.managers.fields.photo')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='telegramLogin'
         defaultValue={null}
         label={translate('catalogs.managers.fields.telegramLogin')}
@@ -94,11 +101,13 @@ const DefaultManagerFilter: FC<any> = (props) => {
       </ReferenceInput>
       <BooleanInput
         fullWidth
+        sx={{m: 1}}
         source='headOfUnit'
         label={translate('catalogs.managers.fields.headOfUnit')}
       />
       <BooleanInput
         fullWidth
+        sx={{m: 1}}
         source='active'
         label={translate('catalogs.managers.fields.active')}
       />

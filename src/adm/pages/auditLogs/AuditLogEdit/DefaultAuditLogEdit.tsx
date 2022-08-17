@@ -61,6 +61,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='date'
               label={translate('catalogs.auditLogs.fields.date')}
             />
@@ -68,6 +69,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               label={translate('catalogs.auditLogs.fields.title')}
             />
@@ -93,6 +95,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='entityId'
               label={translate('catalogs.auditLogs.fields.entityId')}
             />
@@ -154,6 +157,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='foreign'
               defaultValue={null}
               label={translate('catalogs.auditLogs.fields.foreign')}
@@ -162,6 +166,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='foreignEntityType'
               defaultValue={null}
               label={translate('catalogs.auditLogs.fields.foreignEntityType')}
@@ -170,6 +175,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='foreignEntityId'
               defaultValue={null}
               label={translate('catalogs.auditLogs.fields.foreignEntityId')}
@@ -178,6 +184,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='actionData'
               defaultValue={null}
               label={translate('catalogs.auditLogs.fields.actionData')}

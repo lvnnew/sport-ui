@@ -61,6 +61,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='login'
               label={translate('catalogs.managerLogins.fields.login')}
             />
@@ -68,6 +69,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='passwordHash'
               label={translate('catalogs.managerLogins.fields.passwordHash')}
             />
@@ -75,6 +77,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='role'
               label={translate('catalogs.managerLogins.fields.role')}
             />
@@ -82,6 +85,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='emailVerified'
               label={translate('catalogs.managerLogins.fields.emailVerified')}
             />
@@ -89,6 +93,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='initialPasswordChanged'
               label={translate('catalogs.managerLogins.fields.initialPasswordChanged')}
             />
@@ -96,6 +101,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='locked'
               label={translate('catalogs.managerLogins.fields.locked')}
             />

@@ -78,6 +78,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='entityId'
               label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
             />
@@ -85,6 +86,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='lastAggregatesComputed'
               label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
             />
@@ -92,6 +94,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <DateTimeInput
               fullWidth
+              sx={{m: 1}}
               source='lastEntityUpdate'
               label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
             />
@@ -99,6 +102,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <NumberInput
               fullWidth
+              sx={{m: 1}}
               source='aggregateVersion'
               label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
             />

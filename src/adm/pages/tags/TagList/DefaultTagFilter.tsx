@@ -20,6 +20,7 @@ const DefaultTagFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='comment'
         defaultValue={null}
         label={translate('catalogs.tags.fields.comment')}

@@ -38,6 +38,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='id'
               label={translate('catalogs.messageTemplates.fields.id')}
             />
@@ -45,6 +46,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <TextInput
               fullWidth
+              sx={{m: 1}}
               source='title'
               label={translate('catalogs.messageTemplates.fields.title')}
             />
@@ -52,6 +54,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
           <Grid item xs={12} sm={6} md={3} lg={2}>
             <BooleanInput
               fullWidth
+              sx={{m: 1}}
               source='secretData'
               label={translate('catalogs.messageTemplates.fields.secretData')}
             />

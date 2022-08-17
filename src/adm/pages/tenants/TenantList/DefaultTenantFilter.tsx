@@ -21,12 +21,14 @@ const DefaultTenantFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='title'
         defaultValue={null}
         label={translate('catalogs.tenants.fields.title')}
       />
       <NumberInput
         fullWidth
+        sx={{m: 1}}
         source='utcOffset'
         label={translate('catalogs.tenants.fields.utcOffset')}
       />

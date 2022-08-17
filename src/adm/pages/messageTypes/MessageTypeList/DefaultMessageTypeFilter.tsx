@@ -20,11 +20,13 @@ const DefaultMessageTypeFilter: FC<any> = (props) => {
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='title'
         label={translate('catalogs.messageTypes.fields.title')}
       />
       <TextInput
         fullWidth
+        sx={{m: 1}}
         source='description'
         defaultValue={null}
         label={translate('catalogs.messageTypes.fields.description')}
