@@ -53,6 +53,7 @@ const ListWidget: FC<ListWidgetProps> = ({
           filters={filters}
           resource={reference}
           sx={{overflow: 'auto'}}
+          exporter={false}
           {...rest}
         >
           <Datagrid rowClick='show'>
