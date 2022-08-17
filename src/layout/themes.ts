@@ -1,6 +1,6 @@
-import {ThemeOptions} from '@mui/material';
+import {ThemeOptions, createTheme} from '@mui/material';
 
-export const darkTheme = {
+const darkThemeOptions = {
   components: {
     MuiAppBar: {
       colorSecondary: {
@@ -26,7 +26,9 @@ export const darkTheme = {
   },
 } as ThemeOptions;
 
-export const lightTheme = {
+export const darkTheme = createTheme(darkThemeOptions);
+
+const lightThemeOptions = {
   components: {
     MuiAppBar: {
       styleOverrides: {
@@ -79,7 +81,9 @@ export const lightTheme = {
     RaSidebar: {
       styleOverrides: {
         root: {
-          height: 'auto',
+          '& .RaSidebar-fixed': {
+            width: 'inherit',
+          },
         },
       },
     },
@@ -108,3 +112,5 @@ export const lightTheme = {
     borderRadius: 10,
   },
 } as ThemeOptions;
+
+export const lightTheme = createTheme(lightThemeOptions);
