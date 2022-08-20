@@ -7488,6 +7488,13 @@ eslint-plugin-jest@^26.8.3:
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
+eslint-plugin-jest@^26.8.4:
+  version "26.8.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.8.4.tgz#d9a894af697831ad551f7e01247e4dfbd8c689bd"
+  integrity sha512-+waIVSv2742wq7Y06jXikzRL5/wG+dDccmMnsLHjjwPDeccwbVQ7xpFoPCbd0k8qed/N2LSajjmBsw3D1C/xAQ==
+  dependencies:
+    "@typescript-eslint/utils" "^5.10.0"
+
 eslint-plugin-jsdoc@^39.3.6:
   version "39.3.6"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-39.3.6.tgz#6ba29f32368d72a51335a3dc9ccd22ad0437665d"
