@@ -7,6 +7,7 @@ import {
   Typography,
   Collapse,
   Tooltip,
+  Box,
 } from '@mui/material';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import {useTranslate, useSidebarState} from 'react-admin';
@@ -28,8 +29,10 @@ const SubMenu: FC<SubMenuProps> = (props) => {
 
   const header = (
     <MenuItem dense={dense} onClick={handleToggle}>
-      <ListItemIcon sx={{minWidth: 5}}>
-        {open ? <ExpandMore /> : icon}
+      <ListItemIcon>
+        <Box sx={{minWidth: theme => theme.spacing(5)}}>
+          {open ? <ExpandMore /> : icon}
+        </Box>
       </ListItemIcon>
       <Typography variant='inherit' color='textSecondary'>
         {translate(name)}
