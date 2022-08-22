@@ -6,6 +6,7 @@ import {
   TabbedShowLayout,
   useTranslate,
 } from 'react-admin';
+import ManagersPhotoIdTab from './tabs/ManagersPhotoIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
@@ -20,6 +21,7 @@ const DefaultFileShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <ManagersPhotoIdTab label={translate('catalogs.managers.title')} path='managers-photoId' />
       </TabbedShowLayout>
     </Show>
   );

@@ -36,7 +36,9 @@ const ManagersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
         </ReferenceField>
         <TextField source='email' label={translate('catalogs.managers.fields.email')} />
         <TextField source='phone' label={translate('catalogs.managers.fields.phone')} />
-        <TextField source='photo' label={translate('catalogs.managers.fields.photo')} />
+        <ReferenceField source='photoId' label={translate('catalogs.managers.fields.photoId')} reference='files' link='show'>
+          <NumberField source='id' />
+        </ReferenceField>
         <TextField source='telegramLogin' label={translate('catalogs.managers.fields.telegramLogin')} />
         <ReferenceField source='unitId' label={translate('catalogs.managers.fields.unitId')} reference='units' link='show'>
           <TextField source='title' />

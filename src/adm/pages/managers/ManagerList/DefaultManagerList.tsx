@@ -15,6 +15,7 @@ import {
 } from 'react-admin';
 import ManagerFilter from './ManagerFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ImageViewField from '../../../../uiLib/file/ImageViewField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -49,7 +50,7 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
         </ReferenceField>
         <TextField source='email' label={translate('catalogs.managers.fields.email')} />
         <TextField source='phone' label={translate('catalogs.managers.fields.phone')} />
-        <TextField source='photo' label={translate('catalogs.managers.fields.photo')} />
+        <ImageViewField reference='files' source='photoId' label={translate('catalogs.managers.fields.photoId')} />
         <TextField source='telegramLogin' label={translate('catalogs.managers.fields.telegramLogin')} />
         <ReferenceField source='unitId' label={translate('catalogs.managers.fields.unitId')} reference='units' link='show'>
           <TextField source='title' />

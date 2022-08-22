@@ -16,14 +16,14 @@ import {
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+const ManagersPhotoIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
   const translate = useTranslate();
 
   return (<Tab {...props}>
     <ReferenceManyField
       label={false}
       reference='managers'
-      target='languageId'
+      target='photoId'
       pagination={<Pagination />}
     >
       <Datagrid>
@@ -54,4 +54,4 @@ const ManagersLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
   </Tab>);
 };
 
-export default ManagersLanguageIdTab;
+export default ManagersPhotoIdTab;
