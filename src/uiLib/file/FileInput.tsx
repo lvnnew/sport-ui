@@ -5,10 +5,14 @@ import {
   FileInputProps as RaFileInputProps,
   FileField,
   NonEmptyReferenceField,
+  useSaveContext,
+  useIsMounted,
+  useRecordContext,
 } from 'react-admin';
 import {gql, useMutation} from '@apollo/client';
 import {useController} from 'react-hook-form';
 import log from '../../utils/log';
+import {getUniqSaveId} from '../../contexts/SaveContext';
 
 export type FileInputProps = Readonly<RaFileInputProps & {
   type?: 'image';
@@ -49,7 +53,7 @@ const Field: FC<Pick<FileInputProps, 'type'>> = ({type}) => (
 );
 
 const FileReferenceField: FC<Pick<FileInputProps, 'type'>> = ({type, ...rest}) => {
-  const record = (rest as any).record;
+  const record = useRecordContext(rest) as number | FileFieldState;
 
   if (typeof record !== 'number') {
     return <Field type={type} />;
@@ -80,25 +84,31 @@ export const FileInput: FC<FileInputProps> = (props) => {
 
   const [loadFile] = useMutation<{ saveFile: { id: number, url: string } }>(SAVE_FILE);
   const {field} = useController({name: finalName});
+  const saveContext = useSaveContext();
+  const isMounted = useIsMounted();
   const refValue = useRef<Array<number | FileFieldState>>(field.value); // Only for multiple field
   refValue.current = field.value;
 
-  // Todo: minimize
-  const onChange = async (file: File | File[] | FileFieldState | FileFieldState[]) => {
+  const onChange = (file: File | File[] | FileFieldState | FileFieldState[]) => {
     onChangeOverridden?.(file);
 
     const needLoadFileList: File[] = (Array.isArray(file) ? file : [file]).filter(isFile);
-    // Todo: need check const value
+    if (!isMounted.current) {
+      return;
+    }
 
     for (const file of needLoadFileList) {
+      const fileId = getUniqSaveId();
+      saveContext?.save?.({[fileId]: true});
       if (!multiple) {
         field.onChange(null);
       }
 
-      // todo: check isMount...
-
       loadFile({variables: {file}}).then((result) => {
-        // Todo: change after server saving
+        if (!isMounted.current) {
+          return;
+        }
+
         const savedFile = result.data?.saveFile;
 
         if (!savedFile) {
@@ -111,28 +121,35 @@ export const FileInput: FC<FileInputProps> = (props) => {
           const value = refValue.current ?? [];
           const currentIdx = value.findIndex((f) => typeof f === 'object' && f.rawFile === file);
 
-          // eslint-disable-next-line no-negated-condition
           if (currentIdx !== -1) {
             const newValue = [...value];
             newValue.splice(currentIdx, 1, id);
 
             field.onChange(newValue);
             refValue.current = newValue;
-          } else {
-            // todo: throw some error with status failed load image, maybe set notify
           }
         } else {
           field.onChange(id);
         }
       }).catch((error: any) => {
         log.error(`Fail save file in back: ${error.message}`);
+        if (!isMounted.current) {
+          return;
+        }
 
-        // todo: off loader
         if (multiple) {
-          // todo: remove obj from values, Unblock save button
+          const value = (refValue.current ?? []).filter((f) => typeof f !== 'object' || f.rawFile !== file);
+
+          field.onChange(value);
         } else {
           field.onChange(null);
         }
+      }).finally(() => {
+        if (!isMounted.current) {
+          return;
+        }
+
+        saveContext?.save?.({[fileId]: false});
       });
     }
   };
@@ -148,5 +165,3 @@ export const FileInput: FC<FileInputProps> = (props) => {
     </RaFileInput>
   );
 };
-
-// todo: добавить блокирование кнопки сохранения, когда файл загружается.
