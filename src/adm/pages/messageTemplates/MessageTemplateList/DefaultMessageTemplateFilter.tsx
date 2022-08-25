@@ -49,6 +49,22 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
           parse={val => val || null}
         />
       </ReferenceInput>
+      <ReferenceInput
+        source='templateStyleId'
+        reference='templateStyles'
+        sort={{id: 'id', order: 'DESC'}}
+        label={translate('catalogs.messageTemplates.fields.templateStyleId')}
+      >
+        <AutocompleteInput
+          fullWidth
+          sx={{m: 1}}
+          size='small'
+          label={translate('catalogs.messageTemplates.fields.templateStyleId')}
+          optionText='title'
+          defaultValue={null}
+          parse={val => val || null}
+        />
+      </ReferenceInput>
     </Filter>
   );
 };

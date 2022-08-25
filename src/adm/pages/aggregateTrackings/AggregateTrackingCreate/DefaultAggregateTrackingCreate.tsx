@@ -14,6 +14,7 @@ import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAggregateTrackingValidation from '../getAggregateTrackingValidation';
+import {SaveContext} from '../../../../contexts/SaveContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,63 +32,65 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
         lastEntityUpdate: data.lastEntityUpdate || null,
       }), [])}
     >
-      <SimpleForm
-        defaultValues={{}}
-        resolver={resolver}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput
-              source='entityTypeId'
-              reference='entities'
-              sort={{id: 'id', order: 'DESC'}}
-              label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
-            >
-              <AutocompleteInput
+      <SaveContext>
+        <SimpleForm
+          defaultValues={{}}
+          resolver={resolver}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <ReferenceInput
+                source='entityTypeId'
+                reference='entities'
+                sort={{id: 'id', order: 'DESC'}}
+                label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
+              >
+                <AutocompleteInput
+                  fullWidth
+                  sx={{m: 1}}
+                  size='small'
+                  label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
+                  optionText='title'
+                  defaultValue={null}
+                  parse={val => val || null}
+                />
+              </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
                 fullWidth
                 sx={{m: 1}}
-                size='small'
-                label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
-                optionText='title'
-                defaultValue={null}
-                parse={val => val || null}
+                source='entityId'
+                label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
               />
-            </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <DateTimeInput
+                fullWidth
+                sx={{m: 1}}
+                source='lastAggregatesComputed'
+                label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <DateTimeInput
+                fullWidth
+                sx={{m: 1}}
+                source='lastEntityUpdate'
+                label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <NumberInput
+                fullWidth
+                sx={{m: 1}}
+                source='aggregateVersion'
+                label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput
-              fullWidth
-              sx={{m: 1}}
-              source='entityId'
-              label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput
-              fullWidth
-              sx={{m: 1}}
-              source='lastAggregatesComputed'
-              label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput
-              fullWidth
-              sx={{m: 1}}
-              source='lastEntityUpdate'
-              label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <NumberInput
-              fullWidth
-              sx={{m: 1}}
-              source='aggregateVersion'
-              label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
-            />
-          </Grid>
-        </Grid>
-      </SimpleForm>
+        </SimpleForm>
+      </SaveContext>
     </Create>
   );
 };

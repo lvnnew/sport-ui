@@ -177,6 +177,18 @@ const enCatalogs = {
       roleId: 'Role',
     },
   },
+  messageTemplateLangVariants: {
+    title: 'Message template lang variant',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      subjectTemplate: 'Subject template',
+      bodyTemplate: 'Body template',
+      messageTemplateId: 'Message template',
+      languageId: 'Language',
+      additionalStyle: 'Additional style',
+    },
+  },
   messageTemplates: {
     title: 'Message templates',
     fields: {
@@ -185,6 +197,7 @@ const enCatalogs = {
       title: 'Title',
       secretData: 'Secret data',
       messageTypeId: 'Message type',
+      templateStyleId: 'Template style',
     },
   },
   messageTypes: {
@@ -238,6 +251,15 @@ const enCatalogs = {
       id: 'Id',
       search: 'Search',
       comment: 'Comment',
+    },
+  },
+  templateStyles: {
+    title: 'Template styles',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      title: 'Title',
+      style: 'Style',
     },
   },
   tenants: {

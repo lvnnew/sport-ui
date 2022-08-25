@@ -17,6 +17,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToPermissionValidation from '../getManagersToPermissionValidation';
 import {hasPermission} from '../../../../utils/permissions';
+import {SaveContext} from '../../../../contexts/SaveContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -46,50 +47,52 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
       }), [])}
     >
-      <SimpleForm
-        defaultValues={{}}
-        resolver={resolver}
-        toolbar={<CustomToolbar />}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput
-              source='managerId'
-              reference='managers'
-              sort={{id: 'id', order: 'DESC'}}
-              label={translate('catalogs.managersToPermissions.fields.managerId')}
-            >
-              <AutocompleteInput
-                fullWidth
-                sx={{m: 1}}
-                size='small'
+      <SaveContext>
+        <SimpleForm
+          defaultValues={{}}
+          resolver={resolver}
+          toolbar={<CustomToolbar />}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <ReferenceInput
+                source='managerId'
+                reference='managers'
+                sort={{id: 'id', order: 'DESC'}}
                 label={translate('catalogs.managersToPermissions.fields.managerId')}
-                optionText='title'
-                defaultValue={null}
-                parse={val => val || null}
-              />
-            </ReferenceInput>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput
-              source='permissionId'
-              reference='permissions'
-              sort={{id: 'id', order: 'DESC'}}
-              label={translate('catalogs.managersToPermissions.fields.permissionId')}
-            >
-              <AutocompleteInput
-                fullWidth
-                sx={{m: 1}}
-                size='small'
+              >
+                <AutocompleteInput
+                  fullWidth
+                  sx={{m: 1}}
+                  size='small'
+                  label={translate('catalogs.managersToPermissions.fields.managerId')}
+                  optionText='title'
+                  defaultValue={null}
+                  parse={val => val || null}
+                />
+              </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <ReferenceInput
+                source='permissionId'
+                reference='permissions'
+                sort={{id: 'id', order: 'DESC'}}
                 label={translate('catalogs.managersToPermissions.fields.permissionId')}
-                optionText='title'
-                defaultValue={null}
-                parse={val => val || null}
-              />
-            </ReferenceInput>
+              >
+                <AutocompleteInput
+                  fullWidth
+                  sx={{m: 1}}
+                  size='small'
+                  label={translate('catalogs.managersToPermissions.fields.permissionId')}
+                  optionText='title'
+                  defaultValue={null}
+                  parse={val => val || null}
+                />
+              </ReferenceInput>
+            </Grid>
           </Grid>
-        </Grid>
-      </SimpleForm>
+        </SimpleForm>
+      </SaveContext>
     </Edit>
   );
 };

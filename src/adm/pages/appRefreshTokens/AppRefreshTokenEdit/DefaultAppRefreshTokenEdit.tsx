@@ -19,6 +19,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAppRefreshTokenValidation from '../getAppRefreshTokenValidation';
 import {hasPermission} from '../../../../utils/permissions';
+import {SaveContext} from '../../../../contexts/SaveContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -49,48 +50,50 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
         create: data.create || null,
       }), [])}
     >
-      <SimpleForm
-        defaultValues={{}}
-        resolver={resolver}
-        toolbar={<CustomToolbar />}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <DateTimeInput
-              fullWidth
-              sx={{m: 1}}
-              source='create'
-              label={translate('catalogs.appRefreshTokens.fields.create')}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <ReferenceInput
-              source='userId'
-              reference='users'
-              sort={{id: 'id', order: 'DESC'}}
-              label={translate('catalogs.appRefreshTokens.fields.userId')}
-            >
-              <AutocompleteInput
+      <SaveContext>
+        <SimpleForm
+          defaultValues={{}}
+          resolver={resolver}
+          toolbar={<CustomToolbar />}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <DateTimeInput
                 fullWidth
                 sx={{m: 1}}
-                size='small'
-                label={translate('catalogs.appRefreshTokens.fields.userId')}
-                optionText='title'
-                defaultValue={null}
-                parse={val => val || null}
+                source='create'
+                label={translate('catalogs.appRefreshTokens.fields.create')}
               />
-            </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <ReferenceInput
+                source='userId'
+                reference='users'
+                sort={{id: 'id', order: 'DESC'}}
+                label={translate('catalogs.appRefreshTokens.fields.userId')}
+              >
+                <AutocompleteInput
+                  fullWidth
+                  sx={{m: 1}}
+                  size='small'
+                  label={translate('catalogs.appRefreshTokens.fields.userId')}
+                  optionText='title'
+                  defaultValue={null}
+                  parse={val => val || null}
+                />
+              </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
+                source='token'
+                label={translate('catalogs.appRefreshTokens.fields.token')}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput
-              fullWidth
-              sx={{m: 1}}
-              source='token'
-              label={translate('catalogs.appRefreshTokens.fields.token')}
-            />
-          </Grid>
-        </Grid>
-      </SimpleForm>
+        </SimpleForm>
+      </SaveContext>
     </Edit>
   );
 };

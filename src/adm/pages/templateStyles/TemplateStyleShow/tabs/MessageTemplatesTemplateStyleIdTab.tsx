@@ -1,0 +1,45 @@
+/* eslint-disable max-len */
+import React, {FC} from 'react';
+import {
+  TabProps,
+  Tab,
+  NumberField,
+  TextField,
+  BooleanField,
+  ReferenceField,
+  ReferenceManyField,
+  Pagination,
+  Datagrid,
+  ShowButton,
+  useTranslate,
+} from 'react-admin';
+
+// DO NOT EDIT! THIS IS GENERATED FILE
+
+const MessageTemplatesTemplateStyleIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+  const translate = useTranslate();
+
+  return (<Tab {...props}>
+    <ReferenceManyField
+      label={false}
+      reference='messageTemplates'
+      target='templateStyleId'
+      pagination={<Pagination />}
+    >
+      <Datagrid>
+        <NumberField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
+        <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
+        <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
+        <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='templateStyleId' label={translate('catalogs.messageTemplates.fields.templateStyleId')} reference='templateStyles' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ShowButton />
+      </Datagrid>
+    </ReferenceManyField>
+  </Tab>);
+};
+
+export default MessageTemplatesTemplateStyleIdTab;

@@ -37,7 +37,10 @@ const numberIdResources: string[] = [
   'managersToPermissions',
   'rolesToPermissions',
   'managersToRoles',
+  'templateStyles',
   'tenants',
+  'messageTemplates',
+  'messageTemplateLangVariants',
 ];
 
 const customBuildQuery = (introspection: IntrospectionResult) =>

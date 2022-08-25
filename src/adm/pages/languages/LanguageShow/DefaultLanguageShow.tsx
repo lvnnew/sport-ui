@@ -7,6 +7,7 @@ import {
   useTranslate,
 } from 'react-admin';
 import ManagersLanguageIdTab from './tabs/ManagersLanguageIdTab';
+import MessageTemplateLangVariantsLanguageIdTab from './tabs/MessageTemplateLangVariantsLanguageIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
@@ -22,6 +23,7 @@ const DefaultLanguageShow: FC<ShowProps> = (props: ShowProps) => {
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
         <ManagersLanguageIdTab label={translate('catalogs.managers.title')} path='managers-languageId' />
+        <MessageTemplateLangVariantsLanguageIdTab label={translate('catalogs.messageTemplateLangVariants.title')} path='messageTemplateLangVariants-languageId' />
       </TabbedShowLayout>
     </Show>
   );

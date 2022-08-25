@@ -190,6 +190,12 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
+      label: 'catalogs.templateStyles.title',
+      link: '/templateStyles',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
       label: 'catalogs.entities.title',
       link: '/entities',
       icon: 'DetailsOutlined',
@@ -216,6 +222,12 @@ const getDefaultMenu = () => {
     {
       label: 'catalogs.messageTemplates.title',
       link: '/messageTemplates',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'catalogs.messageTemplateLangVariants.title',
+      link: '/messageTemplateLangVariants',
       icon: 'DetailsOutlined',
       debugOnly: true,
     },

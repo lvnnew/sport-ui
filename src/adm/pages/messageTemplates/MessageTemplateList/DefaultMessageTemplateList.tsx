@@ -7,6 +7,7 @@ import {
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
+  NumberField,
   TextField,
   BooleanField,
   ReferenceField,
@@ -39,10 +40,13 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
+        <NumberField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
         <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
         <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
         <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='templateStyleId' label={translate('catalogs.messageTemplates.fields.templateStyleId')} reference='templateStyles' link='show'>
           <TextField source='title' />
         </ReferenceField>
       </Datagrid>

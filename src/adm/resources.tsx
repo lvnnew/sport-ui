@@ -196,6 +196,18 @@ const LoadableManagersToRoleCreate = Loadable({
 const LoadableManagersToRoleList = Loadable({
   loader: () => import('./pages/managersToRoles/ManagersToRoleList'),
 });
+const LoadableMessageTemplateLangVariantShow = Loadable({
+  loader: () => import('./pages/messageTemplateLangVariants/MessageTemplateLangVariantShow'),
+});
+const LoadableMessageTemplateLangVariantEdit = Loadable({
+  loader: () => import('./pages/messageTemplateLangVariants/MessageTemplateLangVariantEdit'),
+});
+const LoadableMessageTemplateLangVariantCreate = Loadable({
+  loader: () => import('./pages/messageTemplateLangVariants/MessageTemplateLangVariantCreate'),
+});
+const LoadableMessageTemplateLangVariantList = Loadable({
+  loader: () => import('./pages/messageTemplateLangVariants/MessageTemplateLangVariantList'),
+});
 const LoadableMessageTemplateShow = Loadable({
   loader: () => import('./pages/messageTemplates/MessageTemplateShow'),
 });
@@ -279,6 +291,18 @@ const LoadableTagCreate = Loadable({
 });
 const LoadableTagList = Loadable({
   loader: () => import('./pages/tags/TagList'),
+});
+const LoadableTemplateStyleShow = Loadable({
+  loader: () => import('./pages/templateStyles/TemplateStyleShow'),
+});
+const LoadableTemplateStyleEdit = Loadable({
+  loader: () => import('./pages/templateStyles/TemplateStyleEdit'),
+});
+const LoadableTemplateStyleCreate = Loadable({
+  loader: () => import('./pages/templateStyles/TemplateStyleCreate'),
+});
+const LoadableTemplateStyleList = Loadable({
+  loader: () => import('./pages/templateStyles/TemplateStyleList'),
 });
 const LoadableTenantShow = Loadable({
   loader: () => import('./pages/tenants/TenantShow'),
@@ -465,6 +489,15 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         options={{label: translate('catalogs.managersToRoles.title')}}
       />,
       <Resource
+        key='messageTemplateLangVariants'
+        name='messageTemplateLangVariants'
+        show={hasPermission(permissions, 'messageTemplateLangVariants.get') ? LoadableMessageTemplateLangVariantShow : undefined}
+        edit={hasPermission(permissions, 'messageTemplateLangVariants.update') ? LoadableMessageTemplateLangVariantEdit : undefined}
+        create={hasPermission(permissions, 'messageTemplateLangVariants.create') ? LoadableMessageTemplateLangVariantCreate : undefined}
+        list={hasPermission(permissions, 'messageTemplateLangVariants.all') ? LoadableMessageTemplateLangVariantList : undefined}
+        options={{label: translate('catalogs.messageTemplateLangVariants.title')}}
+      />,
+      <Resource
         key='messageTemplates'
         name='messageTemplates'
         show={hasPermission(permissions, 'messageTemplates.get') ? LoadableMessageTemplateShow : undefined}
@@ -526,6 +559,15 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'tags.create') ? LoadableTagCreate : undefined}
         list={hasPermission(permissions, 'tags.all') ? LoadableTagList : undefined}
         options={{label: translate('catalogs.tags.title')}}
+      />,
+      <Resource
+        key='templateStyles'
+        name='templateStyles'
+        show={hasPermission(permissions, 'templateStyles.get') ? LoadableTemplateStyleShow : undefined}
+        edit={hasPermission(permissions, 'templateStyles.update') ? LoadableTemplateStyleEdit : undefined}
+        create={hasPermission(permissions, 'templateStyles.create') ? LoadableTemplateStyleCreate : undefined}
+        list={hasPermission(permissions, 'templateStyles.all') ? LoadableTemplateStyleList : undefined}
+        options={{label: translate('catalogs.templateStyles.title')}}
       />,
       <Resource
         key='tenants'

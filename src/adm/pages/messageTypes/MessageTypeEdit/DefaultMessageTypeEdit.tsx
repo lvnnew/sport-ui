@@ -16,6 +16,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getMessageTypeValidation from '../getMessageTypeValidation';
 import {hasPermission} from '../../../../utils/permissions';
+import {SaveContext} from '../../../../contexts/SaveContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -45,31 +46,33 @@ const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
       }), [])}
     >
-      <SimpleForm
-        defaultValues={{}}
-        resolver={resolver}
-        toolbar={<CustomToolbar />}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput
-              fullWidth
-              sx={{m: 1}}
-              source='title'
-              label={translate('catalogs.messageTypes.fields.title')}
-            />
+      <SaveContext>
+        <SimpleForm
+          defaultValues={{}}
+          resolver={resolver}
+          toolbar={<CustomToolbar />}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
+                source='title'
+                label={translate('catalogs.messageTypes.fields.title')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
+                source='description'
+                defaultValue={null}
+                label={translate('catalogs.messageTypes.fields.description')}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={2}>
-            <TextInput
-              fullWidth
-              sx={{m: 1}}
-              source='description'
-              defaultValue={null}
-              label={translate('catalogs.messageTypes.fields.description')}
-            />
-          </Grid>
-        </Grid>
-      </SimpleForm>
+        </SimpleForm>
+      </SaveContext>
     </Edit>
   );
 };

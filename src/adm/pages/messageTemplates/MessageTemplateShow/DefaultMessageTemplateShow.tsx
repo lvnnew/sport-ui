@@ -6,6 +6,7 @@ import {
   TabbedShowLayout,
   useTranslate,
 } from 'react-admin';
+import MessageTemplateLangVariantsMessageTemplateIdTab from './tabs/MessageTemplateLangVariantsMessageTemplateIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
@@ -20,6 +21,7 @@ const DefaultMessageTemplateShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <MessageTemplateLangVariantsMessageTemplateIdTab label={translate('catalogs.messageTemplateLangVariants.title')} path='messageTemplateLangVariants-messageTemplateId' />
       </TabbedShowLayout>
     </Show>
   );

@@ -177,6 +177,18 @@ const ruCatalogs = {
       roleId: 'Role',
     },
   },
+  messageTemplateLangVariants: {
+    title: 'Языковой вариант шаблона сообщения',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      subjectTemplate: 'Subject template',
+      bodyTemplate: 'Body template',
+      messageTemplateId: 'Message template',
+      languageId: 'Language',
+      additionalStyle: 'Additional style',
+    },
+  },
   messageTemplates: {
     title: 'Шаблоны сообщений',
     fields: {
@@ -185,6 +197,7 @@ const ruCatalogs = {
       title: 'Title',
       secretData: 'Secret data',
       messageTypeId: 'Message type',
+      templateStyleId: 'Template style',
     },
   },
   messageTypes: {
@@ -238,6 +251,15 @@ const ruCatalogs = {
       id: 'Ид',
       search: 'Поиск',
       comment: 'Comment',
+    },
+  },
+  templateStyles: {
+    title: 'Стили шаблонов',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Title',
+      style: 'Style',
     },
   },
   tenants: {

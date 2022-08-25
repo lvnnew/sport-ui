@@ -210,6 +210,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allMessageTemplateLangVariantsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMessageTemplateLangVariantsMeta?.count}
+        title={translate('catalogs.messageTemplateLangVariants.title')}
+        to='/messageTemplateLangVariants'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allMessageTemplatesMeta {
               count
             }
@@ -290,6 +302,18 @@ const ResourcesPage: FC = () => {
         resultToValue={result => result?._allTagsMeta?.count}
         title={translate('catalogs.tags.title')}
         to='/tags'
+      />
+      <NumberWiget
+        request={gql`
+          query {
+            _allTemplateStylesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTemplateStylesMeta?.count}
+        title={translate('catalogs.templateStyles.title')}
+        to='/templateStyles'
       />
       <NumberWiget
         request={gql`
