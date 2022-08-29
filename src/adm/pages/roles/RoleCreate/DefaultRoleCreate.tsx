@@ -11,7 +11,7 @@ import {
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getRoleValidation from '../getRoleValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -27,7 +27,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             hasAllPermissions: false,
@@ -71,7 +71,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

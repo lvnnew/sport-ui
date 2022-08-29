@@ -13,7 +13,7 @@ import DateInput from '../../../../uiLib/DateInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getDelegationValidation from '../getDelegationValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,7 +30,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
         expiresAt: data.expiresAt || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             active: false,
@@ -93,7 +93,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

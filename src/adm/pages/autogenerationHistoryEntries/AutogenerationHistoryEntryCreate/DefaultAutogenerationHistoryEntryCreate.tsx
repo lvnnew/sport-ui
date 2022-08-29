@@ -15,7 +15,7 @@ import DateInput from '../../../../uiLib/DateInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationHistoryEntryValidation from '../getAutogenerationHistoryEntryValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -33,7 +33,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
         version: data.version || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             errorOccurred: false,
@@ -110,7 +110,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

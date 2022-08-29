@@ -12,7 +12,7 @@ import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getStatValidation from '../getStatValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -29,7 +29,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
         updated: data.updated || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{}}
           resolver={resolver}
@@ -63,7 +63,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

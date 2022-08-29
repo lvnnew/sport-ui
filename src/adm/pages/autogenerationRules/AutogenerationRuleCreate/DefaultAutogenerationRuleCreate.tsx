@@ -12,7 +12,7 @@ import DateInput from '../../../../uiLib/DateInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationRuleValidation from '../getAutogenerationRuleValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -29,7 +29,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
         version: data.version || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             ignoreVersionOnHistory: false,
@@ -104,7 +104,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

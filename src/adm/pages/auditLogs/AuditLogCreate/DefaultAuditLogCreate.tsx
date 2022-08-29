@@ -14,7 +14,7 @@ import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogValidation from '../getAuditLogValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,7 +31,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
         date: data.date || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             foreign: false,
@@ -173,7 +173,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

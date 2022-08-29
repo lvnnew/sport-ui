@@ -20,7 +20,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogValidation from '../getAuditLogValidation';
 import {hasPermission} from '../../../../utils/permissions';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -51,7 +51,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
         date: data.date || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             foreign: false,
@@ -194,7 +194,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Edit>
   );
 };

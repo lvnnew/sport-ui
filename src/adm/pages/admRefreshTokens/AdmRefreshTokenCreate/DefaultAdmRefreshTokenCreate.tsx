@@ -13,7 +13,7 @@ import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAdmRefreshTokenValidation from '../getAdmRefreshTokenValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,7 +30,7 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
         create: data.create || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{}}
           resolver={resolver}
@@ -72,7 +72,7 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

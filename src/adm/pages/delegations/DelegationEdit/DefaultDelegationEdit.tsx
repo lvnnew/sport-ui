@@ -19,7 +19,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getDelegationValidation from '../getDelegationValidation';
 import {hasPermission} from '../../../../utils/permissions';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -50,7 +50,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
         expiresAt: data.expiresAt || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             active: false,
@@ -114,7 +114,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Edit>
   );
 };

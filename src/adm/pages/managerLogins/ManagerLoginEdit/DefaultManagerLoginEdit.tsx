@@ -19,7 +19,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerLoginValidation from '../getManagerLoginValidation';
 import {hasPermission} from '../../../../utils/permissions';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -49,7 +49,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             emailVerified: false,
@@ -128,7 +128,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Edit>
   );
 };

@@ -13,7 +13,7 @@ import {useDebug} from '../../../../contexts/DebugContext';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getUserValidation from '../getUserValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,7 +30,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{}}
           resolver={resolver}
@@ -89,7 +89,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>}
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

@@ -13,7 +13,7 @@ import {
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerLoginValidation from '../getManagerLoginValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -29,7 +29,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             emailVerified: false,
@@ -107,7 +107,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

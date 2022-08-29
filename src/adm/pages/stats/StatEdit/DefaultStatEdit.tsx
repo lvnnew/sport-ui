@@ -17,7 +17,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getStatValidation from '../getStatValidation';
 import {hasPermission} from '../../../../utils/permissions';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -48,7 +48,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
         updated: data.updated || null,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{}}
           resolver={resolver}
@@ -75,7 +75,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Edit>
   );
 };

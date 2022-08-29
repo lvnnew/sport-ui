@@ -14,7 +14,7 @@ import {useDebug} from '../../../../contexts/DebugContext';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerValidation from '../getManagerValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 import {FileInput} from '../../../../uiLib/file/FileInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -32,7 +32,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             headOfUnit: false,
@@ -167,7 +167,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
             </Grid>}
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

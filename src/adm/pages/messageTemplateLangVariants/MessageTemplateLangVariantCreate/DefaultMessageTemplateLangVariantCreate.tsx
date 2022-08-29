@@ -12,7 +12,7 @@ import {
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getMessageTemplateLangVariantValidation from '../getMessageTemplateLangVariantValidation';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -28,7 +28,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{}}
           resolver={resolver}
@@ -97,7 +97,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Create>
   );
 };

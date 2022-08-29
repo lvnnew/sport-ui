@@ -19,7 +19,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getUserValidation from '../getUserValidation';
 import {hasPermission} from '../../../../utils/permissions';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -50,7 +50,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{}}
           resolver={resolver}
@@ -110,7 +110,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
             </Grid>}
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Edit>
   );
 };

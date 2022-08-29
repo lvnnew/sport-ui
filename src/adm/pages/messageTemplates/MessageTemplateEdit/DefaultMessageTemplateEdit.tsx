@@ -19,7 +19,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getMessageTemplateValidation from '../getMessageTemplateValidation';
 import {hasPermission} from '../../../../utils/permissions';
-import {SaveContext} from '../../../../contexts/SaveContext';
+import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -49,7 +49,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
       }), [])}
     >
-      <SaveContext>
+      <LoadingContext>
         <SimpleForm
           defaultValues={{
             secretData: false,
@@ -112,7 +112,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
             </Grid>
           </Grid>
         </SimpleForm>
-      </SaveContext>
+      </LoadingContext>
     </Edit>
   );
 };
