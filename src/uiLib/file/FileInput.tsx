@@ -5,14 +5,13 @@ import {
   FileInputProps as RaFileInputProps,
   FileField,
   NonEmptyReferenceField,
-  useSaveContext,
   useIsMounted,
   useRecordContext,
 } from 'react-admin';
 import {gql, useMutation} from '@apollo/client';
 import {useController} from 'react-hook-form';
 import log from '../../utils/log';
-import {getUniqSaveId} from '../../contexts/SaveContext';
+import {getUniqSaveId, useLoadingContext} from '../../contexts/LoadingContext';
 
 export type FileInputProps = Readonly<RaFileInputProps & {
   type?: 'image';
@@ -84,7 +83,7 @@ export const FileInput: FC<FileInputProps> = (props) => {
 
   const [loadFile] = useMutation<{ saveFile: { id: number, url: string } }>(SAVE_FILE);
   const {field} = useController({name: finalName});
-  const saveContext = useSaveContext();
+  const setLoader = useLoadingContext();
   const isMounted = useIsMounted();
   const refValue = useRef<Array<number | FileFieldState>>(field.value); // Only for multiple field
   refValue.current = field.value;
@@ -99,7 +98,7 @@ export const FileInput: FC<FileInputProps> = (props) => {
 
     for (const file of needLoadFileList) {
       const fileId = getUniqSaveId();
-      saveContext?.save?.({[fileId]: true});
+      setLoader?.({[fileId]: true});
       if (!multiple) {
         field.onChange(null);
       }
@@ -149,7 +148,7 @@ export const FileInput: FC<FileInputProps> = (props) => {
           return;
         }
 
-        saveContext?.save?.({[fileId]: false});
+        setLoader?.({[fileId]: false});
       });
     }
   };
