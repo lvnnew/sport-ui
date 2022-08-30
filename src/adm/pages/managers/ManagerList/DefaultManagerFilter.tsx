@@ -69,22 +69,6 @@ const DefaultManagerFilter: FC<any> = (props) => {
         defaultValue={null}
         label={translate('catalogs.managers.fields.phone')}
       />
-      <ReferenceInput
-        source='photoId'
-        reference='files'
-        sort={{id: 'id', order: 'DESC'}}
-        label={translate('catalogs.managers.fields.photoId')}
-      >
-        <AutocompleteInput
-          fullWidth
-          sx={{m: 1}}
-          size='small'
-          label={translate('catalogs.managers.fields.photoId')}
-          optionText='id'
-          defaultValue={null}
-          parse={val => val || null}
-        />
-      </ReferenceInput>
       <TextInput
         fullWidth
         sx={{m: 1}}
