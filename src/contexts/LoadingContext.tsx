@@ -8,6 +8,9 @@ const Context = createContext<(save: Record<number, boolean>) => void>(() => nul
 
 export const useLoadingContext = () => useContext(Context);
 
+// Этот контекст используеться для блокировки кнопки submit во время асинхронных операций
+// в компонентах Edit и Create, например когда загружуеться файл на бек,
+// у нас ещё нет id файла и мы не даём пользователю засабмитить форму раньше времени и отображаем лоадер
 export const LoadingContext: FC<PropsWithChildren> = ({children}) => {
   const saveContext = useSaveContext();
   const [saveField, setSaveField] = useState<Record<number, boolean>>({}); // {[getUniqSaveId()]: boolean}
@@ -20,7 +23,7 @@ export const LoadingContext: FC<PropsWithChildren> = ({children}) => {
   const saving = Object.values(saveField).find(Boolean); // finding the first true value
 
   return (
-    <SaveContextProvider value={{mutationMode, ...saveContext, saving: saving || saveContext.saving}}>
+    <SaveContextProvider value={{mutationMode, ...saveContext, saving: saving || saveContext?.saving}}>
       <Context.Provider value={save}>
         {children}
       </Context.Provider>
