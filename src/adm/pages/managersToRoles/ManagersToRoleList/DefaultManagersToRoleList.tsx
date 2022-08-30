@@ -36,6 +36,7 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<ManagersToRoleFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

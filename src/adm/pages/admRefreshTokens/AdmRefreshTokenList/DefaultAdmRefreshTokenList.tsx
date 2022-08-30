@@ -37,6 +37,7 @@ const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<AdmRefreshTokenFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

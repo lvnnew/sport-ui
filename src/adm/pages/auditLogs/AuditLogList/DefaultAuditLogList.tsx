@@ -38,6 +38,7 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<AuditLogFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

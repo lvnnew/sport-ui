@@ -34,6 +34,7 @@ const DefaultPermissionList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<PermissionFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

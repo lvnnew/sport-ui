@@ -35,6 +35,7 @@ const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<TemplateStyleFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

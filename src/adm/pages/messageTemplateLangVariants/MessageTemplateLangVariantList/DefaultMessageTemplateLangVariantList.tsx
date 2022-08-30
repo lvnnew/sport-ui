@@ -36,6 +36,7 @@ const DefaultMessageTemplateLangVariantList: FC<ListProps> = (props: ListProps) 
       exporter={false}
       filters={<MessageTemplateLangVariantFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

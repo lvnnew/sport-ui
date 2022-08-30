@@ -35,6 +35,7 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<FileFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

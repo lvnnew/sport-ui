@@ -34,6 +34,7 @@ const DefaultEntityList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<EntityFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

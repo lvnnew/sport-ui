@@ -35,6 +35,7 @@ const DefaultTagList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<TagFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

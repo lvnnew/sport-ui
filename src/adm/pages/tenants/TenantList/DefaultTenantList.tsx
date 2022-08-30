@@ -35,6 +35,7 @@ const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<TenantFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

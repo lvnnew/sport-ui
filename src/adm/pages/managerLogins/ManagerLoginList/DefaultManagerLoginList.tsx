@@ -37,6 +37,7 @@ const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<ManagerLoginFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>

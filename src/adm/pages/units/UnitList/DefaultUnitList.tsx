@@ -36,6 +36,7 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
       exporter={false}
       filters={<UnitFilter />}
       bulkActionButtons={<CustomBulkActionButton />}
+      sort={{field: 'id', order: 'desc'}}
       {...props}
     >
       <Datagrid rowClick='show'>
