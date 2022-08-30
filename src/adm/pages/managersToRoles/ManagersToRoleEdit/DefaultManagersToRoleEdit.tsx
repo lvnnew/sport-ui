@@ -42,6 +42,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
 
   return (
     <Edit
+      redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
         ...data,

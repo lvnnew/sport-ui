@@ -26,6 +26,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
 
   return (
     <Create
+      redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
         ...data,

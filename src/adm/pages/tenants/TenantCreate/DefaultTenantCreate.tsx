@@ -22,6 +22,7 @@ const DefaultTenantCreate: FC<CreateProps> = (props: CreateProps) => {
 
   return (
     <Create
+      redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
         ...data,
