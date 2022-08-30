@@ -17,7 +17,7 @@ import {hasPermission} from '../../../../utils/permissions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const CustomBulkActionButton = (props: BulkActionProps) => {
+const DefaultBulkActionButton = (props: BulkActionProps) => {
   const {permissions} = usePermissions<string[]>();
 
   return (
@@ -35,7 +35,7 @@ const DefaultMessageTemplateLangVariantList: FC<ListProps> = (props: ListProps) 
       title={translate('catalogs.messageTemplateLangVariants.title')}
       exporter={false}
       filters={<MessageTemplateLangVariantFilter />}
-      bulkActionButtons={<CustomBulkActionButton />}
+      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >

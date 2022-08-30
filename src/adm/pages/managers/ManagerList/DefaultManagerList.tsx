@@ -19,7 +19,7 @@ import ImageViewField from '../../../../uiLib/file/ImageViewField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const CustomBulkActionButton = (props: BulkActionProps) => {
+const DefaultBulkActionButton = (props: BulkActionProps) => {
   const {permissions} = usePermissions<string[]>();
 
   return (
@@ -37,7 +37,7 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
       title={translate('catalogs.managers.title')}
       exporter={false}
       filters={<ManagerFilter />}
-      bulkActionButtons={<CustomBulkActionButton />}
+      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >

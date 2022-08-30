@@ -21,7 +21,7 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const CustomToolbar = (props: ToolbarProps) => {
+const DefaultToolbar = (props: ToolbarProps) => {
   const {permissions} = usePermissions<string[]>();
 
   return (
@@ -55,7 +55,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
             allTenantsAvailable: false,
           }}
           resolver={resolver}
-          toolbar={<CustomToolbar />}
+          toolbar={<DefaultToolbar />}
         >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3} lg={2}>
