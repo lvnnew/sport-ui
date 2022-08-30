@@ -20,7 +20,7 @@ export const LoadingContext: FC<PropsWithChildren> = ({children}) => {
   const saving = Object.values(saveField).find(Boolean); // finding the first true value
 
   return (
-    <SaveContextProvider value={{mutationMode, ...saveContext, saving: saving || saveContext.saving}}>
+    <SaveContextProvider value={{mutationMode, ...saveContext, saving: saving || saveContext?.saving}}>
       <Context.Provider value={save}>
         {children}
       </Context.Provider>
