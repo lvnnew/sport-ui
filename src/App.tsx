@@ -92,7 +92,7 @@ const App = () => {
           authProvider={authProvider}
           title=''
           theme={lightTheme}
-          store={localStorageStore('2')}
+          store={localStorageStore('3')}
         >
           {permissions => [
             (
