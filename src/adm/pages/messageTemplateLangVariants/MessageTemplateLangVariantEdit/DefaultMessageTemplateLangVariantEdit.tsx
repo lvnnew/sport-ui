@@ -60,6 +60,15 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
               <TextInput
                 fullWidth
                 sx={{m: 1}}
+                source='title'
+                defaultValue={null}
+                label={translate('catalogs.messageTemplateLangVariants.fields.title')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
                 source='subjectTemplate'
                 label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')}
               />
@@ -76,7 +85,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
               <ReferenceInput
                 source='messageTemplateId'
                 reference='messageTemplates'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')}
               >
                 <AutocompleteInput
@@ -94,7 +103,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
               <ReferenceInput
                 source='languageId'
                 reference='languages'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.messageTemplateLangVariants.fields.languageId')}
               >
                 <AutocompleteInput

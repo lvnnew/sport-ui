@@ -25,6 +25,11 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
+          <TextField source='title' label={translate('catalogs.messageTemplateLangVariants.fields.title')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
           <TextField source='subjectTemplate' label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')} />
         </Labeled>
       </Grid>

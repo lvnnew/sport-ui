@@ -178,6 +178,12 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
+      label: 'catalogs.mailingCampaigns.title',
+      link: '/mailingCampaigns',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
       label: 'catalogs.roles.title',
       link: '/roles',
       icon: 'DetailsOutlined',
@@ -186,6 +192,18 @@ const getDefaultMenu = () => {
     {
       label: 'catalogs.managersToRoles.title',
       link: '/managersToRoles',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'catalogs.mailingMessages.title',
+      link: '/mailingMessages',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'catalogs.mailingMessageStatuses.title',
+      link: '/mailingMessageStatuses',
       icon: 'DetailsOutlined',
       debugOnly: true,
     },
@@ -204,6 +222,12 @@ const getDefaultMenu = () => {
     {
       label: 'catalogs.tenants.title',
       link: '/tenants',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'catalogs.mailingTypes.title',
+      link: '/mailingTypes',
       icon: 'DetailsOutlined',
       debugOnly: true,
     },

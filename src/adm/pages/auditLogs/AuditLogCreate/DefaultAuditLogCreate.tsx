@@ -60,7 +60,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='entityTypeId'
                 reference='entities'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.auditLogs.fields.entityTypeId')}
               >
                 <AutocompleteInput
@@ -86,7 +86,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='actionTypeId'
                 reference='auditLogActionTypes'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.auditLogs.fields.actionTypeId')}
               >
                 <AutocompleteInput
@@ -104,7 +104,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='managerId'
                 reference='managers'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.auditLogs.fields.managerId')}
               >
                 <AutocompleteInput
@@ -122,7 +122,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='userId'
                 reference='users'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.auditLogs.fields.userId')}
               >
                 <AutocompleteInput

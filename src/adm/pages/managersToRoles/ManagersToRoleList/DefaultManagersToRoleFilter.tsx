@@ -23,7 +23,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
       <ReferenceInput
         source='managerId'
         reference='managers'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managersToRoles.fields.managerId')}
       >
         <AutocompleteInput
@@ -39,7 +39,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
       <ReferenceInput
         source='roleId'
         reference='roles'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managersToRoles.fields.roleId')}
       >
         <AutocompleteInput

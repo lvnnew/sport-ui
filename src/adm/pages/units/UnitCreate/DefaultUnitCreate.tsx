@@ -47,7 +47,7 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='parentId'
                 reference='units'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.units.fields.parentId')}
               >
                 <AutocompleteInput

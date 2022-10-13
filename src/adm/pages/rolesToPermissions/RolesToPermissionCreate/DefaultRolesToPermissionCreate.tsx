@@ -38,7 +38,7 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
               <ReferenceInput
                 source='roleId'
                 reference='roles'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.rolesToPermissions.fields.roleId')}
               >
                 <AutocompleteInput
@@ -56,7 +56,7 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
               <ReferenceInput
                 source='permissionId'
                 reference='permissions'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.rolesToPermissions.fields.permissionId')}
               >
                 <AutocompleteInput

@@ -23,6 +23,13 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
       <TextInput
         fullWidth
         sx={{m: 1}}
+        source='title'
+        defaultValue={null}
+        label={translate('catalogs.messageTemplateLangVariants.fields.title')}
+      />
+      <TextInput
+        fullWidth
+        sx={{m: 1}}
         source='subjectTemplate'
         label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')}
       />
@@ -35,7 +42,7 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
       <ReferenceInput
         source='messageTemplateId'
         reference='messageTemplates'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')}
       >
         <AutocompleteInput
@@ -51,7 +58,7 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
       <ReferenceInput
         source='languageId'
         reference='languages'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.messageTemplateLangVariants.fields.languageId')}
       >
         <AutocompleteInput

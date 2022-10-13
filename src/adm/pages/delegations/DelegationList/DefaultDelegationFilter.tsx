@@ -25,7 +25,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       <ReferenceInput
         source='fromId'
         reference='managers'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.delegations.fields.fromId')}
       >
         <AutocompleteInput
@@ -41,7 +41,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       <ReferenceInput
         source='toId'
         reference='managers'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.delegations.fields.toId')}
       >
         <AutocompleteInput

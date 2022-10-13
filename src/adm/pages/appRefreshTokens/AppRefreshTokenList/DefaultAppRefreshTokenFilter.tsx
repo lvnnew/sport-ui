@@ -30,7 +30,7 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
       <ReferenceInput
         source='userId'
         reference='users'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.appRefreshTokens.fields.userId')}
       >
         <AutocompleteInput

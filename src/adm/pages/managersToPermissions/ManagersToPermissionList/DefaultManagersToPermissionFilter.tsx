@@ -23,7 +23,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
       <ReferenceInput
         source='managerId'
         reference='managers'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managersToPermissions.fields.managerId')}
       >
         <AutocompleteInput
@@ -39,7 +39,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
       <ReferenceInput
         source='permissionId'
         reference='permissions'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managersToPermissions.fields.permissionId')}
       >
         <AutocompleteInput

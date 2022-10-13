@@ -126,6 +126,56 @@ const ruCatalogs = {
       title: 'Title',
     },
   },
+  mailingCampaigns: {
+    title: 'Рассылки',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Title',
+      mailingTypeId: 'Mailing type',
+      priority: 'Priority',
+    },
+  },
+  mailingMessageStatuses: {
+    title: 'Статусы сообщений массовой рассылки',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Title',
+      final: 'Final',
+    },
+  },
+  mailingMessages: {
+    title: 'Сообщения рассылки',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      mailingCampaignId: 'Mailing campaign',
+      templateId: 'Template',
+      languageId: 'Language',
+      to: 'To',
+      locals: 'Locals',
+      localsHash: 'Locals hash',
+      priority: 'Priority',
+      dateCreated: 'Date created',
+      dateSent: 'Date sent',
+      error: 'Error',
+      html: 'Html',
+      text: 'Text',
+      uniqueKey: 'Unique key',
+      subject: 'Subject',
+      mailingMessageStatusId: 'Mailing message status',
+      messageTemplateLangVariantId: 'Message template lang variant',
+    },
+  },
+  mailingTypes: {
+    title: 'Типы рассылок',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Title',
+    },
+  },
   managerLogins: {
     title: 'Логины менеджеров',
     fields: {
@@ -182,6 +232,7 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
+      title: 'Title',
       subjectTemplate: 'Subject template',
       bodyTemplate: 'Body template',
       messageTemplateId: 'Message template',

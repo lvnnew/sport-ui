@@ -43,7 +43,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       <ReferenceInput
         source='languageId'
         reference='languages'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managers.fields.languageId')}
       >
         <AutocompleteInput
@@ -79,7 +79,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       <ReferenceInput
         source='unitId'
         reference='units'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managers.fields.unitId')}
       >
         <AutocompleteInput
@@ -107,7 +107,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       <ReferenceInput
         source='tenantId'
         reference='tenants'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.managers.fields.tenantId')}
       >
         <AutocompleteInput

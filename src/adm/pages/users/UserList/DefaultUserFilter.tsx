@@ -48,7 +48,7 @@ const DefaultUserFilter: FC<any> = (props) => {
       <ReferenceInput
         source='tenantId'
         reference='tenants'
-        sort={{id: 'id', order: 'DESC'}}
+        sort={{field: 'id', order: 'DESC'}}
         label={translate('catalogs.users.fields.tenantId')}
       >
         <AutocompleteInput

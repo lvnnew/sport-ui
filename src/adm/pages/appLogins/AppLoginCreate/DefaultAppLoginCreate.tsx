@@ -55,7 +55,7 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='userId'
                 reference='users'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.appLogins.fields.userId')}
               >
                 <AutocompleteInput

@@ -92,7 +92,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='languageId'
                 reference='languages'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managers.fields.languageId')}
               >
                 <AutocompleteInput
@@ -139,7 +139,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='unitId'
                 reference='units'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managers.fields.unitId')}
               >
                 <AutocompleteInput
@@ -173,7 +173,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='tenantId'
                 reference='tenants'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managers.fields.tenantId')}
               >
                 <AutocompleteInput

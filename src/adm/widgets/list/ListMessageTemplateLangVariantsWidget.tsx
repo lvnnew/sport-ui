@@ -40,6 +40,9 @@ export const ListMessageTemplateLangVariantsItem: FC<MessageTemplateLangVariant>
               {`Id: ${props.id}`}
             </div>
             <div>
+              {`Title: ${props.title}`}
+            </div>
+            <div>
               {`Subject template: ${props.subjectTemplate}`}
             </div>
             <div>
@@ -99,6 +102,7 @@ const ListMessageTemplateLangVariantsWidget: FC<ListMessageTemplateLangVariantsW
             filter: $filter
           ) {
             id
+            title
             subjectTemplate
             bodyTemplate
             messageTemplateId

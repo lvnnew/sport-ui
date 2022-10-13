@@ -79,7 +79,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='messageTypeId'
                 reference='messageTypes'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.messageTemplates.fields.messageTypeId')}
               >
                 <AutocompleteInput
@@ -97,7 +97,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='templateStyleId'
                 reference='templateStyles'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.messageTemplates.fields.templateStyleId')}
               >
                 <AutocompleteInput

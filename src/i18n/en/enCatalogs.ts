@@ -126,6 +126,56 @@ const enCatalogs = {
       title: 'Title',
     },
   },
+  mailingCampaigns: {
+    title: 'Mailing campaigns',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      title: 'Title',
+      mailingTypeId: 'Mailing type',
+      priority: 'Priority',
+    },
+  },
+  mailingMessageStatuses: {
+    title: 'Mailing message statuses',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      title: 'Title',
+      final: 'Final',
+    },
+  },
+  mailingMessages: {
+    title: 'Mailing messages',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      mailingCampaignId: 'Mailing campaign',
+      templateId: 'Template',
+      languageId: 'Language',
+      to: 'To',
+      locals: 'Locals',
+      localsHash: 'Locals hash',
+      priority: 'Priority',
+      dateCreated: 'Date created',
+      dateSent: 'Date sent',
+      error: 'Error',
+      html: 'Html',
+      text: 'Text',
+      uniqueKey: 'Unique key',
+      subject: 'Subject',
+      mailingMessageStatusId: 'Mailing message status',
+      messageTemplateLangVariantId: 'Message template lang variant',
+    },
+  },
+  mailingTypes: {
+    title: 'Mailing types',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      title: 'Title',
+    },
+  },
   managerLogins: {
     title: 'Manager logins',
     fields: {
@@ -182,6 +232,7 @@ const enCatalogs = {
     fields: {
       id: 'Id',
       search: 'Search',
+      title: 'Title',
       subjectTemplate: 'Subject template',
       bodyTemplate: 'Body template',
       messageTemplateId: 'Message template',

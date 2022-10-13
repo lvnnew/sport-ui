@@ -91,7 +91,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
               <ReferenceInput
                 source='autogenerationRuleId'
                 reference='autogenerationRules'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
               >
                 <AutocompleteInput

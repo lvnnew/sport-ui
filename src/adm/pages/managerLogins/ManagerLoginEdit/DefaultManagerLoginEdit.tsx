@@ -113,7 +113,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='managerId'
                 reference='managers'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managerLogins.fields.managerId')}
               >
                 <AutocompleteInput

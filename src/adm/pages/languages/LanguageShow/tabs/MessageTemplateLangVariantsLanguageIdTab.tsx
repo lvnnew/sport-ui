@@ -27,6 +27,7 @@ const MessageTemplateLangVariantsLanguageIdTab: FC<Omit<TabProps, 'children'>> =
     >
       <Datagrid>
         <NumberField source='id' label={translate('catalogs.messageTemplateLangVariants.fields.id')} />
+        <TextField source='title' label={translate('catalogs.messageTemplateLangVariants.fields.title')} />
         <TextField source='subjectTemplate' label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')} />
         <TextField source='bodyTemplate' label={translate('catalogs.messageTemplateLangVariants.fields.bodyTemplate')} />
         <ReferenceField source='messageTemplateId' label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')} reference='messageTemplates' link='show'>

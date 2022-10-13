@@ -43,7 +43,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
               <ReferenceInput
                 source='entityTypeId'
                 reference='entities'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
               >
                 <AutocompleteInput

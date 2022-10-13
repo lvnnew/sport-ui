@@ -59,7 +59,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='managerId'
                 reference='managers'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managersToRoles.fields.managerId')}
               >
                 <AutocompleteInput
@@ -77,7 +77,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='roleId'
                 reference='roles'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managersToRoles.fields.roleId')}
               >
                 <AutocompleteInput

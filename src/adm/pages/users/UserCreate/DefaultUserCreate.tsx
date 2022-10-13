@@ -74,7 +74,7 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='tenantId'
                 reference='tenants'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.users.fields.tenantId')}
               >
                 <AutocompleteInput

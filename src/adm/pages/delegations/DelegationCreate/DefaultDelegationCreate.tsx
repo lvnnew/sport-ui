@@ -43,7 +43,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='fromId'
                 reference='managers'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.delegations.fields.fromId')}
               >
                 <AutocompleteInput
@@ -61,7 +61,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='toId'
                 reference='managers'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.delegations.fields.toId')}
               >
                 <AutocompleteInput

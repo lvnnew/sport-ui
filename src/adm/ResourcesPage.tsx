@@ -162,6 +162,54 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allMailingCampaignsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMailingCampaignsMeta?.count}
+        title={translate('catalogs.mailingCampaigns.title')}
+        to='/mailingCampaigns'
+      />
+      <NumberWiget
+        request={gql`
+          query {
+            _allMailingMessageStatusesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMailingMessageStatusesMeta?.count}
+        title={translate('catalogs.mailingMessageStatuses.title')}
+        to='/mailingMessageStatuses'
+      />
+      <NumberWiget
+        request={gql`
+          query {
+            _allMailingMessagesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMailingMessagesMeta?.count}
+        title={translate('catalogs.mailingMessages.title')}
+        to='/mailingMessages'
+      />
+      <NumberWiget
+        request={gql`
+          query {
+            _allMailingTypesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMailingTypesMeta?.count}
+        title={translate('catalogs.mailingTypes.title')}
+        to='/mailingTypes'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allManagerLoginsMeta {
               count
             }

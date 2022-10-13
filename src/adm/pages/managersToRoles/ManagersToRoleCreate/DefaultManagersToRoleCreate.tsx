@@ -38,7 +38,7 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='managerId'
                 reference='managers'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managersToRoles.fields.managerId')}
               >
                 <AutocompleteInput
@@ -56,7 +56,7 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
               <ReferenceInput
                 source='roleId'
                 reference='roles'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.managersToRoles.fields.roleId')}
               >
                 <AutocompleteInput

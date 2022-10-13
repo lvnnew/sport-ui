@@ -68,7 +68,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
               <ReferenceInput
                 source='parentId'
                 reference='units'
-                sort={{id: 'id', order: 'DESC'}}
+                sort={{field: 'id', order: 'DESC'}}
                 label={translate('catalogs.units.fields.parentId')}
               >
                 <AutocompleteInput

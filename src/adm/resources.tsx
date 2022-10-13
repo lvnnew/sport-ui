@@ -148,6 +148,54 @@ const LoadableLanguageCreate = Loadable({
 const LoadableLanguageList = Loadable({
   loader: () => import('./pages/languages/LanguageList'),
 });
+const LoadableMailingCampaignShow = Loadable({
+  loader: () => import('./pages/mailingCampaigns/MailingCampaignShow'),
+});
+const LoadableMailingCampaignEdit = Loadable({
+  loader: () => import('./pages/mailingCampaigns/MailingCampaignEdit'),
+});
+const LoadableMailingCampaignCreate = Loadable({
+  loader: () => import('./pages/mailingCampaigns/MailingCampaignCreate'),
+});
+const LoadableMailingCampaignList = Loadable({
+  loader: () => import('./pages/mailingCampaigns/MailingCampaignList'),
+});
+const LoadableMailingMessageStatusShow = Loadable({
+  loader: () => import('./pages/mailingMessageStatuses/MailingMessageStatusShow'),
+});
+const LoadableMailingMessageStatusEdit = Loadable({
+  loader: () => import('./pages/mailingMessageStatuses/MailingMessageStatusEdit'),
+});
+const LoadableMailingMessageStatusCreate = Loadable({
+  loader: () => import('./pages/mailingMessageStatuses/MailingMessageStatusCreate'),
+});
+const LoadableMailingMessageStatusList = Loadable({
+  loader: () => import('./pages/mailingMessageStatuses/MailingMessageStatusList'),
+});
+const LoadableMailingMessageShow = Loadable({
+  loader: () => import('./pages/mailingMessages/MailingMessageShow'),
+});
+const LoadableMailingMessageEdit = Loadable({
+  loader: () => import('./pages/mailingMessages/MailingMessageEdit'),
+});
+const LoadableMailingMessageCreate = Loadable({
+  loader: () => import('./pages/mailingMessages/MailingMessageCreate'),
+});
+const LoadableMailingMessageList = Loadable({
+  loader: () => import('./pages/mailingMessages/MailingMessageList'),
+});
+const LoadableMailingTypeShow = Loadable({
+  loader: () => import('./pages/mailingTypes/MailingTypeShow'),
+});
+const LoadableMailingTypeEdit = Loadable({
+  loader: () => import('./pages/mailingTypes/MailingTypeEdit'),
+});
+const LoadableMailingTypeCreate = Loadable({
+  loader: () => import('./pages/mailingTypes/MailingTypeCreate'),
+});
+const LoadableMailingTypeList = Loadable({
+  loader: () => import('./pages/mailingTypes/MailingTypeList'),
+});
 const LoadableManagerLoginShow = Loadable({
   loader: () => import('./pages/managerLogins/ManagerLoginShow'),
 });
@@ -451,6 +499,42 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'languages.create') ? LoadableLanguageCreate : undefined}
         list={hasPermission(permissions, 'languages.all') ? LoadableLanguageList : undefined}
         options={{label: translate('catalogs.languages.title')}}
+      />,
+      <Resource
+        key='mailingCampaigns'
+        name='mailingCampaigns'
+        show={hasPermission(permissions, 'mailingCampaigns.get') ? LoadableMailingCampaignShow : undefined}
+        edit={hasPermission(permissions, 'mailingCampaigns.update') ? LoadableMailingCampaignEdit : undefined}
+        create={hasPermission(permissions, 'mailingCampaigns.create') ? LoadableMailingCampaignCreate : undefined}
+        list={hasPermission(permissions, 'mailingCampaigns.all') ? LoadableMailingCampaignList : undefined}
+        options={{label: translate('catalogs.mailingCampaigns.title')}}
+      />,
+      <Resource
+        key='mailingMessageStatuses'
+        name='mailingMessageStatuses'
+        show={hasPermission(permissions, 'mailingMessageStatuses.get') ? LoadableMailingMessageStatusShow : undefined}
+        edit={hasPermission(permissions, 'mailingMessageStatuses.update') ? LoadableMailingMessageStatusEdit : undefined}
+        create={hasPermission(permissions, 'mailingMessageStatuses.create') ? LoadableMailingMessageStatusCreate : undefined}
+        list={hasPermission(permissions, 'mailingMessageStatuses.all') ? LoadableMailingMessageStatusList : undefined}
+        options={{label: translate('catalogs.mailingMessageStatuses.title')}}
+      />,
+      <Resource
+        key='mailingMessages'
+        name='mailingMessages'
+        show={hasPermission(permissions, 'mailingMessages.get') ? LoadableMailingMessageShow : undefined}
+        edit={hasPermission(permissions, 'mailingMessages.update') ? LoadableMailingMessageEdit : undefined}
+        create={hasPermission(permissions, 'mailingMessages.create') ? LoadableMailingMessageCreate : undefined}
+        list={hasPermission(permissions, 'mailingMessages.all') ? LoadableMailingMessageList : undefined}
+        options={{label: translate('catalogs.mailingMessages.title')}}
+      />,
+      <Resource
+        key='mailingTypes'
+        name='mailingTypes'
+        show={hasPermission(permissions, 'mailingTypes.get') ? LoadableMailingTypeShow : undefined}
+        edit={hasPermission(permissions, 'mailingTypes.update') ? LoadableMailingTypeEdit : undefined}
+        create={hasPermission(permissions, 'mailingTypes.create') ? LoadableMailingTypeCreate : undefined}
+        list={hasPermission(permissions, 'mailingTypes.all') ? LoadableMailingTypeList : undefined}
+        options={{label: translate('catalogs.mailingTypes.title')}}
       />,
       <Resource
         key='managerLogins'
