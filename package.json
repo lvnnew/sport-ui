@@ -58,6 +58,7 @@
     "@graphql-codegen/introspection": "^2.2.1",
     "@graphql-codegen/typescript": "^2.7.4",
     "@graphql-codegen/typescript-resolvers": "^2.7.4",
+    "@swc/helpers": "^0.4.12",
     "@testing-library/react": "^13.4.0",
     "@types/apollo-upload-client": "^17.0.1",
     "@types/classnames": "^2.3.1",

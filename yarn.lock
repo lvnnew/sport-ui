@@ -3899,6 +3899,13 @@
   resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.3.8.tgz"
   integrity sha512-aWItSZvJj4+GI6FWkjZR13xPNPctq2RRakzo+O6vN7bC2yjwdg5EFpgaSAUn95b7BGSgcflvzVDPoKmJv24IOg==
 
+"@swc/helpers@^0.4.12":
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.12.tgz#203243e78cff3c87c081c97ae548ab33e2503573"
+  integrity sha512-R6RmwS9Dld5lNvwKlPn62+piU+WDG1sMfsnfJioXCciyko/gZ0DQ4Mqglhq1iGU1nQ/RcGkAwfMH+elMSkJH3Q==
+  dependencies:
+    tslib "^2.4.0"
+
 "@swc/jest@^0.2.20":
   version "0.2.20"
   resolved "https://registry.npmjs.org/@swc/jest/-/jest-0.2.20.tgz"
@@ -5048,7 +5055,7 @@ acorn@^8.2.4, acorn@^8.4.1, acorn@^8.5.0, acorn@^8.6.0:
 
 add@^2.0.6:
   version "2.0.6"
-  resolved "https://registry.npmjs.org/add/-/add-2.0.6.tgz"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
   integrity sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==
 
 address@^1.0.1, address@^1.1.2:
@@ -15701,7 +15708,7 @@ yargs@^17.0.0:
 
 yarn@^1.22.19:
   version "1.22.19"
-  resolved "https://registry.npmjs.org/yarn/-/yarn-1.22.19.tgz"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.19.tgz#4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
   integrity sha512-/0V5q0WbslqnwP91tirOvldvYISzaqhClxzyUKXYxs07yUILIs5jx/k6CFe8bvKSkds5w+eiOqta39Wk3WxdcQ==
 
 yn@3.1.1:
