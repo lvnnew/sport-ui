@@ -17,7 +17,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@hookform/resolvers": "^2.9.10",
-    "@mui/lab": "^5.0.0-alpha.105",
+    "@mui/lab": "5.0.0-alpha.104",
     "@mui/styles": "^5.10.10",
     "@mui/x-data-grid": "^5.17.8",
     "@testing-library/jest-dom": "^5.16.5",
