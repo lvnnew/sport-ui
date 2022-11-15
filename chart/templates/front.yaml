@@ -44,7 +44,7 @@ spec:
     {{- end }}
       containers:
       - name: mtbase-ui
-        image: {{ $.Values.dockerRegistry }}/mtbase-ui{{ $.Values.app.tag }}
+        image: {{ $.Values.docker.registry }}/mtbase-ui{{ $.Values.app.tag }}
         ports:
         - name: main-port
           containerPort: 80
