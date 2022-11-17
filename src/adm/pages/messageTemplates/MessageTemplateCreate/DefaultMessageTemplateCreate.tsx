@@ -42,6 +42,14 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
               <TextInput
                 fullWidth
                 sx={{m: 1}}
+                source='id'
+                label={translate('catalogs.messageTemplates.fields.id')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
                 source='title'
                 label={translate('catalogs.messageTemplates.fields.title')}
               />
@@ -71,6 +79,15 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                   parse={val => val || null}
                 />
               </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
+                source='dataExample'
+                defaultValue={null}
+                label={translate('catalogs.messageTemplates.fields.dataExample')}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
               <ReferenceInput

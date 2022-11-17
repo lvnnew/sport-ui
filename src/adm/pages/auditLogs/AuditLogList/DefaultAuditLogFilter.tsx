@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
+  BooleanInput,
   ReferenceInput,
   AutocompleteInput,
-  BooleanInput,
   useTranslate,
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
@@ -33,6 +33,20 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         sx={{m: 1}}
         source='title'
         label={translate('catalogs.auditLogs.fields.title')}
+      />
+      <BooleanInput
+        fullWidth
+        sx={{m: 1}}
+        source='success'
+        defaultValue={null}
+        label={translate('catalogs.auditLogs.fields.success')}
+      />
+      <TextInput
+        fullWidth
+        sx={{m: 1}}
+        source='error'
+        defaultValue={null}
+        label={translate('catalogs.auditLogs.fields.error')}
       />
       <ReferenceInput
         source='entityTypeId'

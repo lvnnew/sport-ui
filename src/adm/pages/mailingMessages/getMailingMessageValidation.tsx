@@ -6,7 +6,7 @@ import {Translate} from 'react-admin';
 
 const getMailingMessageValidation: GetValidation = (t: Translate) => Yup.object({
   mailingCampaignId: Yup.number().required().typeError(t('validation.required')),
-  templateId: Yup.number().required().typeError(t('validation.required')),
+  templateId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   languageId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   to: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   locals: Yup.string().required(t('validation.required')).typeError(t('validation.required')),

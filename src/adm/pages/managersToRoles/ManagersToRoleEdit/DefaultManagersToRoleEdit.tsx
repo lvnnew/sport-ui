@@ -13,6 +13,7 @@ import {
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToRoleValidation from '../getManagersToRoleValidation';
@@ -46,6 +47,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
       {...props}
       transform={useCallback((data: any) => ({
         ...data,
+        expiresAt: data.expiresAt || null,
       }), [])}
     >
       <LoadingContext>
@@ -90,6 +92,15 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                   parse={val => val || null}
                 />
               </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <DateInput
+                fullWidth
+                sx={{m: 1}}
+                source='expiresAt'
+                defaultValue={null}
+                label={translate('catalogs.managersToRoles.fields.expiresAt')}
+              />
             </Grid>
           </Grid>
         </SimpleForm>

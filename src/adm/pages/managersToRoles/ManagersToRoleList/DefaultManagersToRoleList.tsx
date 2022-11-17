@@ -12,6 +12,7 @@ import {
   ReferenceField,
   useTranslate,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import ManagersToRoleFilter from './ManagersToRoleFilter';
 import {hasPermission} from '../../../../utils/permissions';
 
@@ -47,6 +48,7 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
         <ReferenceField source='roleId' label={translate('catalogs.managersToRoles.fields.roleId')} reference='roles' link='show'>
           <TextField source='title' />
         </ReferenceField>
+        <DateField source='expiresAt' label={translate('catalogs.managersToRoles.fields.expiresAt')} />
       </Datagrid>
     </List>
   );

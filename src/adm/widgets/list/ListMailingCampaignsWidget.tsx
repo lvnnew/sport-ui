@@ -48,6 +48,15 @@ export const ListMailingCampaignsItem: FC<MailingCampaign> = (props) => {
             <div>
               {`Priority: ${props.priority}`}
             </div>
+            <div>
+              {`Date: ${props.date}`}
+            </div>
+            <div>
+              {`Mailing campaign status id: ${props.mailingCampaignStatusId}`}
+            </div>
+            <div>
+              {`Message template id: ${props.messageTemplateId}`}
+            </div>
           </>
         }
       />
@@ -96,6 +105,9 @@ const ListMailingCampaignsWidget: FC<ListMailingCampaignsWidgetProps> = ({
             title
             mailingTypeId
             priority
+            date
+            mailingCampaignStatusId
+            messageTemplateId
           }
         }
       `}

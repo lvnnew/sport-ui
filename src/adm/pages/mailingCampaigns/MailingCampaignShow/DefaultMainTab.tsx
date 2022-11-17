@@ -9,6 +9,7 @@ import {
   useTranslate,
   Labeled,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import {Grid} from '@mui/material';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -38,6 +39,25 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
           <NumberField source='priority' label={translate('catalogs.mailingCampaigns.fields.priority')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <DateField source='date' label={translate('catalogs.mailingCampaigns.fields.date')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <ReferenceField source='mailingCampaignStatusId' label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')} reference='mailingCampaignStatuses' link='show'>
+            <TextField source='title' />
+          </ReferenceField>
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <ReferenceField source='messageTemplateId' label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')} reference='messageTemplates' link='show'>
+            <TextField source='title' />
+          </ReferenceField>
         </Labeled>
       </Grid>
     </Grid>

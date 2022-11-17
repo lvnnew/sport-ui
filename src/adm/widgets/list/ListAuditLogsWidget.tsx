@@ -46,6 +46,12 @@ export const ListAuditLogsItem: FC<AuditLog> = (props) => {
               {`Title: ${props.title}`}
             </div>
             <div>
+              {`Success: ${props.success}`}
+            </div>
+            <div>
+              {`Error: ${props.error}`}
+            </div>
+            <div>
               {`Entity type id: ${props.entityTypeId}`}
             </div>
             <div>
@@ -119,6 +125,8 @@ const ListAuditLogsWidget: FC<ListAuditLogsWidgetProps> = ({
             id
             date
             title
+            success
+            error
             entityTypeId
             entityId
             actionTypeId

@@ -8,6 +8,7 @@ import {
   ReferenceInput,
   AutocompleteInput,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToPermissionValidation from '../getManagersToPermissionValidation';
@@ -26,6 +27,7 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
       {...props}
       transform={useCallback((data: any) => ({
         ...data,
+        expiresAt: data.expiresAt || null,
       }), [])}
     >
       <LoadingContext>
@@ -69,6 +71,15 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
                   parse={val => val || null}
                 />
               </ReferenceInput>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <DateInput
+                fullWidth
+                sx={{m: 1}}
+                source='expiresAt'
+                defaultValue={null}
+                label={translate('catalogs.managersToPermissions.fields.expiresAt')}
+              />
             </Grid>
           </Grid>
         </SimpleForm>

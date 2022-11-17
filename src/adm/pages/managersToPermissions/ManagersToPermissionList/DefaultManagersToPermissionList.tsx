@@ -12,6 +12,7 @@ import {
   ReferenceField,
   useTranslate,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import ManagersToPermissionFilter from './ManagersToPermissionFilter';
 import {hasPermission} from '../../../../utils/permissions';
 
@@ -47,6 +48,7 @@ const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
         <ReferenceField source='permissionId' label={translate('catalogs.managersToPermissions.fields.permissionId')} reference='permissions' link='show'>
           <TextField source='title' />
         </ReferenceField>
+        <DateField source='expiresAt' label={translate('catalogs.managersToPermissions.fields.expiresAt')} />
       </Datagrid>
     </List>
   );

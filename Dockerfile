@@ -1,4 +1,9 @@
+# DO NOT EDIT! THIS IS GENERATED FILE
+
 FROM registry.gitlab.com/making.ventures/images/node-with-tools AS builder
+
+# docker build --tag aloyal-ui .
+# (docker rm -f aloyal-ui || true) && docker run --rm --name aloyal-ui -p 8080:80 -e ENDPOINT='https://aloyal-ep.stage.apps.stage01.making.ventures/adm' aloyal-ui
 
 RUN mkdir /app
 WORKDIR /app

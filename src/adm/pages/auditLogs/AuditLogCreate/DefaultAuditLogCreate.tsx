@@ -6,9 +6,9 @@ import {
   SimpleForm,
   CreateProps,
   TextInput,
+  BooleanInput,
   ReferenceInput,
   AutocompleteInput,
-  BooleanInput,
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';
@@ -35,6 +35,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
       <LoadingContext>
         <SimpleForm
           defaultValues={{
+            success: false,
             foreign: false,
           }}
           resolver={resolver}
@@ -54,6 +55,24 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='title'
                 label={translate('catalogs.auditLogs.fields.title')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <BooleanInput
+                fullWidth
+                sx={{m: 1}}
+                source='success'
+                defaultValue={null}
+                label={translate('catalogs.auditLogs.fields.success')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
+                source='error'
+                defaultValue={null}
+                label={translate('catalogs.auditLogs.fields.error')}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>

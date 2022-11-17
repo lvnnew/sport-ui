@@ -6,6 +6,7 @@ import {
   AutocompleteInput,
   useTranslate,
 } from 'react-admin';
+import DateInput from '../../../../uiLib/DateInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -52,6 +53,13 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
           parse={val => val || null}
         />
       </ReferenceInput>
+      <DateInput
+        fullWidth
+        sx={{m: 1}}
+        source='expiresAt'
+        defaultValue={null}
+        label={translate('catalogs.managersToRoles.fields.expiresAt')}
+      />
     </Filter>
   );
 };

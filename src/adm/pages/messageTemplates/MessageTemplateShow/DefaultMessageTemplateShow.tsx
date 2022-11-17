@@ -6,6 +6,7 @@ import {
   TabbedShowLayout,
   useTranslate,
 } from 'react-admin';
+import MailingCampaignsMessageTemplateIdTab from './tabs/MailingCampaignsMessageTemplateIdTab';
 import MailingMessagesTemplateIdTab from './tabs/MailingMessagesTemplateIdTab';
 import MessageTemplateLangVariantsMessageTemplateIdTab from './tabs/MessageTemplateLangVariantsMessageTemplateIdTab';
 import MainTab from './MainTab';
@@ -22,6 +23,7 @@ const DefaultMessageTemplateShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
+        <MailingCampaignsMessageTemplateIdTab label={translate('catalogs.mailingCampaigns.title')} path='mailingCampaigns-messageTemplateId' />
         <MailingMessagesTemplateIdTab label={translate('catalogs.mailingMessages.title')} path='mailingMessages-templateId' />
         <MessageTemplateLangVariantsMessageTemplateIdTab label={translate('catalogs.messageTemplateLangVariants.title')} path='messageTemplateLangVariants-messageTemplateId' />
       </TabbedShowLayout>

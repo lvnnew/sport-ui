@@ -49,6 +49,13 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
           parse={val => val || null}
         />
       </ReferenceInput>
+      <TextInput
+        fullWidth
+        sx={{m: 1}}
+        source='dataExample'
+        defaultValue={null}
+        label={translate('catalogs.messageTemplates.fields.dataExample')}
+      />
       <ReferenceInput
         source='templateStyleId'
         reference='templateStyles'

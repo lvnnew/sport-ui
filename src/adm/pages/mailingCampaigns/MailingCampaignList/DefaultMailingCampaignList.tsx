@@ -12,6 +12,7 @@ import {
   ReferenceField,
   useTranslate,
 } from 'react-admin';
+import DateField from '../../../../uiLib/DateField';
 import MailingCampaignFilter from './MailingCampaignFilter';
 import {hasPermission} from '../../../../utils/permissions';
 
@@ -46,6 +47,13 @@ const DefaultMailingCampaignList: FC<ListProps> = (props: ListProps) => {
           <TextField source='title' />
         </ReferenceField>
         <NumberField source='priority' label={translate('catalogs.mailingCampaigns.fields.priority')} />
+        <DateField source='date' label={translate('catalogs.mailingCampaigns.fields.date')} />
+        <ReferenceField source='mailingCampaignStatusId' label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')} reference='mailingCampaignStatuses' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
+        <ReferenceField source='messageTemplateId' label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')} reference='messageTemplates' link='show'>
+          <TextField source='title' />
+        </ReferenceField>
       </Datagrid>
     </List>
   );

@@ -148,6 +148,18 @@ const LoadableLanguageCreate = Loadable({
 const LoadableLanguageList = Loadable({
   loader: () => import('./pages/languages/LanguageList'),
 });
+const LoadableMailingCampaignStatusShow = Loadable({
+  loader: () => import('./pages/mailingCampaignStatuses/MailingCampaignStatusShow'),
+});
+const LoadableMailingCampaignStatusEdit = Loadable({
+  loader: () => import('./pages/mailingCampaignStatuses/MailingCampaignStatusEdit'),
+});
+const LoadableMailingCampaignStatusCreate = Loadable({
+  loader: () => import('./pages/mailingCampaignStatuses/MailingCampaignStatusCreate'),
+});
+const LoadableMailingCampaignStatusList = Loadable({
+  loader: () => import('./pages/mailingCampaignStatuses/MailingCampaignStatusList'),
+});
 const LoadableMailingCampaignShow = Loadable({
   loader: () => import('./pages/mailingCampaigns/MailingCampaignShow'),
 });
@@ -499,6 +511,15 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'languages.create') ? LoadableLanguageCreate : undefined}
         list={hasPermission(permissions, 'languages.all') ? LoadableLanguageList : undefined}
         options={{label: translate('catalogs.languages.title')}}
+      />,
+      <Resource
+        key='mailingCampaignStatuses'
+        name='mailingCampaignStatuses'
+        show={hasPermission(permissions, 'mailingCampaignStatuses.get') ? LoadableMailingCampaignStatusShow : undefined}
+        edit={hasPermission(permissions, 'mailingCampaignStatuses.update') ? LoadableMailingCampaignStatusEdit : undefined}
+        create={hasPermission(permissions, 'mailingCampaignStatuses.create') ? LoadableMailingCampaignStatusCreate : undefined}
+        list={hasPermission(permissions, 'mailingCampaignStatuses.all') ? LoadableMailingCampaignStatusList : undefined}
+        options={{label: translate('catalogs.mailingCampaignStatuses.title')}}
       />,
       <Resource
         key='mailingCampaigns'

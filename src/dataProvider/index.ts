@@ -41,7 +41,6 @@ const numberIdResources: string[] = [
   'mailingMessages',
   'templateStyles',
   'tenants',
-  'messageTemplates',
   'messageTemplateLangVariants',
 ];
 

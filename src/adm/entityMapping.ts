@@ -13,6 +13,7 @@ export const mapping = {
   entities: 'Entity',
   files: 'File',
   languages: 'Language',
+  mailingCampaignStatuses: 'MailingCampaignStatus',
   mailingCampaigns: 'MailingCampaign',
   mailingMessageStatuses: 'MailingMessageStatus',
   mailingMessages: 'MailingMessage',

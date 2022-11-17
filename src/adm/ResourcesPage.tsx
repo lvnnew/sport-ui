@@ -162,6 +162,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allMailingCampaignStatusesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMailingCampaignStatusesMeta?.count}
+        title={translate('catalogs.mailingCampaignStatuses.title')}
+        to='/mailingCampaignStatuses'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allMailingCampaignsMeta {
               count
             }

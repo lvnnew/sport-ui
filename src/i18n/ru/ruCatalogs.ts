@@ -48,6 +48,8 @@ const ruCatalogs = {
       search: 'Поиск',
       date: 'Date',
       title: 'Title',
+      success: 'Success',
+      error: 'Error',
       entityTypeId: 'Сущность',
       entityId: 'ID сущности',
       actionTypeId: 'Тип операции',
@@ -126,6 +128,14 @@ const ruCatalogs = {
       title: 'Title',
     },
   },
+  mailingCampaignStatuses: {
+    title: 'Статусы рассылок',
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Title',
+    },
+  },
   mailingCampaigns: {
     title: 'Рассылки',
     fields: {
@@ -134,6 +144,9 @@ const ruCatalogs = {
       title: 'Title',
       mailingTypeId: 'Mailing type',
       priority: 'Priority',
+      date: 'Date',
+      mailingCampaignStatusId: 'Mailing campaign status',
+      messageTemplateId: 'Message template',
     },
   },
   mailingMessageStatuses: {
@@ -216,6 +229,7 @@ const ruCatalogs = {
       search: 'Поиск',
       managerId: 'Manager',
       permissionId: 'Permission',
+      expiresAt: 'Expires at',
     },
   },
   managersToRoles: {
@@ -225,6 +239,7 @@ const ruCatalogs = {
       search: 'Поиск',
       managerId: 'Manager',
       roleId: 'Role',
+      expiresAt: 'Expires at',
     },
   },
   messageTemplateLangVariants: {
@@ -248,6 +263,7 @@ const ruCatalogs = {
       title: 'Title',
       secretData: 'Secret data',
       messageTypeId: 'Message type',
+      dataExample: 'Data example',
       templateStyleId: 'Template style',
     },
   },

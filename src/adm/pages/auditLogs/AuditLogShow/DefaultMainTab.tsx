@@ -5,8 +5,8 @@ import {
   TabProps,
   NumberField,
   TextField,
-  ReferenceField,
   BooleanField,
+  ReferenceField,
   useTranslate,
   Labeled,
 } from 'react-admin';
@@ -33,6 +33,16 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
           <TextField source='title' label={translate('catalogs.auditLogs.fields.title')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <BooleanField source='success' label={translate('catalogs.auditLogs.fields.success')} />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='error' label={translate('catalogs.auditLogs.fields.error')} />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>

@@ -9,8 +9,8 @@ import {
   BulkDeleteButton,
   NumberField,
   TextField,
-  ReferenceField,
   BooleanField,
+  ReferenceField,
   useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
@@ -45,6 +45,8 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
         <NumberField source='id' label={translate('catalogs.auditLogs.fields.id')} />
         <DateField source='date' label={translate('catalogs.auditLogs.fields.date')} showTime />
         <TextField source='title' label={translate('catalogs.auditLogs.fields.title')} />
+        <BooleanField source='success' label={translate('catalogs.auditLogs.fields.success')} />
+        <TextField source='error' label={translate('catalogs.auditLogs.fields.error')} />
         <ReferenceField source='entityTypeId' label={translate('catalogs.auditLogs.fields.entityTypeId')} reference='entities' link='show'>
           <TextField source='title' />
         </ReferenceField>

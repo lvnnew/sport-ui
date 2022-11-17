@@ -45,6 +45,9 @@ export const ListManagersToPermissionsItem: FC<ManagersToPermission> = (props) =
             <div>
               {`Permission id: ${props.permissionId}`}
             </div>
+            <div>
+              {`Expires at: ${props.expiresAt}`}
+            </div>
           </>
         }
       />
@@ -92,6 +95,7 @@ const ListManagersToPermissionsWidget: FC<ListManagersToPermissionsWidgetProps> 
             id
             managerId
             permissionId
+            expiresAt
           }
         }
       `}

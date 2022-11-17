@@ -48,6 +48,8 @@ const enCatalogs = {
       search: 'Search',
       date: 'Date',
       title: 'Title',
+      success: 'Success',
+      error: 'Error',
       entityTypeId: 'Сущность',
       entityId: 'ID сущности',
       actionTypeId: 'Тип операции',
@@ -126,6 +128,14 @@ const enCatalogs = {
       title: 'Title',
     },
   },
+  mailingCampaignStatuses: {
+    title: 'Mailing campaign statuses',
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      title: 'Title',
+    },
+  },
   mailingCampaigns: {
     title: 'Mailing campaigns',
     fields: {
@@ -134,6 +144,9 @@ const enCatalogs = {
       title: 'Title',
       mailingTypeId: 'Mailing type',
       priority: 'Priority',
+      date: 'Date',
+      mailingCampaignStatusId: 'Mailing campaign status',
+      messageTemplateId: 'Message template',
     },
   },
   mailingMessageStatuses: {
@@ -216,6 +229,7 @@ const enCatalogs = {
       search: 'Search',
       managerId: 'Manager',
       permissionId: 'Permission',
+      expiresAt: 'Expires at',
     },
   },
   managersToRoles: {
@@ -225,6 +239,7 @@ const enCatalogs = {
       search: 'Search',
       managerId: 'Manager',
       roleId: 'Role',
+      expiresAt: 'Expires at',
     },
   },
   messageTemplateLangVariants: {
@@ -248,6 +263,7 @@ const enCatalogs = {
       title: 'Title',
       secretData: 'Secret data',
       messageTypeId: 'Message type',
+      dataExample: 'Data example',
       templateStyleId: 'Template style',
     },
   },

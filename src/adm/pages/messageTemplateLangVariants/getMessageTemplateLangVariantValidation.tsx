@@ -7,7 +7,7 @@ import {Translate} from 'react-admin';
 const getMessageTemplateLangVariantValidation: GetValidation = (t: Translate) => Yup.object({
   subjectTemplate: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   bodyTemplate: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
-  messageTemplateId: Yup.number().required().typeError(t('validation.required')),
+  messageTemplateId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   languageId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
 });
 

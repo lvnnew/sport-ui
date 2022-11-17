@@ -202,6 +202,12 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
+      label: 'catalogs.mailingCampaignStatuses.title',
+      link: '/mailingCampaignStatuses',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
       label: 'catalogs.mailingMessageStatuses.title',
       link: '/mailingMessageStatuses',
       icon: 'DetailsOutlined',

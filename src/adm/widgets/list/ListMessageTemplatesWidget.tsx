@@ -49,6 +49,9 @@ export const ListMessageTemplatesItem: FC<MessageTemplate> = (props) => {
               {`Message type id: ${props.messageTypeId}`}
             </div>
             <div>
+              {`Data example: ${props.dataExample}`}
+            </div>
+            <div>
               {`Template style id: ${props.templateStyleId}`}
             </div>
           </>
@@ -99,6 +102,7 @@ const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
             title
             secretData
             messageTypeId
+            dataExample
             templateStyleId
           }
         }

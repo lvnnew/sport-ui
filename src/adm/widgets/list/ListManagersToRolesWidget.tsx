@@ -45,6 +45,9 @@ export const ListManagersToRolesItem: FC<ManagersToRole> = (props) => {
             <div>
               {`Role id: ${props.roleId}`}
             </div>
+            <div>
+              {`Expires at: ${props.expiresAt}`}
+            </div>
           </>
         }
       />
@@ -92,6 +95,7 @@ const ListManagersToRolesWidget: FC<ListManagersToRolesWidgetProps> = ({
             id
             managerId
             roleId
+            expiresAt
           }
         }
       `}

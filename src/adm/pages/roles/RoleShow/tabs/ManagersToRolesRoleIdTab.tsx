@@ -12,6 +12,7 @@ import {
   ShowButton,
   useTranslate,
 } from 'react-admin';
+import DateField from '../../../../../uiLib/DateField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -33,6 +34,7 @@ const ManagersToRolesRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
         <ReferenceField source='roleId' label={translate('catalogs.managersToRoles.fields.roleId')} reference='roles' link='show'>
           <TextField source='title' />
         </ReferenceField>
+        <DateField source='expiresAt' label={translate('catalogs.managersToRoles.fields.expiresAt')} />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

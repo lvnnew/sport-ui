@@ -3,7 +3,6 @@ import React, {FC} from 'react';
 import {
   Tab,
   TabProps,
-  NumberField,
   TextField,
   BooleanField,
   ReferenceField,
@@ -21,7 +20,7 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
+          <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -39,6 +38,11 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
           <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show'>
             <TextField source='title' />
           </ReferenceField>
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <TextField source='dataExample' label={translate('catalogs.messageTemplates.fields.dataExample')} />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>

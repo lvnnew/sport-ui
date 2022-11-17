@@ -12,6 +12,7 @@ import {
   ShowButton,
   useTranslate,
 } from 'react-admin';
+import DateField from '../../../../../uiLib/DateField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -33,6 +34,7 @@ const ManagersToPermissionsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props
         <ReferenceField source='permissionId' label={translate('catalogs.managersToPermissions.fields.permissionId')} reference='permissions' link='show'>
           <TextField source='title' />
         </ReferenceField>
+        <DateField source='expiresAt' label={translate('catalogs.managersToPermissions.fields.expiresAt')} />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>
