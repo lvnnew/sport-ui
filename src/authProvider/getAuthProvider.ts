@@ -1,5 +1,5 @@
-import {AuthProvider} from 'react-admin';
-import getApollo from '../apollo/getApollo';
+import {AuthProvider as RaAuthProvider} from 'react-admin';
+import getApollo, {updateApolloLinks} from '../apollo/getApollo';
 // import LRUCache from 'lru-cache';
 import {ApolloClient, NormalizedCacheObject, gql, ApolloQueryResult} from '@apollo/client';
 
@@ -7,6 +7,10 @@ const JWT_STORAGE_KEY = 'jwt';
 const IDENTITY_STORAGE_KEY = 'identity';
 const PERMISSINS_STORAGE_KEY = 'permissions';
 const ROLES_STORAGE_KEY = 'roles';
+
+export interface AuthProvider extends RaAuthProvider {
+  getRoles: () => Promise<string[]>;
+}
 
 // const permissionsCache = new LRUCache({
 //   ttl: 1000 * 60 * 10,
@@ -40,10 +44,7 @@ const getPermissionsCall = (client: ApolloClient<NormalizedCacheObject>) => {
   return permissionsCall;
 };
 
-const getAuthProvider: (
-  endpoint: string,
-  onLogin: () => void,
-) => AuthProvider = (endpoint, onLogin) => ({
+const getAuthProvider = (endpoint: string): AuthProvider => ({
   login: async ({email, password}) => {
     localStorage.removeItem(PERMISSINS_STORAGE_KEY);
     // permissionsCache.reset();
@@ -70,7 +71,8 @@ const getAuthProvider: (
         }));
         localStorage.setItem(PERMISSINS_STORAGE_KEY, JSON.stringify(permissions));
         localStorage.setItem(ROLES_STORAGE_KEY, JSON.stringify(roles));
-        onLogin();
+
+        updateApolloLinks(endpoint);
       });
   },
   checkError: async (error) => {
@@ -119,6 +121,24 @@ const getAuthProvider: (
     }
 
     return JSON.parse(localStorage.getItem(PERMISSINS_STORAGE_KEY) as string);
+  },
+  getRoles: async () => {
+    if (!localStorage.getItem(ROLES_STORAGE_KEY)) {
+      const client = getApollo(endpoint);
+
+      const {data} = await getPermissionsCall(client);
+
+      if (data.getPermissions) {
+        // permissionsCache.set(cacheKey, data.getPermissions);
+        localStorage.setItem(ROLES_STORAGE_KEY, JSON.stringify(data.getPermissions));
+      }
+
+      if (data.getRoles) {
+        localStorage.setItem(ROLES_STORAGE_KEY, JSON.stringify(data.getRoles));
+      }
+    }
+
+    return JSON.parse(localStorage.getItem(ROLES_STORAGE_KEY) as string);
   },
 });
 
