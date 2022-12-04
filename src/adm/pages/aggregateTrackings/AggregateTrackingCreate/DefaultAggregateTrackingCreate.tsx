@@ -30,6 +30,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
       transform={useCallback((data: any) => ({
         ...data,
         lastAggregatesComputed: data.lastAggregatesComputed || null,
+        lastAggregatesScheduled: data.lastAggregatesScheduled || null,
         lastEntityUpdate: data.lastEntityUpdate || null,
       }), [])}
     >
@@ -71,6 +72,15 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 sx={{m: 1}}
                 source='lastAggregatesComputed'
                 label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <DateTimeInput
+                fullWidth
+                sx={{m: 1}}
+                source='lastAggregatesScheduled'
+                defaultValue={null}
+                label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>

@@ -47,6 +47,7 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
         </ReferenceField>
         <TextField source='entityId' label={translate('infoRegistries.aggregateTrackings.fields.entityId')} />
         <DateField source='lastAggregatesComputed' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')} showTime />
+        <DateField source='lastAggregatesScheduled' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')} showTime />
         <DateField source='lastEntityUpdate' label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')} showTime />
         <NumberField source='aggregateVersion' label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')} />
       </Datagrid>

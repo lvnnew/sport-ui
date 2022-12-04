@@ -49,6 +49,9 @@ export const ListAggregateTrackingsItem: FC<AggregateTracking> = (props) => {
               {`Last aggregates computed: ${props.lastAggregatesComputed}`}
             </div>
             <div>
+              {`Last aggregates scheduled: ${props.lastAggregatesScheduled}`}
+            </div>
+            <div>
               {`Last entity update: ${props.lastEntityUpdate}`}
             </div>
             <div>
@@ -102,6 +105,7 @@ const ListAggregateTrackingsWidget: FC<ListAggregateTrackingsWidgetProps> = ({
             entityTypeId
             entityId
             lastAggregatesComputed
+            lastAggregatesScheduled
             lastEntityUpdate
             aggregateVersion
           }

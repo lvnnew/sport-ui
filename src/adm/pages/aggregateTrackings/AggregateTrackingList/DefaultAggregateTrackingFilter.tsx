@@ -47,6 +47,13 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
       <DateTimeInput
         fullWidth
         sx={{m: 1}}
+        source='lastAggregatesScheduled'
+        defaultValue={null}
+        label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')}
+      />
+      <DateTimeInput
+        fullWidth
+        sx={{m: 1}}
         source='lastEntityUpdate'
         label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
       />
