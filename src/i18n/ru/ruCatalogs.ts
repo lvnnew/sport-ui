@@ -196,7 +196,6 @@ const ruCatalogs = {
       search: 'Поиск',
       login: 'Login',
       passwordHash: 'Password hash',
-      role: 'Role',
       emailVerified: 'Email verified',
       initialPasswordChanged: 'Initial password changed',
       locked: 'Locked',

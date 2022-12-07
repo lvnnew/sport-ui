@@ -78,14 +78,6 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
-              <TextInput
-                fullWidth
-                sx={{m: 1}}
-                source='role'
-                label={translate('catalogs.managerLogins.fields.role')}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3} lg={2}>
               <BooleanInput
                 fullWidth
                 sx={{m: 1}}

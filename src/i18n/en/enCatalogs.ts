@@ -196,7 +196,6 @@ const enCatalogs = {
       search: 'Search',
       login: 'Login',
       passwordHash: 'Password hash',
-      role: 'Role',
       emailVerified: 'Email verified',
       initialPasswordChanged: 'Initial password changed',
       locked: 'Locked',

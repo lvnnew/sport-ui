@@ -36,11 +36,6 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='role' label={translate('catalogs.managerLogins.fields.role')} />
-        </Labeled>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}>
-        <Labeled>
           <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
         </Labeled>
       </Grid>

@@ -30,7 +30,6 @@ const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
         <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
         <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />
         <TextField source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} />
-        <TextField source='role' label={translate('catalogs.managerLogins.fields.role')} />
         <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
         <BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
         <BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} />

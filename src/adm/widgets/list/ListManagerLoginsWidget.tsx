@@ -46,9 +46,6 @@ export const ListManagerLoginsItem: FC<ManagerLogin> = (props) => {
               {`Password hash: ${props.passwordHash}`}
             </div>
             <div>
-              {`Role: ${props.role}`}
-            </div>
-            <div>
               {`Email verified: ${props.emailVerified}`}
             </div>
             <div>
@@ -107,7 +104,6 @@ const ListManagerLoginsWidget: FC<ListManagerLoginsWidgetProps> = ({
             id
             login
             passwordHash
-            role
             emailVerified
             initialPasswordChanged
             locked

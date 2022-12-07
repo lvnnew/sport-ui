@@ -33,12 +33,6 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
         source='passwordHash'
         label={translate('catalogs.managerLogins.fields.passwordHash')}
       />
-      <TextInput
-        fullWidth
-        sx={{m: 1}}
-        source='role'
-        label={translate('catalogs.managerLogins.fields.role')}
-      />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
