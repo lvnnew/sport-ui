@@ -17,4 +17,4 @@ If both files exists they will be merged. `${ENV}.json` takes precedence.
 
 | Key in file               | Environment                | Type   | Required | Default value | Need for                                   |
 | ------------------------- | -------------------------- | ------ | -------- | ------------- | ------------------------------------------ |
-| admin.recaptcha.publicKey | ADMIN_RECAPTCHA_PUBLIC_KEY | string | true     |               | Публичный токен рекапчи приложения админки |
+| admin.recaptcha.publicKey | ADMIN_RECAPTCHA_PUBLIC_KEY | string | false    |               | Публичный токен рекапчи приложения админки |
