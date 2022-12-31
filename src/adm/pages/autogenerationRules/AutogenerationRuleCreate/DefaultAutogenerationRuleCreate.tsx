@@ -43,6 +43,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='id'
+                required
                 label={translate('catalogs.autogenerationRules.fields.id')}
               />
             </Grid>
@@ -51,6 +52,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.autogenerationRules.fields.title')}
               />
             </Grid>
@@ -68,6 +70,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
+                required
                 label={translate('catalogs.autogenerationRules.fields.originalEntityType')}
               />
             </Grid>
@@ -76,6 +79,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityType'
+                required
                 label={translate('catalogs.autogenerationRules.fields.generatingEntityType')}
               />
             </Grid>
@@ -84,6 +88,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityFilter'
+                required
                 label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')}
               />
             </Grid>
@@ -92,6 +97,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityConstructionRules'
+                required
                 label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')}
               />
             </Grid>
@@ -100,6 +106,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='ignoreVersionOnHistory'
+                required
                 label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')}
               />
             </Grid>

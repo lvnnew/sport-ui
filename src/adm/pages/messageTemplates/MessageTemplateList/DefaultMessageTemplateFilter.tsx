@@ -25,12 +25,14 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
+        required
         label={translate('catalogs.messageTemplates.fields.title')}
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='secretData'
+        required
         label={translate('catalogs.messageTemplates.fields.secretData')}
       />
       <ReferenceInput
@@ -47,6 +49,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <TextInput

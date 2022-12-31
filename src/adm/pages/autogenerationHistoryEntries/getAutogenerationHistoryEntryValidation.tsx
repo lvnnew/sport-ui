@@ -9,7 +9,7 @@ const getAutogenerationHistoryEntryValidation: GetValidation = (t: Translate) =>
   originalEntityType: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   originalEntityId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   autogenerationRuleId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
-  version: Yup.string().required().typeError(t('validation.required')),
+  version: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
 });
 
 export default getAutogenerationHistoryEntryValidation;

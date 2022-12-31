@@ -47,6 +47,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='date'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
               />
             </Grid>
@@ -55,6 +56,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
               />
             </Grid>
@@ -63,6 +65,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityId'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
               />
             </Grid>
@@ -81,6 +84,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -89,6 +93,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='version'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
               />
             </Grid>
@@ -97,6 +102,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='errorOccurred'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
               />
             </Grid>

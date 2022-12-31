@@ -36,6 +36,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -52,6 +53,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -68,36 +70,42 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='to'
+        required
         label={translate('catalogs.mailingMessages.fields.to')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='locals'
+        required
         label={translate('catalogs.mailingMessages.fields.locals')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='localsHash'
+        required
         label={translate('catalogs.mailingMessages.fields.localsHash')}
       />
       <NumberInput
         fullWidth
         sx={{m: 1}}
         source='priority'
+        required
         label={translate('catalogs.mailingMessages.fields.priority')}
       />
       <DateTimeInput
         fullWidth
         sx={{m: 1}}
         source='dateCreated'
+        required
         label={translate('catalogs.mailingMessages.fields.dateCreated')}
       />
       <DateTimeInput
@@ -156,6 +164,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -172,6 +181,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
     </Filter>

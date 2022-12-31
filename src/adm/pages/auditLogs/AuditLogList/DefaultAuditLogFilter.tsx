@@ -26,12 +26,14 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='date'
+        required
         label={translate('catalogs.auditLogs.fields.date')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='title'
+        required
         label={translate('catalogs.auditLogs.fields.title')}
       />
       <BooleanInput
@@ -62,12 +64,14 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='entityId'
+        required
         label={translate('catalogs.auditLogs.fields.entityId')}
       />
       <ReferenceInput
@@ -84,6 +88,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput

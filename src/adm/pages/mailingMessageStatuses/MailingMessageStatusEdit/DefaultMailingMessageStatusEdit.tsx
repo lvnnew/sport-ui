@@ -71,6 +71,7 @@ const DefaultMailingMessageStatusEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='final'
+                required
                 label={translate('catalogs.mailingMessageStatuses.fields.final')}
               />
             </Grid>

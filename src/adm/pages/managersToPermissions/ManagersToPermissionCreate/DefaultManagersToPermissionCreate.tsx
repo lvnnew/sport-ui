@@ -51,6 +51,7 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -69,6 +70,7 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

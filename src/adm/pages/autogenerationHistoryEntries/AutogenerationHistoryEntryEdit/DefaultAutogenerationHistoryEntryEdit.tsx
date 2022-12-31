@@ -68,6 +68,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='date'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
               />
             </Grid>
@@ -76,6 +77,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
               />
             </Grid>
@@ -84,6 +86,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityId'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
               />
             </Grid>
@@ -102,6 +105,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -110,6 +114,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='version'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
               />
             </Grid>
@@ -118,6 +123,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='errorOccurred'
+                required
                 label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
               />
             </Grid>

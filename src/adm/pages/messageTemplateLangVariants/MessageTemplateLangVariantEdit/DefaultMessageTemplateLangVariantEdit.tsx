@@ -70,6 +70,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='subjectTemplate'
+                required
                 label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')}
               />
             </Grid>
@@ -78,6 +79,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='bodyTemplate'
+                required
                 label={translate('catalogs.messageTemplateLangVariants.fields.bodyTemplate')}
               />
             </Grid>
@@ -96,6 +98,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -114,6 +117,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

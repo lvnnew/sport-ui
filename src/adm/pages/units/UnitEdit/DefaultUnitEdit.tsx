@@ -61,6 +61,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.units.fields.title')}
               />
             </Grid>

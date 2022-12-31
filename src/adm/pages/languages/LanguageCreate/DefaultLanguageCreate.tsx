@@ -38,6 +38,7 @@ const DefaultLanguageCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
+                required
                 label={translate('catalogs.languages.fields.id')}
               />
             </Grid>

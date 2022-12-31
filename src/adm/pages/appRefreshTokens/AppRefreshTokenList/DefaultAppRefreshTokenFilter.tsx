@@ -25,6 +25,7 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='create'
+        required
         label={translate('catalogs.appRefreshTokens.fields.create')}
       />
       <ReferenceInput
@@ -41,12 +42,14 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='token'
+        required
         label={translate('catalogs.appRefreshTokens.fields.token')}
       />
     </Filter>

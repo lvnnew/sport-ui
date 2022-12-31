@@ -36,6 +36,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -52,6 +53,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <DateInput
@@ -65,6 +67,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='active'
+        required
         label={translate('catalogs.delegations.fields.active')}
       />
     </Filter>

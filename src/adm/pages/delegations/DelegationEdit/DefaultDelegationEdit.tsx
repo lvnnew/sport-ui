@@ -75,6 +75,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -93,6 +94,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -110,6 +112,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
+                required
                 label={translate('catalogs.delegations.fields.active')}
               />
             </Grid>

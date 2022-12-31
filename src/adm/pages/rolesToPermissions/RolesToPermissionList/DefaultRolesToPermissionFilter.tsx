@@ -34,6 +34,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -50,6 +51,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
     </Filter>

@@ -41,6 +41,7 @@ const DefaultMailingMessageStatusCreate: FC<CreateProps> = (props: CreateProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='id'
+                required
                 label={translate('catalogs.mailingMessageStatuses.fields.id')}
               />
             </Grid>
@@ -58,6 +59,7 @@ const DefaultMailingMessageStatusCreate: FC<CreateProps> = (props: CreateProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='final'
+                required
                 label={translate('catalogs.mailingMessageStatuses.fields.final')}
               />
             </Grid>

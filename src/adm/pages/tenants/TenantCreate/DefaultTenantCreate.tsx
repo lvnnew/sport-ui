@@ -48,6 +48,7 @@ const DefaultTenantCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='utcOffset'
+                required
                 label={translate('catalogs.tenants.fields.utcOffset')}
               />
             </Grid>

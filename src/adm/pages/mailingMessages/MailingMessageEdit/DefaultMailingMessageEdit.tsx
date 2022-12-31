@@ -75,6 +75,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -93,6 +94,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -111,6 +113,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -119,6 +122,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='to'
+                required
                 label={translate('catalogs.mailingMessages.fields.to')}
               />
             </Grid>
@@ -127,6 +131,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='locals'
+                required
                 label={translate('catalogs.mailingMessages.fields.locals')}
               />
             </Grid>
@@ -135,6 +140,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='localsHash'
+                required
                 label={translate('catalogs.mailingMessages.fields.localsHash')}
               />
             </Grid>
@@ -143,6 +149,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
+                required
                 label={translate('catalogs.mailingMessages.fields.priority')}
               />
             </Grid>
@@ -151,6 +158,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='dateCreated'
+                required
                 label={translate('catalogs.mailingMessages.fields.dateCreated')}
               />
             </Grid>
@@ -223,6 +231,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -241,6 +250,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

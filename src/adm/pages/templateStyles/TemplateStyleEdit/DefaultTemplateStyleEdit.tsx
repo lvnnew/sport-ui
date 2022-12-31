@@ -59,6 +59,7 @@ const DefaultTemplateStyleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.templateStyles.fields.title')}
               />
             </Grid>
@@ -67,6 +68,7 @@ const DefaultTemplateStyleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='style'
+                required
                 label={translate('catalogs.templateStyles.fields.style')}
               />
             </Grid>

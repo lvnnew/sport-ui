@@ -6,7 +6,7 @@ import {Translate} from 'react-admin';
 
 const getAdmRefreshTokenValidation: GetValidation = (t: Translate) => Yup.object({
   create: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
-  managerId: Yup.number().required().typeError(t('validation.required')),
+  managerId: Yup.number().required(t('validation.required')).typeError(t('validation.required')),
   token: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
 });
 

@@ -72,6 +72,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='lastname'
+                required
                 label={translate('catalogs.users.fields.lastname')}
               />
             </Grid>
@@ -80,6 +81,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='firstname'
+                required
                 label={translate('catalogs.users.fields.firstname')}
               />
             </Grid>
@@ -88,6 +90,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='email'
+                required
                 label={translate('catalogs.users.fields.email')}
               />
             </Grid>

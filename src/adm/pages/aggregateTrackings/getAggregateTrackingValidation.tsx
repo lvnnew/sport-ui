@@ -9,7 +9,7 @@ const getAggregateTrackingValidation: GetValidation = (t: Translate) => Yup.obje
   entityId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
   lastAggregatesComputed: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
   lastEntityUpdate: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
-  aggregateVersion: Yup.number().required().typeError(t('validation.required')),
+  aggregateVersion: Yup.number().required(t('validation.required')).typeError(t('validation.required')),
 });
 
 export default getAggregateTrackingValidation;

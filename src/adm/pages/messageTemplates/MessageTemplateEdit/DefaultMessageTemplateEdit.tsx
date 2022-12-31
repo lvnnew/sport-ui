@@ -64,6 +64,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.messageTemplates.fields.title')}
               />
             </Grid>
@@ -72,6 +73,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='secretData'
+                required
                 label={translate('catalogs.messageTemplates.fields.secretData')}
               />
             </Grid>
@@ -90,6 +92,7 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

@@ -43,6 +43,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.mailingCampaigns.fields.title')}
               />
             </Grid>
@@ -61,6 +62,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -69,6 +71,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
+                required
                 label={translate('catalogs.mailingCampaigns.fields.priority')}
               />
             </Grid>
@@ -114,6 +117,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

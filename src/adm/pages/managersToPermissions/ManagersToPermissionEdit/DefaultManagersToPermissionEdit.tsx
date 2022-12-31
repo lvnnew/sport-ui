@@ -72,6 +72,7 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -90,6 +91,7 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

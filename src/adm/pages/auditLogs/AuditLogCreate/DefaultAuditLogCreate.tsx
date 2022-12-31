@@ -46,6 +46,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='date'
+                required
                 label={translate('catalogs.auditLogs.fields.date')}
               />
             </Grid>
@@ -54,6 +55,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.auditLogs.fields.title')}
               />
             </Grid>
@@ -90,6 +92,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -98,6 +101,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='entityId'
+                required
                 label={translate('catalogs.auditLogs.fields.entityId')}
               />
             </Grid>
@@ -116,6 +120,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

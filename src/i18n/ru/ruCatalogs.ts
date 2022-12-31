@@ -38,7 +38,7 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
+      title: 'Название',
     },
   },
   auditLogs: {
@@ -46,18 +46,18 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      date: 'Date',
-      title: 'Title',
-      success: 'Success',
-      error: 'Error',
+      date: 'Дата',
+      title: 'Название',
+      success: 'Успешно',
+      error: 'Ошибка',
       entityTypeId: 'Сущность',
       entityId: 'ID сущности',
       actionTypeId: 'Тип операции',
-      managerId: 'Manager',
-      userId: 'User',
-      foreign: 'Foreign',
-      foreignEntityType: 'Foreign entity type',
-      foreignEntityId: 'Foreign entity',
+      managerId: 'Менеджер',
+      userId: 'Пользователь',
+      foreign: 'Внешняя сущность',
+      foreignEntityType: 'Тип внешней сущности ',
+      foreignEntityId: 'ID внешней сущности',
       actionData: 'Action data',
     },
   },
@@ -105,7 +105,7 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
+      title: 'Название',
     },
   },
   files: {
@@ -288,9 +288,9 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
-      hasAllPermissions: 'Has all permissions',
-      allTenantsAvailable: 'All tenants available',
+      title: 'Название',
+      hasAllPermissions: 'Доступны все разрешения',
+      allTenantsAvailable: 'Доступны все арендаторы',
     },
   },
   rolesToPermissions: {

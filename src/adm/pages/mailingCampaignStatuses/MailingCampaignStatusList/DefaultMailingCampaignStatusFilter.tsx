@@ -22,6 +22,7 @@ const DefaultMailingCampaignStatusFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
+        required
         label={translate('catalogs.mailingCampaignStatuses.fields.title')}
       />
     </Filter>

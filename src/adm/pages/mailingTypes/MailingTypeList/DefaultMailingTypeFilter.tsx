@@ -22,6 +22,7 @@ const DefaultMailingTypeFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
+        required
         label={translate('catalogs.mailingTypes.fields.title')}
       />
     </Filter>

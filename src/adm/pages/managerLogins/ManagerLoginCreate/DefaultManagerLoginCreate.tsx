@@ -45,6 +45,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='login'
+                required
                 label={translate('catalogs.managerLogins.fields.login')}
               />
             </Grid>
@@ -53,6 +54,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='passwordHash'
+                required
                 label={translate('catalogs.managerLogins.fields.passwordHash')}
               />
             </Grid>
@@ -61,6 +63,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='emailVerified'
+                required
                 label={translate('catalogs.managerLogins.fields.emailVerified')}
               />
             </Grid>
@@ -69,6 +72,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='initialPasswordChanged'
+                required
                 label={translate('catalogs.managerLogins.fields.initialPasswordChanged')}
               />
             </Grid>
@@ -77,6 +81,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='locked'
+                required
                 label={translate('catalogs.managerLogins.fields.locked')}
               />
             </Grid>
@@ -95,6 +100,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

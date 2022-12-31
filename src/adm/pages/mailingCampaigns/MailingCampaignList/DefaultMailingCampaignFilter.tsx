@@ -26,6 +26,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
+        required
         label={translate('catalogs.mailingCampaigns.fields.title')}
       />
       <ReferenceInput
@@ -42,12 +43,14 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <NumberInput
         fullWidth
         sx={{m: 1}}
         source='priority'
+        required
         label={translate('catalogs.mailingCampaigns.fields.priority')}
       />
       <DateInput
@@ -87,6 +90,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
     </Filter>

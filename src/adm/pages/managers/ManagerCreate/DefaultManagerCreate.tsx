@@ -56,6 +56,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='lastName'
+                required
                 label={translate('catalogs.managers.fields.lastName')}
               />
             </Grid>
@@ -64,6 +65,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='firstName'
+                required
                 label={translate('catalogs.managers.fields.firstName')}
               />
             </Grid>
@@ -90,6 +92,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='email'
+                required
                 label={translate('catalogs.managers.fields.email')}
               />
             </Grid>
@@ -137,6 +140,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='headOfUnit'
+                required
                 label={translate('catalogs.managers.fields.headOfUnit')}
               />
             </Grid>
@@ -145,6 +149,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
+                required
                 label={translate('catalogs.managers.fields.active')}
               />
             </Grid>

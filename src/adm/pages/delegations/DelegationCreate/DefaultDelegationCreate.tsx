@@ -54,6 +54,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -72,6 +73,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -89,6 +91,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
+                required
                 label={translate('catalogs.delegations.fields.active')}
               />
             </Grid>

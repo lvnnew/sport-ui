@@ -64,6 +64,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.mailingCampaigns.fields.title')}
               />
             </Grid>
@@ -82,6 +83,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -90,6 +92,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
+                required
                 label={translate('catalogs.mailingCampaigns.fields.priority')}
               />
             </Grid>
@@ -135,6 +138,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

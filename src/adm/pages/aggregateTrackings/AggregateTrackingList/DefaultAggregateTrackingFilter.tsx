@@ -30,18 +30,21 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='entityId'
+        required
         label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
       />
       <DateTimeInput
         fullWidth
         sx={{m: 1}}
         source='lastAggregatesComputed'
+        required
         label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
       />
       <DateTimeInput
@@ -55,12 +58,14 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='lastEntityUpdate'
+        required
         label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
       />
       <NumberInput
         fullWidth
         sx={{m: 1}}
         source='aggregateVersion'
+        required
         label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
       />
     </Filter>

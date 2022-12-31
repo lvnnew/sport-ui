@@ -32,12 +32,14 @@ const DefaultManagerFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='lastName'
+        required
         label={translate('catalogs.managers.fields.lastName')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='firstName'
+        required
         label={translate('catalogs.managers.fields.firstName')}
       />
       <ReferenceInput
@@ -60,6 +62,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='email'
+        required
         label={translate('catalogs.managers.fields.email')}
       />
       <TextInput
@@ -96,12 +99,14 @@ const DefaultManagerFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='headOfUnit'
+        required
         label={translate('catalogs.managers.fields.headOfUnit')}
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='active'
+        required
         label={translate('catalogs.managers.fields.active')}
       />
       <ReferenceInput

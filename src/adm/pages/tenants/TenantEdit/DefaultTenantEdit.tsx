@@ -69,6 +69,7 @@ const DefaultTenantEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='utcOffset'
+                required
                 label={translate('catalogs.tenants.fields.utcOffset')}
               />
             </Grid>

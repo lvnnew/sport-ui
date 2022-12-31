@@ -49,6 +49,7 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -67,6 +68,7 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

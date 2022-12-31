@@ -35,6 +35,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -51,6 +52,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <DateInput

@@ -61,6 +61,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='login'
+                required
                 label={translate('catalogs.appLogins.fields.login')}
               />
             </Grid>
@@ -69,6 +70,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='passwordHash'
+                required
                 label={translate('catalogs.appLogins.fields.passwordHash')}
               />
             </Grid>
@@ -87,6 +89,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

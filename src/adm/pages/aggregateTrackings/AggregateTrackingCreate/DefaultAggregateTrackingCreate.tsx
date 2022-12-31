@@ -55,6 +55,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -63,6 +64,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='entityId'
+                required
                 label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
               />
             </Grid>
@@ -71,6 +73,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='lastAggregatesComputed'
+                required
                 label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
               />
             </Grid>
@@ -88,6 +91,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='lastEntityUpdate'
+                required
                 label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
               />
             </Grid>
@@ -96,6 +100,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='aggregateVersion'
+                required
                 label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
               />
             </Grid>

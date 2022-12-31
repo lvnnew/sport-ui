@@ -63,6 +63,7 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='create'
+                required
                 label={translate('catalogs.appRefreshTokens.fields.create')}
               />
             </Grid>
@@ -81,6 +82,7 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -89,6 +91,7 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='token'
+                required
                 label={translate('catalogs.appRefreshTokens.fields.token')}
               />
             </Grid>

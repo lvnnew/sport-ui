@@ -49,6 +49,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='subjectTemplate'
+                required
                 label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')}
               />
             </Grid>
@@ -57,6 +58,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='bodyTemplate'
+                required
                 label={translate('catalogs.messageTemplateLangVariants.fields.bodyTemplate')}
               />
             </Grid>
@@ -75,6 +77,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -93,6 +96,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

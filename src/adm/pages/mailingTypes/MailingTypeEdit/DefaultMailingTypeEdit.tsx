@@ -59,6 +59,7 @@ const DefaultMailingTypeEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.mailingTypes.fields.title')}
               />
             </Grid>

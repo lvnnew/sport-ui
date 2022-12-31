@@ -38,6 +38,7 @@ const DefaultTemplateStyleCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.templateStyles.fields.title')}
               />
             </Grid>
@@ -46,6 +47,7 @@ const DefaultTemplateStyleCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='style'
+                required
                 label={translate('catalogs.templateStyles.fields.style')}
               />
             </Grid>

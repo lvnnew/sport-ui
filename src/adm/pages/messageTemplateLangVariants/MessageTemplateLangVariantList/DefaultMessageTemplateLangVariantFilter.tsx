@@ -31,12 +31,14 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='subjectTemplate'
+        required
         label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='bodyTemplate'
+        required
         label={translate('catalogs.messageTemplateLangVariants.fields.bodyTemplate')}
       />
       <ReferenceInput
@@ -53,6 +55,7 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <ReferenceInput
@@ -69,6 +72,7 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
       <TextInput

@@ -64,6 +64,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.autogenerationRules.fields.title')}
               />
             </Grid>
@@ -81,6 +82,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
+                required
                 label={translate('catalogs.autogenerationRules.fields.originalEntityType')}
               />
             </Grid>
@@ -89,6 +91,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityType'
+                required
                 label={translate('catalogs.autogenerationRules.fields.generatingEntityType')}
               />
             </Grid>
@@ -97,6 +100,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityFilter'
+                required
                 label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')}
               />
             </Grid>
@@ -105,6 +109,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityConstructionRules'
+                required
                 label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')}
               />
             </Grid>
@@ -113,6 +118,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='ignoreVersionOnHistory'
+                required
                 label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')}
               />
             </Grid>

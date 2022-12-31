@@ -25,30 +25,35 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='login'
+        required
         label={translate('catalogs.managerLogins.fields.login')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='passwordHash'
+        required
         label={translate('catalogs.managerLogins.fields.passwordHash')}
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='emailVerified'
+        required
         label={translate('catalogs.managerLogins.fields.emailVerified')}
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='initialPasswordChanged'
+        required
         label={translate('catalogs.managerLogins.fields.initialPasswordChanged')}
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='locked'
+        required
         label={translate('catalogs.managerLogins.fields.locked')}
       />
       <ReferenceInput
@@ -65,6 +70,7 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
     </Filter>

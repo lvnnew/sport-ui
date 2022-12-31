@@ -42,6 +42,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
+                required
                 label={translate('catalogs.roles.fields.id')}
               />
             </Grid>
@@ -59,6 +60,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='hasAllPermissions'
+                required
                 label={translate('catalogs.roles.fields.hasAllPermissions')}
               />
             </Grid>
@@ -67,6 +69,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='allTenantsAvailable'
+                required
                 label={translate('catalogs.roles.fields.allTenantsAvailable')}
               />
             </Grid>

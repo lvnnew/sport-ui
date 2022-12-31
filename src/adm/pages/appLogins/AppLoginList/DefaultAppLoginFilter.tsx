@@ -24,12 +24,14 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='login'
+        required
         label={translate('catalogs.appLogins.fields.login')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='passwordHash'
+        required
         label={translate('catalogs.appLogins.fields.passwordHash')}
       />
       <ReferenceInput
@@ -46,6 +48,7 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
           optionText='title'
           defaultValue={null}
           parse={val => val || null}
+          isRequired
         />
       </ReferenceInput>
     </Filter>

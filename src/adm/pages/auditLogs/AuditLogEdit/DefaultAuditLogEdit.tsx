@@ -67,6 +67,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='date'
+                required
                 label={translate('catalogs.auditLogs.fields.date')}
               />
             </Grid>
@@ -75,6 +76,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.auditLogs.fields.title')}
               />
             </Grid>
@@ -111,6 +113,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>
@@ -119,6 +122,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='entityId'
+                required
                 label={translate('catalogs.auditLogs.fields.entityId')}
               />
             </Grid>
@@ -137,6 +141,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

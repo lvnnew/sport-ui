@@ -43,6 +43,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
+                required
                 label={translate('catalogs.messageTemplates.fields.id')}
               />
             </Grid>
@@ -51,6 +52,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.messageTemplates.fields.title')}
               />
             </Grid>
@@ -59,6 +61,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='secretData'
+                required
                 label={translate('catalogs.messageTemplates.fields.secretData')}
               />
             </Grid>
@@ -77,6 +80,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                   optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
+                  isRequired
                 />
               </ReferenceInput>
             </Grid>

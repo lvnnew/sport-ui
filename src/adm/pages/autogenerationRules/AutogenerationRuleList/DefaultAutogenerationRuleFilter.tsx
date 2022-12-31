@@ -24,6 +24,7 @@ const DefaultAutogenerationRuleFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
+        required
         label={translate('catalogs.autogenerationRules.fields.title')}
       />
       <DateInput
@@ -37,30 +38,35 @@ const DefaultAutogenerationRuleFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='originalEntityType'
+        required
         label={translate('catalogs.autogenerationRules.fields.originalEntityType')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='generatingEntityType'
+        required
         label={translate('catalogs.autogenerationRules.fields.generatingEntityType')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='originalEntityFilter'
+        required
         label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')}
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='generatingEntityConstructionRules'
+        required
         label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')}
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='ignoreVersionOnHistory'
+        required
         label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')}
       />
     </Filter>

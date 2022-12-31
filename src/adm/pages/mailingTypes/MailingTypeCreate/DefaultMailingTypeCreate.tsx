@@ -38,6 +38,7 @@ const DefaultMailingTypeCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
+                required
                 label={translate('catalogs.mailingTypes.fields.id')}
               />
             </Grid>
@@ -46,6 +47,7 @@ const DefaultMailingTypeCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
+                required
                 label={translate('catalogs.mailingTypes.fields.title')}
               />
             </Grid>
