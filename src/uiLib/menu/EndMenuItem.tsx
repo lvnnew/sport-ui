@@ -5,6 +5,7 @@ import * as Icons from '@mui/icons-material';
 import {makeStyles, createStyles} from '@mui/styles';
 import {IconByName} from '../IconByName';
 import {hasAllPermissions} from '../../utils/permissions';
+import {Tooltip} from '@mui/material';
 
 export interface EndMenuElement {
   label: string;
@@ -42,14 +43,21 @@ const EndMenuItem: FC<EndMenuItemProps> = ({
   const classes = useStyles();
   const t = useTranslate();
 
-  return (debug || !debugOnly) && (!permissions || hasAllPermissions(currentPermissions, permissions)) ? <MenuItemLink
-    dense={dense}
-    leftIcon={<IconByName name={icon} />}
-    onClick={onClick}
-    primaryText={<div className={classes.label}>{t(label)}</div>}
-    sidebarIsOpen={open}
-    to={link}
-  /> : null;
+  return (debug || !debugOnly) && (!permissions || hasAllPermissions(currentPermissions, permissions)) ?
+    <Tooltip
+      title={t(label)}
+      placement='right'
+    >
+      <MenuItemLink
+        dense={dense}
+        leftIcon={<IconByName name={icon} />}
+        onClick={onClick}
+        primaryText={<div className={classes.label}>{t(label)}</div>}
+        sidebarIsOpen={open}
+        to={link}
+      />
+    </Tooltip> :
+    null;
 };
 
 export default EndMenuItem;
