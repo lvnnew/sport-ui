@@ -11,7 +11,7 @@ import React, {
 } from 'react';
 import {useHotkeys} from 'react-hotkeys-hook';
 
-export interface IDebugContext {
+export interface DebugContextData {
   debug: boolean;
   setDebug: Dispatch<SetStateAction<boolean>>;
 }
@@ -20,8 +20,8 @@ interface IProps {
   children: ReactNode | ReactNode[];
 }
 
-export const DebugContext = createContext<IDebugContext>(
-  {} as IDebugContext,
+export const DebugContext = createContext<DebugContextData>(
+  {} as DebugContextData,
 );
 
 export const DebugProvider = memo((props: IProps) => {
@@ -31,7 +31,7 @@ export const DebugProvider = memo((props: IProps) => {
 
   useHotkeys('Ctrl + Alt + S', toggleDebug, [toggleDebug]);
 
-  const context = useMemo<IDebugContext>(
+  const context = useMemo<DebugContextData>(
     () => ({
       debug,
       setDebug,
@@ -42,5 +42,5 @@ export const DebugProvider = memo((props: IProps) => {
   return <DebugContext.Provider {...props} value={context} />;
 });
 
-export const useDebug = (): IDebugContext =>
-  useContext(DebugContext) as IDebugContext;
+export const useDebug = (): DebugContextData =>
+  useContext(DebugContext) as DebugContextData;
