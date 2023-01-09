@@ -56,7 +56,6 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.units.fields.parentId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />

@@ -53,7 +53,6 @@ const DefaultManagerFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.managers.fields.languageId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
         />
@@ -90,7 +89,6 @@ const DefaultManagerFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.managers.fields.unitId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
         />
@@ -120,7 +118,6 @@ const DefaultManagerFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.managers.fields.tenantId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
         />

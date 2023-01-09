@@ -125,9 +125,23 @@ const translationMessages: TranslationMessages = {
   },
   ra: {
     ...ruMessages.ra,
+    action: {
+      ...ruMessages.ra.action,
+      remove_all_filters: 'Удалить все фильтры',
+      create_item: 'Создать %{item}',
+    },
     boolean: {
       ...ruMessages.ra.boolean,
       null: 'не выбрано',
+    },
+    saved_queries: {
+      ...ruMessages.ra.saved_queries,
+      new_label: 'Сохранить текущие настройки',
+    },
+    page: {
+      ...ruMessages.ra.page,
+      empty: 'Нет элементов.',
+      invite: 'Хотите добавить?',
     },
   },
 };

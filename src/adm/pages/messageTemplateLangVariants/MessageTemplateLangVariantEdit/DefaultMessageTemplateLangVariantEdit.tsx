@@ -96,7 +96,6 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -115,7 +114,6 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.messageTemplateLangVariants.fields.languageId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

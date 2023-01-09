@@ -103,7 +103,6 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

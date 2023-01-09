@@ -412,6 +412,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'admRefreshTokens.create') ? LoadableAdmRefreshTokenCreate : undefined}
         list={hasPermission(permissions, 'admRefreshTokens.all') ? LoadableAdmRefreshTokenList : undefined}
         options={{label: translate('catalogs.admRefreshTokens.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='aggregateTrackings'
@@ -421,6 +422,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'aggregateTrackings.create') ? LoadableAggregateTrackingCreate : undefined}
         list={hasPermission(permissions, 'aggregateTrackings.all') ? LoadableAggregateTrackingList : undefined}
         options={{label: translate('infoRegistries.aggregateTrackings.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='appLogins'
@@ -430,6 +432,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'appLogins.create') ? LoadableAppLoginCreate : undefined}
         list={hasPermission(permissions, 'appLogins.all') ? LoadableAppLoginList : undefined}
         options={{label: translate('catalogs.appLogins.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='appRefreshTokens'
@@ -439,6 +442,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'appRefreshTokens.create') ? LoadableAppRefreshTokenCreate : undefined}
         list={hasPermission(permissions, 'appRefreshTokens.all') ? LoadableAppRefreshTokenList : undefined}
         options={{label: translate('catalogs.appRefreshTokens.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='auditLogActionTypes'
@@ -448,6 +452,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'auditLogActionTypes.create') ? LoadableAuditLogActionTypeCreate : undefined}
         list={hasPermission(permissions, 'auditLogActionTypes.all') ? LoadableAuditLogActionTypeList : undefined}
         options={{label: translate('catalogs.auditLogActionTypes.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='auditLogs'
@@ -457,6 +462,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'auditLogs.create') ? LoadableAuditLogCreate : undefined}
         list={hasPermission(permissions, 'auditLogs.all') ? LoadableAuditLogList : undefined}
         options={{label: translate('catalogs.auditLogs.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='autogenerationHistoryEntries'
@@ -466,6 +472,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'autogenerationHistoryEntries.create') ? LoadableAutogenerationHistoryEntryCreate : undefined}
         list={hasPermission(permissions, 'autogenerationHistoryEntries.all') ? LoadableAutogenerationHistoryEntryList : undefined}
         options={{label: translate('catalogs.autogenerationHistoryEntries.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='autogenerationRules'
@@ -475,6 +482,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'autogenerationRules.create') ? LoadableAutogenerationRuleCreate : undefined}
         list={hasPermission(permissions, 'autogenerationRules.all') ? LoadableAutogenerationRuleList : undefined}
         options={{label: translate('catalogs.autogenerationRules.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='delegations'
@@ -484,6 +492,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'delegations.create') ? LoadableDelegationCreate : undefined}
         list={hasPermission(permissions, 'delegations.all') ? LoadableDelegationList : undefined}
         options={{label: translate('catalogs.delegations.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='entities'
@@ -493,6 +502,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'entities.create') ? LoadableEntityCreate : undefined}
         list={hasPermission(permissions, 'entities.all') ? LoadableEntityList : undefined}
         options={{label: translate('catalogs.entities.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='files'
@@ -502,6 +512,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'files.create') ? LoadableFileCreate : undefined}
         list={hasPermission(permissions, 'files.all') ? LoadableFileList : undefined}
         options={{label: translate('catalogs.files.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='languages'
@@ -511,6 +522,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'languages.create') ? LoadableLanguageCreate : undefined}
         list={hasPermission(permissions, 'languages.all') ? LoadableLanguageList : undefined}
         options={{label: translate('catalogs.languages.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='mailingCampaignStatuses'
@@ -520,6 +532,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'mailingCampaignStatuses.create') ? LoadableMailingCampaignStatusCreate : undefined}
         list={hasPermission(permissions, 'mailingCampaignStatuses.all') ? LoadableMailingCampaignStatusList : undefined}
         options={{label: translate('catalogs.mailingCampaignStatuses.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='mailingCampaigns'
@@ -529,6 +542,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'mailingCampaigns.create') ? LoadableMailingCampaignCreate : undefined}
         list={hasPermission(permissions, 'mailingCampaigns.all') ? LoadableMailingCampaignList : undefined}
         options={{label: translate('catalogs.mailingCampaigns.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='mailingMessageStatuses'
@@ -538,6 +552,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'mailingMessageStatuses.create') ? LoadableMailingMessageStatusCreate : undefined}
         list={hasPermission(permissions, 'mailingMessageStatuses.all') ? LoadableMailingMessageStatusList : undefined}
         options={{label: translate('catalogs.mailingMessageStatuses.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='mailingMessages'
@@ -547,6 +562,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'mailingMessages.create') ? LoadableMailingMessageCreate : undefined}
         list={hasPermission(permissions, 'mailingMessages.all') ? LoadableMailingMessageList : undefined}
         options={{label: translate('catalogs.mailingMessages.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='mailingTypes'
@@ -556,6 +572,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'mailingTypes.create') ? LoadableMailingTypeCreate : undefined}
         list={hasPermission(permissions, 'mailingTypes.all') ? LoadableMailingTypeList : undefined}
         options={{label: translate('catalogs.mailingTypes.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='managerLogins'
@@ -565,6 +582,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'managerLogins.create') ? LoadableManagerLoginCreate : undefined}
         list={hasPermission(permissions, 'managerLogins.all') ? LoadableManagerLoginList : undefined}
         options={{label: translate('catalogs.managerLogins.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='managers'
@@ -574,6 +592,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'managers.create') ? LoadableManagerCreate : undefined}
         list={hasPermission(permissions, 'managers.all') ? LoadableManagerList : undefined}
         options={{label: translate('catalogs.managers.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='managersToPermissions'
@@ -583,6 +602,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'managersToPermissions.create') ? LoadableManagersToPermissionCreate : undefined}
         list={hasPermission(permissions, 'managersToPermissions.all') ? LoadableManagersToPermissionList : undefined}
         options={{label: translate('catalogs.managersToPermissions.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='managersToRoles'
@@ -592,6 +612,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'managersToRoles.create') ? LoadableManagersToRoleCreate : undefined}
         list={hasPermission(permissions, 'managersToRoles.all') ? LoadableManagersToRoleList : undefined}
         options={{label: translate('catalogs.managersToRoles.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='messageTemplateLangVariants'
@@ -601,6 +622,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'messageTemplateLangVariants.create') ? LoadableMessageTemplateLangVariantCreate : undefined}
         list={hasPermission(permissions, 'messageTemplateLangVariants.all') ? LoadableMessageTemplateLangVariantList : undefined}
         options={{label: translate('catalogs.messageTemplateLangVariants.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='messageTemplates'
@@ -610,6 +632,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'messageTemplates.create') ? LoadableMessageTemplateCreate : undefined}
         list={hasPermission(permissions, 'messageTemplates.all') ? LoadableMessageTemplateList : undefined}
         options={{label: translate('catalogs.messageTemplates.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='messageTypes'
@@ -619,6 +642,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'messageTypes.create') ? LoadableMessageTypeCreate : undefined}
         list={hasPermission(permissions, 'messageTypes.all') ? LoadableMessageTypeList : undefined}
         options={{label: translate('catalogs.messageTypes.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='permissions'
@@ -628,6 +652,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'permissions.create') ? LoadablePermissionCreate : undefined}
         list={hasPermission(permissions, 'permissions.all') ? LoadablePermissionList : undefined}
         options={{label: translate('catalogs.permissions.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='roles'
@@ -637,6 +662,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'roles.create') ? LoadableRoleCreate : undefined}
         list={hasPermission(permissions, 'roles.all') ? LoadableRoleList : undefined}
         options={{label: translate('catalogs.roles.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='rolesToPermissions'
@@ -646,6 +672,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'rolesToPermissions.create') ? LoadableRolesToPermissionCreate : undefined}
         list={hasPermission(permissions, 'rolesToPermissions.all') ? LoadableRolesToPermissionList : undefined}
         options={{label: translate('catalogs.rolesToPermissions.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='stats'
@@ -655,6 +682,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'stats.create') ? LoadableStatCreate : undefined}
         list={hasPermission(permissions, 'stats.all') ? LoadableStatList : undefined}
         options={{label: translate('catalogs.stats.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='tags'
@@ -664,6 +692,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'tags.create') ? LoadableTagCreate : undefined}
         list={hasPermission(permissions, 'tags.all') ? LoadableTagList : undefined}
         options={{label: translate('catalogs.tags.title')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='templateStyles'
@@ -673,6 +702,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'templateStyles.create') ? LoadableTemplateStyleCreate : undefined}
         list={hasPermission(permissions, 'templateStyles.all') ? LoadableTemplateStyleList : undefined}
         options={{label: translate('catalogs.templateStyles.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='tenants'
@@ -682,6 +712,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'tenants.create') ? LoadableTenantCreate : undefined}
         list={hasPermission(permissions, 'tenants.all') ? LoadableTenantList : undefined}
         options={{label: translate('catalogs.tenants.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='units'
@@ -691,6 +722,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'units.create') ? LoadableUnitCreate : undefined}
         list={hasPermission(permissions, 'units.all') ? LoadableUnitList : undefined}
         options={{label: translate('catalogs.units.title')}}
+        recordRepresentation='title'
       />,
       <Resource
         key='users'
@@ -700,6 +732,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'users.create') ? LoadableUserCreate : undefined}
         list={hasPermission(permissions, 'users.all') ? LoadableUserList : undefined}
         options={{label: translate('catalogs.users.title')}}
+        recordRepresentation='title'
       />,
     ] :
     []

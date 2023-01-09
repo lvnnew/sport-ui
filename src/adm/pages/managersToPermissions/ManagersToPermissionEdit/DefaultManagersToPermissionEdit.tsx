@@ -70,7 +70,6 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managersToPermissions.fields.managerId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -89,7 +88,6 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managersToPermissions.fields.permissionId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

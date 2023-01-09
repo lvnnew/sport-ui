@@ -70,7 +70,6 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managersToRoles.fields.managerId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -89,7 +88,6 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managersToRoles.fields.roleId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

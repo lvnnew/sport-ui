@@ -89,7 +89,6 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.auditLogs.fields.entityTypeId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -117,7 +116,6 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.auditLogs.fields.actionTypeId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -136,7 +134,6 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.auditLogs.fields.managerId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />
@@ -154,7 +151,6 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.auditLogs.fields.userId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />

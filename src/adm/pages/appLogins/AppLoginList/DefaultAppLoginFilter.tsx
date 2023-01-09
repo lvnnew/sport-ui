@@ -45,7 +45,6 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.appLogins.fields.userId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
           isRequired

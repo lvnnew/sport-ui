@@ -27,7 +27,6 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
           isRequired

@@ -46,7 +46,6 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.rolesToPermissions.fields.roleId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -65,7 +64,6 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.rolesToPermissions.fields.permissionId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

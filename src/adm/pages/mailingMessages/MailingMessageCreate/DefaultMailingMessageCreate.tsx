@@ -51,7 +51,6 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingMessages.fields.mailingCampaignId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -70,7 +69,6 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingMessages.fields.templateId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -89,7 +87,6 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingMessages.fields.languageId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -207,7 +204,6 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingMessages.fields.mailingMessageStatusId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -226,7 +222,6 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingMessages.fields.messageTemplateLangVariantId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

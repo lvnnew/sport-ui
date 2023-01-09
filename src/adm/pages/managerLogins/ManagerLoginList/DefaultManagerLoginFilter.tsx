@@ -67,7 +67,6 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.managerLogins.fields.managerId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
           isRequired

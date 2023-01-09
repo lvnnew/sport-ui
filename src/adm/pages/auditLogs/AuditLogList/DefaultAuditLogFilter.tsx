@@ -61,7 +61,6 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.auditLogs.fields.entityTypeId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
           isRequired
@@ -85,7 +84,6 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.auditLogs.fields.actionTypeId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
           isRequired
@@ -102,7 +100,6 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.auditLogs.fields.managerId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
         />
@@ -118,7 +115,6 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.auditLogs.fields.userId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
         />

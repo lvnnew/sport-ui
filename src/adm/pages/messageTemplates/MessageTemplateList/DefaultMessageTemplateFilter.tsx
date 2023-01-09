@@ -46,7 +46,6 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.messageTemplates.fields.messageTypeId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
           isRequired
@@ -70,7 +69,6 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
           sx={{m: 1}}
           size='small'
           label={translate('catalogs.messageTemplates.fields.templateStyleId')}
-          optionText='title'
           defaultValue={null}
           parse={val => val || null}
         />

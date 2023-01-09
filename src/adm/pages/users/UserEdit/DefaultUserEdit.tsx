@@ -107,7 +107,6 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.users.fields.tenantId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />

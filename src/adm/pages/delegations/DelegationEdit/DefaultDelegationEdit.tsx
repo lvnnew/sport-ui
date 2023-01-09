@@ -73,7 +73,6 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.delegations.fields.fromId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -92,7 +91,6 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.delegations.fields.toId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

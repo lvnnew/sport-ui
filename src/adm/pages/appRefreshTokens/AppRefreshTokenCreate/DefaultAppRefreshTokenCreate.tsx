@@ -58,7 +58,6 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.appRefreshTokens.fields.userId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

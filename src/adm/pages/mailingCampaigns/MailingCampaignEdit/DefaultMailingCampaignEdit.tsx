@@ -81,7 +81,6 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
@@ -118,7 +117,6 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />
@@ -136,7 +134,6 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired

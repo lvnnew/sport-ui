@@ -103,7 +103,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managers.fields.languageId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />
@@ -151,7 +150,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managers.fields.unitId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />
@@ -187,7 +185,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                   sx={{m: 1}}
                   size='small'
                   label={translate('catalogs.managers.fields.tenantId')}
-                  optionText='title'
                   defaultValue={null}
                   parse={val => val || null}
                 />
