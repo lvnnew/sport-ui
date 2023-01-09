@@ -25,7 +25,9 @@ const MessageTemplatesTemplateStyleIdTab: FC<Omit<TabProps, 'children'>> = (prop
       target='templateStyleId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
         <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
         <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />

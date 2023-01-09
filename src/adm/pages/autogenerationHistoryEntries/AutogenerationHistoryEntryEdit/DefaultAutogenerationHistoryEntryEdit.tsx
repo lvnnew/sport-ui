@@ -53,6 +53,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
         date: data.date || null,
         version: data.version || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

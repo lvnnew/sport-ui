@@ -49,6 +49,7 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
         expiresAt: data.expiresAt || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

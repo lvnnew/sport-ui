@@ -27,7 +27,9 @@ const AutogenerationHistoryEntriesAutogenerationRuleIdTab: FC<Omit<TabProps, 'ch
       target='autogenerationRuleId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.autogenerationHistoryEntries.fields.id')} />
         <DateField source='date' label={translate('catalogs.autogenerationHistoryEntries.fields.date')} showTime />
         <TextField source='originalEntityType' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')} />

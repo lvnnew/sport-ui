@@ -27,7 +27,9 @@ const AuditLogsEntityTypeIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='entityTypeId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.auditLogs.fields.id')} />
         <DateField source='date' label={translate('catalogs.auditLogs.fields.date')} showTime />
         <TextField source='title' label={translate('catalogs.auditLogs.fields.title')} />

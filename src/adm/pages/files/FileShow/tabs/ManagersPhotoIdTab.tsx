@@ -26,7 +26,9 @@ const ManagersPhotoIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='photoId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.managers.fields.id')} />
         <TextField source='title' label={translate('catalogs.managers.fields.title')} />
         <TextField source='lastName' label={translate('catalogs.managers.fields.lastName')} />

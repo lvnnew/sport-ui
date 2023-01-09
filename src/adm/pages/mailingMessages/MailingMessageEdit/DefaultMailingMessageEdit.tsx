@@ -52,6 +52,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
         dateCreated: data.dateCreated || null,
         dateSent: data.dateSent || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

@@ -25,7 +25,9 @@ const MessageTemplateLangVariantsLanguageIdTab: FC<Omit<TabProps, 'children'>> =
       target='languageId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.messageTemplateLangVariants.fields.id')} />
         <TextField source='title' label={translate('catalogs.messageTemplateLangVariants.fields.title')} />
         <TextField source='subjectTemplate' label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')} />

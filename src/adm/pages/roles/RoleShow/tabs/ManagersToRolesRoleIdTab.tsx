@@ -26,7 +26,9 @@ const ManagersToRolesRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='roleId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.managersToRoles.fields.id')} />
         <ReferenceField source='managerId' label={translate('catalogs.managersToRoles.fields.managerId')} reference='managers' link='show'>
           <TextField source='title' />

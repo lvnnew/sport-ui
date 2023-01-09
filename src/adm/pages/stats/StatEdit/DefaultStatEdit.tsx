@@ -48,6 +48,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
         updated: data.updated || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

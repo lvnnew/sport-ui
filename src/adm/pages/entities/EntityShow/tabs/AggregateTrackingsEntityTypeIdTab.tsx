@@ -26,7 +26,9 @@ const AggregateTrackingsEntityTypeIdTab: FC<Omit<TabProps, 'children'>> = (props
       target='entityTypeId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('infoRegistries.aggregateTrackings.fields.id')} />
         <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show'>
           <TextField source='title' />

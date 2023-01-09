@@ -25,7 +25,9 @@ const RolesToPermissionsPermissionIdTab: FC<Omit<TabProps, 'children'>> = (props
       target='permissionId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.rolesToPermissions.fields.id')} />
         <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show'>
           <TextField source='title' />

@@ -26,7 +26,9 @@ const MailingCampaignsMailingCampaignStatusIdTab: FC<Omit<TabProps, 'children'>>
       target='mailingCampaignStatusId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.mailingCampaigns.fields.id')} />
         <TextField source='title' label={translate('catalogs.mailingCampaigns.fields.title')} />
         <ReferenceField source='mailingTypeId' label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')} reference='mailingTypes' link='show'>

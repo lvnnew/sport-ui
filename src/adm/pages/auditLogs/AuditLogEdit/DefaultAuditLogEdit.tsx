@@ -51,6 +51,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
         date: data.date || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

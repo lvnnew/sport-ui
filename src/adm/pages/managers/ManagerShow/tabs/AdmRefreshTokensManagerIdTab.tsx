@@ -26,7 +26,9 @@ const AdmRefreshTokensManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => 
       target='managerId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.admRefreshTokens.fields.id')} />
         <DateField source='create' label={translate('catalogs.admRefreshTokens.fields.create')} showTime />
         <ReferenceField source='managerId' label={translate('catalogs.admRefreshTokens.fields.managerId')} reference='managers' link='show'>

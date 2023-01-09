@@ -49,6 +49,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
         ...data,
         version: data.version || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

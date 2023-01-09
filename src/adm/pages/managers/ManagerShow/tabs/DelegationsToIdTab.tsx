@@ -27,7 +27,9 @@ const DelegationsToIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='toId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.delegations.fields.id')} />
         <ReferenceField source='fromId' label={translate('catalogs.delegations.fields.fromId')} reference='managers' link='show'>
           <TextField source='title' />

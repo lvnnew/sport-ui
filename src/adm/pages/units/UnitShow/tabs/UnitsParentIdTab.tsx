@@ -25,7 +25,9 @@ const UnitsParentIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='parentId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.units.fields.id')} />
         <TextField source='title' label={translate('catalogs.units.fields.title')} />
         <ReferenceField source='parentId' label={translate('catalogs.units.fields.parentId')} reference='units' link='show'>

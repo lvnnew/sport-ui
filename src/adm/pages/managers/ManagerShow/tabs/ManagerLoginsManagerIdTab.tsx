@@ -26,7 +26,9 @@ const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='managerId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
         <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />
         <TextField source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} />

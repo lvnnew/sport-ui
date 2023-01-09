@@ -25,7 +25,9 @@ const UsersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
       target='tenantId'
       pagination={<Pagination />}
     >
-      <Datagrid>
+      <Datagrid
+        bulkActionButtons={false}
+      >
         <NumberField source='id' label={translate('catalogs.users.fields.id')} />
         <TextField source='title' label={translate('catalogs.users.fields.title')} />
         <TextField source='lastname' label={translate('catalogs.users.fields.lastname')} />

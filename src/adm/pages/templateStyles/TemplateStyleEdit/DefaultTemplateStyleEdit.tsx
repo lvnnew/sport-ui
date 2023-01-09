@@ -46,6 +46,7 @@ const DefaultTemplateStyleEdit: FC<EditProps> = (props: EditProps) => {
       transform={useCallback((data: any) => ({
         ...data,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm

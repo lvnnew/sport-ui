@@ -53,6 +53,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
         lastAggregatesScheduled: data.lastAggregatesScheduled || null,
         lastEntityUpdate: data.lastEntityUpdate || null,
       }), [])}
+      mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm
