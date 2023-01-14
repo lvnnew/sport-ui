@@ -66,7 +66,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.mailingCampaigns.fields.title')}
+                label='catalogs.mailingCampaigns.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -74,16 +74,17 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 source='mailingTypeId'
                 reference='mailingTypes'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')}
+                label='catalogs.mailingCampaigns.fields.mailingTypeId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')}
+                  label='catalogs.mailingCampaigns.fields.mailingTypeId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -93,7 +94,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='priority'
                 required
-                label={translate('catalogs.mailingCampaigns.fields.priority')}
+                label='catalogs.mailingCampaigns.fields.priority'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -102,7 +103,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='date'
                 defaultValue={null}
-                label={translate('catalogs.mailingCampaigns.fields.date')}
+                label='catalogs.mailingCampaigns.fields.date'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -110,15 +111,16 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 source='mailingCampaignStatusId'
                 reference='mailingCampaignStatuses'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')}
+                label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')}
+                  label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -127,16 +129,17 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 source='messageTemplateId'
                 reference='messageTemplates'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')}
+                label='catalogs.mailingCampaigns.fields.messageTemplateId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')}
+                  label='catalogs.mailingCampaigns.fields.messageTemplateId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>

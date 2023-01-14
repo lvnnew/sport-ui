@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   TextField,
   NumberField,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import StatFilter from './StatFilter';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultStatList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.stats.title.plural')}
+      title='catalogs.stats.title.plural'
       exporter={false}
       filters={<StatFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,9 +37,9 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.stats.fields.id')} />
-        <DateField source='updated' label={translate('catalogs.stats.fields.updated')} showTime />
-        <NumberField source='helloCount' label={translate('catalogs.stats.fields.helloCount')} />
+        <TextField source='id' label='catalogs.stats.fields.id' />
+        <DateField source='updated' label='catalogs.stats.fields.updated' showTime />
+        <NumberField source='helloCount' label='catalogs.stats.fields.helloCount' />
       </Datagrid>
     </List>
   );

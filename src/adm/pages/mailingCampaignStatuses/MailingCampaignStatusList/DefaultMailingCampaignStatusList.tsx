@@ -8,7 +8,6 @@ import {
   usePermissions,
   BulkDeleteButton,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import MailingCampaignStatusFilter from './MailingCampaignStatusFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -26,11 +25,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultMailingCampaignStatusList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.mailingCampaignStatuses.title.plural')}
+      title='catalogs.mailingCampaignStatuses.title.plural'
       exporter={false}
       filters={<MailingCampaignStatusFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -38,8 +35,8 @@ const DefaultMailingCampaignStatusList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.mailingCampaignStatuses.fields.id')} />
-        <TextField source='title' label={translate('catalogs.mailingCampaignStatuses.fields.title')} />
+        <TextField source='id' label='catalogs.mailingCampaignStatuses.fields.id' />
+        <TextField source='title' label='catalogs.mailingCampaignStatuses.fields.title' />
       </Datagrid>
     </List>
   );

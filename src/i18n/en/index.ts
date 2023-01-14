@@ -6,9 +6,10 @@ import enReports from './enReports';
 import enCatalogs from './enCatalogs';
 import enInfoRegistries from './enInfoRegistries';
 import enSumRegistries from './enSumRegistries';
+import {DeepPartial} from 'utility-types';
+import * as R from 'ramda';
 
-const translationMessages: TranslationMessages = {
-  ...enMessages,
+const translationMessages: DeepPartial<TranslationMessages> = {
   app: {
     documents: 'Documents',
     catalogs: 'Catalogs',
@@ -124,12 +125,13 @@ const translationMessages: TranslationMessages = {
     },
   },
   ra: {
-    ...enMessages.ra,
     boolean: {
-      ...enMessages.ra.boolean,
       null: 'not selected',
+    },
+    message: {
+      noOptions: 'No options',
     },
   },
 };
 
-export default translationMessages;
+export default R.mergeDeepRight(enMessages, translationMessages) as TranslationMessages;

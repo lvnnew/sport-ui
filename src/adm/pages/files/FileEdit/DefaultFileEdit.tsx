@@ -61,7 +61,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='originalName'
                 required
-                label={translate('catalogs.files.fields.originalName')}
+                label='catalogs.files.fields.originalName'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -70,7 +70,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='url'
                 required
-                label={translate('catalogs.files.fields.url')}
+                label='catalogs.files.fields.url'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -79,7 +79,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='mimetype'
                 required
-                label={translate('catalogs.files.fields.mimetype')}
+                label='catalogs.files.fields.mimetype'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -88,7 +88,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='s3Key'
                 required
-                label={translate('catalogs.files.fields.s3Key')}
+                label='catalogs.files.fields.s3Key'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -97,7 +97,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='eTag'
                 required
-                label={translate('catalogs.files.fields.eTag')}
+                label='catalogs.files.fields.eTag'
               />
             </Grid>
           </Grid>

@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import ManagersToRoleFilter from './ManagersToRoleFilter';
@@ -29,11 +28,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.managersToRoles.title.plural')}
+      title='catalogs.managersToRoles.title.plural'
       exporter={false}
       filters={<ManagersToRoleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -41,10 +38,10 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.managersToRoles.fields.id')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managersToRoles.fields.managerId')} reference='managers' link='show' />
-        <ReferenceField source='roleId' label={translate('catalogs.managersToRoles.fields.roleId')} reference='roles' link='show' />
-        <DateField source='expiresAt' label={translate('catalogs.managersToRoles.fields.expiresAt')} />
+        <NumberField source='id' label='catalogs.managersToRoles.fields.id' />
+        <ReferenceField source='managerId' label='catalogs.managersToRoles.fields.managerId' reference='managers' link='show' />
+        <ReferenceField source='roleId' label='catalogs.managersToRoles.fields.roleId' reference='roles' link='show' />
+        <DateField source='expiresAt' label='catalogs.managersToRoles.fields.expiresAt' />
       </Datagrid>
     </List>
   );

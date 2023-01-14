@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import RolesToPermissionFilter from './RolesToPermissionFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.rolesToPermissions.title.plural')}
+      title='catalogs.rolesToPermissions.title.plural'
       exporter={false}
       filters={<RolesToPermissionFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,9 +37,9 @@ const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.rolesToPermissions.fields.id')} />
-        <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show' />
-        <ReferenceField source='permissionId' label={translate('catalogs.rolesToPermissions.fields.permissionId')} reference='permissions' link='show' />
+        <NumberField source='id' label='catalogs.rolesToPermissions.fields.id' />
+        <ReferenceField source='roleId' label='catalogs.rolesToPermissions.fields.roleId' reference='roles' link='show' />
+        <ReferenceField source='permissionId' label='catalogs.rolesToPermissions.fields.permissionId' reference='permissions' link='show' />
       </Datagrid>
     </List>
   );

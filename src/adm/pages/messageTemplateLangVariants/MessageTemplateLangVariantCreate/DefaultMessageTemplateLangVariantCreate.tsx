@@ -41,7 +41,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.messageTemplateLangVariants.fields.title')}
+                label='catalogs.messageTemplateLangVariants.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -50,7 +50,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 sx={{m: 1}}
                 source='subjectTemplate'
                 required
-                label={translate('catalogs.messageTemplateLangVariants.fields.subjectTemplate')}
+                label='catalogs.messageTemplateLangVariants.fields.subjectTemplate'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -59,7 +59,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 sx={{m: 1}}
                 source='bodyTemplate'
                 required
-                label={translate('catalogs.messageTemplateLangVariants.fields.bodyTemplate')}
+                label='catalogs.messageTemplateLangVariants.fields.bodyTemplate'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -67,16 +67,17 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 source='messageTemplateId'
                 reference='messageTemplates'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')}
+                label='catalogs.messageTemplateLangVariants.fields.messageTemplateId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')}
+                  label='catalogs.messageTemplateLangVariants.fields.messageTemplateId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -85,16 +86,17 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 source='languageId'
                 reference='languages'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.messageTemplateLangVariants.fields.languageId')}
+                label='catalogs.messageTemplateLangVariants.fields.languageId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.messageTemplateLangVariants.fields.languageId')}
+                  label='catalogs.messageTemplateLangVariants.fields.languageId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -104,7 +106,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
                 sx={{m: 1}}
                 source='additionalStyle'
                 defaultValue={null}
-                label={translate('catalogs.messageTemplateLangVariants.fields.additionalStyle')}
+                label='catalogs.messageTemplateLangVariants.fields.additionalStyle'
               />
             </Grid>
           </Grid>

@@ -61,7 +61,7 @@ const DefaultTemplateStyleEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.templateStyles.fields.title')}
+                label='catalogs.templateStyles.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -70,7 +70,7 @@ const DefaultTemplateStyleEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='style'
                 required
-                label={translate('catalogs.templateStyles.fields.style')}
+                label='catalogs.templateStyles.fields.style'
               />
             </Grid>
           </Grid>

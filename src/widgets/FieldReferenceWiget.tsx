@@ -3,7 +3,6 @@ import {
   FC,
 } from 'react';
 import {
-  ChipField,
   ReferenceField,
 } from 'react-admin';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -14,14 +13,12 @@ export interface FieldReferenceWigetProps extends Omit<CardWithIconProps, 'icon'
   title?: string;
   source: string;
   reference: string;
-  representationSource: string;
 }
 
 const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
   {
     source,
     reference,
-    representationSource,
     icon,
     ...rest
   },
@@ -31,9 +28,17 @@ const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
       {...rest}
       icon={icon || ArrowForwardIosIcon}
     >
-      <ReferenceField link='show' reference={reference} source={source}>
-        <ChipField source={representationSource} />
-      </ReferenceField>
+      <ReferenceField
+        link='show'
+        reference={reference}
+        source={source}
+        sx={{
+          fontSize: 25,
+          '& .MuiTypography-root': {
+            fontSize: 25,
+          },
+        }}
+      />
     </CardWithIcon>
   );
 };

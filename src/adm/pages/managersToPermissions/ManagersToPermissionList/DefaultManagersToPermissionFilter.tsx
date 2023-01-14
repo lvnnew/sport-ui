@@ -4,19 +4,16 @@ import {
   TextInput,
   ReferenceInput,
   AutocompleteInput,
-  useTranslate,
 } from 'react-admin';
 import DateInput from '../../../../uiLib/DateInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagersToPermissionFilter: FC<any> = (props) => {
-  const translate = useTranslate();
-
   return (
     <Filter {...props}>
       <TextInput
-        label={translate('catalogs.managersToPermissions.fields.search')}
+        label='catalogs.managersToPermissions.fields.search'
         source='q'
         alwaysOn
         sx={{m: 1}}
@@ -25,32 +22,32 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.managersToPermissions.fields.managerId')}
+        label='catalogs.managersToPermissions.fields.managerId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.managersToPermissions.fields.managerId')}
+          label='catalogs.managersToPermissions.fields.managerId'
           defaultValue={null}
           parse={val => val || null}
-          isRequired
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
       <ReferenceInput
         source='permissionId'
         reference='permissions'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.managersToPermissions.fields.permissionId')}
+        label='catalogs.managersToPermissions.fields.permissionId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.managersToPermissions.fields.permissionId')}
+          label='catalogs.managersToPermissions.fields.permissionId'
           defaultValue={null}
           parse={val => val || null}
-          isRequired
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
       <DateInput
@@ -58,7 +55,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
         sx={{m: 1}}
         source='expiresAt'
         defaultValue={null}
-        label={translate('catalogs.managersToPermissions.fields.expiresAt')}
+        label='catalogs.managersToPermissions.fields.expiresAt'
       />
     </Filter>
   );

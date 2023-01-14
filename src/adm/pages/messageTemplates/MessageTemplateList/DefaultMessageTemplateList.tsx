@@ -10,7 +10,6 @@ import {
   TextField,
   BooleanField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import MessageTemplateFilter from './MessageTemplateFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.messageTemplates.title.plural')}
+      title='catalogs.messageTemplates.title.plural'
       exporter={false}
       filters={<MessageTemplateFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,12 +37,12 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
-        <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
-        <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
-        <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show' />
-        <TextField source='dataExample' label={translate('catalogs.messageTemplates.fields.dataExample')} />
-        <ReferenceField source='templateStyleId' label={translate('catalogs.messageTemplates.fields.templateStyleId')} reference='templateStyles' link='show' />
+        <TextField source='id' label='catalogs.messageTemplates.fields.id' />
+        <TextField source='title' label='catalogs.messageTemplates.fields.title' />
+        <BooleanField source='secretData' label='catalogs.messageTemplates.fields.secretData' />
+        <ReferenceField source='messageTypeId' label='catalogs.messageTemplates.fields.messageTypeId' reference='messageTypes' link='show' />
+        <TextField source='dataExample' label='catalogs.messageTemplates.fields.dataExample' />
+        <ReferenceField source='templateStyleId' label='catalogs.messageTemplates.fields.templateStyleId' reference='templateStyles' link='show' />
       </Datagrid>
     </List>
   );

@@ -39,7 +39,7 @@ const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.messageTypes.fields.id')}
+                label='catalogs.messageTypes.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.messageTypes.fields.title')}
+                label='catalogs.messageTypes.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -57,7 +57,7 @@ const DefaultMessageTypeCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='description'
                 defaultValue={null}
-                label={translate('catalogs.messageTypes.fields.description')}
+                label='catalogs.messageTypes.fields.description'
               />
             </Grid>
           </Grid>

@@ -19,12 +19,12 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.tags.fields.id')} />
+          <NumberField source='id' label='catalogs.tags.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='comment' label={translate('catalogs.tags.fields.comment')} />
+          <TextField source='comment' label='catalogs.tags.fields.comment' />
         </Labeled>
       </Grid>
     </Grid>

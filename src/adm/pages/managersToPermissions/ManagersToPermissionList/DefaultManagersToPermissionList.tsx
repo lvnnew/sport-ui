@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import ManagersToPermissionFilter from './ManagersToPermissionFilter';
@@ -29,11 +28,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.managersToPermissions.title.plural')}
+      title='catalogs.managersToPermissions.title.plural'
       exporter={false}
       filters={<ManagersToPermissionFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -41,10 +38,10 @@ const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.managersToPermissions.fields.id')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managersToPermissions.fields.managerId')} reference='managers' link='show' />
-        <ReferenceField source='permissionId' label={translate('catalogs.managersToPermissions.fields.permissionId')} reference='permissions' link='show' />
-        <DateField source='expiresAt' label={translate('catalogs.managersToPermissions.fields.expiresAt')} />
+        <NumberField source='id' label='catalogs.managersToPermissions.fields.id' />
+        <ReferenceField source='managerId' label='catalogs.managersToPermissions.fields.managerId' reference='managers' link='show' />
+        <ReferenceField source='permissionId' label='catalogs.managersToPermissions.fields.permissionId' reference='permissions' link='show' />
+        <DateField source='expiresAt' label='catalogs.managersToPermissions.fields.expiresAt' />
       </Datagrid>
     </List>
   );

@@ -22,27 +22,27 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.delegations.fields.id')} />
+          <NumberField source='id' label='catalogs.delegations.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='fromId' label={translate('catalogs.delegations.fields.fromId')} reference='managers' link='show' />
+          <ReferenceField source='fromId' label='catalogs.delegations.fields.fromId' reference='managers' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='toId' label={translate('catalogs.delegations.fields.toId')} reference='managers' link='show' />
+          <ReferenceField source='toId' label='catalogs.delegations.fields.toId' reference='managers' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
+          <DateField source='expiresAt' label='catalogs.delegations.fields.expiresAt' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='active' label={translate('catalogs.delegations.fields.active')} />
+          <BooleanField source='active' label='catalogs.delegations.fields.active' />
         </Labeled>
       </Grid>
     </Grid>

@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AggregateTrackingFilter from './AggregateTrackingFilter';
@@ -29,11 +28,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('infoRegistries.aggregateTrackings.title.plural')}
+      title='infoRegistries.aggregateTrackings.title.plural'
       exporter={false}
       filters={<AggregateTrackingFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -41,13 +38,13 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('infoRegistries.aggregateTrackings.fields.id')} />
-        <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show' />
-        <TextField source='entityId' label={translate('infoRegistries.aggregateTrackings.fields.entityId')} />
-        <DateField source='lastAggregatesComputed' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')} showTime />
-        <DateField source='lastAggregatesScheduled' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')} showTime />
-        <DateField source='lastEntityUpdate' label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')} showTime />
-        <NumberField source='aggregateVersion' label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')} />
+        <NumberField source='id' label='infoRegistries.aggregateTrackings.fields.id' />
+        <ReferenceField source='entityTypeId' label='infoRegistries.aggregateTrackings.fields.entityTypeId' reference='entities' link='show' />
+        <TextField source='entityId' label='infoRegistries.aggregateTrackings.fields.entityId' />
+        <DateField source='lastAggregatesComputed' label='infoRegistries.aggregateTrackings.fields.lastAggregatesComputed' showTime />
+        <DateField source='lastAggregatesScheduled' label='infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled' showTime />
+        <DateField source='lastEntityUpdate' label='infoRegistries.aggregateTrackings.fields.lastEntityUpdate' showTime />
+        <NumberField source='aggregateVersion' label='infoRegistries.aggregateTrackings.fields.aggregateVersion' />
       </Datagrid>
     </List>
   );

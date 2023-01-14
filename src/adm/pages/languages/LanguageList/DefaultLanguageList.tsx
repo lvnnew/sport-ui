@@ -8,7 +8,6 @@ import {
   usePermissions,
   BulkDeleteButton,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import LanguageFilter from './LanguageFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -26,11 +25,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultLanguageList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.languages.title.plural')}
+      title='catalogs.languages.title.plural'
       exporter={false}
       filters={<LanguageFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -38,8 +35,8 @@ const DefaultLanguageList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.languages.fields.id')} />
-        <TextField source='title' label={translate('catalogs.languages.fields.title')} />
+        <TextField source='id' label='catalogs.languages.fields.id' />
+        <TextField source='title' label='catalogs.languages.fields.title' />
       </Datagrid>
     </List>
   );

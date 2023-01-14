@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   TextField,
   BooleanField,
-  useTranslate,
 } from 'react-admin';
 import MailingMessageStatusFilter from './MailingMessageStatusFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -27,11 +26,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultMailingMessageStatusList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.mailingMessageStatuses.title.plural')}
+      title='catalogs.mailingMessageStatuses.title.plural'
       exporter={false}
       filters={<MailingMessageStatusFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -39,9 +36,9 @@ const DefaultMailingMessageStatusList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.mailingMessageStatuses.fields.id')} />
-        <TextField source='title' label={translate('catalogs.mailingMessageStatuses.fields.title')} />
-        <BooleanField source='final' label={translate('catalogs.mailingMessageStatuses.fields.final')} />
+        <TextField source='id' label='catalogs.mailingMessageStatuses.fields.id' />
+        <TextField source='title' label='catalogs.mailingMessageStatuses.fields.title' />
+        <BooleanField source='final' label='catalogs.mailingMessageStatuses.fields.final' />
       </Datagrid>
     </List>
   );

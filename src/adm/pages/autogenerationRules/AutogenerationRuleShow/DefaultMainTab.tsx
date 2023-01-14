@@ -20,42 +20,42 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='id' label={translate('catalogs.autogenerationRules.fields.id')} />
+          <TextField source='id' label='catalogs.autogenerationRules.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='title' label={translate('catalogs.autogenerationRules.fields.title')} />
+          <TextField source='title' label='catalogs.autogenerationRules.fields.title' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='version' label={translate('catalogs.autogenerationRules.fields.version')} />
+          <DateField source='version' label='catalogs.autogenerationRules.fields.version' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='originalEntityType' label={translate('catalogs.autogenerationRules.fields.originalEntityType')} />
+          <TextField source='originalEntityType' label='catalogs.autogenerationRules.fields.originalEntityType' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='generatingEntityType' label={translate('catalogs.autogenerationRules.fields.generatingEntityType')} />
+          <TextField source='generatingEntityType' label='catalogs.autogenerationRules.fields.generatingEntityType' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='originalEntityFilter' label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')} />
+          <TextField source='originalEntityFilter' label='catalogs.autogenerationRules.fields.originalEntityFilter' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='generatingEntityConstructionRules' label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')} />
+          <TextField source='generatingEntityConstructionRules' label='catalogs.autogenerationRules.fields.generatingEntityConstructionRules' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='ignoreVersionOnHistory' label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')} />
+          <BooleanField source='ignoreVersionOnHistory' label='catalogs.autogenerationRules.fields.ignoreVersionOnHistory' />
         </Labeled>
       </Grid>
     </Grid>

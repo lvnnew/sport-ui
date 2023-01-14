@@ -40,7 +40,7 @@ const DefaultTenantCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.tenants.fields.title')}
+                label='catalogs.tenants.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -49,7 +49,7 @@ const DefaultTenantCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='utcOffset'
                 required
-                label={translate('catalogs.tenants.fields.utcOffset')}
+                label='catalogs.tenants.fields.utcOffset'
               />
             </Grid>
           </Grid>

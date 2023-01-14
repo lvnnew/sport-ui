@@ -61,7 +61,7 @@ const DefaultAuditLogActionTypeEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.auditLogActionTypes.fields.title')}
+                label='catalogs.auditLogActionTypes.fields.title'
               />
             </Grid>
           </Grid>

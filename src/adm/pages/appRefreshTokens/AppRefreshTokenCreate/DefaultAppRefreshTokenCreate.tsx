@@ -43,7 +43,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='create'
                 required
-                label={translate('catalogs.appRefreshTokens.fields.create')}
+                label='catalogs.appRefreshTokens.fields.create'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -51,16 +51,17 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.appRefreshTokens.fields.userId')}
+                label='catalogs.appRefreshTokens.fields.userId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.appRefreshTokens.fields.userId')}
+                  label='catalogs.appRefreshTokens.fields.userId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -70,7 +71,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='token'
                 required
-                label={translate('catalogs.appRefreshTokens.fields.token')}
+                label='catalogs.appRefreshTokens.fields.token'
               />
             </Grid>
           </Grid>

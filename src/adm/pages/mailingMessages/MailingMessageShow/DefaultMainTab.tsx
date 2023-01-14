@@ -21,87 +21,87 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.mailingMessages.fields.id')} />
+          <NumberField source='id' label='catalogs.mailingMessages.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='mailingCampaignId' label={translate('catalogs.mailingMessages.fields.mailingCampaignId')} reference='mailingCampaigns' link='show' />
+          <ReferenceField source='mailingCampaignId' label='catalogs.mailingMessages.fields.mailingCampaignId' reference='mailingCampaigns' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='templateId' label={translate('catalogs.mailingMessages.fields.templateId')} reference='messageTemplates' link='show' />
+          <ReferenceField source='templateId' label='catalogs.mailingMessages.fields.templateId' reference='messageTemplates' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='languageId' label={translate('catalogs.mailingMessages.fields.languageId')} reference='languages' link='show' />
+          <ReferenceField source='languageId' label='catalogs.mailingMessages.fields.languageId' reference='languages' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='to' label={translate('catalogs.mailingMessages.fields.to')} />
+          <TextField source='to' label='catalogs.mailingMessages.fields.to' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='locals' label={translate('catalogs.mailingMessages.fields.locals')} />
+          <TextField source='locals' label='catalogs.mailingMessages.fields.locals' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='localsHash' label={translate('catalogs.mailingMessages.fields.localsHash')} />
+          <TextField source='localsHash' label='catalogs.mailingMessages.fields.localsHash' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='priority' label={translate('catalogs.mailingMessages.fields.priority')} />
+          <NumberField source='priority' label='catalogs.mailingMessages.fields.priority' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='dateCreated' label={translate('catalogs.mailingMessages.fields.dateCreated')} showTime />
+          <DateField source='dateCreated' label='catalogs.mailingMessages.fields.dateCreated' showTime />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='dateSent' label={translate('catalogs.mailingMessages.fields.dateSent')} showTime />
+          <DateField source='dateSent' label='catalogs.mailingMessages.fields.dateSent' showTime />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='error' label={translate('catalogs.mailingMessages.fields.error')} />
+          <TextField source='error' label='catalogs.mailingMessages.fields.error' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='html' label={translate('catalogs.mailingMessages.fields.html')} />
+          <TextField source='html' label='catalogs.mailingMessages.fields.html' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='text' label={translate('catalogs.mailingMessages.fields.text')} />
+          <TextField source='text' label='catalogs.mailingMessages.fields.text' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='uniqueKey' label={translate('catalogs.mailingMessages.fields.uniqueKey')} />
+          <TextField source='uniqueKey' label='catalogs.mailingMessages.fields.uniqueKey' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='subject' label={translate('catalogs.mailingMessages.fields.subject')} />
+          <TextField source='subject' label='catalogs.mailingMessages.fields.subject' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='mailingMessageStatusId' label={translate('catalogs.mailingMessages.fields.mailingMessageStatusId')} reference='mailingMessageStatuses' link='show' />
+          <ReferenceField source='mailingMessageStatusId' label='catalogs.mailingMessages.fields.mailingMessageStatusId' reference='mailingMessageStatuses' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='messageTemplateLangVariantId' label={translate('catalogs.mailingMessages.fields.messageTemplateLangVariantId')} reference='messageTemplateLangVariants' link='show' />
+          <ReferenceField source='messageTemplateLangVariantId' label='catalogs.mailingMessages.fields.messageTemplateLangVariantId' reference='messageTemplateLangVariants' link='show' />
         </Labeled>
       </Grid>
     </Grid>

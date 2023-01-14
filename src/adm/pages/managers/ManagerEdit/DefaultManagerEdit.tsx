@@ -70,7 +70,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.managers.fields.title')}
+                label='catalogs.managers.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -79,7 +79,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='lastName'
                 required
-                label={translate('catalogs.managers.fields.lastName')}
+                label='catalogs.managers.fields.lastName'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -88,7 +88,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='firstName'
                 required
-                label={translate('catalogs.managers.fields.firstName')}
+                label='catalogs.managers.fields.firstName'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -96,15 +96,16 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 source='languageId'
                 reference='languages'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.managers.fields.languageId')}
+                label='catalogs.managers.fields.languageId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.managers.fields.languageId')}
+                  label='catalogs.managers.fields.languageId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -114,7 +115,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='email'
                 required
-                label={translate('catalogs.managers.fields.email')}
+                label='catalogs.managers.fields.email'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -123,7 +124,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='phone'
                 defaultValue={null}
-                label={translate('catalogs.managers.fields.phone')}
+                label='catalogs.managers.fields.phone'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -135,7 +136,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='telegramLogin'
                 defaultValue={null}
-                label={translate('catalogs.managers.fields.telegramLogin')}
+                label='catalogs.managers.fields.telegramLogin'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -143,15 +144,16 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 source='unitId'
                 reference='units'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.managers.fields.unitId')}
+                label='catalogs.managers.fields.unitId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.managers.fields.unitId')}
+                  label='catalogs.managers.fields.unitId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -161,7 +163,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='headOfUnit'
                 required
-                label={translate('catalogs.managers.fields.headOfUnit')}
+                label='catalogs.managers.fields.headOfUnit'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -170,7 +172,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='active'
                 required
-                label={translate('catalogs.managers.fields.active')}
+                label='catalogs.managers.fields.active'
               />
             </Grid>
             {debug && <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -178,15 +180,16 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 source='tenantId'
                 reference='tenants'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.managers.fields.tenantId')}
+                label='catalogs.managers.fields.tenantId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.managers.fields.tenantId')}
+                  label='catalogs.managers.fields.tenantId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>}

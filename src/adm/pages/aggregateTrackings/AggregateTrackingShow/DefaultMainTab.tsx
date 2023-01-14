@@ -21,37 +21,37 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('infoRegistries.aggregateTrackings.fields.id')} />
+          <NumberField source='id' label='infoRegistries.aggregateTrackings.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show' />
+          <ReferenceField source='entityTypeId' label='infoRegistries.aggregateTrackings.fields.entityTypeId' reference='entities' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='entityId' label={translate('infoRegistries.aggregateTrackings.fields.entityId')} />
+          <TextField source='entityId' label='infoRegistries.aggregateTrackings.fields.entityId' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='lastAggregatesComputed' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')} showTime />
+          <DateField source='lastAggregatesComputed' label='infoRegistries.aggregateTrackings.fields.lastAggregatesComputed' showTime />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='lastAggregatesScheduled' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')} showTime />
+          <DateField source='lastAggregatesScheduled' label='infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled' showTime />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='lastEntityUpdate' label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')} showTime />
+          <DateField source='lastEntityUpdate' label='infoRegistries.aggregateTrackings.fields.lastEntityUpdate' showTime />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='aggregateVersion' label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')} />
+          <NumberField source='aggregateVersion' label='infoRegistries.aggregateTrackings.fields.aggregateVersion' />
         </Labeled>
       </Grid>
     </Grid>

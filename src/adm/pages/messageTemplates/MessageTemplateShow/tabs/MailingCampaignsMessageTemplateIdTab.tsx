@@ -30,13 +30,13 @@ const MailingCampaignsMessageTemplateIdTab: FC<Omit<TabProps, 'children'>> = (pr
         bulkActionButtons={false}
         rowClick='show'
       >
-        <NumberField source='id' label={translate('catalogs.mailingCampaigns.fields.id')} />
-        <TextField source='title' label={translate('catalogs.mailingCampaigns.fields.title')} />
-        <ReferenceField source='mailingTypeId' label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')} reference='mailingTypes' link='show' />
-        <NumberField source='priority' label={translate('catalogs.mailingCampaigns.fields.priority')} />
-        <DateField source='date' label={translate('catalogs.mailingCampaigns.fields.date')} />
-        <ReferenceField source='mailingCampaignStatusId' label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')} reference='mailingCampaignStatuses' link='show' />
-        <ReferenceField source='messageTemplateId' label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')} reference='messageTemplates' link='show' />
+        <NumberField source='id' label='catalogs.mailingCampaigns.fields.id' />
+        <TextField source='title' label='catalogs.mailingCampaigns.fields.title' />
+        <ReferenceField source='mailingTypeId' label='catalogs.mailingCampaigns.fields.mailingTypeId' reference='mailingTypes' link='show' />
+        <NumberField source='priority' label='catalogs.mailingCampaigns.fields.priority' />
+        <DateField source='date' label='catalogs.mailingCampaigns.fields.date' />
+        <ReferenceField source='mailingCampaignStatusId' label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId' reference='mailingCampaignStatuses' link='show' />
+        <ReferenceField source='messageTemplateId' label='catalogs.mailingCampaigns.fields.messageTemplateId' reference='messageTemplates' link='show' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

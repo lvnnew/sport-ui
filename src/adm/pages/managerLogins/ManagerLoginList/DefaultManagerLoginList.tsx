@@ -11,7 +11,6 @@ import {
   TextField,
   BooleanField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import ManagerLoginFilter from './ManagerLoginFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -29,11 +28,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.managerLogins.title.plural')}
+      title='catalogs.managerLogins.title.plural'
       exporter={false}
       filters={<ManagerLoginFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -41,13 +38,13 @@ const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
-        <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />
-        <TextField source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} />
-        <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
-        <BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
-        <BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show' />
+        <NumberField source='id' label='catalogs.managerLogins.fields.id' />
+        <TextField source='login' label='catalogs.managerLogins.fields.login' />
+        <TextField source='passwordHash' label='catalogs.managerLogins.fields.passwordHash' />
+        <BooleanField source='emailVerified' label='catalogs.managerLogins.fields.emailVerified' />
+        <BooleanField source='initialPasswordChanged' label='catalogs.managerLogins.fields.initialPasswordChanged' />
+        <BooleanField source='locked' label='catalogs.managerLogins.fields.locked' />
+        <ReferenceField source='managerId' label='catalogs.managerLogins.fields.managerId' reference='managers' link='show' />
       </Datagrid>
     </List>
   );

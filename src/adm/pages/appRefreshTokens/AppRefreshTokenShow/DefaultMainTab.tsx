@@ -21,22 +21,22 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.appRefreshTokens.fields.id')} />
+          <NumberField source='id' label='catalogs.appRefreshTokens.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='create' label={translate('catalogs.appRefreshTokens.fields.create')} showTime />
+          <DateField source='create' label='catalogs.appRefreshTokens.fields.create' showTime />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='userId' label={translate('catalogs.appRefreshTokens.fields.userId')} reference='users' link='show' />
+          <ReferenceField source='userId' label='catalogs.appRefreshTokens.fields.userId' reference='users' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
+          <TextField source='token' label='catalogs.appRefreshTokens.fields.token' />
         </Labeled>
       </Grid>
     </Grid>

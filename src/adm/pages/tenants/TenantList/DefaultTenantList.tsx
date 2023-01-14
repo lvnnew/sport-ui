@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   NumberField,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import TenantFilter from './TenantFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -27,11 +26,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.tenants.title.plural')}
+      title='catalogs.tenants.title.plural'
       exporter={false}
       filters={<TenantFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -39,9 +36,9 @@ const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.tenants.fields.id')} />
-        <TextField source='title' label={translate('catalogs.tenants.fields.title')} />
-        <NumberField source='utcOffset' label={translate('catalogs.tenants.fields.utcOffset')} />
+        <NumberField source='id' label='catalogs.tenants.fields.id' />
+        <TextField source='title' label='catalogs.tenants.fields.title' />
+        <NumberField source='utcOffset' label='catalogs.tenants.fields.utcOffset' />
       </Datagrid>
     </List>
   );

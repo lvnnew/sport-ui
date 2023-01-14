@@ -20,32 +20,32 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
+          <TextField source='id' label='catalogs.messageTemplates.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
+          <TextField source='title' label='catalogs.messageTemplates.fields.title' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
+          <BooleanField source='secretData' label='catalogs.messageTemplates.fields.secretData' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show' />
+          <ReferenceField source='messageTypeId' label='catalogs.messageTemplates.fields.messageTypeId' reference='messageTypes' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='dataExample' label={translate('catalogs.messageTemplates.fields.dataExample')} />
+          <TextField source='dataExample' label='catalogs.messageTemplates.fields.dataExample' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='templateStyleId' label={translate('catalogs.messageTemplates.fields.templateStyleId')} reference='templateStyles' link='show' />
+          <ReferenceField source='templateStyleId' label='catalogs.messageTemplates.fields.templateStyleId' reference='templateStyles' link='show' />
         </Labeled>
       </Grid>
     </Grid>

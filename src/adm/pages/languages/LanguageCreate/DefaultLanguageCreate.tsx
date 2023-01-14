@@ -39,7 +39,7 @@ const DefaultLanguageCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.languages.fields.id')}
+                label='catalogs.languages.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultLanguageCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.languages.fields.title')}
+                label='catalogs.languages.fields.title'
               />
             </Grid>
           </Grid>

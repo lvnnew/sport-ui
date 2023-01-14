@@ -8,7 +8,6 @@ import {
   usePermissions,
   BulkDeleteButton,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import MessageTypeFilter from './MessageTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -26,11 +25,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultMessageTypeList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.messageTypes.title.plural')}
+      title='catalogs.messageTypes.title.plural'
       exporter={false}
       filters={<MessageTypeFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -38,9 +35,9 @@ const DefaultMessageTypeList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.messageTypes.fields.id')} />
-        <TextField source='title' label={translate('catalogs.messageTypes.fields.title')} />
-        <TextField source='description' label={translate('catalogs.messageTypes.fields.description')} />
+        <TextField source='id' label='catalogs.messageTypes.fields.id' />
+        <TextField source='title' label='catalogs.messageTypes.fields.title' />
+        <TextField source='description' label='catalogs.messageTypes.fields.description' />
       </Datagrid>
     </List>
   );

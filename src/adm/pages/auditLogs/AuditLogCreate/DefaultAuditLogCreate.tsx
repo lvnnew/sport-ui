@@ -47,7 +47,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='date'
                 required
-                label={translate('catalogs.auditLogs.fields.date')}
+                label='catalogs.auditLogs.fields.date'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -56,7 +56,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.auditLogs.fields.title')}
+                label='catalogs.auditLogs.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -65,7 +65,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='success'
                 defaultValue={null}
-                label={translate('catalogs.auditLogs.fields.success')}
+                label='catalogs.auditLogs.fields.success'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -74,7 +74,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='error'
                 defaultValue={null}
-                label={translate('catalogs.auditLogs.fields.error')}
+                label='catalogs.auditLogs.fields.error'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -82,16 +82,17 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='entityTypeId'
                 reference='entities'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.auditLogs.fields.entityTypeId')}
+                label='catalogs.auditLogs.fields.entityTypeId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.auditLogs.fields.entityTypeId')}
+                  label='catalogs.auditLogs.fields.entityTypeId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -101,7 +102,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='entityId'
                 required
-                label={translate('catalogs.auditLogs.fields.entityId')}
+                label='catalogs.auditLogs.fields.entityId'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -109,16 +110,17 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='actionTypeId'
                 reference='auditLogActionTypes'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.auditLogs.fields.actionTypeId')}
+                label='catalogs.auditLogs.fields.actionTypeId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.auditLogs.fields.actionTypeId')}
+                  label='catalogs.auditLogs.fields.actionTypeId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -127,15 +129,16 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.auditLogs.fields.managerId')}
+                label='catalogs.auditLogs.fields.managerId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.auditLogs.fields.managerId')}
+                  label='catalogs.auditLogs.fields.managerId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -144,15 +147,16 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.auditLogs.fields.userId')}
+                label='catalogs.auditLogs.fields.userId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.auditLogs.fields.userId')}
+                  label='catalogs.auditLogs.fields.userId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -162,7 +166,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='foreign'
                 defaultValue={null}
-                label={translate('catalogs.auditLogs.fields.foreign')}
+                label='catalogs.auditLogs.fields.foreign'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -171,7 +175,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='foreignEntityType'
                 defaultValue={null}
-                label={translate('catalogs.auditLogs.fields.foreignEntityType')}
+                label='catalogs.auditLogs.fields.foreignEntityType'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -180,7 +184,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='foreignEntityId'
                 defaultValue={null}
-                label={translate('catalogs.auditLogs.fields.foreignEntityId')}
+                label='catalogs.auditLogs.fields.foreignEntityId'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -189,7 +193,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='actionData'
                 defaultValue={null}
-                label={translate('catalogs.auditLogs.fields.actionData')}
+                label='catalogs.auditLogs.fields.actionData'
               />
             </Grid>
           </Grid>

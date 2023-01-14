@@ -45,20 +45,19 @@ const CardWithIcon: FC<CardWithIconProps> = props => {
   const classes = useStyles(props);
 
   return (
-    <Card className={classes.card} style={{margin: 8}}>
+    <Card className={classes.card} sx={{m: 1, p: 2}}>
       {to ?
         <Link href={to} target={openInNewWindow ? '_blank' : undefined}>
           <HeaderView {...props} />
         </Link> :
         <HeaderView {...props} />}
-      <Box
+      {children && <Box
         sx={{
           textAlign: 'end',
-          padding: 1,
         }}
       >
         {children}
-      </Box>
+      </Box>}
     </Card>
   );
 };
@@ -74,8 +73,6 @@ const HeaderView: FC<CardWithIconProps> = props => {
         display: 'flex',
         justifyContent: 'space-between',
         overflow: 'inherit',
-        padding: 2,
-        paddingBottom: 0,
       }}
     >
       <Box
@@ -85,12 +82,15 @@ const HeaderView: FC<CardWithIconProps> = props => {
       >
         {createElement(icon, {fontSize: 'large'})}
       </Box>
-      <Box className={classes.titleBox} textAlign='right'>
+      <Box
+        className={classes.titleBox}
+        textAlign='right'
+      >
         <Typography color='textSecondary'>
           {title}
         </Typography>
-        {subtitle && <Typography component='h2' variant='h5'>
-          {subtitle}
+        {subtitle && <Typography component='h2' variant='h5' sx={{pt: 2}}>
+          {subtitle} 111
         </Typography>}
       </Box>
     </Box>

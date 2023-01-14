@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   NumberField,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import TagFilter from './TagFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -27,11 +26,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultTagList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.tags.title.plural')}
+      title='catalogs.tags.title.plural'
       exporter={false}
       filters={<TagFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -39,8 +36,8 @@ const DefaultTagList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.tags.fields.id')} />
-        <TextField source='comment' label={translate('catalogs.tags.fields.comment')} />
+        <NumberField source='id' label='catalogs.tags.fields.id' />
+        <TextField source='comment' label='catalogs.tags.fields.comment' />
       </Datagrid>
     </List>
   );

@@ -39,16 +39,17 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                 source='roleId'
                 reference='roles'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.rolesToPermissions.fields.roleId')}
+                label='catalogs.rolesToPermissions.fields.roleId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.rolesToPermissions.fields.roleId')}
+                  label='catalogs.rolesToPermissions.fields.roleId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -57,16 +58,17 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                 source='permissionId'
                 reference='permissions'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.rolesToPermissions.fields.permissionId')}
+                label='catalogs.rolesToPermissions.fields.permissionId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.rolesToPermissions.fields.permissionId')}
+                  label='catalogs.rolesToPermissions.fields.permissionId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>

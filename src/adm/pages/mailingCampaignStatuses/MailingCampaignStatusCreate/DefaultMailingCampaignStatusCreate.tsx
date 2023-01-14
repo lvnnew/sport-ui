@@ -39,7 +39,7 @@ const DefaultMailingCampaignStatusCreate: FC<CreateProps> = (props: CreateProps)
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.mailingCampaignStatuses.fields.id')}
+                label='catalogs.mailingCampaignStatuses.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultMailingCampaignStatusCreate: FC<CreateProps> = (props: CreateProps)
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.mailingCampaignStatuses.fields.title')}
+                label='catalogs.mailingCampaignStatuses.fields.title'
               />
             </Grid>
           </Grid>

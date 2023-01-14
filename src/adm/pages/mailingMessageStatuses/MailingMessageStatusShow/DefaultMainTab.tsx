@@ -19,17 +19,17 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='id' label={translate('catalogs.mailingMessageStatuses.fields.id')} />
+          <TextField source='id' label='catalogs.mailingMessageStatuses.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='title' label={translate('catalogs.mailingMessageStatuses.fields.title')} />
+          <TextField source='title' label='catalogs.mailingMessageStatuses.fields.title' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='final' label={translate('catalogs.mailingMessageStatuses.fields.final')} />
+          <BooleanField source='final' label='catalogs.mailingMessageStatuses.fields.final' />
         </Labeled>
       </Grid>
     </Grid>

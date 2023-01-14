@@ -65,7 +65,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.roles.fields.title')}
+                label='catalogs.roles.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -74,7 +74,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='hasAllPermissions'
                 required
-                label={translate('catalogs.roles.fields.hasAllPermissions')}
+                label='catalogs.roles.fields.hasAllPermissions'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -83,7 +83,7 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='allTenantsAvailable'
                 required
-                label={translate('catalogs.roles.fields.allTenantsAvailable')}
+                label='catalogs.roles.fields.allTenantsAvailable'
               />
             </Grid>
           </Grid>

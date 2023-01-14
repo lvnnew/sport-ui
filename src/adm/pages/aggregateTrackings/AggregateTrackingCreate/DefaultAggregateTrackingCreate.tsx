@@ -45,16 +45,17 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 source='entityTypeId'
                 reference='entities'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
+                label='infoRegistries.aggregateTrackings.fields.entityTypeId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')}
+                  label='infoRegistries.aggregateTrackings.fields.entityTypeId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -64,7 +65,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 sx={{m: 1}}
                 source='entityId'
                 required
-                label={translate('infoRegistries.aggregateTrackings.fields.entityId')}
+                label='infoRegistries.aggregateTrackings.fields.entityId'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -73,7 +74,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 sx={{m: 1}}
                 source='lastAggregatesComputed'
                 required
-                label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')}
+                label='infoRegistries.aggregateTrackings.fields.lastAggregatesComputed'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -82,7 +83,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 sx={{m: 1}}
                 source='lastAggregatesScheduled'
                 defaultValue={null}
-                label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')}
+                label='infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -91,7 +92,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 sx={{m: 1}}
                 source='lastEntityUpdate'
                 required
-                label={translate('infoRegistries.aggregateTrackings.fields.lastEntityUpdate')}
+                label='infoRegistries.aggregateTrackings.fields.lastEntityUpdate'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -100,7 +101,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 sx={{m: 1}}
                 source='aggregateVersion'
                 required
-                label={translate('infoRegistries.aggregateTrackings.fields.aggregateVersion')}
+                label='infoRegistries.aggregateTrackings.fields.aggregateVersion'
               />
             </Grid>
           </Grid>

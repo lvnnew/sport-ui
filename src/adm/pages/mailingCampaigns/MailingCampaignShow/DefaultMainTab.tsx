@@ -21,37 +21,37 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.mailingCampaigns.fields.id')} />
+          <NumberField source='id' label='catalogs.mailingCampaigns.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='title' label={translate('catalogs.mailingCampaigns.fields.title')} />
+          <TextField source='title' label='catalogs.mailingCampaigns.fields.title' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='mailingTypeId' label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')} reference='mailingTypes' link='show' />
+          <ReferenceField source='mailingTypeId' label='catalogs.mailingCampaigns.fields.mailingTypeId' reference='mailingTypes' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='priority' label={translate('catalogs.mailingCampaigns.fields.priority')} />
+          <NumberField source='priority' label='catalogs.mailingCampaigns.fields.priority' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <DateField source='date' label={translate('catalogs.mailingCampaigns.fields.date')} />
+          <DateField source='date' label='catalogs.mailingCampaigns.fields.date' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='mailingCampaignStatusId' label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')} reference='mailingCampaignStatuses' link='show' />
+          <ReferenceField source='mailingCampaignStatusId' label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId' reference='mailingCampaignStatuses' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='messageTemplateId' label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')} reference='messageTemplates' link='show' />
+          <ReferenceField source='messageTemplateId' label='catalogs.mailingCampaigns.fields.messageTemplateId' reference='messageTemplates' link='show' />
         </Labeled>
       </Grid>
     </Grid>

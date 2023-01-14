@@ -30,10 +30,10 @@ const AdmRefreshTokensManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => 
         bulkActionButtons={false}
         rowClick='show'
       >
-        <NumberField source='id' label={translate('catalogs.admRefreshTokens.fields.id')} />
-        <DateField source='create' label={translate('catalogs.admRefreshTokens.fields.create')} showTime />
-        <ReferenceField source='managerId' label={translate('catalogs.admRefreshTokens.fields.managerId')} reference='managers' link='show' />
-        <TextField source='token' label={translate('catalogs.admRefreshTokens.fields.token')} />
+        <NumberField source='id' label='catalogs.admRefreshTokens.fields.id' />
+        <DateField source='create' label='catalogs.admRefreshTokens.fields.create' showTime />
+        <ReferenceField source='managerId' label='catalogs.admRefreshTokens.fields.managerId' reference='managers' link='show' />
+        <TextField source='token' label='catalogs.admRefreshTokens.fields.token' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

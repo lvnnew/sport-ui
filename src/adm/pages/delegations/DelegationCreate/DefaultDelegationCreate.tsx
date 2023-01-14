@@ -44,16 +44,17 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='fromId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.delegations.fields.fromId')}
+                label='catalogs.delegations.fields.fromId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.delegations.fields.fromId')}
+                  label='catalogs.delegations.fields.fromId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -62,16 +63,17 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='toId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.delegations.fields.toId')}
+                label='catalogs.delegations.fields.toId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.delegations.fields.toId')}
+                  label='catalogs.delegations.fields.toId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -81,7 +83,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='expiresAt'
                 defaultValue={null}
-                label={translate('catalogs.delegations.fields.expiresAt')}
+                label='catalogs.delegations.fields.expiresAt'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -90,7 +92,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='active'
                 required
-                label={translate('catalogs.delegations.fields.active')}
+                label='catalogs.delegations.fields.active'
               />
             </Grid>
           </Grid>

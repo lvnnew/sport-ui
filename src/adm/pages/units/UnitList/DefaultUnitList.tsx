@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import UnitFilter from './UnitFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.units.title.plural')}
+      title='catalogs.units.title.plural'
       exporter={false}
       filters={<UnitFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,9 +37,9 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.units.fields.id')} />
-        <TextField source='title' label={translate('catalogs.units.fields.title')} />
-        <ReferenceField source='parentId' label={translate('catalogs.units.fields.parentId')} reference='units' link='show' />
+        <NumberField source='id' label='catalogs.units.fields.id' />
+        <TextField source='title' label='catalogs.units.fields.title' />
+        <ReferenceField source='parentId' label='catalogs.units.fields.parentId' reference='units' link='show' />
       </Datagrid>
     </List>
   );

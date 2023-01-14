@@ -19,22 +19,22 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='id' label={translate('catalogs.roles.fields.id')} />
+          <TextField source='id' label='catalogs.roles.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='title' label={translate('catalogs.roles.fields.title')} />
+          <TextField source='title' label='catalogs.roles.fields.title' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='hasAllPermissions' label={translate('catalogs.roles.fields.hasAllPermissions')} />
+          <BooleanField source='hasAllPermissions' label='catalogs.roles.fields.hasAllPermissions' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='allTenantsAvailable' label={translate('catalogs.roles.fields.allTenantsAvailable')} />
+          <BooleanField source='allTenantsAvailable' label='catalogs.roles.fields.allTenantsAvailable' />
         </Labeled>
       </Grid>
     </Grid>

@@ -65,7 +65,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.users.fields.title')}
+                label='catalogs.users.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -74,7 +74,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='lastname'
                 required
-                label={translate('catalogs.users.fields.lastname')}
+                label='catalogs.users.fields.lastname'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -83,7 +83,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='firstname'
                 required
-                label={translate('catalogs.users.fields.firstname')}
+                label='catalogs.users.fields.firstname'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -92,7 +92,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='email'
                 required
-                label={translate('catalogs.users.fields.email')}
+                label='catalogs.users.fields.email'
               />
             </Grid>
             {debug && <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -100,15 +100,16 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                 source='tenantId'
                 reference='tenants'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.users.fields.tenantId')}
+                label='catalogs.users.fields.tenantId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.users.fields.tenantId')}
+                  label='catalogs.users.fields.tenantId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>}

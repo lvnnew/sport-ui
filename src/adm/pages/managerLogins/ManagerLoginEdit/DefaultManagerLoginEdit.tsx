@@ -68,7 +68,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='login'
                 required
-                label={translate('catalogs.managerLogins.fields.login')}
+                label='catalogs.managerLogins.fields.login'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -77,7 +77,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='passwordHash'
                 required
-                label={translate('catalogs.managerLogins.fields.passwordHash')}
+                label='catalogs.managerLogins.fields.passwordHash'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -86,7 +86,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='emailVerified'
                 required
-                label={translate('catalogs.managerLogins.fields.emailVerified')}
+                label='catalogs.managerLogins.fields.emailVerified'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -95,7 +95,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='initialPasswordChanged'
                 required
-                label={translate('catalogs.managerLogins.fields.initialPasswordChanged')}
+                label='catalogs.managerLogins.fields.initialPasswordChanged'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -104,7 +104,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='locked'
                 required
-                label={translate('catalogs.managerLogins.fields.locked')}
+                label='catalogs.managerLogins.fields.locked'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -112,16 +112,17 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.managerLogins.fields.managerId')}
+                label='catalogs.managerLogins.fields.managerId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.managerLogins.fields.managerId')}
+                  label='catalogs.managerLogins.fields.managerId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>

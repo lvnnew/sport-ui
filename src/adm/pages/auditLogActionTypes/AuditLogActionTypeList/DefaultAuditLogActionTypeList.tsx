@@ -8,7 +8,6 @@ import {
   usePermissions,
   BulkDeleteButton,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import AuditLogActionTypeFilter from './AuditLogActionTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -26,11 +25,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultAuditLogActionTypeList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.auditLogActionTypes.title.plural')}
+      title='catalogs.auditLogActionTypes.title.plural'
       exporter={false}
       filters={<AuditLogActionTypeFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -38,8 +35,8 @@ const DefaultAuditLogActionTypeList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.auditLogActionTypes.fields.id')} />
-        <TextField source='title' label={translate('catalogs.auditLogActionTypes.fields.title')} />
+        <TextField source='id' label='catalogs.auditLogActionTypes.fields.id' />
+        <TextField source='title' label='catalogs.auditLogActionTypes.fields.title' />
       </Datagrid>
     </List>
   );

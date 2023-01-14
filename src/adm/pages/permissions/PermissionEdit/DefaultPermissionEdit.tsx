@@ -61,7 +61,7 @@ const DefaultPermissionEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.permissions.fields.title')}
+                label='catalogs.permissions.fields.title'
               />
             </Grid>
           </Grid>

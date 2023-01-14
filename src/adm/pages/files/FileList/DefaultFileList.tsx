@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   NumberField,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import FileFilter from './FileFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -27,11 +26,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultFileList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.files.title.plural')}
+      title='catalogs.files.title.plural'
       exporter={false}
       filters={<FileFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -39,12 +36,12 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.files.fields.id')} />
-        <TextField source='originalName' label={translate('catalogs.files.fields.originalName')} />
-        <TextField source='url' label={translate('catalogs.files.fields.url')} />
-        <TextField source='mimetype' label={translate('catalogs.files.fields.mimetype')} />
-        <TextField source='s3Key' label={translate('catalogs.files.fields.s3Key')} />
-        <TextField source='eTag' label={translate('catalogs.files.fields.eTag')} />
+        <NumberField source='id' label='catalogs.files.fields.id' />
+        <TextField source='originalName' label='catalogs.files.fields.originalName' />
+        <TextField source='url' label='catalogs.files.fields.url' />
+        <TextField source='mimetype' label='catalogs.files.fields.mimetype' />
+        <TextField source='s3Key' label='catalogs.files.fields.s3Key' />
+        <TextField source='eTag' label='catalogs.files.fields.eTag' />
       </Datagrid>
     </List>
   );

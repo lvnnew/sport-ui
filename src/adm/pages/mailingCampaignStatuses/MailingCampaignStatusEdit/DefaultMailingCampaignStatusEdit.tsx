@@ -61,7 +61,7 @@ const DefaultMailingCampaignStatusEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.mailingCampaignStatuses.fields.title')}
+                label='catalogs.mailingCampaignStatuses.fields.title'
               />
             </Grid>
           </Grid>

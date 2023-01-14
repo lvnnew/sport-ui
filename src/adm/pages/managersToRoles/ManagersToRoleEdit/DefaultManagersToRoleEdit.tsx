@@ -63,16 +63,17 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.managersToRoles.fields.managerId')}
+                label='catalogs.managersToRoles.fields.managerId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.managersToRoles.fields.managerId')}
+                  label='catalogs.managersToRoles.fields.managerId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -81,16 +82,17 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                 source='roleId'
                 reference='roles'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.managersToRoles.fields.roleId')}
+                label='catalogs.managersToRoles.fields.roleId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.managersToRoles.fields.roleId')}
+                  label='catalogs.managersToRoles.fields.roleId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -100,7 +102,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='expiresAt'
                 defaultValue={null}
-                label={translate('catalogs.managersToRoles.fields.expiresAt')}
+                label='catalogs.managersToRoles.fields.expiresAt'
               />
             </Grid>
           </Grid>

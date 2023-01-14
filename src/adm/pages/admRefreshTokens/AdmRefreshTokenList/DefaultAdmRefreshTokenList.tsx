@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AdmRefreshTokenFilter from './AdmRefreshTokenFilter';
@@ -29,11 +28,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.admRefreshTokens.title.plural')}
+      title='catalogs.admRefreshTokens.title.plural'
       exporter={false}
       filters={<AdmRefreshTokenFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -41,10 +38,10 @@ const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.admRefreshTokens.fields.id')} />
-        <DateField source='create' label={translate('catalogs.admRefreshTokens.fields.create')} showTime />
-        <ReferenceField source='managerId' label={translate('catalogs.admRefreshTokens.fields.managerId')} reference='managers' link='show' />
-        <TextField source='token' label={translate('catalogs.admRefreshTokens.fields.token')} />
+        <NumberField source='id' label='catalogs.admRefreshTokens.fields.id' />
+        <DateField source='create' label='catalogs.admRefreshTokens.fields.create' showTime />
+        <ReferenceField source='managerId' label='catalogs.admRefreshTokens.fields.managerId' reference='managers' link='show' />
+        <TextField source='token' label='catalogs.admRefreshTokens.fields.token' />
       </Datagrid>
     </List>
   );

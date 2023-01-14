@@ -42,7 +42,7 @@ const DefaultMailingMessageStatusCreate: FC<CreateProps> = (props: CreateProps) 
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.mailingMessageStatuses.fields.id')}
+                label='catalogs.mailingMessageStatuses.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -51,7 +51,7 @@ const DefaultMailingMessageStatusCreate: FC<CreateProps> = (props: CreateProps) 
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.mailingMessageStatuses.fields.title')}
+                label='catalogs.mailingMessageStatuses.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -60,7 +60,7 @@ const DefaultMailingMessageStatusCreate: FC<CreateProps> = (props: CreateProps) 
                 sx={{m: 1}}
                 source='final'
                 required
-                label={translate('catalogs.mailingMessageStatuses.fields.final')}
+                label='catalogs.mailingMessageStatuses.fields.final'
               />
             </Grid>
           </Grid>

@@ -44,7 +44,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.messageTemplates.fields.id')}
+                label='catalogs.messageTemplates.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -53,7 +53,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.messageTemplates.fields.title')}
+                label='catalogs.messageTemplates.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -62,7 +62,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='secretData'
                 required
-                label={translate('catalogs.messageTemplates.fields.secretData')}
+                label='catalogs.messageTemplates.fields.secretData'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -70,16 +70,17 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='messageTypeId'
                 reference='messageTypes'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.messageTemplates.fields.messageTypeId')}
+                label='catalogs.messageTemplates.fields.messageTypeId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.messageTemplates.fields.messageTypeId')}
+                  label='catalogs.messageTemplates.fields.messageTypeId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -89,7 +90,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='dataExample'
                 defaultValue={null}
-                label={translate('catalogs.messageTemplates.fields.dataExample')}
+                label='catalogs.messageTemplates.fields.dataExample'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -97,15 +98,16 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='templateStyleId'
                 reference='templateStyles'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.messageTemplates.fields.templateStyleId')}
+                label='catalogs.messageTemplates.fields.templateStyleId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.messageTemplates.fields.templateStyleId')}
+                  label='catalogs.messageTemplates.fields.templateStyleId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>

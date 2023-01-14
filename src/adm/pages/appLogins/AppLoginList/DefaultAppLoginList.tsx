@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import AppLoginFilter from './AppLoginFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.appLogins.title.plural')}
+      title='catalogs.appLogins.title.plural'
       exporter={false}
       filters={<AppLoginFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,10 +37,10 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.appLogins.fields.id')} />
-        <TextField source='login' label={translate('catalogs.appLogins.fields.login')} />
-        <TextField source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
-        <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show' />
+        <NumberField source='id' label='catalogs.appLogins.fields.id' />
+        <TextField source='login' label='catalogs.appLogins.fields.login' />
+        <TextField source='passwordHash' label='catalogs.appLogins.fields.passwordHash' />
+        <ReferenceField source='userId' label='catalogs.appLogins.fields.userId' reference='users' link='show' />
       </Datagrid>
     </List>
   );

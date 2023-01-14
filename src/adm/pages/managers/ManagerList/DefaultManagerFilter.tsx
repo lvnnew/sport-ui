@@ -5,18 +5,15 @@ import {
   ReferenceInput,
   AutocompleteInput,
   BooleanInput,
-  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultManagerFilter: FC<any> = (props) => {
-  const translate = useTranslate();
-
   return (
     <Filter {...props}>
       <TextInput
-        label={translate('catalogs.managers.fields.search')}
+        label='catalogs.managers.fields.search'
         source='q'
         alwaysOn
         sx={{m: 1}}
@@ -26,100 +23,103 @@ const DefaultManagerFilter: FC<any> = (props) => {
         sx={{m: 1}}
         source='title'
         defaultValue={null}
-        label={translate('catalogs.managers.fields.title')}
+        label='catalogs.managers.fields.title'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='lastName'
-        required
-        label={translate('catalogs.managers.fields.lastName')}
+        defaultValue={null}
+        label='catalogs.managers.fields.lastName'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='firstName'
-        required
-        label={translate('catalogs.managers.fields.firstName')}
+        defaultValue={null}
+        label='catalogs.managers.fields.firstName'
       />
       <ReferenceInput
         source='languageId'
         reference='languages'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.managers.fields.languageId')}
+        label='catalogs.managers.fields.languageId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.managers.fields.languageId')}
+          label='catalogs.managers.fields.languageId'
           defaultValue={null}
           parse={val => val || null}
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='email'
-        required
-        label={translate('catalogs.managers.fields.email')}
+        defaultValue={null}
+        label='catalogs.managers.fields.email'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='phone'
         defaultValue={null}
-        label={translate('catalogs.managers.fields.phone')}
+        label='catalogs.managers.fields.phone'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='telegramLogin'
         defaultValue={null}
-        label={translate('catalogs.managers.fields.telegramLogin')}
+        label='catalogs.managers.fields.telegramLogin'
       />
       <ReferenceInput
         source='unitId'
         reference='units'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.managers.fields.unitId')}
+        label='catalogs.managers.fields.unitId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.managers.fields.unitId')}
+          label='catalogs.managers.fields.unitId'
           defaultValue={null}
           parse={val => val || null}
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='headOfUnit'
-        required
-        label={translate('catalogs.managers.fields.headOfUnit')}
+        defaultValue={null}
+        label='catalogs.managers.fields.headOfUnit'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='active'
-        required
-        label={translate('catalogs.managers.fields.active')}
+        defaultValue={null}
+        label='catalogs.managers.fields.active'
       />
       <ReferenceInput
         source='tenantId'
         reference='tenants'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.managers.fields.tenantId')}
+        label='catalogs.managers.fields.tenantId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.managers.fields.tenantId')}
+          label='catalogs.managers.fields.tenantId'
           defaultValue={null}
           parse={val => val || null}
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
     </Filter>

@@ -64,7 +64,7 @@ const DefaultMailingMessageStatusEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.mailingMessageStatuses.fields.title')}
+                label='catalogs.mailingMessageStatuses.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -73,7 +73,7 @@ const DefaultMailingMessageStatusEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='final'
                 required
-                label={translate('catalogs.mailingMessageStatuses.fields.final')}
+                label='catalogs.mailingMessageStatuses.fields.final'
               />
             </Grid>
           </Grid>

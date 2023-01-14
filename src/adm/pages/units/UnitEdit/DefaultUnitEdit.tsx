@@ -63,7 +63,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.units.fields.title')}
+                label='catalogs.units.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -71,15 +71,16 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
                 source='parentId'
                 reference='units'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.units.fields.parentId')}
+                label='catalogs.units.fields.parentId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.units.fields.parentId')}
+                  label='catalogs.units.fields.parentId'
                   defaultValue={null}
                   parse={val => val || null}
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>

@@ -30,23 +30,23 @@ const MailingMessagesLanguageIdTab: FC<Omit<TabProps, 'children'>> = (props) => 
         bulkActionButtons={false}
         rowClick='show'
       >
-        <NumberField source='id' label={translate('catalogs.mailingMessages.fields.id')} />
-        <ReferenceField source='mailingCampaignId' label={translate('catalogs.mailingMessages.fields.mailingCampaignId')} reference='mailingCampaigns' link='show' />
-        <ReferenceField source='templateId' label={translate('catalogs.mailingMessages.fields.templateId')} reference='messageTemplates' link='show' />
-        <ReferenceField source='languageId' label={translate('catalogs.mailingMessages.fields.languageId')} reference='languages' link='show' />
-        <TextField source='to' label={translate('catalogs.mailingMessages.fields.to')} />
-        <TextField source='locals' label={translate('catalogs.mailingMessages.fields.locals')} />
-        <TextField source='localsHash' label={translate('catalogs.mailingMessages.fields.localsHash')} />
-        <NumberField source='priority' label={translate('catalogs.mailingMessages.fields.priority')} />
-        <DateField source='dateCreated' label={translate('catalogs.mailingMessages.fields.dateCreated')} showTime />
-        <DateField source='dateSent' label={translate('catalogs.mailingMessages.fields.dateSent')} showTime />
-        <TextField source='error' label={translate('catalogs.mailingMessages.fields.error')} />
-        <TextField source='html' label={translate('catalogs.mailingMessages.fields.html')} />
-        <TextField source='text' label={translate('catalogs.mailingMessages.fields.text')} />
-        <TextField source='uniqueKey' label={translate('catalogs.mailingMessages.fields.uniqueKey')} />
-        <TextField source='subject' label={translate('catalogs.mailingMessages.fields.subject')} />
-        <ReferenceField source='mailingMessageStatusId' label={translate('catalogs.mailingMessages.fields.mailingMessageStatusId')} reference='mailingMessageStatuses' link='show' />
-        <ReferenceField source='messageTemplateLangVariantId' label={translate('catalogs.mailingMessages.fields.messageTemplateLangVariantId')} reference='messageTemplateLangVariants' link='show' />
+        <NumberField source='id' label='catalogs.mailingMessages.fields.id' />
+        <ReferenceField source='mailingCampaignId' label='catalogs.mailingMessages.fields.mailingCampaignId' reference='mailingCampaigns' link='show' />
+        <ReferenceField source='templateId' label='catalogs.mailingMessages.fields.templateId' reference='messageTemplates' link='show' />
+        <ReferenceField source='languageId' label='catalogs.mailingMessages.fields.languageId' reference='languages' link='show' />
+        <TextField source='to' label='catalogs.mailingMessages.fields.to' />
+        <TextField source='locals' label='catalogs.mailingMessages.fields.locals' />
+        <TextField source='localsHash' label='catalogs.mailingMessages.fields.localsHash' />
+        <NumberField source='priority' label='catalogs.mailingMessages.fields.priority' />
+        <DateField source='dateCreated' label='catalogs.mailingMessages.fields.dateCreated' showTime />
+        <DateField source='dateSent' label='catalogs.mailingMessages.fields.dateSent' showTime />
+        <TextField source='error' label='catalogs.mailingMessages.fields.error' />
+        <TextField source='html' label='catalogs.mailingMessages.fields.html' />
+        <TextField source='text' label='catalogs.mailingMessages.fields.text' />
+        <TextField source='uniqueKey' label='catalogs.mailingMessages.fields.uniqueKey' />
+        <TextField source='subject' label='catalogs.mailingMessages.fields.subject' />
+        <ReferenceField source='mailingMessageStatusId' label='catalogs.mailingMessages.fields.mailingMessageStatusId' reference='mailingMessageStatuses' link='show' />
+        <ReferenceField source='messageTemplateLangVariantId' label='catalogs.mailingMessages.fields.messageTemplateLangVariantId' reference='messageTemplateLangVariants' link='show' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

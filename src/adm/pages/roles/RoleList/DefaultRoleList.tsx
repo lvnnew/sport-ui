@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   TextField,
   BooleanField,
-  useTranslate,
 } from 'react-admin';
 import RoleFilter from './RoleFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -27,11 +26,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultRoleList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.roles.title.plural')}
+      title='catalogs.roles.title.plural'
       exporter={false}
       filters={<RoleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -39,10 +36,10 @@ const DefaultRoleList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.roles.fields.id')} />
-        <TextField source='title' label={translate('catalogs.roles.fields.title')} />
-        <BooleanField source='hasAllPermissions' label={translate('catalogs.roles.fields.hasAllPermissions')} />
-        <BooleanField source='allTenantsAvailable' label={translate('catalogs.roles.fields.allTenantsAvailable')} />
+        <TextField source='id' label='catalogs.roles.fields.id' />
+        <TextField source='title' label='catalogs.roles.fields.title' />
+        <BooleanField source='hasAllPermissions' label='catalogs.roles.fields.hasAllPermissions' />
+        <BooleanField source='allTenantsAvailable' label='catalogs.roles.fields.allTenantsAvailable' />
       </Datagrid>
     </List>
   );

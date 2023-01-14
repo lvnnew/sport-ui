@@ -61,7 +61,7 @@ const DefaultEntityEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.entities.fields.title')}
+                label='catalogs.entities.fields.title'
               />
             </Grid>
           </Grid>

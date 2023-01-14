@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   NumberField,
   TextField,
-  useTranslate,
 } from 'react-admin';
 import TemplateStyleFilter from './TemplateStyleFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -27,11 +26,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.templateStyles.title.plural')}
+      title='catalogs.templateStyles.title.plural'
       exporter={false}
       filters={<TemplateStyleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -39,9 +36,9 @@ const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.templateStyles.fields.id')} />
-        <TextField source='title' label={translate('catalogs.templateStyles.fields.title')} />
-        <TextField source='style' label={translate('catalogs.templateStyles.fields.style')} />
+        <NumberField source='id' label='catalogs.templateStyles.fields.id' />
+        <TextField source='title' label='catalogs.templateStyles.fields.title' />
+        <TextField source='style' label='catalogs.templateStyles.fields.style' />
       </Datagrid>
     </List>
   );

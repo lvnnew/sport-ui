@@ -42,7 +42,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.stats.fields.id')}
+                label='catalogs.stats.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -51,7 +51,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='updated'
                 defaultValue={null}
-                label={translate('catalogs.stats.fields.updated')}
+                label='catalogs.stats.fields.updated'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -60,7 +60,7 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
                 sx={{m: 1}}
                 source='helloCount'
                 defaultValue={null}
-                label={translate('catalogs.stats.fields.helloCount')}
+                label='catalogs.stats.fields.helloCount'
               />
             </Grid>
           </Grid>

@@ -10,7 +10,6 @@ import {
   NumberField,
   TextField,
   ReferenceField,
-  useTranslate,
 } from 'react-admin';
 import UserFilter from './UserFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultUserList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.users.title.plural')}
+      title='catalogs.users.title.plural'
       exporter={false}
       filters={<UserFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,12 +37,12 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <NumberField source='id' label={translate('catalogs.users.fields.id')} />
-        <TextField source='title' label={translate('catalogs.users.fields.title')} />
-        <TextField source='lastname' label={translate('catalogs.users.fields.lastname')} />
-        <TextField source='firstname' label={translate('catalogs.users.fields.firstname')} />
-        <TextField source='email' label={translate('catalogs.users.fields.email')} />
-        <ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show' />
+        <NumberField source='id' label='catalogs.users.fields.id' />
+        <TextField source='title' label='catalogs.users.fields.title' />
+        <TextField source='lastname' label='catalogs.users.fields.lastname' />
+        <TextField source='firstname' label='catalogs.users.fields.firstname' />
+        <TextField source='email' label='catalogs.users.fields.email' />
+        <ReferenceField source='tenantId' label='catalogs.users.fields.tenantId' reference='tenants' link='show' />
       </Datagrid>
     </List>
   );

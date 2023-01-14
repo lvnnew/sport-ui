@@ -44,7 +44,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.autogenerationRules.fields.id')}
+                label='catalogs.autogenerationRules.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -53,7 +53,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='title'
                 required
-                label={translate('catalogs.autogenerationRules.fields.title')}
+                label='catalogs.autogenerationRules.fields.title'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -62,7 +62,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='version'
                 defaultValue={null}
-                label={translate('catalogs.autogenerationRules.fields.version')}
+                label='catalogs.autogenerationRules.fields.version'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -71,7 +71,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='originalEntityType'
                 required
-                label={translate('catalogs.autogenerationRules.fields.originalEntityType')}
+                label='catalogs.autogenerationRules.fields.originalEntityType'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -80,7 +80,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='generatingEntityType'
                 required
-                label={translate('catalogs.autogenerationRules.fields.generatingEntityType')}
+                label='catalogs.autogenerationRules.fields.generatingEntityType'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -89,7 +89,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='originalEntityFilter'
                 required
-                label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')}
+                label='catalogs.autogenerationRules.fields.originalEntityFilter'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -98,7 +98,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='generatingEntityConstructionRules'
                 required
-                label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')}
+                label='catalogs.autogenerationRules.fields.generatingEntityConstructionRules'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -107,7 +107,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='ignoreVersionOnHistory'
                 required
-                label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')}
+                label='catalogs.autogenerationRules.fields.ignoreVersionOnHistory'
               />
             </Grid>
           </Grid>

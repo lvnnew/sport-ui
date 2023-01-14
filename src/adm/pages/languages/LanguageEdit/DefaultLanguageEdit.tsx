@@ -61,7 +61,7 @@ const DefaultLanguageEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.languages.fields.title')}
+                label='catalogs.languages.fields.title'
               />
             </Grid>
           </Grid>

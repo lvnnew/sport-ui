@@ -70,7 +70,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 sx={{m: 1}}
                 source='date'
                 required
-                label={translate('catalogs.autogenerationHistoryEntries.fields.date')}
+                label='catalogs.autogenerationHistoryEntries.fields.date'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -79,7 +79,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 sx={{m: 1}}
                 source='originalEntityType'
                 required
-                label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')}
+                label='catalogs.autogenerationHistoryEntries.fields.originalEntityType'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -88,7 +88,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 sx={{m: 1}}
                 source='originalEntityId'
                 required
-                label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')}
+                label='catalogs.autogenerationHistoryEntries.fields.originalEntityId'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -96,16 +96,17 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 source='autogenerationRuleId'
                 reference='autogenerationRules'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
+                label='catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')}
+                  label='catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -115,7 +116,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 sx={{m: 1}}
                 source='version'
                 required
-                label={translate('catalogs.autogenerationHistoryEntries.fields.version')}
+                label='catalogs.autogenerationHistoryEntries.fields.version'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -124,7 +125,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 sx={{m: 1}}
                 source='errorOccurred'
                 required
-                label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')}
+                label='catalogs.autogenerationHistoryEntries.fields.errorOccurred'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -133,7 +134,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 sx={{m: 1}}
                 source='error'
                 defaultValue={null}
-                label={translate('catalogs.autogenerationHistoryEntries.fields.error')}
+                label='catalogs.autogenerationHistoryEntries.fields.error'
               />
             </Grid>
           </Grid>

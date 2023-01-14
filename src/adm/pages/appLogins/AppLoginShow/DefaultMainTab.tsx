@@ -20,22 +20,22 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.appLogins.fields.id')} />
+          <NumberField source='id' label='catalogs.appLogins.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='login' label={translate('catalogs.appLogins.fields.login')} />
+          <TextField source='login' label='catalogs.appLogins.fields.login' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
+          <TextField source='passwordHash' label='catalogs.appLogins.fields.passwordHash' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show' />
+          <ReferenceField source='userId' label='catalogs.appLogins.fields.userId' reference='users' link='show' />
         </Labeled>
       </Grid>
     </Grid>

@@ -61,7 +61,7 @@ const DefaultTagEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='comment'
                 defaultValue={null}
-                label={translate('catalogs.tags.fields.comment')}
+                label='catalogs.tags.fields.comment'
               />
             </Grid>
           </Grid>

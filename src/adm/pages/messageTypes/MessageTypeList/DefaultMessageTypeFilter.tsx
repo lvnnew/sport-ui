@@ -2,18 +2,15 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
-  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultMessageTypeFilter: FC<any> = (props) => {
-  const translate = useTranslate();
-
   return (
     <Filter {...props}>
       <TextInput
-        label={translate('catalogs.messageTypes.fields.search')}
+        label='catalogs.messageTypes.fields.search'
         source='q'
         alwaysOn
         sx={{m: 1}}
@@ -22,15 +19,15 @@ const DefaultMessageTypeFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        required
-        label={translate('catalogs.messageTypes.fields.title')}
+        defaultValue={null}
+        label='catalogs.messageTypes.fields.title'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='description'
         defaultValue={null}
-        label={translate('catalogs.messageTypes.fields.description')}
+        label='catalogs.messageTypes.fields.description'
       />
     </Filter>
   );

@@ -5,19 +5,16 @@ import {
   ReferenceInput,
   AutocompleteInput,
   NumberInput,
-  useTranslate,
 } from 'react-admin';
 import DateInput from '../../../../uiLib/DateInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultMailingCampaignFilter: FC<any> = (props) => {
-  const translate = useTranslate();
-
   return (
     <Filter {...props}>
       <TextInput
-        label={translate('catalogs.mailingCampaigns.fields.search')}
+        label='catalogs.mailingCampaigns.fields.search'
         source='q'
         alwaysOn
         sx={{m: 1}}
@@ -26,68 +23,69 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        required
-        label={translate('catalogs.mailingCampaigns.fields.title')}
+        defaultValue={null}
+        label='catalogs.mailingCampaigns.fields.title'
       />
       <ReferenceInput
         source='mailingTypeId'
         reference='mailingTypes'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')}
+        label='catalogs.mailingCampaigns.fields.mailingTypeId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.mailingCampaigns.fields.mailingTypeId')}
+          label='catalogs.mailingCampaigns.fields.mailingTypeId'
           defaultValue={null}
           parse={val => val || null}
-          isRequired
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
       <NumberInput
         fullWidth
         sx={{m: 1}}
         source='priority'
-        required
-        label={translate('catalogs.mailingCampaigns.fields.priority')}
+        defaultValue={null}
+        label='catalogs.mailingCampaigns.fields.priority'
       />
       <DateInput
         fullWidth
         sx={{m: 1}}
         source='date'
         defaultValue={null}
-        label={translate('catalogs.mailingCampaigns.fields.date')}
+        label='catalogs.mailingCampaigns.fields.date'
       />
       <ReferenceInput
         source='mailingCampaignStatusId'
         reference='mailingCampaignStatuses'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')}
+        label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.mailingCampaigns.fields.mailingCampaignStatusId')}
+          label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
           defaultValue={null}
           parse={val => val || null}
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
       <ReferenceInput
         source='messageTemplateId'
         reference='messageTemplates'
         sort={{field: 'id', order: 'DESC'}}
-        label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')}
+        label='catalogs.mailingCampaigns.fields.messageTemplateId'
       >
         <AutocompleteInput
           fullWidth
           sx={{m: 1}}
           size='small'
-          label={translate('catalogs.mailingCampaigns.fields.messageTemplateId')}
+          label='catalogs.mailingCampaigns.fields.messageTemplateId'
           defaultValue={null}
           parse={val => val || null}
-          isRequired
+          noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
     </Filter>

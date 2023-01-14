@@ -21,37 +21,37 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
+          <NumberField source='id' label='catalogs.managerLogins.fields.id' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />
+          <TextField source='login' label='catalogs.managerLogins.fields.login' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <TextField source='passwordHash' label={translate('catalogs.managerLogins.fields.passwordHash')} />
+          <TextField source='passwordHash' label='catalogs.managerLogins.fields.passwordHash' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
+          <BooleanField source='emailVerified' label='catalogs.managerLogins.fields.emailVerified' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
+          <BooleanField source='initialPasswordChanged' label='catalogs.managerLogins.fields.initialPasswordChanged' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} />
+          <BooleanField source='locked' label='catalogs.managerLogins.fields.locked' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show' />
+          <ReferenceField source='managerId' label='catalogs.managerLogins.fields.managerId' reference='managers' link='show' />
         </Labeled>
       </Grid>
     </Grid>

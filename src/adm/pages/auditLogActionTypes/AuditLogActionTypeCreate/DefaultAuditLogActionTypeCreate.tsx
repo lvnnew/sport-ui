@@ -39,7 +39,7 @@ const DefaultAuditLogActionTypeCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='id'
                 required
-                label={translate('catalogs.auditLogActionTypes.fields.id')}
+                label='catalogs.auditLogActionTypes.fields.id'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -48,7 +48,7 @@ const DefaultAuditLogActionTypeCreate: FC<CreateProps> = (props: CreateProps) =>
                 sx={{m: 1}}
                 source='title'
                 defaultValue={null}
-                label={translate('catalogs.auditLogActionTypes.fields.title')}
+                label='catalogs.auditLogActionTypes.fields.title'
               />
             </Grid>
           </Grid>

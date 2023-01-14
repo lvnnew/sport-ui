@@ -65,7 +65,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='create'
                 required
-                label={translate('catalogs.admRefreshTokens.fields.create')}
+                label='catalogs.admRefreshTokens.fields.create'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
@@ -73,16 +73,17 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
-                label={translate('catalogs.admRefreshTokens.fields.managerId')}
+                label='catalogs.admRefreshTokens.fields.managerId'
               >
                 <AutocompleteInput
                   fullWidth
                   sx={{m: 1}}
                   size='small'
-                  label={translate('catalogs.admRefreshTokens.fields.managerId')}
+                  label='catalogs.admRefreshTokens.fields.managerId'
                   defaultValue={null}
                   parse={val => val || null}
                   isRequired
+                  noOptionsText='ra.message.noOptions'
                 />
               </ReferenceInput>
             </Grid>
@@ -92,7 +93,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 sx={{m: 1}}
                 source='token'
                 required
-                label={translate('catalogs.admRefreshTokens.fields.token')}
+                label='catalogs.admRefreshTokens.fields.token'
               />
             </Grid>
           </Grid>

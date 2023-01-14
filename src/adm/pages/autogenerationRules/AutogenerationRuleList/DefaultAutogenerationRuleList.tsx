@@ -9,7 +9,6 @@ import {
   BulkDeleteButton,
   TextField,
   BooleanField,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationRuleFilter from './AutogenerationRuleFilter';
@@ -28,11 +27,9 @@ const DefaultBulkActionButton = (props: BulkActionProps) => {
 };
 
 const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
-  const translate = useTranslate();
-
   return (
     <List
-      title={translate('catalogs.autogenerationRules.title.plural')}
+      title='catalogs.autogenerationRules.title.plural'
       exporter={false}
       filters={<AutogenerationRuleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -40,14 +37,14 @@ const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
       {...props}
     >
       <Datagrid rowClick='show'>
-        <TextField source='id' label={translate('catalogs.autogenerationRules.fields.id')} />
-        <TextField source='title' label={translate('catalogs.autogenerationRules.fields.title')} />
-        <DateField source='version' label={translate('catalogs.autogenerationRules.fields.version')} />
-        <TextField source='originalEntityType' label={translate('catalogs.autogenerationRules.fields.originalEntityType')} />
-        <TextField source='generatingEntityType' label={translate('catalogs.autogenerationRules.fields.generatingEntityType')} />
-        <TextField source='originalEntityFilter' label={translate('catalogs.autogenerationRules.fields.originalEntityFilter')} />
-        <TextField source='generatingEntityConstructionRules' label={translate('catalogs.autogenerationRules.fields.generatingEntityConstructionRules')} />
-        <BooleanField source='ignoreVersionOnHistory' label={translate('catalogs.autogenerationRules.fields.ignoreVersionOnHistory')} />
+        <TextField source='id' label='catalogs.autogenerationRules.fields.id' />
+        <TextField source='title' label='catalogs.autogenerationRules.fields.title' />
+        <DateField source='version' label='catalogs.autogenerationRules.fields.version' />
+        <TextField source='originalEntityType' label='catalogs.autogenerationRules.fields.originalEntityType' />
+        <TextField source='generatingEntityType' label='catalogs.autogenerationRules.fields.generatingEntityType' />
+        <TextField source='originalEntityFilter' label='catalogs.autogenerationRules.fields.originalEntityFilter' />
+        <TextField source='generatingEntityConstructionRules' label='catalogs.autogenerationRules.fields.generatingEntityConstructionRules' />
+        <BooleanField source='ignoreVersionOnHistory' label='catalogs.autogenerationRules.fields.ignoreVersionOnHistory' />
       </Datagrid>
     </List>
   );

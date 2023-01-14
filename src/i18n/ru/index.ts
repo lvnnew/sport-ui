@@ -6,9 +6,10 @@ import ruReports from './ruReports';
 import ruCatalogs from './ruCatalogs';
 import ruInfoRegistries from './ruInfoRegistries';
 import ruSumRegistries from './ruSumRegistries';
+import {DeepPartial} from 'utility-types';
+import * as R from 'ramda';
 
-const translationMessages: TranslationMessages = {
-  ...ruMessages,
+const translationMessages: DeepPartial<TranslationMessages> = {
   app: {
     documents: 'Документы',
     catalogs: 'Справочники',
@@ -124,26 +125,24 @@ const translationMessages: TranslationMessages = {
     },
   },
   ra: {
-    ...ruMessages.ra,
     action: {
-      ...ruMessages.ra.action,
       remove_all_filters: 'Удалить все фильтры',
       create_item: 'Создать %{item}',
     },
     boolean: {
-      ...ruMessages.ra.boolean,
       null: 'не выбрано',
     },
     saved_queries: {
-      ...ruMessages.ra.saved_queries,
       new_label: 'Сохранить текущие настройки',
     },
     page: {
-      ...ruMessages.ra.page,
       empty: 'Нет элементов.',
       invite: 'Хотите добавить?',
+    },
+    message: {
+      noOptions: 'Нет вариантов',
     },
   },
 };
 
-export default translationMessages;
+export default R.mergeDeepRight(ruMessages, translationMessages) as TranslationMessages;
