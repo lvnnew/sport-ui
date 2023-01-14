@@ -33,7 +33,7 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('infoRegistries.aggregateTrackings.title')}
+      title={translate('infoRegistries.aggregateTrackings.title.plural')}
       exporter={false}
       filters={<AggregateTrackingFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -42,9 +42,7 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
     >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('infoRegistries.aggregateTrackings.fields.id')} />
-        <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show' />
         <TextField source='entityId' label={translate('infoRegistries.aggregateTrackings.fields.entityId')} />
         <DateField source='lastAggregatesComputed' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')} showTime />
         <DateField source='lastAggregatesScheduled' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')} showTime />

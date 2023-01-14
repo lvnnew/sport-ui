@@ -28,6 +28,7 @@ const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
     >
       <Datagrid
         bulkActionButtons={false}
+        rowClick='show'
       >
         <NumberField source='id' label={translate('catalogs.managerLogins.fields.id')} />
         <TextField source='login' label={translate('catalogs.managerLogins.fields.login')} />
@@ -35,9 +36,7 @@ const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
         <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
         <BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
         <BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

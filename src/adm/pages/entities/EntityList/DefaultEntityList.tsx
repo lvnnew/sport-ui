@@ -30,7 +30,7 @@ const DefaultEntityList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.entities.title')}
+      title={translate('catalogs.entities.title.plural')}
       exporter={false}
       filters={<EntityFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

@@ -4,7 +4,10 @@
 
 const enCatalogs = {
   admRefreshTokens: {
-    title: 'Ui refresh tokens',
+    title: {
+      plural: 'Ui refresh tokens',
+      singular: 'Ui refresh token',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -14,7 +17,10 @@ const enCatalogs = {
     },
   },
   appLogins: {
-    title: 'Logins of users',
+    title: {
+      plural: 'Logins of users',
+      singular: 'Login of user',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -24,7 +30,10 @@ const enCatalogs = {
     },
   },
   appRefreshTokens: {
-    title: 'App refresh tokens',
+    title: {
+      plural: 'App refresh tokens',
+      singular: 'App refresh token',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -34,7 +43,10 @@ const enCatalogs = {
     },
   },
   auditLogActionTypes: {
-    title: 'Audit action types',
+    title: {
+      plural: 'Audit action types',
+      singular: 'Audit action type',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -42,7 +54,10 @@ const enCatalogs = {
     },
   },
   auditLogs: {
-    title: 'Audit',
+    title: {
+      plural: 'Audit logs',
+      singular: 'Audit log',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -62,7 +77,10 @@ const enCatalogs = {
     },
   },
   autogenerationHistoryEntries: {
-    title: 'Autogeneration History',
+    title: {
+      plural: 'Autogeneration History',
+      singular: 'Autogeneration History',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -76,7 +94,10 @@ const enCatalogs = {
     },
   },
   autogenerationRules: {
-    title: 'Autogeneration Rules',
+    title: {
+      plural: 'Autogeneration Rules',
+      singular: 'Autogeneration Rule',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -90,7 +111,10 @@ const enCatalogs = {
     },
   },
   delegations: {
-    title: 'Delegations',
+    title: {
+      plural: 'Delegations',
+      singular: 'Delegation',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -101,7 +125,10 @@ const enCatalogs = {
     },
   },
   entities: {
-    title: 'Entities',
+    title: {
+      plural: 'Entities',
+      singular: 'Entity',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -109,7 +136,10 @@ const enCatalogs = {
     },
   },
   files: {
-    title: 'Files',
+    title: {
+      plural: 'Files',
+      singular: 'File',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -121,7 +151,10 @@ const enCatalogs = {
     },
   },
   languages: {
-    title: 'Languages',
+    title: {
+      plural: 'Languages',
+      singular: 'Language',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -129,7 +162,10 @@ const enCatalogs = {
     },
   },
   mailingCampaignStatuses: {
-    title: 'Mailing campaign statuses',
+    title: {
+      plural: 'Mailing campaign statuses',
+      singular: 'Mailing campaign statuse',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -137,7 +173,10 @@ const enCatalogs = {
     },
   },
   mailingCampaigns: {
-    title: 'Mailing campaigns',
+    title: {
+      plural: 'Mailing campaigns',
+      singular: 'Mailing campaign',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -150,7 +189,10 @@ const enCatalogs = {
     },
   },
   mailingMessageStatuses: {
-    title: 'Mailing message statuses',
+    title: {
+      plural: 'Mailing message statuses',
+      singular: 'Mailing message statuse',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -159,7 +201,10 @@ const enCatalogs = {
     },
   },
   mailingMessages: {
-    title: 'Mailing messages',
+    title: {
+      plural: 'Mailing messages',
+      singular: 'Mailing message',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -182,7 +227,10 @@ const enCatalogs = {
     },
   },
   mailingTypes: {
-    title: 'Mailing types',
+    title: {
+      plural: 'Mailing types',
+      singular: 'Mailing type',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -190,7 +238,10 @@ const enCatalogs = {
     },
   },
   managerLogins: {
-    title: 'Manager logins',
+    title: {
+      plural: 'Manager logins',
+      singular: 'Manager login',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -203,7 +254,10 @@ const enCatalogs = {
     },
   },
   managers: {
-    title: 'Managers',
+    title: {
+      plural: 'Managers',
+      singular: 'Manager',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -222,7 +276,10 @@ const enCatalogs = {
     },
   },
   managersToPermissions: {
-    title: 'Managers To Permissions',
+    title: {
+      plural: 'Managers To Permissions',
+      singular: 'Manager To Permission',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -232,7 +289,10 @@ const enCatalogs = {
     },
   },
   managersToRoles: {
-    title: 'Managers To Roles',
+    title: {
+      plural: 'Managers To Roles',
+      singular: 'Manager To Role',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -242,7 +302,10 @@ const enCatalogs = {
     },
   },
   messageTemplateLangVariants: {
-    title: 'Message template lang variant',
+    title: {
+      plural: 'Message template lang variants',
+      singular: 'Message template lang variant',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -255,7 +318,10 @@ const enCatalogs = {
     },
   },
   messageTemplates: {
-    title: 'Message templates',
+    title: {
+      plural: 'Message templates',
+      singular: 'Message template',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -267,7 +333,10 @@ const enCatalogs = {
     },
   },
   messageTypes: {
-    title: 'Message types',
+    title: {
+      plural: 'Message types',
+      singular: 'Message type',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -276,7 +345,10 @@ const enCatalogs = {
     },
   },
   permissions: {
-    title: 'Permissions',
+    title: {
+      plural: 'Permissions',
+      singular: 'Permission',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -284,7 +356,10 @@ const enCatalogs = {
     },
   },
   roles: {
-    title: 'Roles',
+    title: {
+      plural: 'Roles',
+      singular: 'Role',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -294,7 +369,10 @@ const enCatalogs = {
     },
   },
   rolesToPermissions: {
-    title: 'Roles To Permissions',
+    title: {
+      plural: 'Roles To Permissions',
+      singular: 'Role To Permission',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -303,7 +381,10 @@ const enCatalogs = {
     },
   },
   stats: {
-    title: 'Stats',
+    title: {
+      plural: 'Stats',
+      singular: 'Stats',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -312,7 +393,10 @@ const enCatalogs = {
     },
   },
   tags: {
-    title: 'Tags',
+    title: {
+      plural: 'Tags',
+      singular: 'Tag',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -320,7 +404,10 @@ const enCatalogs = {
     },
   },
   templateStyles: {
-    title: 'Template styles',
+    title: {
+      plural: 'Template styles',
+      singular: 'Template style',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -329,7 +416,10 @@ const enCatalogs = {
     },
   },
   tenants: {
-    title: 'Tenants',
+    title: {
+      plural: 'Tenants',
+      singular: 'Tenant',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -338,7 +428,10 @@ const enCatalogs = {
     },
   },
   units: {
-    title: 'Units',
+    title: {
+      plural: 'Units',
+      singular: 'Unit',
+    },
     fields: {
       id: 'Id',
       search: 'Search',
@@ -347,7 +440,10 @@ const enCatalogs = {
     },
   },
   users: {
-    title: 'Users',
+    title: {
+      plural: 'Users',
+      singular: 'User',
+    },
     fields: {
       id: 'Id',
       search: 'Search',

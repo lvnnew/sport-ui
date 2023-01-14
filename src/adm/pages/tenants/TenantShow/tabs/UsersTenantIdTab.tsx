@@ -27,15 +27,14 @@ const UsersTenantIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
     >
       <Datagrid
         bulkActionButtons={false}
+        rowClick='show'
       >
         <NumberField source='id' label={translate('catalogs.users.fields.id')} />
         <TextField source='title' label={translate('catalogs.users.fields.title')} />
         <TextField source='lastname' label={translate('catalogs.users.fields.lastname')} />
         <TextField source='firstname' label={translate('catalogs.users.fields.firstname')} />
         <TextField source='email' label={translate('catalogs.users.fields.email')} />
-        <ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='tenantId' label={translate('catalogs.users.fields.tenantId')} reference='tenants' link='show' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

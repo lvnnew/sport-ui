@@ -32,7 +32,7 @@ const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.rolesToPermissions.title')}
+      title={translate('catalogs.rolesToPermissions.title.plural')}
       exporter={false}
       filters={<RolesToPermissionFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -41,12 +41,8 @@ const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => {
     >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.rolesToPermissions.fields.id')} />
-        <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
-        <ReferenceField source='permissionId' label={translate('catalogs.rolesToPermissions.fields.permissionId')} reference='permissions' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show' />
+        <ReferenceField source='permissionId' label={translate('catalogs.rolesToPermissions.fields.permissionId')} reference='permissions' link='show' />
       </Datagrid>
     </List>
   );

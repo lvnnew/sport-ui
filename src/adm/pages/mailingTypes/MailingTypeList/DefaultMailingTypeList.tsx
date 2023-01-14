@@ -30,7 +30,7 @@ const DefaultMailingTypeList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.mailingTypes.title')}
+      title={translate('catalogs.mailingTypes.title.plural')}
       exporter={false}
       filters={<MailingTypeFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

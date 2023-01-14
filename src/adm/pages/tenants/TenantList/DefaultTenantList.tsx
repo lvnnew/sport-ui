@@ -31,7 +31,7 @@ const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.tenants.title')}
+      title={translate('catalogs.tenants.title.plural')}
       exporter={false}
       filters={<TenantFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

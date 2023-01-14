@@ -12,6 +12,7 @@ import MessageTemplateLangVariantsLanguageIdTab from './tabs/MessageTemplateLang
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
+import CatalogTitle from '../../../../raUiLib/CatalogTitle';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -19,7 +20,7 @@ const DefaultLanguageShow: FC<ShowProps> = (props: ShowProps) => {
   const translate = useTranslate();
 
   return (
-    <Show actions={<DefaultActions />} {...props}>
+    <Show actions={<DefaultActions />} title={<CatalogTitle />} {...props}>
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}

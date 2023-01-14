@@ -32,7 +32,7 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.units.title')}
+      title={translate('catalogs.units.title.plural')}
       exporter={false}
       filters={<UnitFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -42,9 +42,7 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.units.fields.id')} />
         <TextField source='title' label={translate('catalogs.units.fields.title')} />
-        <ReferenceField source='parentId' label={translate('catalogs.units.fields.parentId')} reference='units' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='parentId' label={translate('catalogs.units.fields.parentId')} reference='units' link='show' />
       </Datagrid>
     </List>
   );

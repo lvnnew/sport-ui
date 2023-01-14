@@ -31,7 +31,7 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.files.title')}
+      title={translate('catalogs.files.title.plural')}
       exporter={false}
       filters={<FileFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

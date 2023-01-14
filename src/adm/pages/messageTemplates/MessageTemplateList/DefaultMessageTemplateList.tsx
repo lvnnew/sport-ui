@@ -32,7 +32,7 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.messageTemplates.title')}
+      title={translate('catalogs.messageTemplates.title.plural')}
       exporter={false}
       filters={<MessageTemplateFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -43,13 +43,9 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
         <TextField source='id' label={translate('catalogs.messageTemplates.fields.id')} />
         <TextField source='title' label={translate('catalogs.messageTemplates.fields.title')} />
         <BooleanField source='secretData' label={translate('catalogs.messageTemplates.fields.secretData')} />
-        <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='messageTypeId' label={translate('catalogs.messageTemplates.fields.messageTypeId')} reference='messageTypes' link='show' />
         <TextField source='dataExample' label={translate('catalogs.messageTemplates.fields.dataExample')} />
-        <ReferenceField source='templateStyleId' label={translate('catalogs.messageTemplates.fields.templateStyleId')} reference='templateStyles' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='templateStyleId' label={translate('catalogs.messageTemplates.fields.templateStyleId')} reference='templateStyles' link='show' />
       </Datagrid>
     </List>
   );

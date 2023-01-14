@@ -31,7 +31,7 @@ const DefaultMailingMessageStatusList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.mailingMessageStatuses.title')}
+      title={translate('catalogs.mailingMessageStatuses.title.plural')}
       exporter={false}
       filters={<MailingMessageStatusFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

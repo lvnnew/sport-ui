@@ -30,7 +30,7 @@ const DefaultPermissionList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.permissions.title')}
+      title={translate('catalogs.permissions.title.plural')}
       exporter={false}
       filters={<PermissionFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

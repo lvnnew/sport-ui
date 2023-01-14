@@ -33,7 +33,7 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.managersToRoles.title')}
+      title={translate('catalogs.managersToRoles.title.plural')}
       exporter={false}
       filters={<ManagersToRoleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -42,12 +42,8 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
     >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.managersToRoles.fields.id')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managersToRoles.fields.managerId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
-        <ReferenceField source='roleId' label={translate('catalogs.managersToRoles.fields.roleId')} reference='roles' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='managerId' label={translate('catalogs.managersToRoles.fields.managerId')} reference='managers' link='show' />
+        <ReferenceField source='roleId' label={translate('catalogs.managersToRoles.fields.roleId')} reference='roles' link='show' />
         <DateField source='expiresAt' label={translate('catalogs.managersToRoles.fields.expiresAt')} />
       </Datagrid>
     </List>

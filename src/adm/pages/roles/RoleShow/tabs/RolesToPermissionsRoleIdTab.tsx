@@ -27,14 +27,11 @@ const RolesToPermissionsRoleIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
     >
       <Datagrid
         bulkActionButtons={false}
+        rowClick='show'
       >
         <NumberField source='id' label={translate('catalogs.rolesToPermissions.fields.id')} />
-        <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
-        <ReferenceField source='permissionId' label={translate('catalogs.rolesToPermissions.fields.permissionId')} reference='permissions' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='roleId' label={translate('catalogs.rolesToPermissions.fields.roleId')} reference='roles' link='show' />
+        <ReferenceField source='permissionId' label={translate('catalogs.rolesToPermissions.fields.permissionId')} reference='permissions' link='show' />
         <ShowButton />
       </Datagrid>
     </ReferenceManyField>

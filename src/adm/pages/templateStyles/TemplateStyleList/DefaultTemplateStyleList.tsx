@@ -31,7 +31,7 @@ const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.templateStyles.title')}
+      title={translate('catalogs.templateStyles.title.plural')}
       exporter={false}
       filters={<TemplateStyleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

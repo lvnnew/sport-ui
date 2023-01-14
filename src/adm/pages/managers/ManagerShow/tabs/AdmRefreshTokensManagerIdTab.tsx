@@ -28,12 +28,11 @@ const AdmRefreshTokensManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => 
     >
       <Datagrid
         bulkActionButtons={false}
+        rowClick='show'
       >
         <NumberField source='id' label={translate('catalogs.admRefreshTokens.fields.id')} />
         <DateField source='create' label={translate('catalogs.admRefreshTokens.fields.create')} showTime />
-        <ReferenceField source='managerId' label={translate('catalogs.admRefreshTokens.fields.managerId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='managerId' label={translate('catalogs.admRefreshTokens.fields.managerId')} reference='managers' link='show' />
         <TextField source='token' label={translate('catalogs.admRefreshTokens.fields.token')} />
         <ShowButton />
       </Datagrid>

@@ -32,7 +32,7 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.appLogins.title')}
+      title={translate('catalogs.appLogins.title.plural')}
       exporter={false}
       filters={<AppLoginFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -43,9 +43,7 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
         <NumberField source='id' label={translate('catalogs.appLogins.fields.id')} />
         <TextField source='login' label={translate('catalogs.appLogins.fields.login')} />
         <TextField source='passwordHash' label={translate('catalogs.appLogins.fields.passwordHash')} />
-        <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show' />
       </Datagrid>
     </List>
   );

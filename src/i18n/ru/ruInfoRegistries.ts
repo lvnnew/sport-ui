@@ -4,7 +4,10 @@
 
 const ruInfoRegistries = {
   aggregateTrackings: {
-    title: 'Aggregate Trackings',
+    title: {
+      plural: 'Aggregate Trackings',
+      singular: 'Aggregate Tracking',
+    },
     fields: {
       id: 'Ид',
       entityTypeId: 'Тип сущности',

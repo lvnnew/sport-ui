@@ -32,7 +32,7 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.stats.title')}
+      title={translate('catalogs.stats.title.plural')}
       exporter={false}
       filters={<StatFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

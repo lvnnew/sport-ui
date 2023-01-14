@@ -40,16 +40,12 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='messageTemplateId' label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')} reference='messageTemplates' link='show'>
-            <TextField source='title' />
-          </ReferenceField>
+          <ReferenceField source='messageTemplateId' label={translate('catalogs.messageTemplateLangVariants.fields.messageTemplateId')} reference='messageTemplates' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='languageId' label={translate('catalogs.messageTemplateLangVariants.fields.languageId')} reference='languages' link='show'>
-            <TextField source='title' />
-          </ReferenceField>
+          <ReferenceField source='languageId' label={translate('catalogs.messageTemplateLangVariants.fields.languageId')} reference='languages' link='show' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>

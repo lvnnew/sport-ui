@@ -31,7 +31,7 @@ const DefaultRoleList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.roles.title')}
+      title={translate('catalogs.roles.title.plural')}
       exporter={false}
       filters={<RoleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

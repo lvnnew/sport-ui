@@ -29,14 +29,11 @@ const DelegationsToIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
     >
       <Datagrid
         bulkActionButtons={false}
+        rowClick='show'
       >
         <NumberField source='id' label={translate('catalogs.delegations.fields.id')} />
-        <ReferenceField source='fromId' label={translate('catalogs.delegations.fields.fromId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
-        <ReferenceField source='toId' label={translate('catalogs.delegations.fields.toId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='fromId' label={translate('catalogs.delegations.fields.fromId')} reference='managers' link='show' />
+        <ReferenceField source='toId' label={translate('catalogs.delegations.fields.toId')} reference='managers' link='show' />
         <DateField source='expiresAt' label={translate('catalogs.delegations.fields.expiresAt')} />
         <BooleanField source='active' label={translate('catalogs.delegations.fields.active')} />
         <ShowButton />

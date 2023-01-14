@@ -32,7 +32,7 @@ const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.autogenerationRules.title')}
+      title={translate('catalogs.autogenerationRules.title.plural')}
       exporter={false}
       filters={<AutogenerationRuleFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

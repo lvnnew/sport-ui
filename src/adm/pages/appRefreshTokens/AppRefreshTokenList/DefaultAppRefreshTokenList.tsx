@@ -33,7 +33,7 @@ const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.appRefreshTokens.title')}
+      title={translate('catalogs.appRefreshTokens.title.plural')}
       exporter={false}
       filters={<AppRefreshTokenFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -43,9 +43,7 @@ const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => {
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.appRefreshTokens.fields.id')} />
         <DateField source='create' label={translate('catalogs.appRefreshTokens.fields.create')} showTime />
-        <ReferenceField source='userId' label={translate('catalogs.appRefreshTokens.fields.userId')} reference='users' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='userId' label={translate('catalogs.appRefreshTokens.fields.userId')} reference='users' link='show' />
         <TextField source='token' label={translate('catalogs.appRefreshTokens.fields.token')} />
       </Datagrid>
     </List>

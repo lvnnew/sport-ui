@@ -31,7 +31,7 @@ const DefaultTagList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.tags.title')}
+      title={translate('catalogs.tags.title.plural')}
       exporter={false}
       filters={<TagFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

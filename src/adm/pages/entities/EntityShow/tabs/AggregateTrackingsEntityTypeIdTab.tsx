@@ -28,11 +28,10 @@ const AggregateTrackingsEntityTypeIdTab: FC<Omit<TabProps, 'children'>> = (props
     >
       <Datagrid
         bulkActionButtons={false}
+        rowClick='show'
       >
         <NumberField source='id' label={translate('infoRegistries.aggregateTrackings.fields.id')} />
-        <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='entityTypeId' label={translate('infoRegistries.aggregateTrackings.fields.entityTypeId')} reference='entities' link='show' />
         <TextField source='entityId' label={translate('infoRegistries.aggregateTrackings.fields.entityId')} />
         <DateField source='lastAggregatesComputed' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesComputed')} showTime />
         <DateField source='lastAggregatesScheduled' label={translate('infoRegistries.aggregateTrackings.fields.lastAggregatesScheduled')} showTime />

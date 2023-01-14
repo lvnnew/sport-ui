@@ -33,7 +33,7 @@ const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.managersToPermissions.title')}
+      title={translate('catalogs.managersToPermissions.title.plural')}
       exporter={false}
       filters={<ManagersToPermissionFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -42,12 +42,8 @@ const DefaultManagersToPermissionList: FC<ListProps> = (props: ListProps) => {
     >
       <Datagrid rowClick='show'>
         <NumberField source='id' label={translate('catalogs.managersToPermissions.fields.id')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managersToPermissions.fields.managerId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
-        <ReferenceField source='permissionId' label={translate('catalogs.managersToPermissions.fields.permissionId')} reference='permissions' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='managerId' label={translate('catalogs.managersToPermissions.fields.managerId')} reference='managers' link='show' />
+        <ReferenceField source='permissionId' label={translate('catalogs.managersToPermissions.fields.permissionId')} reference='permissions' link='show' />
         <DateField source='expiresAt' label={translate('catalogs.managersToPermissions.fields.expiresAt')} />
       </Datagrid>
     </List>

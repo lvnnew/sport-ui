@@ -4,7 +4,10 @@
 
 const ruCatalogs = {
   admRefreshTokens: {
-    title: 'Ui refresh tokens',
+    title: {
+      plural: 'Ui refresh tokens',
+      singular: 'Ui refresh token',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -14,7 +17,10 @@ const ruCatalogs = {
     },
   },
   appLogins: {
-    title: 'Логины пользователей',
+    title: {
+      plural: 'Логины пользователей',
+      singular: 'Логин пользователей',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -24,7 +30,10 @@ const ruCatalogs = {
     },
   },
   appRefreshTokens: {
-    title: 'App refresh tokens',
+    title: {
+      plural: 'App refresh tokens',
+      singular: 'App refresh token',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -34,7 +43,10 @@ const ruCatalogs = {
     },
   },
   auditLogActionTypes: {
-    title: 'Типы событий аудита',
+    title: {
+      plural: 'Типы событий аудита',
+      singular: 'Тип события аудита',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -42,7 +54,10 @@ const ruCatalogs = {
     },
   },
   auditLogs: {
-    title: 'Аудит',
+    title: {
+      plural: 'Аудиты',
+      singular: 'Аудит',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -62,7 +77,10 @@ const ruCatalogs = {
     },
   },
   autogenerationHistoryEntries: {
-    title: 'История автогенерации',
+    title: {
+      plural: 'Истории автогенерации',
+      singular: 'История автогенерации',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -76,7 +94,10 @@ const ruCatalogs = {
     },
   },
   autogenerationRules: {
-    title: 'Правила автогенерации',
+    title: {
+      plural: 'Правило автогенерации',
+      singular: 'Правила автогенерации',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -90,7 +111,10 @@ const ruCatalogs = {
     },
   },
   delegations: {
-    title: 'Делегирование',
+    title: {
+      plural: 'Делегирования',
+      singular: 'Делегирование',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -101,7 +125,10 @@ const ruCatalogs = {
     },
   },
   entities: {
-    title: 'Сущности',
+    title: {
+      plural: 'Сущности',
+      singular: 'Сущность',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -109,7 +136,10 @@ const ruCatalogs = {
     },
   },
   files: {
-    title: 'Files',
+    title: {
+      plural: 'Files',
+      singular: 'File',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -121,7 +151,10 @@ const ruCatalogs = {
     },
   },
   languages: {
-    title: 'Languages',
+    title: {
+      plural: 'Languages',
+      singular: 'Language',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -129,7 +162,10 @@ const ruCatalogs = {
     },
   },
   mailingCampaignStatuses: {
-    title: 'Статусы рассылок',
+    title: {
+      plural: 'Статус рассылок',
+      singular: 'Статус рассылок',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -137,7 +173,10 @@ const ruCatalogs = {
     },
   },
   mailingCampaigns: {
-    title: 'Рассылки',
+    title: {
+      plural: 'Рассылки',
+      singular: 'Рассылка',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -150,7 +189,10 @@ const ruCatalogs = {
     },
   },
   mailingMessageStatuses: {
-    title: 'Статусы сообщений массовой рассылки',
+    title: {
+      plural: 'Статусы сообщений массовой рассылки',
+      singular: 'Статус сообщений массовой рассылки',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -159,7 +201,10 @@ const ruCatalogs = {
     },
   },
   mailingMessages: {
-    title: 'Сообщения рассылки',
+    title: {
+      plural: 'Сообщения рассылки',
+      singular: 'Сообщение рассылки',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -182,7 +227,10 @@ const ruCatalogs = {
     },
   },
   mailingTypes: {
-    title: 'Типы рассылок',
+    title: {
+      plural: 'Типы рассылок',
+      singular: 'Тип рассылок',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -190,7 +238,10 @@ const ruCatalogs = {
     },
   },
   managerLogins: {
-    title: 'Логины менеджеров',
+    title: {
+      plural: 'Логины менеджеров',
+      singular: 'Логин менеджера',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -203,7 +254,10 @@ const ruCatalogs = {
     },
   },
   managers: {
-    title: 'Менеджеры',
+    title: {
+      plural: 'Менеджеры',
+      singular: 'Менеджер',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -222,7 +276,10 @@ const ruCatalogs = {
     },
   },
   managersToPermissions: {
-    title: 'Разрешения менеджеров',
+    title: {
+      plural: 'Разрешения менеджеров',
+      singular: 'Разрешение менеджера',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -232,7 +289,10 @@ const ruCatalogs = {
     },
   },
   managersToRoles: {
-    title: 'Роли менеджеров',
+    title: {
+      plural: 'Роли менеджеров',
+      singular: 'Роль менеджера',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -242,7 +302,10 @@ const ruCatalogs = {
     },
   },
   messageTemplateLangVariants: {
-    title: 'Языковой вариант шаблона сообщения',
+    title: {
+      plural: 'Языковые варианты шаблонов сообщений',
+      singular: 'Языковой вариант шаблона сообщения',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -255,7 +318,10 @@ const ruCatalogs = {
     },
   },
   messageTemplates: {
-    title: 'Шаблоны сообщений',
+    title: {
+      plural: 'Шаблоны сообщений',
+      singular: 'Шаблон сообщения',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -267,7 +333,10 @@ const ruCatalogs = {
     },
   },
   messageTypes: {
-    title: 'Типы сообщений',
+    title: {
+      plural: 'Типы сообщений',
+      singular: 'Тип сообщений',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -276,7 +345,10 @@ const ruCatalogs = {
     },
   },
   permissions: {
-    title: 'Разрешения',
+    title: {
+      plural: 'Разрешения',
+      singular: 'Разрешение',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -284,7 +356,10 @@ const ruCatalogs = {
     },
   },
   roles: {
-    title: 'Роли',
+    title: {
+      plural: 'Роли',
+      singular: 'Роль',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -294,7 +369,10 @@ const ruCatalogs = {
     },
   },
   rolesToPermissions: {
-    title: 'Разрешения ролей',
+    title: {
+      plural: 'Разрешения ролей',
+      singular: 'Разрешение роли',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -303,7 +381,10 @@ const ruCatalogs = {
     },
   },
   stats: {
-    title: 'Stats',
+    title: {
+      plural: 'Stats',
+      singular: 'Stats',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -312,7 +393,10 @@ const ruCatalogs = {
     },
   },
   tags: {
-    title: 'Tags',
+    title: {
+      plural: 'Tags',
+      singular: 'Tag',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -320,7 +404,10 @@ const ruCatalogs = {
     },
   },
   templateStyles: {
-    title: 'Стили шаблонов',
+    title: {
+      plural: 'Стили шаблонов',
+      singular: 'Стили шаблона',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -329,7 +416,10 @@ const ruCatalogs = {
     },
   },
   tenants: {
-    title: 'Тенанты',
+    title: {
+      plural: 'Тенанты',
+      singular: 'Тенант',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -338,7 +428,10 @@ const ruCatalogs = {
     },
   },
   units: {
-    title: 'Подразделения',
+    title: {
+      plural: 'Подразделения',
+      singular: 'Подразделение',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',
@@ -347,7 +440,10 @@ const ruCatalogs = {
     },
   },
   users: {
-    title: 'Пользователи',
+    title: {
+      plural: 'Пользователи',
+      singular: 'Пользовател',
+    },
     fields: {
       id: 'Ид',
       search: 'Поиск',

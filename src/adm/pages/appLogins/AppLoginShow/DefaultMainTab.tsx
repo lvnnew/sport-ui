@@ -35,9 +35,7 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
-          <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show'>
-            <TextField source='title' />
-          </ReferenceField>
+          <ReferenceField source='userId' label={translate('catalogs.appLogins.fields.userId')} reference='users' link='show' />
         </Labeled>
       </Grid>
     </Grid>

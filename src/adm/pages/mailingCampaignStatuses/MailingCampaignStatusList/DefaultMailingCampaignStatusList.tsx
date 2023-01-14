@@ -30,7 +30,7 @@ const DefaultMailingCampaignStatusList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.mailingCampaignStatuses.title')}
+      title={translate('catalogs.mailingCampaignStatuses.title.plural')}
       exporter={false}
       filters={<MailingCampaignStatusFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

@@ -34,7 +34,7 @@ const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) 
 
   return (
     <List
-      title={translate('catalogs.autogenerationHistoryEntries.title')}
+      title={translate('catalogs.autogenerationHistoryEntries.title.plural')}
       exporter={false}
       filters={<AutogenerationHistoryEntryFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -46,9 +46,7 @@ const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) 
         <DateField source='date' label={translate('catalogs.autogenerationHistoryEntries.fields.date')} showTime />
         <TextField source='originalEntityType' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityType')} />
         <TextField source='originalEntityId' label={translate('catalogs.autogenerationHistoryEntries.fields.originalEntityId')} />
-        <ReferenceField source='autogenerationRuleId' label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')} reference='autogenerationRules' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='autogenerationRuleId' label={translate('catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId')} reference='autogenerationRules' link='show' />
         <DateField source='version' label={translate('catalogs.autogenerationHistoryEntries.fields.version')} />
         <BooleanField source='errorOccurred' label={translate('catalogs.autogenerationHistoryEntries.fields.errorOccurred')} />
         <TextField source='error' label={translate('catalogs.autogenerationHistoryEntries.fields.error')} />

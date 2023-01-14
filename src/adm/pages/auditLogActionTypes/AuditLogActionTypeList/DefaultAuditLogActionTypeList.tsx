@@ -30,7 +30,7 @@ const DefaultAuditLogActionTypeList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.auditLogActionTypes.title')}
+      title={translate('catalogs.auditLogActionTypes.title.plural')}
       exporter={false}
       filters={<AuditLogActionTypeFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}

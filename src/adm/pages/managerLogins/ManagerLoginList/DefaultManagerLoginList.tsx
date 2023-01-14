@@ -33,7 +33,7 @@ const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
 
   return (
     <List
-      title={translate('catalogs.managerLogins.title')}
+      title={translate('catalogs.managerLogins.title.plural')}
       exporter={false}
       filters={<ManagerLoginFilter />}
       bulkActionButtons={<DefaultBulkActionButton />}
@@ -47,9 +47,7 @@ const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
         <BooleanField source='emailVerified' label={translate('catalogs.managerLogins.fields.emailVerified')} />
         <BooleanField source='initialPasswordChanged' label={translate('catalogs.managerLogins.fields.initialPasswordChanged')} />
         <BooleanField source='locked' label={translate('catalogs.managerLogins.fields.locked')} />
-        <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show'>
-          <TextField source='title' />
-        </ReferenceField>
+        <ReferenceField source='managerId' label={translate('catalogs.managerLogins.fields.managerId')} reference='managers' link='show' />
       </Datagrid>
     </List>
   );
