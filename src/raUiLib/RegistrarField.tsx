@@ -2,12 +2,11 @@ import React, {FC} from 'react';
 import {
   useRecordContext,
   PublicFieldProps,
+  ReferenceField,
 } from 'react-admin';
 import pluralize from 'pluralize';
 
-const stopPropagation = (e: any) => e.stopPropagation();
-
-const RegistrarField: FC<PublicFieldProps> = () => {
+const RegistrarField: FC<PublicFieldProps> = ({label}) => {
   const record = useRecordContext();
 
   if (!record) {
@@ -16,11 +15,14 @@ const RegistrarField: FC<PublicFieldProps> = () => {
 
   return (
     record ?
-      <a
-        href={`/${pluralize(record.registrarTypeId)}/${record.registrarId}/show`}
-        onClick={stopPropagation}
-      >
-        Registrar</a> :
+      (
+        <ReferenceField
+          source='registrarId'
+          label={label}
+          reference={pluralize(record.registrarTypeId)}
+          link='show'
+        />
+      ) :
       null);
 };
 
