@@ -1,7 +1,7 @@
 export const noDigitsRegExp = /^\D*$/gu;
 export const noSpaceRegExp = /^\S*$/gu;
 export const onlyLetters = /^[A-Za-zА-яа-яЁ-ё]+$/u;
-export const onlyLatinAndRussianLetters = /^[a-zа-яё\s]+$/iu;
+export const onlyLatinAndCyrillicLetters = /^[a-zа-яё\s]+$/iu;
 export const onlyLatinLetters = /^[A-Za-z]+$/u;
 export const onlyDigits = /^\d+$/u;
 export const onlyPositiveDigits = /(?<![-.])\b[0-9]+\b(?!\.[0-9])/u;

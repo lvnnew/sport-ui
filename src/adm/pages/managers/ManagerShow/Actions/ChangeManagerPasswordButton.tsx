@@ -71,8 +71,8 @@ const ChangeManagerPasswordButtonForm: FC = () => {
     Yup.object({
       password: Yup.string()
         .matches(passwordRegExp, t('validation.passwordRegExp'))
-        .min(6, `${t('validation.minLength')} 6.`)
-        .max(30, `${t('validation.maxLength')} 30.`)
+        .min(6, t('validation.minLength', {min: 6}))
+        .max(30, t('validation.maxLength', {max: 30}))
         .required()
         .typeError(t('validation.required')),
     }),
