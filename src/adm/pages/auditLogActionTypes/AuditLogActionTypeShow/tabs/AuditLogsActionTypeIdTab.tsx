@@ -11,15 +11,12 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
-  useTranslate,
 } from 'react-admin';
 import DateField from '../../../../../uiLib/DateField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const AuditLogsActionTypeIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
-  const translate = useTranslate();
-
   return (<Tab {...props}>
     <ReferenceManyField
       label={false}

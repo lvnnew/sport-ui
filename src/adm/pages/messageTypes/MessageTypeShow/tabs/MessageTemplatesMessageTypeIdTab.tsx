@@ -10,14 +10,11 @@ import {
   Pagination,
   Datagrid,
   ShowButton,
-  useTranslate,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const MessageTemplatesMessageTypeIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
-  const translate = useTranslate();
-
   return (<Tab {...props}>
     <ReferenceManyField
       label={false}

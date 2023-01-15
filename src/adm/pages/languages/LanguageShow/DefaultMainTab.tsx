@@ -4,7 +4,6 @@ import {
   Tab,
   TabProps,
   TextField,
-  useTranslate,
   Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
@@ -12,8 +11,6 @@ import {Grid} from '@mui/material';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
-  const translate = useTranslate();
-
   return (<Tab {...props}>
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={3} lg={2}>
