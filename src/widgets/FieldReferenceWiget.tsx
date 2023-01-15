@@ -13,6 +13,7 @@ export interface FieldReferenceWigetProps extends Omit<CardWithIconProps, 'icon'
   title?: string;
   source: string;
   reference: string;
+  defaultValue?: string;
 }
 
 const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
@@ -20,6 +21,7 @@ const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
     source,
     reference,
     icon,
+    defaultValue,
     ...rest
   },
 ) => {
@@ -32,6 +34,7 @@ const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
         link='show'
         reference={reference}
         source={source}
+        emptyText={defaultValue}
         sx={{
           fontSize: 25,
           '& .MuiTypography-root': {
