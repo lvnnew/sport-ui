@@ -11,9 +11,9 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      create: 'Create',
-      managerId: 'Manager',
-      token: 'Token',
+      create: 'Создать',
+      managerId: 'Менеджер',
+      token: 'Токен',
     },
   },
   appLogins: {
@@ -24,9 +24,9 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      login: 'Login',
-      passwordHash: 'Password hash',
-      userId: 'User',
+      login: 'Логин',
+      passwordHash: 'Пароль',
+      userId: 'Пользователь',
     },
   },
   appRefreshTokens: {
@@ -37,9 +37,9 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      create: 'Create',
-      userId: 'User',
-      token: 'Token',
+      create: 'Создать',
+      userId: 'Пользователь',
+      token: 'Токен',
     },
   },
   auditLogActionTypes: {
@@ -71,9 +71,9 @@ const ruCatalogs = {
       managerId: 'Менеджер',
       userId: 'Пользователь',
       foreign: 'Внешняя сущность',
-      foreignEntityType: 'Тип внешней сущности ',
+      foreignEntityType: 'Тип внешней сущности',
       foreignEntityId: 'ID внешней сущности',
-      actionData: 'Action data',
+      actionData: 'Данные о действии',
     },
   },
   autogenerationHistoryEntries: {
@@ -118,10 +118,10 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      fromId: 'From',
-      toId: 'To',
-      expiresAt: 'Expires at',
-      active: 'Active',
+      fromId: 'От',
+      toId: 'К',
+      expiresAt: 'Истекает',
+      active: 'Активно',
     },
   },
   entities: {
@@ -158,7 +158,7 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
+      title: 'Название',
     },
   },
   mailingCampaignStatuses: {
@@ -245,12 +245,12 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      login: 'Login',
-      passwordHash: 'Password hash',
-      emailVerified: 'Email verified',
-      initialPasswordChanged: 'Initial password changed',
-      locked: 'Locked',
-      managerId: 'Manager',
+      login: 'Логин',
+      passwordHash: 'Хэш пароля',
+      emailVerified: 'Email подтвержден',
+      initialPasswordChanged: 'Исходный пароль изменен',
+      locked: 'Заблокирован',
+      managerId: 'Менеджеры',
     },
   },
   managers: {
@@ -261,7 +261,7 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
+      title: 'Название',
       lastName: 'Фамилия',
       firstName: 'Имя',
       languageId: 'Язык',
@@ -283,9 +283,9 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      managerId: 'Manager',
-      permissionId: 'Permission',
-      expiresAt: 'Expires at',
+      managerId: 'Менеджер',
+      permissionId: 'Разрешение',
+      expiresAt: 'Истекает',
     },
   },
   managersToRoles: {
@@ -296,9 +296,9 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      managerId: 'Manager',
-      roleId: 'Role',
-      expiresAt: 'Expires at',
+      managerId: 'Менеджер',
+      roleId: 'Роль',
+      expiresAt: 'Истекает',
     },
   },
   messageTemplateLangVariants: {
@@ -352,7 +352,7 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
+      title: 'Название',
     },
   },
   roles: {
@@ -376,8 +376,8 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      roleId: 'Role',
-      permissionId: 'Permission',
+      roleId: 'Роль',
+      permissionId: 'Разрешение',
     },
   },
   stats: {
@@ -423,8 +423,8 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
-      utcOffset: 'Utc offset',
+      title: 'Название',
+      utcOffset: 'Смещение по UTC',
     },
   },
   units: {
@@ -435,8 +435,8 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
-      title: 'Title',
-      parentId: 'Parent',
+      title: 'Название',
+      parentId: 'Родительское подразделение',
     },
   },
   users: {
