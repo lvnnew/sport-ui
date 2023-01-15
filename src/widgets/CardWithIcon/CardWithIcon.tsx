@@ -90,7 +90,7 @@ const HeaderView: FC<CardWithIconProps> = props => {
           {title}
         </Typography>
         {subtitle && <Typography component='h2' variant='h5' sx={{pt: 2}}>
-          {subtitle} 111
+          {subtitle}
         </Typography>}
       </Box>
     </Box>
