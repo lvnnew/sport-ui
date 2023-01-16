@@ -24,7 +24,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAdmRefreshTokensMeta?.count}
-        title={translate('catalogs.admRefreshTokens.title')}
+        title={translate('catalogs.admRefreshTokens.title.plural')}
         to='/admRefreshTokens'
       />
       <NumberWiget
@@ -36,7 +36,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAggregateTrackingsMeta?.count}
-        title={translate('infoRegistries.aggregateTrackings.title')}
+        title={translate('infoRegistries.aggregateTrackings.title.plural')}
         to='/aggregateTrackings'
       />
       <NumberWiget
@@ -48,7 +48,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppLoginsMeta?.count}
-        title={translate('catalogs.appLogins.title')}
+        title={translate('catalogs.appLogins.title.plural')}
         to='/appLogins'
       />
       <NumberWiget
@@ -60,7 +60,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAppRefreshTokensMeta?.count}
-        title={translate('catalogs.appRefreshTokens.title')}
+        title={translate('catalogs.appRefreshTokens.title.plural')}
         to='/appRefreshTokens'
       />
       <NumberWiget
@@ -72,7 +72,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAuditLogActionTypesMeta?.count}
-        title={translate('catalogs.auditLogActionTypes.title')}
+        title={translate('catalogs.auditLogActionTypes.title.plural')}
         to='/auditLogActionTypes'
       />
       <NumberWiget
@@ -84,7 +84,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAuditLogsMeta?.count}
-        title={translate('catalogs.auditLogs.title')}
+        title={translate('catalogs.auditLogs.title.plural')}
         to='/auditLogs'
       />
       <NumberWiget
@@ -96,7 +96,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAutogenerationHistoryEntriesMeta?.count}
-        title={translate('catalogs.autogenerationHistoryEntries.title')}
+        title={translate('catalogs.autogenerationHistoryEntries.title.plural')}
         to='/autogenerationHistoryEntries'
       />
       <NumberWiget
@@ -108,7 +108,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allAutogenerationRulesMeta?.count}
-        title={translate('catalogs.autogenerationRules.title')}
+        title={translate('catalogs.autogenerationRules.title.plural')}
         to='/autogenerationRules'
       />
       <NumberWiget
@@ -120,7 +120,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allDelegationsMeta?.count}
-        title={translate('catalogs.delegations.title')}
+        title={translate('catalogs.delegations.title.plural')}
         to='/delegations'
       />
       <NumberWiget
@@ -132,7 +132,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allEntitiesMeta?.count}
-        title={translate('catalogs.entities.title')}
+        title={translate('catalogs.entities.title.plural')}
         to='/entities'
       />
       <NumberWiget
@@ -144,7 +144,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allFilesMeta?.count}
-        title={translate('catalogs.files.title')}
+        title={translate('catalogs.files.title.plural')}
         to='/files'
       />
       <NumberWiget
@@ -156,7 +156,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allLanguagesMeta?.count}
-        title={translate('catalogs.languages.title')}
+        title={translate('catalogs.languages.title.plural')}
         to='/languages'
       />
       <NumberWiget
@@ -168,7 +168,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMailingCampaignStatusesMeta?.count}
-        title={translate('catalogs.mailingCampaignStatuses.title')}
+        title={translate('catalogs.mailingCampaignStatuses.title.plural')}
         to='/mailingCampaignStatuses'
       />
       <NumberWiget
@@ -180,7 +180,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMailingCampaignsMeta?.count}
-        title={translate('catalogs.mailingCampaigns.title')}
+        title={translate('catalogs.mailingCampaigns.title.plural')}
         to='/mailingCampaigns'
       />
       <NumberWiget
@@ -192,7 +192,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMailingMessageStatusesMeta?.count}
-        title={translate('catalogs.mailingMessageStatuses.title')}
+        title={translate('catalogs.mailingMessageStatuses.title.plural')}
         to='/mailingMessageStatuses'
       />
       <NumberWiget
@@ -204,7 +204,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMailingMessagesMeta?.count}
-        title={translate('catalogs.mailingMessages.title')}
+        title={translate('catalogs.mailingMessages.title.plural')}
         to='/mailingMessages'
       />
       <NumberWiget
@@ -216,7 +216,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMailingTypesMeta?.count}
-        title={translate('catalogs.mailingTypes.title')}
+        title={translate('catalogs.mailingTypes.title.plural')}
         to='/mailingTypes'
       />
       <NumberWiget
@@ -228,7 +228,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagerLoginsMeta?.count}
-        title={translate('catalogs.managerLogins.title')}
+        title={translate('catalogs.managerLogins.title.plural')}
         to='/managerLogins'
       />
       <NumberWiget
@@ -240,7 +240,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersMeta?.count}
-        title={translate('catalogs.managers.title')}
+        title={translate('catalogs.managers.title.plural')}
         to='/managers'
       />
       <NumberWiget
@@ -252,7 +252,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersToPermissionsMeta?.count}
-        title={translate('catalogs.managersToPermissions.title')}
+        title={translate('catalogs.managersToPermissions.title.plural')}
         to='/managersToPermissions'
       />
       <NumberWiget
@@ -264,7 +264,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allManagersToRolesMeta?.count}
-        title={translate('catalogs.managersToRoles.title')}
+        title={translate('catalogs.managersToRoles.title.plural')}
         to='/managersToRoles'
       />
       <NumberWiget
@@ -276,7 +276,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTemplateLangVariantsMeta?.count}
-        title={translate('catalogs.messageTemplateLangVariants.title')}
+        title={translate('catalogs.messageTemplateLangVariants.title.plural')}
         to='/messageTemplateLangVariants'
       />
       <NumberWiget
@@ -288,7 +288,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTemplatesMeta?.count}
-        title={translate('catalogs.messageTemplates.title')}
+        title={translate('catalogs.messageTemplates.title.plural')}
         to='/messageTemplates'
       />
       <NumberWiget
@@ -300,7 +300,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allMessageTypesMeta?.count}
-        title={translate('catalogs.messageTypes.title')}
+        title={translate('catalogs.messageTypes.title.plural')}
         to='/messageTypes'
       />
       <NumberWiget
@@ -312,7 +312,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allPermissionsMeta?.count}
-        title={translate('catalogs.permissions.title')}
+        title={translate('catalogs.permissions.title.plural')}
         to='/permissions'
       />
       <NumberWiget
@@ -324,7 +324,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allRolesMeta?.count}
-        title={translate('catalogs.roles.title')}
+        title={translate('catalogs.roles.title.plural')}
         to='/roles'
       />
       <NumberWiget
@@ -336,7 +336,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allRolesToPermissionsMeta?.count}
-        title={translate('catalogs.rolesToPermissions.title')}
+        title={translate('catalogs.rolesToPermissions.title.plural')}
         to='/rolesToPermissions'
       />
       <NumberWiget
@@ -348,7 +348,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allStatsMeta?.count}
-        title={translate('catalogs.stats.title')}
+        title={translate('catalogs.stats.title.plural')}
         to='/stats'
       />
       <NumberWiget
@@ -360,7 +360,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allTagsMeta?.count}
-        title={translate('catalogs.tags.title')}
+        title={translate('catalogs.tags.title.plural')}
         to='/tags'
       />
       <NumberWiget
@@ -372,7 +372,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allTemplateStylesMeta?.count}
-        title={translate('catalogs.templateStyles.title')}
+        title={translate('catalogs.templateStyles.title.plural')}
         to='/templateStyles'
       />
       <NumberWiget
@@ -384,7 +384,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allTenantsMeta?.count}
-        title={translate('catalogs.tenants.title')}
+        title={translate('catalogs.tenants.title.plural')}
         to='/tenants'
       />
       <NumberWiget
@@ -396,7 +396,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allUnitsMeta?.count}
-        title={translate('catalogs.units.title')}
+        title={translate('catalogs.units.title.plural')}
         to='/units'
       />
       <NumberWiget
@@ -408,7 +408,7 @@ const ResourcesPage: FC = () => {
           }
         `}
         resultToValue={result => result?._allUsersMeta?.count}
-        title={translate('catalogs.users.title')}
+        title={translate('catalogs.users.title.plural')}
         to='/users'
       />
     </Grid>
