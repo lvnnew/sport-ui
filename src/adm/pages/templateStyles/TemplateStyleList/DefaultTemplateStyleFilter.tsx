@@ -19,14 +19,12 @@ const DefaultTemplateStyleFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.templateStyles.fields.title'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='style'
-        defaultValue={null}
         label='catalogs.templateStyles.fields.style'
       />
     </Filter>

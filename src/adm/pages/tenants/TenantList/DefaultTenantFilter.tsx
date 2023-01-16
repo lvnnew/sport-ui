@@ -27,7 +27,6 @@ const DefaultTenantFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='utcOffset'
-        defaultValue={null}
         label='catalogs.tenants.fields.utcOffset'
       />
     </Filter>

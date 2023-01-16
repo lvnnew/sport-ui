@@ -22,14 +22,12 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.messageTemplates.fields.title'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='secretData'
-        defaultValue={null}
         label='catalogs.messageTemplates.fields.secretData'
       />
       <ReferenceInput

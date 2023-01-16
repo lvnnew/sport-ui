@@ -23,14 +23,12 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='date'
-        defaultValue={null}
         label='catalogs.auditLogs.fields.date'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.auditLogs.fields.title'
       />
       <BooleanInput
@@ -67,7 +65,6 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='entityId'
-        defaultValue={null}
         label='catalogs.auditLogs.fields.entityId'
       />
       <ReferenceInput

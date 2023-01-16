@@ -24,21 +24,18 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='date'
-        defaultValue={null}
         label='catalogs.autogenerationHistoryEntries.fields.date'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='originalEntityType'
-        defaultValue={null}
         label='catalogs.autogenerationHistoryEntries.fields.originalEntityType'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='originalEntityId'
-        defaultValue={null}
         label='catalogs.autogenerationHistoryEntries.fields.originalEntityId'
       />
       <ReferenceInput
@@ -61,14 +58,12 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='version'
-        defaultValue={null}
         label='catalogs.autogenerationHistoryEntries.fields.version'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='errorOccurred'
-        defaultValue={null}
         label='catalogs.autogenerationHistoryEntries.fields.errorOccurred'
       />
       <TextInput

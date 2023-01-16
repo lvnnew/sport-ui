@@ -21,14 +21,12 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='login'
-        defaultValue={null}
         label='catalogs.appLogins.fields.login'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='passwordHash'
-        defaultValue={null}
         label='catalogs.appLogins.fields.passwordHash'
       />
       <ReferenceInput

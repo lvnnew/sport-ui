@@ -28,21 +28,18 @@ const DefaultUserFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='lastname'
-        defaultValue={null}
         label='catalogs.users.fields.lastname'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='firstname'
-        defaultValue={null}
         label='catalogs.users.fields.firstname'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='email'
-        defaultValue={null}
         label='catalogs.users.fields.email'
       />
       <ReferenceInput

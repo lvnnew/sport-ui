@@ -62,7 +62,6 @@ const DefaultDelegationFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='active'
-        defaultValue={null}
         label='catalogs.delegations.fields.active'
       />
     </Filter>

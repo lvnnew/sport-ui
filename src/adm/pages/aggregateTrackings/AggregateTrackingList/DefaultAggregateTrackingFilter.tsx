@@ -33,14 +33,12 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='entityId'
-        defaultValue={null}
         label='infoRegistries.aggregateTrackings.fields.entityId'
       />
       <DateTimeInput
         fullWidth
         sx={{m: 1}}
         source='lastAggregatesComputed'
-        defaultValue={null}
         label='infoRegistries.aggregateTrackings.fields.lastAggregatesComputed'
       />
       <DateTimeInput
@@ -54,14 +52,12 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='lastEntityUpdate'
-        defaultValue={null}
         label='infoRegistries.aggregateTrackings.fields.lastEntityUpdate'
       />
       <NumberInput
         fullWidth
         sx={{m: 1}}
         source='aggregateVersion'
-        defaultValue={null}
         label='infoRegistries.aggregateTrackings.fields.aggregateVersion'
       />
     </Filter>

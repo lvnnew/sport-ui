@@ -21,7 +21,6 @@ const DefaultUnitFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.units.fields.title'
       />
       <ReferenceInput

@@ -71,35 +71,30 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='to'
-        defaultValue={null}
         label='catalogs.mailingMessages.fields.to'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='locals'
-        defaultValue={null}
         label='catalogs.mailingMessages.fields.locals'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='localsHash'
-        defaultValue={null}
         label='catalogs.mailingMessages.fields.localsHash'
       />
       <NumberInput
         fullWidth
         sx={{m: 1}}
         source='priority'
-        defaultValue={null}
         label='catalogs.mailingMessages.fields.priority'
       />
       <DateTimeInput
         fullWidth
         sx={{m: 1}}
         source='dateCreated'
-        defaultValue={null}
         label='catalogs.mailingMessages.fields.dateCreated'
       />
       <DateTimeInput

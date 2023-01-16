@@ -22,7 +22,6 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='create'
-        defaultValue={null}
         label='catalogs.admRefreshTokens.fields.create'
       />
       <ReferenceInput
@@ -45,7 +44,6 @@ const DefaultAdmRefreshTokenFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='token'
-        defaultValue={null}
         label='catalogs.admRefreshTokens.fields.token'
       />
     </Filter>

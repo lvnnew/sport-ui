@@ -23,7 +23,6 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.mailingCampaigns.fields.title'
       />
       <ReferenceInput
@@ -46,7 +45,6 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='priority'
-        defaultValue={null}
         label='catalogs.mailingCampaigns.fields.priority'
       />
       <DateInput

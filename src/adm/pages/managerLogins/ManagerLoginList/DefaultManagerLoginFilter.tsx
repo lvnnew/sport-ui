@@ -22,35 +22,30 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='login'
-        defaultValue={null}
         label='catalogs.managerLogins.fields.login'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='passwordHash'
-        defaultValue={null}
         label='catalogs.managerLogins.fields.passwordHash'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='emailVerified'
-        defaultValue={null}
         label='catalogs.managerLogins.fields.emailVerified'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='initialPasswordChanged'
-        defaultValue={null}
         label='catalogs.managerLogins.fields.initialPasswordChanged'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='locked'
-        defaultValue={null}
         label='catalogs.managerLogins.fields.locked'
       />
       <ReferenceInput

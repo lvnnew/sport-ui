@@ -44,8 +44,8 @@ const OpenRegistries: FC<OpenRegistriesProps> = ({document, registries}) => {
               >
                 <MenuItem>
                   {r.type === 'sumRegistry' ?
-                    t(`sumRegistries.${r.name}.title`) :
-                    t(`infoRegistries.${r.name}.title`)}
+                    t(`sumRegistries.${r.name}.title.plural`) :
+                    t(`infoRegistries.${r.name}.title.plural`)}
                 </MenuItem>
               </Link>
             ))}

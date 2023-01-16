@@ -19,7 +19,6 @@ const DefaultMailingCampaignStatusFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.mailingCampaignStatuses.fields.title'
       />
     </Filter>

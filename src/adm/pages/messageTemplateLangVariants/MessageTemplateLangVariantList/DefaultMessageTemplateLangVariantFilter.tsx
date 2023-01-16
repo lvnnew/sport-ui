@@ -28,14 +28,12 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='subjectTemplate'
-        defaultValue={null}
         label='catalogs.messageTemplateLangVariants.fields.subjectTemplate'
       />
       <TextInput
         fullWidth
         sx={{m: 1}}
         source='bodyTemplate'
-        defaultValue={null}
         label='catalogs.messageTemplateLangVariants.fields.bodyTemplate'
       />
       <ReferenceInput

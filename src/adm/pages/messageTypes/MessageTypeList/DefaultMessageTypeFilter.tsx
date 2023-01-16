@@ -19,7 +19,6 @@ const DefaultMessageTypeFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='title'
-        defaultValue={null}
         label='catalogs.messageTypes.fields.title'
       />
       <TextInput

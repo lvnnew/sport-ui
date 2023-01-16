@@ -27,7 +27,6 @@ const DefaultMailingMessageStatusFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='final'
-        defaultValue={null}
         label='catalogs.mailingMessageStatuses.fields.final'
       />
     </Filter>

@@ -27,14 +27,12 @@ const DefaultRoleFilter: FC<any> = (props) => {
         fullWidth
         sx={{m: 1}}
         source='hasAllPermissions'
-        defaultValue={null}
         label='catalogs.roles.fields.hasAllPermissions'
       />
       <BooleanInput
         fullWidth
         sx={{m: 1}}
         source='allTenantsAvailable'
-        defaultValue={null}
         label='catalogs.roles.fields.allTenantsAvailable'
       />
     </Filter>
