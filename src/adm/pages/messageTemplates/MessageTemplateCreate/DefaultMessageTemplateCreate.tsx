@@ -61,7 +61,6 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='secretData'
-                required
                 label='catalogs.messageTemplates.fields.secretData'
               />
             </Grid>

@@ -113,7 +113,6 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
-                required
                 label='catalogs.delegations.fields.active'
               />
             </Grid>

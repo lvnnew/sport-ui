@@ -140,7 +140,6 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='headOfUnit'
-                required
                 label='catalogs.managers.fields.headOfUnit'
               />
             </Grid>
@@ -149,7 +148,6 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
-                required
                 label='catalogs.managers.fields.active'
               />
             </Grid>

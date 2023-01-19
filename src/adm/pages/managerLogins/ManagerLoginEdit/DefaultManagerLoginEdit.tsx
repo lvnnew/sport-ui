@@ -85,7 +85,6 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='emailVerified'
-                required
                 label='catalogs.managerLogins.fields.emailVerified'
               />
             </Grid>
@@ -94,7 +93,6 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='initialPasswordChanged'
-                required
                 label='catalogs.managerLogins.fields.initialPasswordChanged'
               />
             </Grid>
@@ -103,7 +101,6 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='locked'
-                required
                 label='catalogs.managerLogins.fields.locked'
               />
             </Grid>

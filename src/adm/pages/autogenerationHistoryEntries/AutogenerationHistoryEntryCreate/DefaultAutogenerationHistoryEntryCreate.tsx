@@ -102,7 +102,6 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='errorOccurred'
-                required
                 label='catalogs.autogenerationHistoryEntries.fields.errorOccurred'
               />
             </Grid>

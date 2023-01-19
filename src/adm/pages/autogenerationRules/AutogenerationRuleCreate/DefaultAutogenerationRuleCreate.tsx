@@ -106,7 +106,6 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='ignoreVersionOnHistory'
-                required
                 label='catalogs.autogenerationRules.fields.ignoreVersionOnHistory'
               />
             </Grid>

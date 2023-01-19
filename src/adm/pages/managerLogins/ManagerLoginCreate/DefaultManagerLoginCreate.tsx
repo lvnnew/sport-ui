@@ -63,7 +63,6 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='emailVerified'
-                required
                 label='catalogs.managerLogins.fields.emailVerified'
               />
             </Grid>
@@ -72,7 +71,6 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='initialPasswordChanged'
-                required
                 label='catalogs.managerLogins.fields.initialPasswordChanged'
               />
             </Grid>
@@ -81,7 +79,6 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='locked'
-                required
                 label='catalogs.managerLogins.fields.locked'
               />
             </Grid>

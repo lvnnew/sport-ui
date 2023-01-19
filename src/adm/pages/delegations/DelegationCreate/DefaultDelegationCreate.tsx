@@ -91,7 +91,6 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
-                required
                 label='catalogs.delegations.fields.active'
               />
             </Grid>

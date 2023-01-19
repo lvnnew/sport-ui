@@ -162,7 +162,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='headOfUnit'
-                required
                 label='catalogs.managers.fields.headOfUnit'
               />
             </Grid>
@@ -171,7 +170,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='active'
-                required
                 label='catalogs.managers.fields.active'
               />
             </Grid>

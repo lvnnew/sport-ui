@@ -124,7 +124,6 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='errorOccurred'
-                required
                 label='catalogs.autogenerationHistoryEntries.fields.errorOccurred'
               />
             </Grid>

@@ -73,7 +73,6 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='hasAllPermissions'
-                required
                 label='catalogs.roles.fields.hasAllPermissions'
               />
             </Grid>
@@ -82,7 +81,6 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='allTenantsAvailable'
-                required
                 label='catalogs.roles.fields.allTenantsAvailable'
               />
             </Grid>

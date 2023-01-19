@@ -74,7 +74,6 @@ const DefaultMessageTemplateEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='secretData'
-                required
                 label='catalogs.messageTemplates.fields.secretData'
               />
             </Grid>
