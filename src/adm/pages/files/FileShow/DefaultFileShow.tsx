@@ -22,7 +22,7 @@ const DefaultFileShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <ManagersPhotoIdTab label={translate('catalogs.managers.title')} path='managers-photoId' />
+        <ManagersPhotoIdTab label={translate('catalogs.managers.title.plural')} path='managers-photoId' />
       </TabbedShowLayout>
     </Show>
   );

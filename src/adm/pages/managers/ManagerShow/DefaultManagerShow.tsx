@@ -28,13 +28,13 @@ const DefaultManagerShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <AdmRefreshTokensManagerIdTab label={translate('catalogs.admRefreshTokens.title')} path='admRefreshTokens-managerId' />
-        <AuditLogsManagerIdTab label={translate('catalogs.auditLogs.title')} path='auditLogs-managerId' />
-        <DelegationsFromIdTab label={translate('catalogs.delegations.title')} path='delegations-fromId' />
-        <DelegationsToIdTab label={translate('catalogs.delegations.title')} path='delegations-toId' />
-        <ManagerLoginsManagerIdTab label={translate('catalogs.managerLogins.title')} path='managerLogins-managerId' />
-        <ManagersToPermissionsManagerIdTab label={translate('catalogs.managersToPermissions.title')} path='managersToPermissions-managerId' />
-        <ManagersToRolesManagerIdTab label={translate('catalogs.managersToRoles.title')} path='managersToRoles-managerId' />
+        <AdmRefreshTokensManagerIdTab label={translate('catalogs.admRefreshTokens.title.plural')} path='admRefreshTokens-managerId' />
+        <AuditLogsManagerIdTab label={translate('catalogs.auditLogs.title.plural')} path='auditLogs-managerId' />
+        <DelegationsFromIdTab label={translate('catalogs.delegations.title.plural')} path='delegations-fromId' />
+        <DelegationsToIdTab label={translate('catalogs.delegations.title.plural')} path='delegations-toId' />
+        <ManagerLoginsManagerIdTab label={translate('catalogs.managerLogins.title.plural')} path='managerLogins-managerId' />
+        <ManagersToPermissionsManagerIdTab label={translate('catalogs.managersToPermissions.title.plural')} path='managersToPermissions-managerId' />
+        <ManagersToRolesManagerIdTab label={translate('catalogs.managersToRoles.title.plural')} path='managersToRoles-managerId' />
       </TabbedShowLayout>
     </Show>
   );

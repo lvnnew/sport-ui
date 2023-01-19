@@ -24,9 +24,9 @@ const DefaultLanguageShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <MailingMessagesLanguageIdTab label={translate('catalogs.mailingMessages.title')} path='mailingMessages-languageId' />
-        <ManagersLanguageIdTab label={translate('catalogs.managers.title')} path='managers-languageId' />
-        <MessageTemplateLangVariantsLanguageIdTab label={translate('catalogs.messageTemplateLangVariants.title')} path='messageTemplateLangVariants-languageId' />
+        <MailingMessagesLanguageIdTab label={translate('catalogs.mailingMessages.title.plural')} path='mailingMessages-languageId' />
+        <ManagersLanguageIdTab label={translate('catalogs.managers.title.plural')} path='managers-languageId' />
+        <MessageTemplateLangVariantsLanguageIdTab label={translate('catalogs.messageTemplateLangVariants.title.plural')} path='messageTemplateLangVariants-languageId' />
       </TabbedShowLayout>
     </Show>
   );

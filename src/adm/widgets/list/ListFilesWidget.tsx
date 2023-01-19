@@ -43,16 +43,7 @@ export const ListFilesItem: FC<File> = (props) => {
               {`Original name: ${props.originalName}`}
             </div>
             <div>
-              {`Url: ${props.url}`}
-            </div>
-            <div>
               {`Mimetype: ${props.mimetype}`}
-            </div>
-            <div>
-              {`S3 key: ${props.s3Key}`}
-            </div>
-            <div>
-              {`E tag: ${props.eTag}`}
             </div>
           </>
         }

@@ -23,8 +23,8 @@ const DefaultEntityShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <AggregateTrackingsEntityTypeIdTab label={translate('infoRegistries.aggregateTrackings.title')} path='aggregateTrackings-entityTypeId' />
-        <AuditLogsEntityTypeIdTab label={translate('catalogs.auditLogs.title')} path='auditLogs-entityTypeId' />
+        <AggregateTrackingsEntityTypeIdTab label={translate('infoRegistries.aggregateTrackings.title.plural')} path='aggregateTrackings-entityTypeId' />
+        <AuditLogsEntityTypeIdTab label={translate('catalogs.auditLogs.title.plural')} path='auditLogs-entityTypeId' />
       </TabbedShowLayout>
     </Show>
   );

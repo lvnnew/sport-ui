@@ -22,7 +22,7 @@ const DefaultMailingTypeShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <MailingCampaignsMailingTypeIdTab label={translate('catalogs.mailingCampaigns.title')} path='mailingCampaigns-mailingTypeId' />
+        <MailingCampaignsMailingTypeIdTab label={translate('catalogs.mailingCampaigns.title.plural')} path='mailingCampaigns-mailingTypeId' />
       </TabbedShowLayout>
     </Show>
   );

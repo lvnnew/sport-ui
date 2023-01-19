@@ -76,12 +76,6 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
-      label: 'catalogs.files.title.plural',
-      link: '/files',
-      icon: 'DetailsOutlined',
-      debugOnly: true,
-    },
-    {
       label: 'catalogs.languages.title.plural',
       link: '/languages',
       icon: 'DetailsOutlined',
@@ -246,6 +240,12 @@ const getDefaultMenu = () => {
     {
       label: 'catalogs.messageTypes.title.plural',
       link: '/messageTypes',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
+      label: 'catalogs.files.title.plural',
+      link: '/files',
       icon: 'DetailsOutlined',
       debugOnly: true,
     },

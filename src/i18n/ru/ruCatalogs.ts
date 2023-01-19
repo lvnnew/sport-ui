@@ -137,8 +137,8 @@ const ruCatalogs = {
   },
   files: {
     title: {
-      plural: 'Files',
-      singular: 'File',
+      plural: 'Файлы',
+      singular: 'Файл',
     },
     fields: {
       id: 'Ид',
@@ -406,7 +406,7 @@ const ruCatalogs = {
   templateStyles: {
     title: {
       plural: 'Стили шаблонов',
-      singular: 'Стили шаблона',
+      singular: 'Стиль шаблона',
     },
     fields: {
       id: 'Ид',

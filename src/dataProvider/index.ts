@@ -24,7 +24,6 @@ const getGqlResource = (resource: string) => {
 const numberIdResources: string[] = [
   'aggregateTrackings',
   'appRefreshTokens',
-  'files',
   'tags',
   'admRefreshTokens',
   'auditLogs',
@@ -42,6 +41,7 @@ const numberIdResources: string[] = [
   'mailingMessages',
   'templateStyles',
   'tenants',
+  'files',
   'messageTemplateLangVariants',
 ];
 

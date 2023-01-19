@@ -38,10 +38,7 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
       <Datagrid rowClick='show'>
         <NumberField source='id' label='catalogs.files.fields.id' />
         <TextField source='originalName' label='catalogs.files.fields.originalName' />
-        <TextField source='url' label='catalogs.files.fields.url' />
         <TextField source='mimetype' label='catalogs.files.fields.mimetype' />
-        <TextField source='s3Key' label='catalogs.files.fields.s3Key' />
-        <TextField source='eTag' label='catalogs.files.fields.eTag' />
       </Datagrid>
     </List>
   );

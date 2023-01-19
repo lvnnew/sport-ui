@@ -512,7 +512,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'files.create') ? LoadableFileCreate : undefined}
         list={hasPermission(permissions, 'files.all') ? LoadableFileList : undefined}
         options={{label: translate('catalogs.files.title.singular')}}
-        recordRepresentation='id'
+        recordRepresentation='originalName'
       />,
       <Resource
         key='languages'

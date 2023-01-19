@@ -22,7 +22,7 @@ const DefaultMessageTypeShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <MessageTemplatesMessageTypeIdTab label={translate('catalogs.messageTemplates.title')} path='messageTemplates-messageTypeId' />
+        <MessageTemplatesMessageTypeIdTab label={translate('catalogs.messageTemplates.title.plural')} path='messageTemplates-messageTypeId' />
       </TabbedShowLayout>
     </Show>
   );

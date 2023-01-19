@@ -22,7 +22,7 @@ const DefaultMessageTemplateLangVariantShow: FC<ShowProps> = (props: ShowProps) 
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <MailingMessagesMessageTemplateLangVariantIdTab label={translate('catalogs.mailingMessages.title')} path='mailingMessages-messageTemplateLangVariantId' />
+        <MailingMessagesMessageTemplateLangVariantIdTab label={translate('catalogs.mailingMessages.title.plural')} path='mailingMessages-messageTemplateLangVariantId' />
       </TabbedShowLayout>
     </Show>
   );

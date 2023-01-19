@@ -23,8 +23,8 @@ const DefaultUnitShow: FC<ShowProps> = (props: ShowProps) => {
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
-        <ManagersUnitIdTab label={translate('catalogs.managers.title')} path='managers-unitId' />
-        <UnitsParentIdTab label={translate('catalogs.units.title')} path='units-parentId' />
+        <ManagersUnitIdTab label={translate('catalogs.managers.title.plural')} path='managers-unitId' />
+        <UnitsParentIdTab label={translate('catalogs.units.title.plural')} path='units-parentId' />
       </TabbedShowLayout>
     </Show>
   );
