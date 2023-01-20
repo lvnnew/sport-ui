@@ -7,6 +7,8 @@ import {
   NonEmptyReferenceField,
   useIsMounted,
   useRecordContext,
+  useNotify,
+  useTranslate,
 } from 'react-admin';
 import {gql, useMutation} from '@apollo/client';
 import {useController} from 'react-hook-form';
@@ -15,6 +17,7 @@ import {getUniqSaveId, useLoadingContext} from '../../contexts/LoadingContext';
 
 export type FileInputProps = Readonly<RaFileInputProps & {
   type?: 'image';
+  maxFiles?: number;
 }>;
 
 export type FileFieldState = {
@@ -87,6 +90,8 @@ export const FileInput: FC<FileInputProps> = (props) => {
   const isMounted = useIsMounted();
   const refValue = useRef<Array<number | FileFieldState>>(field.value); // Only for multiple field
   refValue.current = field.value;
+  const notify = useNotify();
+  const t = useTranslate();
 
   const onChange = (file: File | File[] | FileFieldState | FileFieldState[]) => {
     onChangeOverridden?.(file);
@@ -158,6 +163,14 @@ export const FileInput: FC<FileInputProps> = (props) => {
       onChange={onChange}
       accept={accept}
       multiple={multiple}
+      options={{
+        onDropRejected: (fileRejections: any[]) => {
+          log.info(fileRejections);
+          notify(fileRejections[0].errors[0].code === 'file-too-large' ?
+            t('validation.fileTooLarge', {max: props.maxSize}) :
+            t('validation.fileInvalidType'), {type: 'error'});
+        },
+      }}
       {...rest}
     >
       <FileReferenceField type={type} {...rest} />
