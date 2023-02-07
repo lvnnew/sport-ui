@@ -55,7 +55,7 @@ const ruCatalogs = {
   },
   auditLogs: {
     title: {
-      plural: 'Аудиты',
+      plural: 'Аудит',
       singular: 'Аудит',
     },
     fields: {
