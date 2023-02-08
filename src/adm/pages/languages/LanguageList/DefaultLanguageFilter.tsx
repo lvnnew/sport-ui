@@ -10,7 +10,7 @@ const DefaultLanguageFilter: FC<any> = (props) => {
   return (
     <Filter {...props}>
       <TextInput
-        label='catalogs.languages.fields.search'
+        label='ra.action.search'
         source='q'
         alwaysOn
         sx={{m: 1}}

@@ -10,7 +10,7 @@ const DefaultAuditLogActionTypeFilter: FC<any> = (props) => {
   return (
     <Filter {...props}>
       <TextInput
-        label='catalogs.auditLogActionTypes.fields.search'
+        label='ra.action.search'
         source='q'
         alwaysOn
         sx={{m: 1}}

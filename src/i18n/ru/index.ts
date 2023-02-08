@@ -71,7 +71,6 @@ const translationMessages: DeepPartial<TranslationMessages> = {
       transactions: 'Транзакции',
       issueCardByManager: 'Выпуск карты',
     },
-    search: 'Поиск',
     theme: {
       dark: 'Dark',
       light: 'Light',
@@ -124,12 +123,6 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     show: {
       recalculate: 'Обновить баллы',
       markedAsDeleted: 'Пользователь помечен удаленным',
-    },
-  },
-  members: {
-    list: {
-      memberType: 'Тип участия',
-      search: 'Поиск',
     },
   },
   ra: {

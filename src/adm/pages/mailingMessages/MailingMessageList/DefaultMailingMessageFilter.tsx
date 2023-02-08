@@ -14,7 +14,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
   return (
     <Filter {...props}>
       <TextInput
-        label='catalogs.mailingMessages.fields.search'
+        label='ra.action.search'
         source='q'
         alwaysOn
         sx={{m: 1}}

@@ -13,7 +13,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
   return (
     <Filter {...props}>
       <TextInput
-        label='catalogs.messageTemplates.fields.search'
+        label='ra.action.search'
         source='q'
         alwaysOn
         sx={{m: 1}}

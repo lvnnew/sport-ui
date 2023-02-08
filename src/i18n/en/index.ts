@@ -71,7 +71,6 @@ const translationMessages: DeepPartial<TranslationMessages> = {
       transactions: 'Transactions',
       issueCardByManager: 'Card issue',
     },
-    search: 'Search',
     theme: {
       dark: 'Dark',
       light: 'Light',
@@ -124,12 +123,6 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     show: {
       recalculate: 'Recalculate',
       markedAsDeleted: 'Status changed to Deleted',
-    },
-  },
-  members: {
-    list: {
-      memberType: 'Member type',
-      search: 'Search',
     },
   },
   ra: {
