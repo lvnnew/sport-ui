@@ -117,7 +117,7 @@ const Login = () => {
                 <TextInput
                   autoFocus
                   source='email'
-                  label={translate('email')}
+                  label={translate('ra.auth.username')}
                   disabled={loading}
                   validate={required()}
                   fullWidth
