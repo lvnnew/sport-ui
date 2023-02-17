@@ -14,19 +14,23 @@ export interface FileWigetProps extends Omit<CardWithIconProps, 'icon'> {
   icon?: FC<any>;
   title?: string;
   reference: string;
+  source: string;
 }
 
 const FileWiget: FC<FileWigetProps> = (
   {
     reference,
+    source,
     icon,
     ...rest
   },
 ) => {
-  const {id} = useRecordContext();
+  const record = useRecordContext();
+
   const {data} = useGetOne(
     reference,
-    {id},
+    {id: record[source]},
+    {enabled: Boolean(record[source])},
   );
 
   console.log(data);
