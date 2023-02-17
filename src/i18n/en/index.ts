@@ -96,7 +96,7 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     onlyIntegers: 'Only integers allowed. ',
     datesInFilter: 'Please, fill in dates in filter. ',
     emailFormat: 'Invalid email format. ',
-    onlyLatinAndRussianLettersAndDigits: 'Only letters and digits allowed. ',
+    onlyLatinAndCyrillicLettersAndDigits: 'Only letters and digits allowed. ',
   },
   reportsColumns: {
     date: 'Date',

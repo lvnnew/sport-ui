@@ -95,7 +95,7 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     exactLength: 'Точное количество символов: %{length}. ',
     datesInFilter: 'Необходимо заполнить даты в фильтрах. ',
     emailFormat: 'Введите корректный email. ',
-    onlyLatinAndRussianLettersAndDigits: 'Можно использовать только буквы и цифры. ',
+    onlyLatinAndCyrillicLettersAndDigits: 'Можно использовать только буквы и цифры. ',
     notPastDate: 'Выбор прошедшей даты недопустим. ',
   },
   reportsColumns: {

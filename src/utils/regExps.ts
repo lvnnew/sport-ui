@@ -1,10 +1,18 @@
-export const noDigitsRegExp = /^\D*$/gu;
-export const noSpaceRegExp = /^\S*$/gu;
-export const onlyLetters = /^[A-Za-zА-яа-яЁ-ё\s]+$/u;
+export const onlyDigits = /^\d+$/iu;
+export const onlyPositiveDigits = /(?<![-.])\b[0-9]+\b(?!\.[0-9])/iu;
+
+export const noDigitsRegExp = /^\D*$/giu;
+export const noSpaceRegExp = /^\S*$/giu;
+
+export const onlyLetters = /^[a-zа-яё\s]+$/iu;
+export const onlyLatinLetters = /^[a-z\s]+$/iu;
+export const onlyCyrillicLetters = /^[а-яё\s]+$/iu;
 export const onlyLatinAndCyrillicLetters = /^[a-zа-яё\s]+$/iu;
-export const onlyLatinLetters = /^[A-Za-z\s]+$/u;
-export const onlyDigits = /^\d+$/u;
-export const onlyPositiveDigits = /(?<![-.])\b[0-9]+\b(?!\.[0-9])/u;
-export const passwordRegExp = /(?=.*[0-9])(?=.*[!?@#$%^&*()_+=-><,./|])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!?@#$%^&*()_+=-><,./|]{6,}/gu;
-export const emailRegExp = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/gu;
-export const onlyLatinAndRussianLettersAndDigits = /^[A-Za-zА-яа-яЁ-ё\d]+$/u;
+
+export const onlyLettersAndDigits = /^[a-zа-яё\s\d]+$/iu;
+export const onlyLatinLettersAndDigits = /^[a-z\s\d]+$/iu;
+export const onlyCyrillicLettersAndDigits = /^[а-яё\s\d]+$/iu;
+export const onlyLatinAndCyrillicLettersAndDigits = /^[a-zа-яё\s\d]+$/iu;
+
+export const passwordRegExp = /(?=.*[0-9])(?=.*[!?@#$%^&*()_+=-><,./|])(?=.*[a-z])(?=.*[A-Z])[0-9a-z!?@#$%^&*()_+=-><,./|]{6,}/giu;
+export const emailRegExp = /^([a-z0-9_\-.])+@([a-z0-9_\-.])+\.([a-z]{2,4})$/giu;
