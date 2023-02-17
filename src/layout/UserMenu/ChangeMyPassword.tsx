@@ -20,7 +20,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import ButtonModal from '../../uiLib/ButtonModal';
 import {useModal} from '../../uiLib/contexts/ModalContext';
 import log from '../../utils/log';
-import {passwordRegExp} from '../../utils/regExps';
+import {password} from '../../utils/regExps';
 
 const useStyles = makeStyles(() => createStyles({
   buttonProgress: {
@@ -70,7 +70,7 @@ const ChangeMyPasswordForm: FC = () => {
   const resolver = useMemo(() => yupResolver(
     Yup.object({
       password: Yup.string()
-        .matches(passwordRegExp, t('validation.passwordRegExp'))
+        .matches(password, t('validation.password'))
         .min(6, t('validation.minLength', {min: 6}))
         .max(30, t('validation.maxLength', {max: 30}))
         .required()

@@ -84,7 +84,7 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     maxValue: 'Maximum value: %{max}. ',
     noSpaces: 'Spaces are not allowed. ',
     noDigits: 'Digits are not allowed. ',
-    passwordRegExp: 'Password shall include lowercase and uppercase letters, numbers and special characters. ',
+    password: 'Password shall include lowercase and uppercase letters, numbers and special characters. ',
     notFutureDate: 'Choosing a future date is not allowed. ',
     required: 'This field is required. ',
     onlyLatinLetters: 'Only latin letters allowed. ',
