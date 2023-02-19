@@ -1,4 +1,6 @@
-const enValidation = {
+import {ValidationMessages} from '../types';
+
+const enValidation: ValidationMessages = {
   minLength: 'Minimum length: %{min}. ',
   maxLength: 'Maximum length: %{max}. ',
   minValue: 'Minimum value: %{min}. ',

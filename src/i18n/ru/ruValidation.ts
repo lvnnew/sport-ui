@@ -1,4 +1,6 @@
-const ruValidation = {
+import {ValidationMessages} from '../types';
+
+const ruValidation: ValidationMessages = {
   minLength: 'Mинимальная длина - %{min} символов. ',
   maxLength: 'Максимальная длина - %{max} символов. ',
   minValue: 'Минимальное значение - %{min}. ',
