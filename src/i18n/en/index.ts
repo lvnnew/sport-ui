@@ -6,6 +6,7 @@ import enReports from './enReports';
 import enCatalogs from './enCatalogs';
 import enInfoRegistries from './enInfoRegistries';
 import enSumRegistries from './enSumRegistries';
+import enValidation from './enValidation';
 import {DeepPartial} from 'utility-types';
 import * as R from 'ramda';
 
@@ -77,40 +78,20 @@ const translationMessages: DeepPartial<TranslationMessages> = {
       name: 'Theme',
     },
   },
-  validation: {
-    minLength: 'Minimum length: %{min}. ',
-    maxLength: 'Maximum length: %{max}. ',
-    minValue: 'Minimum value: %{min}. ',
-    maxValue: 'Maximum value: %{max}. ',
-    noSpaces: 'Spaces are not allowed. ',
-    noDigits: 'Digits are not allowed. ',
-    password: 'Password shall include lowercase and uppercase letters, numbers and special characters. ',
-    notFutureDate: 'Choosing a future date is not allowed. ',
-    required: 'This field is required. ',
-    onlyLatinLetters: 'Only latin letters allowed. ',
-    onlyLatinAndCyrillicLetters: 'Only latin and cyrillic letters allowed. ',
-    onlyNumbers: 'Only numbers allowed. ',
-    onlyLetters: 'Only letters allowed. ',
-    exactLength: 'Exact symbols quantity: %{length}. ',
-    notPastDate: 'Choosing a past date is not allowed. ',
-    onlyIntegers: 'Only integers allowed. ',
-    datesInFilter: 'Please, fill in dates in filter. ',
-    emailFormat: 'Invalid email format. ',
-    onlyLatinAndCyrillicLettersAndDigits: 'Only letters and digits allowed. ',
-  },
   reportsColumns: {
     date: 'Date',
     cardNmber: 'Card number',
     partner: 'Partner',
     miles: 'Miles',
   },
-  reports: enReports,
   calcs: {
     calculators: 'Calculators',
     milesCalc: 'Miles to receive',
     upgradeCalc: 'Upgrade calculator',
     flightCalc: 'Flight calculator',
   },
+  validation: enValidation,
+  reports: enReports,
   documents: enDocs,
   catalogs: enCatalogs,
   infoRegistries: enInfoRegistries,
