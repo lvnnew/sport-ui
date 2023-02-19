@@ -14,6 +14,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import AggregateTrackingFilter from './AggregateTrackingFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,8 +32,8 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='infoRegistries.aggregateTrackings.title.plural'
-      exporter={false}
       filters={<AggregateTrackingFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

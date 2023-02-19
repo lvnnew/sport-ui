@@ -13,6 +13,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import StatFilter from './StatFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,8 +31,8 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.stats.title.plural'
-      exporter={false}
       filters={<StatFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

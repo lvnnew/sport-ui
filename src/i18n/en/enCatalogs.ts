@@ -148,6 +148,7 @@ const enCatalogs = {
       mimetype: 'Mimetype',
       s3Key: 'S3 key',
       eTag: 'E tag',
+      bytes: 'Bytes',
     },
   },
   languages: {

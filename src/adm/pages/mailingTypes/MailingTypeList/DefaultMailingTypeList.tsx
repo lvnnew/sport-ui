@@ -11,6 +11,7 @@ import {
 } from 'react-admin';
 import MailingTypeFilter from './MailingTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -28,8 +29,8 @@ const DefaultMailingTypeList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.mailingTypes.title.plural'
-      exporter={false}
       filters={<MailingTypeFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

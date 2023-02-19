@@ -13,6 +13,7 @@ import {
 } from 'react-admin';
 import UserFilter from './UserFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,8 +31,8 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.users.title.plural'
-      exporter={false}
       filters={<UserFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

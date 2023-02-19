@@ -13,6 +13,7 @@ import {
 } from 'react-admin';
 import MessageTemplateLangVariantFilter from './MessageTemplateLangVariantFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,8 +31,8 @@ const DefaultMessageTemplateLangVariantList: FC<ListProps> = (props: ListProps) 
   return (
     <List
       title='catalogs.messageTemplateLangVariants.title.plural'
-      exporter={false}
       filters={<MessageTemplateLangVariantFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

@@ -13,6 +13,7 @@ import {
 } from 'react-admin';
 import MessageTemplateFilter from './MessageTemplateFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,8 +31,8 @@ const DefaultMessageTemplateList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.messageTemplates.title.plural'
-      exporter={false}
       filters={<MessageTemplateFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

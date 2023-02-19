@@ -13,6 +13,7 @@ import {
 } from 'react-admin';
 import AppLoginFilter from './AppLoginFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,8 +31,8 @@ const DefaultAppLoginList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.appLogins.title.plural'
-      exporter={false}
       filters={<AppLoginFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

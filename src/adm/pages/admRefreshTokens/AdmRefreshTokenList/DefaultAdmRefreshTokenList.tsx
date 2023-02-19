@@ -14,6 +14,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import AdmRefreshTokenFilter from './AdmRefreshTokenFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,8 +32,8 @@ const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.admRefreshTokens.title.plural'
-      exporter={false}
       filters={<AdmRefreshTokenFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

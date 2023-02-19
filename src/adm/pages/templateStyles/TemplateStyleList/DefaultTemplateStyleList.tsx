@@ -12,6 +12,7 @@ import {
 } from 'react-admin';
 import TemplateStyleFilter from './TemplateStyleFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -29,8 +30,8 @@ const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.templateStyles.title.plural'
-      exporter={false}
       filters={<TemplateStyleFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

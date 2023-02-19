@@ -95,6 +95,7 @@ const ListFilesWidget: FC<ListFilesWidgetProps> = ({
             mimetype
             s3Key
             eTag
+            bytes
           }
         }
       `}

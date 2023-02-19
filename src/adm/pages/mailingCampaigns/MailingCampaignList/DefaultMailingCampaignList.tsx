@@ -14,6 +14,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import MailingCampaignFilter from './MailingCampaignFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,8 +32,8 @@ const DefaultMailingCampaignList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.mailingCampaigns.title.plural'
-      exporter={false}
       filters={<MailingCampaignFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

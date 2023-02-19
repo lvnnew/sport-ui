@@ -14,6 +14,7 @@ import {
 } from 'react-admin';
 import ManagerFilter from './ManagerFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 import ImageViewField from '../../../../uiLib/file/ImageViewField';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -32,8 +33,8 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.managers.title.plural'
-      exporter={false}
       filters={<ManagerFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

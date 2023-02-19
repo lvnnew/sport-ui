@@ -11,6 +11,7 @@ import {
 } from 'react-admin';
 import AuditLogActionTypeFilter from './AuditLogActionTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -28,8 +29,8 @@ const DefaultAuditLogActionTypeList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.auditLogActionTypes.title.plural'
-      exporter={false}
       filters={<AuditLogActionTypeFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

@@ -11,6 +11,7 @@ import {
   DeleteButton,
   usePermissions,
   TextInput,
+  NumberInput,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -98,6 +99,15 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 source='eTag'
                 required
                 label='catalogs.files.fields.eTag'
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <NumberInput
+                fullWidth
+                sx={{m: 1}}
+                source='bytes'
+                defaultValue={null}
+                label='catalogs.files.fields.bytes'
               />
             </Grid>
           </Grid>

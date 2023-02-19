@@ -15,6 +15,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationHistoryEntryFilter from './AutogenerationHistoryEntryFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -32,8 +33,8 @@ const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) 
   return (
     <List
       title='catalogs.autogenerationHistoryEntries.title.plural'
-      exporter={false}
       filters={<AutogenerationHistoryEntryFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

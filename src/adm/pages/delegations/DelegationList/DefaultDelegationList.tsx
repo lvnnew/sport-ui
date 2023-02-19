@@ -15,6 +15,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import DelegationFilter from './DelegationFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -32,8 +33,8 @@ const DefaultDelegationList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.delegations.title.plural'
-      exporter={false}
       filters={<DelegationFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

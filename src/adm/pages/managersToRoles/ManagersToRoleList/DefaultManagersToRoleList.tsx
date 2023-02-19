@@ -14,6 +14,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import ManagersToRoleFilter from './ManagersToRoleFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,8 +32,8 @@ const DefaultManagersToRoleList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.managersToRoles.title.plural'
-      exporter={false}
       filters={<ManagersToRoleFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

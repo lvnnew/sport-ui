@@ -44,6 +44,11 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
           <TextField source='eTag' label='catalogs.files.fields.eTag' />
         </Labeled>
       </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
+          <NumberField source='bytes' label='catalogs.files.fields.bytes' />
+        </Labeled>
+      </Grid>
     </Grid>
   </Tab>);
 };

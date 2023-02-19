@@ -13,6 +13,7 @@ import {
 } from 'react-admin';
 import RolesToPermissionFilter from './RolesToPermissionFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,8 +31,8 @@ const DefaultRolesToPermissionList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.rolesToPermissions.title.plural'
-      exporter={false}
       filters={<RolesToPermissionFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

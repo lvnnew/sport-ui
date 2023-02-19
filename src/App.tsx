@@ -14,11 +14,9 @@ import {
   ApolloProvider,
   NormalizedCacheObject,
 } from '@apollo/client';
-import polyglotI18nProvider from 'ra-i18n-polyglot';
 import './App.css';
 import Layout from './layout/Layout';
 import Login from './layout/Login';
-import defaultMessages from './i18n/ru';
 import dataProviderFactory from './dataProvider';
 import getConfig from './config/config';
 import {createBrowserHistory} from 'history';
@@ -31,25 +29,13 @@ import getApollo from './apollo/getApollo';
 import Loader from './shared/Loader';
 import {lightTheme} from './layout/themes';
 import {routes} from './adm/routes';
-import log from './utils/log';
+import i18nProvider from './i18nProvider';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 onStart();
 
 const history = createBrowserHistory();
-
-const i18nProvider = polyglotI18nProvider(locale => {
-  switch (locale) {
-  case 'en':
-    return import('./i18n/en').then(messages => messages.default);
-  case 'ru':
-    return defaultMessages;
-  default:
-    log.error(`Unknown locale: "${locale}"`);
-    return defaultMessages;
-  }
-}, 'ru');
 
 const App = () => {
   const [dataProvider, setDataProvider] = useState<any | null>(null);

@@ -11,6 +11,7 @@ import {
 } from 'react-admin';
 import EntityFilter from './EntityFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -28,8 +29,8 @@ const DefaultEntityList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.entities.title.plural'
-      exporter={false}
       filters={<EntityFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

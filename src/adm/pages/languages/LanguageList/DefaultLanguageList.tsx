@@ -11,6 +11,7 @@ import {
 } from 'react-admin';
 import LanguageFilter from './LanguageFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -28,8 +29,8 @@ const DefaultLanguageList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.languages.title.plural'
-      exporter={false}
       filters={<LanguageFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

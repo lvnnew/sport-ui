@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {
   Filter,
   TextInput,
+  NumberInput,
 } from 'react-admin';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -44,6 +45,13 @@ const DefaultFileFilter: FC<any> = (props) => {
         sx={{m: 1}}
         source='eTag'
         label='catalogs.files.fields.eTag'
+      />
+      <NumberInput
+        fullWidth
+        sx={{m: 1}}
+        source='bytes'
+        defaultValue={null}
+        label='catalogs.files.fields.bytes'
       />
     </Filter>
   );

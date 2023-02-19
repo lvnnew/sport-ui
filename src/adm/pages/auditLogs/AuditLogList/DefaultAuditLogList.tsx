@@ -15,6 +15,7 @@ import {
 import DateField from '../../../../uiLib/DateField';
 import AuditLogFilter from './AuditLogFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -32,8 +33,8 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.auditLogs.title.plural'
-      exporter={false}
       filters={<AuditLogFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}

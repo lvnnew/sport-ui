@@ -12,6 +12,7 @@ import {
 } from 'react-admin';
 import MailingMessageStatusFilter from './MailingMessageStatusFilter';
 import {hasPermission} from '../../../../utils/permissions';
+import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -29,8 +30,8 @@ const DefaultMailingMessageStatusList: FC<ListProps> = (props: ListProps) => {
   return (
     <List
       title='catalogs.mailingMessageStatuses.title.plural'
-      exporter={false}
       filters={<MailingMessageStatusFilter />}
+      actions={<ListActions />}
       bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
