@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, {FC, useMemo, useCallback} from 'react';
 import {
-  useTranslate,
   Create,
   SimpleForm,
   CreateProps,
@@ -19,9 +18,7 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
-  const translate = useTranslate();
-
-  const resolver = useMemo(() => yupResolver(getUserValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getUserValidation()), []);
 
   return (
     <Create

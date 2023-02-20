@@ -1,8 +1,6 @@
 import * as Yup from 'yup';
-import GetValidation from '../../../types/GetValidation';
-
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getTagValidation: GetValidation = () => Yup.object({});
+const getTagValidation = () => Yup.object({});
 
 export default getTagValidation;

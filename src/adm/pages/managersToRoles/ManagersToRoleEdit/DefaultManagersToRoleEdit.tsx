@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, {FC, useMemo, useCallback} from 'react';
 import {
-  useTranslate,
   Edit,
   SimpleForm,
   EditProps,
@@ -37,9 +36,7 @@ const DefaultToolbar = (props: ToolbarProps) => {
 };
 
 const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
-  const translate = useTranslate();
-
-  const resolver = useMemo(() => yupResolver(getManagersToRoleValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getManagersToRoleValidation()), []);
 
   return (
     <Edit

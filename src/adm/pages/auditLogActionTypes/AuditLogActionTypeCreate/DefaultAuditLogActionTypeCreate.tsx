@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, {FC, useMemo, useCallback} from 'react';
 import {
-  useTranslate,
   Create,
   SimpleForm,
   CreateProps,
@@ -15,9 +14,7 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultAuditLogActionTypeCreate: FC<CreateProps> = (props: CreateProps) => {
-  const translate = useTranslate();
-
-  const resolver = useMemo(() => yupResolver(getAuditLogActionTypeValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getAuditLogActionTypeValidation()), []);
 
   return (
     <Create

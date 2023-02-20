@@ -1,15 +1,12 @@
 import * as Yup from 'yup';
-import GetValidation from '../../../types/GetValidation';
-import {Translate} from 'react-admin';
-
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getAuditLogValidation: GetValidation = (t: Translate) => Yup.object({
-  date: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
-  title: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
-  entityTypeId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
-  entityId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
-  actionTypeId: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
+const getAuditLogValidation = () => Yup.object({
+  date: Yup.date().required(),
+  title: Yup.string().required(),
+  entityTypeId: Yup.string().required(),
+  entityId: Yup.string().required(),
+  actionTypeId: Yup.string().required(),
 });
 
 export default getAuditLogValidation;

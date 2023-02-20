@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, {FC, useMemo, useCallback} from 'react';
 import {
-  useTranslate,
   Edit,
   SimpleForm,
   EditProps,
@@ -35,9 +34,7 @@ const DefaultToolbar = (props: ToolbarProps) => {
 };
 
 const DefaultTagEdit: FC<EditProps> = (props: EditProps) => {
-  const translate = useTranslate();
-
-  const resolver = useMemo(() => yupResolver(getTagValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getTagValidation()), []);
 
   return (
     <Edit

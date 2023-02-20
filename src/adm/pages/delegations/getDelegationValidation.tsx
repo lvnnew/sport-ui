@@ -1,18 +1,13 @@
 import * as Yup from 'yup';
-import GetValidation from '../../../types/GetValidation';
-import {Translate} from 'react-admin';
-
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getDelegationValidation: GetValidation = (t: Translate) => Yup.object({
+const getDelegationValidation = () => Yup.object({
   fromId: Yup
     .number()
-    .required(t('validation.required'))
-    .typeError(t('validation.required')),
+    .required(),
   toId: Yup
     .number()
-    .required(t('validation.required'))
-    .typeError(t('validation.required')),
+    .required(),
 });
 
 export default getDelegationValidation;

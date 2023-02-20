@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React, {FC, useMemo, useCallback} from 'react';
 import {
-  useTranslate,
   Create,
   SimpleForm,
   CreateProps,
@@ -21,9 +20,7 @@ import {FileInput} from '../../../../uiLib/file/FileInput';
 
 const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
-  const translate = useTranslate();
-
-  const resolver = useMemo(() => yupResolver(getManagerValidation(translate)), [translate]);
+  const resolver = useMemo(() => yupResolver(getManagerValidation()), []);
 
   return (
     <Create

@@ -1,16 +1,12 @@
 import * as Yup from 'yup';
-import GetValidation from '../../../types/GetValidation';
-import {Translate} from 'react-admin';
-
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const getAdmRefreshTokenValidation: GetValidation = (t: Translate) => Yup.object({
-  create: Yup.date().required(t('validation.required')).typeError(t('validation.required')),
+const getAdmRefreshTokenValidation = () => Yup.object({
+  create: Yup.date().required(),
   managerId: Yup
     .number()
-    .required(t('validation.required'))
-    .typeError(t('validation.required')),
-  token: Yup.string().required(t('validation.required')).typeError(t('validation.required')),
+    .required(),
+  token: Yup.string().required(),
 });
 
 export default getAdmRefreshTokenValidation;

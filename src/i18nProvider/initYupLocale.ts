@@ -1,6 +1,14 @@
+/* eslint-disable @babel/no-invalid-this */
 import * as R from 'ramda';
 import * as Yup from 'yup';
 import {ValidationMessages} from '../i18n/types';
+import {
+  noSpace,
+  onlyDigits,
+  onlyLatinAndCyrillicLetters,
+  onlyLatinAndCyrillicLettersAndDigits,
+  onlyPositiveDigits,
+} from '../utils/regExps';
 
 const initYupLocale = (validationMessages: ValidationMessages) => {
   const messages = R.fromPairs(
@@ -15,14 +23,14 @@ const initYupLocale = (validationMessages: ValidationMessages) => {
       required: messages.required,
     },
     string: {
-    // length: messages.,
+      length: messages.exactLength,
       min: messages.minLength,
       max: messages.maxLength,
-    // email: messages.,
-    // url: messages.,
-    // lowercase: messages.,
-    // uppercase: messages.,
-    },
+      email: messages.emailFormat,
+      // url: messages.,
+      // lowercase: messages.,
+      // uppercase: messages.,
+    } as any,
     number: {
       min: messages.minValue,
       max: messages.maxValue,
@@ -34,6 +42,26 @@ const initYupLocale = (validationMessages: ValidationMessages) => {
     },
   // date: {},
   // boolean: {},
+  });
+
+  Yup.addMethod(Yup.string, 'onlyLatinAndCyrillicLetters', function () {
+    return this.matches(onlyLatinAndCyrillicLetters, messages.onlyLatinAndCyrillicLetters);
+  });
+
+  Yup.addMethod(Yup.string, 'onlyLatinAndCyrillicLettersAndDigits', function () {
+    return this.matches(onlyLatinAndCyrillicLettersAndDigits, messages.onlyLatinAndCyrillicLettersAndDigits);
+  });
+
+  Yup.addMethod(Yup.string, 'onlyPositiveDigits', function () {
+    return this.matches(onlyPositiveDigits, messages.onlyNumbers);
+  });
+
+  Yup.addMethod(Yup.string, 'noSpaces', function () {
+    return this.matches(noSpace, messages.noSpaces);
+  });
+
+  Yup.addMethod(Yup.string, 'onlyDigits', function () {
+    return this.matches(onlyDigits, messages.onlyNumbers);
   });
 };
 
