@@ -52,7 +52,7 @@ const AppBar = (props: any) => {
       <ToggleThemeButton
         lightTheme={lightTheme}
         darkTheme={darkTheme}
-      />
+      />$
       {wide && <LocalesMenuButton />}
     </RaAppBar>
   );
