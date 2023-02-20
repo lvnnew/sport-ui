@@ -6,6 +6,7 @@ import {darkTheme, lightTheme} from './themes';
 import UserMenu from './UserMenu/UserMenu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {Theme} from '@mui/system';
+import {locales} from '../i18nProvider';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -52,8 +53,8 @@ const AppBar = (props: any) => {
       <ToggleThemeButton
         lightTheme={lightTheme}
         darkTheme={darkTheme}
-      />$
-      {wide && <LocalesMenuButton />}
+      />
+      {wide && locales.length > 1 && <LocalesMenuButton />}
     </RaAppBar>
   );
 };
