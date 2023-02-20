@@ -1,17 +1,17 @@
 import * as React from 'react';
-import {AppBar as RaAppBar, ToggleThemeButton, LocalesMenuButton} from 'react-admin';
+import {AppBar as RaAppBar, ToggleThemeButton, LocalesMenuButton, useI18nProvider} from 'react-admin';
 import {Box, Typography} from '@mui/material';
 import {Link} from 'react-router-dom';
 import {darkTheme, lightTheme} from './themes';
 import UserMenu from './UserMenu/UserMenu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {Theme} from '@mui/system';
-import {locales} from '../i18nProvider';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const AppBar = (props: any) => {
   const wide = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+  const {locales} = useI18nProvider();
 
   return (
     <RaAppBar
