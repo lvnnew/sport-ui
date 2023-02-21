@@ -69,6 +69,7 @@ const enCatalogs = {
       entityId: 'Entity Id',
       actionTypeId: 'Action Type',
       managerId: 'Manager',
+      managerLogin: 'Логин',
       userId: 'User',
       foreign: 'Foreign',
       foreignEntityType: 'Foreign entity type',

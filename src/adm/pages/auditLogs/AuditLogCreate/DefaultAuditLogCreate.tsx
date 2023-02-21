@@ -140,6 +140,15 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
               </ReferenceInput>
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
+              <TextInput
+                fullWidth
+                sx={{m: 1}}
+                source='managerLogin'
+                defaultValue={null}
+                label='catalogs.auditLogs.fields.managerLogin'
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
               <ReferenceInput
                 source='userId'
                 reference='users'

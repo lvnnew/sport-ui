@@ -69,6 +69,7 @@ const ruCatalogs = {
       entityId: 'ID сущности',
       actionTypeId: 'Тип операции',
       managerId: 'Менеджер',
+      managerLogin: 'Логин',
       userId: 'Пользователь',
       foreign: 'Внешняя сущность',
       foreignEntityType: 'Тип внешней сущности',

@@ -64,6 +64,9 @@ export const ListAuditLogsItem: FC<AuditLog> = (props) => {
               {`Manager id: ${props.managerId}`}
             </div>
             <div>
+              {`Manager login: ${props.managerLogin}`}
+            </div>
+            <div>
               {`User id: ${props.userId}`}
             </div>
             <div>
@@ -131,6 +134,7 @@ const ListAuditLogsWidget: FC<ListAuditLogsWidgetProps> = ({
             entityId
             actionTypeId
             managerId
+            managerLogin
             userId
             foreign
             foreignEntityType

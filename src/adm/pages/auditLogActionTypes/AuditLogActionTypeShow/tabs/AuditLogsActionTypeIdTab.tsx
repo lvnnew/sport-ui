@@ -37,6 +37,7 @@ const AuditLogsActionTypeIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
         <TextField source='entityId' label='catalogs.auditLogs.fields.entityId' />
         <ReferenceField source='actionTypeId' label='catalogs.auditLogs.fields.actionTypeId' reference='auditLogActionTypes' link='show' />
         <ReferenceField source='managerId' label='catalogs.auditLogs.fields.managerId' reference='managers' link='show' />
+        <TextField source='managerLogin' label='catalogs.auditLogs.fields.managerLogin' />
         <ReferenceField source='userId' label='catalogs.auditLogs.fields.userId' reference='users' link='show' />
         <BooleanField source='foreign' label='catalogs.auditLogs.fields.foreign' />
         <TextField source='foreignEntityType' label='catalogs.auditLogs.fields.foreignEntityType' />

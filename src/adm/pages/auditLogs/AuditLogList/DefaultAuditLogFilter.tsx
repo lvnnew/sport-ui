@@ -99,6 +99,13 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           noOptionsText='ra.message.noOptions'
         />
       </ReferenceInput>
+      <TextInput
+        fullWidth
+        sx={{m: 1}}
+        source='managerLogin'
+        defaultValue={null}
+        label='catalogs.auditLogs.fields.managerLogin'
+      />
       <ReferenceInput
         source='userId'
         reference='users'
