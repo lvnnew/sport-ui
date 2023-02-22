@@ -54,7 +54,6 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
         <BooleanField source='foreign' label='catalogs.auditLogs.fields.foreign' />
         <TextField source='foreignEntityType' label='catalogs.auditLogs.fields.foreignEntityType' />
         <TextField source='foreignEntityId' label='catalogs.auditLogs.fields.foreignEntityId' />
-        <TextField source='actionData' label='catalogs.auditLogs.fields.actionData' />
       </Datagrid>
     </List>
   );

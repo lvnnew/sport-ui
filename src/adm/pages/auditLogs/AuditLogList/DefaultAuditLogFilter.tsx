@@ -143,13 +143,6 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         defaultValue={null}
         label='catalogs.auditLogs.fields.foreignEntityId'
       />
-      <TextInput
-        fullWidth
-        sx={{m: 1}}
-        source='actionData'
-        defaultValue={null}
-        label='catalogs.auditLogs.fields.actionData'
-      />
     </Filter>
   );
 };

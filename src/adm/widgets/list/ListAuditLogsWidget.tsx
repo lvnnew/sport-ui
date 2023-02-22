@@ -78,9 +78,6 @@ export const ListAuditLogsItem: FC<AuditLog> = (props) => {
             <div>
               {`Foreign entity id: ${props.foreignEntityId}`}
             </div>
-            <div>
-              {`Action data: ${props.actionData}`}
-            </div>
           </>
         }
       />
