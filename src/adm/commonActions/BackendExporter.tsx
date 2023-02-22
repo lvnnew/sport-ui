@@ -4,6 +4,7 @@ import {
   useResourceContext,
   Button,
   useDataProvider,
+  useNotify,
 } from 'react-admin';
 import DownloadIcon from '@mui/icons-material/GetApp';
 import {useMutation} from 'react-query';
@@ -18,6 +19,7 @@ const BackendExporter: FC = () => {
     total,
   } = useListContext();
   const dataProvider = useDataProvider<DataProvider>();
+  const notify = useNotify();
 
   log.info('useListContext');
   log.info({
@@ -31,14 +33,16 @@ const BackendExporter: FC = () => {
   log.info('resource');
   log.info(resource);
 
-  const {mutate} = useMutation('downloadEntityRecords', dataProvider.downloadEntityRecords);
+  const {mutateAsync} = useMutation('downloadEntityRecords', dataProvider.downloadEntityRecords);
 
-  const onClick = useCallback(() => {
-    mutate({
+  const onClick = useCallback(async () => {
+    await mutateAsync({
       entityName: resource,
       filter: filterValues,
     });
-  }, [resource, filterValues, mutate]);
+
+    notify('Файл будет отправлен на email через несколько минут');
+  }, [resource, filterValues, mutateAsync, notify]);
 
   return (
     <Button
