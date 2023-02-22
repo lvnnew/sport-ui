@@ -81,7 +81,7 @@ const lightThemeOptions = {
     RaDatagrid: {
       styleOverrides: {
         root: {
-          '& .RaDatagrid-rowOdd': {
+          '& .RaDatagrid-rowEven': {
             backgroundColor: 'rgba(0, 0, 0, 0.02)',
           },
         },
