@@ -38,44 +38,78 @@ const lightThemeOptions = {
         },
       },
     },
-    MuiButton: {
-      contained: {
-        backgroundColor: '#fff',
-        boxShadow: 'none',
-        color: '#4f3cc9',
-      },
-    },
-    MuiFilledInput: {
-      root: {
-        '&$disabled': {
-          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+    // MuiButton: {
+    //   contained: {
+    //     backgroundColor: '#fff',
+    //     boxShadow: 'none',
+    //     color: '#4f3cc9',
+    //   },
+    // },
+    // MuiFilledInput: {
+    //   root: {
+    //     '&$disabled': {
+    //       backgroundColor: 'rgba(0, 0, 0, 0.04)',
+    //     },
+    //     backgroundColor: 'rgba(0, 0, 0, 0.04)',
+    //   },
+    // },
+    // MuiLinearProgress: {
+    //   barColorPrimary: {
+    //     backgroundColor: '#d7d7d7',
+    //   },
+    //   colorPrimary: {
+    //     backgroundColor: '#f5f5f5',
+    //   },
+    // },
+    // MuiPaper: {
+    //   elevation1: {
+    //     boxShadow: 'none',
+    //   },
+    //   root: {
+    //     backgroundClip: 'padding-box',
+    //     border: '1px solid #e0e0e3',
+    //   },
+    // },
+    // RaMenuItemLink: {
+    //   active: {
+    //     borderLeft: '3px solid #4f3cc9',
+    //   },
+    //   root: {
+    //     borderLeft: '3px solid #fff',
+    //   },
+    // },
+    RaDatagrid: {
+      styleOverrides: {
+        root: {
+          '& .RaDatagrid-rowOdd': {
+            backgroundColor: 'rgba(0, 0, 0, 0.02)',
+          },
         },
-        backgroundColor: 'rgba(0, 0, 0, 0.04)',
       },
     },
-    MuiLinearProgress: {
-      barColorPrimary: {
-        backgroundColor: '#d7d7d7',
-      },
-      colorPrimary: {
-        backgroundColor: '#f5f5f5',
-      },
-    },
-    MuiPaper: {
-      elevation1: {
-        boxShadow: 'none',
-      },
-      root: {
-        backgroundClip: 'padding-box',
-        border: '1px solid #e0e0e3',
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          // borderRight: '1px solid rgba(224, 224, 224, 0.5)',
+          maxWidth: 300,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        },
       },
     },
-    RaMenuItemLink: {
-      active: {
-        borderLeft: '3px solid #4f3cc9',
+    RaDatagridHeaderCell: {
+      styleOverrides: {
+        root: {
+          fontWeight: 900,
+        },
       },
-      root: {
-        borderLeft: '3px solid #fff',
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          whiteSpace: 'inherit',
+          alignItems: 'flex-start',
+        },
       },
     },
     RaSidebar: {

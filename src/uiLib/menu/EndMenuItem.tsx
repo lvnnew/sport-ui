@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import {MenuItemLink, usePermissions, useTranslate} from 'react-admin';
 import {useDebug} from '../../contexts/DebugContext';
 import * as Icons from '@mui/icons-material';
-import {makeStyles, createStyles} from '@mui/styles';
 import {IconByName} from '../IconByName';
 import {hasAllPermissions} from '../../utils/permissions';
 import {Tooltip} from '@mui/material';
@@ -21,12 +20,12 @@ export type EndMenuItemProps = EndMenuElement & {
   onClick: () => void;
 }
 
-const useStyles = makeStyles(() => createStyles({
-  label: {
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-  },
-}));
+// const useStyles = makeStyles(() => createStyles({
+//   label: {
+//     textOverflow: 'ellipsis',
+//     overflow: 'hidden',
+//   },
+// }));
 
 const EndMenuItem: FC<EndMenuItemProps> = ({
   label,
@@ -40,7 +39,7 @@ const EndMenuItem: FC<EndMenuItemProps> = ({
 }) => {
   const {debug} = useDebug();
   const {permissions: currentPermissions} = usePermissions<string[]>();
-  const classes = useStyles();
+  // const classes = useStyles();
   const t = useTranslate();
 
   return (debug || !debugOnly) && (!permissions || hasAllPermissions(currentPermissions, permissions)) ?
@@ -52,7 +51,7 @@ const EndMenuItem: FC<EndMenuItemProps> = ({
         dense={dense}
         leftIcon={<IconByName name={icon} />}
         onClick={onClick}
-        primaryText={<div className={classes.label}>{t(label)}</div>}
+        primaryText={t(label)}
         sidebarIsOpen={open}
         to={link}
       />
