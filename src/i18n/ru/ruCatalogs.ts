@@ -5,8 +5,8 @@
 const ruCatalogs = {
   admRefreshTokens: {
     title: {
-      plural: 'Ui refresh tokens',
-      singular: 'Ui refresh token',
+      plural: 'UI Токены обновления',
+      singular: 'UI Токен обновления',
     },
     fields: {
       id: 'Ид',

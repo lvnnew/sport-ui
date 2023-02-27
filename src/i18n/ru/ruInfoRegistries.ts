@@ -5,8 +5,8 @@
 const ruInfoRegistries = {
   aggregateTrackings: {
     title: {
-      plural: 'Aggregate Trackings',
-      singular: 'Aggregate Tracking',
+      plural: 'Отслеживание агрегатов',
+      singular: 'Отслеживание агрегата',
     },
     fields: {
       id: 'Ид',

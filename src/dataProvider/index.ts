@@ -22,7 +22,6 @@ const getGqlResource = (resource: string) => {
 };
 
 const numberIdResources: string[] = [
-  'aggregateTrackings',
   'appRefreshTokens',
   'tags',
   'admRefreshTokens',
@@ -32,6 +31,7 @@ const numberIdResources: string[] = [
   'managerLogins',
   'appLogins',
   'managers',
+  'aggregateTrackings',
   'units',
   'users',
   'managersToPermissions',
