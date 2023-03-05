@@ -4,10 +4,11 @@ image: node:18
 
 stages:
   - check
+  - previous-image
   - build
   - latest-image
-  - deploy-stage
-  - deploy-prod
+  - deploy
+  - deploy-previous
 
 cache:
   paths:
@@ -29,6 +30,18 @@ check:
     - yarn install --frozen-lockfile
   script:
     - ./check.sh
+
+tag-previous-with-sha:
+  extends: .tag-image
+  stage: previous-image
+  only:
+    - master
+    - release
+    - /^release-.*$/
+  allow_failure: true # Firt run won't be able to create previous image
+  variables:
+    TAG_ORIGIN: :${CI_COMMIT_REF_SLUG}
+    TAG_DESTINATION: :${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}
 
 build:
   stage: build
@@ -52,7 +65,7 @@ build:
     - release
     - /^release-.*$/
 
-master-to-latest:
+tag-latest:
   extends: .tag-image
   stage: latest-image
   only:
@@ -73,30 +86,47 @@ master-to-latest:
 
 deploy-stage:
   extends: .deploy-dev
-  stage: deploy-stage
+  stage: deploy
   variables:
     ENV: "stage"
     CLUSTER_NAME: "stage01"
 
 deploy-prod:
   extends: .deploy-prod
-  stage: deploy-prod
+  stage: deploy
   variables:
     ENV: "prod"
     CLUSTER_NAME: "stage01"
 
+deploy-stage-previous:
+  extends: .deploy-dev
+  stage: deploy-previous
+  when: manual
+  variables:
+    ENV: "stage"
+    CLUSTER_NAME: "stage01"
+    TAG: ":${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}"
+
+deploy-prod-previous:
+  extends: .deploy-prod
+  stage: deploy-previous
+  when: manual
+  variables:
+    ENV: "prod"
+    CLUSTER_NAME: "stage01"
+    TAG: ":${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}"
 
 .deploy-dev:
   extends:
     - .deploy
     - .deploy-ui
-  stage: deploy-stage
+  stage: deploy
   variables:
     ENV: "stage"
     DEV: "true"
     HOST: "making.ventures"
     ROOT_ENABLED: "false"
-    TAG: ":latest"
+    TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
   only:
@@ -106,14 +136,14 @@ deploy-prod:
   extends:
     - .deploy
     - .deploy-ui
-  stage: deploy-prod
+  stage: deploy
   when: manual
   variables:
     ENV: "prod"
     DEV: "false"
     HOST: "making.ventures"
     ROOT_ENABLED: "true"
-    TAG: ":release"
+    TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
   only:
