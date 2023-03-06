@@ -129,6 +129,9 @@ deploy-prod-previous:
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
+    DOCKER_REGISTRY_DOMAIN: ${DEV_DOCKER_REGISTRY_DOMAIN}
+    DOCKER_REGISTRY_PASSWORD: ${DEV_DOCKER_REGISTRY_PASSWORD}
+    DOCKER_REGISTRY_USERNAME: ${DEV_DOCKER_REGISTRY_USERNAME}
   only:
     - master
 
@@ -146,6 +149,9 @@ deploy-prod-previous:
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     KUBE_CONFIG: ${KUBE_PROD01_CONFIG}
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
+    DOCKER_REGISTRY_DOMAIN: ${DEV_DOCKER_REGISTRY_DOMAIN}
+    DOCKER_REGISTRY_PASSWORD: ${DEV_DOCKER_REGISTRY_PASSWORD}
+    DOCKER_REGISTRY_USERNAME: ${DEV_DOCKER_REGISTRY_USERNAME}
   only:
     - release
     - /^release-.*$/
@@ -181,4 +187,7 @@ deploy-prod-previous:
       --set "style=${STYLE}"
       --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --set "admin.recaptcha.publicKey=${ADMIN_RECAPTCHA_PUBLIC_KEY}"
+      --set "dockerRegistry.domain=${DOCKER_REGISTRY_DOMAIN}"
+      --set "dockerRegistry.password=${DOCKER_REGISTRY_PASSWORD}"
+      --set "dockerRegistry.username=${DOCKER_REGISTRY_USERNAME}"
       --namespace ${NAMESPACE}

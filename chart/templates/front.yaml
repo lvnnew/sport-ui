@@ -41,10 +41,8 @@ spec:
         env: {{ $.Values.global.env }}
         deployKind: {{ $.Values.global.deployKind }}
     spec:
-    {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-    {{- end }}
+        - name: {{ $.Release.Name }}-pullsecret
       containers:
       - name: mtbase-ui
         image: {{ $.Values.docker.registry }}/mtbase-ui{{ $.Values.app.tag }}
