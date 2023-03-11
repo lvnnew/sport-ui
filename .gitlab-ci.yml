@@ -124,7 +124,7 @@ deploy-prod-previous:
     - release
 
 .deploy-dev:
-  extends: .deploy
+  extends: .deploy-ui
   stage: deploy
   when: on_success
   only:
@@ -192,7 +192,7 @@ deploy-prod-previous:
     SMTP_USER: ${DEV_SMTP_USER}
 
 .deploy-prod:
-  extends: .deploy
+  extends: .deploy-ui
   stage: deploy
   when: manual
   only:
