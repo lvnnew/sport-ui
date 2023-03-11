@@ -101,6 +101,7 @@ deploy-prod:
     TAG: ":release"
   only:
     - release
+
 deploy-dev-previous:
   extends: .deploy-dev
   stage: deploy-previous
@@ -164,6 +165,7 @@ deploy-prod-previous:
     DOCKER_REGISTRY_USERNAME: ${PROD_DOCKER_REGISTRY_USERNAME}
 
 .deploy-ui:
+  extends: .deploy
   variables:
     DEPLOY_KIND: "ui"
 
