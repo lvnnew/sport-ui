@@ -136,7 +136,7 @@ deploy-prod-previous:
     ENV: "dev"
     DEV: "false"
     HOST: "making.ventures"
-    ROOT_ENABLED: "true"
+    ROOT_ENABLED: "false"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}

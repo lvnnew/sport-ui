@@ -45,7 +45,7 @@ spec:
         - name: {{ $.Release.Name }}-pullsecret
       containers:
       - name: mtbase-ui
-        image: {{ $.Values.docker.registry }}/mtbase-ui{{ $.Values.app.tag }}
+        image: {{ $.Values.dockerRegistry.domain }}/mtbase/mtbase-ui{{ $.Values.app.tag }}
         ports:
         - name: main-port
           containerPort: 80
