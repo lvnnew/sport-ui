@@ -180,7 +180,6 @@ deploy-prod-previous:
     - NAMESPACE=${NAMESPACE:-"mtbase-${ENV}"}
     - echo NAMESPACE ${NAMESPACE}
     - echo chart ${NAMESPACE}-${DEPLOY_KIND}
-    - echo TAG ${TAG}
 
     - helm upgrade
       --install
