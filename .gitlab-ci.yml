@@ -36,7 +36,9 @@ tag-previous-with-sha:
   stage: previous-image
   only:
     - master
+    - /^master-.*$/
     - release
+    - /^release-.*$/
   allow_failure: true # Firt run won't be able to create previous image
   variables:
     TAG_ORIGIN: :${CI_COMMIT_REF_SLUG}
@@ -63,7 +65,9 @@ build:
       --single-snapshot
   only:
     - master
+    - /^master-.*$/
     - release
+    - /^release-.*$/
 
 tag-latest:
   extends: .tag-image
@@ -94,6 +98,7 @@ deploy-dev:
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
   only:
     - master
+    - /^master-.*$/
 
 deploy-prod:
   extends: .deploy-prod
@@ -104,6 +109,7 @@ deploy-prod:
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
   only:
     - release
+    - /^release-.*$/
 
 deploy-dev-previous:
   extends: .deploy-dev
@@ -115,6 +121,7 @@ deploy-dev-previous:
     TAG: ":${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}"
   only:
     - master
+    - /^master-.*$/
 
 deploy-prod-previous:
   extends: .deploy-prod
@@ -126,6 +133,7 @@ deploy-prod-previous:
     TAG: ":${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}"
   only:
     - release
+    - /^release-.*$/
 
 .deploy-dev:
   extends: .deploy-ui
@@ -133,6 +141,7 @@ deploy-prod-previous:
   when: on_success
   only:
     - master
+    - /^master-.*$/
   tags:
     - dev
   variables:
@@ -153,6 +162,7 @@ deploy-prod-previous:
   when: manual
   only:
     - release
+    - /^release-.*$/
   tags:
     - prod
   variables:
