@@ -70,9 +70,7 @@ const LoadableAuditLogShow = Loadable({
 const LoadableAuditLogEdit = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogEdit'),
 });
-const LoadableAuditLogCreate = Loadable({
-  loader: () => import('./pages/auditLogs/AuditLogCreate'),
-});
+
 const LoadableAuditLogList = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogList'),
 });
@@ -459,7 +457,7 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         name='auditLogs'
         show={hasPermission(permissions, 'auditLogs.get') ? LoadableAuditLogShow : undefined}
         edit={hasPermission(permissions, 'auditLogs.update') ? LoadableAuditLogEdit : undefined}
-        create={hasPermission(permissions, 'auditLogs.create') ? LoadableAuditLogCreate : undefined}
+        create={undefined}
         list={hasPermission(permissions, 'auditLogs.all') ? LoadableAuditLogList : undefined}
         options={{label: translate('catalogs.auditLogs.title.singular')}}
         recordRepresentation='title'

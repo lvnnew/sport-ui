@@ -114,6 +114,11 @@ const translationMessages: DeepPartial<TranslationMessages> = {
       noOptions: 'No options',
     },
   },
+  input: {
+    file: {
+      maxSize: 'Maximum file size: %{maxSize}',
+    },
+  },
 };
 
 export default R.mergeDeepRight(enMessages, translationMessages) as TranslationMessages;

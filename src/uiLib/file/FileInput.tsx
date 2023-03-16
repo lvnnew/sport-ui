@@ -14,6 +14,7 @@ import {gql, useMutation} from '@apollo/client';
 import {useController} from 'react-hook-form';
 import log from '../../utils/log';
 import {getUniqSaveId, useLoadingContext} from '../../contexts/LoadingContext';
+import prettyBytes from 'pretty-bytes';
 
 export type FileInputProps = Readonly<RaFileInputProps & {
   type?: 'image';
@@ -80,6 +81,8 @@ export const FileInput: FC<FileInputProps> = (props) => {
     type,
     multiple,
     accept = type === 'image' ? 'image/png, image/jpeg, image/webp, image/svg' : undefined,
+    labelMultiple = 'ra.input.file.upload_several',
+    labelSingle = 'ra.input.file.upload_single',
     ...rest
   } = props;
   const finalName = props.name || props.source;
@@ -167,10 +170,21 @@ export const FileInput: FC<FileInputProps> = (props) => {
         onDropRejected: (fileRejections: any[]) => {
           log.info(fileRejections);
           notify(fileRejections[0].errors[0].code === 'file-too-large' ?
-            t('validation.fileTooLarge', {max: props.maxSize}) :
+            t('validation.fileTooLarge', {max: prettyBytes(props.maxSize as number, {locale: true, binary: true})}) :
             t('validation.fileInvalidType'), {type: 'error'});
         },
       }}
+      placeholder={multiple ? (
+        <div>
+          <p>{t(labelMultiple)}</p>
+          <p>{t('ra.input.file.maxSize', {maxSize: prettyBytes(props.maxSize as number, {locale: true, binary: true})})}</p>
+        </div>
+      ) : (
+        <div>
+          <p>{t(labelSingle)}</p>
+          <p>{t('ra.input.file.maxSize', {maxSize: prettyBytes(props.maxSize as number, {locale: true, binary: true})})}</p>
+        </div>
+      )}
       {...rest}
     >
       <FileReferenceField type={type} {...rest} />

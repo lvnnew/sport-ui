@@ -124,6 +124,11 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     message: {
       noOptions: 'Нет вариантов',
     },
+    input: {
+      file: {
+        maxSize: 'Максимальный размер файлов: %{maxSize}',
+      },
+    },
   },
 };
 
