@@ -169,7 +169,7 @@ export const FileInput: FC<FileInputProps> = (props) => {
       options={{
         onDropRejected: (fileRejections: any[]) => {
           log.info(fileRejections);
-          notify(fileRejections[0].errors[0].code === 'file-too-large' ?
+          notify(fileRejections[0].errors[0].code === 'file-too-large' && props.maxSize ?
             t('validation.fileTooLarge', {max: prettyBytes(props.maxSize as number, {locale: true, binary: true})}) :
             t('validation.fileInvalidType'), {type: 'error'});
         },
@@ -177,12 +177,14 @@ export const FileInput: FC<FileInputProps> = (props) => {
       placeholder={multiple ? (
         <div>
           <p>{t(labelMultiple)}</p>
-          <p>{t('ra.input.file.maxSize', {maxSize: prettyBytes(props.maxSize as number, {locale: true, binary: true})})}</p>
+          {props.maxSize &&
+            <p>{t('ra.input.file.maxSize', {maxSize: prettyBytes(props.maxSize as number, {locale: true, binary: true})})}</p>}
         </div>
       ) : (
         <div>
           <p>{t(labelSingle)}</p>
-          <p>{t('ra.input.file.maxSize', {maxSize: prettyBytes(props.maxSize as number, {locale: true, binary: true})})}</p>
+          {props.maxSize &&
+            <p>{t('ra.input.file.maxSize', {maxSize: prettyBytes(props.maxSize as number, {locale: true, binary: true})})}</p>}
         </div>
       )}
       {...rest}
