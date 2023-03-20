@@ -59,7 +59,6 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>

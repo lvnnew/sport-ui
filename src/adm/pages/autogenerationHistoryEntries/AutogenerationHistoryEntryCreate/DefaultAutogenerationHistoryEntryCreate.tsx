@@ -82,7 +82,6 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>

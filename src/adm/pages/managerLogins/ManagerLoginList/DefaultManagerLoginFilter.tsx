@@ -62,7 +62,6 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
-          optionText='title'
         />
       </ReferenceInput>
     </Filter>

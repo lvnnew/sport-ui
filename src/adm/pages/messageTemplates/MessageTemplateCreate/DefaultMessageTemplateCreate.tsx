@@ -77,7 +77,6 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>
@@ -105,7 +104,6 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                   defaultValue={null}
                   parse={val => val || null}
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>

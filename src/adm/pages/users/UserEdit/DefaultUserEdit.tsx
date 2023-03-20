@@ -107,7 +107,6 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
                   defaultValue={null}
                   parse={val => val || null}
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>}

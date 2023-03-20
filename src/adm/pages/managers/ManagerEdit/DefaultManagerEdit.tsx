@@ -103,7 +103,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                   defaultValue={null}
                   parse={val => val || null}
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>
@@ -152,7 +151,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                   defaultValue={null}
                   parse={val => val || null}
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>
@@ -187,7 +185,6 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                   defaultValue={null}
                   parse={val => val || null}
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>}

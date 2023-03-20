@@ -49,7 +49,6 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>
@@ -69,7 +68,6 @@ const DefaultManagersToRoleCreate: FC<CreateProps> = (props: CreateProps) => {
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>

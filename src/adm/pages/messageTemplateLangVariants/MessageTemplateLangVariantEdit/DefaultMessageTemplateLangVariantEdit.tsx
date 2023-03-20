@@ -97,7 +97,6 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>
@@ -117,7 +116,6 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                   parse={val => val || null}
                   isRequired
                   noOptionsText='ra.message.noOptions'
-                  optionText='title'
                 />
               </ReferenceInput>
             </Grid>
