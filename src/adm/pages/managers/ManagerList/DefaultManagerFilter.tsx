@@ -51,6 +51,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <TextInput
@@ -87,6 +88,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <BooleanInput
@@ -115,6 +117,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
     </Filter>

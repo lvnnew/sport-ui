@@ -59,6 +59,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <TextInput
@@ -81,6 +82,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <ReferenceInput
@@ -97,6 +99,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <TextInput
@@ -120,6 +123,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <BooleanInput

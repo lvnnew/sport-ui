@@ -33,6 +33,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <ReferenceInput
@@ -49,6 +50,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <ReferenceInput
@@ -65,6 +67,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <TextInput
@@ -153,6 +156,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
       <ReferenceInput
@@ -169,6 +173,7 @@ const DefaultMailingMessageFilter: FC<any> = (props) => {
           defaultValue={null}
           parse={val => val || null}
           noOptionsText='ra.message.noOptions'
+          optionText='title'
         />
       </ReferenceInput>
     </Filter>
