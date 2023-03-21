@@ -4,10 +4,10 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
 } from 'react-admin';
 import MailingTypeFilter from './MailingTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -31,11 +31,13 @@ const DefaultMailingTypeList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.mailingTypes.title.plural'
       filters={<MailingTypeFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.mailingTypes.fields.id' />
         <TextField source='title' label='catalogs.mailingTypes.fields.title' />
       </Datagrid>

@@ -4,10 +4,10 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
 } from 'react-admin';
 import LanguageFilter from './LanguageFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -31,11 +31,13 @@ const DefaultLanguageList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.languages.title.plural'
       filters={<LanguageFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.languages.fields.id' />
         <TextField source='title' label='catalogs.languages.fields.title' />
       </Datagrid>

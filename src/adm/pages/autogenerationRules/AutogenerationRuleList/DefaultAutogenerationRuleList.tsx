@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
+  BooleanField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
-  BooleanField,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationRuleFilter from './AutogenerationRuleFilter';
@@ -33,11 +33,13 @@ const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.autogenerationRules.title.plural'
       filters={<AutogenerationRuleFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.autogenerationRules.fields.id' />
         <TextField source='title' label='catalogs.autogenerationRules.fields.title' />
         <DateField source='version' label='catalogs.autogenerationRules.fields.version' />

@@ -4,10 +4,10 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
 } from 'react-admin';
 import AuditLogActionTypeFilter from './AuditLogActionTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -31,11 +31,13 @@ const DefaultAuditLogActionTypeList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.auditLogActionTypes.title.plural'
       filters={<AuditLogActionTypeFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.auditLogActionTypes.fields.id' />
         <TextField source='title' label='catalogs.auditLogActionTypes.fields.title' />
       </Datagrid>

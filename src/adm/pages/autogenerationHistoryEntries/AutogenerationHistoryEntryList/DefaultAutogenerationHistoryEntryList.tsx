@@ -4,13 +4,13 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
   BooleanField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AutogenerationHistoryEntryFilter from './AutogenerationHistoryEntryFilter';
@@ -35,11 +35,13 @@ const DefaultAutogenerationHistoryEntryList: FC<ListProps> = (props: ListProps) 
       title='catalogs.autogenerationHistoryEntries.title.plural'
       filters={<AutogenerationHistoryEntryFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.autogenerationHistoryEntries.fields.id' />
         <DateField source='date' label='catalogs.autogenerationHistoryEntries.fields.date' showTime />
         <TextField source='originalEntityType' label='catalogs.autogenerationHistoryEntries.fields.originalEntityType' />

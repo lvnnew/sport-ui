@@ -70,7 +70,6 @@ const LoadableAuditLogShow = Loadable({
 const LoadableAuditLogEdit = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogEdit'),
 });
-
 const LoadableAuditLogList = Loadable({
   loader: () => import('./pages/auditLogs/AuditLogList'),
 });

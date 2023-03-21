@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  NumberField,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  NumberField,
-  TextField,
 } from 'react-admin';
 import TenantFilter from './TenantFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -32,11 +32,13 @@ const DefaultTenantList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.tenants.title.plural'
       filters={<TenantFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.tenants.fields.id' />
         <TextField source='title' label='catalogs.tenants.fields.title' />
         <NumberField source='utcOffset' label='catalogs.tenants.fields.utcOffset' />

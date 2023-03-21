@@ -4,12 +4,12 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AppRefreshTokenFilter from './AppRefreshTokenFilter';
@@ -34,11 +34,13 @@ const DefaultAppRefreshTokenList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.appRefreshTokens.title.plural'
       filters={<AppRefreshTokenFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.appRefreshTokens.fields.id' />
         <DateField source='create' label='catalogs.appRefreshTokens.fields.create' showTime />
         <ReferenceField source='userId' label='catalogs.appRefreshTokens.fields.userId' reference='users' link='show' />

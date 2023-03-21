@@ -4,13 +4,13 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
   BooleanField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import DelegationFilter from './DelegationFilter';
@@ -35,11 +35,13 @@ const DefaultDelegationList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.delegations.title.plural'
       filters={<DelegationFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.delegations.fields.id' />
         <ReferenceField source='fromId' label='catalogs.delegations.fields.fromId' reference='managers' link='show' />
         <ReferenceField source='toId' label='catalogs.delegations.fields.toId' reference='managers' link='show' />

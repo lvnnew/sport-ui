@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  NumberField,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  NumberField,
-  TextField,
 } from 'react-admin';
 import TagFilter from './TagFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -32,11 +32,13 @@ const DefaultTagList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.tags.title.plural'
       filters={<TagFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.tags.fields.id' />
         <TextField source='comment' label='catalogs.tags.fields.comment' />
       </Datagrid>

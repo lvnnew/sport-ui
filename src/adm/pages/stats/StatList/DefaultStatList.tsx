@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
+  NumberField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
-  NumberField,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import StatFilter from './StatFilter';
@@ -33,11 +33,13 @@ const DefaultStatList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.stats.title.plural'
       filters={<StatFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.stats.fields.id' />
         <DateField source='updated' label='catalogs.stats.fields.updated' showTime />
         <NumberField source='helloCount' label='catalogs.stats.fields.helloCount' />

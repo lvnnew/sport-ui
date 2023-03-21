@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  EditButton,
   TopToolbar,
+  EditButton,
   usePermissions,
 } from 'react-admin';
 import OpenAudit from '../../../commonActions/OpenAudit';

@@ -4,12 +4,12 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import MailingCampaignFilter from './MailingCampaignFilter';
@@ -34,11 +34,13 @@ const DefaultMailingCampaignList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.mailingCampaigns.title.plural'
       filters={<MailingCampaignFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.mailingCampaigns.fields.id' />
         <TextField source='title' label='catalogs.mailingCampaigns.fields.title' />
         <ReferenceField source='mailingTypeId' label='catalogs.mailingCampaigns.fields.mailingTypeId' reference='mailingTypes' link='show' />

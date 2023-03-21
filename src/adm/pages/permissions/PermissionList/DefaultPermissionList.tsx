@@ -4,10 +4,10 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
 } from 'react-admin';
 import PermissionFilter from './PermissionFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -31,11 +31,13 @@ const DefaultPermissionList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.permissions.title.plural'
       filters={<PermissionFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.permissions.fields.id' />
         <TextField source='title' label='catalogs.permissions.fields.title' />
       </Datagrid>

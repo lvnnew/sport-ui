@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
+  BooleanField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
-  BooleanField,
 } from 'react-admin';
 import MailingMessageStatusFilter from './MailingMessageStatusFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -32,11 +32,13 @@ const DefaultMailingMessageStatusList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.mailingMessageStatuses.title.plural'
       filters={<MailingMessageStatusFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.mailingMessageStatuses.fields.id' />
         <TextField source='title' label='catalogs.mailingMessageStatuses.fields.title' />
         <BooleanField source='final' label='catalogs.mailingMessageStatuses.fields.final' />

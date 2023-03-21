@@ -4,12 +4,12 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AggregateTrackingFilter from './AggregateTrackingFilter';
@@ -34,11 +34,13 @@ const DefaultAggregateTrackingList: FC<ListProps> = (props: ListProps) => {
       title='infoRegistries.aggregateTrackings.title.plural'
       filters={<AggregateTrackingFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='infoRegistries.aggregateTrackings.fields.id' />
         <ReferenceField source='entityTypeId' label='infoRegistries.aggregateTrackings.fields.entityTypeId' reference='entities' link='show' />
         <TextField source='entityId' label='infoRegistries.aggregateTrackings.fields.entityId' />

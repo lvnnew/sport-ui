@@ -4,12 +4,12 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import UnitFilter from './UnitFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -33,11 +33,13 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.units.title.plural'
       filters={<UnitFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.units.fields.id' />
         <TextField source='title' label='catalogs.units.fields.title' />
         <ReferenceField source='parentId' label='catalogs.units.fields.parentId' reference='units' link='show' />

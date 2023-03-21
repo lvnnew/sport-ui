@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  NumberField,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  NumberField,
-  TextField,
 } from 'react-admin';
 import TemplateStyleFilter from './TemplateStyleFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -32,11 +32,13 @@ const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.templateStyles.title.plural'
       filters={<TemplateStyleFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.templateStyles.fields.id' />
         <TextField source='title' label='catalogs.templateStyles.fields.title' />
         <TextField source='style' label='catalogs.templateStyles.fields.style' />

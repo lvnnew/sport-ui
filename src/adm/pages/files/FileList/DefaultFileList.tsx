@@ -4,11 +4,11 @@ import {
   List,
   Datagrid,
   ListProps,
+  NumberField,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  NumberField,
-  TextField,
 } from 'react-admin';
 import FileFilter from './FileFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -32,11 +32,13 @@ const DefaultFileList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.files.title.plural'
       filters={<FileFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.files.fields.id' />
         <TextField source='originalName' label='catalogs.files.fields.originalName' />
         <TextField source='mimetype' label='catalogs.files.fields.mimetype' />

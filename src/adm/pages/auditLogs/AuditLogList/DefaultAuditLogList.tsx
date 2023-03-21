@@ -4,13 +4,13 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   BooleanField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AuditLogFilter from './AuditLogFilter';
@@ -35,11 +35,13 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.auditLogs.title.plural'
       filters={<AuditLogFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.auditLogs.fields.id' />
         <DateField source='date' label='catalogs.auditLogs.fields.date' showTime />
         <TextField source='title' label='catalogs.auditLogs.fields.title' />

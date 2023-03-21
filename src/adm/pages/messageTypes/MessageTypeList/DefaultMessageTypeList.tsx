@@ -4,10 +4,10 @@ import {
   List,
   Datagrid,
   ListProps,
+  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
-  TextField,
 } from 'react-admin';
 import MessageTypeFilter from './MessageTypeFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -31,11 +31,13 @@ const DefaultMessageTypeList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.messageTypes.title.plural'
       filters={<MessageTypeFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <TextField source='id' label='catalogs.messageTypes.fields.id' />
         <TextField source='title' label='catalogs.messageTypes.fields.title' />
         <TextField source='description' label='catalogs.messageTypes.fields.description' />

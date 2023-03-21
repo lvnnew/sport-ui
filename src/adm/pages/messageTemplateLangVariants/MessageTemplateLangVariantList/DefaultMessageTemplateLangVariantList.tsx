@@ -4,12 +4,12 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import MessageTemplateLangVariantFilter from './MessageTemplateLangVariantFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -33,11 +33,13 @@ const DefaultMessageTemplateLangVariantList: FC<ListProps> = (props: ListProps) 
       title='catalogs.messageTemplateLangVariants.title.plural'
       filters={<MessageTemplateLangVariantFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.messageTemplateLangVariants.fields.id' />
         <TextField source='title' label='catalogs.messageTemplateLangVariants.fields.title' />
         <TextField source='subjectTemplate' label='catalogs.messageTemplateLangVariants.fields.subjectTemplate' />

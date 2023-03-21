@@ -4,13 +4,13 @@ import {
   List,
   Datagrid,
   ListProps,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
   NumberField,
   TextField,
   BooleanField,
   ReferenceField,
+  BulkActionProps,
+  usePermissions,
+  BulkDeleteButton,
 } from 'react-admin';
 import ManagerLoginFilter from './ManagerLoginFilter';
 import {hasPermission} from '../../../../utils/permissions';
@@ -34,11 +34,13 @@ const DefaultManagerLoginList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.managerLogins.title.plural'
       filters={<ManagerLoginFilter />}
       actions={<ListActions />}
-      bulkActionButtons={<DefaultBulkActionButton />}
       sort={{field: 'id', order: 'desc'}}
       {...props}
     >
-      <Datagrid rowClick='show'>
+      <Datagrid
+        rowClick='show'
+        bulkActionButtons={<DefaultBulkActionButton />}
+      >
         <NumberField source='id' label='catalogs.managerLogins.fields.id' />
         <TextField source='login' label='catalogs.managerLogins.fields.login' />
         <TextField source='passwordHash' label='catalogs.managerLogins.fields.passwordHash' />
