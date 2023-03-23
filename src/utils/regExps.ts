@@ -1,5 +1,5 @@
 export const onlyDigits = /^\d+$/iu;
-export const onlyPositiveDigits = /(?<![-.])\b[0-9]+\b(?!\.[0-9])/iu;
+export const onlyPositiveDigits = /^[+]?\d+([.]\d)?\d*$/iu;
 
 export const noDigits = /^\D*$/giu;
 export const noSpace = /^\S*$/giu;
