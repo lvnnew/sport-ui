@@ -106,6 +106,14 @@ const translationMessages: DeepPartial<TranslationMessages> = {
       markedAsDeleted: 'Status changed to Deleted',
     },
   },
+  auth: {
+    unauthorised: 'Unauthorised',
+    forbidden: 'Forbidden',
+  },
+  auth: {
+    unauthorised: 'Вы не авторизованы',
+    forbidden: 'Доступ запрещен',
+  },
   ra: {
     boolean: {
       null: 'not selected',

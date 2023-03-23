@@ -1,16 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import Trackers from './Trackers';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.querySelector('#root') as HTMLElement).render(
   <React.StrictMode>
     <Trackers />
     <App />
   </React.StrictMode>,
-  document.querySelector('#root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -56,6 +56,10 @@ const getAuthProvider = (endpoint: string): AuthProvider => ({
 
     return fetch(request)
       .then(response => {
+        if (response.status === 403) {
+          throw new Error('auth.forbidden');
+        }
+
         if (response.status < 200 || response.status >= 300) {
           throw new Error(response.statusText);
         }
@@ -80,13 +84,13 @@ const getAuthProvider = (endpoint: string): AuthProvider => ({
     if (status === 401 || status === 403) {
       localStorage.removeItem(JWT_STORAGE_KEY);
 
-      throw new Error('Unauthorised');
+      throw new Error('auth.unauthorised');
     }
   },
   checkAuth: async () => {
     return localStorage.getItem(JWT_STORAGE_KEY) ?
       Promise.resolve() :
-      Promise.reject(new Error('Unauthorised'));
+      Promise.reject(new Error('auth.unauthorised'));
   },
   logout: async () => {
     localStorage.removeItem(JWT_STORAGE_KEY);

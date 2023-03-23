@@ -12,11 +12,24 @@ import cacheTypePolicies from './cacheTypePolicies';
 
 let apollo: ApolloClient<NormalizedCacheObject> | undefined;
 
+const operationNamesForbiddenForRetry = [
+  'logout',
+];
+
 export const updateApolloLinks = (endpoint: string) => {
   // this method kills all previous requests, use it carefully
   if (apollo) {
     apollo.setLink(from([
-      new RetryLink(),
+      new RetryLink({
+        attempts: {
+          retryIf: (error, operation) => {
+            const forbiddenForRetryOpName = operationNamesForbiddenForRetry.includes(operation.operationName);
+            const forbiddenForRetryStatus: boolean = error.statusCode && error.statusCode === 401;
+
+            return !forbiddenForRetryOpName && !forbiddenForRetryStatus;
+          },
+        },
+      }),
       createUploadLink({
         headers: {
           authorization: `Bearer ${getJwtToken()}`,
