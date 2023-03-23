@@ -110,10 +110,6 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     unauthorised: 'Unauthorised',
     forbidden: 'Forbidden',
   },
-  auth: {
-    unauthorised: 'Вы не авторизованы',
-    forbidden: 'Доступ запрещен',
-  },
   ra: {
     boolean: {
       null: 'not selected',
