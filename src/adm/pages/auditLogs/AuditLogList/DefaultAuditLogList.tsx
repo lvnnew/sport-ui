@@ -8,26 +8,12 @@ import {
   TextField,
   BooleanField,
   ReferenceField,
-  BulkActionProps,
-  usePermissions,
-  BulkDeleteButton,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
 import AuditLogFilter from './AuditLogFilter';
-import {hasPermission} from '../../../../utils/permissions';
 import ListActions from '../../../../raUiLib/ListActions';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
-
-const DefaultBulkActionButton = (props: BulkActionProps) => {
-  const {permissions} = usePermissions<string[]>();
-
-  return (
-    <>
-      {hasPermission(permissions, 'auditLogs.delete') && <BulkDeleteButton {...props} />}
-    </>
-  );
-};
 
 const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
   return (
@@ -40,7 +26,7 @@ const DefaultAuditLogList: FC<ListProps> = (props: ListProps) => {
     >
       <Datagrid
         rowClick='show'
-        bulkActionButtons={<DefaultBulkActionButton />}
+        bulkActionButtons={false}
       >
         <NumberField source='id' label='catalogs.auditLogs.fields.id' />
         <DateField source='date' label='catalogs.auditLogs.fields.date' showTime />
