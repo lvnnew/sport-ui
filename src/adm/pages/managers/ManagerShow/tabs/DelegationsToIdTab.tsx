@@ -4,7 +4,6 @@ import {
   TabProps,
   Tab,
   NumberField,
-  TextField,
   ReferenceField,
   BooleanField,
   ReferenceManyField,

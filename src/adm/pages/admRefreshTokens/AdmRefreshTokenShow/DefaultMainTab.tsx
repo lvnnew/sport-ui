@@ -4,8 +4,8 @@ import {
   Tab,
   TabProps,
   NumberField,
-  TextField,
   ReferenceField,
+  TextField,
   Labeled,
 } from 'react-admin';
 import DateField from '../../../../uiLib/DateField';
