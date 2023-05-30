@@ -3,7 +3,7 @@ import {MenuElement} from '../uiLib/menu/MenuItem';
 const getAdditionalMenu = () => {
   const menuData: MenuElement[] = [
     {
-      label: 'catalogs.stats.title',
+      label: 'catalogs.stats.title.plural',
       link: '/statsDashboard',
       icon: 'DetailsOutlined',
       debugOnly: true,
