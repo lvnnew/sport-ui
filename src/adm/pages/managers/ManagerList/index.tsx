@@ -2,10 +2,10 @@ import React, {FC} from 'react';
 import {
   ListProps,
 } from 'react-admin';
-import DefaultManagerList from './DefaultManagerList';
+import CustomManagerList from './CustomManagerList';
 
 const ManagerList: FC<ListProps> = (props: ListProps) => (
-  <DefaultManagerList {...props} />
+  <CustomManagerList {...props} />
 );
 
 export default ManagerList;

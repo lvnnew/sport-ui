@@ -20,6 +20,7 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     sbrInvestigation: 'Sbr Investigation',
     cardIssue: 'Выпуск карты',
 
+    create: 'Создать',
     approve: 'Утвердить',
     cancel: 'Отмена',
     review: 'Отклонить',
