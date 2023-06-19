@@ -155,6 +155,7 @@ deploy-prod-previous:
     DOCKER_REGISTRY_DOMAIN: ${DEV_DOCKER_REGISTRY_DOMAIN}
     DOCKER_REGISTRY_PASSWORD: ${DEV_DOCKER_REGISTRY_PASSWORD}
     DOCKER_REGISTRY_USERNAME: ${DEV_DOCKER_REGISTRY_USERNAME}
+    ENDPOINT: ${DEV_ENDPOINT}
 
 .deploy-prod:
   extends: .deploy-ui
@@ -176,6 +177,7 @@ deploy-prod-previous:
     DOCKER_REGISTRY_DOMAIN: ${PROD_DOCKER_REGISTRY_DOMAIN}
     DOCKER_REGISTRY_PASSWORD: ${PROD_DOCKER_REGISTRY_PASSWORD}
     DOCKER_REGISTRY_USERNAME: ${PROD_DOCKER_REGISTRY_USERNAME}
+    ENDPOINT: ${PROD_ENDPOINT}
 
 .deploy-ui:
   extends: .deploy
@@ -215,3 +217,4 @@ deploy-prod-previous:
       --set "dockerRegistry.domain=${DOCKER_REGISTRY_DOMAIN}"
       --set "dockerRegistry.password=${DOCKER_REGISTRY_PASSWORD}"
       --set "dockerRegistry.username=${DOCKER_REGISTRY_USERNAME}"
+      --set "endpoint=${ENDPOINT}"

@@ -86,10 +86,10 @@ spec:
           value: {{ $.Values.random | quote }}
         - name: ENV
           value: '{{ $.Values.global.env }}'
-        - name: ENDPOINT
-          value: 'https://{{ $.Values.ingress.domains.endpoint }}.{{ $.Values.global.env }}.apps.{{ $.Values.global.clusterName }}.{{ $.Values.ingress.host }}/adm'
         - name: ADMIN_RECAPTCHA_PUBLIC_KEY
           value: {{ $.Values.admin.recaptcha.publicKey | quote }}
+        - name: ENDPOINT
+          value: {{ $.Values.endpoint | quote }}
 
         - name: K8S_NODE_NAME
           valueFrom:
