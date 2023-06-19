@@ -7,12 +7,12 @@ import {
   ToolbarProps,
   Toolbar,
   SaveButton,
-  DeleteButton,
-  usePermissions,
   TextInput,
   ReferenceInput,
   AutocompleteInput,
   BooleanInput,
+  DeleteButton,
+  usePermissions,
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import DateInput from '../../../../uiLib/DateInput';

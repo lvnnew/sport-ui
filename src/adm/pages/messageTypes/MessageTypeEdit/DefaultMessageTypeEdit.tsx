@@ -7,9 +7,9 @@ import {
   ToolbarProps,
   Toolbar,
   SaveButton,
+  TextInput,
   DeleteButton,
   usePermissions,
-  TextInput,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';

@@ -7,8 +7,6 @@ import {
   ToolbarProps,
   Toolbar,
   SaveButton,
-  DeleteButton,
-  usePermissions,
   TextInput,
   BooleanInput,
   ReferenceInput,
@@ -18,21 +16,17 @@ import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogValidation from '../getAuditLogValidation';
-import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 const DefaultToolbar = (props: ToolbarProps) => {
-  const {permissions} = usePermissions<string[]>();
-
   return (
     <Toolbar
       {...props}
       sx={{display: 'flex', justifyContent: 'space-between'}}
     >
       <SaveButton />
-      {hasPermission(permissions, 'auditLogs.delete') && <DeleteButton mutationMode='pessimistic' />}
     </Toolbar>
   );
 };

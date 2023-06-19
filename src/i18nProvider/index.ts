@@ -38,6 +38,7 @@ const i18nProvider: I18nProvider = ({
     },
     'ru',
     locales,
+    {allowMissing: true}, // turned off notifications about missing keys
   ),
   locales,
 });

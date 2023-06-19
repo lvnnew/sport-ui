@@ -111,6 +111,16 @@ const enCatalogs = {
       ignoreVersionOnHistory: 'Ignore version on history',
     },
   },
+  configurationVariables: {
+    title: {
+      plural: 'Конфигурационные переменные',
+      singular: 'Конфигурационная переменная',
+    },
+    fields: {
+      id: 'Id',
+      value: 'Значение',
+    },
+  },
   delegations: {
     title: {
       plural: 'Delegations',

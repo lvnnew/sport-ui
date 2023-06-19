@@ -114,6 +114,18 @@ const ResourcesPage: FC = () => {
       <NumberWiget
         request={gql`
           query {
+            _allConfigurationVariablesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allConfigurationVariablesMeta?.count}
+        title={translate('catalogs.configurationVariables.title.plural')}
+        to='/configurationVariables'
+      />
+      <NumberWiget
+        request={gql`
+          query {
             _allDelegationsMeta {
               count
             }

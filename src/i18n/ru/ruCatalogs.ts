@@ -111,6 +111,16 @@ const ruCatalogs = {
       ignoreVersionOnHistory: 'Нужно ли учитывать версию при поиске сущностей ещё не обработанных правилом',
     },
   },
+  configurationVariables: {
+    title: {
+      plural: 'Конфигурационные переменные',
+      singular: 'Конфигурационная переменная',
+    },
+    fields: {
+      id: 'Ид',
+      value: 'Значение',
+    },
+  },
   delegations: {
     title: {
       plural: 'Делегирования',

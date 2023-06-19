@@ -9,6 +9,7 @@ export const mapping = {
   auditLogs: 'AuditLog',
   autogenerationHistoryEntries: 'AutogenerationHistoryEntry',
   autogenerationRules: 'AutogenerationRule',
+  configurationVariables: 'ConfigurationVariable',
   delegations: 'Delegation',
   entities: 'Entity',
   files: 'File',

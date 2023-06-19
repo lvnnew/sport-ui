@@ -94,6 +94,18 @@ const LoadableAutogenerationRuleCreate = Loadable({
 const LoadableAutogenerationRuleList = Loadable({
   loader: () => import('./pages/autogenerationRules/AutogenerationRuleList'),
 });
+const LoadableConfigurationVariableShow = Loadable({
+  loader: () => import('./pages/configurationVariables/ConfigurationVariableShow'),
+});
+const LoadableConfigurationVariableEdit = Loadable({
+  loader: () => import('./pages/configurationVariables/ConfigurationVariableEdit'),
+});
+const LoadableConfigurationVariableCreate = Loadable({
+  loader: () => import('./pages/configurationVariables/ConfigurationVariableCreate'),
+});
+const LoadableConfigurationVariableList = Loadable({
+  loader: () => import('./pages/configurationVariables/ConfigurationVariableList'),
+});
 const LoadableDelegationShow = Loadable({
   loader: () => import('./pages/delegations/DelegationShow'),
 });
@@ -477,6 +489,16 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         list={hasPermission(permissions, 'autogenerationRules.all') ? LoadableAutogenerationRuleList : undefined}
         options={{label: translate('catalogs.autogenerationRules.title.singular')}}
         recordRepresentation='title'
+      />,
+      <Resource
+        key='configurationVariables'
+        name='configurationVariables'
+        show={hasPermission(permissions, 'configurationVariables.get') ? LoadableConfigurationVariableShow : undefined}
+        edit={hasPermission(permissions, 'configurationVariables.update') ? LoadableConfigurationVariableEdit : undefined}
+        create={hasPermission(permissions, 'configurationVariables.create') ? LoadableConfigurationVariableCreate : undefined}
+        list={hasPermission(permissions, 'configurationVariables.all') ? LoadableConfigurationVariableList : undefined}
+        options={{label: translate('catalogs.configurationVariables.title.singular')}}
+        recordRepresentation='id'
       />,
       <Resource
         key='delegations'

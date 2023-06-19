@@ -7,12 +7,12 @@ import {
   ToolbarProps,
   Toolbar,
   SaveButton,
-  DeleteButton,
-  usePermissions,
   TextInput,
   ReferenceInput,
   AutocompleteInput,
   BooleanInput,
+  DeleteButton,
+  usePermissions,
 } from 'react-admin';
 import {useDebug} from '../../../../contexts/DebugContext';
 import {Grid} from '@mui/material';

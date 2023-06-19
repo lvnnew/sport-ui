@@ -7,9 +7,9 @@ import {
   ToolbarProps,
   Toolbar,
   SaveButton,
+  NumberInput,
   DeleteButton,
   usePermissions,
-  NumberInput,
 } from 'react-admin';
 import DateTimeInput from '../../../../uiLib/DateTimeInput';
 import {Grid} from '@mui/material';

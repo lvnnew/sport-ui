@@ -118,6 +118,12 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
+      label: 'catalogs.configurationVariables.title.plural',
+      link: '/configurationVariables',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
       label: 'catalogs.managerLogins.title.plural',
       link: '/managerLogins',
       icon: 'DetailsOutlined',
