@@ -183,6 +183,7 @@ deploy-prod-previous:
   extends: .deploy
   variables:
     DEPLOY_KIND: "ui"
+    NODEPORT_SERVICE_ENABLED: "true"
 
 .deploy:
   image:
@@ -212,6 +213,7 @@ deploy-prod-previous:
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"
       --set "style=${STYLE}"
+      --set "nodeportService.enabled=${NODEPORT_SERVICE_ENABLED}"
       --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --set "admin.recaptcha.publicKey=${ADMIN_RECAPTCHA_PUBLIC_KEY}"
       --set "dockerRegistry.domain=${DOCKER_REGISTRY_DOMAIN}"
