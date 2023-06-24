@@ -149,6 +149,7 @@ deploy-prod-previous:
     DEV: "false"
     HOST: "making.ventures"
     ROOT_ENABLED: "false"
+    NODEPORT_SERVICE_ENABLED: "false"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
@@ -171,6 +172,7 @@ deploy-prod-previous:
     DEV: "false"
     HOST: "making.ventures"
     ROOT_ENABLED: "true"
+    NODEPORT_SERVICE_ENABLED: "true"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${PROD_ADMIN_RECAPTCHA_PUBLIC_KEY}
@@ -183,7 +185,6 @@ deploy-prod-previous:
   extends: .deploy
   variables:
     DEPLOY_KIND: "ui"
-    NODEPORT_SERVICE_ENABLED: "true"
 
 .deploy:
   image:
