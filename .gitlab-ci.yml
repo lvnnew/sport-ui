@@ -149,7 +149,6 @@ deploy-prod-previous:
     DEV: "false"
     HOST: "making.ventures"
     ROOT_ENABLED: "false"
-    NODEPORT_SERVICE_ENABLED: "false"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
@@ -172,7 +171,6 @@ deploy-prod-previous:
     DEV: "false"
     HOST: "making.ventures"
     ROOT_ENABLED: "true"
-    NODEPORT_SERVICE_ENABLED: "true"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${PROD_ADMIN_RECAPTCHA_PUBLIC_KEY}
@@ -214,7 +212,6 @@ deploy-prod-previous:
       --set "app.tag=${TAG}"
       --set "ingress.host=${HOST}"
       --set "style=${STYLE}"
-      --set "nodeportService.enabled=${NODEPORT_SERVICE_ENABLED}"
       --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --set "admin.recaptcha.publicKey=${ADMIN_RECAPTCHA_PUBLIC_KEY}"
       --set "dockerRegistry.domain=${DOCKER_REGISTRY_DOMAIN}"
