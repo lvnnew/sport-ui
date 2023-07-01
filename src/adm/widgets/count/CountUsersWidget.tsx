@@ -2,9 +2,9 @@
 import React, {
   FC,
 } from 'react';
-import NumberWiget, {
-  NumberWigetProps,
-} from '../../../widgets/NumberWiget';
+import NumberWidget, {
+  NumberWidgetProps,
+} from '../../../widgets/NumberWidget';
 import {
   gql,
 } from '@apollo/client';
@@ -13,7 +13,7 @@ import {UserFilter} from '../../../generated/graphql';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface CountUsersWidgetProps extends
-Omit<NumberWigetProps, 'request' | 'resultToValue'> {
+Omit<NumberWidgetProps, 'request' | 'resultToValue'> {
   filter?: UserFilter;
 }
 
@@ -22,7 +22,7 @@ const CountUsersWidget: FC<CountUsersWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <NumberWiget
+    <NumberWidget
       measuring='шт'
       {...rest}
       options={{

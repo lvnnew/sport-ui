@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   MessageTemplate,
   QueryAllMessageTemplatesArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListMessageTemplatesWidgetProps extends
-Omit<ListWigetProps<MessageTemplate>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<MessageTemplate>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllMessageTemplatesArgs {
   children?: FC<MessageTemplate>,
 }
@@ -71,7 +71,7 @@ const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<MessageTemplate>
+    <ListWidget<MessageTemplate>
       {...rest}
       source='messageTemplates'
       options={{
@@ -110,7 +110,7 @@ const ListMessageTemplatesWidget: FC<ListMessageTemplatesWidgetProps> = ({
       resultToValue={result => result?.allMessageTemplates}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

@@ -2,9 +2,9 @@
 import React, {
   FC,
 } from 'react';
-import NumberWiget, {
-  NumberWigetProps,
-} from '../../../widgets/NumberWiget';
+import NumberWidget, {
+  NumberWidgetProps,
+} from '../../../widgets/NumberWidget';
 import {
   gql,
 } from '@apollo/client';
@@ -13,7 +13,7 @@ import {AggregateTrackingFilter} from '../../../generated/graphql';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface CountAggregateTrackingsWidgetProps extends
-Omit<NumberWigetProps, 'request' | 'resultToValue'> {
+Omit<NumberWidgetProps, 'request' | 'resultToValue'> {
   filter?: AggregateTrackingFilter;
 }
 
@@ -22,7 +22,7 @@ const CountAggregateTrackingsWidget: FC<CountAggregateTrackingsWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <NumberWiget
+    <NumberWidget
       measuring='шт'
       {...rest}
       options={{

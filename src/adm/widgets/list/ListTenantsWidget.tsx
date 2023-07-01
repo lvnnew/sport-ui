@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   Tenant,
   QueryAllTenantsArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListTenantsWidgetProps extends
-Omit<ListWigetProps<Tenant>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<Tenant>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllTenantsArgs {
   children?: FC<Tenant>,
 }
@@ -62,7 +62,7 @@ const ListTenantsWidget: FC<ListTenantsWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<Tenant>
+    <ListWidget<Tenant>
       {...rest}
       source='tenants'
       options={{
@@ -98,7 +98,7 @@ const ListTenantsWidget: FC<ListTenantsWidgetProps> = ({
       resultToValue={result => result?.allTenants}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

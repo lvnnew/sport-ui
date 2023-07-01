@@ -1,7 +1,7 @@
 import React, {
   FC,
 } from 'react';
-import NumberWiget from '../widgets/NumberWiget';
+import NumberWidget from '../widgets/NumberWidget';
 import {
   gql,
 } from '@apollo/client';
@@ -15,7 +15,7 @@ const ResourcesPage: FC = () => {
 
   return (
     <Grid container>
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAdmRefreshTokensMeta {
@@ -27,7 +27,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.admRefreshTokens.title.plural')}
         to='/admRefreshTokens'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAggregateTrackingsMeta {
@@ -39,7 +39,7 @@ const ResourcesPage: FC = () => {
         title={translate('infoRegistries.aggregateTrackings.title.plural')}
         to='/aggregateTrackings'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAppLoginsMeta {
@@ -51,7 +51,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.appLogins.title.plural')}
         to='/appLogins'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAppRefreshTokensMeta {
@@ -63,7 +63,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.appRefreshTokens.title.plural')}
         to='/appRefreshTokens'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAuditLogActionTypesMeta {
@@ -75,7 +75,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.auditLogActionTypes.title.plural')}
         to='/auditLogActionTypes'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAuditLogsMeta {
@@ -87,7 +87,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.auditLogs.title.plural')}
         to='/auditLogs'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAutogenerationHistoryEntriesMeta {
@@ -99,7 +99,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.autogenerationHistoryEntries.title.plural')}
         to='/autogenerationHistoryEntries'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allAutogenerationRulesMeta {
@@ -111,7 +111,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.autogenerationRules.title.plural')}
         to='/autogenerationRules'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allConfigurationVariablesMeta {
@@ -123,7 +123,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.configurationVariables.title.plural')}
         to='/configurationVariables'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allDelegationsMeta {
@@ -135,7 +135,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.delegations.title.plural')}
         to='/delegations'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allEntitiesMeta {
@@ -147,7 +147,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.entities.title.plural')}
         to='/entities'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allFilesMeta {
@@ -159,7 +159,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.files.title.plural')}
         to='/files'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allLanguagesMeta {
@@ -171,7 +171,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.languages.title.plural')}
         to='/languages'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMailingCampaignStatusesMeta {
@@ -183,7 +183,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.mailingCampaignStatuses.title.plural')}
         to='/mailingCampaignStatuses'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMailingCampaignsMeta {
@@ -195,7 +195,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.mailingCampaigns.title.plural')}
         to='/mailingCampaigns'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMailingMessageStatusesMeta {
@@ -207,7 +207,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.mailingMessageStatuses.title.plural')}
         to='/mailingMessageStatuses'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMailingMessagesMeta {
@@ -219,7 +219,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.mailingMessages.title.plural')}
         to='/mailingMessages'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMailingTypesMeta {
@@ -231,7 +231,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.mailingTypes.title.plural')}
         to='/mailingTypes'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allManagerLoginsMeta {
@@ -243,7 +243,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.managerLogins.title.plural')}
         to='/managerLogins'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allManagersMeta {
@@ -255,7 +255,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.managers.title.plural')}
         to='/managers'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allManagersToPermissionsMeta {
@@ -267,7 +267,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.managersToPermissions.title.plural')}
         to='/managersToPermissions'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allManagersToRolesMeta {
@@ -279,7 +279,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.managersToRoles.title.plural')}
         to='/managersToRoles'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMessageTemplateLangVariantsMeta {
@@ -291,7 +291,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.messageTemplateLangVariants.title.plural')}
         to='/messageTemplateLangVariants'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMessageTemplatesMeta {
@@ -303,7 +303,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.messageTemplates.title.plural')}
         to='/messageTemplates'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allMessageTypesMeta {
@@ -315,7 +315,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.messageTypes.title.plural')}
         to='/messageTypes'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allPermissionsMeta {
@@ -327,7 +327,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.permissions.title.plural')}
         to='/permissions'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allRolesMeta {
@@ -339,7 +339,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.roles.title.plural')}
         to='/roles'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allRolesToPermissionsMeta {
@@ -351,7 +351,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.rolesToPermissions.title.plural')}
         to='/rolesToPermissions'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allStatsMeta {
@@ -363,7 +363,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.stats.title.plural')}
         to='/stats'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allTagsMeta {
@@ -375,7 +375,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.tags.title.plural')}
         to='/tags'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allTemplateStylesMeta {
@@ -387,7 +387,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.templateStyles.title.plural')}
         to='/templateStyles'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allTenantsMeta {
@@ -399,7 +399,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.tenants.title.plural')}
         to='/tenants'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allUnitsMeta {
@@ -411,7 +411,7 @@ const ResourcesPage: FC = () => {
         title={translate('catalogs.units.title.plural')}
         to='/units'
       />
-      <NumberWiget
+      <NumberWidget
         request={gql`
           query {
             _allUsersMeta {

@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   AppRefreshToken,
   QueryAllAppRefreshTokensArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAppRefreshTokensWidgetProps extends
-Omit<ListWigetProps<AppRefreshToken>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<AppRefreshToken>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAppRefreshTokensArgs {
   children?: FC<AppRefreshToken>,
 }
@@ -65,7 +65,7 @@ const ListAppRefreshTokensWidget: FC<ListAppRefreshTokensWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<AppRefreshToken>
+    <ListWidget<AppRefreshToken>
       {...rest}
       source='appRefreshTokens'
       options={{
@@ -102,7 +102,7 @@ const ListAppRefreshTokensWidget: FC<ListAppRefreshTokensWidgetProps> = ({
       resultToValue={result => result?.allAppRefreshTokens}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

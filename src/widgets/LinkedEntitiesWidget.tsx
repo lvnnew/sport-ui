@@ -2,7 +2,6 @@ import * as React from 'react';
 import {FC} from 'react';
 import {
   ChipField,
-  ReferenceField,
   ReferenceManyField,
   SingleFieldList,
   useRecordContext,
@@ -12,24 +11,20 @@ import CardWithIcon, {
   CardWithIconProps,
 } from './CardWithIcon/CardWithIcon';
 
-export interface ManyToManyWigetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
+export interface LinkedEntitiesWidgetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
   icon?: FC<any>;
   title?: string;
-  linkResource: string;
-  linkLeftField: string;
-  linkRightField: string;
-  linkedResource: string;
-  linkedResourceTitleField: string;
+  reference: string;
+  linkField: string;
+  titleSource: string;
 }
 
-const ManyToManyWiget: FC<ManyToManyWigetProps> = (
+const LinkedEntitiesWidget: FC<LinkedEntitiesWidgetProps> = (
   {
     icon,
-    linkResource,
-    linkLeftField,
-    linkRightField,
-    linkedResource,
-    linkedResourceTitleField,
+    reference,
+    linkField,
+    titleSource,
     ...rest
   },
 ) => {
@@ -46,23 +41,17 @@ const ManyToManyWiget: FC<ManyToManyWigetProps> = (
     >
 
       <ReferenceManyField
-        reference={linkResource}
-        target={linkLeftField}
+        reference={reference}
+        target={linkField}
         label={false}
         perPage={1000}
       >
         <SingleFieldList>
-          <ReferenceField
-            source={linkRightField}
-            reference={linkedResource}
-            link='show'
-          >
-            <ChipField source={linkedResourceTitleField} />
-          </ReferenceField>
+          <ChipField source={titleSource} />
         </SingleFieldList>
       </ReferenceManyField>
     </CardWithIcon>
   );
 };
 
-export default ManyToManyWiget;
+export default LinkedEntitiesWidget;

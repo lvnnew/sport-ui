@@ -10,14 +10,14 @@ import {
   useGetOne, useRecordContext,
 } from 'react-admin';
 
-export interface FileWigetProps extends Omit<CardWithIconProps, 'icon'> {
+export interface FileWidgetProps extends Omit<CardWithIconProps, 'icon'> {
   icon?: FC<any>;
   title?: string;
   reference: string;
   source: string;
 }
 
-const FileWiget: FC<FileWigetProps> = (
+const FileWidget: FC<FileWidgetProps> = (
   {
     reference,
     source,
@@ -52,4 +52,4 @@ const FileWiget: FC<FileWigetProps> = (
   );
 };
 
-export default FileWiget;
+export default FileWidget;

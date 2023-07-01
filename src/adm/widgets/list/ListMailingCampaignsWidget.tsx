@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   MailingCampaign,
   QueryAllMailingCampaignsArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListMailingCampaignsWidgetProps extends
-Omit<ListWigetProps<MailingCampaign>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<MailingCampaign>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllMailingCampaignsArgs {
   children?: FC<MailingCampaign>,
 }
@@ -74,7 +74,7 @@ const ListMailingCampaignsWidget: FC<ListMailingCampaignsWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<MailingCampaign>
+    <ListWidget<MailingCampaign>
       {...rest}
       source='mailingCampaigns'
       options={{
@@ -114,7 +114,7 @@ const ListMailingCampaignsWidget: FC<ListMailingCampaignsWidgetProps> = ({
       resultToValue={result => result?.allMailingCampaigns}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

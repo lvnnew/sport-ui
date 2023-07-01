@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   AggregateTracking,
   QueryAllAggregateTrackingsArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAggregateTrackingsWidgetProps extends
-Omit<ListWigetProps<AggregateTracking>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<AggregateTracking>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAggregateTrackingsArgs {
   children?: FC<AggregateTracking>,
 }
@@ -74,7 +74,7 @@ const ListAggregateTrackingsWidget: FC<ListAggregateTrackingsWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<AggregateTracking>
+    <ListWidget<AggregateTracking>
       {...rest}
       source='aggregateTrackings'
       options={{
@@ -114,7 +114,7 @@ const ListAggregateTrackingsWidget: FC<ListAggregateTrackingsWidgetProps> = ({
       resultToValue={result => result?.allAggregateTrackings}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

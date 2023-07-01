@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   ConfigurationVariable,
   QueryAllConfigurationVariablesArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListConfigurationVariablesWidgetProps extends
-Omit<ListWigetProps<ConfigurationVariable>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<ConfigurationVariable>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllConfigurationVariablesArgs {
   children?: FC<ConfigurationVariable>,
 }
@@ -54,7 +54,7 @@ const ListConfigurationVariablesWidget: FC<ListConfigurationVariablesWidgetProps
   ...rest
 }) => {
   return (
-    <ListWiget<ConfigurationVariable>
+    <ListWidget<ConfigurationVariable>
       {...rest}
       source='configurationVariables'
       options={{
@@ -89,7 +89,7 @@ const ListConfigurationVariablesWidget: FC<ListConfigurationVariablesWidgetProps
       resultToValue={result => result?.allConfigurationVariables}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

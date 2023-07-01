@@ -12,7 +12,7 @@ import {
 } from '@apollo/client';
 import {useQuery} from 'react-query';
 
-export interface ListWigetProps<T> {
+export interface ListWidgetProps<T> {
   title?: string;
   children: FC<T>;
   request: DocumentNode;
@@ -30,8 +30,8 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
-  {title, children, request, options, resultToValue, action, source}: ListWigetProps<T>,
+const ListWidget: <T>(props: ListWidgetProps<T>) => ReactElement = <T, >(
+  {title, children, request, options, resultToValue, action, source}: ListWidgetProps<T>,
 ) => {
   const client = useApolloClient();
 
@@ -62,4 +62,4 @@ const ListWiget: <T>(props: ListWigetProps<T>) => ReactElement = <T, >(
   );
 };
 
-export default ListWiget;
+export default ListWidget;
