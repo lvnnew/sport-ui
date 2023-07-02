@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   AuditLogActionType,
   QueryAllAuditLogActionTypesArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAuditLogActionTypesWidgetProps extends
-Omit<ListWigetProps<AuditLogActionType>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<AuditLogActionType>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAuditLogActionTypesArgs {
   children?: FC<AuditLogActionType>,
 }
@@ -59,7 +59,7 @@ const ListAuditLogActionTypesWidget: FC<ListAuditLogActionTypesWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<AuditLogActionType>
+    <ListWidget<AuditLogActionType>
       {...rest}
       source='auditLogActionTypes'
       options={{
@@ -94,7 +94,7 @@ const ListAuditLogActionTypesWidget: FC<ListAuditLogActionTypesWidgetProps> = ({
       resultToValue={result => result?.allAuditLogActionTypes}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

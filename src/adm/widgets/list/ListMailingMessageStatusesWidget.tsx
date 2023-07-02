@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   MailingMessageStatus,
   QueryAllMailingMessageStatusesArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListMailingMessageStatusesWidgetProps extends
-Omit<ListWigetProps<MailingMessageStatus>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<MailingMessageStatus>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllMailingMessageStatusesArgs {
   children?: FC<MailingMessageStatus>,
 }
@@ -62,7 +62,7 @@ const ListMailingMessageStatusesWidget: FC<ListMailingMessageStatusesWidgetProps
   ...rest
 }) => {
   return (
-    <ListWiget<MailingMessageStatus>
+    <ListWidget<MailingMessageStatus>
       {...rest}
       source='mailingMessageStatuses'
       options={{
@@ -98,7 +98,7 @@ const ListMailingMessageStatusesWidget: FC<ListMailingMessageStatusesWidgetProps
       resultToValue={result => result?.allMailingMessageStatuses}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

@@ -2,9 +2,9 @@
 import React, {
   FC,
 } from 'react';
-import NumberWiget, {
-  NumberWigetProps,
-} from '../../../widgets/NumberWiget';
+import NumberWidget, {
+  NumberWidgetProps,
+} from '../../../widgets/NumberWidget';
 import {
   gql,
 } from '@apollo/client';
@@ -13,7 +13,7 @@ import {AutogenerationRuleFilter} from '../../../generated/graphql';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface CountAutogenerationRulesWidgetProps extends
-Omit<NumberWigetProps, 'request' | 'resultToValue'> {
+Omit<NumberWidgetProps, 'request' | 'resultToValue'> {
   filter?: AutogenerationRuleFilter;
 }
 
@@ -22,7 +22,7 @@ const CountAutogenerationRulesWidget: FC<CountAutogenerationRulesWidgetProps> = 
   ...rest
 }) => {
   return (
-    <NumberWiget
+    <NumberWidget
       measuring='шт'
       {...rest}
       options={{

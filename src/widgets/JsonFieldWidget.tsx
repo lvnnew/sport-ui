@@ -11,13 +11,13 @@ import {
 import MultilineCardWithIcon from './CardWithIcon/MultilineCardWithIcon';
 import 'react-json-view-lite/dist/index.css';
 
-export interface JsonFieldWigetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
+export interface JsonFieldWidgetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
   icon?: FC<any>;
   title?: string;
   data: JSON;
 }
 
-const JsonFieldWiget: FC<JsonFieldWigetProps> = (
+const JsonFieldWidget: FC<JsonFieldWidgetProps> = (
   {
     data,
     ...rest
@@ -36,4 +36,4 @@ const JsonFieldWiget: FC<JsonFieldWigetProps> = (
   );
 };
 
-export default JsonFieldWiget;
+export default JsonFieldWidget;

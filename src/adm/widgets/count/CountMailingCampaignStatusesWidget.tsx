@@ -2,9 +2,9 @@
 import React, {
   FC,
 } from 'react';
-import NumberWiget, {
-  NumberWigetProps,
-} from '../../../widgets/NumberWiget';
+import NumberWidget, {
+  NumberWidgetProps,
+} from '../../../widgets/NumberWidget';
 import {
   gql,
 } from '@apollo/client';
@@ -13,7 +13,7 @@ import {MailingCampaignStatusFilter} from '../../../generated/graphql';
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface CountMailingCampaignStatusesWidgetProps extends
-Omit<NumberWigetProps, 'request' | 'resultToValue'> {
+Omit<NumberWidgetProps, 'request' | 'resultToValue'> {
   filter?: MailingCampaignStatusFilter;
 }
 
@@ -22,7 +22,7 @@ const CountMailingCampaignStatusesWidget: FC<CountMailingCampaignStatusesWidgetP
   ...rest
 }) => {
   return (
-    <NumberWiget
+    <NumberWidget
       measuring='шт'
       {...rest}
       options={{

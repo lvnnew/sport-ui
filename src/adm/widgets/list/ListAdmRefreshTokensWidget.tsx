@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   AdmRefreshToken,
   QueryAllAdmRefreshTokensArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAdmRefreshTokensWidgetProps extends
-Omit<ListWigetProps<AdmRefreshToken>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<AdmRefreshToken>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAdmRefreshTokensArgs {
   children?: FC<AdmRefreshToken>,
 }
@@ -65,7 +65,7 @@ const ListAdmRefreshTokensWidget: FC<ListAdmRefreshTokensWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<AdmRefreshToken>
+    <ListWidget<AdmRefreshToken>
       {...rest}
       source='admRefreshTokens'
       options={{
@@ -102,7 +102,7 @@ const ListAdmRefreshTokensWidget: FC<ListAdmRefreshTokensWidgetProps> = ({
       resultToValue={result => result?.allAdmRefreshTokens}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

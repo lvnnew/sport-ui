@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   RolesToPermission,
   QueryAllRolesToPermissionsArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListRolesToPermissionsWidgetProps extends
-Omit<ListWigetProps<RolesToPermission>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<RolesToPermission>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllRolesToPermissionsArgs {
   children?: FC<RolesToPermission>,
 }
@@ -62,7 +62,7 @@ const ListRolesToPermissionsWidget: FC<ListRolesToPermissionsWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<RolesToPermission>
+    <ListWidget<RolesToPermission>
       {...rest}
       source='rolesToPermissions'
       options={{
@@ -98,7 +98,7 @@ const ListRolesToPermissionsWidget: FC<ListRolesToPermissionsWidgetProps> = ({
       resultToValue={result => result?.allRolesToPermissions}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 

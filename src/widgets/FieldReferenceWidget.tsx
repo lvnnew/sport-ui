@@ -8,7 +8,7 @@ import {
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CardWithIcon, {CardWithIconProps} from './CardWithIcon/CardWithIcon';
 
-export interface FieldReferenceWigetProps extends Omit<CardWithIconProps, 'icon'> {
+export interface FieldReferenceWidgetProps extends Omit<CardWithIconProps, 'icon'> {
   icon?: FC<any>;
   title?: string;
   source: string;
@@ -16,7 +16,7 @@ export interface FieldReferenceWigetProps extends Omit<CardWithIconProps, 'icon'
   defaultValue?: string;
 }
 
-const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
+const FieldReferenceWidget: FC<FieldReferenceWidgetProps> = (
   {
     source,
     reference,
@@ -46,4 +46,4 @@ const FieldReferenceWiget: FC<FieldReferenceWigetProps> = (
   );
 };
 
-export default FieldReferenceWiget;
+export default FieldReferenceWidget;

@@ -8,7 +8,7 @@ import {
   DocumentNode, QueryHookOptions, useQuery,
 } from '@apollo/client';
 
-export interface NumberWigetProps extends Omit<CardWithIconProps, 'icon'> {
+export interface NumberWidgetProps extends Omit<CardWithIconProps, 'icon'> {
   icon?: FC<any>;
   title?: string;
   measuring?: string;
@@ -17,7 +17,7 @@ export interface NumberWigetProps extends Omit<CardWithIconProps, 'icon'> {
   resultToValue: (result: any) => number;
 }
 
-const NumberWiget: FC<NumberWigetProps> = (
+const NumberWidget: FC<NumberWidgetProps> = (
   {
     request,
     options,
@@ -37,4 +37,4 @@ const NumberWiget: FC<NumberWigetProps> = (
   );
 };
 
-export default NumberWiget;
+export default NumberWidget;

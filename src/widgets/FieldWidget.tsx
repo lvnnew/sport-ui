@@ -10,7 +10,7 @@ import CardWithIcon, {
   CardWithIconProps,
 } from './CardWithIcon/CardWithIcon';
 
-export interface FieldWigetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
+export interface FieldWidgetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
   icon?: FC<any>;
   title?: string;
   measuring?: string;
@@ -21,7 +21,7 @@ export interface FieldWigetProps extends Omit<CardWithIconProps, 'icon' | 'to'> 
   hideIfNoValue?: boolean;
 }
 
-const FieldWiget: FC<FieldWigetProps> = (
+const FieldWidget: FC<FieldWidgetProps> = (
   {
     source,
     measuring = '',
@@ -52,4 +52,4 @@ const FieldWiget: FC<FieldWigetProps> = (
   ) : null;
 };
 
-export default FieldWiget;
+export default FieldWidget;

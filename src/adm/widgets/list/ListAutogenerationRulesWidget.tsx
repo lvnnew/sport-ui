@@ -9,9 +9,9 @@ import {
   Link,
 } from 'react-router-dom';
 import {ListItem, ListItemText} from '@mui/material';
-import ListWiget, {
-  ListWigetProps,
-} from '../../../widgets/ListWiget';
+import ListWidget, {
+  ListWidgetProps,
+} from '../../../widgets/ListWidget';
 import {
   AutogenerationRule,
   QueryAllAutogenerationRulesArgs,
@@ -20,7 +20,7 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 interface ListAutogenerationRulesWidgetProps extends
-Omit<ListWigetProps<AutogenerationRule>, 'request' | 'resultToValue'| 'children' | 'source'>,
+Omit<ListWidgetProps<AutogenerationRule>, 'request' | 'resultToValue'| 'children' | 'source'>,
 QueryAllAutogenerationRulesArgs {
   children?: FC<AutogenerationRule>,
 }
@@ -77,7 +77,7 @@ const ListAutogenerationRulesWidget: FC<ListAutogenerationRulesWidgetProps> = ({
   ...rest
 }) => {
   return (
-    <ListWiget<AutogenerationRule>
+    <ListWidget<AutogenerationRule>
       {...rest}
       source='autogenerationRules'
       options={{
@@ -118,7 +118,7 @@ const ListAutogenerationRulesWidget: FC<ListAutogenerationRulesWidgetProps> = ({
       resultToValue={result => result?.allAutogenerationRules}
     >
       {(record) => children(record)}
-    </ListWiget>
+    </ListWidget>
   );
 };
 
