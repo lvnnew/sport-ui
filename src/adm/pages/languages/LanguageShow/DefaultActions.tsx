@@ -4,9 +4,9 @@ import {
   EditButton,
   usePermissions,
 } from 'react-admin';
-import OpenAudit from '../../../commonActions/OpenAudit';
+// import OpenAudit from '../../../commonActions/OpenAudit';
 import {hasPermission} from '../../../../utils/permissions';
-import OpenHelp from '../../../commonActions/OpenHelp';
+// import OpenHelp from '../../../commonActions/OpenHelp';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -15,8 +15,8 @@ const DefaultLanguageActions = () => {
 
   return (
     <TopToolbar sx={{alignItems: 'center'}}>
-      <OpenAudit entityTypeId='language' />
-      <OpenHelp entityType='languages' />
+      {/* <OpenAudit entityTypeId='language' />
+      <OpenHelp entityType='languages' /> */}
       {hasPermission(permissions, 'languages.update') && <EditButton />}
     </TopToolbar>
   );
