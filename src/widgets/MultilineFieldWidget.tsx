@@ -3,30 +3,30 @@ import {
   FC, useMemo,
 } from 'react';
 import {
-  useRecordContext, useTranslate,
+  useRecordContext,
+  useTranslate,
 } from 'react-admin';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import CardWithIcon, {
-  CardWithIconProps,
-} from './CardWithIcon/CardWithIcon';
+import MultilineCardWithIcon, {
+  MultilineCardWithIconProps,
+} from './CardWithIcon/MultilineCardWithIcon';
 
-export interface FieldWidgetProps extends Omit<CardWithIconProps, 'icon' | 'to'> {
-  icon?: FC<any>;
+export interface MultilineFieldWidgetProps extends Omit<MultilineCardWithIconProps, 'icon' | 'to'> {
+  // icon?: FC<any>;
   title?: string;
   measuring?: string;
   source: string;
   defaultValue?: string;
-  prepare?: (val: any) => string | undefined;
+  prepare?: (val: any) => string;
   to?: string | ((field: string) => string);
   hideIfNoValue?: boolean;
 }
 
-const FieldWidget: FC<FieldWidgetProps> = (
+const MultilineFieldWidget: FC<MultilineFieldWidgetProps> = (
   {
     source,
     measuring = '',
     defaultValue,
-    icon,
+    // icon,
     prepare,
     to,
     hideIfNoValue,
@@ -44,13 +44,13 @@ const FieldWidget: FC<FieldWidgetProps> = (
   }
 
   return val || !hideIfNoValue ? (
-    <CardWithIcon
+    <MultilineCardWithIcon
       {...rest}
       to={toValue}
-      icon={icon || ArrowForwardIosIcon}
+      // icon={icon || ArrowForwardIosIcon}
       subtitle={prepared ? String(prepared) + ' ' + measuring : translate('app.notDefined')}
     />
   ) : null;
 };
 
-export default FieldWidget;
+export default MultilineFieldWidget;

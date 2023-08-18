@@ -3,7 +3,7 @@ import {
   FC,
 } from 'react';
 import {
-  ReferenceField,
+  ReferenceField, useTranslate,
 } from 'react-admin';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CardWithIcon, {CardWithIconProps} from './CardWithIcon/CardWithIcon';
@@ -25,6 +25,8 @@ const FieldReferenceWidget: FC<FieldReferenceWidgetProps> = (
     ...rest
   },
 ) => {
+  const translate = useTranslate();
+
   return (
     <CardWithIcon
       {...rest}
@@ -34,7 +36,7 @@ const FieldReferenceWidget: FC<FieldReferenceWidgetProps> = (
         link='show'
         reference={reference}
         source={source}
-        emptyText={defaultValue}
+        emptyText={defaultValue || translate('app.notDefined')}
         sx={{
           fontSize: 25,
           '& .MuiTypography-root': {

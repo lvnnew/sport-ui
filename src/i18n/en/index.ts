@@ -24,6 +24,7 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     approve: 'Approve',
     cancel: 'Cancel',
     review: 'Review',
+    notDefined: 'Not defined',
     reviewReason: 'Review reason',
     createManualAccounting: 'Create manual accounting',
 

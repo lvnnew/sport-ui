@@ -24,6 +24,7 @@ const translationMessages: DeepPartial<TranslationMessages> = {
     approve: 'Утвердить',
     cancel: 'Отмена',
     review: 'Отклонить',
+    notDefined: 'Не указано',
     reviewReason: 'Причина отклонения',
     createManualAccounting: 'Создать ручное начисление',
 
