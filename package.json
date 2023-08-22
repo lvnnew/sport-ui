@@ -51,7 +51,7 @@
     "recharts": "^2.1.15",
     "remark-gfm": "^3.0.1",
     "typescript": "^4.8.4",
-    "web-vitals": "^3.0.4",
+    "web-vitals": "^3.4.0",
     "yup": "0.32.11"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "@testing-library/react": "^13.4.0",
     "@types/apollo-upload-client": "^17.0.2",
     "@types/classnames": "^2.3.1",
-    "@types/jest": "^29.2.0",
+    "@types/jest": "^29.5.3",
     "@types/lru-cache": "^7.10.10",
     "@types/md5": "^2.3.2",
     "@types/pluralize": "^0.0.29",
