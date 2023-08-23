@@ -2218,17 +2218,17 @@
   resolved "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-12.0.0.tgz"
   integrity sha512-M0qqxAcwCsIVfpFQSlGN5XjXWu8l5JDZN+fPt1LeW5SZexQTgnaEvgXAY+CeygRw0EeppWHi12JxESWiWrB0Sg==
 
-"@date-io/core@^2.16.0":
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/@date-io/core/-/core-2.16.0.tgz#7871bfc1d9bca9aa35ad444a239505589d0f22f6"
-  integrity sha512-DYmSzkr+jToahwWrsiRA2/pzMEtz9Bq1euJwoOuYwuwIYXnZFtHajY2E6a1VNVDc9jP8YUXK1BvnZH9mmT19Zg==
+"@date-io/core@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@date-io/core/-/core-2.17.0.tgz#360a4d0641f069776ed22e457876e8a8a58c205e"
+  integrity sha512-+EQE8xZhRM/hsY0CDTVyayMDDY5ihc4MqXCrPxooKw19yAzUIC6uUqsZeaOFNL9YKTNxYKrJP5DFgE8o5xRCOw==
 
-"@date-io/dayjs@^2.16.0":
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/@date-io/dayjs/-/dayjs-2.16.0.tgz#0d2c254ad8db1306fdc4b8eda197cb53c9af89dc"
-  integrity sha512-y5qKyX2j/HG3zMvIxTobYZRGnd1FUW2olZLS0vTj7bEkBQkjd2RO7/FEwDY03Z1geVGlXKnzIATEVBVaGzV4Iw==
+"@date-io/dayjs@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@date-io/dayjs/-/dayjs-2.17.0.tgz#ec3e2384136c028971ca2f78800a6877b9fdbe62"
+  integrity sha512-Iq1wjY5XzBh0lheFA0it6Dsyv94e8mTiNR8vuTai+KopxDkreL3YjwTmZHxkgB7/vd0RMIACStzVgWvPATnDCA==
   dependencies:
-    "@date-io/core" "^2.16.0"
+    "@date-io/core" "^2.17.0"
 
 "@emotion/babel-plugin@^11.10.0":
   version "11.10.0"
@@ -4347,10 +4347,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-loadable@^5.5.6":
-  version "5.5.6"
-  resolved "https://registry.npmjs.org/@types/react-loadable/-/react-loadable-5.5.6.tgz"
-  integrity sha512-2M7xH/wawZxNybbs/a76JkpUsMk4z6AxBh92cUtIBy2vK7EYYuitQbC4laY0hGz0e05R+mQ44YeHMtH2U+gMsw==
+"@types/react-loadable@^5.5.8":
+  version "5.5.8"
+  resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.5.8.tgz#aa5a619e1143eb0ccb3fda3995126e498a237e44"
+  integrity sha512-olSpMd7vaV9HGKZsObtThi4M5zUNolA/J7SGW3N/Ri+qUUNEanI1ZIDOjK/TJiJ7hSqj3CnG2JiAjH0qwUDxnQ==
   dependencies:
     "@types/react" "*"
     "@types/webpack" "^4"
