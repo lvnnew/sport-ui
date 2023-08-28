@@ -7,7 +7,6 @@ import {
   NumberField,
   ReferenceField,
   BooleanField,
-  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,

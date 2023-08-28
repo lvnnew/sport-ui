@@ -38,6 +38,7 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'simple-import-sort/imports': 'off',
     'array-bracket-newline': 'off',
     'array-element-newline': 'off',
     'canonical/import-specifier-newline': 'off',

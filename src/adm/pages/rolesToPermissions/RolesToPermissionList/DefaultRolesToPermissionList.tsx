@@ -6,7 +6,6 @@ import {
   ListProps,
   NumberField,
   ReferenceField,
-  TextField,
   BulkActionProps,
   usePermissions,
   BulkDeleteButton,
