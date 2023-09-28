@@ -17,6 +17,9 @@ RUN yarn build
 # Actual image
 FROM nginx:1.23-alpine
 
+ARG GIT_COMMIT
+ENV GIT_COMMIT=$GIT_COMMIT
+
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN apk add jq
