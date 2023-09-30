@@ -25,7 +25,7 @@
     "@testing-library/user-event": "^14.4.3",
     "apollo-upload-client": "^17.0.0",
     "classnames": "^2.3.2",
-    "dayjs": "^1.11.9",
+    "dayjs": "^1.11.10",
     "graphql": "^16.6.0",
     "loglevel": "^1.8.1",
     "material-ui-popup-state": "^4.1.0",
