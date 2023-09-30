@@ -3450,6 +3450,11 @@
     clsx "^2.0.0"
     prop-types "^15.8.1"
 
+"@mui/core-downloads-tracker@^5.14.11":
+  version "5.14.11"
+  resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.14.11.tgz#e829aceb5c0bbfc3383ed90a6a85445344dd65a7"
+  integrity sha512-uY8FLQURhXe3f3O4dS5OSGML9KDm9+IE226cBu78jarVIzdQGPlXwGIlSI9VJR8MvZDA6C0+6XfWDhWCHruC5Q==
+
 "@mui/icons-material@^5.0.1":
   version "5.6.2"
   resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.6.2.tgz"
@@ -3488,6 +3493,24 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
     react-transition-group "^4.4.2"
+
+"@mui/material@^5.14.11":
+  version "5.14.11"
+  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.14.11.tgz#7537f07c383a6cfa32a00fabc9959593478bc5c4"
+  integrity sha512-DnSdJzcR7lwG12JA5L2t8JF+RDzMygu5rCNW+logWb/KW2/TRzwLyVWO+CorHTBjBRd38DBxnwOCDiYkDd+N3A==
+  dependencies:
+    "@babel/runtime" "^7.22.15"
+    "@mui/base" "5.0.0-beta.17"
+    "@mui/core-downloads-tracker" "^5.14.11"
+    "@mui/system" "^5.14.11"
+    "@mui/types" "^7.2.4"
+    "@mui/utils" "^5.14.11"
+    "@types/react-transition-group" "^4.4.6"
+    clsx "^2.0.0"
+    csstype "^3.1.2"
+    prop-types "^15.8.1"
+    react-is "^18.2.0"
+    react-transition-group "^4.4.5"
 
 "@mui/private-theming@^5.14.11":
   version "5.14.11"
