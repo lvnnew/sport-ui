@@ -31,7 +31,7 @@ const DefaultMessageTypeList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.messageTypes.title.plural'
       filters={<MessageTypeFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

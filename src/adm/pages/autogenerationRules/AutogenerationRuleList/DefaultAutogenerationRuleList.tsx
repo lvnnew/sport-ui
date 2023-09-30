@@ -33,7 +33,7 @@ const DefaultAutogenerationRuleList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.autogenerationRules.title.plural'
       filters={<AutogenerationRuleFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

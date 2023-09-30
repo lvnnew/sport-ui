@@ -63,6 +63,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                 source='fromId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.delegations.fields.fromId'
               >
                 <AutocompleteInput
@@ -82,6 +83,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
                 source='toId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.delegations.fields.toId'
               >
                 <AutocompleteInput

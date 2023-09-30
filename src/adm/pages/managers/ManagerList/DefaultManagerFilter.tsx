@@ -41,6 +41,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         source='languageId'
         reference='languages'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managers.fields.languageId'
       >
         <AutocompleteInput
@@ -77,6 +78,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         source='unitId'
         reference='units'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managers.fields.unitId'
       >
         <AutocompleteInput
@@ -105,6 +107,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
         source='tenantId'
         reference='tenants'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managers.fields.tenantId'
       >
         <AutocompleteInput

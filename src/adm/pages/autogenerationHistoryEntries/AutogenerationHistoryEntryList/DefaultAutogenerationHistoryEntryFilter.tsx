@@ -42,6 +42,7 @@ const DefaultAutogenerationHistoryEntryFilter: FC<any> = (props) => {
         source='autogenerationRuleId'
         reference='autogenerationRules'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId'
       >
         <AutocompleteInput

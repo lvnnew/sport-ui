@@ -33,7 +33,7 @@ const DefaultUnitList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.units.title.plural'
       filters={<UnitFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

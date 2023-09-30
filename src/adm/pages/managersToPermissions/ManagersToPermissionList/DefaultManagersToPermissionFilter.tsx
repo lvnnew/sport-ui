@@ -22,6 +22,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managersToPermissions.fields.managerId'
       >
         <AutocompleteInput
@@ -38,6 +39,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
         source='permissionId'
         reference='permissions'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managersToPermissions.fields.permissionId'
       >
         <AutocompleteInput

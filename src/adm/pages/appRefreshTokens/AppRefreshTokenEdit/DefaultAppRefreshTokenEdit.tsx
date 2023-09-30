@@ -70,6 +70,7 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.appRefreshTokens.fields.userId'
               >
                 <AutocompleteInput

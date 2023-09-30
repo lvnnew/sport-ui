@@ -22,6 +22,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managersToRoles.fields.managerId'
       >
         <AutocompleteInput
@@ -38,6 +39,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
         source='roleId'
         reference='roles'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managersToRoles.fields.roleId'
       >
         <AutocompleteInput

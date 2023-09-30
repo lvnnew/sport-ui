@@ -71,6 +71,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 source='mailingTypeId'
                 reference='mailingTypes'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingCampaigns.fields.mailingTypeId'
               >
                 <AutocompleteInput
@@ -108,6 +109,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 source='mailingCampaignStatusId'
                 reference='mailingCampaignStatuses'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
               >
                 <AutocompleteInput
@@ -126,6 +128,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 source='messageTemplateId'
                 reference='messageTemplates'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingCampaigns.fields.messageTemplateId'
               >
                 <AutocompleteInput

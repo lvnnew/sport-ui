@@ -34,7 +34,7 @@ const DefaultDelegationList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.delegations.title.plural'
       filters={<DelegationFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

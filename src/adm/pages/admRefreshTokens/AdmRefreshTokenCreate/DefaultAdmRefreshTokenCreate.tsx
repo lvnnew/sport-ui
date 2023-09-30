@@ -48,6 +48,7 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.admRefreshTokens.fields.managerId'
               >
                 <AutocompleteInput

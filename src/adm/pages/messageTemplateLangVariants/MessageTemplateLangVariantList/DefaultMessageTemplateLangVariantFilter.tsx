@@ -40,6 +40,7 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
         source='messageTemplateId'
         reference='messageTemplates'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.messageTemplateLangVariants.fields.messageTemplateId'
       >
         <AutocompleteInput
@@ -56,6 +57,7 @@ const DefaultMessageTemplateLangVariantFilter: FC<any> = (props) => {
         source='languageId'
         reference='languages'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.messageTemplateLangVariants.fields.languageId'
       >
         <AutocompleteInput

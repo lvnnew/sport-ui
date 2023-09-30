@@ -29,6 +29,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         source='mailingTypeId'
         reference='mailingTypes'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.mailingCampaigns.fields.mailingTypeId'
       >
         <AutocompleteInput
@@ -58,6 +59,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         source='mailingCampaignStatusId'
         reference='mailingCampaignStatuses'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
       >
         <AutocompleteInput
@@ -74,6 +76,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
         source='messageTemplateId'
         reference='messageTemplates'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.mailingCampaigns.fields.messageTemplateId'
       >
         <AutocompleteInput

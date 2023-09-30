@@ -36,6 +36,7 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                 source='roleId'
                 reference='roles'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.rolesToPermissions.fields.roleId'
               >
                 <AutocompleteInput
@@ -55,6 +56,7 @@ const DefaultRolesToPermissionCreate: FC<CreateProps> = (props: CreateProps) => 
                 source='permissionId'
                 reference='permissions'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.rolesToPermissions.fields.permissionId'
               >
                 <AutocompleteInput

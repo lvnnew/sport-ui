@@ -31,7 +31,7 @@ const DefaultPermissionList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.permissions.title.plural'
       filters={<PermissionFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

@@ -33,6 +33,7 @@ const DefaultAppLoginFilter: FC<any> = (props) => {
         source='userId'
         reference='users'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.appLogins.fields.userId'
       >
         <AutocompleteInput

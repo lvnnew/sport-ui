@@ -34,7 +34,7 @@ const DefaultAdmRefreshTokenList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.admRefreshTokens.title.plural'
       filters={<AdmRefreshTokenFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

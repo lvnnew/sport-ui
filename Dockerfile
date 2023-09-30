@@ -19,6 +19,7 @@ FROM nginx:1.23-alpine
 
 ARG GIT_COMMIT
 ENV GIT_COMMIT=$GIT_COMMIT
+RUN echo $GIT_COMMIT
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 

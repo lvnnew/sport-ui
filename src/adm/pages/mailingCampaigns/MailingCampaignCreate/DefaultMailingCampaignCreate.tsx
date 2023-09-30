@@ -49,6 +49,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='mailingTypeId'
                 reference='mailingTypes'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingCampaigns.fields.mailingTypeId'
               >
                 <AutocompleteInput
@@ -86,6 +87,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='mailingCampaignStatusId'
                 reference='mailingCampaignStatuses'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
               >
                 <AutocompleteInput
@@ -104,6 +106,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='messageTemplateId'
                 reference='messageTemplates'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingCampaigns.fields.messageTemplateId'
               >
                 <AutocompleteInput

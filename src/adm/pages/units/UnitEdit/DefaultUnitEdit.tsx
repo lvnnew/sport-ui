@@ -68,6 +68,7 @@ const DefaultUnitEdit: FC<EditProps> = (props: EditProps) => {
                 source='parentId'
                 reference='units'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.units.fields.parentId'
               >
                 <AutocompleteInput

@@ -33,7 +33,7 @@ const DefaultUserList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.users.title.plural'
       filters={<UserFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

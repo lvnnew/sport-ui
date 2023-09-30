@@ -58,6 +58,7 @@ const DefaultRolesToPermissionEdit: FC<EditProps> = (props: EditProps) => {
                 source='roleId'
                 reference='roles'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.rolesToPermissions.fields.roleId'
               >
                 <AutocompleteInput
@@ -77,6 +78,7 @@ const DefaultRolesToPermissionEdit: FC<EditProps> = (props: EditProps) => {
                 source='permissionId'
                 reference='permissions'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.rolesToPermissions.fields.permissionId'
               >
                 <AutocompleteInput

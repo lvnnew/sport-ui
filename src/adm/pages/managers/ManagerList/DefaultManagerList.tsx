@@ -35,7 +35,7 @@ const DefaultManagerList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.managers.title.plural'
       filters={<ManagerFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

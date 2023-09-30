@@ -41,6 +41,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='mailingCampaignId'
                 reference='mailingCampaigns'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingMessages.fields.mailingCampaignId'
               >
                 <AutocompleteInput
@@ -60,6 +61,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='templateId'
                 reference='messageTemplates'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingMessages.fields.templateId'
               >
                 <AutocompleteInput
@@ -79,6 +81,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='languageId'
                 reference='languages'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingMessages.fields.languageId'
               >
                 <AutocompleteInput
@@ -197,6 +200,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='mailingMessageStatusId'
                 reference='mailingMessageStatuses'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingMessages.fields.mailingMessageStatusId'
               >
                 <AutocompleteInput
@@ -216,6 +220,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='messageTemplateLangVariantId'
                 reference='messageTemplateLangVariants'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.mailingMessages.fields.messageTemplateLangVariantId'
               >
                 <AutocompleteInput

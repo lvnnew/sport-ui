@@ -95,6 +95,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 source='entityTypeId'
                 reference='entities'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.entityTypeId'
               >
                 <AutocompleteInput
@@ -123,6 +124,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 source='actionTypeId'
                 reference='auditLogActionTypes'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.actionTypeId'
               >
                 <AutocompleteInput
@@ -142,6 +144,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.managerId'
               >
                 <AutocompleteInput
@@ -169,6 +172,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.userId'
               >
                 <AutocompleteInput

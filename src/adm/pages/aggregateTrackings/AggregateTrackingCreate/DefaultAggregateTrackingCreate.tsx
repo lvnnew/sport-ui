@@ -42,6 +42,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 source='entityTypeId'
                 reference='entities'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='infoRegistries.aggregateTrackings.fields.entityTypeId'
               >
                 <AutocompleteInput

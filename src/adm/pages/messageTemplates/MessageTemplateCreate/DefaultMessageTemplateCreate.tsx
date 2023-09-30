@@ -66,6 +66,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='messageTypeId'
                 reference='messageTypes'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.messageTemplates.fields.messageTypeId'
               >
                 <AutocompleteInput
@@ -94,6 +95,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='templateStyleId'
                 reference='templateStyles'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.messageTemplates.fields.templateStyleId'
               >
                 <AutocompleteInput

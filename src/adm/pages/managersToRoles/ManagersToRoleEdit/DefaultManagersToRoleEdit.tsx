@@ -60,6 +60,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.managersToRoles.fields.managerId'
               >
                 <AutocompleteInput
@@ -79,6 +80,7 @@ const DefaultManagersToRoleEdit: FC<EditProps> = (props: EditProps) => {
                 source='roleId'
                 reference='roles'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.managersToRoles.fields.roleId'
               >
                 <AutocompleteInput

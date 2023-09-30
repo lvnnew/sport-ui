@@ -48,6 +48,7 @@ const DefaultAppRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.appRefreshTokens.fields.userId'
               >
                 <AutocompleteInput

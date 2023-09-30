@@ -21,6 +21,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
         source='roleId'
         reference='roles'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.rolesToPermissions.fields.roleId'
       >
         <AutocompleteInput
@@ -37,6 +38,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
         source='permissionId'
         reference='permissions'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.rolesToPermissions.fields.permissionId'
       >
         <AutocompleteInput

@@ -71,6 +71,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 source='autogenerationRuleId'
                 reference='autogenerationRules'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.autogenerationHistoryEntries.fields.autogenerationRuleId'
               >
                 <AutocompleteInput

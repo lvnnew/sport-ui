@@ -31,7 +31,7 @@ const DefaultMailingCampaignStatusList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.mailingCampaignStatuses.title.plural'
       filters={<MailingCampaignStatusFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

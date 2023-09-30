@@ -79,6 +79,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='entityTypeId'
                 reference='entities'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.entityTypeId'
               >
                 <AutocompleteInput
@@ -107,6 +108,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='actionTypeId'
                 reference='auditLogActionTypes'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.actionTypeId'
               >
                 <AutocompleteInput
@@ -126,6 +128,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='managerId'
                 reference='managers'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.managerId'
               >
                 <AutocompleteInput
@@ -153,6 +156,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.auditLogs.fields.userId'
               >
                 <AutocompleteInput

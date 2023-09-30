@@ -71,6 +71,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='languageId'
                 reference='languages'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.managers.fields.languageId'
               >
                 <AutocompleteInput
@@ -119,6 +120,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='unitId'
                 reference='units'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.managers.fields.unitId'
               >
                 <AutocompleteInput
@@ -153,6 +155,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 source='tenantId'
                 reference='tenants'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.managers.fields.tenantId'
               >
                 <AutocompleteInput

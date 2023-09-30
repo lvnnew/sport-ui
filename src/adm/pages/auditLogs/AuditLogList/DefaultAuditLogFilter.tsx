@@ -49,6 +49,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='entityTypeId'
         reference='entities'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.auditLogs.fields.entityTypeId'
       >
         <AutocompleteInput
@@ -71,6 +72,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='actionTypeId'
         reference='auditLogActionTypes'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.auditLogs.fields.actionTypeId'
       >
         <AutocompleteInput
@@ -87,6 +89,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.auditLogs.fields.managerId'
       >
         <AutocompleteInput
@@ -110,6 +113,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
         source='userId'
         reference='users'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.auditLogs.fields.userId'
       >
         <AutocompleteInput

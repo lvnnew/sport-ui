@@ -34,6 +34,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         source='messageTypeId'
         reference='messageTypes'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.messageTemplates.fields.messageTypeId'
       >
         <AutocompleteInput
@@ -57,6 +58,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
         source='templateStyleId'
         reference='templateStyles'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.messageTemplates.fields.templateStyleId'
       >
         <AutocompleteInput

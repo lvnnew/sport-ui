@@ -32,7 +32,7 @@ const DefaultTemplateStyleList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.templateStyles.title.plural'
       filters={<TemplateStyleFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

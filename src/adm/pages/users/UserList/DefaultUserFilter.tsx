@@ -46,6 +46,7 @@ const DefaultUserFilter: FC<any> = (props) => {
         source='tenantId'
         reference='tenants'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.users.fields.tenantId'
       >
         <AutocompleteInput

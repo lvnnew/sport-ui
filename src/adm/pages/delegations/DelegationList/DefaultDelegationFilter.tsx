@@ -23,6 +23,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
         source='fromId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.delegations.fields.fromId'
       >
         <AutocompleteInput
@@ -39,6 +40,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
         source='toId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.delegations.fields.toId'
       >
         <AutocompleteInput

@@ -31,7 +31,7 @@ const DefaultLanguageList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.languages.title.plural'
       filters={<LanguageFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

@@ -32,7 +32,7 @@ const DefaultTagList: FC<ListProps> = (props: ListProps) => {
       title='catalogs.tags.title.plural'
       filters={<TagFilter />}
       actions={<ListActions />}
-      sort={{field: 'id', order: 'desc'}}
+      sort={{field: 'id', order: 'DESC'}}
       {...props}
     >
       <Datagrid

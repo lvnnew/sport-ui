@@ -52,6 +52,7 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
         source='managerId'
         reference='managers'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.managerLogins.fields.managerId'
       >
         <AutocompleteInput

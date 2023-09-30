@@ -77,6 +77,7 @@ const DefaultAppLoginEdit: FC<EditProps> = (props: EditProps) => {
                 source='userId'
                 reference='users'
                 sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
                 label='catalogs.appLogins.fields.userId'
               >
                 <AutocompleteInput

@@ -27,6 +27,7 @@ const DefaultUnitFilter: FC<any> = (props) => {
         source='parentId'
         reference='units'
         sort={{field: 'id', order: 'DESC'}}
+        perPage={100}
         label='catalogs.units.fields.parentId'
       >
         <AutocompleteInput
