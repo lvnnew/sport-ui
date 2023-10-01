@@ -2,7 +2,6 @@ import * as React from 'react';
 import {AppBar as RaAppBar, ToggleThemeButton} from 'react-admin';
 import {Box, Typography} from '@mui/material';
 import {Link} from 'react-router-dom';
-import {darkTheme, lightTheme} from './themes';
 import UserMenu from './UserMenu/UserMenu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {Theme} from '@mui/system';
@@ -49,10 +48,7 @@ const AppBar = (props: any) => {
         </Typography>
       )}
       <Box flex={1} />
-      <ToggleThemeButton
-        lightTheme={lightTheme}
-        darkTheme={darkTheme}
-      />
+      <ToggleThemeButton />
     </RaAppBar>
   );
 };

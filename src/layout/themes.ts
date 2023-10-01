@@ -1,4 +1,5 @@
 import {ThemeOptions, createTheme} from '@mui/material';
+import {RaThemeOptions} from 'react-admin';
 
 const darkThemeOptions = {
   components: {
@@ -26,7 +27,7 @@ const darkThemeOptions = {
   },
 } as ThemeOptions;
 
-export const darkTheme = createTheme(darkThemeOptions);
+export const darkTheme = createTheme(darkThemeOptions) as RaThemeOptions;
 
 const lightThemeOptions = {
   components: {
@@ -147,4 +148,4 @@ const lightThemeOptions = {
   },
 } as ThemeOptions;
 
-export const lightTheme = createTheme(lightThemeOptions);
+export const lightTheme = createTheme(lightThemeOptions) as RaThemeOptions;
