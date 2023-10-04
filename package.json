@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env PORT=8080 DISABLE_ESLINT_PLUGIN=true craco start",
-    "dev:stage": "cross-env PORT=8080 REACT_APP_ENDPOINT=https://some-url.com/adm DISABLE_ESLINT_PLUGIN=true craco start",
-    "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false craco build",
+    "dev": "cross-env VITE_PORT=8080 DISABLE_ESLINT_PLUGIN=true vite",
+    "dev:dev": "cross-env VITE_PORT=8080 REACT_APP_ENDPOINT=https://some-url.com/adm DISABLE_ESLINT_PLUGIN=true vite",
+    "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false vite build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "test": "react-scripts test",
     "gen": "graphql-codegen --config codegen.yml",
@@ -55,7 +55,9 @@
     "yup": "0.32.11"
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0",
+    "@types/node": "^20.8.2",
+    "@vitejs/plugin-react": "^4.0.3",
+    "vite": "^4.4.5",
     "@graphql-codegen/cli": "^2.13.7",
     "@graphql-codegen/introspection": "^2.2.1",
     "@graphql-codegen/typescript": "^2.7.5",
@@ -75,7 +77,6 @@
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "6.4.1",
     "add": "^2.0.6",
-    "craco-swc": "^0.5.1",
     "cross-env": "^7.0.3",
     "eslint-config-canonical": "^37.0.3",
     "eslint-plugin-jest": "^27.1.3",
