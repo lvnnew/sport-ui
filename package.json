@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env VITE_PORT=8080 DISABLE_ESLINT_PLUGIN=true vite",
-    "dev:dev": "cross-env VITE_PORT=8080 REACT_APP_ENDPOINT=https://some-url.com/adm DISABLE_ESLINT_PLUGIN=true vite",
+    "dev:dev": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=https://some-url.com/adm DISABLE_ESLINT_PLUGIN=true vite",
     "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false vite build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "test": "react-scripts test",

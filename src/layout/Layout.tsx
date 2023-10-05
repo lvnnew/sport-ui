@@ -4,14 +4,12 @@ import {ReactQueryDevtools} from 'react-query/devtools';
 import AppBar from './AppBar';
 import Menu from './Menu';
 
-const Layout = (props: LayoutProps) => {
-  return (
-    <>
-      <RaLayout {...props} appBar={AppBar} menu={Menu} />
-      <ReactQueryDevtools initialIsOpen={false} />
-      <CheckForApplicationUpdate />
-    </>
-  );
-};
+const Layout = (props: LayoutProps) => (
+  <>
+    <RaLayout {...props} appBar={AppBar} menu={Menu} />
+    <ReactQueryDevtools initialIsOpen={false} />
+    <CheckForApplicationUpdate />
+  </>
+);
 
 export default Layout;
