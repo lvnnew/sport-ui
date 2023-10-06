@@ -234,6 +234,18 @@ const ResourcesPage: FC = () => {
       <NumberWidget
         request={gql`
           query {
+            _allManagerLoginTypesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allManagerLoginTypesMeta?.count}
+        title={translate('catalogs.managerLoginTypes.title.plural')}
+        to='/managerLoginTypes'
+      />
+      <NumberWidget
+        request={gql`
+          query {
             _allManagerLoginsMeta {
               count
             }

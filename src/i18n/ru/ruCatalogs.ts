@@ -249,6 +249,17 @@ const ruCatalogs = {
       title: 'Title',
     },
   },
+  managerLoginTypes: {
+    title: {
+      plural: 'Manager login types',
+      singular: 'Manager login type',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+    },
+  },
   managerLogins: {
     title: {
       plural: 'Логины менеджеров',
@@ -257,10 +268,10 @@ const ruCatalogs = {
     fields: {
       id: 'Ид',
       search: 'Поиск',
+      managerLoginTypeId: 'Тил логина',
       login: 'Логин',
       passwordHash: 'Хэш пароля',
       emailVerified: 'Email подтвержден',
-      initialPasswordChanged: 'Исходный пароль изменен',
       locked: 'Заблокирован',
       managerId: 'Менеджеры',
     },

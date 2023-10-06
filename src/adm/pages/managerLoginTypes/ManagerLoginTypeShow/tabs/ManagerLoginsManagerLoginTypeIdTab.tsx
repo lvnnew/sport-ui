@@ -15,12 +15,12 @@ import {
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
+const ManagerLoginsManagerLoginTypeIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
   return (<Tab {...props}>
     <ReferenceManyField
       label={false}
       reference='managerLogins'
-      target='managerId'
+      target='managerLoginTypeId'
       pagination={<Pagination />}
     >
       <Datagrid
@@ -40,4 +40,4 @@ const ManagerLoginsManagerIdTab: FC<Omit<TabProps, 'children'>> = (props) => {
   </Tab>);
 };
 
-export default ManagerLoginsManagerIdTab;
+export default ManagerLoginsManagerLoginTypeIdTab;

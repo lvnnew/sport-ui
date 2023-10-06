@@ -249,6 +249,17 @@ const enCatalogs = {
       title: 'Title',
     },
   },
+  managerLoginTypes: {
+    title: {
+      plural: 'Manager login types',
+      singular: 'Manager login type',
+    },
+    fields: {
+      id: 'Id',
+      search: 'Search',
+      title: 'Title',
+    },
+  },
   managerLogins: {
     title: {
       plural: 'Manager logins',
@@ -257,10 +268,10 @@ const enCatalogs = {
     fields: {
       id: 'Id',
       search: 'Search',
+      managerLoginTypeId: 'Login type',
       login: 'Login',
       passwordHash: 'Password hash',
       emailVerified: 'Email verified',
-      initialPasswordChanged: 'Initial password changed',
       locked: 'Locked',
       managerId: 'Managers',
     },

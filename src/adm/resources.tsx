@@ -74,6 +74,10 @@ const LoadableMailingTypeShow = Loadable(() => import('./pages/mailingTypes/Mail
 const LoadableMailingTypeEdit = Loadable(() => import('./pages/mailingTypes/MailingTypeEdit'));
 const LoadableMailingTypeCreate = Loadable(() => import('./pages/mailingTypes/MailingTypeCreate'));
 const LoadableMailingTypeList = Loadable(() => import('./pages/mailingTypes/MailingTypeList'));
+const LoadableManagerLoginTypeShow = Loadable(() => import('./pages/managerLoginTypes/ManagerLoginTypeShow'));
+const LoadableManagerLoginTypeEdit = Loadable(() => import('./pages/managerLoginTypes/ManagerLoginTypeEdit'));
+const LoadableManagerLoginTypeCreate = Loadable(() => import('./pages/managerLoginTypes/ManagerLoginTypeCreate'));
+const LoadableManagerLoginTypeList = Loadable(() => import('./pages/managerLoginTypes/ManagerLoginTypeList'));
 const LoadableManagerLoginShow = Loadable(() => import('./pages/managerLogins/ManagerLoginShow'));
 const LoadableManagerLoginEdit = Loadable(() => import('./pages/managerLogins/ManagerLoginEdit'));
 const LoadableManagerLoginCreate = Loadable(() => import('./pages/managerLogins/ManagerLoginCreate'));
@@ -320,6 +324,16 @@ export const getResources = (translate: Translate, permissions: string[]) => (
         create={hasPermission(permissions, 'mailingTypes.create') ? LoadableMailingTypeCreate : undefined}
         list={hasPermission(permissions, 'mailingTypes.all') ? LoadableMailingTypeList : undefined}
         options={{label: translate('catalogs.mailingTypes.title.singular')}}
+        recordRepresentation='title'
+      />,
+      <Resource
+        key='managerLoginTypes'
+        name='managerLoginTypes'
+        show={hasPermission(permissions, 'managerLoginTypes.get') ? LoadableManagerLoginTypeShow : undefined}
+        edit={hasPermission(permissions, 'managerLoginTypes.update') ? LoadableManagerLoginTypeEdit : undefined}
+        create={hasPermission(permissions, 'managerLoginTypes.create') ? LoadableManagerLoginTypeCreate : undefined}
+        list={hasPermission(permissions, 'managerLoginTypes.all') ? LoadableManagerLoginTypeList : undefined}
+        options={{label: translate('catalogs.managerLoginTypes.title.singular')}}
         recordRepresentation='title'
       />,
       <Resource

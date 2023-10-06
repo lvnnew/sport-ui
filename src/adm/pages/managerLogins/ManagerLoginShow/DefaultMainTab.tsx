@@ -4,9 +4,9 @@ import {
   Tab,
   TabProps,
   NumberField,
+  ReferenceField,
   TextField,
   BooleanField,
-  ReferenceField,
   Labeled,
 } from 'react-admin';
 import {Grid} from '@mui/material';
@@ -23,6 +23,11 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
+          <ReferenceField source='managerLoginTypeId' label='catalogs.managerLogins.fields.managerLoginTypeId' reference='managerLoginTypes' link='show' />
+        </Labeled>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Labeled>
           <TextField source='login' label='catalogs.managerLogins.fields.login' />
         </Labeled>
       </Grid>
@@ -34,11 +39,6 @@ const DefaultMainTab: FC<Omit<TabProps, 'children'>> = (props) => {
       <Grid item xs={12} sm={6} md={3} lg={2}>
         <Labeled>
           <BooleanField source='emailVerified' label='catalogs.managerLogins.fields.emailVerified' />
-        </Labeled>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3} lg={2}>
-        <Labeled>
-          <BooleanField source='initialPasswordChanged' label='catalogs.managerLogins.fields.initialPasswordChanged' />
         </Labeled>
       </Grid>
       <Grid item xs={12} sm={6} md={3} lg={2}>

@@ -82,6 +82,12 @@ const getDefaultMenu = () => {
       debugOnly: true,
     },
     {
+      label: 'catalogs.managerLoginTypes.title.plural',
+      link: '/managerLoginTypes',
+      icon: 'DetailsOutlined',
+      debugOnly: true,
+    },
+    {
       label: 'catalogs.stats.title.plural',
       link: '/stats',
       icon: 'DetailsOutlined',

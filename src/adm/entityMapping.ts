@@ -19,6 +19,7 @@ export const mapping = {
   mailingMessageStatuses: 'MailingMessageStatus',
   mailingMessages: 'MailingMessage',
   mailingTypes: 'MailingType',
+  managerLoginTypes: 'ManagerLoginType',
   managerLogins: 'ManagerLogin',
   managers: 'Manager',
   managersToPermissions: 'ManagersToPermission',

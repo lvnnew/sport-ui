@@ -4,10 +4,10 @@ import {
   Create,
   SimpleForm,
   CreateProps,
-  TextInput,
-  BooleanInput,
   ReferenceInput,
   AutocompleteInput,
+  TextInput,
+  BooleanInput,
 } from 'react-admin';
 import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -31,12 +31,31 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
         <SimpleForm
           defaultValues={{
             emailVerified: false,
-            initialPasswordChanged: false,
             locked: false,
           }}
           resolver={resolver}
         >
           <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={3} lg={2}>
+              <ReferenceInput
+                source='managerLoginTypeId'
+                reference='managerLoginTypes'
+                sort={{field: 'id', order: 'DESC'}}
+                perPage={100}
+                label='catalogs.managerLogins.fields.managerLoginTypeId'
+              >
+                <AutocompleteInput
+                  fullWidth
+                  sx={{m: 1}}
+                  size='small'
+                  label='catalogs.managerLogins.fields.managerLoginTypeId'
+                  defaultValue={null}
+                  parse={val => val || null}
+                  isRequired
+                  noOptionsText='ra.message.noOptions'
+                />
+              </ReferenceInput>
+            </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>
               <TextInput
                 fullWidth
@@ -51,7 +70,7 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='passwordHash'
-                required
+                defaultValue={null}
                 label='catalogs.managerLogins.fields.passwordHash'
               />
             </Grid>
@@ -60,15 +79,8 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='emailVerified'
+                defaultValue={null}
                 label='catalogs.managerLogins.fields.emailVerified'
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={3} lg={2}>
-              <BooleanInput
-                fullWidth
-                sx={{m: 1}}
-                source='initialPasswordChanged'
-                label='catalogs.managerLogins.fields.initialPasswordChanged'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={2}>

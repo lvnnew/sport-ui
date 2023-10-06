@@ -13,25 +13,25 @@ import ListWidget, {
   ListWidgetProps,
 } from '../../../widgets/ListWidget';
 import {
-  ManagerLogin,
-  QueryAllManagerLoginsArgs,
+  ManagerLoginType,
+  QueryAllManagerLoginTypesArgs,
 } from '../../../generated/graphql';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
-interface ListManagerLoginsWidgetProps extends
-Omit<ListWidgetProps<ManagerLogin>, 'request' | 'resultToValue'| 'children' | 'source'>,
-QueryAllManagerLoginsArgs {
-  children?: FC<ManagerLogin>,
+interface ListManagerLoginTypesWidgetProps extends
+Omit<ListWidgetProps<ManagerLoginType>, 'request' | 'resultToValue'| 'children' | 'source'>,
+QueryAllManagerLoginTypesArgs {
+  children?: FC<ManagerLoginType>,
 }
 
-export const ListManagerLoginsItem: FC<ManagerLogin> = (props) => {
+export const ListManagerLoginTypesItem: FC<ManagerLoginType> = (props) => {
   return (
     <ListItem
       button
       component={Link}
       key={props.id}
-      to={`/managerLogins/${props.id}/show`}
+      to={`/managerLoginTypes/${props.id}/show`}
     >
       <ListItemText
         primary={
@@ -40,22 +40,7 @@ export const ListManagerLoginsItem: FC<ManagerLogin> = (props) => {
               {`Id: ${props.id}`}
             </div>
             <div>
-              {`Manager login type id: ${props.managerLoginTypeId}`}
-            </div>
-            <div>
-              {`Login: ${props.login}`}
-            </div>
-            <div>
-              {`Password hash: ${props.passwordHash}`}
-            </div>
-            <div>
-              {`Email verified: ${props.emailVerified}`}
-            </div>
-            <div>
-              {`Locked: ${props.locked}`}
-            </div>
-            <div>
-              {`Manager id: ${props.managerId}`}
+              {`Title: ${props.title}`}
             </div>
           </>
         }
@@ -64,19 +49,19 @@ export const ListManagerLoginsItem: FC<ManagerLogin> = (props) => {
   );
 };
 
-const ListManagerLoginsWidget: FC<ListManagerLoginsWidgetProps> = ({
+const ListManagerLoginTypesWidget: FC<ListManagerLoginTypesWidgetProps> = ({
   page = 0,
   perPage = 5,
   sortField,
   sortOrder,
   filter,
-  children = ListManagerLoginsItem,
+  children = ListManagerLoginTypesItem,
   ...rest
 }) => {
   return (
-    <ListWidget<ManagerLogin>
+    <ListWidget<ManagerLoginType>
       {...rest}
-      source='managerLogins'
+      source='managerLoginTypes'
       options={{
         variables: {
           page,
@@ -92,9 +77,9 @@ const ListManagerLoginsWidget: FC<ListManagerLoginsWidgetProps> = ({
           $perPage: Int,
           $sortField: String,
           $sortOrder: String,
-          $filter: ManagerLoginFilter,
+          $filter: ManagerLoginTypeFilter,
         ) {
-          allManagerLogins(
+          allManagerLoginTypes(
             page: $page,
             perPage: $perPage,
             sortField: $sortField,
@@ -102,20 +87,15 @@ const ListManagerLoginsWidget: FC<ListManagerLoginsWidgetProps> = ({
             filter: $filter
           ) {
             id
-            managerLoginTypeId
-            login
-            passwordHash
-            emailVerified
-            locked
-            managerId
+            title
           }
         }
       `}
-      resultToValue={result => result?.allManagerLogins}
+      resultToValue={result => result?.allManagerLoginTypes}
     >
       {(record) => children(record)}
     </ListWidget>
   );
 };
 
-export default ListManagerLoginsWidget;
+export default ListManagerLoginTypesWidget;
