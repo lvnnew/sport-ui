@@ -4,12 +4,8 @@ import {
 } from 'react-router-dom';
 import Loadable from '../shared/Loadable';
 
-const LoadableDashboardStats = Loadable({
-  loader: () => import('./DashboardStats'),
-});
-const LoadableFilePage = Loadable({
-  loader: () => import('./pages/file/FilePage'),
-});
+const LoadableDashboardStats = Loadable(() => import('./DashboardStats'));
+const LoadableFilePage = Loadable(() => import('./pages/file/FilePage'));
 
 const additionalRoutes = [
   <Route element={<LoadableDashboardStats />} key='statsDashboard' path='/statsDashboard' />,
