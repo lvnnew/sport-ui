@@ -16,6 +16,11 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  emailVerified: false,
+  locked: false,
+};
+
 const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getManagerLoginValidation()), []);
 
@@ -24,15 +29,13 @@ const DefaultManagerLoginCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            emailVerified: false,
-            locked: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

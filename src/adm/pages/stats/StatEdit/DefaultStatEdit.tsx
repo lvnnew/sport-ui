@@ -34,6 +34,8 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {};
+
 const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getStatValidation()), []);
 
@@ -41,7 +43,9 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         updated: data.updated || null,
       }), [])}
@@ -49,7 +53,7 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

@@ -18,6 +18,10 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  errorOccurred: false,
+};
+
 const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getAutogenerationHistoryEntryValidation()), []);
 
@@ -26,6 +30,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         date: data.date || null,
         version: data.version || null,
@@ -33,9 +38,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            errorOccurred: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

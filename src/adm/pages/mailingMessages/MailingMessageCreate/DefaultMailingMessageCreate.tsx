@@ -17,6 +17,8 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {};
+
 const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getMailingMessageValidation()), []);
 
@@ -25,6 +27,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         dateCreated: data.dateCreated || null,
         dateSent: data.dateSent || null,
@@ -32,7 +35,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

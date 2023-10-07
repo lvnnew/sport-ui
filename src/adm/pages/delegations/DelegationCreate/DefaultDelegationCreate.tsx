@@ -16,6 +16,10 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  active: false,
+};
+
 const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getDelegationValidation()), []);
 
@@ -24,15 +28,14 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         expiresAt: data.expiresAt || null,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            active: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

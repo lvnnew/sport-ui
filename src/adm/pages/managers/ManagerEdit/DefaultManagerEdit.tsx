@@ -38,6 +38,11 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {
+  headOfUnit: false,
+  active: true,
+};
+
 const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
   const {debug} = useDebug();
   const resolver = useMemo(() => yupResolver(getManagerValidation()), []);
@@ -46,17 +51,16 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
       }), [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            headOfUnit: false,
-            active: true,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

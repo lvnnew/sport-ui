@@ -37,6 +37,8 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {};
+
 const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getAggregateTrackingValidation()), []);
 
@@ -44,7 +46,9 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         lastAggregatesComputed: data.lastAggregatesComputed || null,
         lastAggregatesScheduled: data.lastAggregatesScheduled || null,
@@ -54,7 +58,7 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

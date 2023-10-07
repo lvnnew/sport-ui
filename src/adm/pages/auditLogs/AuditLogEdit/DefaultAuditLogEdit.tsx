@@ -31,6 +31,11 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {
+  success: false,
+  foreign: false,
+};
+
 const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getAuditLogValidation()), []);
 
@@ -38,7 +43,9 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         date: data.date || null,
       }), [])}
@@ -46,10 +53,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            success: false,
-            foreign: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

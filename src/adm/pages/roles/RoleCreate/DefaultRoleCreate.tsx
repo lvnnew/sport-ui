@@ -14,6 +14,11 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  hasAllPermissions: false,
+  allTenantsAvailable: false,
+};
+
 const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getRoleValidation()), []);
 
@@ -22,15 +27,13 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            hasAllPermissions: false,
-            allTenantsAvailable: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

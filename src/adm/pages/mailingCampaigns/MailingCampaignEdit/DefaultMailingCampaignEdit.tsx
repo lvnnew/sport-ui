@@ -37,6 +37,8 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {};
+
 const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getMailingCampaignValidation()), []);
 
@@ -44,7 +46,9 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         date: data.date || null,
       }), [])}
@@ -52,7 +56,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

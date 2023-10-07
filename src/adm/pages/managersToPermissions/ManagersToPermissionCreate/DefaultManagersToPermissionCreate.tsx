@@ -15,6 +15,8 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {};
+
 const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getManagersToPermissionValidation()), []);
 
@@ -23,13 +25,14 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         expiresAt: data.expiresAt || null,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

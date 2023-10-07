@@ -36,6 +36,10 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {
+  active: false,
+};
+
 const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getDelegationValidation()), []);
 
@@ -43,7 +47,9 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         expiresAt: data.expiresAt || null,
       }), [])}
@@ -51,9 +57,7 @@ const DefaultDelegationEdit: FC<EditProps> = (props: EditProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            active: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

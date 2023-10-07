@@ -15,6 +15,8 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {};
+
 const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getAppLoginValidation()), []);
 
@@ -23,12 +25,13 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

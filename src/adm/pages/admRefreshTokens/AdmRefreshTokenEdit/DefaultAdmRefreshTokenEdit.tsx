@@ -36,6 +36,8 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {};
+
 const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getAdmRefreshTokenValidation()), []);
 
@@ -43,7 +45,9 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         create: data.create || null,
       }), [])}
@@ -51,7 +55,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

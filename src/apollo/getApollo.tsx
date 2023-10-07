@@ -5,7 +5,7 @@ import {
   from,
   NormalizedCacheObject,
 } from '@apollo/client';
-import {getJwtToken} from '../authProvider/getAuthProvider';
+import {getJwtToken} from '../authProvider/getAuthProviderLegacy';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
 import cacheTypePolicies from './cacheTypePolicies';

@@ -34,6 +34,10 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {
+  final: false,
+};
+
 const DefaultMailingMessageStatusEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getMailingMessageStatusValidation()), []);
 
@@ -41,16 +45,16 @@ const DefaultMailingMessageStatusEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
       }), [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            final: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

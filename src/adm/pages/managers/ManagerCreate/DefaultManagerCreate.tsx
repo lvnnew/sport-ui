@@ -18,6 +18,11 @@ import {FileInput} from '../../../../uiLib/file/FileInput';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  headOfUnit: false,
+  active: true,
+};
+
 const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
   const resolver = useMemo(() => yupResolver(getManagerValidation()), []);
@@ -27,15 +32,13 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            headOfUnit: false,
-            active: true,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

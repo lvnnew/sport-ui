@@ -16,6 +16,8 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {};
+
 const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
   const {debug} = useDebug();
   const resolver = useMemo(() => yupResolver(getUserValidation()), []);
@@ -25,12 +27,13 @@ const DefaultUserCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

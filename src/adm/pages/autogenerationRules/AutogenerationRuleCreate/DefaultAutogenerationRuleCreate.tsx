@@ -15,6 +15,10 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  ignoreVersionOnHistory: false,
+};
+
 const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getAutogenerationRuleValidation()), []);
 
@@ -23,15 +27,14 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         version: data.version || null,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            ignoreVersionOnHistory: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

@@ -38,6 +38,10 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {
+  errorOccurred: false,
+};
+
 const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getAutogenerationHistoryEntryValidation()), []);
 
@@ -45,7 +49,9 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
         date: data.date || null,
         version: data.version || null,
@@ -54,9 +60,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            errorOccurred: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >

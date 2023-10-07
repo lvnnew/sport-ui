@@ -17,6 +17,11 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {
+  success: false,
+  foreign: false,
+};
+
 const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getAuditLogValidation()), []);
 
@@ -25,16 +30,14 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         date: data.date || null,
       }), [])}
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            success: false,
-            foreign: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

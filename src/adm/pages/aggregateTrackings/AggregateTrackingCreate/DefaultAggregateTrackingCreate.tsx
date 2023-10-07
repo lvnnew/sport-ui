@@ -17,6 +17,8 @@ import {LoadingContext} from '../../../../contexts/LoadingContext';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
+const defaultValues = {};
+
 const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => {
   const resolver = useMemo(() => yupResolver(getAggregateTrackingValidation()), []);
 
@@ -25,6 +27,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
       redirect='show'
       {...props}
       transform={useCallback((data: any) => ({
+        ...defaultValues,
         ...data,
         lastAggregatesComputed: data.lastAggregatesComputed || null,
         lastAggregatesScheduled: data.lastAggregatesScheduled || null,
@@ -33,7 +36,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{}}
+          defaultValues={defaultValues}
           resolver={resolver}
         >
           <Grid container spacing={2}>

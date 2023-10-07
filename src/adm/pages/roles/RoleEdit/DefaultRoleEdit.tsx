@@ -34,6 +34,11 @@ const DefaultToolbar = (props: ToolbarProps) => {
   );
 };
 
+const defaultValues = {
+  hasAllPermissions: false,
+  allTenantsAvailable: false,
+};
+
 const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
   const resolver = useMemo(() => yupResolver(getRoleValidation()), []);
 
@@ -41,17 +46,16 @@ const DefaultRoleEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
+      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
+        ...defaultValues,
+        ...previousData?.previousData,
         ...data,
       }), [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>
         <SimpleForm
-          defaultValues={{
-            hasAllPermissions: false,
-            allTenantsAvailable: false,
-          }}
+          defaultValues={defaultValues}
           resolver={resolver}
           toolbar={<DefaultToolbar />}
         >
