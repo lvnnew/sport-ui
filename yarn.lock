@@ -5950,7 +5950,7 @@ balanced-match@^1.0.0:
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-base64-js@^1.3.1:
+base64-js@^1.3.1, base64-js@^1.5.1:
   version "1.5.1"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
@@ -10496,6 +10496,11 @@ js-cookie@^2.2.1:
   resolved "https://registry.npmjs.org/js-cookie/-/js-cookie-2.2.1.tgz"
   integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
+js-sha256@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/js-sha256/-/js-sha256-0.9.0.tgz#0b89ac166583e91ef9123644bd3c5334ce9d0966"
+  integrity sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==
+
 js-sha3@0.8.0:
   version "0.8.0"
   resolved "https://registry.npmjs.org/js-sha3/-/js-sha3-0.8.0.tgz"
@@ -10795,6 +10800,19 @@ jws@^3.2.2:
   dependencies:
     jwa "^1.4.1"
     safe-buffer "^5.0.1"
+
+jwt-decode@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-3.1.2.tgz#3fb319f3675a2df0c2895c8f5e9fa4b67b04ed59"
+  integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
+
+keycloak-js@^19.0.2:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-19.0.3.tgz#f70e988b799054957e47c981b7e962c9874da00e"
+  integrity sha512-mzCBxrzfl+vB551Q7MB+T9+40IHU4i0a6g1eTatzeEGrQMis5m/BqvPC3kxTsI+/LxHbB9XYQE3u9SlWKDHQCw==
+  dependencies:
+    base64-js "^1.5.1"
+    js-sha256 "^0.9.0"
 
 kind-of@^6.0.2:
   version "6.0.3"
@@ -13165,6 +13183,22 @@ ra-core@^4.13.0, ra-core@^4.14.4:
     react-is "^17.0.2"
     react-query "^3.32.1"
 
+ra-core@^4.14.5:
+  version "4.14.5"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-4.14.5.tgz#19e39d6b41d1cbbf2267da2fda2c8d9730bb06fd"
+  integrity sha512-0p0RXl+L7op9WOq9v35PxYuv0WcA+eajgiVXlHTeloNPvG6WrHtUnB7JIG2+l/rzAtWBPLjSpZ3k7G0poSQtcg==
+  dependencies:
+    clsx "^1.1.1"
+    date-fns "^2.19.0"
+    eventemitter3 "^4.0.7"
+    inflection "~1.12.0"
+    jsonexport "^3.2.0"
+    lodash "~4.17.5"
+    prop-types "^15.6.1"
+    query-string "^7.1.1"
+    react-is "^17.0.2"
+    react-query "^3.32.1"
+
 ra-data-graphql-simple@^4.14.3:
   version "4.14.3"
   resolved "https://registry.yarnpkg.com/ra-data-graphql-simple/-/ra-data-graphql-simple-4.14.3.tgz#f75b14ab88880df176a29bd3a5d203fce2d8021f"
@@ -13193,12 +13227,36 @@ ra-i18n-polyglot@^4.14.4:
     node-polyglot "^2.2.2"
     ra-core "^4.14.4"
 
+ra-i18n-polyglot@^4.14.5:
+  version "4.14.5"
+  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.14.5.tgz#8cdd8409d015f46b03a87555bff4c7dd779c86c3"
+  integrity sha512-Fo0+an3TS9wTO8o8jKN/PO84nylkz000eKpUuqJze+tuIa21kaotaXaTCf62YkGwSyDjxlSrRQmFJqXIXz9dQQ==
+  dependencies:
+    node-polyglot "^2.2.2"
+    ra-core "^4.14.5"
+
+ra-keycloak@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ra-keycloak/-/ra-keycloak-1.0.0.tgz#3c092b97603b7641a30d400e040fd59d9ab0c0cc"
+  integrity sha512-DMMerEnH+MECrJZHP3J1aZSB2rxcrEqRzG4DOuePLotDohfd5a0IWIDXSvEcUKPQvzv8VEKG8ujkLP5uWso/Ng==
+  dependencies:
+    jwt-decode "^3.1.2"
+    keycloak-js "^19.0.2"
+    react-admin "^4.4.0"
+
 ra-language-english@^4.14.4:
   version "4.14.4"
   resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-4.14.4.tgz#0a513a47b4f36330842542fad180f1f508be9c58"
   integrity sha512-LFLjEwiRaIvVBqOwUdwPKONVLB0/k8kaIOl2+eAh+XN+LdjY5bPAlzWbWhVXGxhfKdEd4d9u+2nb3V/RpBqJuw==
   dependencies:
     ra-core "^4.14.4"
+
+ra-language-english@^4.14.5:
+  version "4.14.5"
+  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-4.14.5.tgz#6a69f6db2d75c67ec9b4363b08839a168b254551"
+  integrity sha512-wwHXNYLOPUU2pEw1bF6+/AcITvqIL3EofkojfmXwyCK4UA2PPLSm6WX/FqyRge5vEmAfUPeyWFh/1/uN1tQJmw==
+  dependencies:
+    ra-core "^4.14.5"
 
 ra-language-russian@^4.14.1:
   version "4.14.1"
@@ -13211,6 +13269,26 @@ ra-ui-materialui@^4.14.4:
   version "4.14.4"
   resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-4.14.4.tgz#9691f72e5621685666a478adc657f5b93ca333e4"
   integrity sha512-NFDmO/89bWw11M9z8ZAPkG0v6Pqi7W0F6tOEwqaSHe2QjeKTRfVtXBq2ihzMqkCqxXf+yFWqH1s8VQvs80wvRg==
+  dependencies:
+    autosuggest-highlight "^3.1.1"
+    clsx "^1.1.1"
+    css-mediaquery "^0.1.2"
+    dompurify "^2.4.3"
+    hotscript "^1.0.12"
+    inflection "~1.12.0"
+    jsonexport "^3.2.0"
+    lodash "~4.17.5"
+    prop-types "^15.7.0"
+    query-string "^7.1.1"
+    react-dropzone "^12.0.4"
+    react-error-boundary "^3.1.4"
+    react-query "^3.32.1"
+    react-transition-group "^4.4.1"
+
+ra-ui-materialui@^4.14.5:
+  version "4.14.5"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-4.14.5.tgz#4b2979cba13d596f12c6f89a524ad7a31e36afd8"
+  integrity sha512-0I32C21NM62LCtIDrTG6r7jdJXAANuKxUunqd5FTsQpAmKeNMS4WgwYFkUPrtGGZFN0zUzWEaumVLpUTFUXj8Q==
   dependencies:
     autosuggest-highlight "^3.1.1"
     clsx "^1.1.1"
@@ -13280,6 +13358,24 @@ react-admin@^4.14.4:
     ra-i18n-polyglot "^4.14.4"
     ra-language-english "^4.14.4"
     ra-ui-materialui "^4.14.4"
+    react-hook-form "^7.43.9"
+    react-router "^6.1.0"
+    react-router-dom "^6.1.0"
+
+react-admin@^4.4.0:
+  version "4.14.5"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-4.14.5.tgz#86d217bcdcc3686b9fa59e79771e513bb5948f70"
+  integrity sha512-VQNUcSRYnJ0foqUvXTHudjDEyffs8mrQLCwGPejLO2xfLgxvcYnTv1id6SxxLhqbFvfVMCf9UctV0f0Y98jdjw==
+  dependencies:
+    "@emotion/react" "^11.4.1"
+    "@emotion/styled" "^11.3.0"
+    "@mui/icons-material" "^5.0.1"
+    "@mui/material" "^5.0.2"
+    history "^5.1.0"
+    ra-core "^4.14.5"
+    ra-i18n-polyglot "^4.14.5"
+    ra-language-english "^4.14.5"
+    ra-ui-materialui "^4.14.5"
     react-hook-form "^7.43.9"
     react-router "^6.1.0"
     react-router-dom "^6.1.0"
