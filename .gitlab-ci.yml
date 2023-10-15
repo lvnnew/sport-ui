@@ -157,6 +157,9 @@ deploy-prod-previous:
     DOCKER_REGISTRY_PASSWORD: ${DEV_DOCKER_REGISTRY_PASSWORD}
     DOCKER_REGISTRY_USERNAME: ${DEV_DOCKER_REGISTRY_USERNAME}
     ENDPOINT: ${DEV_ENDPOINT}
+    OIDC_ADM_CLIENT_ID: ${DEV_OIDC_ADM_CLIENT_ID}
+    OIDC_ADM_REALM: ${DEV_OIDC_ADM_REALM}
+    OIDC_ADM_URL: ${DEV_OIDC_ADM_URL}
 
 .deploy-prod:
   extends: .deploy-ui
@@ -179,6 +182,9 @@ deploy-prod-previous:
     DOCKER_REGISTRY_PASSWORD: ${PROD_DOCKER_REGISTRY_PASSWORD}
     DOCKER_REGISTRY_USERNAME: ${PROD_DOCKER_REGISTRY_USERNAME}
     ENDPOINT: ${PROD_ENDPOINT}
+    OIDC_ADM_CLIENT_ID: ${PROD_OIDC_ADM_CLIENT_ID}
+    OIDC_ADM_REALM: ${PROD_OIDC_ADM_REALM}
+    OIDC_ADM_URL: ${PROD_OIDC_ADM_URL}
 
 .deploy-ui:
   extends: .deploy
@@ -218,3 +224,6 @@ deploy-prod-previous:
       --set "dockerRegistry.password=${DOCKER_REGISTRY_PASSWORD}"
       --set "dockerRegistry.username=${DOCKER_REGISTRY_USERNAME}"
       --set "endpoint=${ENDPOINT}"
+      --set "oidc.adm.clientId=${OIDC_ADM_CLIENT_ID}"
+      --set "oidc.adm.realm=${OIDC_ADM_REALM}"
+      --set "oidc.adm.url=${OIDC_ADM_URL}"

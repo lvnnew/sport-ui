@@ -1,4 +1,7 @@
 {
   "endpoint": "http://localhost:3000/adm",
-  "ym.accounts": "[]"
+  "ym.accounts": "[]",
+  "oidcAdmUrl": "https://kk.stage01.making.ventures",
+  "oidcAdmRealm": "mtbase-dev-admin",
+  "oidcAdmClientId": "mtbase-admin"
 }

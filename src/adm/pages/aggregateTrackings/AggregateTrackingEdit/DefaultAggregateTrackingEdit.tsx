@@ -46,14 +46,15 @@ const DefaultAggregateTrackingEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
-        ...defaultValues,
-        ...previousData?.previousData,
-        ...data,
-        lastAggregatesComputed: data.lastAggregatesComputed || null,
-        lastAggregatesScheduled: data.lastAggregatesScheduled || null,
-        lastEntityUpdate: data.lastEntityUpdate || null,
-      }), [])}
+      transform={useCallback((data: any, previousData?: { previousData: any }) => {
+        const mergedData = {...defaultValues, ...previousData?.previousData, ...data};
+        return {
+          ...mergedData,
+          lastAggregatesComputed: mergedData.lastAggregatesComputed || null,
+          lastAggregatesScheduled: mergedData.lastAggregatesScheduled || null,
+          lastEntityUpdate: mergedData.lastEntityUpdate || null,
+        };
+      }, [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>

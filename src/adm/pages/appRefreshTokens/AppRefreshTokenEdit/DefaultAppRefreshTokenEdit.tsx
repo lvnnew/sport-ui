@@ -45,12 +45,13 @@ const DefaultAppRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
-        ...defaultValues,
-        ...previousData?.previousData,
-        ...data,
-        create: data.create || null,
-      }), [])}
+      transform={useCallback((data: any, previousData?: { previousData: any }) => {
+        const mergedData = {...defaultValues, ...previousData?.previousData, ...data};
+        return {
+          ...mergedData,
+          create: mergedData.create || null,
+        };
+      }, [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>

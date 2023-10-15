@@ -24,11 +24,13 @@ const DefaultStatCreate: FC<CreateProps> = (props: CreateProps) => {
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        updated: data.updated || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          updated: mergedData.updated || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

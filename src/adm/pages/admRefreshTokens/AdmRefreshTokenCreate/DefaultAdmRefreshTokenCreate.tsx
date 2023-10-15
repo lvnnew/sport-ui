@@ -25,11 +25,13 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        create: data.create || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          create: mergedData.create || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

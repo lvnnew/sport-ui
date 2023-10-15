@@ -19,3 +19,6 @@ If both files exists they will be merged. `${ENV}.json` takes precedence.
 | ------------------------- | -------------------------- | ------ | -------- | ------------- | ------------------------------------------ |
 | admin.recaptcha.publicKey | ADMIN_RECAPTCHA_PUBLIC_KEY | string | false    |               | Публичный токен рекапчи приложения админки |
 | endpoint                  | ENDPOINT                   | string | false    |               | Путь к бекенду                             |
+| oidc.adm.clientId         | OIDC_ADM_CLIENT_ID         | string | false    |               | Идентификатор клиента oidc для админки     |
+| oidc.adm.realm            | OIDC_ADM_REALM             | string | false    |               | Реалм oidc для админки                     |
+| oidc.adm.url              | OIDC_ADM_URL               | string | false    |               | Хост oidc для админки                      |

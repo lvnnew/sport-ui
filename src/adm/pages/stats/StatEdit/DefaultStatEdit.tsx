@@ -43,12 +43,13 @@ const DefaultStatEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
-        ...defaultValues,
-        ...previousData?.previousData,
-        ...data,
-        updated: data.updated || null,
-      }), [])}
+      transform={useCallback((data: any, previousData?: { previousData: any }) => {
+        const mergedData = {...defaultValues, ...previousData?.previousData, ...data};
+        return {
+          ...mergedData,
+          updated: mergedData.updated || null,
+        };
+      }, [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>

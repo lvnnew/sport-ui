@@ -29,11 +29,13 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        date: data.date || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          date: mergedData.date || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

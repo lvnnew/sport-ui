@@ -26,12 +26,14 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        dateCreated: data.dateCreated || null,
-        dateSent: data.dateSent || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          dateCreated: mergedData.dateCreated || null,
+          dateSent: mergedData.dateSent || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

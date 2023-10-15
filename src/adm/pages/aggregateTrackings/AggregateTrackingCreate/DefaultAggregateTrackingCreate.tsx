@@ -26,13 +26,15 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        lastAggregatesComputed: data.lastAggregatesComputed || null,
-        lastAggregatesScheduled: data.lastAggregatesScheduled || null,
-        lastEntityUpdate: data.lastEntityUpdate || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          lastAggregatesComputed: mergedData.lastAggregatesComputed || null,
+          lastAggregatesScheduled: mergedData.lastAggregatesScheduled || null,
+          lastEntityUpdate: mergedData.lastEntityUpdate || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

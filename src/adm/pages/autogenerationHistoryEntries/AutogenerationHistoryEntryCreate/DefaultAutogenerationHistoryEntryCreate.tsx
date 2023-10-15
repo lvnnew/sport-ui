@@ -29,12 +29,14 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        date: data.date || null,
-        version: data.version || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          date: mergedData.date || null,
+          version: mergedData.version || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

@@ -90,6 +90,12 @@ spec:
           value: {{ $.Values.admin.recaptcha.publicKey | quote }}
         - name: ENDPOINT
           value: {{ $.Values.endpoint | quote }}
+        - name: OIDC_ADM_CLIENT_ID
+          value: {{ $.Values.oidc.adm.clientId | quote }}
+        - name: OIDC_ADM_REALM
+          value: {{ $.Values.oidc.adm.realm | quote }}
+        - name: OIDC_ADM_URL
+          value: {{ $.Values.oidc.adm.url | quote }}
 
         - name: K8S_NODE_NAME
           valueFrom:

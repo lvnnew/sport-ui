@@ -43,11 +43,10 @@ const DefaultTenantEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
-        ...defaultValues,
-        ...previousData?.previousData,
-        ...data,
-      }), [])}
+      transform={useCallback((data: any, previousData?: { previousData: any }) => {
+        const mergedData = {...defaultValues, ...previousData?.previousData, ...data};
+        return mergedData;
+      }, [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>

@@ -151,6 +151,8 @@ module.exports = {
     'react/display-name': [0],
     'react/prop-types': [0],
     'space-before-function-paren': [0],
+    'unicorn/expiring-todo-comments': 'off', // todo: error in module methods
+    'react/prefer-read-only-props': 'off', // disabled from canonical/react
   },
   settings: {
     react: {

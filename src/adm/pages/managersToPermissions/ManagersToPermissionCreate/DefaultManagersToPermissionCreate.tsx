@@ -24,11 +24,13 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        expiresAt: data.expiresAt || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          expiresAt: mergedData.expiresAt || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

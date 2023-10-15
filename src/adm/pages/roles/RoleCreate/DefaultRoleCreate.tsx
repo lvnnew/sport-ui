@@ -26,10 +26,10 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return mergedData;
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm

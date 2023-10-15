@@ -46,13 +46,14 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
     <Edit
       redirect='show'
       {...props}
-      transform={useCallback((data: any, previousData?: { previousData: any }) => ({
-        ...defaultValues,
-        ...previousData?.previousData,
-        ...data,
-        dateCreated: data.dateCreated || null,
-        dateSent: data.dateSent || null,
-      }), [])}
+      transform={useCallback((data: any, previousData?: { previousData: any }) => {
+        const mergedData = {...defaultValues, ...previousData?.previousData, ...data};
+        return {
+          ...mergedData,
+          dateCreated: mergedData.dateCreated || null,
+          dateSent: mergedData.dateSent || null,
+        };
+      }, [])}
       mutationMode='pessimistic'
     >
       <LoadingContext>

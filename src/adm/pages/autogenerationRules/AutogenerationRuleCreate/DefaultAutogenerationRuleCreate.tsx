@@ -26,11 +26,13 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
     <Create
       redirect='show'
       {...props}
-      transform={useCallback((data: any) => ({
-        ...defaultValues,
-        ...data,
-        version: data.version || null,
-      }), [])}
+      transform={useCallback((data: any) => {
+        const mergedData = {...defaultValues, ...data};
+        return {
+          ...mergedData,
+          version: mergedData.version || null,
+        };
+      }, [])}
     >
       <LoadingContext>
         <SimpleForm
