@@ -37,6 +37,11 @@ const getPermissionsCall = (client: ApolloClient<NormalizedCacheObject>) => {
   return permissionsCall;
 };
 
+const clearLocalStorage = () => {
+  localStorage.removeItem(PERMISSINS_STORAGE_KEY);
+  localStorage.removeItem(ROLES_STORAGE_KEY);
+};
+
 const getAuthProvider = (
   endpoint: string,
   keycloak: Keycloak,
@@ -52,6 +57,17 @@ const getAuthProvider = (
 
   return {
     ...original,
+
+    login: async (params: any) => {
+      clearLocalStorage();
+
+      return original.login(params);
+    },
+    logout: async (params: any) => {
+      clearLocalStorage();
+
+      return original.logout(params);
+    },
     checkError: async (error) => {
       const {status} = error;
 
