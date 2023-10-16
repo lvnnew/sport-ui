@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 ReactDOM.createRoot(document.querySelector('#root') as HTMLElement).render(
-  <React.StrictMode>
+  <>
     <Trackers />
     <App />
-  </React.StrictMode>,
+  </>,
 );
 
 // If you want to start measuring performance in your app, pass a function
