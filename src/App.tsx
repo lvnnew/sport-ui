@@ -31,7 +31,7 @@ import getAuthProvider from './authProvider/getAuthProvider';
 import {onStart} from './systemHooks';
 import getApollo, {updateApolloLinks} from './apollo/getApollo';
 import Loader from './shared/Loader';
-import {darkTheme, lightTheme} from './layout/themes';
+import {lightTheme, darkTheme} from './layout/themes';
 import {routes} from './adm/routes';
 import i18nProvider from './i18nProvider';
 import log from './utils/log';
@@ -89,7 +89,21 @@ const App = () => {
       keycloakClient.onAuthRefreshSuccess = () => log.info('onAuthRefreshSuccess');
       keycloakClient.onAuthSuccess = () => log.info('onAuthSuccess');
       keycloakClient.onReady = (authenticated?: boolean) => log.info(`onReady. authenticated: ${authenticated}`);
-      keycloakClient.onTokenExpired = () => log.info('onTokenExpired');
+
+      const refresh = async () => {
+        const ok = await keycloakClient.updateToken(3000);
+        if (ok) {
+          const {endpoint} = await getConfig();
+          updateApolloLinks(endpoint, keycloakClient);
+        }
+      };
+
+      // eslint-disable-next-line require-atomic-updates
+      keycloakClient.onTokenExpired = () => {
+        refresh().catch(log.warn);
+        log.info('onTokenExpired');
+      };
+
       keycloakClient.onAuthRefreshError = () => log.info('onAuthRefreshError');
 
       await keycloakClient.init(keycloakInitOptions);
