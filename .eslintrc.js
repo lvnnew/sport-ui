@@ -38,6 +38,11 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'import/no-cycle': [2, {ignoreExternal: true}], // eslint практически всё время искал циклы во внешних библиотеках
+    'import/no-deprecated': 'off', // TODO выключила это правило. В коде много deprecated-меток и я не видела что мы им следуем.
+    'import/extensions': 'off', // за это отвечает тс-компилятор
+    'unicorn/no-empty-file': 'off', // TODO подумать над включением
+    'import/default': 'off', // судя по всему не актуально для ts
     'simple-import-sort/imports': 'off',
     'array-bracket-newline': 'off',
     'array-element-newline': 'off',
@@ -60,16 +65,17 @@ module.exports = {
     'eslint-comments/no-unused-disable': 'off',
     'react/jsx-sort-props': 'off',
     'import/no-named-as-default': 'off',
-
-    // '@typescript-eslint/no-unused-vars': [1],
-    // 'no-unused-vars': [1],
+    'canonical/sort-destructure-keys': 'off',
+    'canonical/sort-react-dependencies': 'off',
+    'indent': ['error', 2, {SwitchCase: 1}],
+    'no-unused-vars': 'off',
+    // eslint-disable-next-line max-len
+    '@typescript-eslint/no-unused-vars': ['error', {argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_', varsIgnorePattern: '^_'}],
     '@typescript-eslint/no-use-before-define': [0],
     'linebreak-style': 0,
     'class-methods-use-this': [0],
     'no-unused-vars': 'off',
     complexity: [0],
-
-    // "@typescript-eslint/no-unused-vars": "error",
     'max-len': [
       'error',
       140,
