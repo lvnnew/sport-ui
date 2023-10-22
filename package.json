@@ -7,9 +7,13 @@
     "dev:dev": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=https://some-url.com/adm DISABLE_ESLINT_PLUGIN=true vite",
     "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false vite build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix ./src/**/*.{ts,tsx}",
+    "lint:cache": "eslint --cache ./src/**/*.{ts,tsx}",
     "test": "react-scripts test",
     "gen": "graphql-codegen --config codegen.yml",
-    "preinstall": "npx only-allow yarn"
+    "preinstall": "npx only-allow yarn",
+    "typecheck": "tsc -P tsconfig.json",
+    "typecheck:watch": "tsc -P tsconfig.json --watch"
   },
   "dependencies": {
     "@apollo/client": "3.7.0",
@@ -59,7 +63,6 @@
     "@graphql-codegen/introspection": "^2.2.1",
     "@graphql-codegen/typescript": "^2.7.5",
     "@graphql-codegen/typescript-resolvers": "^2.7.5",
-    "@swc/helpers": "^0.4.12",
     "@testing-library/react": "^13.4.0",
     "@types/apollo-upload-client": "^17.0.2",
     "@types/classnames": "^2.3.1",
@@ -81,7 +84,8 @@
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "utility-types": "^3.10.0",
-    "vite": "^4.4.5",
+    "vite": "^4.5.0",
+    "vite-plugin-checker": "^0.6.2",
     "yarn": "^1.22.19"
   },
   "eslintConfig": {

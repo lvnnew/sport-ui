@@ -23,6 +23,7 @@ yarn-error.log
 config/*
 !config/default.json
 !config/local.json
+tsconfig.tsbuildinfo
 
 *.db
 *.cpuprofile
