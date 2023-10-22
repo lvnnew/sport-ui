@@ -6,7 +6,6 @@ import {
   NormalizedCacheObject,
 } from '@apollo/client';
 import Keycloak from 'keycloak-js';
-// import {getJwtToken} from '../authProvider/getAuthProvider';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
 import cacheTypePolicies from './cacheTypePolicies';
@@ -36,7 +35,7 @@ export const updateApolloLinks = (endpoint: string, keycloak: Keycloak) => {
           authorization: `Bearer ${keycloak.token}`,
         },
         uri: `${endpoint}/graph`,
-      }) as ApolloLink,
+      }) as any as ApolloLink, // FIXME У apollo-upload-client какие-то кривые types
     ]));
   }
 };
