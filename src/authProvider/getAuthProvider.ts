@@ -92,9 +92,14 @@ const getAuthProvider = (
 
         if (
           error.networkError &&
-          'result' in error.networkError
+          'result' in error.networkError &&
+          (
+            error.networkError.statusCode === 401 ||
+            error.networkError.statusCode === 403
+          )
         ) {
-          throw new Error(error.networkError.result.code);
+          log.error('status === 401 || status === 403, auth.unauthorised');
+          throw new Error('auth.unauthorised');
         }
       }
 
