@@ -30,6 +30,14 @@ check:
     - yarn install --frozen-lockfile
   script:
     - ./check.sh
+  after_script:
+    - chmod +x ci-notify.sh
+    - >
+      if [ $CI_JOB_STATUS != 'success' ]; then
+        sh ci-notify.sh "🆘 $CI_JOB_NAME failed"
+      else
+        sh ci-notify.sh "✅ $CI_JOB_NAME success"
+      fi
 
 tag-previous-with-sha:
   extends: .tag-image
@@ -64,6 +72,13 @@ build:
       --destination ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}
       --destination ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}
       --single-snapshot
+  after_script:
+    - >
+      if [ $CI_JOB_STATUS != 'success' ]; then
+        sh ci-notify.sh "🆘 $CI_JOB_NAME failed"
+      else
+        sh ci-notify.sh "✅ $CI_JOB_NAME success"
+      fi
   only:
     - master
     - /^master-.*$/
@@ -227,3 +242,10 @@ deploy-prod-previous:
       --set "oidc.adm.clientId=${OIDC_ADM_CLIENT_ID}"
       --set "oidc.adm.realm=${OIDC_ADM_REALM}"
       --set "oidc.adm.url=${OIDC_ADM_URL}"
+  after_script:
+    - >
+      if [ $CI_JOB_STATUS != 'success' ]; then
+        sh ci-notify.sh "🆘 $CI_JOB_NAME failed"
+      else
+        sh ci-notify.sh "✅ $CI_JOB_NAME success"
+      fi
