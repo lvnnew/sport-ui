@@ -1,5 +1,4 @@
 const getConfig = async (): Promise<Record<string, string>> => {
-
   return fetch('/config.json')
     .then(data => data.json())
     .then(json => ({
