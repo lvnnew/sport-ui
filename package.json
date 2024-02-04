@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "cross-env VITE_PORT=8080 DISABLE_ESLINT_PLUGIN=true vite",
-    "dev:dev": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=https://some-url.com/adm DISABLE_ESLINT_PLUGIN=true vite",
+    "dev:local": "cross-env VITE_PORT=8080 VITE_APP_OIDC_ADM_URL=localhost:3000/adm VITE_APP_OIDC_ADM_URL=http://localhost:8180/auth VITE_APP_OIDC_ADM_REALM=mtbase-local-admin DISABLE_ESLINT_PLUGIN=true vite",
+    "dev:dev": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=https://mtbase-ep.stage.apps.stage01.making.ventures/adm VITE_APP_OIDC_ADM_URL=https://kk.stage01.making.ventures DISABLE_ESLINT_PLUGIN=true vite",
+    "dev:prod": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=https://mtbase-ep.prod.apps.smallprod.making.ventures/adm VITE_APP_OIDC_ADM_URL=https://kk.prod01.making.ventures VITE_APP_OIDC_ADM_REALM=mtbase-prod-admin DISABLE_ESLINT_PLUGIN=true vite",
+    "local:dev": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=http://localhost:3000/adm VITE_APP_OIDC_ADM_URL=https://kk.stage01.making.ventures VITE_APP_OIDC_ADM_REALM=mtbase-dev-admin DISABLE_ESLINT_PLUGIN=true vite",
+    "local:prod": "cross-env VITE_PORT=8080 VITE_APP_ENDPOINT=http://localhost:3000/adm VITE_APP_OIDC_ADM_URL=https://kk.prod01.making.ventures VITE_APP_OIDC_ADM_REALM=mtbase-prod-admin DISABLE_ESLINT_PLUGIN=true vite",
     "build": "cross-env DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false vite build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix ./src/**/*.{ts,tsx}",
