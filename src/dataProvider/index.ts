@@ -7,6 +7,7 @@ import {mapping} from '../adm/entityMapping';
 import sch from '../generated/graphql.schema.json';
 import {ApolloClient} from '@apollo/client';
 import getCustomMethods from './getCustomMethods';
+import getAdditionalMethods from './getAdditionalMethods';
 import {DataProvider} from './types';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -96,5 +97,6 @@ export default async (client: ApolloClient<unknown>): Promise<DataProvider> => {
   return {
     ...baseDataProvider,
     ...getCustomMethods(client, baseDataProvider),
+    ...getAdditionalMethods(client),
   };
 };

@@ -88,6 +88,8 @@ spec:
           value: '{{ $.Values.global.env }}'
         - name: ADMIN_RECAPTCHA_PUBLIC_KEY
           value: {{ $.Values.admin.recaptcha.publicKey | quote }}
+        - name: CHECK_LOGIN_IFRAME
+          value: {{ $.Values.checkLoginIframe | quote }}
         - name: ENDPOINT
           value: {{ $.Values.endpoint | quote }}
         - name: OIDC_ADM_CLIENT_ID

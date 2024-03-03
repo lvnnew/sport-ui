@@ -72,13 +72,6 @@ build:
       --destination ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}
       --destination ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}
       --single-snapshot
-  after_script:
-    - >
-      if [ $CI_JOB_STATUS != 'success' ]; then
-        sh ci-notify.sh "🆘 $CI_JOB_NAME failed"
-      else
-        sh ci-notify.sh "✅ $CI_JOB_NAME success"
-      fi
   only:
     - master
     - /^master-.*$/
@@ -168,6 +161,7 @@ deploy-prod-previous:
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${DEV_ADMIN_RECAPTCHA_PUBLIC_KEY}
+    CHECK_LOGIN_IFRAME: ${DEV_CHECK_LOGIN_IFRAME}
     DOCKER_REGISTRY_DOMAIN: ${DEV_DOCKER_REGISTRY_DOMAIN}
     DOCKER_REGISTRY_PASSWORD: ${DEV_DOCKER_REGISTRY_PASSWORD}
     DOCKER_REGISTRY_USERNAME: ${DEV_DOCKER_REGISTRY_USERNAME}
@@ -193,6 +187,7 @@ deploy-prod-previous:
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
     ADMIN_RECAPTCHA_PUBLIC_KEY: ${PROD_ADMIN_RECAPTCHA_PUBLIC_KEY}
+    CHECK_LOGIN_IFRAME: ${PROD_CHECK_LOGIN_IFRAME}
     DOCKER_REGISTRY_DOMAIN: ${PROD_DOCKER_REGISTRY_DOMAIN}
     DOCKER_REGISTRY_PASSWORD: ${PROD_DOCKER_REGISTRY_PASSWORD}
     DOCKER_REGISTRY_USERNAME: ${PROD_DOCKER_REGISTRY_USERNAME}
@@ -235,6 +230,7 @@ deploy-prod-previous:
       --set "style=${STYLE}"
       --set "ingress.rootEnabled=${ROOT_ENABLED}"
       --set "admin.recaptcha.publicKey=${ADMIN_RECAPTCHA_PUBLIC_KEY}"
+      --set "checkLoginIframe=${CHECK_LOGIN_IFRAME}"
       --set "dockerRegistry.domain=${DOCKER_REGISTRY_DOMAIN}"
       --set "dockerRegistry.password=${DOCKER_REGISTRY_PASSWORD}"
       --set "dockerRegistry.username=${DOCKER_REGISTRY_USERNAME}"

@@ -4,6 +4,7 @@ import {MenuElement} from '../uiLib/menu/MenuItem';
 
 const getDefaultMenu = () => {
   const menuData: MenuElement[] = [
+
     {
       label: 'app.menu.functions',
       link: '/functions',

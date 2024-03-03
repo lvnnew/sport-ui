@@ -8,6 +8,7 @@ const getConfig = async (): Promise<Record<string, string>> => {
       oidcAdmUrl: import.meta.env.VITE_APP_OIDC_ADM_URL || json.oidcAdmUrl,
       oidcAdmRealm: import.meta.env.VITE_APP_OIDC_ADM_REALM || json.oidcAdmRealm,
       oidcAdmClientId: import.meta.env.VITE_APP_OIDC_ADM_CLIENT_ID || json.oidcAdmClientId,
+      checkLoginIframe: import.meta.env.VITE_APP_CHECK_LOGIN_IFRAME || json.oidcAdmClientId,
     }));
 };
 
