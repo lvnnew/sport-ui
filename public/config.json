@@ -3,5 +3,6 @@
   "ym.accounts": "[]",
   "oidcAdmUrl": "http://localhost:8180/auth",
   "oidcAdmRealm": "mtbase-local-admin",
-  "oidcAdmClientId": "mtbase-admin"
+  "oidcAdmClientId": "mtbase-admin",
+  "checkLoginIframe": true
 }

@@ -19,5 +19,6 @@ export const routes = [
   <Route element={<LoadableResourcesPage />} key='resources' path='/resources' />,
   <Route element={<LoadableMetaPage />} key='meta' path='/meta' />,
   <Route element={<LoadableDebugPage />} key='debug' path='/debug' />,
+
   ...additionalRoutes,
 ];
