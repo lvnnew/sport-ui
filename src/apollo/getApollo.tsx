@@ -5,7 +5,6 @@ import {
   from,
   NormalizedCacheObject,
 } from '@apollo/client';
-import Keycloak from 'keycloak-js';
 import {RetryLink} from '@apollo/client/link/retry';
 import {createUploadLink} from 'apollo-upload-client';
 import cacheTypePolicies from './cacheTypePolicies';
@@ -16,7 +15,7 @@ const operationNamesForbiddenForRetry = [
   'logout',
 ];
 
-export const updateApolloLinks = (endpoint: string, keycloak: Keycloak) => {
+export const updateApolloLinks = (endpoint: string, accessToken: string) => {
   // this method kills all previous requests, use it carefully
   if (apollo) {
     apollo.setLink(from([
@@ -32,7 +31,7 @@ export const updateApolloLinks = (endpoint: string, keycloak: Keycloak) => {
       }),
       createUploadLink({
         headers: {
-          authorization: `Bearer ${keycloak.token}`,
+          authorization: `Bearer ${accessToken}`,
         },
         uri: `${endpoint}/graph`,
       }) as any as ApolloLink, // FIXME У apollo-upload-client какие-то кривые types
@@ -40,7 +39,7 @@ export const updateApolloLinks = (endpoint: string, keycloak: Keycloak) => {
   }
 };
 
-const getApollo = (endpoint: string, keycloak: Keycloak) => {
+const getApollo = (endpoint: string, accessToken: string) => {
   if (!apollo) {
     apollo = new ApolloClient({
       cache: new InMemoryCache({
@@ -50,7 +49,7 @@ const getApollo = (endpoint: string, keycloak: Keycloak) => {
         query: {fetchPolicy: 'network-only'},
       },
     });
-    updateApolloLinks(endpoint, keycloak);
+    updateApolloLinks(endpoint, accessToken);
   }
 
   return apollo;
