@@ -94,6 +94,10 @@ spec:
           value: {{ $.Values.endpoint | quote }}
         - name: OIDC_ADM_CLIENT_ID
           value: {{ $.Values.oidc.adm.clientId | quote }}
+        - name: OIDC_ADM_ISSUER
+          value: {{ $.Values.oidc.adm.issuer | quote }}
+        - name: OIDC_ADM_LOGOUT_TYPE
+          value: {{ $.Values.oidc.adm.logoutType | quote }}
         - name: OIDC_ADM_REALM
           value: {{ $.Values.oidc.adm.realm | quote }}
         - name: OIDC_ADM_URL
