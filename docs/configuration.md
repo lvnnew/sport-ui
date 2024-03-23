@@ -21,5 +21,7 @@ If both files exists they will be merged. `${ENV}.json` takes precedence.
 | checkLoginIframe          | CHECK_LOGIN_IFRAME         | bool   | false    | false         | Проверка авторизации во фрейме включена    |
 | endpoint                  | ENDPOINT                   | string | false    |               | Путь к бекенду                             |
 | oidc.adm.clientId         | OIDC_ADM_CLIENT_ID         | string | false    |               | Идентификатор клиента oidc для админки     |
+| oidc.adm.issuer           | OIDC_ADM_ISSUER            | string | false    |               | Issuer oidc для админки                    |
+| oidc.adm.logoutType       | OIDC_ADM_LOGOUT_TYPE       | string | false    |               | Тип выхода админки                         |
 | oidc.adm.realm            | OIDC_ADM_REALM             | string | false    |               | Реалм oidc для админки                     |
 | oidc.adm.url              | OIDC_ADM_URL               | string | false    |               | Хост oidc для админки                      |

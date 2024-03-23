@@ -5,7 +5,7 @@ import NumberWidget from '../widgets/NumberWidget';
 import {
   gql,
 } from '@apollo/client';
-import {useTranslate} from 'react-admin';
+import {Title, useTranslate} from 'react-admin';
 import Grid from '@mui/material/Grid';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
@@ -15,6 +15,7 @@ const ResourcesPage: FC = () => {
 
   return (
     <Grid container>
+      <Title title='app.resources' />
       <NumberWidget
         request={gql`
           query {

@@ -2,7 +2,9 @@
   "endpoint": "http://localhost:3000/adm",
   "ym.accounts": "[]",
   "oidcAdmUrl": "http://localhost:8180/auth",
+  "oidcAdmIssuer": "http://localhost:8180/auth/realms/mtbase-local-admin",
+  "oidcAdmLogoutType": "redirect",
   "oidcAdmRealm": "mtbase-local-admin",
   "oidcAdmClientId": "mtbase-admin",
-  "checkLoginIframe": true
+  "checkLoginIframe": false
 }
