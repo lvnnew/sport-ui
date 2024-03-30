@@ -17,7 +17,6 @@ import Loader from './shared/Loader';
 import {lightTheme, darkTheme} from './layout/themes';
 import {routes} from './adm/routes';
 import i18nProvider from './i18nProvider';
-import log from './utils/log';
 import {BrowserRouter} from 'react-router-dom';
 import {LogoutType} from './authProvider/types';
 
@@ -35,13 +34,8 @@ const App = () => {
     const fetchDataProvider = async () => {
       const config = await getConfig();
 
-      log.info('config');
-      log.info(config);
-
       authProvider.current = getAuthProvider({
         backEndpoint: config.endpoint,
-
-        // kk
         issuer: config.oidcAdmIssuer,
         clientId: config.oidcAdmClientId,
         loginRedirectUri: `${window.location.origin}/auth-callback`,
@@ -86,6 +80,7 @@ const App = () => {
               store={localStorageStore('3')}
               lightTheme={lightTheme}
               darkTheme={darkTheme}
+              disableTelemetry
             >
               {permissions => [
                 (
