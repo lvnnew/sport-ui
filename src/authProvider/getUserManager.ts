@@ -1,4 +1,4 @@
-import {UserManager, Log} from 'oidc-client-ts';
+import {UserManager, Log, WebStorageStateStore} from 'oidc-client-ts';
 import log from '../utils/log';
 import {AuthProviderOptions} from './types';
 
@@ -17,6 +17,7 @@ const getUserManager = (options: AuthProviderOptions) => {
     post_logout_redirect_uri: options.logoutRedirectUri,
     response_type: 'code',
     scope: 'openid email profile', // Allow to retrieve the email and user name later api side
+    userStore: new WebStorageStateStore({store: localStorage}),
   });
 
   Log.setLogger(console);
