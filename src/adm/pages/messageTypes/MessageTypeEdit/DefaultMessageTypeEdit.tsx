@@ -60,7 +60,7 @@ const DefaultMessageTypeEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.messageTypes.fields.title'
               />
             </Grid>

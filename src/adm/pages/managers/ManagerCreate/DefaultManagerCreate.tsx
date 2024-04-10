@@ -56,7 +56,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='lastName'
-                required
+                isRequired
                 label='catalogs.managers.fields.lastName'
               />
             </Grid>
@@ -65,7 +65,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='firstName'
-                required
+                isRequired
                 label='catalogs.managers.fields.firstName'
               />
             </Grid>
@@ -93,7 +93,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='email'
-                required
+                isRequired
                 label='catalogs.managers.fields.email'
               />
             </Grid>

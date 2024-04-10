@@ -71,7 +71,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='subjectTemplate'
-                required
+                isRequired
                 label='catalogs.messageTemplateLangVariants.fields.subjectTemplate'
               />
             </Grid>
@@ -80,7 +80,7 @@ const DefaultMessageTemplateLangVariantEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='bodyTemplate'
-                required
+                isRequired
                 label='catalogs.messageTemplateLangVariants.fields.bodyTemplate'
               />
             </Grid>

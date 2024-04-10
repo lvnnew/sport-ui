@@ -60,7 +60,7 @@ const DefaultConfigurationVariableEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='value'
-                required
+                isRequired
                 label='catalogs.configurationVariables.fields.value'
               />
             </Grid>

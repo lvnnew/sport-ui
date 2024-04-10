@@ -38,7 +38,7 @@ const DefaultAuditLogActionTypeCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.auditLogActionTypes.fields.id'
               />
             </Grid>

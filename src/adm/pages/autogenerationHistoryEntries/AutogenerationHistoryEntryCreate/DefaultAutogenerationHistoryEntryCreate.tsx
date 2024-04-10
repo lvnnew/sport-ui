@@ -49,7 +49,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='date'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.date'
               />
             </Grid>
@@ -58,7 +58,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.originalEntityType'
               />
             </Grid>
@@ -67,7 +67,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityId'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.originalEntityId'
               />
             </Grid>
@@ -96,7 +96,7 @@ const DefaultAutogenerationHistoryEntryCreate: FC<CreateProps> = (props: CreateP
                 fullWidth
                 sx={{m: 1}}
                 source='version'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.version'
               />
             </Grid>

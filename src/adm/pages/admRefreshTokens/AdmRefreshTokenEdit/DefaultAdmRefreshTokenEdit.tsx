@@ -66,7 +66,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='create'
-                required
+                isRequired
                 label='catalogs.admRefreshTokens.fields.create'
               />
             </Grid>
@@ -95,7 +95,7 @@ const DefaultAdmRefreshTokenEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='token'
-                required
+                isRequired
                 label='catalogs.admRefreshTokens.fields.token'
               />
             </Grid>

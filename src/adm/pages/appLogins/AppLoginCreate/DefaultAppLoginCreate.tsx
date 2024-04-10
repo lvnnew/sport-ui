@@ -40,7 +40,7 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='login'
-                required
+                isRequired
                 label='catalogs.appLogins.fields.login'
               />
             </Grid>
@@ -49,7 +49,7 @@ const DefaultAppLoginCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='passwordHash'
-                required
+                isRequired
                 label='catalogs.appLogins.fields.passwordHash'
               />
             </Grid>

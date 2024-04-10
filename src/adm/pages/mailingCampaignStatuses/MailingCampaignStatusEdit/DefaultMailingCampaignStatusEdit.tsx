@@ -60,7 +60,7 @@ const DefaultMailingCampaignStatusEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.mailingCampaignStatuses.fields.title'
               />
             </Grid>

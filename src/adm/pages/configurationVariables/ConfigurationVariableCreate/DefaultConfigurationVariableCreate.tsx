@@ -38,7 +38,7 @@ const DefaultConfigurationVariableCreate: FC<CreateProps> = (props: CreateProps)
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.configurationVariables.fields.id'
               />
             </Grid>
@@ -47,7 +47,7 @@ const DefaultConfigurationVariableCreate: FC<CreateProps> = (props: CreateProps)
                 fullWidth
                 sx={{m: 1}}
                 source='value'
-                required
+                isRequired
                 label='catalogs.configurationVariables.fields.value'
               />
             </Grid>

@@ -43,7 +43,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.messageTemplates.fields.id'
               />
             </Grid>
@@ -52,7 +52,7 @@ const DefaultMessageTemplateCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.messageTemplates.fields.title'
               />
             </Grid>

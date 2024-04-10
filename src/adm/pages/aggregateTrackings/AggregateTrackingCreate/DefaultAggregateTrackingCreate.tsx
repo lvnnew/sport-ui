@@ -67,7 +67,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='entityId'
-                required
+                isRequired
                 label='infoRegistries.aggregateTrackings.fields.entityId'
               />
             </Grid>
@@ -76,7 +76,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='lastAggregatesComputed'
-                required
+                isRequired
                 label='infoRegistries.aggregateTrackings.fields.lastAggregatesComputed'
               />
             </Grid>
@@ -94,7 +94,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='lastEntityUpdate'
-                required
+                isRequired
                 label='infoRegistries.aggregateTrackings.fields.lastEntityUpdate'
               />
             </Grid>
@@ -103,7 +103,7 @@ const DefaultAggregateTrackingCreate: FC<CreateProps> = (props: CreateProps) => 
                 fullWidth
                 sx={{m: 1}}
                 source='aggregateVersion'
-                required
+                isRequired
                 label='infoRegistries.aggregateTrackings.fields.aggregateVersion'
               />
             </Grid>

@@ -38,7 +38,7 @@ const DefaultEntityCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.entities.fields.id'
               />
             </Grid>

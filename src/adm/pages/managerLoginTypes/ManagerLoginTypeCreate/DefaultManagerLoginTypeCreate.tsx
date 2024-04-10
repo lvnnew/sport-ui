@@ -38,7 +38,7 @@ const DefaultManagerLoginTypeCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.managerLoginTypes.fields.id'
               />
             </Grid>

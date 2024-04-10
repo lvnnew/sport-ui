@@ -67,7 +67,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.title'
               />
             </Grid>
@@ -85,7 +85,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.originalEntityType'
               />
             </Grid>
@@ -94,7 +94,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityType'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.generatingEntityType'
               />
             </Grid>
@@ -103,7 +103,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityFilter'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.originalEntityFilter'
               />
             </Grid>
@@ -112,7 +112,7 @@ const DefaultAutogenerationRuleEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityConstructionRules'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.generatingEntityConstructionRules'
               />
             </Grid>

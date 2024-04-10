@@ -128,7 +128,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='to'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.to'
               />
             </Grid>
@@ -137,7 +137,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='locals'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.locals'
               />
             </Grid>
@@ -146,7 +146,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='localsHash'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.localsHash'
               />
             </Grid>
@@ -155,7 +155,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.priority'
               />
             </Grid>
@@ -164,7 +164,7 @@ const DefaultMailingMessageEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='dateCreated'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.dateCreated'
               />
             </Grid>

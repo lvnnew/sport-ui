@@ -45,7 +45,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.id'
               />
             </Grid>
@@ -54,7 +54,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.title'
               />
             </Grid>
@@ -72,7 +72,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.originalEntityType'
               />
             </Grid>
@@ -81,7 +81,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityType'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.generatingEntityType'
               />
             </Grid>
@@ -90,7 +90,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityFilter'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.originalEntityFilter'
               />
             </Grid>
@@ -99,7 +99,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
                 fullWidth
                 sx={{m: 1}}
                 source='generatingEntityConstructionRules'
-                required
+                isRequired
                 label='catalogs.autogenerationRules.fields.generatingEntityConstructionRules'
               />
             </Grid>

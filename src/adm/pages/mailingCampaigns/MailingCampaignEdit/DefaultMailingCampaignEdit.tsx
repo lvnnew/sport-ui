@@ -67,7 +67,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.mailingCampaigns.fields.title'
               />
             </Grid>
@@ -96,7 +96,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
-                required
+                isRequired
                 label='catalogs.mailingCampaigns.fields.priority'
               />
             </Grid>
