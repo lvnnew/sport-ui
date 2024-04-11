@@ -38,7 +38,7 @@ const DefaultPermissionCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.permissions.fields.id'
               />
             </Grid>

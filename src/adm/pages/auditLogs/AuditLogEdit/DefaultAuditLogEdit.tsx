@@ -64,7 +64,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='date'
-                required
+                isRequired
                 label='catalogs.auditLogs.fields.date'
               />
             </Grid>
@@ -73,7 +73,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.auditLogs.fields.title'
               />
             </Grid>
@@ -120,7 +120,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='entityId'
-                required
+                isRequired
                 label='catalogs.auditLogs.fields.entityId'
               />
             </Grid>

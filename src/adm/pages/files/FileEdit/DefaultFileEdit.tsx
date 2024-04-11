@@ -61,7 +61,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='originalName'
-                required
+                isRequired
                 label='catalogs.files.fields.originalName'
               />
             </Grid>
@@ -70,7 +70,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='url'
-                required
+                isRequired
                 label='catalogs.files.fields.url'
               />
             </Grid>
@@ -79,7 +79,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='mimetype'
-                required
+                isRequired
                 label='catalogs.files.fields.mimetype'
               />
             </Grid>
@@ -88,7 +88,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='s3Key'
-                required
+                isRequired
                 label='catalogs.files.fields.s3Key'
               />
             </Grid>
@@ -97,7 +97,7 @@ const DefaultFileEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='eTag'
-                required
+                isRequired
                 label='catalogs.files.fields.eTag'
               />
             </Grid>

@@ -71,7 +71,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='date'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.date'
               />
             </Grid>
@@ -80,7 +80,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityType'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.originalEntityType'
               />
             </Grid>
@@ -89,7 +89,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='originalEntityId'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.originalEntityId'
               />
             </Grid>
@@ -118,7 +118,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
                 fullWidth
                 sx={{m: 1}}
                 source='version'
-                required
+                isRequired
                 label='catalogs.autogenerationHistoryEntries.fields.version'
               />
             </Grid>

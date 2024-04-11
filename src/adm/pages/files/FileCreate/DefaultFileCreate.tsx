@@ -39,7 +39,7 @@ const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='originalName'
-                required
+                isRequired
                 label='catalogs.files.fields.originalName'
               />
             </Grid>
@@ -48,7 +48,7 @@ const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='url'
-                required
+                isRequired
                 label='catalogs.files.fields.url'
               />
             </Grid>
@@ -57,7 +57,7 @@ const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='mimetype'
-                required
+                isRequired
                 label='catalogs.files.fields.mimetype'
               />
             </Grid>
@@ -66,7 +66,7 @@ const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='s3Key'
-                required
+                isRequired
                 label='catalogs.files.fields.s3Key'
               />
             </Grid>
@@ -75,7 +75,7 @@ const DefaultFileCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='eTag'
-                required
+                isRequired
                 label='catalogs.files.fields.eTag'
               />
             </Grid>

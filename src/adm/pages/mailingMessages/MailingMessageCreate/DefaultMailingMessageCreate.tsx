@@ -106,7 +106,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='to'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.to'
               />
             </Grid>
@@ -115,7 +115,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='locals'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.locals'
               />
             </Grid>
@@ -124,7 +124,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='localsHash'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.localsHash'
               />
             </Grid>
@@ -133,7 +133,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.priority'
               />
             </Grid>
@@ -142,7 +142,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='dateCreated'
-                required
+                isRequired
                 label='catalogs.mailingMessages.fields.dateCreated'
               />
             </Grid>

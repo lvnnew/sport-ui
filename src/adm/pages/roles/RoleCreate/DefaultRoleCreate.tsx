@@ -42,7 +42,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='id'
-                required
+                isRequired
                 label='catalogs.roles.fields.id'
               />
             </Grid>

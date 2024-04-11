@@ -40,7 +40,7 @@ const DefaultUnitCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.units.fields.title'
               />
             </Grid>

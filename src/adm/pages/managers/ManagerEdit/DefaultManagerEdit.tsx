@@ -78,7 +78,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='lastName'
-                required
+                isRequired
                 label='catalogs.managers.fields.lastName'
               />
             </Grid>
@@ -87,7 +87,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='firstName'
-                required
+                isRequired
                 label='catalogs.managers.fields.firstName'
               />
             </Grid>
@@ -115,7 +115,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='email'
-                required
+                isRequired
                 label='catalogs.managers.fields.email'
               />
             </Grid>

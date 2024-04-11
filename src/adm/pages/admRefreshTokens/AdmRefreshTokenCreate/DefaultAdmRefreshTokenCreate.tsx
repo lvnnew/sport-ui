@@ -44,7 +44,7 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='create'
-                required
+                isRequired
                 label='catalogs.admRefreshTokens.fields.create'
               />
             </Grid>
@@ -73,7 +73,7 @@ const DefaultAdmRefreshTokenCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='token'
-                required
+                isRequired
                 label='catalogs.admRefreshTokens.fields.token'
               />
             </Grid>

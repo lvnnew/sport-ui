@@ -86,7 +86,7 @@ const DefaultManagerLoginEdit: FC<EditProps> = (props: EditProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='login'
-                required
+                isRequired
                 label='catalogs.managerLogins.fields.login'
               />
             </Grid>

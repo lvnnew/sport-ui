@@ -45,7 +45,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='title'
-                required
+                isRequired
                 label='catalogs.mailingCampaigns.fields.title'
               />
             </Grid>
@@ -74,7 +74,7 @@ const DefaultMailingCampaignCreate: FC<CreateProps> = (props: CreateProps) => {
                 fullWidth
                 sx={{m: 1}}
                 source='priority'
-                required
+                isRequired
                 label='catalogs.mailingCampaigns.fields.priority'
               />
             </Grid>
