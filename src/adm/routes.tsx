@@ -13,6 +13,7 @@ const LoadableFunctions = Loadable(() => import('./functions/Functions'));
 // const LoadableResourcesPage = Loadable(() => import('./ResourcesPage'));
 const LoadableMetaPage = Loadable(() => import('./MetaPage'));
 const LoadableDebugPage = Loadable(() => import('./utility/DebugPage'));
+const LoadableErrorMessage = Loadable(() => import('./utility/ErrorMessage'));
 
 export const routes = [
   <Route element={<Guard shouldHave='dashboard'><LoadableDashboard /></Guard>} key='dashboard' path='/dashboard' />,
@@ -20,6 +21,11 @@ export const routes = [
   // <Route element={<Guard shouldHave='resources'><LoadableResourcesPage /></Guard>} key='resources' path='/resources' />,
   <Route element={<Guard shouldHave='meta'><LoadableMetaPage /></Guard>} key='meta' path='/meta' />,
   <Route element={<Guard shouldHave='debug'><LoadableDebugPage /></Guard>} key='debug' path='/debug' />,
+  <Route
+    element={<LoadableErrorMessage />}
+    key='errorMessage'
+    path='/errorMessage'
+  />,
 
   ...additionalRoutes,
 ];
