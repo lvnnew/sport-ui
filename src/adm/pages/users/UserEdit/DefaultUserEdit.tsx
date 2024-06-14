@@ -19,6 +19,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import getUserValidation from '../getUserValidation';
 import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -51,6 +52,7 @@ const DefaultUserEdit: FC<EditProps> = (props: EditProps) => {
         return mergedData;
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

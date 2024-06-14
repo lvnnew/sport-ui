@@ -15,6 +15,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerValidation from '../getManagerValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
 import {FileInput} from '../../../../uiLib/file/FileInput';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -35,6 +36,7 @@ const DefaultManagerCreate: FC<CreateProps> = (props: CreateProps) => {
         const mergedData = {...defaultValues, ...data};
         return mergedData;
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

@@ -13,6 +13,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getDelegationValidation from '../getDelegationValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -34,6 +35,7 @@ const DefaultDelegationCreate: FC<CreateProps> = (props: CreateProps) => {
           expiresAt: mergedData.expiresAt || null,
         };
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

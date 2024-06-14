@@ -11,6 +11,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getRoleValidation from '../getRoleValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -30,6 +31,7 @@ const DefaultRoleCreate: FC<CreateProps> = (props: CreateProps) => {
         const mergedData = {...defaultValues, ...data};
         return mergedData;
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

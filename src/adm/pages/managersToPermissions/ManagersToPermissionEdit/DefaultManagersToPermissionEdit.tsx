@@ -18,6 +18,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToPermissionValidation from '../getManagersToPermissionValidation';
 import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -52,6 +53,7 @@ const DefaultManagersToPermissionEdit: FC<EditProps> = (props: EditProps) => {
         };
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

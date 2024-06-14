@@ -17,6 +17,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import getMailingMessageStatusValidation from '../getMailingMessageStatusValidation';
 import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -50,6 +51,7 @@ const DefaultMailingMessageStatusEdit: FC<EditProps> = (props: EditProps) => {
         return mergedData;
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

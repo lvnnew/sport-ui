@@ -12,6 +12,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationRuleValidation from '../getAutogenerationRuleValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -33,6 +34,7 @@ const DefaultAutogenerationRuleCreate: FC<CreateProps> = (props: CreateProps) =>
           version: mergedData.version || null,
         };
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

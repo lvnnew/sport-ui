@@ -20,6 +20,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import getMailingCampaignValidation from '../getMailingCampaignValidation';
 import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -54,6 +55,7 @@ const DefaultMailingCampaignEdit: FC<EditProps> = (props: EditProps) => {
         };
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

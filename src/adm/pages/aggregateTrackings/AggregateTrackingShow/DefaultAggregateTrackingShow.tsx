@@ -10,6 +10,7 @@ import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
 import InfoRegistryTitle from '../../../../raUiLib/InfoRegistryTitle';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -17,7 +18,7 @@ const DefaultAggregateTrackingShow: FC<ShowProps> = (props: ShowProps) => {
   const translate = useTranslate();
 
   return (
-    <Show actions={<DefaultActions />} title={<InfoRegistryTitle />} {...props}>
+    <Show actions={<Breadcrumbs><DefaultActions /></Breadcrumbs>} title={<InfoRegistryTitle />} {...props}>
       <TabbedShowLayout>
         <MainTab label={translate('app.mainTab')} />
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
