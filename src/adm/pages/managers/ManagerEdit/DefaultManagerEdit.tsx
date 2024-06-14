@@ -21,6 +21,7 @@ import getManagerValidation from '../getManagerValidation';
 import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
 import {FileInput} from '../../../../uiLib/file/FileInput';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -56,6 +57,7 @@ const DefaultManagerEdit: FC<EditProps> = (props: EditProps) => {
         return mergedData;
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

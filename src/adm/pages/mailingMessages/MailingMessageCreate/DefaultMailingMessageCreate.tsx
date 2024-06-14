@@ -14,6 +14,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getMailingMessageValidation from '../getMailingMessageValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -34,6 +35,7 @@ const DefaultMailingMessageCreate: FC<CreateProps> = (props: CreateProps) => {
           dateSent: mergedData.dateSent || null,
         };
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

@@ -14,6 +14,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogValidation from '../getAuditLogValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -36,6 +37,7 @@ const DefaultAuditLogCreate: FC<CreateProps> = (props: CreateProps) => {
           date: mergedData.date || null,
         };
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

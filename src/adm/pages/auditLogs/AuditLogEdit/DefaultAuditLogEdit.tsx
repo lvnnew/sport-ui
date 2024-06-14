@@ -17,6 +17,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getAuditLogValidation from '../getAuditLogValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -51,6 +52,7 @@ const DefaultAuditLogEdit: FC<EditProps> = (props: EditProps) => {
         };
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

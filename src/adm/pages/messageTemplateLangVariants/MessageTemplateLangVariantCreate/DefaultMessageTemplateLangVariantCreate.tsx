@@ -12,6 +12,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getMessageTemplateLangVariantValidation from '../getMessageTemplateLangVariantValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -28,6 +29,7 @@ const DefaultMessageTemplateLangVariantCreate: FC<CreateProps> = (props: CreateP
         const mergedData = {...defaultValues, ...data};
         return mergedData;
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

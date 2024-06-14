@@ -21,6 +21,7 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import getAutogenerationHistoryEntryValidation from '../getAutogenerationHistoryEntryValidation';
 import {hasPermission} from '../../../../utils/permissions';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -58,6 +59,7 @@ const DefaultAutogenerationHistoryEntryEdit: FC<EditProps> = (props: EditProps) 
         };
       }, [])}
       mutationMode='pessimistic'
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

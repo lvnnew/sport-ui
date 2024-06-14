@@ -10,6 +10,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagerLoginTypeValidation from '../getManagerLoginTypeValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -26,6 +27,7 @@ const DefaultManagerLoginTypeCreate: FC<CreateProps> = (props: CreateProps) => {
         const mergedData = {...defaultValues, ...data};
         return mergedData;
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm

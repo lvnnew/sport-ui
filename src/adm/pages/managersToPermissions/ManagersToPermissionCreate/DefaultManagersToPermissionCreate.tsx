@@ -12,6 +12,7 @@ import {Grid} from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import getManagersToPermissionValidation from '../getManagersToPermissionValidation';
 import {LoadingContext} from '../../../../contexts/LoadingContext';
+import {Breadcrumbs} from '../../../../raUiLib/Breadcrumbs';
 
 // DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -31,6 +32,7 @@ const DefaultManagersToPermissionCreate: FC<CreateProps> = (props: CreateProps) 
           expiresAt: mergedData.expiresAt || null,
         };
       }, [])}
+      actions={<Breadcrumbs />}
     >
       <LoadingContext>
         <SimpleForm
