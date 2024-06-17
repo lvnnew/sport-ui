@@ -98,6 +98,12 @@ const translationMessages: DeepPartial<TranslationMessages> = {
   catalogs: enCatalogs,
   infoRegistries: enInfoRegistries,
   sumRegistries: enSumRegistries,
+  entities: {
+    ...enDocs,
+    ...enCatalogs,
+    ...enInfoRegistries,
+    ...enSumRegistries,
+  },
   managers: {
     deactivate: 'Deactivate',
     deactivated: 'Manager deactivated',

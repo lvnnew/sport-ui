@@ -92,6 +92,12 @@ const translationMessages: DeepPartial<TranslationMessages> = {
   catalogs: ruCatalogs,
   infoRegistries: ruInfoRegistries,
   sumRegistries: ruSumRegistries,
+  entities: {
+    ...ruDocs,
+    ...ruCatalogs,
+    ...ruInfoRegistries,
+    ...ruSumRegistries,
+  },
   calcs: {
     calculators: 'Калькуляторы',
     milesCalc: 'Начисления за полеты',

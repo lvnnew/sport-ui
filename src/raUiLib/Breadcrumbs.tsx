@@ -1,20 +1,23 @@
-import React, {FC, memo, PropsWithChildren, useState, useEffect} from 'react';
+import React, {FC, memo, PropsWithChildren, useState, useEffect, ReactNode} from 'react';
 import {Typography, Breadcrumbs as MUIBreadcrumbs, styled, Grid} from '@mui/material';
-import {Link, useResourceContext, useRecordContext, useTranslate, useResourceDefinitionContext, useDataProvider} from 'react-admin';
+import {Link, useResourceContext, useRecordContext, useTranslate, useResourceDefinitionContext, useDataProvider, useGetRecordRepresentation} from 'react-admin';
 import {useUpdateEffect} from 'react-use';
 
 type RecordOption = {
   resource: string;
   id?: string | number;
-  loaded?: true;
 };
 
 type Option = Partial<RecordOption> & {
   url?: string;
   title: string;
-  isRecord?: boolean;
 };
 
+type OptionState = Option & {
+  title: ReactNode;
+  isRecord?: boolean;
+  loaded?: true;
+}
 const isRecordOption = (opt: Option | RecordOption): opt is RecordOption => !('title' in opt);
 
 type O = Option | RecordOption;
@@ -25,34 +28,39 @@ type BreadcrumbsProps = {
   opts?: O[] | O | GetOpts;
 };
 
+export const getTitle = (resource: string) => `entities.${resource}.title.singular`;
+
 const StyledBreadcrumbs = styled(MUIBreadcrumbs)({
   padding: '16px 8px 0',
 });
 
+const defArray: any[] = [];
+
 export const BreadcrumbsComp: FC<BreadcrumbsProps> = memo(({
-  opts = [],
+  opts = defArray,
 }) => {
   const t = useTranslate();
   const resource = useResourceContext();
   const record = useRecordContext();
   const resourceDefinition = useResourceDefinitionContext();
   const dataProvider = useDataProvider();
+  const getRecordRepresentation = useGetRecordRepresentation(resource);
 
   const prepareOpts = () => {
-    let localOpts: O[] = [];
+    let prepareOpts: O[] = [];
 
     if (typeof opts === 'function') {
       const res = opts(record);
-      localOpts = Array.isArray(res) ? res : [res];
+      prepareOpts = Array.isArray(res) ? res : [res];
     } else if (Array.isArray(opts)) {
-      localOpts = opts;
+      prepareOpts = opts;
     } else {
-      localOpts = [opts];
+      prepareOpts = [opts];
     }
 
-    localOpts = localOpts.flatMap((lo): Option | Option[] => {
+    const localOpts: OptionState[] = prepareOpts.flatMap((lo): Option | Option[] => {
       if (isRecordOption(lo)) {
-        const opt = {url: `/${lo.resource}`, title: `catalogs.${lo.resource}.title.plural`};
+        const opt = {url: `/${lo.resource}`, title: t(`entities.${lo.resource}.title.plural`)};
         if (lo.id) {
           return [opt, {title: lo.id.toString(), url: `/${lo.resource}/${lo.id}/show`, ...lo}];
         }
@@ -60,25 +68,25 @@ export const BreadcrumbsComp: FC<BreadcrumbsProps> = memo(({
         return opt;
       }
 
-      return lo;
+      return {...lo, title: t(lo.title)};
     });
 
     if (resource) {
-      localOpts.push({url: `/${resource}`, title: `catalogs.${resource}.title.plural`});
+      localOpts.push({url: `/${resource}`, title: t(`entities.${resource}.title.plural`)});
 
       if (record) {
-        const definition = resourceDefinition.definitions?.[resource];
-
-        if (typeof definition?.recordRepresentation === 'string' && record[definition.recordRepresentation]) {
-          localOpts.push({title: record[definition?.recordRepresentation], isRecord: true});
+        const recordRepresentation = getRecordRepresentation(record) as string;
+        if (recordRepresentation) {
+          const option = {title: <>{t(getTitle(resource))} {recordRepresentation}</>, isRecord: true} as OptionState;
+          localOpts.push(option);
         }
       }
     }
 
-    return localOpts as Option[];
+    return localOpts;
   };
 
-  const [optionsList, setOptionsList] = useState(prepareOpts);
+  const [optionsList, setOptionsList] = useState<OptionState[]>(prepareOpts);
 
   useUpdateEffect(() => {
     setOptionsList(prepareOpts());
@@ -86,11 +94,10 @@ export const BreadcrumbsComp: FC<BreadcrumbsProps> = memo(({
 
   useUpdateEffect(() => {
     if (record && !optionsList?.find((o) => o.isRecord)) {
-      const definition = resourceDefinition.definitions?.[resource];
-
-      const title = typeof definition?.recordRepresentation === 'string' && record[definition.recordRepresentation];
-      if (title) {
-        setOptionsList(opts => [...opts, {title, isRecord: true}]);
+      const recordRepresentation = getRecordRepresentation(record);
+      if (recordRepresentation) {
+        const option = {title: <>{t(getTitle(resource))} {recordRepresentation}</>, isRecord: true} as OptionState;
+        setOptionsList(opts => [...opts, option]);
       }
     }
   }, [record]);
@@ -136,7 +143,7 @@ export const BreadcrumbsComp: FC<BreadcrumbsProps> = memo(({
           href={opt.url}
           to={opt.url}
         >
-          {t(opt.title)}
+          {opt.title}
         </Link>
       );
     } else {
@@ -145,7 +152,7 @@ export const BreadcrumbsComp: FC<BreadcrumbsProps> = memo(({
           key={idx}
           color='text.primary'
         >
-          {t(opt.title)}
+          {opt.title}
         </Typography>
       );
     }
