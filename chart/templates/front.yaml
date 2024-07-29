@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mtbase-ui
+  name: test-ui
   labels:
-    app: mtbase-ui
+    app: test-ui
     projectName: {{ $.Values.global.projectName }}
     clusterName: {{ $.Values.global.clusterName }}
     env: {{ $.Values.global.env }}
@@ -17,12 +17,12 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: mtbase-ui
+    app: test-ui
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mtbase-ui
+  name: test-ui
 spec:
   replicas: {{ $.Values.app.replicas }}
   strategy:
@@ -31,11 +31,11 @@ spec:
       maxSurge: 3
   selector:
     matchLabels:
-      app: mtbase-ui
+      app: test-ui
   template:
     metadata:
       labels:
-        app: mtbase-ui
+        app: test-ui
         projectName: {{ $.Values.global.projectName }}
         clusterName: {{ $.Values.global.clusterName }}
         env: {{ $.Values.global.env }}
@@ -44,8 +44,8 @@ spec:
       imagePullSecrets:
         - name: {{ $.Release.Name }}-pullsecret
       containers:
-      - name: mtbase-ui
-        image: {{ $.Values.dockerRegistry.domain }}/mtbase/mtbase-ui{{ $.Values.app.tag }}
+      - name: test-ui
+        image: {{ $.Values.dockerRegistry.domain }}/test/test-ui{{ $.Values.app.tag }}
         ports:
         - name: main-port
           containerPort: 80

@@ -14,12 +14,12 @@ import {
 // DO NOT EDIT! THIS IS GENERATED FILE
 
 export enum Space {
-  Mtbase = 'Mtbase',
+  Test = 'Test',
   Demo = 'Demo',
 }
 
 export const allSpaces = [
-  Space.Mtbase,
+  Space.Test,
 ];
 
 export interface ISpacesContext {
