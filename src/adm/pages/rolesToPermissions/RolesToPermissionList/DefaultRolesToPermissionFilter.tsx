@@ -26,7 +26,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.rolesToPermissions.fields.roleId'
           defaultValue={null}
@@ -43,7 +43,7 @@ const DefaultRolesToPermissionFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.rolesToPermissions.fields.permissionId'
           defaultValue={null}

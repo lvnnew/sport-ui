@@ -115,6 +115,30 @@ const ResourcesPage: FC = () => {
       <NumberWidget
         request={gql`
           query {
+            _allClubsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allClubsMeta?.count}
+        title={translate('catalogs.clubs.title.plural')}
+        to='/clubs'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allCompetitionsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allCompetitionsMeta?.count}
+        title={translate('catalogs.competitions.title.plural')}
+        to='/competitions'
+      />
+      <NumberWidget
+        request={gql`
+          query {
             _allConfigurationVariablesMeta {
               count
             }
@@ -151,6 +175,54 @@ const ResourcesPage: FC = () => {
       <NumberWidget
         request={gql`
           query {
+            _allEntitiesTrackingsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allEntitiesTrackingsMeta?.count}
+        title={translate('catalogs.entitiesTrackings.title.plural')}
+        to='/entitiesTrackings'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allEventTypeCategoriesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allEventTypeCategoriesMeta?.count}
+        title={translate('catalogs.eventTypeCategories.title.plural')}
+        to='/eventTypeCategories'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allEventTypesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allEventTypesMeta?.count}
+        title={translate('catalogs.eventTypes.title.plural')}
+        to='/eventTypes'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allEventsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allEventsMeta?.count}
+        title={translate('documents.events.title.plural')}
+        to='/events'
+      />
+      <NumberWidget
+        request={gql`
+          query {
             _allFilesMeta {
               count
             }
@@ -159,6 +231,30 @@ const ResourcesPage: FC = () => {
         resultToValue={result => result?._allFilesMeta?.count}
         title={translate('catalogs.files.title.plural')}
         to='/files'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allGlossariesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allGlossariesMeta?.count}
+        title={translate('catalogs.glossaries.title.plural')}
+        to='/glossaries'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allHistoryOfPlayerRolesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allHistoryOfPlayerRolesMeta?.count}
+        title={translate('catalogs.historyOfPlayerRoles.title.plural')}
+        to='/historyOfPlayerRoles'
       />
       <NumberWidget
         request={gql`
@@ -295,6 +391,66 @@ const ResourcesPage: FC = () => {
       <NumberWidget
         request={gql`
           query {
+            _allMatchPeriodMarkupsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMatchPeriodMarkupsMeta?.count}
+        title={translate('catalogs.matchPeriodMarkups.title.plural')}
+        to='/matchPeriodMarkups'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allMatchRequestsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMatchRequestsMeta?.count}
+        title={translate('catalogs.matchRequests.title.plural')}
+        to='/matchRequests'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allMatchStatusesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMatchStatusesMeta?.count}
+        title={translate('catalogs.matchStatuses.title.plural')}
+        to='/matchStatuses'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allMatchVideosMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMatchVideosMeta?.count}
+        title={translate('catalogs.matchVideos.title.plural')}
+        to='/matchVideos'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allMatchesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allMatchesMeta?.count}
+        title={translate('catalogs.matches.title.plural')}
+        to='/matches'
+      />
+      <NumberWidget
+        request={gql`
+          query {
             _allMessageTemplateLangVariantsMeta {
               count
             }
@@ -331,6 +487,42 @@ const ResourcesPage: FC = () => {
       <NumberWidget
         request={gql`
           query {
+            _allOrganizatorsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allOrganizatorsMeta?.count}
+        title={translate('catalogs.organizators.title.plural')}
+        to='/organizators'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allParentsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allParentsMeta?.count}
+        title={translate('catalogs.parents.title.plural')}
+        to='/parents'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPeriodTypesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPeriodTypesMeta?.count}
+        title={translate('catalogs.periodTypes.title.plural')}
+        to='/periodTypes'
+      />
+      <NumberWidget
+        request={gql`
+          query {
             _allPermissionsMeta {
               count
             }
@@ -339,6 +531,162 @@ const ResourcesPage: FC = () => {
         resultToValue={result => result?._allPermissionsMeta?.count}
         title={translate('catalogs.permissions.title.plural')}
         to='/permissions'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerAggregatedRolesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerAggregatedRolesMeta?.count}
+        title={translate('catalogs.playerAggregatedRoles.title.plural')}
+        to='/playerAggregatedRoles'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerCompetitionRatingsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerCompetitionRatingsMeta?.count}
+        title={translate('catalogs.playerCompetitionRatings.title.plural')}
+        to='/playerCompetitionRatings'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerForCompetitionTeamsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerForCompetitionTeamsMeta?.count}
+        title={translate('catalogs.playerForCompetitionTeams.title.plural')}
+        to='/playerForCompetitionTeams'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerForMatchRequestsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerForMatchRequestsMeta?.count}
+        title={translate('catalogs.playerForMatchRequests.title.plural')}
+        to='/playerForMatchRequests'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerForTeamMatchListsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerForTeamMatchListsMeta?.count}
+        title={translate('catalogs.playerForTeamMatchLists.title.plural')}
+        to='/playerForTeamMatchLists'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerMatchRatingsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerMatchRatingsMeta?.count}
+        title={translate('catalogs.playerMatchRatings.title.plural')}
+        to='/playerMatchRatings'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerRanksMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerRanksMeta?.count}
+        title={translate('catalogs.playerRanks.title.plural')}
+        to='/playerRanks'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayerRolesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayerRolesMeta?.count}
+        title={translate('catalogs.playerRoles.title.plural')}
+        to='/playerRoles'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allPlayersMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allPlayersMeta?.count}
+        title={translate('catalogs.players.title.plural')}
+        to='/players'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allReportForClubsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allReportForClubsMeta?.count}
+        title={translate('catalogs.reportForClubs.title.plural')}
+        to='/reportForClubs'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allReportForOrganizationsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allReportForOrganizationsMeta?.count}
+        title={translate('catalogs.reportForOrganizations.title.plural')}
+        to='/reportForOrganizations'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allReportForParentsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allReportForParentsMeta?.count}
+        title={translate('catalogs.reportForParents.title.plural')}
+        to='/reportForParents'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allReportForTeamsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allReportForTeamsMeta?.count}
+        title={translate('catalogs.reportForTeams.title.plural')}
+        to='/reportForTeams'
       />
       <NumberWidget
         request={gql`
@@ -391,6 +739,66 @@ const ResourcesPage: FC = () => {
       <NumberWidget
         request={gql`
           query {
+            _allTeamForCompetitionsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTeamForCompetitionsMeta?.count}
+        title={translate('catalogs.teamForCompetitions.title.plural')}
+        to='/teamForCompetitions'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allTeamForPlayersMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTeamForPlayersMeta?.count}
+        title={translate('catalogs.teamForPlayers.title.plural')}
+        to='/teamForPlayers'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allTeamMatchListsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTeamMatchListsMeta?.count}
+        title={translate('catalogs.teamMatchLists.title.plural')}
+        to='/teamMatchLists'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allTeamMatchReportsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTeamMatchReportsMeta?.count}
+        title={translate('catalogs.teamMatchReports.title.plural')}
+        to='/teamMatchReports'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allTeamsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allTeamsMeta?.count}
+        title={translate('catalogs.teams.title.plural')}
+        to='/teams'
+      />
+      <NumberWidget
+        request={gql`
+          query {
             _allTemplateStylesMeta {
               count
             }
@@ -435,6 +843,42 @@ const ResourcesPage: FC = () => {
         resultToValue={result => result?._allUsersMeta?.count}
         title={translate('catalogs.users.title.plural')}
         to='/users'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allWscContactsMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allWscContactsMeta?.count}
+        title={translate('catalogs.wscContacts.title.plural')}
+        to='/wscContacts'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allWscMessagesMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allWscMessagesMeta?.count}
+        title={translate('catalogs.wscMessages.title.plural')}
+        to='/wscMessages'
+      />
+      <NumberWidget
+        request={gql`
+          query {
+            _allWscUsersMeta {
+              count
+            }
+          }
+        `}
+        resultToValue={result => result?._allWscUsersMeta?.count}
+        title={translate('catalogs.wscUsers.title.plural')}
+        to='/wscUsers'
       />
     </Grid>
   );

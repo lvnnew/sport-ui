@@ -54,7 +54,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.auditLogs.fields.entityTypeId'
           defaultValue={null}
@@ -77,7 +77,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.auditLogs.fields.actionTypeId'
           defaultValue={null}
@@ -94,7 +94,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.auditLogs.fields.managerId'
           defaultValue={null}
@@ -118,7 +118,7 @@ const DefaultAuditLogFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.auditLogs.fields.userId'
           defaultValue={null}

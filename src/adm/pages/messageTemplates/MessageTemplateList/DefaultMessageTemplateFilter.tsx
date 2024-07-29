@@ -39,7 +39,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.messageTemplates.fields.messageTypeId'
           defaultValue={null}
@@ -63,7 +63,7 @@ const DefaultMessageTemplateFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.messageTemplates.fields.templateStyleId'
           defaultValue={null}

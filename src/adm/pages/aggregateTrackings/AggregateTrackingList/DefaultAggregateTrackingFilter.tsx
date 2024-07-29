@@ -22,7 +22,7 @@ const DefaultAggregateTrackingFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='infoRegistries.aggregateTrackings.fields.entityTypeId'
           defaultValue={null}

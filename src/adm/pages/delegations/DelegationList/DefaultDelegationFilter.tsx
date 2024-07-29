@@ -28,7 +28,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.delegations.fields.fromId'
           defaultValue={null}
@@ -45,7 +45,7 @@ const DefaultDelegationFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.delegations.fields.toId'
           defaultValue={null}

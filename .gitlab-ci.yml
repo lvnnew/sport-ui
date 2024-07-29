@@ -184,7 +184,7 @@ deploy-prod-previous:
   variables:
     ENV: "prod"
     DEV: "false"
-    HOST: "making.ventures"
+    HOST: "sportdata.tech"
     ROOT_ENABLED: "true"
     KUBE_CONFIG: ${KUBE_STAGE01_CONFIG}
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"

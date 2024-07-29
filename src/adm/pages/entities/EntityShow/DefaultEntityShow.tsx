@@ -8,6 +8,7 @@ import {
 } from 'react-admin';
 import AggregateTrackingsEntityTypeIdTab from './tabs/AggregateTrackingsEntityTypeIdTab';
 import AuditLogsEntityTypeIdTab from './tabs/AuditLogsEntityTypeIdTab';
+import EntitiesTrackingsEntityTypeIdTab from './tabs/EntitiesTrackingsEntityTypeIdTab';
 import MainTab from './MainTab';
 import {additionalTabs} from './additionalTabs';
 import DefaultActions from './DefaultActions';
@@ -26,6 +27,7 @@ const DefaultEntityShow: FC<ShowProps> = (props: ShowProps) => {
         {additionalTabs.map(({Tab, label}, i) => <Tab label={label} key={i} />)}
         <AggregateTrackingsEntityTypeIdTab label={translate('infoRegistries.aggregateTrackings.title.plural')} path='aggregateTrackings-entityTypeId' />
         <AuditLogsEntityTypeIdTab label={translate('catalogs.auditLogs.title.plural')} path='auditLogs-entityTypeId' />
+        <EntitiesTrackingsEntityTypeIdTab label={translate('catalogs.entitiesTrackings.title.plural')} path='entitiesTrackings-entityTypeId' />
       </TabbedShowLayout>
     </Show>
   );

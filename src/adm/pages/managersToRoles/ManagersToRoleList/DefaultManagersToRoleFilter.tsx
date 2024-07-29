@@ -27,7 +27,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managersToRoles.fields.managerId'
           defaultValue={null}
@@ -44,7 +44,7 @@ const DefaultManagersToRoleFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managersToRoles.fields.roleId'
           defaultValue={null}

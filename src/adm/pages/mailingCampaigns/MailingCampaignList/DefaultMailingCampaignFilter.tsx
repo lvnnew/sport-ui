@@ -34,7 +34,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.mailingCampaigns.fields.mailingTypeId'
           defaultValue={null}
@@ -64,7 +64,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.mailingCampaigns.fields.mailingCampaignStatusId'
           defaultValue={null}
@@ -81,7 +81,7 @@ const DefaultMailingCampaignFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.mailingCampaigns.fields.messageTemplateId'
           defaultValue={null}

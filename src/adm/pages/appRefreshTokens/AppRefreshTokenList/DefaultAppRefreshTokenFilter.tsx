@@ -33,7 +33,7 @@ const DefaultAppRefreshTokenFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.appRefreshTokens.fields.userId'
           defaultValue={null}

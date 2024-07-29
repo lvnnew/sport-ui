@@ -111,6 +111,35 @@ const ruCatalogs = {
       ignoreVersionOnHistory: 'Нужно ли учитывать версию при поиске сущностей ещё не обработанных правилом',
     },
   },
+  clubs: {
+    title: {
+      plural: 'Клубы',
+      singular: 'Клуб',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+    },
+  },
+  competitions: {
+    title: {
+      plural: 'Турниры',
+      singular: 'Турнир',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название турнира',
+      dateOfBirthFrom: 'Год рождения с',
+      dateOfBirthTo: 'По год рождения',
+      organizationId: 'Организатор',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+    },
+  },
   configurationVariables: {
     title: {
       plural: 'Конфигурационные переменные',
@@ -146,6 +175,75 @@ const ruCatalogs = {
       title: 'Название',
     },
   },
+  entitiesTrackings: {
+    title: {
+      plural: 'Отслеживание сущностей',
+      singular: 'Отслеживание сущности',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      entityTypeId: 'Сущность',
+      entityId: 'Идентификатор сущности',
+      lastEntityComputed: 'Сущность последний раз вычислена',
+      lastEntityScheduled: 'Сущность последний раз добавлена в очередь на обработку',
+      lastEntityUpdate: 'Сущность последний раз обновлена',
+    },
+  },
+  eventTypeCategories: {
+    title: {
+      plural: 'Категории типов событий',
+      singular: 'Категория типа события',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+    },
+  },
+  eventTypes: {
+    title: {
+      plural: 'Типы событий',
+      singular: 'Тип события',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      points: 'Баллы эффективности события',
+      eventTypeCategoryId: 'Категория типов событий',
+      order: 'Порядок',
+      showInTranslationMode: 'Показывать в режиме трансляции',
+      needForSecondPlayer: 'Указывается второй игрок',
+      dependsOnPoint: 'Влияет на счет матча',
+      redCard: 'Красная карточка',
+      yellowCard: 'Желтая карточка',
+      calculateBlock: 'Участвует в расчете Блоки',
+      calculateTakeaway: 'Участвует в расчете Выносы',
+      calculateSelection: 'Участвует в расчете Отборы',
+      calculateInterseption: 'Участвует в расчете Перехват',
+      calculateGuardian: 'Участвует в расчете Опека',
+      calculatePositionError: 'Участвует в расчете Поз.ошибки',
+      calculateGrossError: 'Участвует в расчете Грубые ошибки',
+      calculatePositiveDribling: 'Участвует в расчете Дриблинг +',
+      calculateNegativeDribling: 'Участвует в расчете Дриблинг -',
+      calculatePositiveSgm: 'Участвует в расчете СГМ +',
+      calculateNegativeSgm: 'Участвует в расчете СГМ -',
+      calculatePositiveRgm: 'Участвует в расчете РГМ +',
+      calculateNegativeRgm: 'Участвует в расчете РГМ -',
+      calculateLosses: 'Участвует в расчете Потери под прессингом',
+      calculateGegenPressing: 'Участвует в расчете контрпрессинг',
+      calculatePressing: 'Участвует в расчете Прессинг',
+      calculateSaveBall: 'Участвует в расчете Сохранение мяча',
+      calculatePositiveTransfer: 'Участвует в расчете Передачи +',
+      calculateNegativeTransfer: 'Участвует в расчете Передачи -',
+      calculateHit: 'Участвует в расчете Удары',
+      calculateHitTarget: 'Участвует в расчете Удары в створ',
+      calculateCorner: 'Участвует в расчете Угловой удар',
+      calculateFoul: 'Участвует в расчете Фол',
+      calculateOffside: 'Участвует в расчете Оффсайд',
+    },
+  },
   files: {
     title: {
       plural: 'Файлы',
@@ -160,6 +258,34 @@ const ruCatalogs = {
       s3Key: 'S3 key',
       eTag: 'E tag',
       bytes: 'Bytes',
+    },
+  },
+  glossaries: {
+    title: {
+      plural: 'Глоссарий',
+      singular: 'Глоссарий',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      description: 'Определение термина',
+      periodTypeId: 'Тип периода',
+    },
+  },
+  historyOfPlayerRoles: {
+    title: {
+      plural: 'История ролей игроков',
+      singular: 'История роли игрока',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      matchId: 'Матч',
+      playerId: 'Игрок',
+      playerRoleId: 'Амплуа игрока',
+      status: 'Игрок на поле',
+      order: 'Время на матче',
     },
   },
   languages: {
@@ -324,6 +450,90 @@ const ruCatalogs = {
       expiresAt: 'Истекает',
     },
   },
+  matchPeriodMarkups: {
+    title: {
+      plural: 'Разметки периодов',
+      singular: 'Разметка периода',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      timestamp: 'Временная метка мм:сс',
+      periodTypeId: 'Тип периода',
+      matchVideoId: 'Видео матча',
+    },
+  },
+  matchRequests: {
+    title: {
+      plural: 'Заявки на матчи',
+      singular: 'Заявка на матч',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      matchId: 'Матч',
+      teamForCompetitionId: 'Команда на турнире',
+    },
+  },
+  matchStatuses: {
+    title: {
+      plural: 'Статусы матчей',
+      singular: 'Статус матча',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+    },
+  },
+  matchVideos: {
+    title: {
+      plural: 'Видео матчей',
+      singular: 'Видео матча',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      videoTitle: 'Название видео матча',
+      videoLink: 'Ссылка на видео на YouTube',
+      matchId: 'Матч',
+      order: 'Порядок',
+    },
+  },
+  matches: {
+    title: {
+      plural: 'Матчи',
+      singular: 'Матч',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+      title: 'Название',
+      competitionId: 'Турнир',
+      firstTeamId: 'Команда матча 1',
+      firstTeamColor: 'Цвет первой команды',
+      firstTeamOnFieldId: 'Первая команда на поле',
+      secondTeamId: 'Команда матча 2',
+      secondTeamColor: 'Цвет второй команды',
+      matchDate: 'Дата проведения матча',
+      matchTime: 'Время начала матча',
+      duration: 'Продолжительность в минутах',
+      place: 'Место проведения',
+      active: 'Активен',
+      firstTeamPoints: 'Счет команды 1',
+      secondTeamPoints: 'Счет команды 2',
+      redCardFirstTeam: 'Красных карточек команды 1',
+      redCardSecondTeam: 'Красных карточек команды 2',
+      yellowCardFirstTeam: 'Желтых карточек команды 1',
+      yellowCardSecondTeam: 'Желтых карточек команды 2',
+      firstTeamHandleTime: 'Время владения мячом первой командой',
+      secondTeamHandleTime: 'Время владения мячом второй командой',
+      linkToProtocol: 'Ссылка на протокол игры',
+      matchStatusId: 'Статус матча',
+    },
+  },
   messageTemplateLangVariants: {
     title: {
       plural: 'Языковые варианты шаблонов сообщений',
@@ -367,6 +577,47 @@ const ruCatalogs = {
       description: 'Description',
     },
   },
+  organizators: {
+    title: {
+      plural: 'Организаторы',
+      singular: 'Организатор',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+    },
+  },
+  parents: {
+    title: {
+      plural: 'Родители',
+      singular: 'Родитель',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      firstname: 'Имя',
+      lastname: 'Фамилия',
+      patronymic: 'Отчество',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+    },
+  },
+  periodTypes: {
+    title: {
+      plural: 'Типы периодов',
+      singular: 'Тип периода',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      order: 'Порядковый номер',
+    },
+  },
   permissions: {
     title: {
       plural: 'Разрешения',
@@ -376,6 +627,218 @@ const ruCatalogs = {
       id: 'Ид',
       search: 'Поиск',
       title: 'Название',
+    },
+  },
+  playerAggregatedRoles: {
+    title: {
+      plural: 'Агрегированные позиции',
+      singular: 'Агрегированная позиция',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+    },
+  },
+  playerCompetitionRatings: {
+    title: {
+      plural: 'Рейтинги игроков команд на турнирах',
+      singular: 'Рейтинг игроков команд на турнирах',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      competitionId: 'Турнир',
+      playerId: 'Игрок',
+      rating: 'Рейтинг',
+    },
+  },
+  playerForCompetitionTeams: {
+    title: {
+      plural: 'Списки игроков команд на турнире ',
+      singular: 'Список игроков команды на турнире',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      teamForCompetitionId: 'Команда на турнире',
+      playerId: 'Игрок',
+    },
+  },
+  playerForMatchRequests: {
+    title: {
+      plural: 'Заявки игроков на матч',
+      singular: 'Заявка игрока на матч',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      matchRequestId: 'Заявка на матч',
+      playerId: 'Игрок',
+    },
+  },
+  playerForTeamMatchLists: {
+    title: {
+      plural: 'Игроки заявки',
+      singular: 'Игрок заявки',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      teamMatchListId: 'Состав команды',
+      playerId: 'Игрок',
+      startingPosition: 'Участвует в стартовом составе',
+      onField: 'На поле',
+      playerRoleId: 'Амплуа игрока',
+      playerOnMatchNumber: 'Номер игрока на матче',
+    },
+  },
+  playerMatchRatings: {
+    title: {
+      plural: 'Рейтинги игроков на матчах',
+      singular: 'Рейтинг игрока на матче',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      matchId: 'Матч',
+      playerId: 'Игрок',
+      rating: 'Рейтинг',
+      progressivePassAccuracy: 'Точность прогрессивных передач',
+      playerRatingAverage: 'Средний рейтинг',
+    },
+  },
+  playerRanks: {
+    title: {
+      plural: 'Ранги игроков',
+      singular: 'Ранг игрока',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      rating: 'Рейтинг',
+      fileId: 'Изображение баджа',
+    },
+  },
+  playerRoles: {
+    title: {
+      plural: 'Роли игроков',
+      singular: 'Роль игрока',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      shortTitle: 'Сокращенное название',
+      playerAggregatedRoleId: 'Агрегированная позиция',
+    },
+  },
+  players: {
+    title: {
+      plural: 'Игроки',
+      singular: 'Игрок',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      firstname: 'Имя',
+      lastname: 'Фамилия',
+      patronymic: 'Отчество',
+      title: 'Название',
+      playerName: 'Игрок',
+      number: 'Номер игрока',
+      dateOfBirth: 'Дата рождения',
+      age: 'Возраст',
+      teamId: 'Команда',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+      parentId: 'Родитель',
+      linkToProfile: 'Ссылка на профиль',
+      playerRating: 'Рейтинг за все время',
+      photoId: 'Фото игрока',
+      playerRatingAverage: 'Средний рейтинг',
+      commonPlayerRatingGoalkeeper: 'Общий рейтинг по позиции Goalkeeper',
+      commonPlayerRatingAttack: 'Общий рейтинг по позиции Attack',
+      commonPlayerRatingMidfielder: 'Общий рейтинг по позиции Midfielder',
+      commonPlayerRatingDefender: 'Общий рейтинг по позиции Defender',
+      playedMatches: 'Количество сыгранных матчей',
+      averagePlayerRatingGoalkeeper: 'Средний рейтинг по позиции Goalkeeper',
+      averagePlayerRatingAttack: 'Средний рейтинг по позиции Attack',
+      averagePlayerRatingMidfielder: 'Средний рейтинг игрока по позиции Midfielder',
+      averagePlayerRatingDefender: 'Средний рейтинг игрока по позиции Defender',
+      playerAggregatedRoleId: 'Агрегированная позиция',
+      playerTag: 'Тэг',
+      progressivePassAccuracy: 'Точность прогрессивных передач',
+      playerRankId: 'Ранг игрока',
+    },
+  },
+  reportForClubs: {
+    title: {
+      plural: 'Отчеты для клубов',
+      singular: 'Отчет для клуба',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      teamId: 'Команда',
+      competitionId: 'Турнир',
+      clubId: 'Клуб',
+      lastUpdated: 'Дата последнего изменения',
+      paid: 'Оплачен',
+    },
+  },
+  reportForOrganizations: {
+    title: {
+      plural: 'Отчеты для организаторов',
+      singular: 'Отчет для организаторов',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      competitionId: 'Турнир',
+      organizatorId: 'Организатор',
+      lastUpdated: 'Дата последнего изменения',
+      paid: 'Оплачен',
+    },
+  },
+  reportForParents: {
+    title: {
+      plural: 'Отчеты для родителей',
+      singular: 'Отчет для родителей',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      playerId: 'Игрок',
+      matchId: 'Матч',
+      parentId: 'Родитель',
+      lastUpdated: 'Дата последнего изменения',
+      paid: 'Оплачен',
+    },
+  },
+  reportForTeams: {
+    title: {
+      plural: 'Отчеты для команд',
+      singular: 'Отчет для команды',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      created: 'Дата и время создания',
+      title: 'Название',
+      teamForCompetitionId: 'Команда на турнире',
+      matchId: 'Матч',
+      clubId: 'Клуб',
+      lastUpdated: 'Дата последнего изменения',
+      paid: 'Оплачен',
+      fileId: 'Файл отчета',
+      htmlFileId: 'HTML файл отчета',
+      jsonFileId: 'JSON файл отчета',
+      needRecalculate: 'Требуется пересчет',
     },
   },
   roles: {
@@ -424,6 +887,76 @@ const ruCatalogs = {
       id: 'Ид',
       search: 'Поиск',
       comment: 'Comment',
+    },
+  },
+  teamForCompetitions: {
+    title: {
+      plural: 'Команды на турнире',
+      singular: 'Команда на турнире',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      fullTitle: 'Полное название',
+      teamId: 'Команда',
+      competitionId: 'Турнир',
+    },
+  },
+  teamForPlayers: {
+    title: {
+      plural: 'Игроки команд',
+      singular: 'Игрок команды',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      playerId: 'Игрок',
+      teamId: 'Команда',
+    },
+  },
+  teamMatchLists: {
+    title: {
+      plural: 'Составы команд на матчи',
+      singular: 'Состав команды на матч',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      matchId: 'Матч',
+      teamForCompetitionId: 'Команда на турнире',
+    },
+  },
+  teamMatchReports: {
+    title: {
+      plural: 'Командные отчеты',
+      singular: 'Командный отчет',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      created: 'Дата и время создания',
+      matchId: 'Матч',
+      lastUpdated: 'Дата последнего изменения',
+      fileId: 'Файл отчета',
+      needRecalculate: 'Требуется пересчет',
+    },
+  },
+  teams: {
+    title: {
+      plural: 'Команды',
+      singular: 'Команда',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      title: 'Название',
+      dateOfBirthFrom: 'Год рождения с',
+      dateOfBirthTo: 'По год рождения',
+      createdByManagerId: 'Создано менеджером',
+      lastChangedByManagerId: 'Изменено менеджером',
+      clubId: 'Клуб',
+      fileId: 'Логотип команды',
     },
   },
   templateStyles: {
@@ -475,6 +1008,48 @@ const ruCatalogs = {
       firstname: 'Firstname',
       email: 'Email',
       tenantId: 'Tenant',
+    },
+  },
+  wscContacts: {
+    title: {
+      plural: 'WSC Contacts',
+      singular: 'WSC Contact',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      name: 'Name',
+      phoneNumber: 'Phone number',
+      wscUserId: 'User',
+    },
+  },
+  wscMessages: {
+    title: {
+      plural: 'WSC Messages',
+      singular: 'WSC Message',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      externalId: 'External id',
+      dateTimeRaw: 'Datetime raw',
+      sender: 'Sender',
+      content: 'Content',
+      wscUserId: 'User',
+      wscContactId: 'Contact',
+    },
+  },
+  wscUsers: {
+    title: {
+      plural: 'WSC Users',
+      singular: 'WSC User',
+    },
+    fields: {
+      id: 'Ид',
+      search: 'Поиск',
+      login: 'Login',
+      passwordHash: 'Password hash',
+      accessToken: 'Access token',
     },
   },
 };

@@ -27,7 +27,7 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managerLogins.fields.managerLoginTypeId'
           defaultValue={null}
@@ -70,7 +70,7 @@ const DefaultManagerLoginFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managerLogins.fields.managerId'
           defaultValue={null}

@@ -27,7 +27,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managersToPermissions.fields.managerId'
           defaultValue={null}
@@ -44,7 +44,7 @@ const DefaultManagersToPermissionFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managersToPermissions.fields.permissionId'
           defaultValue={null}

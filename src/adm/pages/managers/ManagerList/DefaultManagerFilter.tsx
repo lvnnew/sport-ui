@@ -46,7 +46,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managers.fields.languageId'
           defaultValue={null}
@@ -83,7 +83,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managers.fields.unitId'
           defaultValue={null}
@@ -112,7 +112,7 @@ const DefaultManagerFilter: FC<any> = (props) => {
       >
         <AutocompleteInput
           fullWidth
-          sx={{m: 1}}
+          sx={{m: '8px 8px 6px'}}
           size='small'
           label='catalogs.managers.fields.tenantId'
           defaultValue={null}
