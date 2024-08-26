@@ -3,9 +3,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: test-ui
+  name: sport-ui
   labels:
-    app: test-back
+    app: sport-back
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
@@ -26,7 +26,7 @@ spec:
             path: "/"
             backend:
               service:
-                name: test-ui
+                name: sport-ui
                 port:
                   number: 80
     {{ end }}
@@ -37,7 +37,7 @@ spec:
             path: "/"
             backend:
               service:
-                name: test-ui
+                name: sport-ui
                 port:
                   number: 80
   tls:

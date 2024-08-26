@@ -49,8 +49,8 @@ ingress:
   host: "apps.making.ventures"
   letsencryptCert: true
   domains:
-    app: "test"
-    endpoint: "test-ep"
+    app: "sport"
+    endpoint: "sport-ep"
 
 resources:
   {}
