@@ -1,4 +1,4 @@
-image: node:18
+image: node:20
 
 # DO NOT EDIT! THIS IS GENERATED FILE
 
@@ -8,7 +8,6 @@ stages:
   - build
   - latest-image
   - deploy
-  - deploy-previous
 
 cache:
   paths:
@@ -116,30 +115,6 @@ deploy-prod:
     ENV: "prod"
     CLUSTER_NAME: "stage01"
     TAG: ":${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHA}"
-  only:
-    - release
-    - /^release-.*$/
-
-deploy-dev-previous:
-  extends: .deploy-dev
-  stage: deploy-previous
-  when: manual
-  variables:
-    ENV: "dev"
-    CLUSTER_NAME: "stage01"
-    TAG: ":${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}"
-  only:
-    - master
-    - /^master-.*$/
-
-deploy-prod-previous:
-  extends: .deploy-prod
-  stage: deploy-previous
-  when: manual
-  variables:
-    ENV: "prod"
-    CLUSTER_NAME: "stage01"
-    TAG: ":${CI_COMMIT_REF_SLUG}-previous-for-${CI_COMMIT_SHA}"
   only:
     - release
     - /^release-.*$/

@@ -4,6 +4,8 @@
 global:
   env: noName
   clusterName: noName
+  projectName: sport
+  projectGroup: sport
   deployKind: noName
   imagePullPolicy: Always
 
